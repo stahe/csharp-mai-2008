@@ -12,7 +12,7 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/csharp-mai-2008/interfaces-graphiques-avec-c-et-vsnet.html">
+        <link rel="canonical" href="https://stahe.github.io/csharp-mai-2008/interfaces-graphiques-avec-csharp-et-vsnet.html">
       
       
         <link rel="prev" href="architectures-3-couches.html">
@@ -320,7 +320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="installation-de-visual-c-2008.html" class="md-nav__link">
+      <a href="installation-de-visual-csharp-2008.html" class="md-nav__link">
         
   
   
@@ -347,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="les-bases-du-langage-c.html" class="md-nav__link">
+      <a href="les-bases-du-langage-csharp.html" class="md-nav__link">
         
   
   
@@ -401,14 +401,14 @@
   
   
     <li class="md-nav__item">
-      <a href="classes-net-dx27usage-courant.html" class="md-nav__link">
+      <a href="classes-net-dusage-courant.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. Classes .NET d&#x27;usage courant
+    5. Classes .NET d'usage courant
   
 
     
@@ -482,7 +482,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="interfaces-graphiques-avec-c-et-vsnet.html" class="md-nav__link md-nav__link--active">
+      <a href="interfaces-graphiques-avec-csharp-et-vsnet.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -888,14 +888,14 @@
   
   
     <li class="md-nav__item">
-      <a href="les-threads-dx27execution.html" class="md-nav__link">
+      <a href="les-threads-dexecution.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. Les threads d&#x27;exécution
+    10. Les threads d'exécution
   
 
     
@@ -1240,12 +1240,12 @@ Il est plus simple dans un premier temps de ne pas s&#x27;intéresser au code de
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
 <span class="normal"><a href="#__codelineno-3-4">4</a></span>
 <span class="normal"><a href="#__codelineno-3-5">5</a></span>
-<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">InitializeComponent</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">SuspendLayout</span><span class="p">();</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="p">...</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Mon 1er formulaire&quot;</span><span class="p">;</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">...</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>        private void InitializeComponent() {
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>            this.SuspendLayout();
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>...
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>            this.Text = &quot;Mon 1er formulaire&quot;;
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>...
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>}
 </code></pre></div></td></tr></table></div></li>
 </ul>
 <h3 id="712-un-second-projet">7.1.2. Un second projet</h3>
@@ -1265,34 +1265,34 @@ Il est plus simple dans un premier temps de ne pas s&#x27;intéresser au code de
 Parmi les propriétés du formulaire à noter :</li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">BackColor</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>BackColor
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour fixer la couleur de fond de la fenêtre</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">ForeColor</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>ForeColor
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour fixer la couleur des dessins ou du texte sur la fenêtre</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">Menu</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>Menu
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour associer un menu à la fenêtre</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">Text</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>Text
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour donner un titre à la fenêtre</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">FormBorderStyle</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>FormBorderStyle
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour fixer le type de fenêtre</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">Font</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>Font
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour fixer la police de caractères des écritures dans la fenêtre</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">Name</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>Name
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour fixer le nom de la fenêtre</p></td></tr></table>
 
 <p>Ici, nous fixons les propriétés Text et Name :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">Text</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>Text
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Saisies et boutons - 1</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">Name</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>Name
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">frmSaisiesBoutons</p></td></tr></table>
 
@@ -1534,74 +1534,74 @@ Ecrire un gestionnaire d&#x27;événement consiste à compléter le squelette de
 <a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>La classe MessageBox sert à afficher des messages dans une fenêtre. Nous avons utilisé ici la méthode Show suivante : </p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">DialogResult</span><span class="w"> </span><span class="nf">Show</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">caption</span><span class="p">,</span><span class="w"> </span><span class="n">MessageBoxButtons</span><span class="w"> </span><span class="n">buttons</span><span class="p">,</span><span class="w"> </span><span class="n">MessageBoxIcon</span><span class="w"> </span><span class="n">icon</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>public static DialogResult Show(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon);
 </code></pre></div></td></tr></table></div>
 <p>avec</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="n">text</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>text
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le message à afficher</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="n">caption</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>caption
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le titre de la fenêtre</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="n">buttons</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>buttons
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">les boutons présents dans la fenêtre</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="n">icon</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a>icon
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">l&#x27;icone présente dans la fenêtre</p></td></tr></table>
 
 <p>Le paramètre buttons peut prendre ses valeurs parmi les constantes suivantes (préfixées par MessageBoxButtons comme montré ligne 7) ci-dessus :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="n">constante</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>constante
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">boutons</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="w">   </span><span class="n">AbortRetryIgnore</span><span class="w"> </span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a>   AbortRetryIgnore 
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010900000060A20F1EE3.png" style="display:inline-block; margin:4px;width:7.011cm;height:2.54cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="w">  </span><span class="n">OK</span><span class="w"> </span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>  OK 
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000065000000618593FACC.png" style="display:inline-block; margin:4px;width:2.672cm;height:2.566cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="w">    </span><span class="n">OKCancel</span><span class="w"> </span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a>    OKCancel 
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B70000006119E27B24.png" style="display:inline-block; margin:4px;width:4.842cm;height:2.566cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="w">    </span><span class="n">RetryCancel</span><span class="w"> </span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>    RetryCancel 
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B9000000637C8117C4.png" style="display:inline-block; margin:4px;width:4.895cm;height:2.619cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="w">    </span><span class="n">YesNo</span><span class="w"> </span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a>    YesNo 
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B6000000648D302AC0.png" style="display:inline-block; margin:4px;width:4.815cm;height:2.646cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="w">    </span><span class="n">YesNoCancel</span><span class="w"> </span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a>    YesNoCancel 
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010A000000612C4BEEB5.png" style="display:inline-block; margin:4px;width:7.038cm;height:2.566cm;" /></td></tr></table>
 
 <p>Le paramètre icon peut prendre ses valeurs parmi les constantes suivantes (préfixées par MessageBoxIcon comme montré ligne 10) ci-dessus :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="n">Asterisk</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a>Asterisk
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000008C000000734A3A305E.png" style="display:inline-block; margin:4px;width:3.704cm;height:3.043cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="n">Error</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a>Error
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">idem Stop</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="n">Exclamation</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a>Exclamation
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">idem Warning</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="n">Hand</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a>Hand
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000800000007711DAD3D4.png" style="display:inline-block; margin:4px;width:3.387cm;height:3.149cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="n">Information</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a>Information
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">idem Asterisk</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="n">None</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a>None
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000660000006038CECD40.png" style="display:inline-block; margin:4px;width:2.699cm;height:2.54cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="n">Question</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a>Question
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000094000000761CEA1E65.png" style="display:inline-block; margin:4px;width:3.916cm;height:3.122cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="n">Stop</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a>Stop
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">idem Hand</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="n">Warning</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a>Warning
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000008F0000007541B97BE0.png" style="display:inline-block; margin:4px;width:3.784cm;height:3.096cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a>
@@ -1612,12 +1612,12 @@ Ecrire un gestionnaire d&#x27;événement consiste à compléter le squelette de
 <p><img src="images/1000000000000365000001273E698F65.png" style="width:17.604cm;height:5.974cm;" alt="Image" /></p>
 <p>Pour savoir sur quel bouton a appuyé l&#x27;utilisateur pour fermer la fenêtre de type MessageBox on écrira :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
-<span class="normal"><a href="#__codelineno-38-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="n">DialogResult</span><span class="w"> </span><span class="n">res</span><span class="o">=</span><span class="n">MessageBox</span><span class="p">.</span><span class="n">Show</span><span class="p">(..);</span>
-<a id="__codelineno-38-2" name="__codelineno-38-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">res</span><span class="o">==</span><span class="n">DialogResult</span><span class="p">.</span><span class="n">Yes</span><span class="p">){</span><span class="w"> </span><span class="c1">// il a appuyé sur le bouton oui...}</span>
+<span class="normal"><a href="#__codelineno-38-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a>DialogResult res=MessageBox.Show(..);
+<a id="__codelineno-38-2" name="__codelineno-38-2"></a>if (res==DialogResult.Yes){ // il a appuyé sur le bouton oui...}
 </code></pre></div></td></tr></table></div>
 <h4 id="7122-le-code-lie-a-la-gestion-des-evenements">7.1.2.2. Le code lié à la gestion des événements</h4>
 <p>Outre la fonction buttonAfficher_Click que nous avons écrite, Visual studio a généré dans la méthode InitializeComponents de [Form1.Designer.cs] qui crée et initialise les composants du formulaire, la ligne suivante :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">buttonAfficher</span><span class="p">.</span><span class="n">Click</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">EventHandler</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">buttonAfficher_Click</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a>            this.buttonAfficher.Click += new System.EventHandler(this.buttonAfficher_Click);
 </code></pre></div></td></tr></table></div>
 <p><strong>Click</strong> est un <strong>événement</strong> de la classe Button [1, 2, 3] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>1</b><b>2</b><b>3</b></p><img src="images/10000000000000C4000001782F8707EC.png" style="display:inline-block; margin:4px;width:3.63cm;height:6.96cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>5</b><b>4</b></p><img src="images/1000000000000199000000F4FBFAF1F8.png" style="display:inline-block; margin:4px;width:7.571cm;height:4.521cm;" /></td></tr></table>
@@ -1640,24 +1640,24 @@ C&#x27;est le cas de la méthode de gestion du clic sur le bouton buttonAfficher
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1"></a><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">buttonAfficher_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Ainsi la méthode buttonAfficher_Click correspond au prototype défini par le type EventHandler. Pour créer un objet de type EventHandler, on procède comme suit :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a><span class="n">EventHandler</span><span class="w"> </span><span class="n">evtHandler</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">EventHandler</span><span class="p">(</span><span class="n">méthode</span><span class="w"> </span><span class="n">correspondant</span><span class="w"> </span><span class="n">au</span><span class="w"> </span><span class="n">prototype</span><span class="w">  </span><span class="n">défini</span><span class="w"> </span><span class="n">par</span><span class="w"> </span><span class="n">le</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">EventHandler</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a>EventHandler evtHandler=new EventHandler(méthode correspondant au prototype  défini par le type EventHandler);
 </code></pre></div></td></tr></table></div>
 <p>Puisque la méthode buttonAfficher_Click correspond au prototype défini par le type EventHandler, on pourra écrire :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1"></a><span class="n">EventHandler</span><span class="w"> </span><span class="n">evtHandler</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">EventHandler</span><span class="p">(</span><span class="n">buttonAfficher_Click</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1"></a>EventHandler evtHandler=new EventHandler(buttonAfficher_Click);
 </code></pre></div></td></tr></table></div>
 <p>Une variable de type delegate est en fait une liste de références sur des méthodes du type du delegate. Pour ajouter une nouvelle méthode M à la variable evtHandler ci-dessus, on utilisera la syntaxe :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1"></a><span class="n">evtHandler</span><span class="o">+=</span><span class="k">new</span><span class="w"> </span><span class="n">EvtHandler</span><span class="p">(</span><span class="n">M</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1"></a>evtHandler+=new EvtHandler(M);
 </code></pre></div></td></tr></table></div>
 <p>La notation += peut être utilisée même si evtHandler est une liste vide.</p>
 <p>Revenons à la ligne de [InitializeComponent] qui ajoute un gestionnaire d&#x27;événement à l&#x27;événement Click de l&#x27;objet buttonAfficher :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">buttonAfficher</span><span class="p">.</span><span class="n">Click</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">EventHandler</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">buttonAfficher_Click</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1"></a>            this.buttonAfficher.Click += new System.EventHandler(this.buttonAfficher_Click);
 </code></pre></div></td></tr></table></div>
 <p>Cette instruction ajoute une méthode de type EventHandler à la liste des méthodes du champ buttonAfficher.Click. Ces méthodes seront appelées à chaque fois que l&#x27;événement Click sur le composant buttonAfficher sera détecté. Il n&#x27;y en a souvent qu&#x27;une. On l&#x27;appelle le &quot;gestionnaire de l&#x27;événement&quot;.</p>
 <p>Revenons sur la signature de EventHandler :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-45-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1"></a><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">delegate</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">EventHandler</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Le second paramètre du delegate est un objet de type EventArgs ou d&#x27;une classe dérivée. Le type EventArgs est très général et n&#x27;apporte en fait aucune information sur l&#x27;événement qui s&#x27;est produit. Pour un clic sur un bouton, c&#x27;est suffisant. Pour un déplacement de souris sur un formulaire, on aurait un événement MouseMove de la classe [Form] défini par :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-46-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1"></a><span class="k">public</span><span class="w"> </span><span class="k">event</span><span class="w"> </span><span class="n">MouseEventHandler</span><span class="w"> </span><span class="n">MouseMove</span><span class="p">;</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-46-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1"></a>public event MouseEventHandler MouseMove;
 </code></pre></div></td></tr></table></div>
 <p>Le delegate MouseEventHandler est défini comme :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013C000000C466E2CADC.png" style="display:inline-block; margin:4px;width:5.851cm;height:3.63cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1673,13 +1673,13 @@ C&#x27;est le cas de la méthode de gestion du clic sur le bouton buttonAfficher
 <h3 id="721-formulaire-form">7.2.1. Formulaire Form</h3>
 <p>Nous commençons par présenter le composant indispensable, le formulaire sur lequel on dépose des composants. Nous avons déjà présenté quelques-unes de ses propriétés de base. Nous nous attardons ici sur quelques événements importants d&#x27;un formulaire.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-47-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1"></a><span class="n">Load</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-47-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1"></a>Load
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le formulaire est en cours de chargement</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-48-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1"></a><span class="n">Closing</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-48-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1"></a>Closing
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le formulaire est en cours de fermeture</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-49-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1"></a><span class="n">Closed</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-49-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1"></a>Closed
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le formulaire est fermé</p></td></tr></table>
 
@@ -1832,11 +1832,11 @@ Le code de [Form1.cs] est le suivant :</li>
 <span class="normal"><a href="#__codelineno-52-2">2</a></span>
 <span class="normal"><a href="#__codelineno-52-3">3</a></span>
 <span class="normal"><a href="#__codelineno-52-4">4</a></span>
-<span class="normal"><a href="#__codelineno-52-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1"></a><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-52-2" name="__codelineno-52-2"></a><span class="w">            </span><span class="n">Application</span><span class="p">.</span><span class="n">EnableVisualStyles</span><span class="p">();</span>
-<a id="__codelineno-52-3" name="__codelineno-52-3"></a><span class="w">            </span><span class="n">Application</span><span class="p">.</span><span class="n">SetCompatibleTextRenderingDefault</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
-<a id="__codelineno-52-4" name="__codelineno-52-4"></a><span class="w">            </span><span class="n">Application</span><span class="p">.</span><span class="n">Run</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Form1</span><span class="p">());</span>
-<a id="__codelineno-52-5" name="__codelineno-52-5"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-52-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1"></a>        static void Main() {
+<a id="__codelineno-52-2" name="__codelineno-52-2"></a>            Application.EnableVisualStyles();
+<a id="__codelineno-52-3" name="__codelineno-52-3"></a>            Application.SetCompatibleTextRenderingDefault(false);
+<a id="__codelineno-52-4" name="__codelineno-52-4"></a>            Application.Run(new Form1());
+<a id="__codelineno-52-5" name="__codelineno-52-5"></a>}
 </code></pre></div></td></tr></table></div></li>
 </ul>
 <p>L&#x27;exemple suivant utilise un TextBox multilignes :</p>
@@ -1847,16 +1847,16 @@ Le code de [Form1.cs] est le suivant :</li>
 
 <p>Pour qu&#x27;un TextBox devienne multilignes on positionne les propriétés suivantes du contrôle :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-53-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1"></a><span class="n">Multiline</span><span class="o">=</span><span class="k">true</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-53-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1"></a>Multiline=true
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour accepter plusieurs lignes de texte</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-54-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1"></a><span class="n">ScrollBars</span><span class="o">=</span><span class="p">(</span><span class="w"> </span><span class="n">None</span><span class="p">,</span><span class="w"> </span><span class="n">Horizontal</span><span class="p">,</span><span class="w"> </span><span class="n">Vertical</span><span class="p">,</span><span class="w"> </span><span class="n">Both</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-54-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1"></a>ScrollBars=( None, Horizontal, Vertical, Both)
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour demander à ce que le contrôle ait des barres de défilement (Horizontal, Vertical, Both) ou non (None)</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-55-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1"></a><span class="n">AcceptReturn</span><span class="o">=</span><span class="p">(</span><span class="n">True</span><span class="p">,</span><span class="w"> </span><span class="n">False</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-55-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1"></a>AcceptReturn=(True, False)
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">si égal à true, la touche Entrée fera passer à la ligne</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-56-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1"></a><span class="n">AcceptTab</span><span class="o">=</span><span class="p">(</span><span class="n">True</span><span class="p">,</span><span class="w"> </span><span class="n">False</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-56-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1"></a>AcceptTab=(True, False)
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">si égal à true, la touche Tab générera une tabulation dans le texte</p></td></tr></table>
 
@@ -1918,66 +1918,66 @@ Le code de [Form1.cs] est le suivant :</li>
 
 <p>Un composant ComboBox est une liste déroulante doublée d&#x27;une zone de saisie : l&#x27;utilisateur peut soit choisir un élément dans (2) soit taper du texte dans (1). Il existe trois sortes de ComboBox fixées par la propriété DropDownStyle :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-58-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1"></a><span class="n">Simple</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-58-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1"></a>Simple
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">liste non déroulante avec zone d&#x27;édition</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-59-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1"></a><span class="n">DropDown</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-59-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1"></a>DropDown
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">liste déroulante avec zone d&#x27;édition</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-60-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1"></a><span class="n">DropDownList</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-60-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1"></a>DropDownList
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">liste déroulante sans zone d&#x27;édition</p></td></tr></table>
 
 <p>Par défaut, le type d&#x27;un ComboBox est DropDown.</p>
 <p>La classe ComboBox a un seul constructeur :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-61-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1"></a><span class="k">new</span><span class="w"> </span><span class="nf">ComboBox</span><span class="p">()</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-61-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1"></a>new ComboBox()
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">crée un combo vide</p></td></tr></table>
 
 <p>Les éléments du ComboBox sont disponibles dans la propriété Items :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-62-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1"></a><span class="k">public</span><span class="w"> </span><span class="n">ComboBox</span><span class="p">.</span><span class="n">ObjectCollection</span><span class="w"> </span><span class="n">Items</span><span class="w"> </span><span class="p">{</span><span class="k">get</span><span class="p">;}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-62-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1"></a>public ComboBox.ObjectCollection Items {get;}
 </code></pre></div></td></tr></table></div>
 <p>C&#x27;est une propriété indexée, Items[i] désignant l&#x27;élément i du Combo. Elle est en lecture seule.</p>
 <p>Soit C un combo et C.Items sa liste d&#x27;éléments. On a les propriétés suivantes :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-63-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1"></a><span class="n">C</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Count</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-63-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1"></a>C.Items.Count
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">nombre d&#x27;éléments du combo</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-64-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1"></a><span class="n">C</span><span class="p">.</span><span class="n">Items</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-64-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1"></a>C.Items[i]
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">élément i du combo</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-65-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1"></a><span class="n">C</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">o</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-65-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1"></a>C.Add(object o)
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">ajoute l&#x27;objet o en dernier élément du combo</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-66-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1"></a><span class="n">C</span><span class="p">.</span><span class="n">AddRange</span><span class="p">(</span><span class="kt">object</span><span class="p">[]</span><span class="w"> </span><span class="n">objets</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-66-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1"></a>C.AddRange(object[] objets)
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">ajoute un tableau d&#x27;objets en fin de combo</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-67-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1"></a><span class="n">C</span><span class="p">.</span><span class="n">Insert</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">object</span><span class="w"> </span><span class="n">o</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-67-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1"></a>C.Insert(int i, object o)
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">ajoute l&#x27;objet o en position i du combo</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-68-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1"></a><span class="n">C</span><span class="p">.</span><span class="n">RemoveAt</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-68-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1"></a>C.RemoveAt(int i)
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">enlève l&#x27;élément i du combo</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-69-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1"></a><span class="n">C</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">o</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-69-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1"></a>C.Remove(object o)
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">enlève l&#x27;objet o du combo</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-70-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1"></a><span class="n">C</span><span class="p">.</span><span class="n">Clear</span><span class="p">()</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-70-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1"></a>C.Clear()
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">supprime tous les éléments du combo</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-71-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1"></a><span class="n">C</span><span class="p">.</span><span class="n">IndexOf</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">o</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-71-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1"></a>C.IndexOf(object o)
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">rend la position i de l&#x27;objet o dans le combo</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-72-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1"></a><span class="n">C</span><span class="p">.</span><span class="n">SelectedIndex</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-72-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1"></a>C.SelectedIndex
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">index de l&#x27;élément sélectionné</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-73-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1"></a><span class="n">C</span><span class="p">.</span><span class="n">SelectedItem</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-73-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1"></a>C.SelectedItem
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">élément sélectionné</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-74-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1"></a><span class="n">C</span><span class="p">.</span><span class="n">SelectedItem</span><span class="p">.</span><span class="n">Text</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-74-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1"></a>C.SelectedItem.Text
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">texte affiché de l&#x27;élément sélectionné</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-75-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1"></a><span class="n">C</span><span class="p">.</span><span class="n">Text</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-75-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1"></a>C.Text
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">texte affiché de l&#x27;élément sélectionné</p></td></tr></table>
 
@@ -2056,13 +2056,13 @@ Le code de [Form1.cs] est le suivant :</li>
 
 <p>Les composants ListBox ont un mode de sélection de leurs éléments qui est défini par leur propriété SelectionMode :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-77-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1"></a><span class="n">One</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-77-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1"></a>One
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">un seul élément peut être sélectionné</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-78-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1"></a><span class="n">MultiExtended</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-78-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1"></a>MultiExtended
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">multi-sélection possible : maintenir appuyée la touche SHIFT et cliquer sur un élément étend la sélection de l&#x27;élément précédemment sélectionné à l&#x27;élément courant.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-79-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1"></a><span class="n">MultiSimple</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-79-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1"></a>MultiSimple
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">multi-sélection possible : un élément est sélectionné / désélectionné par un clic de souris ou par appui sur la barre d&#x27;espace.</p></td></tr></table>
 
@@ -2090,16 +2090,16 @@ Dans les conditions précédentes, tous les boutons doivent être éteints lors 
 <span class="normal"><a href="#__codelineno-80-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-80-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-80-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-80-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">Form1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-80-2" name="__codelineno-80-2"></a><span class="w">            </span><span class="n">InitializeComponent</span><span class="p">();</span>
-<a id="__codelineno-80-3" name="__codelineno-80-3"></a><span class="w">            </span><span class="c1">// --- initialisations complémentaires ---</span>
-<a id="__codelineno-80-4" name="__codelineno-80-4"></a><span class="w">            </span><span class="c1">// on inhibe un certain nombre de boutons</span>
-<a id="__codelineno-80-5" name="__codelineno-80-5"></a><span class="w">            </span><span class="n">buttonAjouter</span><span class="p">.</span><span class="n">Enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
-<a id="__codelineno-80-6" name="__codelineno-80-6"></a><span class="w">            </span><span class="n">button1vers2</span><span class="p">.</span><span class="n">Enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
-<a id="__codelineno-80-7" name="__codelineno-80-7"></a><span class="w">            </span><span class="n">button2vers1</span><span class="p">.</span><span class="n">Enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
-<a id="__codelineno-80-8" name="__codelineno-80-8"></a><span class="w">            </span><span class="n">buttonEffacer1</span><span class="p">.</span><span class="n">Enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
-<a id="__codelineno-80-9" name="__codelineno-80-9"></a><span class="w">            </span><span class="n">buttonEffacer2</span><span class="p">.</span><span class="n">Enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
-<a id="__codelineno-80-10" name="__codelineno-80-10"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-80-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1"></a>        public Form1() {
+<a id="__codelineno-80-2" name="__codelineno-80-2"></a>            InitializeComponent();
+<a id="__codelineno-80-3" name="__codelineno-80-3"></a>            // --- initialisations complémentaires ---
+<a id="__codelineno-80-4" name="__codelineno-80-4"></a>            // on inhibe un certain nombre de boutons
+<a id="__codelineno-80-5" name="__codelineno-80-5"></a>            buttonAjouter.Enabled = false;
+<a id="__codelineno-80-6" name="__codelineno-80-6"></a>            button1vers2.Enabled = false;
+<a id="__codelineno-80-7" name="__codelineno-80-7"></a>            button2vers1.Enabled = false;
+<a id="__codelineno-80-8" name="__codelineno-80-8"></a>            buttonEffacer1.Enabled = false;
+<a id="__codelineno-80-9" name="__codelineno-80-9"></a>            buttonEffacer2.Enabled = false;
+<a id="__codelineno-80-10" name="__codelineno-80-10"></a>}
 </code></pre></div></td></tr></table></div>
 <p>L&#x27;état du bouton Ajouter est contrôlé par le contenu du champ de saisie. C&#x27;est l&#x27;événement TextChanged qui nous permet de suivre les changements de ce contenu :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-81-1">1</a></span>
@@ -2219,23 +2219,23 @@ Dans les conditions précédentes, tous les boutons doivent être éteints lors 
 <span class="normal"><a href="#__codelineno-86-14">14</a></span>
 <span class="normal"><a href="#__codelineno-86-15">15</a></span>
 <span class="normal"><a href="#__codelineno-86-16">16</a></span>
-<span class="normal"><a href="#__codelineno-86-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-86-1" name="__codelineno-86-1"></a><span class="w">        </span><span class="c1">// transfert</span>
-<a id="__codelineno-86-2" name="__codelineno-86-2"></a><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">transfert</span><span class="p">(</span><span class="n">ListBox</span><span class="w"> </span><span class="n">l1</span><span class="p">,</span><span class="w"> </span><span class="n">Button</span><span class="w"> </span><span class="n">button1vers2</span><span class="p">,</span><span class="w"> </span><span class="n">Button</span><span class="w"> </span><span class="n">buttonEffacer1</span><span class="p">,</span><span class="w"> </span><span class="n">ListBox</span><span class="w"> </span><span class="n">l2</span><span class="p">,</span><span class="w"> </span><span class="n">Button</span><span class="w"> </span><span class="n">button2vers1</span><span class="p">,</span><span class="w"> </span><span class="n">Button</span><span class="w"> </span><span class="n">buttonEffacer2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-86-3" name="__codelineno-86-3"></a><span class="w">            </span><span class="c1">// transfert dans la liste l2 des éléments sélectionnés de la liste l1</span>
-<a id="__codelineno-86-4" name="__codelineno-86-4"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l1</span><span class="p">.</span><span class="n">SelectedIndices</span><span class="p">.</span><span class="n">Count</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-86-5" name="__codelineno-86-5"></a><span class="w">                </span><span class="c1">// index de l&#39;élément sélectionné</span>
-<a id="__codelineno-86-6" name="__codelineno-86-6"></a><span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l1</span><span class="p">.</span><span class="n">SelectedIndices</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-<a id="__codelineno-86-7" name="__codelineno-86-7"></a><span class="w">                </span><span class="c1">// ajout dans l2</span>
-<a id="__codelineno-86-8" name="__codelineno-86-8"></a><span class="w">                </span><span class="n">l2</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">Items</span><span class="p">[</span><span class="n">index</span><span class="p">]);</span>
-<a id="__codelineno-86-9" name="__codelineno-86-9"></a><span class="w">                </span><span class="c1">// suppression dans l1</span>
-<a id="__codelineno-86-10" name="__codelineno-86-10"></a><span class="w">                </span><span class="n">l1</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">RemoveAt</span><span class="p">(</span><span class="n">index</span><span class="p">);</span>
-<a id="__codelineno-86-11" name="__codelineno-86-11"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-86-12" name="__codelineno-86-12"></a><span class="w">            </span><span class="c1">// boutons Effacer</span>
-<a id="__codelineno-86-13" name="__codelineno-86-13"></a><span class="w">            </span><span class="n">buttonEffacer2</span><span class="p">.</span><span class="n">Enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l2</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Count</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-86-14" name="__codelineno-86-14"></a><span class="w">            </span><span class="n">buttonEffacer1</span><span class="p">.</span><span class="n">Enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l1</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Count</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-86-15" name="__codelineno-86-15"></a><span class="w">            </span><span class="c1">// boutons de transfert</span>
-<a id="__codelineno-86-16" name="__codelineno-86-16"></a><span class="w">            </span><span class="n">button1vers2</span><span class="p">.</span><span class="n">Enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
-<a id="__codelineno-86-17" name="__codelineno-86-17"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-86-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-86-1" name="__codelineno-86-1"></a>        // transfert
+<a id="__codelineno-86-2" name="__codelineno-86-2"></a>        private void transfert(ListBox l1, Button button1vers2, Button buttonEffacer1, ListBox l2, Button button2vers1, Button buttonEffacer2) {
+<a id="__codelineno-86-3" name="__codelineno-86-3"></a>            // transfert dans la liste l2 des éléments sélectionnés de la liste l1
+<a id="__codelineno-86-4" name="__codelineno-86-4"></a>            for (int i = l1.SelectedIndices.Count - 1; i &gt;= 0; i--) {
+<a id="__codelineno-86-5" name="__codelineno-86-5"></a>                // index de l&#39;élément sélectionné
+<a id="__codelineno-86-6" name="__codelineno-86-6"></a>                int index = l1.SelectedIndices[i];
+<a id="__codelineno-86-7" name="__codelineno-86-7"></a>                // ajout dans l2
+<a id="__codelineno-86-8" name="__codelineno-86-8"></a>                l2.Items.Add(l1.Items[index]);
+<a id="__codelineno-86-9" name="__codelineno-86-9"></a>                // suppression dans l1
+<a id="__codelineno-86-10" name="__codelineno-86-10"></a>                l1.Items.RemoveAt(index);
+<a id="__codelineno-86-11" name="__codelineno-86-11"></a>            }
+<a id="__codelineno-86-12" name="__codelineno-86-12"></a>            // boutons Effacer
+<a id="__codelineno-86-13" name="__codelineno-86-13"></a>            buttonEffacer2.Enabled = l2.Items.Count != 0;
+<a id="__codelineno-86-14" name="__codelineno-86-14"></a>            buttonEffacer1.Enabled = l1.Items.Count != 0;
+<a id="__codelineno-86-15" name="__codelineno-86-15"></a>            // boutons de transfert
+<a id="__codelineno-86-16" name="__codelineno-86-16"></a>            button1vers2.Enabled = false;
+<a id="__codelineno-86-17" name="__codelineno-86-17"></a>}
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne b : la méthode <strong>transfert</strong> reçoit six paramètres :</li>
@@ -2283,12 +2283,12 @@ On parcourt la collection en sens inverse : on commence par la fin de la collect
 <span class="normal"><a href="#__codelineno-88-3">3</a></span>
 <span class="normal"><a href="#__codelineno-88-4">4</a></span>
 <span class="normal"><a href="#__codelineno-88-5">5</a></span>
-<span class="normal"><a href="#__codelineno-88-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-88-1" name="__codelineno-88-1"></a><span class="k">this</span><span class="p">.</span><span class="n">radioButton1</span><span class="p">.</span><span class="n">CheckedChanged</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">EventHandler</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">affiche</span><span class="p">);</span>
-<a id="__codelineno-88-2" name="__codelineno-88-2"></a><span class="k">this</span><span class="p">.</span><span class="n">radioButton2</span><span class="p">.</span><span class="n">CheckedChanged</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">EventHandler</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">affiche</span><span class="p">);</span>
-<a id="__codelineno-88-3" name="__codelineno-88-3"></a><span class="k">this</span><span class="p">.</span><span class="n">radioButton3</span><span class="p">.</span><span class="n">CheckedChanged</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">EventHandler</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">affiche</span><span class="p">);</span>
-<a id="__codelineno-88-4" name="__codelineno-88-4"></a><span class="k">this</span><span class="p">.</span><span class="n">checkBox1</span><span class="p">.</span><span class="n">CheckedChanged</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">EventHandler</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">affiche</span><span class="p">);</span>
-<a id="__codelineno-88-5" name="__codelineno-88-5"></a><span class="k">this</span><span class="p">.</span><span class="n">checkBox2</span><span class="p">.</span><span class="n">CheckedChanged</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">EventHandler</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">affiche</span><span class="p">);</span>
-<a id="__codelineno-88-6" name="__codelineno-88-6"></a><span class="k">this</span><span class="p">.</span><span class="n">checkBox3</span><span class="p">.</span><span class="n">CheckedChanged</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">EventHandler</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">affiche</span><span class="p">);</span>
+<span class="normal"><a href="#__codelineno-88-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-88-1" name="__codelineno-88-1"></a>this.radioButton1.CheckedChanged += new System.EventHandler(this.affiche);
+<a id="__codelineno-88-2" name="__codelineno-88-2"></a>this.radioButton2.CheckedChanged += new System.EventHandler(this.affiche);
+<a id="__codelineno-88-3" name="__codelineno-88-3"></a>this.radioButton3.CheckedChanged += new System.EventHandler(this.affiche);
+<a id="__codelineno-88-4" name="__codelineno-88-4"></a>this.checkBox1.CheckedChanged += new System.EventHandler(this.affiche);
+<a id="__codelineno-88-5" name="__codelineno-88-5"></a>this.checkBox2.CheckedChanged += new System.EventHandler(this.affiche);
+<a id="__codelineno-88-6" name="__codelineno-88-6"></a>this.checkBox3.CheckedChanged += new System.EventHandler(this.affiche);
 </code></pre></div></td></tr></table></div>
 <p>La méthode affiche est complétée comme suit :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-89-1"> 1</a></span>
@@ -2318,7 +2318,7 @@ On parcourt la collection en sens inverse : on commence par la fin de la collect
 <a id="__codelineno-89-13" name="__codelineno-89-13"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>La syntaxe</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-90-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-90-1" name="__codelineno-90-1"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sender</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">CheckBox</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-90-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-90-1" name="__codelineno-90-1"></a>            if (sender is CheckBox) {
 </code></pre></div></td></tr></table></div>
 <p>permet de vérifier que l&#x27;objet sender est de type CheckBox. Cela nous permet ensuite de faire un transtypage vers le type exact de sender. La méthode affiche écrit dans la liste listBoxValeurs le nom du composant à l&#x27;origine de l&#x27;événement et la valeur de sa propriété Checked. A l&#x27;exécution [7], on voit qu&#x27;un clic sur un bouton radio provoque deux événements CheckChanged : l&#x27;un sur l&#x27;ancien bouton coché qui passe à &quot;non coché&quot; et l&#x27;autre sur le nouveau bouton qui passe à &quot;coché&quot;.</p>
 <h3 id="726-variateurs-scrollbar">7.2.6. Variateurs ScrollBar</h3>
@@ -2432,31 +2432,31 @@ Un composant <strong>NumericUpDown</strong> est proche du variateur : il a lui a
 <li>[2] : les événements survenant lors d&#x27;un glisser / lâcher (Drag&#x27;nDrop)</li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-92-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-92-1" name="__codelineno-92-1"></a><span class="n">MouseEnter</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-92-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-92-1" name="__codelineno-92-1"></a>MouseEnter
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">la souris vient d&#x27;entrer dans le domaine du contrôle</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-93-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-93-1" name="__codelineno-93-1"></a><span class="n">MouseLeave</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-93-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-93-1" name="__codelineno-93-1"></a>MouseLeave
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">la souris vient de quitter le domaine du contrôle</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-94-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-94-1" name="__codelineno-94-1"></a><span class="n">MouseMove</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-94-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-94-1" name="__codelineno-94-1"></a>MouseMove
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">la souris bouge dans le domaine du contrôle</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-95-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-95-1" name="__codelineno-95-1"></a><span class="n">MouseDown</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-95-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-95-1" name="__codelineno-95-1"></a>MouseDown
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Pression sur le bouton gauche de la souris</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-96-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-96-1" name="__codelineno-96-1"></a><span class="n">MouseUp</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-96-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-96-1" name="__codelineno-96-1"></a>MouseUp
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Relâchement du bouton gauche de la souris</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-97-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-97-1" name="__codelineno-97-1"></a><span class="n">DragDrop</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-97-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-97-1" name="__codelineno-97-1"></a>DragDrop
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">l&#x27;utilisateur lâche un objet sur le contrôle</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-98-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-98-1" name="__codelineno-98-1"></a><span class="n">DragEnter</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-98-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-98-1" name="__codelineno-98-1"></a>DragEnter
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">l&#x27;utilisateur entre dans le domaine du contrôle en tirant un objet</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-99-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-99-1" name="__codelineno-99-1"></a><span class="n">DragLeave</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-99-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-99-1" name="__codelineno-99-1"></a>DragLeave
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">l&#x27;utilisateur sort du domaine du contrôle en tirant un objet</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-100-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-100-1" name="__codelineno-100-1"></a><span class="n">DragOver</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-100-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-100-1" name="__codelineno-100-1"></a>DragOver
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">l&#x27;utilisateur passe au-dessus domaine du contrôle en tirant un objet</p></td></tr></table>
 
@@ -2561,10 +2561,10 @@ Il reste à nommer le différents composants du formulaire :</li>
 
 <p>Deux propriétés sont utilisées dans notre exemple : </p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-105-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-105-1" name="__codelineno-105-1"></a><span class="n">Name</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-105-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-105-1" name="__codelineno-105-1"></a>Name
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le nom du contrôle menu</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-106-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-106-1" name="__codelineno-106-1"></a><span class="n">Text</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-106-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-106-1" name="__codelineno-106-1"></a>Text
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le libellé de l&#x27;option de menu</p></td></tr></table>
 
@@ -2610,19 +2610,19 @@ Il reste à nommer le différents composants du formulaire :</li>
 </code></pre></div></td></tr></table></div>
 <p>Nous utiliserons les propriétés et méthodes suivantes de la classe <strong>SaveFileDialog</strong> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Champ</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Type</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Rôle</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-110-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-110-1" name="__codelineno-110-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">Filter</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-110-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-110-1" name="__codelineno-110-1"></a>string Filter
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Propriété</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">les types de fichiers proposés dans la liste déroulante des types de fichiers de la boîte de dialogue</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-111-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-111-1" name="__codelineno-111-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">FilterIndex</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-111-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-111-1" name="__codelineno-111-1"></a>int FilterIndex
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Propriété</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le n° du type de fichier proposé par défaut dans la liste ci-dessus. Commence à 0.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-112-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-112-1" name="__codelineno-112-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">InitialDirectory</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-112-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-112-1" name="__codelineno-112-1"></a>string InitialDirectory
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Propriété</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le dossier présenté initialement pour la sauvegarde du fichier</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-113-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-113-1" name="__codelineno-113-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">FileName</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-113-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-113-1" name="__codelineno-113-1"></a>string FileName
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Propriété</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le nom du fichier de sauvegarde indiqué par l&#x27;utilisateur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-114-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-114-1" name="__codelineno-114-1"></a><span class="n">DialogResult</span><span class="p">.</span><span class="n">ShowDialog</span><span class="p">()</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-114-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-114-1" name="__codelineno-114-1"></a>DialogResult.ShowDialog()
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Méthode</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">méthode qui affiche la boîte de dialogue de sauvegarde. Rend un résultat de type DialogResult.</p></td></tr></table>
 
@@ -2630,16 +2630,16 @@ Il reste à nommer le différents composants du formulaire :</li>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D5000003D13EE310B0.png" style="display:inline-block; margin:4px;width:9.82cm;height:7.751cm;" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-115-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-115-1" name="__codelineno-115-1"></a><span class="mi">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-115-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-115-1" name="__codelineno-115-1"></a>1
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">liste déroulante construite à partir de la propriété <b>Filter</b>. Le type de fichier proposé par défaut est fixé par <b>FilterIndex</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-116-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-116-1" name="__codelineno-116-1"></a><span class="mi">2</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-116-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-116-1" name="__codelineno-116-1"></a>2
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">dossier courant, fixé par <b>InitialDirectory</b> si cette propriété a été renseignée</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-117-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-117-1" name="__codelineno-117-1"></a><span class="mi">3</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-117-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-117-1" name="__codelineno-117-1"></a>3
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">nom du fichier choisi ou tapé directement par l&#x27;utilisateur. Sera disponible dans la propriété <b>FileName</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-118-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-118-1" name="__codelineno-118-1"></a><span class="mi">4</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-118-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-118-1" name="__codelineno-118-1"></a>4
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">boutons <b>Enregistrer/Annuler</b>. Si le bouton Enregistrer est utilisé, la fonction ShowDialog rend le résultat <b>DialogResult.OK</b></p></td></tr></table>
 
@@ -2713,16 +2713,16 @@ La classe <strong>OpenFileDialog</strong> est très proche de la classe SaveFile
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E4000003C66C65FB41.png" style="display:inline-block; margin:4px;width:9.94cm;height:7.669cm;" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-120-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-120-1" name="__codelineno-120-1"></a><span class="mi">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-120-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-120-1" name="__codelineno-120-1"></a>1
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">liste déroulante construite à partir de la propriété <b>Filter</b>. Le type de fichier proposé par défaut est fixé par <b>FilterIndex</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-121-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-121-1" name="__codelineno-121-1"></a><span class="mi">2</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-121-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-121-1" name="__codelineno-121-1"></a>2
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">dossier courant, fixé par <b>InitialDirectory</b> si cette propriété a été renseignée</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-122-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-122-1" name="__codelineno-122-1"></a><span class="mi">3</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-122-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-122-1" name="__codelineno-122-1"></a>3
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">nom du fichier choisi ou tapé directement par l&#x27;utilisateur. Sera disponible dans la propriété <b>FileName</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-123-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-123-1" name="__codelineno-123-1"></a><span class="mi">4</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-123-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-123-1" name="__codelineno-123-1"></a>4
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">boutons <b>Ouvrir/Annuler</b>. Si le bouton Ouvrir est utilisé, la fonction ShowDialog rend le résultat <b>DialogResult.OK</b></p></td></tr></table>
 
@@ -2850,13 +2850,13 @@ Nous avons désormais les éléments pour traiter les clics sur les boutons Coul
 
 <p>Les propriétés du composant Timer utilisées ici seront les suivantes :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-126-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-126-1" name="__codelineno-126-1"></a><span class="n">Interval</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-126-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-126-1" name="__codelineno-126-1"></a>Interval
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">nombre de millisecondes au bout duquel un événement Tick est émis.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-127-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-127-1" name="__codelineno-127-1"></a><span class="n">Tick</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-127-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-127-1" name="__codelineno-127-1"></a>Tick
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">l&#x27;événement produit à la fin de Interval millisecondes</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-128-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-128-1" name="__codelineno-128-1"></a><span class="n">Enabled</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-128-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-128-1" name="__codelineno-128-1"></a>Enabled
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">rend le timer actif (true) ou inactif (false)</p></td></tr></table>
 
@@ -3150,30 +3150,30 @@ Le formulaire [Form1] est le formulaire de saisies des paramètres du calcul de 
 <span class="normal"><a href="#__codelineno-132-21">21</a></span>
 <span class="normal"><a href="#__codelineno-132-22">22</a></span>
 <span class="normal"><a href="#__codelineno-132-23">23</a></span>
-<span class="normal"><a href="#__codelineno-132-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-132-1" name="__codelineno-132-1"></a><span class="o">&lt;?</span><span class="n">xml</span><span class="w"> </span><span class="n">version</span><span class="o">=</span><span class="s">&quot;1.0&quot;</span><span class="w"> </span><span class="n">encoding</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="w"> </span><span class="o">?&gt;</span>
-<a id="__codelineno-132-2" name="__codelineno-132-2"></a><span class="o">&lt;</span><span class="n">configuration</span><span class="o">&gt;</span>
+<span class="normal"><a href="#__codelineno-132-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-132-1" name="__codelineno-132-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</span>
+<a id="__codelineno-132-2" name="__codelineno-132-2"></a><span class="nt">&lt;configuration&gt;</span>
 <a id="__codelineno-132-3" name="__codelineno-132-3"></a>
-<a id="__codelineno-132-4" name="__codelineno-132-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">configSections</span><span class="o">&gt;</span>
-<a id="__codelineno-132-5" name="__codelineno-132-5"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">sectionGroup</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s">&quot;spring&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-132-6" name="__codelineno-132-6"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">section</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s">&quot;context&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s">&quot;Spring.Context.Support.ContextHandler, Spring.Core&quot;</span><span class="w"> </span><span class="o">/&gt;</span>
-<a id="__codelineno-132-7" name="__codelineno-132-7"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">section</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s">&quot;objects&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s">&quot;Spring.Context.Support.DefaultSectionHandler, Spring.Core&quot;</span><span class="w"> </span><span class="o">/&gt;</span>
-<a id="__codelineno-132-8" name="__codelineno-132-8"></a><span class="w">        </span><span class="o">&lt;/</span><span class="n">sectionGroup</span><span class="o">&gt;</span>
-<a id="__codelineno-132-9" name="__codelineno-132-9"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">configSections</span><span class="o">&gt;</span>
+<a id="__codelineno-132-4" name="__codelineno-132-4"></a><span class="w">    </span><span class="nt">&lt;configSections&gt;</span>
+<a id="__codelineno-132-5" name="__codelineno-132-5"></a><span class="w">        </span><span class="nt">&lt;sectionGroup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;spring&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-132-6" name="__codelineno-132-6"></a><span class="w">            </span><span class="nt">&lt;section</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;context&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;Spring.Context.Support.ContextHandler, Spring.Core&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-132-7" name="__codelineno-132-7"></a><span class="w">            </span><span class="nt">&lt;section</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;objects&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;Spring.Context.Support.DefaultSectionHandler, Spring.Core&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-132-8" name="__codelineno-132-8"></a><span class="w">        </span><span class="nt">&lt;/sectionGroup&gt;</span>
+<a id="__codelineno-132-9" name="__codelineno-132-9"></a><span class="w">    </span><span class="nt">&lt;/configSections&gt;</span>
 <a id="__codelineno-132-10" name="__codelineno-132-10"></a>
-<a id="__codelineno-132-11" name="__codelineno-132-11"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">spring</span><span class="o">&gt;</span>
-<a id="__codelineno-132-12" name="__codelineno-132-12"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">context</span><span class="o">&gt;</span>
-<a id="__codelineno-132-13" name="__codelineno-132-13"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">resource</span><span class="w"> </span><span class="n">uri</span><span class="o">=</span><span class="s">&quot;config://spring/objects&quot;</span><span class="w"> </span><span class="o">/&gt;</span>
-<a id="__codelineno-132-14" name="__codelineno-132-14"></a><span class="w">        </span><span class="o">&lt;/</span><span class="n">context</span><span class="o">&gt;</span>
-<a id="__codelineno-132-15" name="__codelineno-132-15"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">objects</span><span class="w"> </span><span class="n">xmlns</span><span class="o">=</span><span class="s">&quot;http://www.springframework.net&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-132-16" name="__codelineno-132-16"></a><span class="w">            </span><span class="o">&lt;</span><span class="kt">object</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s">&quot;dao&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s">&quot;Dao.FileImpot, ImpotsV5-dao&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-132-17" name="__codelineno-132-17"></a><span class="w">                </span><span class="o">&lt;</span><span class="n">constructor</span><span class="o">-</span><span class="n">arg</span><span class="w"> </span><span class="n">index</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="k">value</span><span class="o">=</span><span class="s">&quot;DataImpot.txt&quot;</span><span class="o">/&gt;</span>
-<a id="__codelineno-132-18" name="__codelineno-132-18"></a><span class="w">            </span><span class="o">&lt;/</span><span class="kt">object</span><span class="o">&gt;</span>
-<a id="__codelineno-132-19" name="__codelineno-132-19"></a><span class="w">            </span><span class="o">&lt;</span><span class="kt">object</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s">&quot;metier&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s">&quot;Metier.ImpotMetier, ImpotsV5-metier&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-132-20" name="__codelineno-132-20"></a><span class="w">                </span><span class="o">&lt;</span><span class="n">constructor</span><span class="o">-</span><span class="n">arg</span><span class="w"> </span><span class="n">index</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="k">ref</span><span class="o">=</span><span class="s">&quot;dao&quot;</span><span class="o">/&gt;</span>
-<a id="__codelineno-132-21" name="__codelineno-132-21"></a><span class="w">            </span><span class="o">&lt;/</span><span class="kt">object</span><span class="o">&gt;</span>
-<a id="__codelineno-132-22" name="__codelineno-132-22"></a><span class="w">        </span><span class="o">&lt;/</span><span class="n">objects</span><span class="o">&gt;</span>
-<a id="__codelineno-132-23" name="__codelineno-132-23"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">spring</span><span class="o">&gt;</span>
-<a id="__codelineno-132-24" name="__codelineno-132-24"></a><span class="o">&lt;/</span><span class="n">configuration</span><span class="o">&gt;</span>
+<a id="__codelineno-132-11" name="__codelineno-132-11"></a><span class="w">    </span><span class="nt">&lt;spring&gt;</span>
+<a id="__codelineno-132-12" name="__codelineno-132-12"></a><span class="w">        </span><span class="nt">&lt;context&gt;</span>
+<a id="__codelineno-132-13" name="__codelineno-132-13"></a><span class="w">            </span><span class="nt">&lt;resource</span><span class="w"> </span><span class="na">uri=</span><span class="s">&quot;config://spring/objects&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-132-14" name="__codelineno-132-14"></a><span class="w">        </span><span class="nt">&lt;/context&gt;</span>
+<a id="__codelineno-132-15" name="__codelineno-132-15"></a><span class="w">        </span><span class="nt">&lt;objects</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.springframework.net&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-132-16" name="__codelineno-132-16"></a><span class="w">            </span><span class="nt">&lt;object</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;dao&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;Dao.FileImpot, ImpotsV5-dao&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-132-17" name="__codelineno-132-17"></a><span class="w">                </span><span class="nt">&lt;constructor-arg</span><span class="w"> </span><span class="na">index=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;DataImpot.txt&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-132-18" name="__codelineno-132-18"></a><span class="w">            </span><span class="nt">&lt;/object&gt;</span>
+<a id="__codelineno-132-19" name="__codelineno-132-19"></a><span class="w">            </span><span class="nt">&lt;object</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;metier&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;Metier.ImpotMetier, ImpotsV5-metier&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-132-20" name="__codelineno-132-20"></a><span class="w">                </span><span class="nt">&lt;constructor-arg</span><span class="w"> </span><span class="na">index=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;dao&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-132-21" name="__codelineno-132-21"></a><span class="w">            </span><span class="nt">&lt;/object&gt;</span>
+<a id="__codelineno-132-22" name="__codelineno-132-22"></a><span class="w">        </span><span class="nt">&lt;/objects&gt;</span>
+<a id="__codelineno-132-23" name="__codelineno-132-23"></a><span class="w">    </span><span class="nt">&lt;/spring&gt;</span>
+<a id="__codelineno-132-24" name="__codelineno-132-24"></a><span class="nt">&lt;/configuration&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 24-32 : exploitation du fichier [App.config] précédent pour instancier les couches [metier] et [dao]</li>
@@ -3185,7 +3185,7 @@ Le formulaire [Form1] est le formulaire de saisies des paramètres du calcul de 
 <li>lignes 38-44 : on construit le message d&#x27;erreur à afficher. Il est constitué de la concaténation des messages d&#x27;erreurs des différentes exceptions présentes dans la chaîne des exceptions.</li>
 <li>ligne 46 : un formulaire de type [Form2] est créé.</li>
 <li>ligne 47 : nous le verrons ultérieurement, ce formulaire a une propriété publique MsgErreur qui est le message d&#x27;erreur à afficher :
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-133-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-133-1" name="__codelineno-133-1"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">MsgErreur</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-133-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-133-1" name="__codelineno-133-1"></a>        public string MsgErreur { private get; set; }
 </code></pre></div></td></tr></table></div></li>
 </ul>
 <p>On renseigne cette propriété.</p>
@@ -3194,7 +3194,7 @@ Le formulaire [Form1] est le formulaire de saisies des paramètres du calcul de 
 <li>lignes 50-57 : il n&#x27;y a pas eu d&#x27;exception. On se prépare à afficher un formulaire de type [Form1].</li>
 <li>ligne 53 : un formulaire de type [Form1] est créé.</li>
 <li>ligne 54 : nous le verrons ultérieurement, ce formulaire a une propriété publique Metier qui est une référence sur la couche [metier] :
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-134-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-134-1" name="__codelineno-134-1"></a><span class="w">                </span><span class="k">public</span><span class="w"> </span><span class="n">IImpotMetier</span><span class="w"> </span><span class="n">Metier</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-134-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-134-1" name="__codelineno-134-1"></a>                public IImpotMetier Metier { private get; set; }
 </code></pre></div></td></tr></table></div></li>
 </ul>
 <p>On renseigne cette propriété.</p>

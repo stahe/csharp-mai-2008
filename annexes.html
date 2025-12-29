@@ -318,7 +318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="installation-de-visual-c-2008.html" class="md-nav__link">
+      <a href="installation-de-visual-csharp-2008.html" class="md-nav__link">
         
   
   
@@ -345,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="les-bases-du-langage-c.html" class="md-nav__link">
+      <a href="les-bases-du-langage-csharp.html" class="md-nav__link">
         
   
   
@@ -399,14 +399,14 @@
   
   
     <li class="md-nav__item">
-      <a href="classes-net-dx27usage-courant.html" class="md-nav__link">
+      <a href="classes-net-dusage-courant.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. Classes .NET d&#x27;usage courant
+    5. Classes .NET d'usage courant
   
 
     
@@ -453,7 +453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="interfaces-graphiques-avec-c-et-vsnet.html" class="md-nav__link">
+      <a href="interfaces-graphiques-avec-csharp-et-vsnet.html" class="md-nav__link">
         
   
   
@@ -534,14 +534,14 @@
   
   
     <li class="md-nav__item">
-      <a href="les-threads-dx27execution.html" class="md-nav__link">
+      <a href="les-threads-dexecution.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. Les threads d&#x27;exécution
+    10. Les threads d'exécution
   
 
     
@@ -736,10 +736,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1413-creation-dun-utilisateur-jpa-et-dune-base-de-donnees-jpa" class="md-nav__link">
+  <a href="#1413-creation-dx27un-utilisateur-jpa-et-dx27une-base-de-donnees-jpa" class="md-nav__link">
     <span class="md-ellipsis">
       
-        14.1.3. Création d&#x27;un utilisateur jpa et d&#x27;une base de données jpa
+        14.1.3. Création d&amp;#x27;un utilisateur jpa et d&amp;#x27;une base de données jpa
       
     </span>
   </a>
@@ -808,10 +808,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1423-clients-dadministration-mysql" class="md-nav__link">
+  <a href="#1423-clients-dx27administration-mysql" class="md-nav__link">
     <span class="md-ellipsis">
       
-        14.2.3. Clients d&#x27;administration MySQL
+        14.2.3. Clients d&amp;#x27;administration MySQL
       
     </span>
   </a>
@@ -819,10 +819,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1424-creation-dun-utilisateur-jpa-et-dune-base-de-donnees-jpa" class="md-nav__link">
+  <a href="#1424-creation-dx27un-utilisateur-jpa-et-dx27une-base-de-donnees-jpa" class="md-nav__link">
     <span class="md-ellipsis">
       
-        14.2.4. Création d&#x27;un utilisateur jpa et d&#x27;une base de données jpa
+        14.2.4. Création d&amp;#x27;un utilisateur jpa et d&amp;#x27;une base de données jpa
       
     </span>
   </a>
@@ -937,7 +937,7 @@ On procèdera de même avec le service [SQL Server Browser] (cf [5] plus haut). 
 <li>en [3] : un clic droit sur le service [SQL Server] donne accès aux options de démarrage / arrêt du serveur. Ici, on le lance.</li>
 <li>en [4] : SQL Server est lancé</li>
 </ul>
-<h3 id="1413-creation-dun-utilisateur-jpa-et-dune-base-de-donnees-jpa">14.1.3. Création d&#x27;un utilisateur jpa et d&#x27;une base de données jpa</h3>
+<h3 id="1413-creation-dx27un-utilisateur-jpa-et-dx27une-base-de-donnees-jpa">14.1.3. Création d&#x27;un utilisateur jpa et d&#x27;une base de données jpa</h3>
 <p>Lançons le SGBD comme indiqué ci-dessus, puis l&#x27;application d&#x27;administration [1] via le menu ci-dessous :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F60000012C22603105.png" style="display:inline-block; margin:4px;width:10.081cm;height:2.379cm;" /></td></tr></table>
 
@@ -1013,31 +1013,31 @@ On valide cette configuration :</li>
 <span class="normal"><a href="#__codelineno-0-26">26</a></span>
 <span class="normal"><a href="#__codelineno-0-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cm">/* création table */</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">CREATE</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="nf">ARTICLES</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="n">ID</span><span class="w">            </span><span class="n">INTEGER</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="n">NOM</span><span class="w">           </span><span class="nf">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="n">PRIX</span><span class="w">          </span><span class="n">DOUBLE</span><span class="w"> </span><span class="n">PRECISION</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="n">STOCKACTUEL</span><span class="w">   </span><span class="n">INTEGER</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="n">STOCKMINIMUM</span><span class="w">  </span><span class="n">INTEGER</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="n">ID</span><span class="w">            </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="n">NOM</span><span class="w">           </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="n">PRIX</span><span class="w">          </span><span class="n">DOUBLE</span><span class="w"> </span><span class="k">PRECISION</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="n">STOCKACTUEL</span><span class="w">   </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="n">STOCKMINIMUM</span><span class="w">  </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="p">);</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="n">INSERT</span><span class="w"> </span><span class="n">INTO</span><span class="w"> </span><span class="nf">ARTICLES</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">NOM</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKACTUEL</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKMINIMUM</span><span class="p">)</span><span class="w"> </span><span class="n">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="n">article1</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="n">INSERT</span><span class="w"> </span><span class="n">INTO</span><span class="w"> </span><span class="nf">ARTICLES</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">NOM</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKACTUEL</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKMINIMUM</span><span class="p">)</span><span class="w"> </span><span class="n">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="n">article2</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="n">INSERT</span><span class="w"> </span><span class="n">INTO</span><span class="w"> </span><span class="nf">ARTICLES</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">NOM</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKACTUEL</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKMINIMUM</span><span class="p">)</span><span class="w"> </span><span class="n">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="n">article3</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">NOM</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKACTUEL</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKMINIMUM</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;article1&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">NOM</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKACTUEL</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKMINIMUM</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;article2&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">NOM</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKACTUEL</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKMINIMUM</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;article3&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14"></a>
 <a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="cm">/* contraintes d&#39;intégrité */</span>
 <a id="__codelineno-0-16" name="__codelineno-0-16"></a>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_ID</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_PRIX</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">PRIX</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_STOCKACTUEL</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">STOCKACTUEL</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_STOCKMINIMUM</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">STOCKMINIMUM</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_NOM</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">NOM</span><span class="o">&lt;&gt;</span><span class="err">&#39;&#39;</span><span class="p">);</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">UNQ_NOM</span><span class="w"> </span><span class="nf">UNIQUE</span><span class="w"> </span><span class="p">(</span><span class="n">NOM</span><span class="p">);</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_ID</span><span class="w"> </span><span class="k">check</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_PRIX</span><span class="w"> </span><span class="k">check</span><span class="w"> </span><span class="p">(</span><span class="n">PRIX</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_STOCKACTUEL</span><span class="w"> </span><span class="k">check</span><span class="w"> </span><span class="p">(</span><span class="n">STOCKACTUEL</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_STOCKMINIMUM</span><span class="w"> </span><span class="k">check</span><span class="w"> </span><span class="p">(</span><span class="n">STOCKMINIMUM</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_NOM</span><span class="w"> </span><span class="k">check</span><span class="w"> </span><span class="p">(</span><span class="n">NOM</span><span class="o">&lt;&gt;</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">UNQ_NOM</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="p">(</span><span class="n">NOM</span><span class="p">);</span>
 <a id="__codelineno-0-23" name="__codelineno-0-23"></a>
 <a id="__codelineno-0-24" name="__codelineno-0-24"></a>
 <a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="cm">/* clé primaire */</span>
 <a id="__codelineno-0-26" name="__codelineno-0-26"></a>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">PK_ARTICLES</span><span class="w"> </span><span class="n">PRIMARY</span><span class="w"> </span><span class="nf">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">);</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">PK_ARTICLES</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007AD00000436F571C94A.png" style="display:inline-block; margin:4px;width:15.6cm;height:8.56cm;" /></td></tr></table>
 
@@ -1129,7 +1129,7 @@ Pour lancer et arrêter manuellement le service MySQL, on pourra créer deux rac
 <li>en [1] : le raccourci pour lancer MySQL5</li>
 <li>en [2] : le raccourci pour l&#x27;arrêter</li>
 </ul>
-<h3 id="1423-clients-dadministration-mysql">14.2.3. Clients d&#x27;administration MySQL</h3>
+<h3 id="1423-clients-dx27administration-mysql">14.2.3. Clients d&#x27;administration MySQL</h3>
 <p>Sur le site de MySQL, on peut trouver des clients d&#x27;administration du SGBD :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007B30000016A21CF87ED.png" style="display:inline-block; margin:4px;width:15.64cm;height:2.87cm;" /></td></tr></table>
 
@@ -1150,7 +1150,7 @@ Lançons MySQL (via les raccourcis que vous avez créés), puis lançons [MySQL 
 <li>en [1] : mettre le mot de passe de l&#x27;utilisateur root (root ici)</li>
 <li>en [2] : on est connecté et on voit que MySQL est actif</li>
 </ul>
-<h3 id="1424-creation-dun-utilisateur-jpa-et-dune-base-de-donnees-jpa">14.2.4. Création d&#x27;un utilisateur jpa et d&#x27;une base de données jpa</h3>
+<h3 id="1424-creation-dx27un-utilisateur-jpa-et-dx27une-base-de-donnees-jpa">14.2.4. Création d&#x27;un utilisateur jpa et d&#x27;une base de données jpa</h3>
 <p>Nous créons maintenant une base de données appelée <strong>jpa</strong> et un utilisateur de même nom. D&#x27;abord l&#x27;utilisateur :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000073C000003B44350B48E.png" style="display:inline-block; margin:4px;width:14.7cm;height:7.519cm;" /></td></tr></table>
 
@@ -1257,43 +1257,43 @@ Nous allons maintenant créer une table [ARTICLES] à l&#x27;aide d&#x27;un scri
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a>
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a>
 <a id="__codelineno-1-6" name="__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="n">CREATE</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="nf">ARTICLES</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="n">ID</span><span class="w">            </span><span class="n">INTEGER</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="n">NOM</span><span class="w">           </span><span class="nf">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="n">PRIX</span><span class="w">          </span><span class="n">DOUBLE</span><span class="w"> </span><span class="n">PRECISION</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="n">STOCKACTUEL</span><span class="w">   </span><span class="n">INTEGER</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="n">STOCKMINIMUM</span><span class="w">  </span><span class="n">INTEGER</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="n">ID</span><span class="w">            </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="n">NOM</span><span class="w">           </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="n">PRIX</span><span class="w">          </span><span class="n">DOUBLE</span><span class="w"> </span><span class="k">PRECISION</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="n">STOCKACTUEL</span><span class="w">   </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="n">STOCKMINIMUM</span><span class="w">  </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
 <a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="p">);</span>
 <a id="__codelineno-1-14" name="__codelineno-1-14"></a>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="n">INSERT</span><span class="w"> </span><span class="n">INTO</span><span class="w"> </span><span class="nf">ARTICLES</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">NOM</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKACTUEL</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKMINIMUM</span><span class="p">)</span><span class="w"> </span><span class="n">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="err">&#39;</span><span class="n">article1</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="n">INSERT</span><span class="w"> </span><span class="n">INTO</span><span class="w"> </span><span class="nf">ARTICLES</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">NOM</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKACTUEL</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKMINIMUM</span><span class="p">)</span><span class="w"> </span><span class="n">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="err">&#39;</span><span class="n">article2</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="n">INSERT</span><span class="w"> </span><span class="n">INTO</span><span class="w"> </span><span class="nf">ARTICLES</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">NOM</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKACTUEL</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKMINIMUM</span><span class="p">)</span><span class="w"> </span><span class="n">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="err">&#39;</span><span class="n">article3</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">NOM</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKACTUEL</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKMINIMUM</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;article1&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">NOM</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKACTUEL</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKMINIMUM</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;article2&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">NOM</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKACTUEL</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKMINIMUM</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;article3&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
 <a id="__codelineno-1-18" name="__codelineno-1-18"></a>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="n">COMMIT</span><span class="w"> </span><span class="n">WORK</span><span class="p">;</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="k">COMMIT</span><span class="w"> </span><span class="k">WORK</span><span class="p">;</span>
 <a id="__codelineno-1-20" name="__codelineno-1-20"></a>
 <a id="__codelineno-1-21" name="__codelineno-1-21"></a>
 <a id="__codelineno-1-22" name="__codelineno-1-22"></a>
 <a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="cm">/* Check constraints definition */</span>
 <a id="__codelineno-1-24" name="__codelineno-1-24"></a>
-<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_ID</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_PRIX</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">PRIX</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_STOCKACTUEL</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">STOCKACTUEL</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_STOCKMINIMUM</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">STOCKMINIMUM</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_NOM</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">NOM</span><span class="o">&lt;&gt;</span><span class="err">&#39;&#39;</span><span class="p">);</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_ID</span><span class="w"> </span><span class="k">check</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_PRIX</span><span class="w"> </span><span class="k">check</span><span class="w"> </span><span class="p">(</span><span class="n">PRIX</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_STOCKACTUEL</span><span class="w"> </span><span class="k">check</span><span class="w"> </span><span class="p">(</span><span class="n">STOCKACTUEL</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_STOCKMINIMUM</span><span class="w"> </span><span class="k">check</span><span class="w"> </span><span class="p">(</span><span class="n">STOCKMINIMUM</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_NOM</span><span class="w"> </span><span class="k">check</span><span class="w"> </span><span class="p">(</span><span class="n">NOM</span><span class="o">&lt;&gt;</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
 <a id="__codelineno-1-30" name="__codelineno-1-30"></a>
 <a id="__codelineno-1-31" name="__codelineno-1-31"></a>
 <a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="cm">/******************************************************************************/</span>
 <a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="cm">/****                          Unique Constraints                          ****/</span>
 <a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="cm">/******************************************************************************/</span>
 <a id="__codelineno-1-35" name="__codelineno-1-35"></a>
-<a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">UNQ_NOM</span><span class="w"> </span><span class="nf">UNIQUE</span><span class="w"> </span><span class="p">(</span><span class="n">NOM</span><span class="p">);</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">UNQ_NOM</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="p">(</span><span class="n">NOM</span><span class="p">);</span>
 <a id="__codelineno-1-37" name="__codelineno-1-37"></a>
 <a id="__codelineno-1-38" name="__codelineno-1-38"></a>
 <a id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="cm">/******************************************************************************/</span>
 <a id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="cm">/****                             Primary Keys                             ****/</span>
 <a id="__codelineno-1-41" name="__codelineno-1-41"></a><span class="cm">/******************************************************************************/</span>
 <a id="__codelineno-1-42" name="__codelineno-1-42"></a>
-<a id="__codelineno-1-43" name="__codelineno-1-43"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">PK_ARTICLES</span><span class="w"> </span><span class="n">PRIMARY</span><span class="w"> </span><span class="nf">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">);</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">PK_ARTICLES</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007EC0000048FED74F14D.png" style="display:inline-block; margin:4px;width:16.101cm;height:9.26cm;" /></td></tr></table>

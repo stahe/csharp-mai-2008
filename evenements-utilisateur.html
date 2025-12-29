@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://stahe.github.io/csharp-mai-2008/evenements-utilisateur.html">
       
       
-        <link rel="prev" href="interfaces-graphiques-avec-c-et-vsnet.html">
+        <link rel="prev" href="interfaces-graphiques-avec-csharp-et-vsnet.html">
       
       
         <link rel="next" href="acces-aux-bases-de-donnees.html">
@@ -320,7 +320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="installation-de-visual-c-2008.html" class="md-nav__link">
+      <a href="installation-de-visual-csharp-2008.html" class="md-nav__link">
         
   
   
@@ -347,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="les-bases-du-langage-c.html" class="md-nav__link">
+      <a href="les-bases-du-langage-csharp.html" class="md-nav__link">
         
   
   
@@ -401,14 +401,14 @@
   
   
     <li class="md-nav__item">
-      <a href="classes-net-dx27usage-courant.html" class="md-nav__link">
+      <a href="classes-net-dusage-courant.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. Classes .NET d&#x27;usage courant
+    5. Classes .NET d'usage courant
   
 
     
@@ -455,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="interfaces-graphiques-avec-c-et-vsnet.html" class="md-nav__link">
+      <a href="interfaces-graphiques-avec-csharp-et-vsnet.html" class="md-nav__link">
         
   
   
@@ -575,10 +575,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#84-gestion-devenements" class="md-nav__link">
+  <a href="#84-gestion-dx27evenements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.4. Gestion d&#x27;événements
+        8.4. Gestion d&amp;#x27;événements
       
     </span>
   </a>
@@ -627,14 +627,14 @@
   
   
     <li class="md-nav__item">
-      <a href="les-threads-dx27execution.html" class="md-nav__link">
+      <a href="les-threads-dexecution.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. Les threads d&#x27;exécution
+    10. Les threads d'exécution
   
 
     
@@ -779,7 +779,7 @@
 <p>Nous avons dans le chapitre précédent abordé la notion d&#x27;événements liés à des composants de formulaire. Nous voyons maintenant comment créer des événements dans nos propres classes.</p>
 <h2 id="81-objets-delegate-predefinis">8.1. Objets delegate prédéfinis</h2>
 <p>La notion d&#x27;objet delegate a été rencontrée dans le chapitre précédent mais elle avait été alors survolée. Lorsque nous avions regardé comment les gestionnaires des événements des composants d&#x27;un formulaire étaient déclarés, nous avions rencontré du code similaire au suivant :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">buttonAfficher</span><span class="p">.</span><span class="n">Click</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">EventHandler</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">buttonAfficher_Click</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>            this.buttonAfficher.Click += new System.EventHandler(this.buttonAfficher_Click);
 </code></pre></div></td></tr></table></div>
 <p>où buttonAfficher était un composant de type [Button]. Cette classe a un champ <strong>Click</strong> défini comme suit :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D600000361A5C9640D.png" style="display:inline-block; margin:4px;width:13.891cm;height:6.87cm;" /></td></tr></table>
@@ -805,20 +805,20 @@ Une méthode correspondant au modèle défini par EventHandler pourrait être la
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">buttonAfficher_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Pour créer un objet de type EventHandler, on procède comme suit :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">EventHandler</span><span class="w"> </span><span class="n">evtHandler</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">EventHandler</span><span class="p">(</span><span class="n">méthode</span><span class="w"> </span><span class="n">correspondant</span><span class="w"> </span><span class="n">au</span><span class="w"> </span><span class="n">prototype</span><span class="w">  </span><span class="n">défini</span><span class="w"> </span><span class="n">par</span><span class="w"> </span><span class="n">le</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">EventHandler</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>EventHandler evtHandler=new EventHandler(méthode correspondant au prototype  défini par le type EventHandler);
 </code></pre></div></td></tr></table></div>
 <p>On pourra ainsi écrire :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">EventHandler</span><span class="w"> </span><span class="n">evtHandler</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">EventHandler</span><span class="p">(</span><span class="n">buttonAfficher_Click</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>EventHandler evtHandler=new EventHandler(buttonAfficher_Click);
 </code></pre></div></td></tr></table></div>
 <p>Une variable de type delegate est en fait une liste de références sur des méthodes correspondant au modèle du delegate. Pour ajouter une nouvelle méthode M à la variable evtHandler ci-dessus, on utilise la syntaxe :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">evtHandler</span><span class="o">+=</span><span class="k">new</span><span class="w"> </span><span class="n">EvtHandler</span><span class="p">(</span><span class="n">M</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>evtHandler+=new EvtHandler(M);
 </code></pre></div></td></tr></table></div>
 <p>La notation += peut être utilisée même si evtHandler est une liste vide.</p>
 <p>L&#x27;instruction :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">buttonAfficher</span><span class="p">.</span><span class="n">Click</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">EventHandler</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">buttonAfficher_Click</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>            this.buttonAfficher.Click += new System.EventHandler(this.buttonAfficher_Click);
 </code></pre></div></td></tr></table></div>
 <p>ajoute une méthode de type EventHandler à la liste des méthodes de l&#x27;événement buttonAfficher.Click. Lorsque l&#x27;événement Click sur le composant buttonAfficher se produit, VB exécute l&#x27;instruction :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="w">            </span><span class="n">buttonAfficher</span><span class="p">.</span><span class="n">Click</span><span class="p">(</span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="n">evt</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>            buttonAfficher.Click(source, evt);
 </code></pre></div></td></tr></table></div>
 <p>où :</p>
 <ul>
@@ -826,25 +826,25 @@ Une méthode correspondant au modèle défini par EventHandler pourrait être la
 <li>evt de type EventArgs et ne contient pas d&#x27;information
 Toutes les méthodes de signature void M(object,EventArgs) qui ont été associées à l&#x27;événement Click par :</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">buttonAfficher</span><span class="p">.</span><span class="n">Click</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">EventHandler</span><span class="p">(</span><span class="n">M</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>            this.buttonAfficher.Click += new System.EventHandler(M);
 </code></pre></div></td></tr></table></div>
 <p>seront appelées avec les paramètres (source, evt) transmis par VB.</p>
 <h2 id="82-definir-des-objets-delegate">8.2. Définir des objets delegate</h2>
 <p>L&#x27;instruction</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">delegate</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Opération</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n2</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>    public delegate int Opération(int n1, int n2);
 </code></pre></div></td></tr></table></div>
 <p>définit un type appelé Opération qui représente un prototype de fonction acceptant deux entiers et rendant un entier. C&#x27;est le mot clé delegate qui fait de Opération une définition de prototype de fonction.</p>
 <p>Une variable op de type Opération aura pour rôle d&#x27;enregistrer une liste de fonctions correspondant au prototype Opération :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">f1</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>int f1(int,int)
 </code></pre></div></td></tr></table></div>
 </div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">f2</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>int f2(int,int)
 </code></pre></div></td></tr></table></div>
 </div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="p">...</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="kt">int</span><span class="w"> </span><span class="nf">fn</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>...
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>int fn(int,int)
 </code></pre></div></td></tr></table></div>
 </div></td></tr></table>
 
@@ -989,15 +989,15 @@ Les résultats de l&#x27;exécution sont les suivants :</li>
 <span class="normal"><a href="#__codelineno-13-6">6</a></span>
 <span class="normal"><a href="#__codelineno-13-7">7</a></span>
 <span class="normal"><a href="#__codelineno-13-8">8</a></span>
-<span class="normal"><a href="#__codelineno-13-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">Augmenter</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="n">n</span><span class="o">=</span><span class="mi">18</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="n">Ajouter</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="n">n</span><span class="o">=</span><span class="mi">5</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="n">Soustraire</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="n">n</span><span class="o">=-</span><span class="mi">1</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="n">Ajouter</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="n">Soustraire</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="n">Ajouter</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-13-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>Augmenter(4,7)
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>n=18
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>Ajouter(2,3)
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>n=5
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>Soustraire(2,3)
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a>n=-1
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a>Ajouter(0,0)
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a>Soustraire(0,0)
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a>Ajouter(1,1)
 </code></pre></div></td></tr></table></div>
 <h2 id="83-delegates-ou-interfaces">8.3. Delegates ou interfaces ?</h2>
 <p>Les notions de delegates et d&#x27;interfaces peuvent sembler assez proches et on peut se demander quelles sont exactement les différences entre ces deux notions. Prenons l&#x27;exemple suivant proche d&#x27;un exemple déjà étudié :</p>
@@ -1173,21 +1173,21 @@ On retrouve bien l&#x27;aspect polymorphique qu&#x27;avait le paramètre de type
 Si ces deux conditions sont vérifiées, alors on a le choix entre les deux signatures suivantes pour la méthode Execute :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
-<span class="normal"><a href="#__codelineno-16-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">Execute</span><span class="p">(</span><span class="n">IOperation</span><span class="w"> </span><span class="n">op</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n2</span><span class="p">)</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="kt">int</span><span class="w"> </span><span class="nf">Execute</span><span class="p">(</span><span class="n">Opération</span><span class="w"> </span><span class="n">op</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n2</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>int Execute(IOperation op, int n1, int n2)
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>int Execute(Opération op, int n1, int n2)
 </code></pre></div></td></tr></table></div>
 <p>La seconde qui utilise le delegate peut se montrer plus souple d&#x27;utilisation. En effet dans la première signature, le premier paramètre de la méthode doit implémenter l&#x27;interface IOperation. Cela oblige à créer une classe pour y définir la méthode appelée à être passée en premier paramètre à la méthode Execute. Dans la seconde signature, toute méthode existante ayant la bonne signature fait l&#x27;affaire. Il n&#x27;y a pas de construction supplémentaire à faire.</p>
-<h2 id="84-gestion-devenements">8.4. Gestion d&#x27;événements</h2>
+<h2 id="84-gestion-dx27evenements">8.4. Gestion d&#x27;événements</h2>
 <p>Les objets delegate peuvent servir à définir des événements. Une classe C1 peut définir un événement evt de la façon suivante :</p>
 <ul>
 <li>
 <p>un type delegate est défini dans ou en-dehors de la classe C1 :
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="k">delegate</span><span class="w"> </span><span class="n">TResult</span><span class="w"> </span><span class="nf">Evt</span><span class="p">(</span><span class="n">T1</span><span class="w"> </span><span class="n">param1</span><span class="p">,</span><span class="w"> </span><span class="n">T2</span><span class="w"> </span><span class="n">param2</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>delegate TResult Evt(T1 param1, T2 param2, ...);
 </code></pre></div></td></tr></table></div></p>
 </li>
 <li>
 <p>la classe C1 définit un champ de type delegate Evt :
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="k">public</span><span class="w"> </span><span class="n">Evt</span><span class="w"> </span><span class="n">Evt1</span><span class="p">;</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>public Evt Evt1;
 </code></pre></div></td></tr></table></div></p>
 </li>
 <li>
@@ -1220,10 +1220,10 @@ Le framework .NET définit :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
 <span class="normal"><a href="#__codelineno-20-2">2</a></span>
 <span class="normal"><a href="#__codelineno-20-3">3</a></span>
-<span class="normal"><a href="#__codelineno-20-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="k">public</span><span class="w"> </span><span class="n">Class</span><span class="w"> </span><span class="n">C1</span><span class="p">{</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">event</span><span class="w"> </span><span class="n">MyEventHandler</span><span class="w"> </span><span class="n">Evt1</span><span class="p">;</span>
-<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="p">...</span>
-<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a>public Class C1{
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>    public event MyEventHandler Evt1;
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a>...
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a>}
 </code></pre></div></td></tr></table></div></li>
 </ul>
 <p>Le champ Evt1 est de type delegate. Le mot clé event est là pour restreindre les opérations qu&#x27;on peut faire sur lui :</p>
@@ -1478,10 +1478,10 @@ Les résultats de l&#x27;exécution sont les suivants :</li>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
 <span class="normal"><a href="#__codelineno-27-2">2</a></span>
 <span class="normal"><a href="#__codelineno-27-3">3</a></span>
-<span class="normal"><a href="#__codelineno-27-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="n">Température</span><span class="w"> </span><span class="p">(</span><span class="n">rien</span><span class="w"> </span><span class="n">pour</span><span class="w"> </span><span class="n">arrêter</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">17</span>
-<a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="n">Température</span><span class="w"> </span><span class="p">(</span><span class="n">rien</span><span class="w"> </span><span class="n">pour</span><span class="w"> </span><span class="n">arrêter</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">21</span>
-<a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="n">Souscripteur</span><span class="w"> </span><span class="p">[</span><span class="n">s0</span><span class="p">]</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="p">[</span><span class="n">e</span><span class="p">]</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">signalé</span><span class="w"> </span><span class="n">une</span><span class="w"> </span><span class="n">température</span><span class="w"> </span><span class="n">trop</span><span class="w"> </span><span class="n">haute</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">21</span><span class="p">]</span>
-<a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="n">Souscripteur</span><span class="w"> </span><span class="p">[</span><span class="n">s1</span><span class="p">]</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="p">[</span><span class="n">e</span><span class="p">]</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">signalé</span><span class="w"> </span><span class="n">une</span><span class="w"> </span><span class="n">température</span><span class="w"> </span><span class="n">trop</span><span class="w"> </span><span class="n">haute</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">21</span><span class="p">]</span>
+<span class="normal"><a href="#__codelineno-27-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a>Température (rien pour arrêter) : 17
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a>Température (rien pour arrêter) : 21
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a>Souscripteur [s0] : la source [e] a signalé une température trop haute : [21]
+<a id="__codelineno-27-4" name="__codelineno-27-4"></a>Souscripteur [s1] : la source [e] a signalé une température trop haute : [21]
 </code></pre></div></td></tr></table></div>
 
 

@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://stahe.github.io/csharp-mai-2008/architectures-3-couches.html">
       
       
-        <link rel="prev" href="classes-net-dx27usage-courant.html">
+        <link rel="prev" href="classes-net-dusage-courant.html">
       
       
-        <link rel="next" href="interfaces-graphiques-avec-c-et-vsnet.html">
+        <link rel="next" href="interfaces-graphiques-avec-csharp-et-vsnet.html">
       
       
         
@@ -320,7 +320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="installation-de-visual-c-2008.html" class="md-nav__link">
+      <a href="installation-de-visual-csharp-2008.html" class="md-nav__link">
         
   
   
@@ -347,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="les-bases-du-langage-c.html" class="md-nav__link">
+      <a href="les-bases-du-langage-csharp.html" class="md-nav__link">
         
   
   
@@ -401,14 +401,14 @@
   
   
     <li class="md-nav__item">
-      <a href="classes-net-dx27usage-courant.html" class="md-nav__link">
+      <a href="classes-net-dusage-courant.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. Classes .NET d&#x27;usage courant
+    5. Classes .NET d'usage courant
   
 
     
@@ -499,10 +499,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#62-les-interfaces-de-lapplication-impots" class="md-nav__link">
+  <a href="#62-les-interfaces-de-lx27application-impots" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2. Les interfaces de l&#x27;application [Impots]
+        6.2. Les interfaces de l&amp;#x27;application [Impots]
       
     </span>
   </a>
@@ -533,10 +533,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#632-les-entites-de-lapplication" class="md-nav__link">
+  <a href="#632-les-entites-de-lx27application" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.3.2. Les entités de l&#x27;application
+        6.3.2. Les entités de l&amp;#x27;application
       
     </span>
   </a>
@@ -690,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="interfaces-graphiques-avec-c-et-vsnet.html" class="md-nav__link">
+      <a href="interfaces-graphiques-avec-csharp-et-vsnet.html" class="md-nav__link">
         
   
   
@@ -771,14 +771,14 @@
   
   
     <li class="md-nav__item">
-      <a href="les-threads-dx27execution.html" class="md-nav__link">
+      <a href="les-threads-dexecution.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. Les threads d&#x27;exécution
+    10. Les threads d'exécution
   
 
     
@@ -1017,7 +1017,7 @@ Dans le schéma ci-dessus, les données peuvent provenir de deux endroits :</p>
 Nous allons reprendre l&#x27;application [Impots] déjà étudiée à plusieurs reprises pour lui donner une architecture 3 couches. Pour cela, nous allons étudier les couches [ui, metier, dao] les unes après les autres, en commençant par la couche [dao], couche qui s&#x27;occupe des données persistantes.</li>
 </ul>
 <p>Auparavant, il nous faut définir les interfaces des différentes couches de l&#x27;application [Impots].</p>
-<h2 id="62-les-interfaces-de-lapplication-impots">6.2. Les interfaces de l&#x27;application [Impots]</h2>
+<h2 id="62-les-interfaces-de-lx27application-impots">6.2. Les interfaces de l&#x27;application [Impots]</h2>
 <p>Rappelons qu&#x27;une interface définit un ensemble de signatures de méthodes. Les classes implémentant l&#x27;interface donnent un contenu à ces méthodes.</p>
 <p>Revenons à l&#x27;architecture 3 couches de notre application :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006CB0000016CA61EA86C.png" style="display:inline-block; margin:4px;width:16.101cm;height:3.371cm;" /></td></tr></table>
@@ -1038,9 +1038,9 @@ On voit dans cette description qu&#x27;une couche est amenée à utiliser les re
 <p>La couche [A] fait des demandes à la couche [B]. Dans les cas les plus simples, une couche est implémentée par une unique classe. Une application évolue au cours du temps. Ainsi la couche [B] peut avoir des classes d&#x27;implémentation différentes [B1, B2, ...]. Si la couche [B] est la couche [dao], celle-ci peut avoir une première implémentation [B1] qui va chercher des données dans un fichier. Quelques années plus tard, on peut vouloir mettre les données dans une base de données.  On va alors construire une seconde classe d&#x27;implémentation [B2]. Si dans l&#x27;application initiale, la couche [A] travaillait directement avec la classe [B1] on est obligés de réécrire partiellement le code de la couche [A]. Supposons par exemple qu&#x27;on ait écrit dans la couche [A] quelque chose comme suit :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">B1</span><span class="w"> </span><span class="n">b1</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">B1</span><span class="p">(...);</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="p">..</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">b1</span><span class="p">.</span><span class="n">getData</span><span class="p">(...);</span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>B1 b1=new B1(...);
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>..
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>b1.getData(...);
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 1 : une instance de la classe [B1] est créée</li>
@@ -1053,9 +1053,9 @@ Si on suppose, que la nouvelle classe d&#x27;implémentation [B2] utilise des m�
 <p>La couche [A] ne s&#x27;adresse désormais plus directement à la couche [B] mais à son interface [IB]. Ainsi dans le code de la couche [A], la classe d&#x27;implémentation [Bi] de la couche [B] n&#x27;apparaît qu&#x27;une fois, au moment de l&#x27;implémentation de l&#x27;interface [IB]. Ceci fait, c&#x27;est l&#x27;interface [IB] et non sa classe d&#x27;implémentation qui est utilisée dans le code. Le code précédent devient celui-ci :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">IB</span><span class="w"> </span><span class="n">ib</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">B1</span><span class="p">(...);</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="p">..</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">ib</span><span class="p">.</span><span class="n">getData</span><span class="p">(...);</span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>IB ib=new B1(...);
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>..
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>ib.getData(...);
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 1 : une instance [ib] implémentant l&#x27;interface [IB] est créée par instanciation de la classe [B1]</li>
@@ -1069,9 +1069,9 @@ Désormais si on remplace l&#x27;implémentation [B1] de la couche [B] par une i
 <p>La couche transversale [Spring] va permettre à une couche d&#x27;obtenir par configuration une référence sur la couche située à sa droite sans avoir à connaître le nom de la classe d&#x27;implémentation de la couche. Ce nom sera dans les fichiers de configuration et non  dans le code C#. Le code C# de la couche [A] prend alors la forme suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">IB</span><span class="w"> </span><span class="n">ib</span><span class="p">;</span><span class="w"> </span><span class="c1">// initialisé par Spring</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="p">..</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">ib</span><span class="p">.</span><span class="n">getData</span><span class="p">(...);</span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>IB ib; // initialisé par Spring
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>..
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>ib.getData(...);
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 1 : une instance [ib] implémentant l&#x27;interface [IB] de la couche [B]. Cette instance est créée par Spring sur la base d&#x27;informations trouvées dans un fichier de configuration. Spring va s&#x27;occuper de créer :</li>
@@ -1169,7 +1169,7 @@ Nous étudions une première implémentation de cette architecture en couches.</
 <li>[4] : le dossier [Ui] contient les classes de la couche [ui]</li>
 <li>[5] : le fichier [DataImpot.txt] contient les tranches d&#x27;impôt utilisées par l&#x27;implémentation FileImpot de la couche [dao]. Il est configuré [6] pour être automatiquement recopié dans le dossier d&#x27;exécution du projet.</li>
 </ul>
-<h3 id="632-les-entites-de-lapplication">6.3.2. Les entités de l&#x27;application</h3>
+<h3 id="632-les-entites-de-lx27application">6.3.2. Les entités de l&#x27;application</h3>
 <p>Revenons sur l&#x27;architecture 3 couches de notre application :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006CF0000019F730C355B.png" style="display:inline-block; margin:4px;width:16.14cm;height:3.84cm;" /></td></tr></table>
 
@@ -1801,8 +1801,8 @@ Pour une implémentation [dao] avec la classe FileImpot, la classe de dialogue e
 <h3 id="636-conclusion">6.3.6. Conclusion</h3>
 <p>L&#x27;architecture en couches et l&#x27;utilisation d&#x27;interfaces a amené une certaine souplesse à notre application. Celle-ci apparaît notamment dans la façon dont la couche [ui] instancie les couches [dao] et [métier] :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
-<span class="normal"><a href="#__codelineno-18-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="w">        </span><span class="c1">// on crée les couches [metier et dao]</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="n">IImpotMetier</span><span class="w"> </span><span class="n">metier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ImpotMetier</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">HardwiredImpot</span><span class="p">());</span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>        // on crée les couches [metier et dao]
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a>IImpotMetier metier = new ImpotMetier(new HardwiredImpot());
 </code></pre></div></td></tr></table></div>
 <p>dans un cas et :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
@@ -2103,52 +2103,52 @@ Pour corriger les erreurs, il suffit de corriger le projet C# et de le régéné
 <p>A partir de la version 2.4 de NUnit, une nouvelle syntaxe est devenue disponible, celles des lignes 21 et 26. Pour cela, la classe de test doit dériver de la classe <strong>AssertionHelper</strong> (ligne 6).</p>
 <p>La correspondance (non exhaustive) entre ancienne et nouvelle syntaxe est la suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="n">expression1</span><span class="p">,</span><span class="w"> </span><span class="n">expression2</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>Assert.AreEqual(expression1, expression2, message)
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="n">Expect</span><span class="p">(</span><span class="n">expression1</span><span class="p">,</span><span class="n">EqualTo</span><span class="p">(</span><span class="n">expression2</span><span class="p">),</span><span class="n">message</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a>Expect(expression1,EqualTo(expression2),message)
 </code></pre></div></td></tr></table></div>
 </div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="n">réel1</span><span class="p">,</span><span class="w"> </span><span class="n">réel2</span><span class="p">,</span><span class="w"> </span><span class="n">delta</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>Assert.AreEqual(réel1, réel2, delta, message)
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="n">Expect</span><span class="p">(</span><span class="n">expression1</span><span class="p">,</span><span class="n">EqualTo</span><span class="p">(</span><span class="n">expression2</span><span class="p">).</span><span class="n">Within</span><span class="p">(</span><span class="n">delta</span><span class="p">),</span><span class="n">message</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a>Expect(expression1,EqualTo(expression2).Within(delta),message)
 </code></pre></div></td></tr></table></div>
 </div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="n">Assert</span><span class="p">.</span><span class="n">AreSame</span><span class="p">(</span><span class="n">objet1</span><span class="p">,</span><span class="w"> </span><span class="n">objet2</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a>Assert.AreSame(objet1, objet2, message)
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="n">Expect</span><span class="p">(</span><span class="n">objet1</span><span class="p">,</span><span class="n">SameAs</span><span class="p">(</span><span class="n">objet2</span><span class="p">),</span><span class="n">message</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a>Expect(objet1,SameAs(objet2),message)
 </code></pre></div></td></tr></table></div>
 </div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="n">Assert</span><span class="p">.</span><span class="n">AreNotSame</span><span class="p">(</span><span class="n">objet1</span><span class="p">,</span><span class="w"> </span><span class="n">objet2</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a>Assert.AreNotSame(objet1, objet2, message)
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="n">Expect</span><span class="p">(</span><span class="n">objet1</span><span class="p">,</span><span class="n">Not</span><span class="p">.</span><span class="n">SameAs</span><span class="p">(</span><span class="n">objet2</span><span class="p">),</span><span class="n">message</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a>Expect(objet1,Not.SameAs(objet2),message)
 </code></pre></div></td></tr></table></div>
 </div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="n">Assert</span><span class="p">.</span><span class="n">IsNull</span><span class="p">(</span><span class="n">objet</span><span class="p">,</span><span class="n">message</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a>Assert.IsNull(objet,message)
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="n">Expect</span><span class="p">(</span><span class="n">objet</span><span class="p">,</span><span class="n">Null</span><span class="p">,</span><span class="n">message</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a>Expect(objet,Null,message)
 </code></pre></div></td></tr></table></div>
 </div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="n">Assert</span><span class="p">.</span><span class="n">IsNotNull</span><span class="p">(</span><span class="n">objet</span><span class="p">,</span><span class="n">message</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a>Assert.IsNotNull(objet,message)
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="n">Expect</span><span class="p">(</span><span class="n">objet</span><span class="p">,</span><span class="n">Not</span><span class="p">.</span><span class="n">Null</span><span class="p">,</span><span class="n">message</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a>Expect(objet,Not.Null,message)
 </code></pre></div></td></tr></table></div>
 </div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">expression</span><span class="p">,</span><span class="n">message</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a>Assert.IsTrue(expression,message)
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="n">Expect</span><span class="p">(</span><span class="n">expression</span><span class="p">,</span><span class="n">True</span><span class="p">,</span><span class="n">message</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a>Expect(expression,True,message)
 </code></pre></div></td></tr></table></div>
 </div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="n">Assert</span><span class="p">.</span><span class="n">IsFalse</span><span class="p">(</span><span class="n">expression</span><span class="p">,</span><span class="n">message</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a>Assert.IsFalse(expression,message)
 </code></pre></div></td></tr></table></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="n">Expect</span><span class="p">(</span><span class="n">expression</span><span class="p">,</span><span class="n">False</span><span class="p">,</span><span class="n">message</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a>Expect(expression,False,message)
 </code></pre></div></td></tr></table></div>
 </div></td></tr></table>
 
@@ -2165,19 +2165,19 @@ Pour corriger les erreurs, il suffit de corriger le projet C# et de le régéné
 <span class="normal"><a href="#__codelineno-39-10">10</a></span>
 <span class="normal"><a href="#__codelineno-39-11">11</a></span>
 <span class="normal"><a href="#__codelineno-39-12">12</a></span>
-<span class="normal"><a href="#__codelineno-39-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="w">        </span><span class="na">[Test]</span>
-<a id="__codelineno-39-2" name="__codelineno-39-2"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">t3</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-39-3" name="__codelineno-39-3"></a><span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">vrai</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">,</span><span class="w"> </span><span class="n">faux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
-<a id="__codelineno-39-4" name="__codelineno-39-4"></a><span class="w">            </span><span class="n">Expect</span><span class="p">(</span><span class="n">vrai</span><span class="p">,</span><span class="w"> </span><span class="n">True</span><span class="p">);</span>
-<a id="__codelineno-39-5" name="__codelineno-39-5"></a><span class="w">            </span><span class="n">Expect</span><span class="p">(</span><span class="n">faux</span><span class="p">,</span><span class="w"> </span><span class="n">False</span><span class="p">);</span>
-<a id="__codelineno-39-6" name="__codelineno-39-6"></a><span class="w">            </span><span class="n">Object</span><span class="w"> </span><span class="n">obj1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Object</span><span class="p">(),</span><span class="w"> </span><span class="n">obj2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="n">obj3</span><span class="o">=</span><span class="n">obj1</span><span class="p">;</span>
-<a id="__codelineno-39-7" name="__codelineno-39-7"></a><span class="w">            </span><span class="n">Expect</span><span class="p">(</span><span class="n">obj1</span><span class="p">,</span><span class="w"> </span><span class="n">Not</span><span class="p">.</span><span class="n">Null</span><span class="p">);</span>
-<a id="__codelineno-39-8" name="__codelineno-39-8"></a><span class="w">            </span><span class="n">Expect</span><span class="p">(</span><span class="n">obj2</span><span class="p">,</span><span class="w"> </span><span class="n">Null</span><span class="p">);</span>
-<a id="__codelineno-39-9" name="__codelineno-39-9"></a><span class="w">            </span><span class="n">Expect</span><span class="p">(</span><span class="n">obj3</span><span class="p">,</span><span class="w"> </span><span class="n">SameAs</span><span class="p">(</span><span class="n">obj1</span><span class="p">));</span>
-<a id="__codelineno-39-10" name="__codelineno-39-10"></a><span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">d1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.1</span><span class="p">,</span><span class="w"> </span><span class="n">d2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6.4</span><span class="p">,</span><span class="w"> </span><span class="n">d3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d1</span><span class="p">;</span>
-<a id="__codelineno-39-11" name="__codelineno-39-11"></a><span class="w">            </span><span class="n">Expect</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span><span class="w"> </span><span class="n">EqualTo</span><span class="p">(</span><span class="n">d3</span><span class="p">).</span><span class="n">Within</span><span class="p">(</span><span class="mf">1e-6</span><span class="p">));</span>
-<a id="__codelineno-39-12" name="__codelineno-39-12"></a><span class="w">            </span><span class="n">Expect</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span><span class="w"> </span><span class="n">Not</span><span class="p">.</span><span class="n">EqualTo</span><span class="p">(</span><span class="n">d2</span><span class="p">));</span>
-<a id="__codelineno-39-13" name="__codelineno-39-13"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-39-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a>        [Test]
+<a id="__codelineno-39-2" name="__codelineno-39-2"></a>        public void t3() {
+<a id="__codelineno-39-3" name="__codelineno-39-3"></a>            bool vrai = true, faux = false;
+<a id="__codelineno-39-4" name="__codelineno-39-4"></a>            Expect(vrai, True);
+<a id="__codelineno-39-5" name="__codelineno-39-5"></a>            Expect(faux, False);
+<a id="__codelineno-39-6" name="__codelineno-39-6"></a>            Object obj1 = new Object(), obj2 = null, obj3=obj1;
+<a id="__codelineno-39-7" name="__codelineno-39-7"></a>            Expect(obj1, Not.Null);
+<a id="__codelineno-39-8" name="__codelineno-39-8"></a>            Expect(obj2, Null);
+<a id="__codelineno-39-9" name="__codelineno-39-9"></a>            Expect(obj3, SameAs(obj1));
+<a id="__codelineno-39-10" name="__codelineno-39-10"></a>            double d1 = 4.1, d2 = 6.4, d3 = d1;
+<a id="__codelineno-39-11" name="__codelineno-39-11"></a>            Expect(d1, EqualTo(d3).Within(1e-6));
+<a id="__codelineno-39-12" name="__codelineno-39-12"></a>            Expect(d1, Not.EqualTo(d2));
+<a id="__codelineno-39-13" name="__codelineno-39-13"></a>}
 </code></pre></div></td></tr></table></div>
 <p>Si on génère (F6) la nouvelle DLL du projet C#, le projet NUnit devient le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007BD000001C0063A20E2.png" style="display:inline-block; margin:4px;width:15.72cm;height:3.56cm;" /></td></tr></table>
@@ -2454,17 +2454,17 @@ L&#x27;exécution de la classe [Test1] précédente donne les résultats suivant
 <span class="normal"><a href="#__codelineno-43-4">4</a></span>
 <span class="normal"><a href="#__codelineno-43-5">5</a></span>
 <span class="normal"><a href="#__codelineno-43-6">6</a></span>
-<span class="normal"><a href="#__codelineno-43-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1"></a><span class="mi">4962</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span>
-<a id="__codelineno-43-2" name="__codelineno-43-2"></a><span class="mi">8382</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mi">068</span><span class="p">:</span><span class="mi">291</span><span class="p">,</span><span class="mi">09</span>
-<a id="__codelineno-43-3" name="__codelineno-43-3"></a><span class="mi">14753</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mi">191</span><span class="p">:</span><span class="mi">1322</span><span class="p">,</span><span class="mi">92</span>
-<a id="__codelineno-43-4" name="__codelineno-43-4"></a><span class="mi">23888</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mi">283</span><span class="p">:</span><span class="mi">2668</span><span class="p">,</span><span class="mi">39</span>
-<a id="__codelineno-43-5" name="__codelineno-43-5"></a><span class="mi">38868</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mi">374</span><span class="p">:</span><span class="mi">4846</span><span class="p">,</span><span class="mi">98</span>
-<a id="__codelineno-43-6" name="__codelineno-43-6"></a><span class="mi">47932</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mi">426</span><span class="p">:</span><span class="mi">6883</span><span class="p">,</span><span class="mi">66</span>
-<a id="__codelineno-43-7" name="__codelineno-43-7"></a><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mi">481</span><span class="p">:</span><span class="mi">9505</span><span class="p">,</span><span class="mi">54</span>
+<span class="normal"><a href="#__codelineno-43-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1"></a>4962:0:0
+<a id="__codelineno-43-2" name="__codelineno-43-2"></a>8382:0,068:291,09
+<a id="__codelineno-43-3" name="__codelineno-43-3"></a>14753:0,191:1322,92
+<a id="__codelineno-43-4" name="__codelineno-43-4"></a>23888:0,283:2668,39
+<a id="__codelineno-43-5" name="__codelineno-43-5"></a>38868:0,374:4846,98
+<a id="__codelineno-43-6" name="__codelineno-43-6"></a>47932:0,426:6883,66
+<a id="__codelineno-43-7" name="__codelineno-43-7"></a>0:0,481:9505,54
 </code></pre></div></td></tr></table></div>
 <p><u><strong>Le test [Test2] (cf [4] dans le projet)</strong></u></p>
 <p>La classe [Test2] fait la même chose que la classe [Test1] en implémentant la couche [dao] avec la classe [HardwiredImpot]. La ligne 13 de [Test1] est remplacée par la suivante :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1"></a><span class="w">                </span><span class="n">dao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HardwiredImpot</span><span class="p">();</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1"></a>                dao = new HardwiredImpot();
 </code></pre></div></td></tr></table></div>
 <p>Le projet est modifié pour exécuter désormais la classe [Test2] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000476000001977C4FC780.png" style="display:inline-block; margin:4px;width:9.059cm;height:3.23cm;" /></td></tr></table>
@@ -2666,10 +2666,10 @@ L&#x27;exécution du projet donne les résultats suivants :</li>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-47-1">1</a></span>
 <span class="normal"><a href="#__codelineno-47-2">2</a></span>
 <span class="normal"><a href="#__codelineno-47-3">3</a></span>
-<span class="normal"><a href="#__codelineno-47-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1"></a><span class="n">Impot</span><span class="p">(</span><span class="k">true</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">60000</span><span class="p">)</span><span class="o">=</span><span class="mi">4282</span><span class="w"> </span><span class="n">euros</span>
-<a id="__codelineno-47-2" name="__codelineno-47-2"></a><span class="n">Impot</span><span class="p">(</span><span class="k">false</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">60000</span><span class="p">)</span><span class="o">=</span><span class="mi">4282</span><span class="w"> </span><span class="n">euros</span>
-<a id="__codelineno-47-3" name="__codelineno-47-3"></a><span class="n">Impot</span><span class="p">(</span><span class="k">false</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">60000</span><span class="p">)</span><span class="o">=</span><span class="mi">0</span><span class="w"> </span><span class="n">euros</span>
-<a id="__codelineno-47-4" name="__codelineno-47-4"></a><span class="n">Impot</span><span class="p">(</span><span class="k">false</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">60000</span><span class="p">)</span><span class="o">=</span><span class="mi">179275</span><span class="w"> </span><span class="n">euros</span>
+<span class="normal"><a href="#__codelineno-47-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1"></a>Impot(true,2,60000)=4282 euros
+<a id="__codelineno-47-2" name="__codelineno-47-2"></a>Impot(false,3,60000)=4282 euros
+<a id="__codelineno-47-3" name="__codelineno-47-3"></a>Impot(false,3,60000)=0 euros
+<a id="__codelineno-47-4" name="__codelineno-47-4"></a>Impot(false,3,60000)=179275 euros
 </code></pre></div></td></tr></table></div>
 <p><u><strong>Le test [NUnit1] (cf [4] dans le projet)</strong></u></p>
 <p>La classe de tests unitaires [NUnit1] reprend les quatre calculs précédents et en vérifie le résultat :</p>
@@ -2774,8 +2774,8 @@ Le projet est généré (F6). Puis la DLL [ImpotsV5-metier.dll] générée est c
 Un exemple d&#x27;exécution (Ctrl+F5) est le suivant :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-49-1">1</a></span>
-<span class="normal"><a href="#__codelineno-49-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1"></a><span class="n">Paramètres</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">calcul</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">l</span><span class="err">&#39;</span><span class="n">Impot</span><span class="w"> </span><span class="n">au</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Marié</span><span class="w"> </span><span class="p">(</span><span class="n">o</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="n">NbEnfants</span><span class="w"> </span><span class="n">Salaire</span><span class="w"> </span><span class="n">ou</span><span class="w"> </span><span class="n">rien</span><span class="w"> </span><span class="n">pour</span><span class="w"> </span><span class="n">arrêter</span><span class="w"> </span><span class="p">:</span><span class="n">o</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">60000</span>
-<a id="__codelineno-49-2" name="__codelineno-49-2"></a><span class="n">Impot</span><span class="o">=</span><span class="mi">4282</span><span class="w"> </span><span class="n">euros</span>
+<span class="normal"><a href="#__codelineno-49-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1"></a>Paramètres du calcul de l&#39;Impot au format : Marié (o/n) NbEnfants Salaire ou rien pour arrêter :o 2 60000
+<a id="__codelineno-49-2" name="__codelineno-49-2"></a>Impot=4282 euros
 </code></pre></div></td></tr></table></div>
 <h3 id="646-la-couche-spring">6.4.6. La couche [Spring]</h3>
 <p>Revenons au code dans [Dialogue.cs] qui crée les couches [dao] et [metier] :</p>
@@ -2789,20 +2789,20 @@ Un exemple d&#x27;exécution (Ctrl+F5) est le suivant :</li>
 <span class="normal"><a href="#__codelineno-50-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-50-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-50-10">10</a></span>
-<span class="normal"><a href="#__codelineno-50-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1"></a><span class="c1">// on crée les couches [metier et dao]</span>
-<a id="__codelineno-50-2" name="__codelineno-50-2"></a><span class="w">            </span><span class="n">IImpotMetier</span><span class="w"> </span><span class="n">metier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span>
-<a id="__codelineno-50-3" name="__codelineno-50-3"></a><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-50-4" name="__codelineno-50-4"></a><span class="w">        </span><span class="c1">// création couche [metier]</span>
-<a id="__codelineno-50-5" name="__codelineno-50-5"></a><span class="w">                </span><span class="n">metier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ImpotMetier</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileImpot</span><span class="p">(</span><span class="s">&quot;DataImpot.txt&quot;</span><span class="p">));</span>
-<a id="__codelineno-50-6" name="__codelineno-50-6"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ImpotException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-50-7" name="__codelineno-50-7"></a><span class="w">                </span><span class="c1">// affichage erreur</span>
-<a id="__codelineno-50-8" name="__codelineno-50-8"></a><span class="p">...</span>
-<a id="__codelineno-50-9" name="__codelineno-50-9"></a><span class="w">                </span><span class="c1">// arrêt programme</span>
-<a id="__codelineno-50-10" name="__codelineno-50-10"></a><span class="w">                </span><span class="n">Environment</span><span class="p">.</span><span class="n">Exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<a id="__codelineno-50-11" name="__codelineno-50-11"></a><span class="w">            </span><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-50-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1"></a>// on crée les couches [metier et dao]
+<a id="__codelineno-50-2" name="__codelineno-50-2"></a>            IImpotMetier metier = null;
+<a id="__codelineno-50-3" name="__codelineno-50-3"></a>            try {
+<a id="__codelineno-50-4" name="__codelineno-50-4"></a>        // création couche [metier]
+<a id="__codelineno-50-5" name="__codelineno-50-5"></a>                metier = new ImpotMetier(new FileImpot(&quot;DataImpot.txt&quot;));
+<a id="__codelineno-50-6" name="__codelineno-50-6"></a>            } catch (ImpotException e) {
+<a id="__codelineno-50-7" name="__codelineno-50-7"></a>                // affichage erreur
+<a id="__codelineno-50-8" name="__codelineno-50-8"></a>...
+<a id="__codelineno-50-9" name="__codelineno-50-9"></a>                // arrêt programme
+<a id="__codelineno-50-10" name="__codelineno-50-10"></a>                Environment.Exit(1);
+<a id="__codelineno-50-11" name="__codelineno-50-11"></a>            }
 </code></pre></div></td></tr></table></div>
 <p>La ligne 5 crée les couches [dao] et [metier] en nommant explicitement les classes d&#x27;implémentation des deux couches : FileImpot pour la couche [dao], ImpotMetier pour la couche [metier]. Si l&#x27;implémentation d&#x27;une des couches est faite avec une nouvelle classe, la ligne 5 sera changée. Par exemple :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-51-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1"></a><span class="w">                </span><span class="n">metier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ImpotMetier</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">HardwiredImpot</span><span class="p">());</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-51-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1"></a>                metier = new ImpotMetier(new HardwiredImpot());
 </code></pre></div></td></tr></table></div>
 <p>En-dehors de ce changement, rien ne changera dans l&#x27;application du fait que chaque couche communique avec la suivante selon une interface. Tant que cette dernière ne change pas, la communication entre couches ne change pas non plus. Le framework <strong>Spring</strong> nous permet d&#x27;aller un peu plus loin dans l&#x27;indépendance des couches en nous permettant d&#x27;externaliser dans un fichier de configuration le nom des classes implémentant les différentes couches. Changer l&#x27;implémentation d&#x27;une couche revient alors à changer un fichier de configuration. Il n&#x27;y a aucun impact sur le code de l&#x27;application.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006BF000001EEF645BF0E.png" style="display:inline-block; margin:4px;width:13.711cm;height:3.919cm;" /></td></tr></table>
@@ -2817,16 +2817,16 @@ Un exemple d&#x27;exécution (Ctrl+F5) est le suivant :</li>
 <span class="normal"><a href="#__codelineno-52-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-52-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-52-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-52-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1"></a><span class="w">            </span><span class="c1">// on crée les couches [metier et dao]</span>
-<a id="__codelineno-52-2" name="__codelineno-52-2"></a><span class="w">            </span><span class="n">IImpotMetier</span><span class="w"> </span><span class="n">metier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span>
-<a id="__codelineno-52-3" name="__codelineno-52-3"></a><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-52-4" name="__codelineno-52-4"></a><span class="w">                </span><span class="c1">// contexte Spring</span>
-<a id="__codelineno-52-5" name="__codelineno-52-5"></a><span class="w">                </span><span class="n">IApplicationContext</span><span class="w"> </span><span class="n">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ContextRegistry</span><span class="p">.</span><span class="n">GetContext</span><span class="p">();</span>
-<a id="__codelineno-52-6" name="__codelineno-52-6"></a><span class="w">                </span><span class="c1">// on demande une référence sur la couche [metier]</span>
-<a id="__codelineno-52-7" name="__codelineno-52-7"></a><span class="w">                </span><span class="n">metier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">IImpotMetier</span><span class="p">)</span><span class="n">ctx</span><span class="p">.</span><span class="n">GetObject</span><span class="p">(</span><span class="s">&quot;metier&quot;</span><span class="p">);</span>
-<a id="__codelineno-52-8" name="__codelineno-52-8"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-52-9" name="__codelineno-52-9"></a><span class="p">...</span>
-<a id="__codelineno-52-10" name="__codelineno-52-10"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-52-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1"></a>            // on crée les couches [metier et dao]
+<a id="__codelineno-52-2" name="__codelineno-52-2"></a>            IImpotMetier metier = null;
+<a id="__codelineno-52-3" name="__codelineno-52-3"></a>            try {
+<a id="__codelineno-52-4" name="__codelineno-52-4"></a>                // contexte Spring
+<a id="__codelineno-52-5" name="__codelineno-52-5"></a>                IApplicationContext ctx = ContextRegistry.GetContext();
+<a id="__codelineno-52-6" name="__codelineno-52-6"></a>                // on demande une référence sur la couche [metier]
+<a id="__codelineno-52-7" name="__codelineno-52-7"></a>                metier = (IImpotMetier)ctx.GetObject(&quot;metier&quot;);
+<a id="__codelineno-52-8" name="__codelineno-52-8"></a>            } catch (Exception e1) {
+<a id="__codelineno-52-9" name="__codelineno-52-9"></a>...
+<a id="__codelineno-52-10" name="__codelineno-52-10"></a>}
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 5 : instanciation des couches [dao] et [metier] par Spring</li>
@@ -2882,16 +2882,16 @@ Revenons à une vue d&#x27;ensemble de l&#x27;architecture de l&#x27;application
 <span class="normal"><a href="#__codelineno-53-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-53-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-53-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-53-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1"></a><span class="w">            </span><span class="c1">// on crée les couches [metier et dao]</span>
-<a id="__codelineno-53-2" name="__codelineno-53-2"></a><span class="w">            </span><span class="n">IImpotMetier</span><span class="w"> </span><span class="n">metier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span>
-<a id="__codelineno-53-3" name="__codelineno-53-3"></a><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-53-4" name="__codelineno-53-4"></a><span class="w">                </span><span class="c1">// contexte Spring</span>
-<a id="__codelineno-53-5" name="__codelineno-53-5"></a><span class="w">                </span><span class="n">IApplicationContext</span><span class="w"> </span><span class="n">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ContextRegistry</span><span class="p">.</span><span class="n">GetContext</span><span class="p">();</span>
-<a id="__codelineno-53-6" name="__codelineno-53-6"></a><span class="w">                </span><span class="c1">// on demande une référence sur la couche [metier]</span>
-<a id="__codelineno-53-7" name="__codelineno-53-7"></a><span class="w">                </span><span class="n">metier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">IImpotMetier</span><span class="p">)</span><span class="n">ctx</span><span class="p">.</span><span class="n">GetObject</span><span class="p">(</span><span class="s">&quot;metier&quot;</span><span class="p">);</span>
-<a id="__codelineno-53-8" name="__codelineno-53-8"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-53-9" name="__codelineno-53-9"></a><span class="p">...</span>
-<a id="__codelineno-53-10" name="__codelineno-53-10"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-53-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1"></a>            // on crée les couches [metier et dao]
+<a id="__codelineno-53-2" name="__codelineno-53-2"></a>            IImpotMetier metier = null;
+<a id="__codelineno-53-3" name="__codelineno-53-3"></a>            try {
+<a id="__codelineno-53-4" name="__codelineno-53-4"></a>                // contexte Spring
+<a id="__codelineno-53-5" name="__codelineno-53-5"></a>                IApplicationContext ctx = ContextRegistry.GetContext();
+<a id="__codelineno-53-6" name="__codelineno-53-6"></a>                // on demande une référence sur la couche [metier]
+<a id="__codelineno-53-7" name="__codelineno-53-7"></a>                metier = (IImpotMetier)ctx.GetObject(&quot;metier&quot;);
+<a id="__codelineno-53-8" name="__codelineno-53-8"></a>            } catch (Exception e1) {
+<a id="__codelineno-53-9" name="__codelineno-53-9"></a>...
+<a id="__codelineno-53-10" name="__codelineno-53-10"></a>}
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 5 : instanciation des couches [dao] et [metier] par Spring</li>
@@ -2910,9 +2910,9 @@ Le contenu du fichier [App.config] est le suivant :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-54-1">1</a></span>
 <span class="normal"><a href="#__codelineno-54-2">2</a></span>
-<span class="normal"><a href="#__codelineno-54-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1"></a><span class="o">&lt;?</span><span class="n">xml</span><span class="w"> </span><span class="n">version</span><span class="o">=</span><span class="s">&quot;1.0&quot;</span><span class="w"> </span><span class="n">encoding</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="w"> </span><span class="o">?&gt;</span>
-<a id="__codelineno-54-2" name="__codelineno-54-2"></a><span class="o">&lt;</span><span class="n">configuration</span><span class="o">&gt;</span>
-<a id="__codelineno-54-3" name="__codelineno-54-3"></a><span class="o">&lt;/</span><span class="n">configuration</span><span class="o">&gt;</span>
+<span class="normal"><a href="#__codelineno-54-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</span>
+<a id="__codelineno-54-2" name="__codelineno-54-2"></a><span class="nt">&lt;configuration&gt;</span>
+<a id="__codelineno-54-3" name="__codelineno-54-3"></a><span class="nt">&lt;/configuration&gt;</span>
 </code></pre></div></td></tr></table></div>
 <p>[App.config] est un fichier XML. La configuration du projet se fait entre les balises &lt;configuration&gt;. La configuration nécessaire à Spring est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-55-1"> 1</a></span>
@@ -2938,30 +2938,30 @@ Le contenu du fichier [App.config] est le suivant :</li>
 <span class="normal"><a href="#__codelineno-55-21">21</a></span>
 <span class="normal"><a href="#__codelineno-55-22">22</a></span>
 <span class="normal"><a href="#__codelineno-55-23">23</a></span>
-<span class="normal"><a href="#__codelineno-55-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1"></a><span class="o">&lt;?</span><span class="n">xml</span><span class="w"> </span><span class="n">version</span><span class="o">=</span><span class="s">&quot;1.0&quot;</span><span class="w"> </span><span class="n">encoding</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="w"> </span><span class="o">?&gt;</span>
-<a id="__codelineno-55-2" name="__codelineno-55-2"></a><span class="o">&lt;</span><span class="n">configuration</span><span class="o">&gt;</span>
+<span class="normal"><a href="#__codelineno-55-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</span>
+<a id="__codelineno-55-2" name="__codelineno-55-2"></a><span class="nt">&lt;configuration&gt;</span>
 <a id="__codelineno-55-3" name="__codelineno-55-3"></a>
-<a id="__codelineno-55-4" name="__codelineno-55-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">configSections</span><span class="o">&gt;</span>
-<a id="__codelineno-55-5" name="__codelineno-55-5"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">sectionGroup</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s">&quot;spring&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-55-6" name="__codelineno-55-6"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">section</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s">&quot;context&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s">&quot;Spring.Context.Support.ContextHandler, Spring.Core&quot;</span><span class="w"> </span><span class="o">/&gt;</span>
-<a id="__codelineno-55-7" name="__codelineno-55-7"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">section</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s">&quot;objects&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s">&quot;Spring.Context.Support.DefaultSectionHandler, Spring.Core&quot;</span><span class="w"> </span><span class="o">/&gt;</span>
-<a id="__codelineno-55-8" name="__codelineno-55-8"></a><span class="w">        </span><span class="o">&lt;/</span><span class="n">sectionGroup</span><span class="o">&gt;</span>
-<a id="__codelineno-55-9" name="__codelineno-55-9"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">configSections</span><span class="o">&gt;</span>
+<a id="__codelineno-55-4" name="__codelineno-55-4"></a><span class="w">    </span><span class="nt">&lt;configSections&gt;</span>
+<a id="__codelineno-55-5" name="__codelineno-55-5"></a><span class="w">        </span><span class="nt">&lt;sectionGroup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;spring&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-55-6" name="__codelineno-55-6"></a><span class="w">            </span><span class="nt">&lt;section</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;context&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;Spring.Context.Support.ContextHandler, Spring.Core&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-55-7" name="__codelineno-55-7"></a><span class="w">            </span><span class="nt">&lt;section</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;objects&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;Spring.Context.Support.DefaultSectionHandler, Spring.Core&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-55-8" name="__codelineno-55-8"></a><span class="w">        </span><span class="nt">&lt;/sectionGroup&gt;</span>
+<a id="__codelineno-55-9" name="__codelineno-55-9"></a><span class="w">    </span><span class="nt">&lt;/configSections&gt;</span>
 <a id="__codelineno-55-10" name="__codelineno-55-10"></a>
-<a id="__codelineno-55-11" name="__codelineno-55-11"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">spring</span><span class="o">&gt;</span>
-<a id="__codelineno-55-12" name="__codelineno-55-12"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">context</span><span class="o">&gt;</span>
-<a id="__codelineno-55-13" name="__codelineno-55-13"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">resource</span><span class="w"> </span><span class="n">uri</span><span class="o">=</span><span class="s">&quot;config://spring/objects&quot;</span><span class="w"> </span><span class="o">/&gt;</span>
-<a id="__codelineno-55-14" name="__codelineno-55-14"></a><span class="w">        </span><span class="o">&lt;/</span><span class="n">context</span><span class="o">&gt;</span>
-<a id="__codelineno-55-15" name="__codelineno-55-15"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">objects</span><span class="w"> </span><span class="n">xmlns</span><span class="o">=</span><span class="s">&quot;http://www.springframework.net&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-55-16" name="__codelineno-55-16"></a><span class="w">            </span><span class="o">&lt;</span><span class="kt">object</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s">&quot;dao&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s">&quot;Dao.FileImpot, ImpotsV5-dao&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-55-17" name="__codelineno-55-17"></a><span class="w">                </span><span class="o">&lt;</span><span class="n">constructor</span><span class="o">-</span><span class="n">arg</span><span class="w"> </span><span class="n">index</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="k">value</span><span class="o">=</span><span class="s">&quot;DataImpot.txt&quot;</span><span class="o">/&gt;</span>
-<a id="__codelineno-55-18" name="__codelineno-55-18"></a><span class="w">            </span><span class="o">&lt;/</span><span class="kt">object</span><span class="o">&gt;</span>
-<a id="__codelineno-55-19" name="__codelineno-55-19"></a><span class="w">            </span><span class="o">&lt;</span><span class="kt">object</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s">&quot;metier&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s">&quot;Metier.ImpotMetier, ImpotsV5-metier&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-55-20" name="__codelineno-55-20"></a><span class="w">                </span><span class="o">&lt;</span><span class="n">constructor</span><span class="o">-</span><span class="n">arg</span><span class="w"> </span><span class="n">index</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="k">ref</span><span class="o">=</span><span class="s">&quot;dao&quot;</span><span class="o">/&gt;</span>
-<a id="__codelineno-55-21" name="__codelineno-55-21"></a><span class="w">            </span><span class="o">&lt;/</span><span class="kt">object</span><span class="o">&gt;</span>
-<a id="__codelineno-55-22" name="__codelineno-55-22"></a><span class="w">        </span><span class="o">&lt;/</span><span class="n">objects</span><span class="o">&gt;</span>
-<a id="__codelineno-55-23" name="__codelineno-55-23"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">spring</span><span class="o">&gt;</span>
-<a id="__codelineno-55-24" name="__codelineno-55-24"></a><span class="o">&lt;/</span><span class="n">configuration</span><span class="o">&gt;</span>
+<a id="__codelineno-55-11" name="__codelineno-55-11"></a><span class="w">    </span><span class="nt">&lt;spring&gt;</span>
+<a id="__codelineno-55-12" name="__codelineno-55-12"></a><span class="w">        </span><span class="nt">&lt;context&gt;</span>
+<a id="__codelineno-55-13" name="__codelineno-55-13"></a><span class="w">            </span><span class="nt">&lt;resource</span><span class="w"> </span><span class="na">uri=</span><span class="s">&quot;config://spring/objects&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-55-14" name="__codelineno-55-14"></a><span class="w">        </span><span class="nt">&lt;/context&gt;</span>
+<a id="__codelineno-55-15" name="__codelineno-55-15"></a><span class="w">        </span><span class="nt">&lt;objects</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.springframework.net&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-55-16" name="__codelineno-55-16"></a><span class="w">            </span><span class="nt">&lt;object</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;dao&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;Dao.FileImpot, ImpotsV5-dao&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-55-17" name="__codelineno-55-17"></a><span class="w">                </span><span class="nt">&lt;constructor-arg</span><span class="w"> </span><span class="na">index=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;DataImpot.txt&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-55-18" name="__codelineno-55-18"></a><span class="w">            </span><span class="nt">&lt;/object&gt;</span>
+<a id="__codelineno-55-19" name="__codelineno-55-19"></a><span class="w">            </span><span class="nt">&lt;object</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;metier&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;Metier.ImpotMetier, ImpotsV5-metier&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-55-20" name="__codelineno-55-20"></a><span class="w">                </span><span class="nt">&lt;constructor-arg</span><span class="w"> </span><span class="na">index=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;dao&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-55-21" name="__codelineno-55-21"></a><span class="w">            </span><span class="nt">&lt;/object&gt;</span>
+<a id="__codelineno-55-22" name="__codelineno-55-22"></a><span class="w">        </span><span class="nt">&lt;/objects&gt;</span>
+<a id="__codelineno-55-23" name="__codelineno-55-23"></a><span class="w">    </span><span class="nt">&lt;/spring&gt;</span>
+<a id="__codelineno-55-24" name="__codelineno-55-24"></a><span class="nt">&lt;/configuration&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 11-23 : la section délimitée par la balise &lt;spring&gt; est appelée le groupe de sections &lt;spring&gt;. On peut créer autant de groupes de sections que l&#x27;on veut dans [App.config].</li>
@@ -3000,7 +3000,7 @@ Une classe peut être instanciée de deux façons avec Spring :</p>
 </li>
 <li>via le constructeur par défaut sans paramètres. L&#x27;objet est alors initialisé via ses <strong>propriétés publiques</strong> : la balise &lt;object&gt; a alors des sous-balises &lt;<strong>property</strong>&gt; pour initialiser ces différentes propriétés. Nous n&#x27;avons pas d&#x27;exemple de ce cas ici.</li>
 <li>ligne 16 : la classe instanciée est la classe FileImpot. Celle-ci a le constructeur suivant :
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-56-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">FileImpot</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">fileName</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-56-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1"></a>        public FileImpot(string fileName);
 </code></pre></div></td></tr></table></div></li>
 </ul>
 <p>Les paramètres du constructeur sont définis à l&#x27;aide de balises <strong>&lt;constructor-arg&gt;</strong>.</p>
@@ -3009,12 +3009,12 @@ Une classe peut être instanciée de deux façons avec Spring :</p>
 <li>lignes 19-21 : définissent la classe à instancier pour la couche [metier] : la classe [Metier.ImpotMetier] qui se trouve dans la DLL [ImpotsV5-metier.dll].</li>
 <li>
 <p>ligne 19 : la classe instanciée est la classe ImpotMetier. Celle-ci a le constructeur suivant :
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-57-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">ImpotMetier</span><span class="p">(</span><span class="n">IImpotDao</span><span class="w"> </span><span class="n">dao</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-57-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1"></a>        public ImpotMetier(IImpotDao dao);
 </code></pre></div></td></tr></table></div></p>
 </li>
 <li>
 <p>ligne 20 : définit le 1er et seul paramètre du constructeur. Ci-dessus, le paramètre dao du constructeur est une référence d&#x27;objet. Dans ce cas, dans la balise &lt;constructor-arg&gt; on utilise l&#x27;attribut <strong>ref</strong> au lieu de l&#x27;attribut <strong>value</strong> qui a été utilisé pour la couche [dao] : <strong>&lt;constructor-arg index=&quot;i&quot; ref=&quot;refi&quot;/&gt;</strong>. Dans le constructeur ci-dessus, le paramètre dao représente une instance sur la couche [dao]. Cette instance a été définie par les lignes 16-18 du fichier de configuration. Ainsi dans la ligne 20 :
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-58-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1"></a><span class="w">                </span><span class="o">&lt;</span><span class="n">constructor</span><span class="o">-</span><span class="n">arg</span><span class="w"> </span><span class="n">index</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="k">ref</span><span class="o">=</span><span class="s">&quot;dao&quot;</span><span class="o">/&gt;</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-58-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1"></a>                &lt;constructor-arg index=&quot;0&quot; ref=&quot;dao&quot;/&gt;
 </code></pre></div></td></tr></table></div></p>
 </li>
 </ul>
@@ -3135,15 +3135,15 @@ La boucle des lignes 10-14 fait afficher toutes les exceptions de la chaîne sou
 </ul>
 <p>Lorsqu&#x27;on exécute le projet [ui] avec un fichier de configuration valide, on obtient les résultats habituels :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-61-1">1</a></span>
-<span class="normal"><a href="#__codelineno-61-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1"></a><span class="n">Paramètres</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">calcul</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">l</span><span class="err">&#39;</span><span class="n">Impot</span><span class="w"> </span><span class="n">au</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Marié</span><span class="w"> </span><span class="p">(</span><span class="n">o</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="n">NbEnfants</span><span class="w"> </span><span class="n">Salaire</span><span class="w"> </span><span class="n">ou</span><span class="w"> </span><span class="n">rien</span><span class="w"> </span><span class="n">pour</span><span class="w"> </span><span class="n">arrêter</span><span class="w"> </span><span class="p">:</span><span class="n">o</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">60000</span>
-<a id="__codelineno-61-2" name="__codelineno-61-2"></a><span class="n">Impot</span><span class="o">=</span><span class="mi">4282</span><span class="w"> </span><span class="n">euros</span>
+<span class="normal"><a href="#__codelineno-61-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1"></a>Paramètres du calcul de l&#39;Impot au format : Marié (o/n) NbEnfants Salaire ou rien pour arrêter :o 2 60000
+<a id="__codelineno-61-2" name="__codelineno-61-2"></a>Impot=4282 euros
 </code></pre></div></td></tr></table></div>
 <p>Lorsqu&#x27;on exécute le projet [ui] avec un fichier [DataImpotInexistant.txt] inexistant, </p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-62-1">1</a></span>
 <span class="normal"><a href="#__codelineno-62-2">2</a></span>
-<span class="normal"><a href="#__codelineno-62-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1"></a><span class="w">            </span><span class="o">&lt;</span><span class="kt">object</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s">&quot;dao&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s">&quot;Dao.FileImpot, ImpotsV5-dao&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-62-2" name="__codelineno-62-2"></a><span class="w">                </span><span class="o">&lt;</span><span class="n">constructor</span><span class="o">-</span><span class="n">arg</span><span class="w"> </span><span class="n">index</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="k">value</span><span class="o">=</span><span class="s">&quot;DataImpotInexistant.txt&quot;</span><span class="o">/&gt;</span>
-<a id="__codelineno-62-3" name="__codelineno-62-3"></a><span class="w">            </span><span class="o">&lt;/</span><span class="kt">object</span><span class="o">&gt;</span>
+<span class="normal"><a href="#__codelineno-62-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1"></a>            &lt;object name=&quot;dao&quot; type=&quot;Dao.FileImpot, ImpotsV5-dao&quot;&gt;
+<a id="__codelineno-62-2" name="__codelineno-62-2"></a>                &lt;constructor-arg index=&quot;0&quot; value=&quot;DataImpotInexistant.txt&quot;/&gt;
+<a id="__codelineno-62-3" name="__codelineno-62-3"></a>            &lt;/object&gt;
 </code></pre></div></td></tr></table></div>
 <p>on obtient les résultats suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-63-1"> 1</a></span>
