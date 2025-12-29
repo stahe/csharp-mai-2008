@@ -1,0 +1,1372 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apprentissage du langage C# Version 3.0 avec le Framework .NET 3.5">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/csharp-mai-2008/annexes.html">
+      
+      
+        <link rel="prev" href="a-suivre.html">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>14. Annexes - Apprentissage du langage C# Version 3.0 avec le Framework .NET 3.5</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#14-annexes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Apprentissage du langage C# Version 3.0 avec le Framework .NET 3.5" class="md-header__button md-logo" aria-label="Apprentissage du langage C# Version 3.0 avec le Framework .NET 3.5" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apprentissage du langage C# Version 3.0 avec le Framework .NET 3.5
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              14. Annexes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/stahe/csharp-mai-2008" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Apprentissage du langage C# Version 3.0 avec le Framework .NET 3.5" class="md-nav__button md-logo" aria-label="Apprentissage du langage C# Version 3.0 avec le Framework .NET 3.5" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apprentissage du langage C# Version 3.0 avec le Framework .NET 3.5
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/stahe/csharp-mai-2008" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introduction.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="installation-de-visual-c-2008.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Installation de Visual C# 2008
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="les-bases-du-langage-c.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Les bases du langage C#
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes-stuctures-interfaces.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Classes, Stuctures, Interfaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes-net-dx27usage-courant.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Classes .NET d&#x27;usage courant
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="architectures-3-couches.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Architectures 3 couches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="interfaces-graphiques-avec-c-et-vsnet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Interfaces graphiques avec C# et VS.NET
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="evenements-utilisateur.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Evénements utilisateur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="acces-aux-bases-de-donnees.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Accès aux bases de données
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="les-threads-dx27execution.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Les threads d&#x27;exécution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="programmation-internet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Programmation Internet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="services-web.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Services Web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="a-suivre.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. A suivre…
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Annexes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="annexes.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Annexes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#141-le-sgbd-sql-server-express-2005" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1. Le SGBD SQL Server Express 2005
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.1. Le SGBD SQL Server Express 2005">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1411-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1.1. Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1412-lancer-arreter-sql-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1.2. Lancer / Arrêter SQL Server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1413-creation-dun-utilisateur-jpa-et-dune-base-de-donnees-jpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1.3. Création d&#x27;un utilisateur jpa et d&#x27;une base de données jpa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1414-creation-de-la-table-articles-de-la-base-de-donnees-jpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1.4. Création de la table [ARTICLES] de la base de données jpa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1415-le-connecteur-adonet-de-sql-server-express" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1.5. Le connecteur ADO.NET de SQL Server Express
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#142-le-sgbd-mysql5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2. Le SGBD MySQL5
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.2. Le SGBD MySQL5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1421-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2.1. Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1422-lancer-arreter-mysql5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2.2. Lancer / Arrêter MySQL5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1423-clients-dadministration-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2.3. Clients d&#x27;administration MySQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1424-creation-dun-utilisateur-jpa-et-dune-base-de-donnees-jpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2.4. Création d&#x27;un utilisateur jpa et d&#x27;une base de données jpa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1425-installation-du-connecteur-adonet-de-mysql5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2.5. Installation du connecteur ADO.NET de MySQL5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1426-installation-du-pilote-odbc-de-mysql5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2.6. Installation du pilote ODBC de MySQL5
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="14-annexes">14. Annexes</h1>
+<h2 id="141-le-sgbd-sql-server-express-2005">14.1. Le SGBD SQL Server Express 2005</h2>
+<h3 id="1411-installation">14.1.1. Installation</h3>
+<p>Le SGBD SQL Server Express 2005 est disponible à l&#x27;url [http://msdn.microsoft.com/vstudio/express/sql/download/] :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F8000004986CB3F57F.png" style="display:inline-block; margin:4px;width:11.779cm;height:10.89cm;" /></td></tr></table>
+
+<ul>
+<li>en [1] : d&#x27;abord télécharger et installer la plate-forme .NET 2.0</li>
+<li>en [2] : puis installer et télécharger SQL Server Express 2005</li>
+<li>en [3] : puis installer et télécharger SQL Server Management Studio Express qui permet d&#x27;administrer SQL Server
+L&#x27;installation de SQL Server Express donne naissance à un dossier dans [Démarrer / Programmes ] :</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000068F000000E26B28488E.png" style="display:inline-block; margin:4px;width:15.55cm;height:2.09cm;" /></td></tr></table>
+
+<ul>
+<li>en [1] : l&#x27;application de configuration de SQL Server. Permet également de lancer / arrêter le serveur</li>
+<li>en [2] : l&#x27;application d&#x27;administration du serveur</li>
+</ul>
+<h3 id="1412-lancer-arreter-sql-server">14.1.2. Lancer / Arrêter SQL Server</h3>
+<p>Comme pour les SGBD précédents, SQL server Express a été installé comme un service windows à démarrage automatique. Nous changeons cette configuration :</p>
+<p>[Démarrer / Panneau de configuration / Performances et maintenance / Outils d&#x27;administration / Services ] :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007D60000018C7A96A1AF.png" style="display:inline-block; margin:4px;width:15.921cm;height:3.14cm;" /></td></tr></table>
+
+<ul>
+<li>en [1] : nous double-cliquons sur [Services]</li>
+<li>en [2] : on voit qu&#x27;un service appelé [SQL Server] est présent, qu&#x27;il est démarré [3] et que son démarrage est automatique [4].</li>
+<li>en [5] : un autre service lié à SQL Server, appelé &quot;SQL Server Browser&quot; est également actif et à démarrage automatique.
+Pour modifier ce fonctionnement, nous double-cliquons sur le service [SQL Server] :</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000779000003EF4BCBA005.png" style="display:inline-block; margin:4px;width:15.18cm;height:7.99cm;" /></td></tr></table>
+
+<ul>
+<li>en [1] : on met le service en démarrage manuel</li>
+<li>en [2] : on l&#x27;arrête</li>
+<li>en [3] : on valide la nouvelle configuration du service
+On procèdera de même avec le service [SQL Server Browser] (cf [5] plus haut). Pour lancer et arrêter manuellement le service SQL Server 2005, on pourra utiliser l&#x27;application [1] du dossier [SQL server] :</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006EC000000DB19048572.png" style="display:inline-block; margin:4px;width:14.071cm;height:1.739cm;" /></td></tr></table>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007400000032E76E35439.png" style="display:inline-block; margin:4px;width:14.73cm;height:6.459cm;" /></td></tr></table>
+
+<ul>
+<li>en [1] : s&#x27;assurer que le protocole TCP/IP est actif (enabled) puis passer aux propriétés du protocole.</li>
+<li>en [2] : dans l&#x27;onglet [IP Addresses], option [IPAll] :</li>
+<li>le champ [TCP Dynamic ports] est laissé vide</li>
+<li>le port d&#x27;écoute du serveur est fixé à 1433 dans [TCP Port]</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000741000002474F71C69E.png" style="display:inline-block; margin:4px;width:14.741cm;height:4.63cm;" /></td></tr></table>
+
+<ul>
+<li>en [3] : un clic droit sur le service [SQL Server] donne accès aux options de démarrage / arrêt du serveur. Ici, on le lance.</li>
+<li>en [4] : SQL Server est lancé</li>
+</ul>
+<h3 id="1413-creation-dun-utilisateur-jpa-et-dune-base-de-donnees-jpa">14.1.3. Création d&#x27;un utilisateur jpa et d&#x27;une base de données jpa</h3>
+<p>Lançons le SGBD comme indiqué ci-dessus, puis l&#x27;application d&#x27;administration [1] via le menu ci-dessous :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F60000012C22603105.png" style="display:inline-block; margin:4px;width:10.081cm;height:2.379cm;" /></td></tr></table>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000070F000002B1AB4DA4AB.png" style="display:inline-block; margin:4px;width:14.34cm;height:5.47cm;" /></td></tr></table>
+
+<ul>
+<li>en [1] : on se connecte à SQL Server en tant qu&#x27;<strong>administrateur</strong> Windows</li>
+<li>en [2] : on configure les propriétés de la connexion</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006EE000001CE617452C5.png" style="display:inline-block; margin:4px;width:14.079cm;height:3.671cm;" /></td></tr></table>
+
+<ul>
+<li>en [3] : on autorise un mode mixte de connexion au serveur : soit avec un login windows (un utilisateur windows), soit avec un login SQL Server (compte défini au sein de SQL Server, indépendant de tout compte windows).</li>
+<li>en [3b] : on crée un utilisateur SQL Server</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000730000001EE91E64558.png" style="display:inline-block; margin:4px;width:14.61cm;height:3.919cm;" /></td></tr></table>
+
+<ul>
+<li>en [4] : option [General]</li>
+<li>en [5] : le login</li>
+<li>en [6] : le mot de passe (<strong>jpa</strong> ici)</li>
+<li>en [7] : option [Server Roles]</li>
+<li>en [8] : l&#x27;utilisateur <strong>jpa</strong> aura le droit de créer des bases de données
+On valide cette configuration :</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000688000001A3137DA9B5.png" style="display:inline-block; margin:4px;width:13.27cm;height:3.32cm;" /></td></tr></table>
+
+<ul>
+<li>en [9] : l&#x27;utilisateur <strong>jpa</strong> a été créé</li>
+<li>en [10] : on se déconnecte</li>
+<li>en [11] : on se reconnecte</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006AC0000025D8C5C4763.png" style="display:inline-block; margin:4px;width:13.561cm;height:4.8cm;" /></td></tr></table>
+
+<ul>
+<li>en [12] : on se connecte en tant qu&#x27;utilisateur jpa/jpa</li>
+<li>en [13] : une fois connecté, l&#x27;utilisateur <strong>jpa</strong> crée une base de données</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006C80000028F68F2AB16.png" style="display:inline-block; margin:4px;width:13.78cm;height:5.2cm;" /></td></tr></table>
+
+<ul>
+<li>en [14] : la base s&#x27;appellera <strong>jpa</strong></li>
+<li>en [15] : et appartiendra à l&#x27;utilisateur <strong>jpa</strong></li>
+<li>en [16] : la base <strong>jpa</strong> a été créée</li>
+</ul>
+<h3 id="1414-creation-de-la-table-articles-de-la-base-de-donnees-jpa">14.1.4. Création de la table [ARTICLES] de la base de données jpa</h3>
+<p>Nous créons une table [ARTICLES] à partir du script SQL suivant :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cm">/* création table */</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">CREATE</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="nf">ARTICLES</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="n">ID</span><span class="w">            </span><span class="n">INTEGER</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="n">NOM</span><span class="w">           </span><span class="nf">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="n">PRIX</span><span class="w">          </span><span class="n">DOUBLE</span><span class="w"> </span><span class="n">PRECISION</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="n">STOCKACTUEL</span><span class="w">   </span><span class="n">INTEGER</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="n">STOCKMINIMUM</span><span class="w">  </span><span class="n">INTEGER</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="p">);</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="n">INSERT</span><span class="w"> </span><span class="n">INTO</span><span class="w"> </span><span class="nf">ARTICLES</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">NOM</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKACTUEL</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKMINIMUM</span><span class="p">)</span><span class="w"> </span><span class="n">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="n">article1</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="n">INSERT</span><span class="w"> </span><span class="n">INTO</span><span class="w"> </span><span class="nf">ARTICLES</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">NOM</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKACTUEL</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKMINIMUM</span><span class="p">)</span><span class="w"> </span><span class="n">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="n">article2</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="n">INSERT</span><span class="w"> </span><span class="n">INTO</span><span class="w"> </span><span class="nf">ARTICLES</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">NOM</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKACTUEL</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKMINIMUM</span><span class="p">)</span><span class="w"> </span><span class="n">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="n">article3</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="cm">/* contraintes d&#39;intégrité */</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_ID</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_PRIX</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">PRIX</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_STOCKACTUEL</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">STOCKACTUEL</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_STOCKMINIMUM</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">STOCKMINIMUM</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_NOM</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">NOM</span><span class="o">&lt;&gt;</span><span class="err">&#39;&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">UNQ_NOM</span><span class="w"> </span><span class="nf">UNIQUE</span><span class="w"> </span><span class="p">(</span><span class="n">NOM</span><span class="p">);</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="cm">/* clé primaire */</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">PK_ARTICLES</span><span class="w"> </span><span class="n">PRIMARY</span><span class="w"> </span><span class="nf">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007AD00000436F571C94A.png" style="display:inline-block; margin:4px;width:15.6cm;height:8.56cm;" /></td></tr></table>
+
+<ul>
+<li>en [1] : on ouvre un script SQL</li>
+<li>en [2] : on désigne le script SQL</li>
+<li>en [3] : on doit s&#x27;identifier de nouveau (jpa/jpa)</li>
+<li>en [4] : le script qui va être exécuté</li>
+<li>en [5] : sélectionner la base dans laquelle le script va être exécuté</li>
+<li>en [6] : l&#x27;exécuter</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007B100000254EFD783AF.png" style="display:inline-block; margin:4px;width:15.63cm;height:4.731cm;" /></td></tr></table>
+
+<ul>
+<li>en [7] : le résultat de l&#x27;exécution : la table [ARTICLES] a été créée.</li>
+<li>en [8] : on demande à voir son contenu</li>
+<li>en [9] : le contenu de la table.</li>
+</ul>
+<h3 id="1415-le-connecteur-adonet-de-sql-server-express">14.1.5. Le connecteur ADO.NET de SQL Server Express</h3>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000063D000000F7A9616365.png" style="display:inline-block; margin:4px;width:12.681cm;height:1.96cm;" /></td></tr></table>
+
+<p>Le connecteur ADO.NET est l&#x27;ensemble des classes qui permettent à une application .NET d&#x27;utiliser le SGBD SQL Server Express 2005. Les classes du connecteur sont dans l&#x27;espace de noms [System.Data], nativement disponible sur toute plate-forme .NET.</p>
+<h2 id="142-le-sgbd-mysql5">14.2. Le SGBD MySQL5</h2>
+<h3 id="1421-installation">14.2.1. Installation</h3>
+<p>Le SGBD MySQL5 est disponible à l&#x27;url [http://dev.mysql.com/downloads/] :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007530000013581C306A0.png" style="display:inline-block; margin:4px;width:14.88cm;height:2.45cm;" /></td></tr></table>
+
+<ul>
+<li>en [1] : choisir la version désirée</li>
+<li>en [2] : choisir une version Windows</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006E50000020A704D94B1.png" style="display:inline-block; margin:4px;width:14.011cm;height:4.14cm;" /></td></tr></table>
+
+<ul>
+<li>en [3] : choisir la version windows désirée</li>
+<li>en [4] : le zip téléchargé contient un exécutable [Setup.exe] [4b] qu&#x27;il faut extraire et exécuter pour installer MySQL5</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007F7000002774CA03BD0.png" style="display:inline-block; margin:4px;width:16.18cm;height:5.009cm;" /></td></tr></table>
+
+<ul>
+<li>en [5] : choisir une installation typique</li>
+<li>en [6] : une fois l&#x27;installation terminée, on peut configurer le serveur MySQL5</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007F000000258D1668C40.png" style="display:inline-block; margin:4px;width:16.131cm;height:4.761cm;" /></td></tr></table>
+
+<ul>
+<li>en [7] : choisir une configuration standard, celle qui pose le moins de questions</li>
+<li>en [8] : le serveur MySQL5 sera un service windows</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007EF000002AB0D17EDA4.png" style="display:inline-block; margin:4px;width:16.12cm;height:5.42cm;" /></td></tr></table>
+
+<ul>
+<li>en [9] : par défaut l&#x27;administrateur du serveur est <strong>root</strong> sans mot de passe. On peut garder cette configuration ou donner un nouveau mot de passe à <strong>root</strong>. Si l&#x27;installation de MySQL5 vient derrière une désinstallation d&#x27;une version précédente, cette opération peut échouer. Il y a moins moyen d&#x27;y revenir.</li>
+<li>en [10] : on demande la configuration du serveur
+L&#x27;installation de MySQL5 donne naissance à un dossier dans [Démarrer / Programmes ] :</li>
+</ul>
+<p><img src="images/10000000000002CC000000607DE6A22C.png" style="width:13.259cm;height:1.78cm;" alt="Image" /></p>
+<p>On peut utiliser [MySQL Server Instance Config Wizard] pour reconfigurer le serveur :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007570000012A1C6895F6.png" style="display:inline-block; margin:4px;width:14.91cm;height:2.371cm;" /></td></tr></table>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003F20000014D39A009C8.png" style="display:inline-block; margin:4px;width:8.02cm;height:2.641cm;" /></td></tr></table>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077D000001A0C75B1F22.png" style="display:inline-block; margin:4px;width:15.221cm;height:3.3cm;" /></td></tr></table>
+
+<ul>
+<li>en [3] : nous changeons le mot de passe de root (ici root/root)</li>
+</ul>
+<h3 id="1422-lancer-arreter-mysql5">14.2.2. Lancer / Arrêter MySQL5</h3>
+<p>Le serveur MySQL5 a été installé comme un service windows à démarrage automatique, c.a.d lancé dès le démarrage de windows. Ce mode de fonctionnement est peu pratique. Nous allons le changer :</p>
+<p>[Démarrer / Panneau de configuration / Performances et maintenance / Outils d&#x27;administration / Services ] :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007E20000018EF1D4D5AE.png" style="display:inline-block; margin:4px;width:16.02cm;height:3.161cm;" /></td></tr></table>
+
+<ul>
+<li>en [1] : nous double-cliquons sur [Services]</li>
+<li>en [2] : on voit qu&#x27;un service appelé [MySQL] est présent, qu&#x27;il est démarré [3] et que son démarrage est automatique [4].
+Pour modifier ce fonctionnement, nous double-cliquons sur le service [MySQL] :</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000078E000003EFEEB5D634.png" style="display:inline-block; margin:4px;width:15.349cm;height:7.99cm;" /></td></tr></table>
+
+<ul>
+<li>en [1] : on met le service en démarrage manuel</li>
+<li>en [2] : on l&#x27;arrête</li>
+<li>en [3] : on valide la nouvelle configuration du service
+Pour lancer et arrêter manuellement le service MySQL, on pourra créer deux raccourcis :</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007AD000001EB00B57175.png" style="display:inline-block; margin:4px;width:15.6cm;height:3.9cm;" /></td></tr></table>
+
+<ul>
+<li>en [1] : le raccourci pour lancer MySQL5</li>
+<li>en [2] : le raccourci pour l&#x27;arrêter</li>
+</ul>
+<h3 id="1423-clients-dadministration-mysql">14.2.3. Clients d&#x27;administration MySQL</h3>
+<p>Sur le site de MySQL, on peut trouver des clients d&#x27;administration du SGBD :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007B30000016A21CF87ED.png" style="display:inline-block; margin:4px;width:15.64cm;height:2.87cm;" /></td></tr></table>
+
+<ul>
+<li>en [1] : choisir [MySQL GUI Tools] qui rassemble divers clients graphiques permettant soit d&#x27;administrer le SGBD, soit de l&#x27;exploiter</li>
+<li>en [2] : prendre la version Windows qui convient</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000742000001257C8AE0CD.png" style="display:inline-block; margin:4px;width:14.75cm;height:2.32cm;" /></td></tr></table>
+
+<ul>
+<li>en [3] : on récupère un fichier .msi à exécuter</li>
+<li>en [4] : une fois l&#x27;installation faite, de nouveaux raccourcis apparaissent dans le dossier [Menu Démarrer / Programmes / mySQL].
+Lançons MySQL (via les raccourcis que vous avez créés), puis lançons [MySQL Administrator] via le menu ci-dessus :</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007CF000002BBA31D8BFC.png" style="display:inline-block; margin:4px;width:15.87cm;height:5.549cm;" /></td></tr></table>
+
+<ul>
+<li>en [1] : mettre le mot de passe de l&#x27;utilisateur root (root ici)</li>
+<li>en [2] : on est connecté et on voit que MySQL est actif</li>
+</ul>
+<h3 id="1424-creation-dun-utilisateur-jpa-et-dune-base-de-donnees-jpa">14.2.4. Création d&#x27;un utilisateur jpa et d&#x27;une base de données jpa</h3>
+<p>Nous créons maintenant une base de données appelée <strong>jpa</strong> et un utilisateur de même nom. D&#x27;abord l&#x27;utilisateur :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000073C000003B44350B48E.png" style="display:inline-block; margin:4px;width:14.7cm;height:7.519cm;" /></td></tr></table>
+
+<ul>
+<li>en [1] : on sélectionne [User Administration]</li>
+<li>en [2] : on clique droit dans la partie [User accounts] pour créer un nouvel utilisateur</li>
+<li>en [3] : l&#x27;utilisateur s&#x27;appelle <strong>jpa</strong> et son mot de passe est <strong>jpa</strong></li>
+<li>en [4] : on valide la création</li>
+<li>en [5] : l&#x27;utilisateur [jpa] apparaît dans la fenêtre [User Accounts]
+La base de données maintenant :</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006AC0000035C08DBB227.png" style="display:inline-block; margin:4px;width:13.561cm;height:6.83cm;" /></td></tr></table>
+
+<ul>
+<li>en [1] : choix de l&#x27;option [Catalogs]</li>
+<li>en [2] : clic droit sur la fenêtre [Schemata] pour créer un nouveau schéma (désigne une base de données)</li>
+<li>en [3] : on nomme le nouveau schéma</li>
+<li>en [4] : il apparaît dans la fenêtre [Schemata]</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000061E0000023F97A16228.png" style="display:inline-block; margin:4px;width:12.43cm;height:4.56cm;" /></td></tr></table>
+
+<ul>
+<li>en [5] : on sélectionne le schéma [jpa]</li>
+<li>en [6] : les objets du schéma [jpa] apparaissent, notamment les tables. Il n&#x27;y en a pas encore. Un clic droit permettrait d&#x27;en créer. Nous laissons le lecteur le faire.
+Revenons à l&#x27;utilisateur [jpa] afin de lui donner tous les droits sur le schéma [jpa] :</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006B300000348B1B61CEA.png" style="display:inline-block; margin:4px;width:13.61cm;height:6.669cm;" /></td></tr></table>
+
+<ul>
+<li>en [1], puis [2] : on sélectionne l&#x27;utilisateur [jpa]</li>
+<li>en [3] : on sélectionne l&#x27;onglet [Schema Privileges]</li>
+<li>en [4] : on sélectionne le schéma [jpa]</li>
+<li>en [5] : on va donner à l&#x27;utilisateur [jpa] tous les privilèges sur le schéma [jpa]</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000059C000003D9DF0F33C0.png" style="display:inline-block; margin:4px;width:11.4cm;height:7.819cm;" /></td></tr></table>
+
+<ul>
+<li>en [6] : on valide les changements faits
+Pour vérifier que l&#x27;utilisateur [jpa] peut travailler avec le schéma [jpa], on ferme l&#x27;administrateur MySQL. On le relance et on se connecte cette fois sous le nom [jpa/jpa] :</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000064B0000027AB14B03A9.png" style="display:inline-block; margin:4px;width:12.79cm;height:5.031cm;" /></td></tr></table>
+
+<ul>
+<li>en [1] : on s&#x27;identifie (jpa/jpa)</li>
+<li>en [2] : la connexion a réussi et dans [Schemata], on voit les schémas sur lesquels on a des droits. On voit le schéma [jpa].
+Nous allons maintenant créer une table [ARTICLES] à l&#x27;aide d&#x27;un script SQL.</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007830000023DF0CDB6C1.png" style="display:inline-block; margin:4px;width:15.259cm;height:4.551cm;" /></td></tr></table>
+
+<ul>
+<li>en [1] : utiliser l&#x27;application [MySQL Query Browser]</li>
+<li>en [2], [3], [4] : s&#x27;identifier (jpa / jpa / jpa)</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000693000001A3D1B497A6.png" style="display:inline-block; margin:4px;width:13.36cm;height:3.32cm;" /></td></tr></table>
+
+<ul>
+<li>en [5] : ouvrir un script SQL afin de l&#x27;exécuter</li>
+<li>en [6] : désigner le script [schema-articles.sql] suivant :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span>
+<span class="normal"><a href="#__codelineno-1-31">31</a></span>
+<span class="normal"><a href="#__codelineno-1-32">32</a></span>
+<span class="normal"><a href="#__codelineno-1-33">33</a></span>
+<span class="normal"><a href="#__codelineno-1-34">34</a></span>
+<span class="normal"><a href="#__codelineno-1-35">35</a></span>
+<span class="normal"><a href="#__codelineno-1-36">36</a></span>
+<span class="normal"><a href="#__codelineno-1-37">37</a></span>
+<span class="normal"><a href="#__codelineno-1-38">38</a></span>
+<span class="normal"><a href="#__codelineno-1-39">39</a></span>
+<span class="normal"><a href="#__codelineno-1-40">40</a></span>
+<span class="normal"><a href="#__codelineno-1-41">41</a></span>
+<span class="normal"><a href="#__codelineno-1-42">42</a></span>
+<span class="normal"><a href="#__codelineno-1-43">43</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cm">/******************************************************************************/</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="cm">/****                                Tables                                ****/</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="cm">/******************************************************************************/</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="n">CREATE</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="nf">ARTICLES</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="n">ID</span><span class="w">            </span><span class="n">INTEGER</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="n">NOM</span><span class="w">           </span><span class="nf">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="n">PRIX</span><span class="w">          </span><span class="n">DOUBLE</span><span class="w"> </span><span class="n">PRECISION</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="n">STOCKACTUEL</span><span class="w">   </span><span class="n">INTEGER</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="n">STOCKMINIMUM</span><span class="w">  </span><span class="n">INTEGER</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="p">);</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="n">INSERT</span><span class="w"> </span><span class="n">INTO</span><span class="w"> </span><span class="nf">ARTICLES</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">NOM</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKACTUEL</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKMINIMUM</span><span class="p">)</span><span class="w"> </span><span class="n">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="err">&#39;</span><span class="n">article1</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="n">INSERT</span><span class="w"> </span><span class="n">INTO</span><span class="w"> </span><span class="nf">ARTICLES</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">NOM</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKACTUEL</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKMINIMUM</span><span class="p">)</span><span class="w"> </span><span class="n">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="err">&#39;</span><span class="n">article2</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="n">INSERT</span><span class="w"> </span><span class="n">INTO</span><span class="w"> </span><span class="nf">ARTICLES</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">NOM</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKACTUEL</span><span class="p">,</span><span class="w"> </span><span class="n">STOCKMINIMUM</span><span class="p">)</span><span class="w"> </span><span class="n">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="err">&#39;</span><span class="n">article3</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="n">COMMIT</span><span class="w"> </span><span class="n">WORK</span><span class="p">;</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="cm">/* Check constraints definition */</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_ID</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_PRIX</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">PRIX</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_STOCKACTUEL</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">STOCKACTUEL</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_STOCKMINIMUM</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">STOCKMINIMUM</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">CHK_NOM</span><span class="w"> </span><span class="nf">check</span><span class="w"> </span><span class="p">(</span><span class="n">NOM</span><span class="o">&lt;&gt;</span><span class="err">&#39;&#39;</span><span class="p">);</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30"></a>
+<a id="__codelineno-1-31" name="__codelineno-1-31"></a>
+<a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="cm">/******************************************************************************/</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="cm">/****                          Unique Constraints                          ****/</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="cm">/******************************************************************************/</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35"></a>
+<a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">UNQ_NOM</span><span class="w"> </span><span class="nf">UNIQUE</span><span class="w"> </span><span class="p">(</span><span class="n">NOM</span><span class="p">);</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37"></a>
+<a id="__codelineno-1-38" name="__codelineno-1-38"></a>
+<a id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="cm">/******************************************************************************/</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="cm">/****                             Primary Keys                             ****/</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41"></a><span class="cm">/******************************************************************************/</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42"></a>
+<a id="__codelineno-1-43" name="__codelineno-1-43"></a><span class="n">ALTER</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">ARTICLES</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">PK_ARTICLES</span><span class="w"> </span><span class="n">PRIMARY</span><span class="w"> </span><span class="nf">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007EC0000048FED74F14D.png" style="display:inline-block; margin:4px;width:16.101cm;height:9.26cm;" /></td></tr></table>
+
+<ul>
+<li>en [7] : le script chargé</li>
+<li>en [8] : on l&#x27;exécute</li>
+<li>en [9] : la table [ARTICLES] a été créée</li>
+</ul>
+<h3 id="1425-installation-du-connecteur-adonet-de-mysql5">14.2.5. Installation du connecteur ADO.NET de MySQL5</h3>
+<p>Le connecteur ADO.NET de MySQL5 est disponible (avril 2008) à l&#x27;adresse [http://dev.mysql.com/downloads/connector/net/5.1.html] :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002A5000000FDE2B83072.png" style="display:inline-block; margin:4px;width:8.961cm;height:3.35cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000212000000539A6A31C0.png" style="display:inline-block; margin:4px;width:7.01cm;height:1.101cm;" /></td></tr></table>
+
+<p>L&#x27;installation de ce connecteur ajoute un espace de noms à la plate-forme .NET :</p>
+<h3 id="1426-installation-du-pilote-odbc-de-mysql5">14.2.6. Installation du pilote ODBC de MySQL5</h3>
+<p>Le connecteur ODBC (Open DataBase Connectivity) de MySQL5 est disponible (avril 2008) à l&#x27;adresse [http://dev.mysql.com/downloads/connector/odbc/3.51.html] :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002F30000011444769657.png" style="display:inline-block; margin:4px;width:9.991cm;height:3.649cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B000000077124AD36B.png" style="display:inline-block; margin:4px;width:7.01cm;height:1.921cm;" /></td></tr></table>
+
+<p>Après installation, la présence du connecteur ODBC peut être vérifiée de la façon suivante :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004CA00000224FA7B01AD.png" style="display:inline-block; margin:4px;width:9.73cm;height:4.35cm;" /></td></tr></table>
+
+<ul>
+<li>en [1], sélectionner [Outils d&#x27;administration] (sur XP Pro : Menu Démarrer / Panneau de configuration /  Performances et maintenance / Outils d&#x27;administration)</li>
+<li>en [2], double-cliquer sur [Sources de données (ODBC)]</li>
+<li>en [3], sélectionner l&#x27;onglet [Pilotes ODBC]</li>
+<li>en [4], le pilote ODBC de MySQL</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer>Pied de page</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
