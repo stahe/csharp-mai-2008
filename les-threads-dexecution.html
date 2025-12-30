@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#10-les-threads-dx27execution" class="md-skip">
+        <a href="#10-les-threads-dexecution" class="md-skip">
           Skip to content
         </a>
       
@@ -607,10 +607,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#102-creation-de-threads-dx27execution" class="md-nav__link">
+  <a href="#102-creation-de-threads-dexecution" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10.2. Création de threads d&amp;#x27;exécution
+        10.2. Création de threads d'exécution
       
     </span>
   </a>
@@ -629,10 +629,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#104-echange-dx27informations-entre-threads" class="md-nav__link">
+  <a href="#104-echange-dinformations-entre-threads" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10.4. Echange d&amp;#x27;informations entre threads
+        10.4. Echange d'informations entre threads
       
     </span>
   </a>
@@ -997,28 +997,28 @@
   
 
 
-<h1 id="10-les-threads-dx27execution">10. Les threads d&#x27;exécution</h1>
+<h1 id="10-les-threads-dexecution">10. Les threads d'exécution</h1>
 <h2 id="101-la-classe-thread">10.1. La classe Thread</h2>
-<p>Lorsqu&#x27;on lance une application, elle s&#x27;exécute dans un flux d&#x27;exécution appelé un <strong>thread</strong>. La classe .NET modélisant un thread est la classe <strong>System.Threading.Thread</strong> et a la définition suivante :</p>
+<p>Lorsqu'on lance une application, elle s'exécute dans un flux d'exécution appelé un <strong>thread</strong>. La classe .NET modélisant un thread est la classe <strong>System.Threading.Thread</strong> et a la définition suivante :</p>
 <p><u><strong>Constructeurs</strong></u></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007340000019C65426C4A.png" style="display:inline-block; margin:4px;width:14.64cm;height:3.27cm;" /></td></tr></table>
 
-<p>Nous n&#x27;utiliserons dans les exemples à suivre que les constructeurs [1,3]. Le constructeur [1] admet comme paramètre une méthode ayant la signature [2], c.a.d. ayant un paramètre de type object et ne rendant pas de résultat. Le constructeur [3] admet comme paramètre une méthode ayant la signature [4], c.a.d. n&#x27;ayant pas de paramètre et ne rendant pas de résultat.</p>
+<p>Nous n'utiliserons dans les exemples à suivre que les constructeurs [1,3]. Le constructeur [1] admet comme paramètre une méthode ayant la signature [2], c.a.d. ayant un paramètre de type object et ne rendant pas de résultat. Le constructeur [3] admet comme paramètre une méthode ayant la signature [4], c.a.d. n'ayant pas de paramètre et ne rendant pas de résultat.</p>
 <p><u><strong>Propriétés</strong></u></p>
 <p>Quelques propriétés utiles : </p>
 <ul>
 <li>Thread CurrentThread : propriété statique qui donne une référence sur le thread dans lequel se trouve le code ayant demandé cette propriété</li>
 <li>string Name : le nom du thread</li>
-<li>bool IsAlive : indique si le thread est en cours d&#x27;exécution ou non.
+<li>bool IsAlive : indique si le thread est en cours d'exécution ou non.
 <u><strong>Méthodes</strong></u></li>
 </ul>
 <p>Les méthodes les plus utilisées sont les suivantes : </p>
 <ul>
-<li>Start(), Start(object obj) : lance l&#x27;exécution asynchrone du thread, éventuellement en lui passant de l&#x27;information dans un type object.</li>
+<li>Start(), Start(object obj) : lance l'exécution asynchrone du thread, éventuellement en lui passant de l'information dans un type object.</li>
 <li>Abort(), Abort(object obj) : pour terminer de force un thread</li>
-<li>Join() : le thread T1 qui exécute T2.Join est bloqué jusqu&#x27;à ce que soit terminé le thread T2. Il existe des variantes pour terminer l&#x27;attente au bout d&#x27;un temps déterminé.</li>
+<li>Join() : le thread T1 qui exécute T2.Join est bloqué jusqu'à ce que soit terminé le thread T2. Il existe des variantes pour terminer l'attente au bout d'un temps déterminé.</li>
 <li>Sleep(int n) : méthode statique - le thread exécutant la méthode est suspendu pendant n millisecondes. Il perd alors le processeur qui est donné à un autre thread.
-Regardons une première application mettant en évidence l&#x27;existence d&#x27;un thread principal d&#x27;exécution, celui dans lequel s&#x27;exécute la fonction Main d&#x27;une classe :</li>
+Regardons une première application mettant en évidence l'existence d'un thread principal d'exécution, celui dans lequel s'exécute la fonction Main d'une classe :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
@@ -1071,10 +1071,10 @@ Regardons une première application mettant en évidence l&#x27;existence d&#x27
 <a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 8 : on récupère une référence sur le thread dans lequel s&#x27;exécute la méthode [main]</li>
+<li>ligne 8 : on récupère une référence sur le thread dans lequel s'exécute la méthode [main]</li>
 <li>lignes 10-14 : on affiche et on modifie son nom</li>
 <li>lignes 17-22 : une boucle qui fait un affichage toutes les secondes</li>
-<li>ligne 21 : le thread dans lequel s&#x27;exécute la méthode [main] va être suspendu pendant 1 seconde
+<li>ligne 21 : le thread dans lequel s'exécute la méthode [main] va être suspendu pendant 1 seconde
 Les résultats écran sont les suivants :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
@@ -1094,32 +1094,32 @@ Les résultats écran sont les suivants :</li>
 <a id="__codelineno-1-8" name="__codelineno-1-8"></a>^CAppuyez sur une touche pour continuer...
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 1 : le thread courant n&#x27;avait pas de nom</li>
+<li>ligne 1 : le thread courant n'avait pas de nom</li>
 <li>ligne 2 : il en a un</li>
-<li>lignes 3-7 : l&#x27;affichage qui a lieu toutes les secondes</li>
+<li>lignes 3-7 : l'affichage qui a lieu toutes les secondes</li>
 <li>ligne 8 : le programme est interrompu par Ctrl-C.</li>
 </ul>
-<h2 id="102-creation-de-threads-dx27execution">10.2. Création de threads d&#x27;exécution</h2>
-<p>Il est possible d&#x27;avoir des applications où des morceaux de code s&#x27;exécutent de façon &quot;simultanée&quot; dans différents threads d&#x27;exécution. Lorsqu&#x27;on dit que des threads s&#x27;exécutent de façon simultanée, on commet souvent un abus de langage. Si la machine n&#x27;a qu&#x27;un processeur comme c&#x27;est encore souvent le cas, les threads se partagent ce processeur : ils en disposent, chacun leur tour, pendant un court instant (quelques millisecondes). C&#x27;est ce qui donne l&#x27;illusion du parallélisme d&#x27;exécution. La portion de temps accordée à un thread dépend de divers facteurs dont sa priorité qui a une valeur par défaut mais qui peut être fixée également par programmation. Lorsqu&#x27;un thread dispose du processeur, il l&#x27;utilise normalement pendant tout le temps qui lui a été accordé. Cependant, il peut le libérer avant terme :</p>
+<h2 id="102-creation-de-threads-dexecution">10.2. Création de threads d'exécution</h2>
+<p>Il est possible d'avoir des applications où des morceaux de code s'exécutent de façon "simultanée" dans différents threads d'exécution. Lorsqu'on dit que des threads s'exécutent de façon simultanée, on commet souvent un abus de langage. Si la machine n'a qu'un processeur comme c'est encore souvent le cas, les threads se partagent ce processeur : ils en disposent, chacun leur tour, pendant un court instant (quelques millisecondes). C'est ce qui donne l'illusion du parallélisme d'exécution. La portion de temps accordée à un thread dépend de divers facteurs dont sa priorité qui a une valeur par défaut mais qui peut être fixée également par programmation. Lorsqu'un thread dispose du processeur, il l'utilise normalement pendant tout le temps qui lui a été accordé. Cependant, il peut le libérer avant terme :</p>
 <ul>
-<li>en se mettant en attente d&#x27;un événement (Wait, Join)</li>
+<li>en se mettant en attente d'un événement (Wait, Join)</li>
 <li>en se mettant en sommeil pendant un temps déterminé (Sleep)</li>
-<li>Un <strong>thread</strong> T est tout d&#x27;abord créé par l&#x27;un des constructeurs présentés plus haut, par exemple :
+<li>Un <strong>thread</strong> T est tout d'abord créé par l'un des constructeurs présentés plus haut, par exemple :
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>Thread thread=new Thread(Start);
 </code></pre></div></td></tr></table></div></li>
 </ul>
-<p>où Start est une méthode ayant l&#x27;une des deux signatures suivantes :</p>
+<p>où Start est une méthode ayant l'une des deux signatures suivantes :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>void Start();
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>void Start(object obj);
 </code></pre></div></td></tr></table></div>
-<p>La création d&#x27;un thread ne lance pas celui-ci.</p>
+<p>La création d'un thread ne lance pas celui-ci.</p>
 <ul>
-<li>L&#x27;exécution du thread T est lancé par <strong>T.Start()</strong> : la méthode Start passée au constructeur de T va alors être exécutée par le thread T. Le programme qui exécute l&#x27;instruction T.Start() n&#x27;attend pas la fin de la tâche T : il passe aussitôt à l&#x27;instruction qui suit. On a alors deux tâches qui s&#x27;exécutent en parallèle. Elles doivent souvent pouvoir communiquer entre elles pour savoir où en est le travail commun à réaliser. C&#x27;est le problème de synchronisation des threads.</li>
-<li>Une fois lancé, le thread T s&#x27;exécute de façon autonome. Il s&#x27;arrêtera lorsque la méthode Start qu&#x27;il exécute aura fini son travail.</li>
+<li>L'exécution du thread T est lancé par <strong>T.Start()</strong> : la méthode Start passée au constructeur de T va alors être exécutée par le thread T. Le programme qui exécute l'instruction T.Start() n'attend pas la fin de la tâche T : il passe aussitôt à l'instruction qui suit. On a alors deux tâches qui s'exécutent en parallèle. Elles doivent souvent pouvoir communiquer entre elles pour savoir où en est le travail commun à réaliser. C'est le problème de synchronisation des threads.</li>
+<li>Une fois lancé, le thread T s'exécute de façon autonome. Il s'arrêtera lorsque la méthode Start qu'il exécute aura fini son travail.</li>
 <li>On peut forcer le thread T à se terminer :</li>
 <li><strong>T.Abort()</strong> demande au thread T de se terminer.</li>
-<li>On peut aussi attendre la fin de son exécution par <strong>T.Join()</strong>. On a là une instruction bloquante : le programme qui l&#x27;exécute est bloqué jusqu&#x27;à ce que la tâche T ait terminé son travail. C&#x27;est un moyen de synchronisation.
+<li>On peut aussi attendre la fin de son exécution par <strong>T.Join()</strong>. On a là une instruction bloquante : le programme qui l'exécute est bloqué jusqu'à ce que la tâche T ait terminé son travail. C'est un moyen de synchronisation.
 Examinons le programme suivant :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
@@ -1197,10 +1197,10 @@ Examinons le programme suivant :</li>
 <ul>
 <li>lignes 8-10 : on donne un nom au thread qui exécute la méthode [Main]</li>
 <li>lignes 13-21 : on crée 5 threads et on les exécute. Les références des threads sont mémorisées dans un tableau afin de pouvoir les récupérer ultérieurement. Chaque thread exécute la méthode Affiche des lignes 27-35.</li>
-<li>ligne 20 : le thread n° i est lancé. Cette opération est non bloquante. Le thread n° i va s&#x27;exécuter en parallèle du thread de la méthode [Main] qui l&#x27;a lancé.</li>
+<li>ligne 20 : le thread n° i est lancé. Cette opération est non bloquante. Le thread n° i va s'exécuter en parallèle du thread de la méthode [Main] qui l'a lancé.</li>
 <li>ligne 24 : le thread qui exécute la méthode [Main] se termine.</li>
-<li>lignes 27-35 : la méthode [Affiche] fait des affichages. Elle affiche le nom du thread qui l&#x27;exécute ainsi que les heures de début et fin d&#x27;exécution.</li>
-<li>ligne 31 : tout thread exécutant la méthode [Affiche] va s&#x27;arrêter pendant 1 seconde. Le processeur va alors être donné à un autre thread en attente de processeur. A la fin de la seconde d&#x27;arrêt, le thread arrêté va âtre candidat au processeur. Il l&#x27;aura lorsque son tour sera venu. Cela dépend de divers facteurs dont la priorité des autres threads en attente de processeur.
+<li>lignes 27-35 : la méthode [Affiche] fait des affichages. Elle affiche le nom du thread qui l'exécute ainsi que les heures de début et fin d'exécution.</li>
+<li>ligne 31 : tout thread exécutant la méthode [Affiche] va s'arrêter pendant 1 seconde. Le processeur va alors être donné à un autre thread en attente de processeur. A la fin de la seconde d'arrêt, le thread arrêté va âtre candidat au processeur. Il l'aura lorsque son tour sera venu. Cela dépend de divers facteurs dont la priorité des autres threads en attente de processeur.
 Les résultats sont les suivants :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
@@ -1227,16 +1227,16 @@ Les résultats sont les suivants :</li>
 </code></pre></div></td></tr></table></div>
 <p>Ces résultats sont très instructifs :</p>
 <ul>
-<li>on voit tout d&#x27;abord que le lancement de l&#x27;exécution d&#x27;un thread n&#x27;est pas bloquante. La méthode Main a lancé l&#x27;exécution de 5 threads en parallèle et a terminé son exécution avant eux. L&#x27;opération
+<li>on voit tout d'abord que le lancement de l'exécution d'un thread n'est pas bloquante. La méthode Main a lancé l'exécution de 5 threads en parallèle et a terminé son exécution avant eux. L'opération
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>                // on lance l&#39;exécution du thread i
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a>                tâches[i].Start();
 </code></pre></div></td></tr></table></div></li>
 </ul>
-<p>lance l&#x27;exécution du thread tâches[i] mais ceci fait, l&#x27;exécution se poursuit immédiatement avec l&#x27;instruction qui suit sans attendre la fin d&#x27;exécution du thread.</p>
+<p>lance l'exécution du thread tâches[i] mais ceci fait, l'exécution se poursuit immédiatement avec l'instruction qui suit sans attendre la fin d'exécution du thread.</p>
 <ul>
-<li>tous les threads créés doivent exécuter la méthode Affiche. L&#x27;ordre d&#x27;exécution est imprévisible. Même si dans l&#x27;exemple, l&#x27;ordre d&#x27;exécution semble suivre l&#x27;ordre des demandes d&#x27;exécution, on ne peut en conclure de généralités. Le système d&#x27;exploitation a ici 6 threads et un processeur. Il va distribuer le processeur à ces 6 threads selon des règles qui lui sont propres.</li>
-<li>on voit dans les résultats une conséquence de la méthode Sleep. Dans l&#x27;exemple, c&#x27;est le thread 0 qui exécute le premier la méthode Affiche. Le message de début d&#x27;exécution est affiché puis il exécute la méthode Sleep qui le suspend pendant 1 seconde. Il perd alors le processeur qui devient ainsi disponible pour un autre thread. L&#x27;exemple montre que c&#x27;est le thread 1 qui va l&#x27;obtenir. Le thread 1 va suivre le même parcours ainsi que les autres threads. Lorsque la seconde de sommeil du thread 0 va être terminée, son exécution peut reprendre. Le système lui donne le processeur et il peut terminer l&#x27;exécution de la méthode Affiche.
+<li>tous les threads créés doivent exécuter la méthode Affiche. L'ordre d'exécution est imprévisible. Même si dans l'exemple, l'ordre d'exécution semble suivre l'ordre des demandes d'exécution, on ne peut en conclure de généralités. Le système d'exploitation a ici 6 threads et un processeur. Il va distribuer le processeur à ces 6 threads selon des règles qui lui sont propres.</li>
+<li>on voit dans les résultats une conséquence de la méthode Sleep. Dans l'exemple, c'est le thread 0 qui exécute le premier la méthode Affiche. Le message de début d'exécution est affiché puis il exécute la méthode Sleep qui le suspend pendant 1 seconde. Il perd alors le processeur qui devient ainsi disponible pour un autre thread. L'exemple montre que c'est le thread 1 qui va l'obtenir. Le thread 1 va suivre le même parcours ainsi que les autres threads. Lorsque la seconde de sommeil du thread 0 va être terminée, son exécution peut reprendre. Le système lui donne le processeur et il peut terminer l'exécution de la méthode Affiche.
 Modifions notre programme pour terminer la méthode Main par les instructions :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
@@ -1247,7 +1247,7 @@ Modifions notre programme pour terminer la méthode Main par les instructions :<
 <a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">            </span><span class="c1">// on arrête tous les threads</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="n">Environment</span><span class="p">.</span><span class="n">Exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
-<p>L&#x27;exécution du nouveau programme donne les résultats suivants :</p>
+<p>L'exécution du nouveau programme donne les résultats suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
 <span class="normal"><a href="#__codelineno-8-3">3</a></span>
@@ -1262,12 +1262,12 @@ Modifions notre programme pour terminer la méthode Main par les instructions :<
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 1-5 : les threads créés par la fonction Main commencent leur exécution et sont interrompus pendant 1 seconde</li>
-<li>ligne 6 : le thread [Main] récupère le processeur et exécute l&#x27;instruction :
+<li>ligne 6 : le thread [Main] récupère le processeur et exécute l'instruction :
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>        Environment.Exit(0);
 </code></pre></div></td></tr></table></div></li>
 </ul>
-<p>Cette instruction arrête <strong>tous les threads</strong> de l&#x27;application et non simplement le thread Main.</p>
-<p>Si la méthode Main veut attendre la fin d&#x27;exécution des threads qu&#x27;elle a créés, elle peut utiliser la méthode Join de la classe Thread :</p>
+<p>Cette instruction arrête <strong>tous les threads</strong> de l'application et non simplement le thread Main.</p>
+<p>Si la méthode Main veut attendre la fin d'exécution des threads qu'elle a créés, elle peut utiliser la méthode Join de la classe Thread :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
@@ -1289,7 +1289,7 @@ Modifions notre programme pour terminer la méthode Main par les instructions :<
 <a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 6 : le thread [Main] attend chacun des threads. Il est d&#x27;abord bloqué en attente du thread n° 1, puis du thread n° 2, etc... Au final lorsqu&#x27;il sort de la boucle des lignes 2-5, c&#x27;est ce que les 5 threads qu&#x27;il a lancés sont finis.
+<li>ligne 6 : le thread [Main] attend chacun des threads. Il est d'abord bloqué en attente du thread n° 1, puis du thread n° 2, etc... Au final lorsqu'il sort de la boucle des lignes 2-5, c'est ce que les 5 threads qu'il a lancés sont finis.
 On obtient alors les résultats suivants :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
@@ -1315,27 +1315,27 @@ On obtient alors les résultats suivants :</li>
 <a id="__codelineno-11-11" name="__codelineno-11-11"></a>Fin du thread Main à 10:35:19
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 11 : le thread [Main] s&#x27;est terminé après les threads qu&#x27;il avait lancés.</li>
+<li>ligne 11 : le thread [Main] s'est terminé après les threads qu'il avait lancés.</li>
 </ul>
 <h2 id="103-interet-des-threads">10.3. Intérêt des threads</h2>
-<p>Maintenant que nous avons mis en évidence l&#x27;existence d&#x27;un thread par défaut, celui qui exécute la méthode Main, et que nous savons comment en créer d&#x27;autres, arrêtons-nous sur l&#x27;intérêt pour nous des threads et sur les raisons pour lesquelles nous les présentons ici. Il y a un type d&#x27;applications qui se prêtent bien à l&#x27;utilisation des threads, ce sont les applications client-serveur de l&#x27;internet. Nous allons les présenter dans le chapitre qui suit. Dans une application client-serveur de l&#x27;internet, un serveur situé sur une machine S1 répond aux demandes de clients situés sur des machines distantes C1, C2, ..., Cn.</p>
+<p>Maintenant que nous avons mis en évidence l'existence d'un thread par défaut, celui qui exécute la méthode Main, et que nous savons comment en créer d'autres, arrêtons-nous sur l'intérêt pour nous des threads et sur les raisons pour lesquelles nous les présentons ici. Il y a un type d'applications qui se prêtent bien à l'utilisation des threads, ce sont les applications client-serveur de l'internet. Nous allons les présenter dans le chapitre qui suit. Dans une application client-serveur de l'internet, un serveur situé sur une machine S1 répond aux demandes de clients situés sur des machines distantes C1, C2, ..., Cn.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003B000000129D6411AAD.png" style="display:inline-block; margin:4px;width:7.489cm;height:2.36cm;" /></td></tr></table>
 
-<p>Nous utilisons tous les jours des applications de l&#x27;internet correspondant à ce schéma : services Web, messagerie électronique, consultation de forums, transfert de fichiers... Dans le schéma ci-dessus, le serveur S1 doit servir les clients Ci de façon simultanée. Si nous prenons l&#x27;exemple d&#x27;un serveur FTP (File Transfer Protocol) qui délivre des fichiers à ses clients, nous savons qu&#x27;un transfert de fichier peut prendre parfois plusieurs minutes. Il est bien sûr hors de question qu&#x27;un client monopolise tout seul le serveur pendant une telle durée. Ce qui est fait habituellement, c&#x27;est que le serveur crée autant de threads d&#x27;exécution qu&#x27;il y a de clients. Chaque thread est alors chargé de s&#x27;occuper d&#x27;un client particulier. Le processeur étant partagé cycliquement entre tous les threads actifs de la machine, le serveur passe alors un peu de temps avec chaque client assurant ainsi la simultanéité du service.</p>
+<p>Nous utilisons tous les jours des applications de l'internet correspondant à ce schéma : services Web, messagerie électronique, consultation de forums, transfert de fichiers... Dans le schéma ci-dessus, le serveur S1 doit servir les clients Ci de façon simultanée. Si nous prenons l'exemple d'un serveur FTP (File Transfer Protocol) qui délivre des fichiers à ses clients, nous savons qu'un transfert de fichier peut prendre parfois plusieurs minutes. Il est bien sûr hors de question qu'un client monopolise tout seul le serveur pendant une telle durée. Ce qui est fait habituellement, c'est que le serveur crée autant de threads d'exécution qu'il y a de clients. Chaque thread est alors chargé de s'occuper d'un client particulier. Le processeur étant partagé cycliquement entre tous les threads actifs de la machine, le serveur passe alors un peu de temps avec chaque client assurant ainsi la simultanéité du service.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003D1000001E451775926.png" style="display:inline-block; margin:4px;width:7.751cm;height:3.84cm;" /></td></tr></table>
 
-<p>Dans la pratique, le serveur utilise un pool de threads avec un nombre limité de threads, 50 par exemple. Le 51 ième client est alors prié d&#x27;attendre.</p>
-<h2 id="104-echange-dx27informations-entre-threads">10.4. Echange d&#x27;informations entre threads</h2>
+<p>Dans la pratique, le serveur utilise un pool de threads avec un nombre limité de threads, 50 par exemple. Le 51 ième client est alors prié d'attendre.</p>
+<h2 id="104-echange-dinformations-entre-threads">10.4. Echange d'informations entre threads</h2>
 <p>Dans les exemples précédents, un thread était initialisé de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>Thread t=new Thread(Run);
 </code></pre></div></td></tr></table></div>
 <p>où Run était une méthode ayant la signature suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>void Run();
 </code></pre></div></td></tr></table></div>
-<p>Il est également possible d&#x27;utiliser la signature suivante :</p>
+<p>Il est également possible d'utiliser la signature suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>void Run(object obj);
 </code></pre></div></td></tr></table></div>
-<p>Cela permet de transmettre de l&#x27;information au thread lancé. Ainsi</p>
+<p>Cela permet de transmettre de l'information au thread lancé. Ainsi</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>t.Start(obj1);
 </code></pre></div></td></tr></table></div>
 <p>va lancer le thread t qui va alors exécuter la méthode Run qui lui a été associée par construction, en lui passant le paramètre effectif obj1. Voici un exemple :</p>
@@ -1442,22 +1442,22 @@ On obtient alors les résultats suivants :</li>
 <a id="__codelineno-16-51" name="__codelineno-16-51"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes 45-50 : l&#x27;information de type [Data] passée aux threads : </li>
-<li>Début : heure du début de l&#x27;exécution du thread - fixée par le thread lanceur</li>
+<li>lignes 45-50 : l'information de type [Data] passée aux threads : </li>
+<li>Début : heure du début de l'exécution du thread - fixée par le thread lanceur</li>
 <li>Durée : durée en secondes du Sleep exécuté par le thread lancé - fixée par le thread lanceur</li>
-<li>Fin : heure du début de l&#x27;exécution du thread - fixée par le thread lancé</li>
-<li>Il y a là un échange d&#x27;informations entre le thread lanceur et le thread lancé.</li>
+<li>Fin : heure du début de l'exécution du thread - fixée par le thread lancé</li>
+<li>Il y a là un échange d'informations entre le thread lanceur et le thread lancé.</li>
 <li>lignes 35-43 : la méthode Sleep exécutée par les threads a la signature void Sleep(object obj). Le paramètre effectif obj sera du type [Data] défini ligne 45.</li>
 <li>lignes 15-22 : création de 5 threads</li>
 <li>ligne 17 : chaque thread est associé à la méthode Sleep de la ligne 35</li>
-<li>ligne 21 : un objet de type [Data] est passé à la méthode Start qui lance le thread. Dans cet objet on a noté l&#x27;heure de début de l&#x27;exécution du thread ainsi que la durée en secondes pendant laquelle il doit dormir. Cet objet est mémorisé dans le tableau de la ligne 14.</li>
-<li>lignes 24-30 : le thread [Main] attend la fin de tous les threads qu&#x27;il a lancés.</li>
-<li>lignes 28-29 :  le thread [Main] récupère l&#x27;objet data[i] du thread n° i et en affiche le contenu.</li>
+<li>ligne 21 : un objet de type [Data] est passé à la méthode Start qui lance le thread. Dans cet objet on a noté l'heure de début de l'exécution du thread ainsi que la durée en secondes pendant laquelle il doit dormir. Cet objet est mémorisé dans le tableau de la ligne 14.</li>
+<li>lignes 24-30 : le thread [Main] attend la fin de tous les threads qu'il a lancés.</li>
+<li>lignes 28-29 :  le thread [Main] récupère l'objet data[i] du thread n° i et en affiche le contenu.</li>
 <li>lignes 35-42 : la méthode Sleep exécutée par les threads</li>
 <li>ligne 37 : on récupère le paramètre de type [Data]</li>
 <li>ligne 39 : le champ Durée du paramètre est utilisé pour fixer la durée du Sleep</li>
 <li>ligne 41 : le champ Fin du paramètre est initialisé
-Les résultats de l&#x27;exécution sont les suivants :</li>
+Les résultats de l'exécution sont les suivants :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
 <span class="normal"><a href="#__codelineno-17-2">2</a></span>
@@ -1471,26 +1471,26 @@ Les résultats de l&#x27;exécution sont les suivants :</li>
 <a id="__codelineno-17-5" name="__codelineno-17-5"></a>Thread 4 terminé : début 11:18:50, durée programmée 5 s, fin 11:18:55, durée effective 00:00:05
 <a id="__codelineno-17-6" name="__codelineno-17-6"></a>Fin du thread Main à 11:18:55
 </code></pre></div></td></tr></table></div>
-<p>Cet exemple montre que deux threads peuvent s&#x27;échanger de l&#x27;information :</p>
+<p>Cet exemple montre que deux threads peuvent s'échanger de l'information :</p>
 <ul>
-<li>le thread lanceur peut contrôler l&#x27;exécution du thread lancé en lui donnant des informations</li>
+<li>le thread lanceur peut contrôler l'exécution du thread lancé en lui donnant des informations</li>
 <li>le thread lancé peut rendre des résultats au thread lanceur.
-Pour que le thread lancé sache à quel moment les résultats qu&#x27;il attend sont disponibles, il faut qu&#x27;il soit averti de la fin du thread lancé. Ici, il a attendu qu&#x27;il se termine en utilisant la méthode Join. Il y a d&#x27;autres façons de faire la même chose. Nous les verrons ultérieurement.</li>
+Pour que le thread lancé sache à quel moment les résultats qu'il attend sont disponibles, il faut qu'il soit averti de la fin du thread lancé. Ici, il a attendu qu'il se termine en utilisant la méthode Join. Il y a d'autres façons de faire la même chose. Nous les verrons ultérieurement.</li>
 </ul>
 <h2 id="105-acces-concurrents-a-des-ressources-partagees">10.5. Accès concurrents à des ressources partagées</h2>
 <h3 id="1051-acces-concurrents-non-synchronises">10.5.1. Accès concurrents non synchronisés</h3>
-<p>Dans le paragraphe sur l&#x27;échange d&#x27;informations entre threads, l&#x27;information échangée ne l&#x27;était que par deux threads et à des moments bien précis. On avait là un classique passage de paramètres. Il existe d&#x27;autres cas où une information est partagée par plusieurs threads qui peuvent vouloir la lire ou la mettre à jour au même moment. Se pose alors le problème de l&#x27;intégrité de cette information. Supposons que l&#x27;information partagée soit une structure S avec diverses informations I1, I2, ... In.</p>
+<p>Dans le paragraphe sur l'échange d'informations entre threads, l'information échangée ne l'était que par deux threads et à des moments bien précis. On avait là un classique passage de paramètres. Il existe d'autres cas où une information est partagée par plusieurs threads qui peuvent vouloir la lire ou la mettre à jour au même moment. Se pose alors le problème de l'intégrité de cette information. Supposons que l'information partagée soit une structure S avec diverses informations I1, I2, ... In.</p>
 <ul>
-<li>un thread T1 commence à mettre à jour la structure S : il modifie le champ I1 et est interrompu avant d&#x27;avoir terminé la mise à jour complète de la structure S</li>
+<li>un thread T1 commence à mettre à jour la structure S : il modifie le champ I1 et est interrompu avant d'avoir terminé la mise à jour complète de la structure S</li>
 <li>
-<p>un thread T2 qui récupère le processeur lit alors la structure S pour prendre des décisions. Il lit une structure dans un état instable : certains champs sont à jour, d&#x27;autres pas.
-On appelle cette situation, l&#x27;accès à une ressource partagée, ici la structure S, et elle est souvent assez délicate à gérer. Prenons l&#x27;exemple suivant pour illustrer les problèmes qui peuvent surgir :</p>
+<p>un thread T2 qui récupère le processeur lit alors la structure S pour prendre des décisions. Il lit une structure dans un état instable : certains champs sont à jour, d'autres pas.
+On appelle cette situation, l'accès à une ressource partagée, ici la structure S, et elle est souvent assez délicate à gérer. Prenons l'exemple suivant pour illustrer les problèmes qui peuvent surgir :</p>
 </li>
 <li>
 <p>une application va générer n threads, n étant passé en paramètre</p>
 </li>
 <li>la ressource partagée est un compteur qui devra être incrémenté par chaque thread généré</li>
-<li>à la fin de l&#x27;application, la valeur du compteur est affichée. On devrait donc trouver n.
+<li>à la fin de l'application, la valeur du compteur est affichée. On devrait donc trouver n.
 Le programme est le suivant :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
@@ -1642,9 +1642,9 @@ Le programme est le suivant :</li>
 <p>Nous ne nous attarderons pas sur la partie génération de threads déjà étudiée. Intéressons-nous plutôt à la méthode Incrémente, de la ligne 59 utilisée par chaque thread pour incrémenter le compteur statique cptrThreads de la ligne 8.</p>
 <ul>
 <li>ligne 62 : le compteur est lu</li>
-<li>ligne 66 : le thread s&#x27;arrête 1 s. Il perd donc le processeur</li>
+<li>ligne 66 : le thread s'arrête 1 s. Il perd donc le processeur</li>
 <li>ligne 68 : le compteur est incrémenté
-L&#x27;étape 2 n&#x27;est là que pour forcer le thread à perdre le processeur. Celui-ci va être donné à un autre thread. Dans la pratique, rien n&#x27;assure qu&#x27;un thread ne sera pas interrompu entre le moment où il va lire le compteur et le moment où il va l&#x27;incrémenter. Même si on écrit cptrThreads++, donnant ainsi l&#x27;illusion d&#x27;une instruction unique, le risque existe de perdre le processeur entre le moment où on lit la valeur du compteur et celui on écrit sa valeur incrémentée de 1. En effet, l&#x27;opération de haut niveau cptrThreads++ va faire l&#x27;objet de plusieurs instructions élémentaires au niveau du processeur. L&#x27;étape 2 de sommeil d&#x27;une seconde n&#x27;est donc là que pour systématiser ce risque.</li>
+L'étape 2 n'est là que pour forcer le thread à perdre le processeur. Celui-ci va être donné à un autre thread. Dans la pratique, rien n'assure qu'un thread ne sera pas interrompu entre le moment où il va lire le compteur et le moment où il va l'incrémenter. Même si on écrit cptrThreads++, donnant ainsi l'illusion d'une instruction unique, le risque existe de perdre le processeur entre le moment où on lit la valeur du compteur et celui on écrit sa valeur incrémentée de 1. En effet, l'opération de haut niveau cptrThreads++ va faire l'objet de plusieurs instructions élémentaires au niveau du processeur. L'étape 2 de sommeil d'une seconde n'est donc là que pour systématiser ce risque.</li>
 </ul>
 <p>Les résultats obtenus avec 5 threads sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
@@ -1671,18 +1671,18 @@ L&#x27;étape 2 n&#x27;est là que pour forcer le thread à perdre le processeur
 </code></pre></div></td></tr></table></div>
 <p>A la lecture de ces résultats, on voit bien ce qui se passe :</p>
 <ul>
-<li>ligne 1 : un premier thread lit le compteur. Il trouve 0. Il s&#x27;arrête 1 s donc perd le processeur</li>
-<li>ligne 2 : un second thread prend alors le processeur et lit lui aussi la valeur du compteur. Elle est toujours à 0 puisque le thread précédent ne l&#x27;a pas encore incrémentée. Il s&#x27;arrête lui aussi 1 s et perd à son tour le processeur.</li>
+<li>ligne 1 : un premier thread lit le compteur. Il trouve 0. Il s'arrête 1 s donc perd le processeur</li>
+<li>ligne 2 : un second thread prend alors le processeur et lit lui aussi la valeur du compteur. Elle est toujours à 0 puisque le thread précédent ne l'a pas encore incrémentée. Il s'arrête lui aussi 1 s et perd à son tour le processeur.</li>
 <li>lignes 1-5 : en 1 s, les 5 threads ont le temps de passer tous et de lire tous la valeur 0.</li>
 <li>
-<p>lignes 6-10 : lorsqu&#x27;ils vont se réveiller les uns après les autres, ils vont incrémenter la valeur 0 qu&#x27;ils ont lue et écrire la valeur 1 dans le compteur, ce que confirme le programme principal (Main) en ligne 11.
-D&#x27;où vient le problème ? Le second thread a lu une mauvaise valeur du fait que le premier avait été interrompu avant d&#x27;avoir terminé son travail qui était de mettre à jour le compteur dans la fenêtre. Cela nous amène à la notion de ressource critique et de section critique d&#x27;un programme: </p>
+<p>lignes 6-10 : lorsqu'ils vont se réveiller les uns après les autres, ils vont incrémenter la valeur 0 qu'ils ont lue et écrire la valeur 1 dans le compteur, ce que confirme le programme principal (Main) en ligne 11.
+D'où vient le problème ? Le second thread a lu une mauvaise valeur du fait que le premier avait été interrompu avant d'avoir terminé son travail qui était de mettre à jour le compteur dans la fenêtre. Cela nous amène à la notion de ressource critique et de section critique d'un programme: </p>
 </li>
 <li>
 <p>une ressource critique est une ressource qui ne peut être détenue que par un thread à la fois. Ici la ressource critique est le compteur. </p>
 </li>
-<li>une section critique d&#x27;un programme est une séquence d&#x27;instructions dans le flux d&#x27;exécution d&#x27;un thread au cours de laquelle il accède à une ressource critique. On doit assurer qu&#x27;au cours de cette section critique, il est le seul à avoir accès à la ressource.
-Dans notre exemple, la section critique est le code situé entre la lecture du compteur et l&#x27;écriture de sa nouvelle valeur :</li>
+<li>une section critique d'un programme est une séquence d'instructions dans le flux d'exécution d'un thread au cours de laquelle il accède à une ressource critique. On doit assurer qu'au cours de cette section critique, il est le seul à avoir accès à la ressource.
+Dans notre exemple, la section critique est le code situé entre la lecture du compteur et l'écriture de sa nouvelle valeur :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
 <span class="normal"><a href="#__codelineno-20-2">2</a></span>
@@ -1696,12 +1696,12 @@ Dans notre exemple, la section critique est le code situé entre la lecture du c
 <a id="__codelineno-20-5" name="__codelineno-20-5"></a>            // incrémentation compteur
 <a id="__codelineno-20-6" name="__codelineno-20-6"></a>cptrThreads = valeur + 1;
 </code></pre></div></td></tr></table></div>
-<p>Pour exécuter ce code, un thread doit être assuré d&#x27;être tout seul. Il peut être interrompu mais pendant cette interruption, un autre thread ne doit pas pouvoir exécuter ce même code. La plate-forme .NET offre divers outils pour assurer l&#x27;entrée unitaire dans les sections critiques de code. Nous en voyons quelques-uns maintenant.</p>
+<p>Pour exécuter ce code, un thread doit être assuré d'être tout seul. Il peut être interrompu mais pendant cette interruption, un autre thread ne doit pas pouvoir exécuter ce même code. La plate-forme .NET offre divers outils pour assurer l'entrée unitaire dans les sections critiques de code. Nous en voyons quelques-uns maintenant.</p>
 <h3 id="1052-la-clause-lock">10.5.2. La clause lock</h3>
 <p>La clause <strong>lock</strong> permet de délimiter une section critique de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>lock(obj){section critique}
 </code></pre></div></td></tr></table></div>
-<p>obj doit être une référence d&#x27;objet visible par tous les threads exécutant la section critique. La clause <strong>lock</strong> assure qu&#x27;un seul thread à la fois exécutera la section critique. L&#x27;exemple précédent est réécrit comme suit :</p>
+<p>obj doit être une référence d'objet visible par tous les threads exécutant la section critique. La clause <strong>lock</strong> assure qu'un seul thread à la fois exécutera la section critique. L'exemple précédent est réécrit comme suit :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-22-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-22-3"> 3</a></span>
@@ -1791,8 +1791,8 @@ Dans notre exemple, la section critique est le code situé entre la lecture du c
 <a id="__codelineno-22-44" name="__codelineno-22-44"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 9 : synchro est l&#x27;objet qui va permettre la synchronisation de tous les threads.</li>
-<li>lignes 16-23 : la méthode [Main] attend les threads dans l&#x27;ordre inverse de leur création.</li>
+<li>ligne 9 : synchro est l'objet qui va permettre la synchronisation de tous les threads.</li>
+<li>lignes 16-23 : la méthode [Main] attend les threads dans l'ordre inverse de leur création.</li>
 <li>lignes 29-40 : la section critique de la méthode Incrémente a été encadrée par la clause lock.
 Les résultats obtenus avec 3 threads sont les suivants :</li>
 </ul>
@@ -1847,7 +1847,7 @@ Les résultats obtenus avec 3 threads sont les suivants :</li>
 <h3 id="1053-la-classe-mutex">10.5.3. La classe Mutex</h3>
 <p>La classe  <strong>System.Threading.Mutex</strong> permet elle aussi de délimiter des sections critiques. Elle diffère de la clause <strong>lock</strong> en terme de visibilité :</p>
 <ul>
-<li>la clause <strong>lock</strong> permet de synchroniser des threads d&#x27;une même application</li>
+<li>la clause <strong>lock</strong> permet de synchroniser des threads d'une même application</li>
 <li>la classe <strong>Mutex</strong> permet de synchroniser des threads de différentes applications.
 Nous utiliserons le constructeur et les méthodes suivants :</li>
 </ul>
@@ -1857,12 +1857,12 @@ Nous utiliserons le constructeur et les méthodes suivants :</li>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">crée un Mutex M</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>public bool WaitOne()
 </code></pre></div></td></tr></table></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Le thread T1 qui exécute l&#x27;opération M.WaitOne() demande la propriété de l&#x27;objet de synchronisation M. Si le Mutex M n&#x27;est détenu par aucun thread (le cas au départ), il est &quot;donné&quot; au thread T1 qui l&#x27;a demandé. Si un peu plus tard, un thread T2 fait la même opération, il sera bloqué. En effet, un Mutex ne peut appartenir qu&#x27;à un thread. Il sera débloqué lorsque le thread T1 libèrera le Mutex M qu&#x27;il détient. Plusieurs threads peuvent ainsi être bloqués en attente du Mutex M.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Le thread T1 qui exécute l'opération M.WaitOne() demande la propriété de l'objet de synchronisation M. Si le Mutex M n'est détenu par aucun thread (le cas au départ), il est "donné" au thread T1 qui l'a demandé. Si un peu plus tard, un thread T2 fait la même opération, il sera bloqué. En effet, un Mutex ne peut appartenir qu'à un thread. Il sera débloqué lorsque le thread T1 libèrera le Mutex M qu'il détient. Plusieurs threads peuvent ainsi être bloqués en attente du Mutex M.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a>public void ReleaseMutex()
 </code></pre></div></td></tr></table></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Le thread T1 qui effectue l&#x27;opération M.ReleaseMutex() abandonne la propriété du Mutex M. Lorsque le thread T1 perdra le processeur, le système pourra donner celui-ci à l&#x27;un des threads en attente du Mutex M. Un seul l&#x27;obtiendra à son tour, les autres en attente de M restant bloqués </p></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Le thread T1 qui effectue l'opération M.ReleaseMutex() abandonne la propriété du Mutex M. Lorsque le thread T1 perdra le processeur, le système pourra donner celui-ci à l'un des threads en attente du Mutex M. Un seul l'obtiendra à son tour, les autres en attente de M restant bloqués </p></td></tr></table>
 
-<p>Un Mutex M gère l&#x27;accès à une ressource partagée R. Un thread demande la ressource R par M.WaitOne() et la rend par M.ReleaseMutex(). Une section critique de code qui ne doit être exécutée que par un seul thread à la fois est une ressource partagée. La synchronisation d&#x27;exécution de la section critique peut se faire ainsi :</p>
+<p>Un Mutex M gère l'accès à une ressource partagée R. Un thread demande la ressource R par M.WaitOne() et la rend par M.ReleaseMutex(). Une section critique de code qui ne doit être exécutée que par un seul thread à la fois est une ressource partagée. La synchronisation d'exécution de la section critique peut se faire ainsi :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
 <span class="normal"><a href="#__codelineno-27-2">2</a></span>
 <span class="normal"><a href="#__codelineno-27-3">3</a></span>
@@ -1873,8 +1873,8 @@ Nous utiliserons le constructeur et les méthodes suivants :</li>
 <a id="__codelineno-27-4" name="__codelineno-27-4"></a>....
 <a id="__codelineno-27-5" name="__codelineno-27-5"></a>M.ReleaseMutex();
 </code></pre></div></td></tr></table></div>
-<p>où M est un objet Mutex. Il ne faut pas oublier de libérer un Mutex devenu inutile afin qu&#x27;un autre thread puisse entrer dans la section critique, sinon les threads en attente du Mutex jamais libéré n&#x27;auront jamais accès au processeur. </p>
-<p>Si nous mettons en pratique sur l&#x27;exemple précédent ce que nous venons de voir, notre application devient la suivante :</p>
+<p>où M est un objet Mutex. Il ne faut pas oublier de libérer un Mutex devenu inutile afin qu'un autre thread puisse entrer dans la section critique, sinon les threads en attente du Mutex jamais libéré n'auront jamais accès au processeur. </p>
+<p>Si nous mettons en pratique sur l'exemple précédent ce que nous venons de voir, notre application devient la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-28-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-28-3"> 3</a></span>
@@ -1930,29 +1930,29 @@ Nous utiliserons le constructeur et les méthodes suivants :</li>
 <a id="__codelineno-28-27" name="__codelineno-28-27"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 9 : l&#x27;objet de synchronisation des threads est désormais un Mutex.</li>
-<li>ligne 18 : début de la section critique - un seul thread doit y entrer. On se bloque jusqu&#x27;à ce que le Mutex synchro soit libre.</li>
-<li>ligne 33 : parce qu&#x27;un Mutex doit toujours être libéré, exception ou pas, on gère la section critique avec un try / finally afin de libérer le Mutex dans le finally.</li>
+<li>ligne 9 : l'objet de synchronisation des threads est désormais un Mutex.</li>
+<li>ligne 18 : début de la section critique - un seul thread doit y entrer. On se bloque jusqu'à ce que le Mutex synchro soit libre.</li>
+<li>ligne 33 : parce qu'un Mutex doit toujours être libéré, exception ou pas, on gère la section critique avec un try / finally afin de libérer le Mutex dans le finally.</li>
 <li>ligne 23 : le Mutex est libéré une fois la section critique passée.
 Les résultats obtenus sont les mêmes que précédemment.</li>
 </ul>
 <h3 id="1054-la-classe-autoresetevent">10.5.4. La classe AutoResetEvent</h3>
-<p>Un objet AutoResetEvent est une barrière ne laissant passer qu&#x27;un thread à la fois, comme les deux outils précédents lock et Mutex. On construit un objet AutoResetEvent de la façon suivante :</p>
+<p>Un objet AutoResetEvent est une barrière ne laissant passer qu'un thread à la fois, comme les deux outils précédents lock et Mutex. On construit un objet AutoResetEvent de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a>AutoResetEvent barrière=new AutoresetEvent(bool état);
 </code></pre></div></td></tr></table></div>
-<p>Le booléen état indique l&#x27;état fermé (false) ou ouvert (true) de la barrière. Un thread voulant passer la barrière l&#x27;indiquera de la façon suivante :</p>
+<p>Le booléen état indique l'état fermé (false) ou ouvert (true) de la barrière. Un thread voulant passer la barrière l'indiquera de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a>barrière.WaitOne();
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>si la barrière est ouverte, le thread passe et la barrière est refermée derrière lui. Si plusieurs threads attendaient, on est assuré qu&#x27;un seul passera.</li>
-<li>si la barrière est fermée, le thread est bloqué. Un autre thread l&#x27;ouvrira lorsque le moment sera venu. Ce moment est entièrement dépendant du problème traité. La barrière sera ouverte par l&#x27;opération :
+<li>si la barrière est ouverte, le thread passe et la barrière est refermée derrière lui. Si plusieurs threads attendaient, on est assuré qu'un seul passera.</li>
+<li>si la barrière est fermée, le thread est bloqué. Un autre thread l'ouvrira lorsque le moment sera venu. Ce moment est entièrement dépendant du problème traité. La barrière sera ouverte par l'opération :
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a>barrière.Set(); 
 </code></pre></div></td></tr></table></div></li>
 </ul>
-<p>Il peut arriver qu&#x27;un thread veuille fermer une barrière. Il pourra le faire par :</p>
+<p>Il peut arriver qu'un thread veuille fermer une barrière. Il pourra le faire par :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a>barrière.Reset(); 
 </code></pre></div></td></tr></table></div>
-<p>Si dans l&#x27;exemple précédent, on remplace l&#x27;objet Mutex par un objet de type AutoResetEvent, le code devient le suivant :</p>
+<p>Si dans l'exemple précédent, on remplace l'objet Mutex par un objet de type AutoResetEvent, le code devient le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-33-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-33-3"> 3</a></span>
@@ -2029,17 +2029,17 @@ Les résultats obtenus sont les mêmes que précédemment.</li>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 9 : la barrière est créée fermée. Elle sera ouverte par le thread Main ligne 16.</li>
-<li>ligne 27 : le thread chargé d&#x27;incrémenter le compteur de threads demande l&#x27;autorisation d&#x27;entrer dans la section critique. Les différents threads vont s&#x27;accumuler devant la barrière fermée. Lorque le thread Main va l&#x27;ouvrir, l&#x27;un des threads en attente va passer.</li>
-<li>ligne 33 : lorsqu&#x27;il a terminé son travail, il rouvre la barrière permettant à un autre thread d&#x27;entrer.
+<li>ligne 27 : le thread chargé d'incrémenter le compteur de threads demande l'autorisation d'entrer dans la section critique. Les différents threads vont s'accumuler devant la barrière fermée. Lorque le thread Main va l'ouvrir, l'un des threads en attente va passer.</li>
+<li>ligne 33 : lorsqu'il a terminé son travail, il rouvre la barrière permettant à un autre thread d'entrer.
 On obtient des résultats analogues aux précédents.</li>
 </ul>
 <h3 id="1055-la-classe-interlocked">10.5.5. La classe Interlocked</h3>
-<p>La classe <strong>Interlocked</strong> permet de rendre <strong>atomique</strong> un groupe d&#x27;opérations. Dans un groupe d&#x27;opérations atomique, soit toutes les opérations sont exécutées par le thread qui exécute le groupe soit aucune. On ne reste pas dans un état ou certaines ont été exécutées et d&#x27;autres pas. Les objets de synchronisation lock, Mutex, AutoResetEvent ont toutes pour but de rendre atomique un groupe d&#x27;opérations. Ce résultat est obtenu au prix du blocage de threads. La classe <strong>Interlocked</strong> permet, pour des opérations simples mais assez fréquentes, d&#x27;éviter le blocage de threads. La classe <strong>Interlocked</strong> offre les méthodes statiques suivantes :</p>
+<p>La classe <strong>Interlocked</strong> permet de rendre <strong>atomique</strong> un groupe d'opérations. Dans un groupe d'opérations atomique, soit toutes les opérations sont exécutées par le thread qui exécute le groupe soit aucune. On ne reste pas dans un état ou certaines ont été exécutées et d'autres pas. Les objets de synchronisation lock, Mutex, AutoResetEvent ont toutes pour but de rendre atomique un groupe d'opérations. Ce résultat est obtenu au prix du blocage de threads. La classe <strong>Interlocked</strong> permet, pour des opérations simples mais assez fréquentes, d'éviter le blocage de threads. La classe <strong>Interlocked</strong> offre les méthodes statiques suivantes :</p>
 <p><img src="images/10000000000003D7000000B3CD37BDC6.png" style="width:17.604cm;height:3.205cm;" alt="Image" /></p>
 <p>La méthode Increment a la signature suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a>public static int Increment(ref int location);
 </code></pre></div></td></tr></table></div>
-<p>Elle permet d&#x27;incrémenter de 1 le paramètre location. L&#x27;opération est garantie atomique.</p>
+<p>Elle permet d'incrémenter de 1 le paramètre location. L'opération est garantie atomique.</p>
 <p>Notre programme de comptage de threads peut alors être le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-35-2"> 2</a></span>
@@ -2086,22 +2086,22 @@ On obtient des résultats analogues aux précédents.</li>
 </ul>
 <h2 id="106-acces-concurrents-a-des-ressources-partagees-multiples">10.6. Accès concurrents à des ressources partagées multiples</h2>
 <h3 id="1061-un-exemple">10.6.1. Un exemple</h3>
-<p>Dans nos exemples précédents, une unique ressource était partagée par les différents threads. La situation peut se compliquer s&#x27;il y en a plusieurs et qu&#x27;elles sont dépendantes les unes des autres. Une situation d&#x27;interblocage peut notamment survenir. Cette situation appelée également deadlock est celle dans laquelle deux threads s&#x27;attendent mutuellement. Considérons les actions suivantes qui se suivent dans le temps :</p>
+<p>Dans nos exemples précédents, une unique ressource était partagée par les différents threads. La situation peut se compliquer s'il y en a plusieurs et qu'elles sont dépendantes les unes des autres. Une situation d'interblocage peut notamment survenir. Cette situation appelée également deadlock est celle dans laquelle deux threads s'attendent mutuellement. Considérons les actions suivantes qui se suivent dans le temps :</p>
 <ul>
-<li>un thread T1 obtient la propriété d&#x27;un Mutex M1 pour avoir accès à une ressource partagée R1</li>
-<li>un thread T2 obtient la propriété d&#x27;un Mutex M2 pour avoir accès à une ressource partagée R2</li>
+<li>un thread T1 obtient la propriété d'un Mutex M1 pour avoir accès à une ressource partagée R1</li>
+<li>un thread T2 obtient la propriété d'un Mutex M2 pour avoir accès à une ressource partagée R2</li>
 <li>le thread T1 demande le Mutex M2. Il est bloqué.</li>
 <li>
 <p>le thread T2 demande le Mutex M1. Il est bloqué.
-Ici, les threads T1 et T2 s&#x27;attendent mutuellement. Ce cas apparaît lorsque des threads ont besoin de deux ressources partagées, la ressource R1 contrôlée par le Mutex M1 et la ressource R2 contrôlée par le Mutex M2. Une solution possible est de demander les deux ressources en même temps à l&#x27;aide d&#x27;un Mutex unique M. Mais ce n&#x27;est pas toujours possible si par exemple cela entraîne une mobilisation longue d&#x27;une ressource coûteuse. Une autre solution est qu&#x27;un thread ayant M1 et ne pouvant obtenir M2, relâche alors M1 pour éviter l&#x27;interblocage.</p>
+Ici, les threads T1 et T2 s'attendent mutuellement. Ce cas apparaît lorsque des threads ont besoin de deux ressources partagées, la ressource R1 contrôlée par le Mutex M1 et la ressource R2 contrôlée par le Mutex M2. Une solution possible est de demander les deux ressources en même temps à l'aide d'un Mutex unique M. Mais ce n'est pas toujours possible si par exemple cela entraîne une mobilisation longue d'une ressource coûteuse. Une autre solution est qu'un thread ayant M1 et ne pouvant obtenir M2, relâche alors M1 pour éviter l'interblocage.</p>
 </li>
 <li>
-<p>On a un tableau dans lequel des threads viennent déposer des données (les écrivains) et d&#x27;autres viennent les lire (les lecteurs). </p>
+<p>On a un tableau dans lequel des threads viennent déposer des données (les écrivains) et d'autres viennent les lire (les lecteurs). </p>
 </li>
 <li>Les écrivains sont égaux entre-eux mais exclusifs : un seul écrivain à la fois peut déposer ses données dans le tableau.</li>
 <li>Les lecteurs sont égaux entre-eux mais exclusifs : un seul lecteur à la fois peut lire les données déposées dans le tableau.</li>
 <li>
-<p>Un lecteur ne peut lire les données du tableau que lorsqu&#x27;un écrivain en a déposé dedans et un écrivain ne peut déposer de nouvelles données dans le tableau que lorsque celles qui y sont ont été lues par un lecteur.
+<p>Un lecteur ne peut lire les données du tableau que lorsqu'un écrivain en a déposé dedans et un écrivain ne peut déposer de nouvelles données dans le tableau que lorsque celles qui y sont ont été lues par un lecteur.
 On peut distinguer deux ressources partagées :</p>
 </li>
 <li>
@@ -2109,23 +2109,23 @@ On peut distinguer deux ressources partagées :</p>
 </li>
 <li>
 <p>le tableau en lecture : un seul lecteur à la fois doit y avoir accès.
-et un ordre d&#x27;utilisation de ces ressources :</p>
+et un ordre d'utilisation de ces ressources :</p>
 </li>
 <li>
 <p>un lecteur doit toujours passer après un écrivain.</p>
 </li>
 <li>
 <p>un écrivain doit toujours passer après un lecteur, sauf la 1ère fois.
-On peut contrôler l&#x27;accès à ces deux ressources avec deux barrières de type AutoResetEvent :</p>
+On peut contrôler l'accès à ces deux ressources avec deux barrières de type AutoResetEvent :</p>
 </li>
 <li>
-<p>la barrière peutEcrire contrôlera l&#x27;accès des écrivains au tableau.</p>
+<p>la barrière peutEcrire contrôlera l'accès des écrivains au tableau.</p>
 </li>
-<li>la barrière peutLire contrôlera l&#x27;accès des lecteurs au tableau.</li>
+<li>la barrière peutLire contrôlera l'accès des lecteurs au tableau.</li>
 <li>la barrière peutEcrire sera créée initialement ouverte laissant passer ainsi un 1er écrivain et bloquant tous les autres.</li>
 <li>la barrière peutLire sera créée initialement fermée bloquant tous les lecteurs.</li>
-<li>lorsqu&#x27;un écrivain aura terminé son travail, il ouvrira la barrière peutLire pour laisser entrer un lecteur.</li>
-<li>lorsqu&#x27;un lecteur aura terminé son travail, il ouvrira la barrière peutEcrire pour laisser entrer un écrivain.
+<li>lorsqu'un écrivain aura terminé son travail, il ouvrira la barrière peutLire pour laisser entrer un lecteur.</li>
+<li>lorsqu'un lecteur aura terminé son travail, il ouvrira la barrière peutEcrire pour laisser entrer un écrivain.
 Le programme illustrant cette synchronisation par événements est le suivant :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1"> 1</a></span>
@@ -2250,8 +2250,8 @@ Le programme illustrant cette synchronisation par événements est le suivant :<
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 11 : le tableau data est la ressource partagée entre les threads lecteurs et écrivains. Elle est partagée en lecture par les threads lecteurs, en écriture par les threads écrivains.</li>
-<li>ligne 13 : l&#x27;objet peutLire sert à avertir les threads lecteurs qu&#x27;ils peuvent lire le tableau data. Il est mis à vrai par le thread écrivain ayant rempli le tableau data. Il est initialisé à false, ligne 23. Il faut qu&#x27;un thread écrivain remplisse d&#x27;abord le tableau avant de passer l&#x27;événement peutLire à vrai.</li>
-<li>ligne 14 : l&#x27;objet peutEcrire sert à avertir les threads écrivains qu&#x27;ils peuvent écrire dans le tableau data. Il est mis à vrai par le thread lecteur ayant exploité la totalité du tableau data. Il est initialisé à true, ligne 24. En effet, le tableau data est libre en écriture.</li>
+<li>ligne 13 : l'objet peutLire sert à avertir les threads lecteurs qu'ils peuvent lire le tableau data. Il est mis à vrai par le thread écrivain ayant rempli le tableau data. Il est initialisé à false, ligne 23. Il faut qu'un thread écrivain remplisse d'abord le tableau avant de passer l'événement peutLire à vrai.</li>
+<li>ligne 14 : l'objet peutEcrire sert à avertir les threads écrivains qu'ils peuvent écrire dans le tableau data. Il est mis à vrai par le thread lecteur ayant exploité la totalité du tableau data. Il est initialisé à true, ligne 24. En effet, le tableau data est libre en écriture.</li>
 <li>lignes 27-34 : création et lancement des threads lecteurs</li>
 <li>lignes 37-44 : création et lancement des threads écrivains
 La méthode Lire exécutée par les threads lecteurs est la suivante :</li>
@@ -2291,9 +2291,9 @@ La méthode Lire exécutée par les threads lecteurs est la suivante :</li>
 <a id="__codelineno-37-17" name="__codelineno-37-17"></a><span class="w">        </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 5 : on attend qu&#x27;un thread écrivain signale que le tableau a été rempli. Lorsque ce signal sera reçu, un seul des threads lecteurs en attente de ce signal pourra passer.</li>
+<li>ligne 5 : on attend qu'un thread écrivain signale que le tableau a été rempli. Lorsque ce signal sera reçu, un seul des threads lecteurs en attente de ce signal pourra passer.</li>
 <li>lignes 7-12 : exploitation du tableau data avec un Sleep au milieu pour forcer le thread à perdre le processeur.</li>
-<li>ligne 14 : indique aux threads écrivains que le tableau a été lu et qu&#x27;il peut être rempli de nouveau.
+<li>ligne 14 : indique aux threads écrivains que le tableau a été lu et qu'il peut être rempli de nouveau.
 La méthode Ecrire exécutée par les threads écrivains est la suivante :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1"> 1</a></span>
@@ -2333,10 +2333,10 @@ La méthode Ecrire exécutée par les threads écrivains est la suivante :</li>
 <a id="__codelineno-38-18" name="__codelineno-38-18"></a><span class="w">        </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 5 : on attend qu&#x27;un thread lecteur signale que le tableau a été lu. Lorsque ce signal sera reçu, un seul des threads écrivains en attente de ce signal pourra passer.</li>
+<li>ligne 5 : on attend qu'un thread lecteur signale que le tableau a été lu. Lorsque ce signal sera reçu, un seul des threads écrivains en attente de ce signal pourra passer.</li>
 <li>lignes 7-13 : exploitation du tableau data avec un Sleep au milieu pour forcer le thread à perdre le processeur.</li>
-<li>ligne 15 : indique aux threads lecteurs que le tableau a été rempli et qu&#x27;il peut être lu de nouveau.
-L&#x27;exécution donne les résultats suivants :</li>
+<li>ligne 15 : indique aux threads lecteurs que le tableau a été rempli et qu'il peut être lu de nouveau.
+L'exécution donne les résultats suivants :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-39-2"> 2</a></span>
@@ -2384,42 +2384,42 @@ L&#x27;exécution donne les résultats suivants :</li>
 <ul>
 <li>on a bien 1 seul lecteur à la fois, bien que celui-ci perde le processeur dans la section critique Lire</li>
 <li>on a bien 1 seul écrivain à la fois, bien que celui-ci perde le processeur dans la section critique Ecrire</li>
-<li>un lecteur ne lit que lorsqu&#x27;il y a quelque chose à lire dans le tableau</li>
-<li>un écrivain n&#x27;écrit que lorsque le tableau a été entièrement lu</li>
+<li>un lecteur ne lit que lorsqu'il y a quelque chose à lire dans le tableau</li>
+<li>un écrivain n'écrit que lorsque le tableau a été entièrement lu</li>
 </ul>
 <h3 id="1062-la-classe-monitor">10.6.2. La classe Monitor</h3>
-<p>Dans l&#x27;exemple précédent :</p>
+<p>Dans l'exemple précédent :</p>
 <ul>
 <li>il y a deux ressources partagées à gérer</li>
 <li>pour une ressource donnée, les threads sont égaux.
-Lorsque les threads écrivains sont bloqués sur l&#x27;instruction peutEcrire.WaitOne, l&#x27;un d&#x27;entre-eux, n&#x27;importe lequel, est débloqué par l&#x27;opération peutEcrire.Set. Si l&#x27;opération précédente doit ouvrir la barrière à <strong>un écrivain en particulier</strong>, les choses deviennent plus compliquées.</li>
+Lorsque les threads écrivains sont bloqués sur l'instruction peutEcrire.WaitOne, l'un d'entre-eux, n'importe lequel, est débloqué par l'opération peutEcrire.Set. Si l'opération précédente doit ouvrir la barrière à <strong>un écrivain en particulier</strong>, les choses deviennent plus compliquées.</li>
 </ul>
-<p>On peut considérer l&#x27;analogie avec un établissement accueillant du public à des guichets où chaque guichet est spécialisé. Lorsque le client arrive, il prend un ticket au distributeur de tickets pour le guichet X puis va s&#x27;asseoir. Chaque ticket est numéroté et les clients sont appelés par leur numéro via un haut-parleur. Pendant son attente, le client fait ce qu&#x27;il veut. Il peut lire ou somnoler. Il est réveillé à chaque fois par le haut-parleur qui annonce que le n° Y est appelé au guichet X. S&#x27;il s&#x27;agit de lui, le client se lève et accède au guichet X, sinon il continue ce qu&#x27;il faisait.</p>
-<p>On peut ici fonctionner de façon analogue. Prenons l&#x27;exemple des écrivains :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">plusieurs écrivains attendent pour un même guichet</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">leurs threads sont bloqués</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le guichet se libère et le n° de l&#x27;écrivain suivant est appelé</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le thread qui utilisait le tableau en lecture indique aux écrivains que le tableau est disponible. Lui ou un autre thread a fixé le thread écrivain qui doit passer la barrière.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">chaque écrivain regarde son n° et seul celui qui a le n° appelé va au guichet. Les autres se remettent en attente.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">chaque thread vérifie s&#x27;il est l&#x27;élu. Si oui, il passe la barrière. Si non, il se remet en attente.</p></td></tr></table>
+<p>On peut considérer l'analogie avec un établissement accueillant du public à des guichets où chaque guichet est spécialisé. Lorsque le client arrive, il prend un ticket au distributeur de tickets pour le guichet X puis va s'asseoir. Chaque ticket est numéroté et les clients sont appelés par leur numéro via un haut-parleur. Pendant son attente, le client fait ce qu'il veut. Il peut lire ou somnoler. Il est réveillé à chaque fois par le haut-parleur qui annonce que le n° Y est appelé au guichet X. S'il s'agit de lui, le client se lève et accède au guichet X, sinon il continue ce qu'il faisait.</p>
+<p>On peut ici fonctionner de façon analogue. Prenons l'exemple des écrivains :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">plusieurs écrivains attendent pour un même guichet</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">leurs threads sont bloqués</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le guichet se libère et le n° de l'écrivain suivant est appelé</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le thread qui utilisait le tableau en lecture indique aux écrivains que le tableau est disponible. Lui ou un autre thread a fixé le thread écrivain qui doit passer la barrière.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">chaque écrivain regarde son n° et seul celui qui a le n° appelé va au guichet. Les autres se remettent en attente.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">chaque thread vérifie s'il est l'élu. Si oui, il passe la barrière. Si non, il se remet en attente.</p></td></tr></table>
 
 <p>La classe <strong>Monitor</strong> permet de mettre en oeuvre ce scénario.</p>
 <p><img src="images/10000000000002A40000009E2C021AE4.png" style="width:12.52cm;height:2.93cm;" alt="Image" /></p>
-<p>Nous décrivons maintenant une construction standard (pattern), proposée dans le chapitre Threading du livre C# 3.0 référencé dans l&#x27;introduction de ce document, capable de résoudre les problèmes de barrière avec condition d&#x27;entrée.</p>
+<p>Nous décrivons maintenant une construction standard (pattern), proposée dans le chapitre Threading du livre C# 3.0 référencé dans l'introduction de ce document, capable de résoudre les problèmes de barrière avec condition d'entrée.</p>
 <ul>
 <li>
-<p>Tout d&#x27;abord, les threads qui se partagent une ressource (le guichet, ...) y accèdent via un objet que nous appellerons un <strong>jeton</strong>. Pour ouvrir la barrière qui mène au guichet, il faut avoir le jeton pour l&#x27;ouvrir et il n&#x27;y a qu&#x27;un seul jeton. Les threads doivent donc se passer le jeton entre-eux.
+<p>Tout d'abord, les threads qui se partagent une ressource (le guichet, ...) y accèdent via un objet que nous appellerons un <strong>jeton</strong>. Pour ouvrir la barrière qui mène au guichet, il faut avoir le jeton pour l'ouvrir et il n'y a qu'un seul jeton. Les threads doivent donc se passer le jeton entre-eux.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1"></a>object jeton=new object();
 </code></pre></div></td></tr></table></div></p>
 </li>
 <li>
-<p>Pour aller au guichet, les threads demandent tout d&#x27;abord le jeton :
+<p>Pour aller au guichet, les threads demandent tout d'abord le jeton :
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a>Monitor.Enter(jeton);
 </code></pre></div></td></tr></table></div></p>
 </li>
 </ul>
-<p>Si le jeton est libre, il est donné au thread ayant exécuté l&#x27;opération précédente, sinon le thread est mis en attente du jeton.</p>
+<p>Si le jeton est libre, il est donné au thread ayant exécuté l'opération précédente, sinon le thread est mis en attente du jeton.</p>
 <ul>
-<li>Si l&#x27;accès au guichet se fait de façon non ordonnée, c.a.d. dans le cas où la personne qui entre n&#x27;importe pas, l&#x27;opération précédente est suffisante. Le thread ayant le jeton va au guichet. Si l&#x27;accès se fait de façon ordonnée, le thread qui a le jeton vérifie qu&#x27;il remplit la condition pour aller au guichet :
+<li>Si l'accès au guichet se fait de façon non ordonnée, c.a.d. dans le cas où la personne qui entre n'importe pas, l'opération précédente est suffisante. Le thread ayant le jeton va au guichet. Si l'accès se fait de façon ordonnée, le thread qui a le jeton vérifie qu'il remplit la condition pour aller au guichet :
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1"></a>while (! jeNeSuisPasCeluiQuiEstAttendu) {Monitor.Wait(jeton);}
 </code></pre></div></td></tr></table></div></li>
 </ul>
-<p>Si le thread n&#x27;est pas celui qui est attendu au guichet, il laisse son tour en redonnant le jeton. Il passe dans un état bloqué. Il sera réveillé dès que le jeton redeviendra disponible pour lui. Il vérifiera alors de nouveau s&#x27;il vérifie la condition pour aller au guichet. L&#x27;opération Monitor.Wait(jeton) qui relâche le jeton ne peut être faite que si le thread <strong>est propriétaire</strong> du jeton. Si ce n&#x27;est pas le cas, une exception est lancée.</p>
+<p>Si le thread n'est pas celui qui est attendu au guichet, il laisse son tour en redonnant le jeton. Il passe dans un état bloqué. Il sera réveillé dès que le jeton redeviendra disponible pour lui. Il vérifiera alors de nouveau s'il vérifie la condition pour aller au guichet. L'opération Monitor.Wait(jeton) qui relâche le jeton ne peut être faite que si le thread <strong>est propriétaire</strong> du jeton. Si ce n'est pas le cas, une exception est lancée.</p>
 <ul>
 <li>Le thread qui vérifie la condition pour aller au guichet y va :</li>
 <li>// travail au guichet</li>
@@ -2447,13 +2447,13 @@ Avant de quitter le guichet, le thread doit rendre son jeton, sinon les threads 
 </code></pre></div></td></tr></table></div></p>
 </li>
 </ul>
-<p>Ligne 6, il réveille les threads en attente du jeton. Ce réveil signifie qu&#x27;ils deviennent éligibles pour recevoir le jeton. Cela ne veut pas dire qu&#x27;ils le reçoivent immédiatement. Ligne 8, le jeton est libéré. Tous les threads éligibles vont recevoir tour à tour le jeton, de façon indéterministe. Cela va leur donner l&#x27;occasion de vérifier de nouveau s&#x27;ils vérifient la condition d&#x27;accès. Le thread ayant libéré le jeton a modifié cette condition ligne 4 afin de permettre à un nouveau thread d&#x27;entrer. Le premier qui la vérifie garde le jeton et va au guichet à son tour.</p>
+<p>Ligne 6, il réveille les threads en attente du jeton. Ce réveil signifie qu'ils deviennent éligibles pour recevoir le jeton. Cela ne veut pas dire qu'ils le reçoivent immédiatement. Ligne 8, le jeton est libéré. Tous les threads éligibles vont recevoir tour à tour le jeton, de façon indéterministe. Cela va leur donner l'occasion de vérifier de nouveau s'ils vérifient la condition d'accès. Le thread ayant libéré le jeton a modifié cette condition ligne 4 afin de permettre à un nouveau thread d'entrer. Le premier qui la vérifie garde le jeton et va au guichet à son tour.</p>
 <ul>
-<li>la seconde situation est celle où le thread ayant le jeton n&#x27;est pas celui qui doit signaler aux threads en attente du jeton que celui-ci est libre. Il doit néanmoins le libérer parce que le thread chargé d&#x27;envoyer ce signal doit être détenteur du jeton. Il le fera par l&#x27;opération :
+<li>la seconde situation est celle où le thread ayant le jeton n'est pas celui qui doit signaler aux threads en attente du jeton que celui-ci est libre. Il doit néanmoins le libérer parce que le thread chargé d'envoyer ce signal doit être détenteur du jeton. Il le fera par l'opération :
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1"></a>Monitor.Exit(jeton);
 </code></pre></div></td></tr></table></div></li>
 </ul>
-<p>Le jeton est désormais disponible, mais les threads qui l&#x27;attendent (ils ont fait une opération Wait(jeton)) n&#x27;en sont pas avertis. Cette tâche est confiée à un autre thread qui à un moment donné exécutera un code similaire au suivant :</p>
+<p>Le jeton est désormais disponible, mais les threads qui l'attendent (ils ont fait une opération Wait(jeton)) n'en sont pas avertis. Cette tâche est confiée à un autre thread qui à un moment donné exécutera un code similaire au suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-45-1">1</a></span>
 <span class="normal"><a href="#__codelineno-45-2">2</a></span>
 <span class="normal"><a href="#__codelineno-45-3">3</a></span>
@@ -2473,12 +2473,12 @@ Avant de quitter le guichet, le thread doit rendre son jeton, sinon les threads 
 <p>Au final, la construction standard proposée dans le chapitre Threading du livre C# 3.0 est la suivante :</p>
 <ul>
 <li>
-<p>définir le jeton d&#x27;accès au guichet :
+<p>définir le jeton d'accès au guichet :
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-46-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1"></a>object jeton=new object();
 </code></pre></div></td></tr></table></div></p>
 </li>
 <li>
-<p>demander l&#x27;accès au guichet :
+<p>demander l'accès au guichet :
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-47-1">1</a></span>
 <span class="normal"><a href="#__codelineno-47-2">2</a></span>
 <span class="normal"><a href="#__codelineno-47-3">3</a></span>
@@ -2500,7 +2500,7 @@ Avant de quitter le guichet, le thread doit rendre son jeton, sinon les threads 
 <span class="normal"><a href="#__codelineno-49-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1"></a>Monitor.Enter(jeton);
 <a id="__codelineno-49-2" name="__codelineno-49-2"></a>try{...} finally{Monitor.Exit(jeton);}
 </code></pre></div></td></tr></table></div>
-<p>On notera que dans ce schéma le jeton est relâché immédiatement, dès que la barrière est passée. Un autre thread peut alors tester la condition d&#x27;accès. La construction précédente laisse donc entrer tous les threads vérifiant la condition d&#x27;accès. Si ce n&#x27;est pas ce qui est désiré, on pourra écrire :</p>
+<p>On notera que dans ce schéma le jeton est relâché immédiatement, dès que la barrière est passée. Un autre thread peut alors tester la condition d'accès. La construction précédente laisse donc entrer tous les threads vérifiant la condition d'accès. Si ce n'est pas ce qui est désiré, on pourra écrire :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-50-1">1</a></span>
 <span class="normal"><a href="#__codelineno-50-2">2</a></span>
 <span class="normal"><a href="#__codelineno-50-3">3</a></span>
@@ -2513,9 +2513,9 @@ Avant de quitter le guichet, le thread doit rendre son jeton, sinon les threads 
 <a id="__codelineno-50-5" name="__codelineno-50-5"></a>    ...
 <a id="__codelineno-50-6" name="__codelineno-50-6"></a>}
 </code></pre></div></td></tr></table></div>
-<p>où le jeton n&#x27;est relâché qu&#x27;après le passage au guichet.</p>
+<p>où le jeton n'est relâché qu'après le passage au guichet.</p>
 <ul>
-<li>modifier la condition d&#x27;accès au guichet et en avertir les autres threads
+<li>modifier la condition d'accès au guichet et en avertir les autres threads
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-51-1">1</a></span>
 <span class="normal"><a href="#__codelineno-51-2">2</a></span>
 <span class="normal"><a href="#__codelineno-51-3">3</a></span>
@@ -2529,7 +2529,7 @@ Avant de quitter le guichet, le thread doit rendre son jeton, sinon les threads 
 <a id="__codelineno-51-6" name="__codelineno-51-6"></a>}
 </code></pre></div></td></tr></table></div></li>
 </ul>
-<p>Ci-dessus, la condition d&#x27;accès ne peut être modifiée que par le thread ayant le jeton. On pourra aussi écrire :</p>
+<p>Ci-dessus, la condition d'accès ne peut être modifiée que par le thread ayant le jeton. On pourra aussi écrire :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-52-1">1</a></span>
 <span class="normal"><a href="#__codelineno-52-2">2</a></span>
 <span class="normal"><a href="#__codelineno-52-3">3</a></span>
@@ -2543,7 +2543,7 @@ Avant de quitter le guichet, le thread doit rendre son jeton, sinon les threads 
 <a id="__codelineno-52-6" name="__codelineno-52-6"></a>    Monitor.Exit(jeton);
 </code></pre></div></td></tr></table></div>
 <p>si le thread a déjà le jeton. </p>
-<p>Muni de ces informations, nous pouvons réécrire l&#x27;application lecteurs / écrivains en fixant un ordre des lecteurs et des écrivains pour l&#x27;accès à leurs guichets respectifs. Le code est le suivant :</p>
+<p>Muni de ces informations, nous pouvons réécrire l'application lecteurs / écrivains en fixant un ordre des lecteurs et des écrivains pour l'accès à leurs guichets respectifs. Le code est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-53-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-53-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-53-3"> 3</a></span>
@@ -2710,31 +2710,31 @@ Avant de quitter le guichet, le thread doit rendre son jeton, sinon les threads 
 <a id="__codelineno-53-82" name="__codelineno-53-82"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-53-83" name="__codelineno-53-83"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>L&#x27;accès au guichet de lecture est conditionné par les éléments suivants :</p>
+<p>L'accès au guichet de lecture est conditionné par les éléments suivants :</p>
 <ul>
 <li>ligne 13 : le jeton peutLire</li>
 <li>ligne 15 : le booléen lectureAutorisée</li>
-<li>ligne 17 : le tableau ordonné des lecteurs. Les lecteurs vont au guichet de lecture dans l&#x27;ordre de ce tableau qui contient leurs noms.</li>
+<li>ligne 17 : le tableau ordonné des lecteurs. Les lecteurs vont au guichet de lecture dans l'ordre de ce tableau qui contient leurs noms.</li>
 <li>
 <p>ligne 19 : lecteurSuivant indique le n° du prochain lecteur autorisé à aller au guichet.
-L&#x27;accès au guichet d&#x27;écriture est conditionné par les éléments suivants :</p>
+L'accès au guichet d'écriture est conditionné par les éléments suivants :</p>
 </li>
 <li>
 <p>ligne 14 : le jeton peutEcrire</p>
 </li>
 <li>ligne 16 : le booléen écritureAutorisée</li>
-<li>ligne 18 : le tableau ordonné des écrivains. Les écrivains vont au guichet d&#x27;écriture dans l&#x27;ordre de ce tableau qui contient leurs noms.</li>
+<li>ligne 18 : le tableau ordonné des écrivains. Les écrivains vont au guichet d'écriture dans l'ordre de ce tableau qui contient leurs noms.</li>
 <li>
 <p>ligne 20 : écrivainSuivant indique le n° du prochain écrivain autorisé à aller au guichet.
 Les autres éléments du code sont les suivants :</p>
 </li>
 <li>
-<p>lignes 29-36 : création et lancement des threads lecteurs. Ils seront tous bloqués car la lecture n&#x27;est pas autorisée (ligne 15).</p>
+<p>lignes 29-36 : création et lancement des threads lecteurs. Ils seront tous bloqués car la lecture n'est pas autorisée (ligne 15).</p>
 </li>
-<li>lignes 39-43 : leur ordre de passage au guichet se fera dans l&#x27;ordre inverse de leur création.</li>
-<li>lignes 46-53 : création et lancement des threads érivains. Ils seront tous bloqués car l&#x27;écriture n&#x27;est pas autorisée (ligne 16).</li>
-<li>lignes 56-60 : leur ordre de passage au guichet se fera dans l&#x27;ordre de leur création.</li>
-<li>ligne 64 : on autorise l&#x27;écriture</li>
+<li>lignes 39-43 : leur ordre de passage au guichet se fera dans l'ordre inverse de leur création.</li>
+<li>lignes 46-53 : création et lancement des threads érivains. Ils seront tous bloqués car l'écriture n'est pas autorisée (ligne 16).</li>
+<li>lignes 56-60 : leur ordre de passage au guichet se fera dans l'ordre de leur création.</li>
+<li>ligne 64 : on autorise l'écriture</li>
 <li>ligne 65 : on avertit les écrivains que quelque chose a changé.
 La méthode Lire est la suivante :</li>
 </ul>
@@ -2795,12 +2795,12 @@ La méthode Lire est la suivante :</li>
 <a id="__codelineno-54-28" name="__codelineno-54-28"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>l&#x27;ensemble de l&#x27;accès au guichet est contrôlé par le lock des lignes 5-27. Le lecteur qui récupère le jeton le garde pendant tout son passage au guichet</li>
-<li>lignes 6-8 : un lecteur ayant acquis le jeton ligne 5 le relâche si la lecture n&#x27;est pas autorisée ou si ce n&#x27;est pas à son tour de passer.</li>
+<li>l'ensemble de l'accès au guichet est contrôlé par le lock des lignes 5-27. Le lecteur qui récupère le jeton le garde pendant tout son passage au guichet</li>
+<li>lignes 6-8 : un lecteur ayant acquis le jeton ligne 5 le relâche si la lecture n'est pas autorisée ou si ce n'est pas à son tour de passer.</li>
 <li>lignes 10-15 : passage au guichet (exploitation du tableau)</li>
-<li>lignes 17-18 : le thread change les conditions d&#x27;accès au guichet de lecture. On notera qu&#x27;il a toujours le jeton de lecture et que ces modifications ne peuvent pas encore permettre à un lecteur de passer.</li>
-<li>lignes 20-23 : le thread change les conditions d&#x27;accès au guichet d&#x27;écriture et prévient tous les écrivains en attente que quelque chose a changé.</li>
-<li>ligne 27 : le lock se termine, le jeton peutLire est relâché. Un thread de lecture pourrait alors l&#x27;acquérir ligne 5 mais il ne passerait pas la condition d&#x27;accès puisque le booléen lectureAutorisée est à faux. Par ailleurs, tous les threads qui sont en attente du jeton peutLire le restent car l&#x27;opération PulseAll(peutLire) n&#x27;a pas encore eu lieu.
+<li>lignes 17-18 : le thread change les conditions d'accès au guichet de lecture. On notera qu'il a toujours le jeton de lecture et que ces modifications ne peuvent pas encore permettre à un lecteur de passer.</li>
+<li>lignes 20-23 : le thread change les conditions d'accès au guichet d'écriture et prévient tous les écrivains en attente que quelque chose a changé.</li>
+<li>ligne 27 : le lock se termine, le jeton peutLire est relâché. Un thread de lecture pourrait alors l'acquérir ligne 5 mais il ne passerait pas la condition d'accès puisque le booléen lectureAutorisée est à faux. Par ailleurs, tous les threads qui sont en attente du jeton peutLire le restent car l'opération PulseAll(peutLire) n'a pas encore eu lieu.
 La méthode Ecrire est la suivante :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-55-1"> 1</a></span>
@@ -2860,13 +2860,13 @@ La méthode Ecrire est la suivante :</li>
 <a id="__codelineno-55-28" name="__codelineno-55-28"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>l&#x27;ensemble de l&#x27;accès au guichet d&#x27;écriture est contrôlé par le lock des lignes 5-27. L&#x27;écrivain qui récupère le jeton le garde pendant tout son passage au guichet</li>
-<li>lignes 6-8 : un écrivain ayant acquis le jeton ligne 5 le relâche si l&#x27;écriture n&#x27;est pas autorisée ou si ce n&#x27;est pas à son tour de passer.</li>
+<li>l'ensemble de l'accès au guichet d'écriture est contrôlé par le lock des lignes 5-27. L'écrivain qui récupère le jeton le garde pendant tout son passage au guichet</li>
+<li>lignes 6-8 : un écrivain ayant acquis le jeton ligne 5 le relâche si l'écriture n'est pas autorisée ou si ce n'est pas à son tour de passer.</li>
 <li>lignes 10-16 : passage au guichet (exploitation du tableau)</li>
-<li>lignes 18-19 : le thread change les conditions d&#x27;accès au guichet d&#x27;écriture. On notera qu&#x27;il a toujours le jeton d&#x27;écriture et que ces modifications ne peuvent pas encore permettre à un écrivain de passer.</li>
-<li>lignes 21-24 : le thread change les conditions d&#x27;accès au guichet de lecture et prévient tous les lecteurs en attente que quelque chose a changé.</li>
-<li>ligne 27 : le lock se termine, le jeton peutEcrire est relâché. Un thread d&#x27;écriture pourrait alors l&#x27;acquérir ligne 5 mais il ne passerait pas la condition d&#x27;accès puisque le booléen écritureAutorisée est à faux. Par ailleurs, tous les threads qui sont en attente du jeton peutEcrire le restent dans l&#x27;attente d&#x27;une nouvelle opération PulseAll(peutEcrire).
-Un exemple d&#x27;exécution est le suivant :</li>
+<li>lignes 18-19 : le thread change les conditions d'accès au guichet d'écriture. On notera qu'il a toujours le jeton d'écriture et que ces modifications ne peuvent pas encore permettre à un écrivain de passer.</li>
+<li>lignes 21-24 : le thread change les conditions d'accès au guichet de lecture et prévient tous les lecteurs en attente que quelque chose a changé.</li>
+<li>ligne 27 : le lock se termine, le jeton peutEcrire est relâché. Un thread d'écriture pourrait alors l'acquérir ligne 5 mais il ne passerait pas la condition d'accès puisque le booléen écritureAutorisée est à faux. Par ailleurs, tous les threads qui sont en attente du jeton peutEcrire le restent dans l'attente d'une nouvelle opération PulseAll(peutEcrire).
+Un exemple d'exécution est le suivant :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-56-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-56-2"> 2</a></span>
@@ -2943,39 +2943,39 @@ Un exemple d&#x27;exécution est le suivant :</li>
 <a id="__codelineno-56-37" name="__codelineno-56-37"></a>Méthode [Lire] terminée par le thread n° L0
 </code></pre></div></td></tr></table></div>
 <h2 id="107-les-pools-de-threads">10.7. Les pools de threads</h2>
-<p>Jusqu&#x27;à maintenant, pour gérer des threads :</p>
+<p>Jusqu'à maintenant, pour gérer des threads :</p>
 <ul>
 <li>nous les avons créés par Thread T=new Thread(...)</li>
 <li>
 <p>puis exécutés par T.Start()
-Nous avons vu au chapitre &quot;Bases de données&quot; qu&#x27;avec certains SGBD il était possible d&#x27;avoir des pools de connexions ouvertes :</p>
+Nous avons vu au chapitre "Bases de données" qu'avec certains SGBD il était possible d'avoir des pools de connexions ouvertes :</p>
 </li>
 <li>
 <p>n connexions sont ouvertes au démarrage du pool</p>
 </li>
-<li>lorsqu&#x27;un thread demande une connexion, on lui donne l&#x27;une des connexions ouvertes du pool</li>
-<li>lorsque le thread ferme la connexion, elle n&#x27;est pas fermée mais rendue au pool
-L&#x27;usage d&#x27;un pool de connexions est transparent au niveau du code. L&#x27;intérêt réside dans l&#x27;amélioration des performances : l&#x27;ouverture d&#x27;une connexion coûte cher. Ici 10 connexions ouvertes peuvent servir des centaines de demandes.</li>
+<li>lorsqu'un thread demande une connexion, on lui donne l'une des connexions ouvertes du pool</li>
+<li>lorsque le thread ferme la connexion, elle n'est pas fermée mais rendue au pool
+L'usage d'un pool de connexions est transparent au niveau du code. L'intérêt réside dans l'amélioration des performances : l'ouverture d'une connexion coûte cher. Ici 10 connexions ouvertes peuvent servir des centaines de demandes.</li>
 </ul>
 <p>Un système analogue existe pour les threads :</p>
 <ul>
 <li>min threads sont créés au démarrage du pool. La valeur de min est fixée avec la méthode ThreadPool.SetMinThreads(min1,min2). Un pool de threads peut être utilisé pour exécuter des tâches bloquantes ou non bloquantes dites asynchrones. Le premier paramètre min1 fixe le nombre de threads bloquants, le second min2 le nombre de threads asynchrones. Les valeurs actuelles de ces deux valeurs peuvent être obtenues par ThreadPool.GetMinThreads(out min1,out min2).</li>
 <li>
-<p>si ce nombre n&#x27;est pas suffisant, le pool va créer d&#x27;autres threads pour répondre aux demande jusqu&#x27;à la limite de max threads. La valeur de max est fixée avec la méthode ThreadPool.SetMaxThreads(max1,max2). Les deux paramètres ont la même signification que dans la méthode SetMinThreads. Les valeurs actuelles de ces deux valeurs peuvent être obtenues par ThreadPool.GetMaxThreads(out max1,out max2). Lorsque les max1 threads auront été atteints, les demandes de threads pour tâches bloquantes seront mises en attente d&#x27;un thread libre dans le pool.
+<p>si ce nombre n'est pas suffisant, le pool va créer d'autres threads pour répondre aux demande jusqu'à la limite de max threads. La valeur de max est fixée avec la méthode ThreadPool.SetMaxThreads(max1,max2). Les deux paramètres ont la même signification que dans la méthode SetMinThreads. Les valeurs actuelles de ces deux valeurs peuvent être obtenues par ThreadPool.GetMaxThreads(out max1,out max2). Lorsque les max1 threads auront été atteints, les demandes de threads pour tâches bloquantes seront mises en attente d'un thread libre dans le pool.
 Un pool de threads offre divers avantages :</p>
 </li>
 <li>
 <p>comme pour le pool de connexions, on économise sur le temps de création des threads : 10 threads peuvent servir des centaines de demandes.</p>
 </li>
 <li>
-<p>on sécurise l&#x27;application : en fixant un nombre maximum de threads, on évite l&#x27;asphyxie de l&#x27;application par des demandes trop nombreuses. Celles-ci seront mises en file d&#x27;attente.
-Pour donner une tâche à un thread du pool, on utilise l&#x27;une des deux méthodes : </p>
+<p>on sécurise l'application : en fixant un nombre maximum de threads, on évite l'asphyxie de l'application par des demandes trop nombreuses. Celles-ci seront mises en file d'attente.
+Pour donner une tâche à un thread du pool, on utilise l'une des deux méthodes : </p>
 </li>
 <li>
 <p>ThreadPool.QueueWorkItem(WaitCallBack)</p>
 </li>
 <li>ThreadPool.QueueWorkItem(WaitCallBack,object)
-où WaitCallBack est toute méthode ayant la signature void WaitCallBack(object). La méthode 1 demande à un thread d&#x27;exécuter la méthode WaitCallBack sans lui passer de paramètre. La méthode 2 fait la même chose mais en passant un paramètre de type object à la méthode  WaitCallBack.</li>
+où WaitCallBack est toute méthode ayant la signature void WaitCallBack(object). La méthode 1 demande à un thread d'exécuter la méthode WaitCallBack sans lui passer de paramètre. La méthode 2 fait la même chose mais en passant un paramètre de type object à la méthode  WaitCallBack.</li>
 </ul>
 <p>Voici un programme illustrant ces concepts :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-57-1"> 1</a></span>
@@ -3109,14 +3109,14 @@ où WaitCallBack est toute méthode ayant la signature void WaitCallBack(object)
 <li>ligne 18 : on change le nombre minimal de threads pour tâches bloquantes : 2</li>
 <li>lignes 19-21 : on affiches les nouveaux minima</li>
 <li>lignes 22-28 : on fait de même pour fixer le nombre maximal de threads pour tâches bloquantes : 5</li>
-<li>lignes 30-33 : on fait exécuter 7 tâches dans un pool de 5 threads. 5 tâches devraient obtenir 1 thread, les 2 premières rapidement puisque 2 threads sont toujours présents, les 3 autres avec un délai d&#x27;attente de 0.5 seconde. 2 tâches devraient attendre qu&#x27;un thread se libère.</li>
+<li>lignes 30-33 : on fait exécuter 7 tâches dans un pool de 5 threads. 5 tâches devraient obtenir 1 thread, les 2 premières rapidement puisque 2 threads sont toujours présents, les 3 autres avec un délai d'attente de 0.5 seconde. 2 tâches devraient attendre qu'un thread se libère.</li>
 <li>ligne 32 : les tâches exécutent la méthode Sleep des lignes 40-54 en lui passant un paramètre de type Data2 défini lignes 56-62.</li>
 <li>ligne 40 : la méthode Sleep exécutée par les tâches</li>
 <li>ligne 42 : on récupère le paramètre passé à la méthode Sleep.</li>
-<li>ligne 43 : la tâche s&#x27;identifie sur la console</li>
+<li>ligne 43 : la tâche s'identifie sur la console</li>
 <li>lignes 45-47 : on affiche le nombre de threads actuellement disponibles. On veut voir comment il évolue.</li>
-<li>ligne 49 : la tâche s&#x27;arrête quelques secondes (tâche bloquante).</li>
-<li>ligne 52 : lorsqu&#x27;elle se réveille, on fait afficher quelques informations sur son compte.
+<li>ligne 49 : la tâche s'arrête quelques secondes (tâche bloquante).</li>
+<li>ligne 52 : lorsqu'elle se réveille, on fait afficher quelques informations sur son compte.
 Les résultats obtenus sont les suivants.</li>
 </ul>
 <p>Pour les nombres min et max de threads dans le pool :</p>
@@ -3132,7 +3132,7 @@ Les résultats obtenus sont les suivants.</li>
 <a id="__codelineno-58-5" name="__codelineno-58-5"></a>Nombre maximum de tâches asynchrones dans le pool : 1000
 <a id="__codelineno-58-6" name="__codelineno-58-6"></a>Nombre maximum de tâches bloquantes dans le pool après changement : 5
 </code></pre></div></td></tr></table></div>
-<p>Pour l&#x27;exécution des 7 threads :</p>
+<p>Pour l'exécution des 7 threads :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-59-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-59-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-59-3"> 3</a></span>
@@ -3177,28 +3177,28 @@ Les résultats obtenus sont les suivants.</li>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 1-6 : les 3 premières tâches sont exécutées tour à tour. Elles trouvent imédiatement 1 thread disponible (MinThreads=3) puis se mette en sommeil.</li>
-<li>lignes 7-9 : pour les tâches 3 et 4, c&#x27;est un peu plus long. Pour chacun d&#x27;eux il n&#x27;y avait pas de thread libre. Il a fallu en créer un. Ce mécanisme est possible jusqu&#x27;à 5 (MaxThreads=5).</li>
-<li>ligne 10 : il n&#x27;y a plus de threads disponibles : les tâches 5 et 6 vont devoir attendre.</li>
+<li>lignes 7-9 : pour les tâches 3 et 4, c'est un peu plus long. Pour chacun d'eux il n'y avait pas de thread libre. Il a fallu en créer un. Ce mécanisme est possible jusqu'à 5 (MaxThreads=5).</li>
+<li>ligne 10 : il n'y a plus de threads disponibles : les tâches 5 et 6 vont devoir attendre.</li>
 <li>lignes 11-12 : la tâche 0 se termine. La tâche 5 prend son thread.</li>
 <li>lignes 13-14 : la tâche 1 se termine. La tâche 6 prend son thread.</li>
 <li>lignes 17-21 : les tâches se terminent les unes après les autres.</li>
 </ul>
 <h2 id="108-la-classe-backgroundworker">10.8. La classe BackgroundWorker</h2>
 <h3 id="1081-exemple-1">10.8.1. Exemple 1</h3>
-<p>La classe BackgroundWorker appartient à l&#x27;espace de noms [System.ComponentModel]. Elle s&#x27;utilise comme un thread mais présente des particularités qui peuvent la rendre, dans certains cas, plus intéressante que la classe [Thread] :</p>
+<p>La classe BackgroundWorker appartient à l'espace de noms [System.ComponentModel]. Elle s'utilise comme un thread mais présente des particularités qui peuvent la rendre, dans certains cas, plus intéressante que la classe [Thread] :</p>
 <ul>
 <li>elle émet les événements suivants :</li>
-<li>DoWork : un thread a demandé l&#x27;exécution du BackgroundWorker</li>
-<li>ProgressChanged : l&#x27;objet BackgroundWorker a exécuté la méthode ReportProgress. Celle-ci sert à donner un pourcentage d&#x27;exécution.</li>
+<li>DoWork : un thread a demandé l'exécution du BackgroundWorker</li>
+<li>ProgressChanged : l'objet BackgroundWorker a exécuté la méthode ReportProgress. Celle-ci sert à donner un pourcentage d'exécution.</li>
 <li>
-<p>RunWorkerCompleted : l&#x27;objet BackgroundWorker a terminé son travail. Il a pu le terminer normalement ou sur annulation ou exception.
-Ces événements rendent le BackgroundWorker utile dans les interfaces graphiques : une tâche longue sera confiée à un BackgroundWorker qui pourra rendre compte de son avancement avec l&#x27;événement ProgressChanged et sa fin  avec l&#x27;événement RunWorkerCompleted. Le travail à effectuer par le BackgroundWorker sera gfait par une méthode qui aura été associée à l&#x27;événement DoWork.</p>
+<p>RunWorkerCompleted : l'objet BackgroundWorker a terminé son travail. Il a pu le terminer normalement ou sur annulation ou exception.
+Ces événements rendent le BackgroundWorker utile dans les interfaces graphiques : une tâche longue sera confiée à un BackgroundWorker qui pourra rendre compte de son avancement avec l'événement ProgressChanged et sa fin  avec l'événement RunWorkerCompleted. Le travail à effectuer par le BackgroundWorker sera gfait par une méthode qui aura été associée à l'événement DoWork.</p>
 </li>
 <li>
-<p>il est possible de demander son annulation. Dans une interface graphique, une tâche longue pourra ainsi être annulée par l&#x27;utilisateur.</p>
+<p>il est possible de demander son annulation. Dans une interface graphique, une tâche longue pourra ainsi être annulée par l'utilisateur.</p>
 </li>
-<li>les objets BackgroundWorker appartiennent à un pool et sont recyclés selon les besoins. Une application qui a besoin d&#x27;un objet BackgroundWorker l&#x27;obtiendra auprès du pool qui lui donnera un thread déjà existant mais inutilisé. Le fait de recycler ainsi les threads plutôt que de créer à chaque fois un thread neuf, améliore les performances.
-Nous utilisons cet outil sur l&#x27;application précédente dans le cas où l&#x27;accès au guichet est non contrôlé :</li>
+<li>les objets BackgroundWorker appartiennent à un pool et sont recyclés selon les besoins. Une application qui a besoin d'un objet BackgroundWorker l'obtiendra auprès du pool qui lui donnera un thread déjà existant mais inutilisé. Le fait de recycler ainsi les threads plutôt que de créer à chaque fois un thread neuf, améliore les performances.
+Nous utilisons cet outil sur l'application précédente dans le cas où l'accès au guichet est non contrôlé :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-60-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-60-2"> 2</a></span>
@@ -3371,8 +3371,8 @@ Nous utilisons cet outil sur l&#x27;application précédente dans le cas où l&#
 <p>Nous ne détaillons que les changements :</p>
 <ul>
 <li>la classe Thread est remplacée par la classe MyBackgroundWorker des lignes 79-82. La classe BackgroundWorker a été dérivée afin de donner un numéro au thread. On aurait pu procéder différemment en passant un objet à la méthode RunWorkerAsync des lignes 43 et 54,  objet contenant le n° du thread.</li>
-<li>ligne 58 : la méthode Main se termine après que tous les threads lecteurs ont fait leur travail. Pour cela, ligne 12, le compteur nbLecteursTerminés compte le nombre de threads lecteurs ayant terminé leur travail. Ce compteur est incrémenté par la méthode EndLecteur des lignes 63-65 qui est exécutée à chaque fois qu&#x27;un thread lecteur se termine. C&#x27;est cette procédure qui contrôle l&#x27;événement AutoResetEvent finLecteurs de la ligne 18 sur lequel se synchronise, ligne 59, la méthode Main.</li>
-<li>ligne 16 : parce que plusieurs threads lecteurs peuvent vouloir incrémenter en même temps le compteur nbLecteursTerminés, un accès exclusif à celui-ci est assuré par l&#x27;objet de synchronisation appli. Ce cas est improbable mais théoriquement possible.</li>
+<li>ligne 58 : la méthode Main se termine après que tous les threads lecteurs ont fait leur travail. Pour cela, ligne 12, le compteur nbLecteursTerminés compte le nombre de threads lecteurs ayant terminé leur travail. Ce compteur est incrémenté par la méthode EndLecteur des lignes 63-65 qui est exécutée à chaque fois qu'un thread lecteur se termine. C'est cette procédure qui contrôle l'événement AutoResetEvent finLecteurs de la ligne 18 sur lequel se synchronise, ligne 59, la méthode Main.</li>
+<li>ligne 16 : parce que plusieurs threads lecteurs peuvent vouloir incrémenter en même temps le compteur nbLecteursTerminés, un accès exclusif à celui-ci est assuré par l'objet de synchronisation appli. Ce cas est improbable mais théoriquement possible.</li>
 <li>lignes 35-44 : création des threads lecteurs</li>
 <li>ligne 38 : création du thread de type MyBackgroundWorker</li>
 <li>ligne 39 : on lui donne un N°</li>
@@ -3402,20 +3402,20 @@ Les méthodes Lire et Ecrire restent inchangées. La méthode EndLecteur est ex�
 <a id="__codelineno-61-7" name="__codelineno-61-7"></a><span class="w">            </span><span class="p">}</span>
 <a id="__codelineno-61-8" name="__codelineno-61-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Le rôle de la méthode EndLecteur est d&#x27;avertir la méthode Main que tous les lecteurs ont fait leur travail.</p>
+<p>Le rôle de la méthode EndLecteur est d'avertir la méthode Main que tous les lecteurs ont fait leur travail.</p>
 <ul>
 <li>ligne 4 : le compteur  nbLecteursTerminés est incrémenté. </li>
-<li>lignes 5-6 : si  tous les lecteurs ont fait leur travail, alors l&#x27;événement finLecteurs est positionné à vrai afin de prévenir la méthode Main qui attend cet événement.</li>
+<li>lignes 5-6 : si  tous les lecteurs ont fait leur travail, alors l'événement finLecteurs est positionné à vrai afin de prévenir la méthode Main qui attend cet événement.</li>
 <li>parce que la procédure EndLecteur est exécutée par plusieurs threads, la section critique précédente est protégée par la clause lock de la ligne 3.
-L&#x27;exécution donne des résultats analogues à ceux de la version utilisant des threads.</li>
+L'exécution donne des résultats analogues à ceux de la version utilisant des threads.</li>
 </ul>
 <h3 id="1082-exemple-2">10.8.2. Exemple 2</h3>
-<p>Le code suivant illustre d&#x27;autres points de la classe BackgroundWorker :</p>
+<p>Le code suivant illustre d'autres points de la classe BackgroundWorker :</p>
 <ul>
-<li>la possibilité d&#x27;annuler la tâche</li>
-<li>la remontée d&#x27;une exception lancée dans la tâche</li>
+<li>la possibilité d'annuler la tâche</li>
+<li>la remontée d'une exception lancée dans la tâche</li>
 <li>
-<p>le passage d&#x27;un paramètre d&#x27;E/S à la tâche
+<p>le passage d'un paramètre d'E/S à la tâche
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-62-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-62-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-62-3"> 3</a></span>
@@ -3533,9 +3533,9 @@ L&#x27;exécution donne des résultats analogues à ceux de la version utilisant
 <li>ligne 24 : le thread pourra être annulé</li>
 <li>ligne 26 : le thread est lancé avec un paramètre de type [Data], défini lignes 49-52. Cet objet a les champs suivants :</li>
 <li>Numéro (entrée) : n° du thread</li>
-<li>Début (entrée) : heure de début d&#x27;exécution du thread</li>
-<li>Durée (entrée) : durée d&#x27;exécution du Sleep</li>
-<li>Fin (sortie) : fin d&#x27;exécution du thread</li>
+<li>Début (entrée) : heure de début d'exécution du thread</li>
+<li>Durée (entrée) : durée d'exécution du Sleep</li>
+<li>Fin (sortie) : fin d'exécution du thread</li>
 <li>ligne 29 : le thread n° 4 est annulé
 Tous les threads exécutent la méthode Sleep suivante :</li>
 </ul>
@@ -3576,13 +3576,13 @@ Tous les threads exécutent la méthode Sleep suivante :</li>
 <a id="__codelineno-63-18" name="__codelineno-63-18"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 1 : la méthode Sleep a la signature standard des gestionnaires d&#x27;événements. Elle reçoit deux paramètres :</li>
-<li>sender : l&#x27;émetteur de l&#x27;événement, ici le BackgroundWorker qui exécute la méthode</li>
-<li>infos : de type DoWorkEventArgs qui donne des informations sur l&#x27;événement DoWork. Ce paramètre sert aussi bien à transmettre des informations au thread qu&#x27;à récupérer ses résultats. </li>
+<li>ligne 1 : la méthode Sleep a la signature standard des gestionnaires d'événements. Elle reçoit deux paramètres :</li>
+<li>sender : l'émetteur de l'événement, ici le BackgroundWorker qui exécute la méthode</li>
+<li>infos : de type DoWorkEventArgs qui donne des informations sur l'événement DoWork. Ce paramètre sert aussi bien à transmettre des informations au thread qu'à récupérer ses résultats. </li>
 <li>ligne 3 : le paramètre passé à la méthode RunWorkerAsync de la tâche est retrouvé dans la propriété infos.Argument.</li>
 <li>lignes 5-7 : on lance une exception pour la tâche n° 3</li>
-<li>lignes 9-12 : le thread &quot;dort&quot; Durée secondes par tranches d&#x27;une seconde afin de permettre le test d&#x27;annulation de la ligne 9. Cela simule un travail de longue durée au cours duquel le thread vérifierait régulièrement s&#x27;il existe une demande d&#x27;annulation. Pour indiquer qu&#x27;il a été annulé, le thread doit mettre la propriété infos.Cancel à vrai (ligne 17).</li>
-<li>ligne 16 : le thread peut rendre un résultat au thread qui l&#x27;a lancé. Il place ce résultat dans infos.Result.
+<li>lignes 9-12 : le thread "dort" Durée secondes par tranches d'une seconde afin de permettre le test d'annulation de la ligne 9. Cela simule un travail de longue durée au cours duquel le thread vérifierait régulièrement s'il existe une demande d'annulation. Pour indiquer qu'il a été annulé, le thread doit mettre la propriété infos.Cancel à vrai (ligne 17).</li>
+<li>ligne 16 : le thread peut rendre un résultat au thread qui l'a lancé. Il place ce résultat dans infos.Result.
 Une fois terminés, les threads exécutent la méthode End suivante :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-64-1"> 1</a></span>
@@ -3614,13 +3614,13 @@ Une fois terminés, les threads exécutent la méthode End suivante :</li>
 <a id="__codelineno-64-14" name="__codelineno-64-14"></a><span class="w">        </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 1 : la méthode End a la signature standard des gestionnaires d&#x27;événements. Elle reçoit deux paramètres :</li>
-<li>sender : l&#x27;émetteur de l&#x27;événement, ici le BackgroundWorker qui exécute la méthode</li>
-<li>infos : de type RunWorkerCompletedEventArgs qui donne des informations sur l&#x27;événement RunWorkerCompleted. </li>
-<li>ligne 4 : le champ infos.Error de type Exception est renseigné seulement si une exception s&#x27;est produite.</li>
+<li>ligne 1 : la méthode End a la signature standard des gestionnaires d'événements. Elle reçoit deux paramètres :</li>
+<li>sender : l'émetteur de l'événement, ici le BackgroundWorker qui exécute la méthode</li>
+<li>infos : de type RunWorkerCompletedEventArgs qui donne des informations sur l'événement RunWorkerCompleted. </li>
+<li>ligne 4 : le champ infos.Error de type Exception est renseigné seulement si une exception s'est produite.</li>
 <li>ligne 7 : le champ infos.Cancelled de type booléen à la valeur true si le thread a été annulé.</li>
-<li>ligne 8 : s&#x27;il y a pas eu exception ou annulation, alors infos.Result est le résultat du thread exécuté. Utiliser ce résultat s&#x27;il y a eu annulation du thread ou si le thread a lancé une exception, provoque une exception. Ainsi lignes 5 et 13, on n&#x27;est pas capables d&#x27;afficher le n° du thread annulé ou qui a lancé une exception car ce n° est dans infos.Result. Ce problème peut être contourné en dérivant la classe BackgroundWorker pour y mettre les informations à échanger entre le thread appelant et le thread appelé comme il a été fait dans l&#x27;exemple précédent. On utilise alors l&#x27;argument sender qui représente le BackgroundWorker au lieu de l&#x27;argument infos.
-Les résultats d&#x27;exécution sont les suivants :</li>
+<li>ligne 8 : s'il y a pas eu exception ou annulation, alors infos.Result est le résultat du thread exécuté. Utiliser ce résultat s'il y a eu annulation du thread ou si le thread a lancé une exception, provoque une exception. Ainsi lignes 5 et 13, on n'est pas capables d'afficher le n° du thread annulé ou qui a lancé une exception car ce n° est dans infos.Result. Ce problème peut être contourné en dérivant la classe BackgroundWorker pour y mettre les informations à échanger entre le thread appelant et le thread appelé comme il a été fait dans l'exemple précédent. On utilise alors l'argument sender qui représente le BackgroundWorker au lieu de l'argument infos.
+Les résultats d'exécution sont les suivants :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-65-1">1</a></span>
 <span class="normal"><a href="#__codelineno-65-2">2</a></span>
@@ -3639,17 +3639,17 @@ Les résultats d&#x27;exécution sont les suivants :</li>
 <p>Considérons une application à trois couches :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006610000010A90DA1457.png" style="display:inline-block; margin:4px;width:12.959cm;height:2.11cm;" /></td></tr></table>
 
-<p>Supposons que l&#x27;application soit multi-utilisateurs, une application web par exemple. Chaque utilisateur est servi par un thread qui lui est dédié. La vie du thread est la suivante :</p>
+<p>Supposons que l'application soit multi-utilisateurs, une application web par exemple. Chaque utilisateur est servi par un thread qui lui est dédié. La vie du thread est la suivante :</p>
 <ul>
-<li>le thread est créé ou demandé à un pool de threads pour satisfaire une demande d&#x27;un utilisateur</li>
+<li>le thread est créé ou demandé à un pool de threads pour satisfaire une demande d'un utilisateur</li>
 <li>si cette demande nécessite des données, le thread va exécuter une méthode de la couche [ui] qui va appeler une méthode de la couche [metier] qui va à son tour appeler une méthode de la couche [dao].</li>
-<li>le thread rend la réponse à l&#x27;utilisateur. Il disparaît ensuite ou il est recyclé dans un pool de threads.
-Dans l&#x27;opération 2, il peut être intéressant que le thread ait des données qui lui soient propres, c.a.d. non partagées avec les autres threads. Ces données pourraient par exemple appartenir à l&#x27;utilisateur particulier que le thread sert. Ces données pourraient alors être utilisées dans les différentes couches [ui, metier, dao].</li>
+<li>le thread rend la réponse à l'utilisateur. Il disparaît ensuite ou il est recyclé dans un pool de threads.
+Dans l'opération 2, il peut être intéressant que le thread ait des données qui lui soient propres, c.a.d. non partagées avec les autres threads. Ces données pourraient par exemple appartenir à l'utilisateur particulier que le thread sert. Ces données pourraient alors être utilisées dans les différentes couches [ui, metier, dao].</li>
 </ul>
 <p>La classe Thread permet ce scénario grâce à une sorte de dictionnaire privé où les clés seraient de type LocalDataStoreSlot :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001680000002E7BDE5E1E.png" style="display:inline-block; margin:4px;width:6.669cm;height:0.85cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">crée une entrée dans le dictionnaire privé du thread pour la clé name.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F00000003FDDE50098.png" style="display:inline-block; margin:4px;width:4.45cm;height:1.169cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">associe la valeur data à la clé name du  dictionnaire privé du thread</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E700000031F1B1D2A6.png" style="display:inline-block; margin:4px;width:4.279cm;height:0.91cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">récupère la valeur associée à la clé name du dictionnaire privé du thread</p></td></tr></table>
 
-<p>Un modèle d&#x27;utilisation pourrait être le suivant :</p>
+<p>Un modèle d'utilisation pourrait être le suivant :</p>
 <ul>
 <li>
 <p>pour créer un couple (clé,valeur) associé au thread courant :
@@ -3663,10 +3663,10 @@ Dans l&#x27;opération 2, il peut être intéressant que le thread ait des donn�
 </li>
 </ul>
 <h3 id="1092-application-du-principe">10.9.2. Application du principe</h3>
-<p>Considérons l&#x27;application à trois couches suivantes :</p>
+<p>Considérons l'application à trois couches suivantes :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000668000001133EA847C6.png" style="display:inline-block; margin:4px;width:13.019cm;height:2.18cm;" /></td></tr></table>
 
-<p>Supposons que la couche [dao] gère une base d&#x27;articles et que son interface soit initialement la suivante :</p>
+<p>Supposons que la couche [dao] gère une base d'articles et que son interface soit initialement la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-68-1">1</a></span>
 <span class="normal"><a href="#__codelineno-68-2">2</a></span>
 <span class="normal"><a href="#__codelineno-68-3">3</a></span>
@@ -3689,7 +3689,7 @@ Dans l&#x27;opération 2, il peut être intéressant que le thread ait des donn�
 <li>ligne 5 : pour insérer un article dans la base</li>
 <li>ligne 6 : pour récupérer tous les articles de la base</li>
 <li>ligne 7 : pour supprimer tous les articles de la base
-Ultérieurement, apparaît le besoin d&#x27;une méthode pour insérer un tableau d&#x27;articles à l&#x27;aide d&#x27;une transaction parce qu&#x27;on souhaite fonctionner en tout ou rien : soit tous les articles sont insérés soit aucun. On peut alors modifier l&#x27;interface pour intégrer ce nouveau besoin :</li>
+Ultérieurement, apparaît le besoin d'une méthode pour insérer un tableau d'articles à l'aide d'une transaction parce qu'on souhaite fonctionner en tout ou rien : soit tous les articles sont insérés soit aucun. On peut alors modifier l'interface pour intégrer ce nouveau besoin :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-69-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-69-2"> 2</a></span>
@@ -3713,22 +3713,22 @@ Ultérieurement, apparaît le besoin d&#x27;une méthode pour insérer un tablea
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>
-<p>ligne 6 : pour ajouter un tableau d&#x27;articles dans la base
-Ultérieurement, pour une autre application, apparaît le besoin de supprimer une liste d&#x27;articles enregistrée dans une liste, toujours dans une transaction. On voit que pour répondre à des besoins métier différents, la couche [dao] va être amenée à grossir. On peut prendre une autre voie :</p>
+<p>ligne 6 : pour ajouter un tableau d'articles dans la base
+Ultérieurement, pour une autre application, apparaît le besoin de supprimer une liste d'articles enregistrée dans une liste, toujours dans une transaction. On voit que pour répondre à des besoins métier différents, la couche [dao] va être amenée à grossir. On peut prendre une autre voie :</p>
 </li>
 <li>
 <p>ne mettre dans la couche [dao] que les opérations basiques InsertArticle, DeleteArticle, UpdateArticle, SelectArticle, SelectArticles</p>
 </li>
 <li>
 <p>déporter dans la couche [métier] les opérations de mise à jour simultanée de plusieurs articles. Celles-ci utiliseraient les opérations élémentaires de la couche [dao].
-L&#x27;avantage de cette solution est que la même couche [dao] pourrait être utilisée sans changement avec différentes couches [metier]. Elle amène une difficulté dans la gestion de la transaction qui regroupe des mises à jour à faire de façon atomique sur la base :</p>
+L'avantage de cette solution est que la même couche [dao] pourrait être utilisée sans changement avec différentes couches [metier]. Elle amène une difficulté dans la gestion de la transaction qui regroupe des mises à jour à faire de façon atomique sur la base :</p>
 </li>
 <li>
-<p>la transaction doit être initiée par la couche [metier] avant qu&#x27;elle n&#x27;appelle les méthodes de la couche [dao]</p>
+<p>la transaction doit être initiée par la couche [metier] avant qu'elle n'appelle les méthodes de la couche [dao]</p>
 </li>
-<li>les méthodes de la couche [dao] doivent connaître l&#x27;existence de la transaction afin d&#x27;y prendre part si elle existe</li>
+<li>les méthodes de la couche [dao] doivent connaître l'existence de la transaction afin d'y prendre part si elle existe</li>
 <li>la transaction doit êter terminée par la couche [métier].
-Pour que les méthodes de la couche [dao] connaissent l&#x27;existence d&#x27;une éventuelle transaction en cours, on pourrait ajouter la transaction comme paramètre de chaque méthode de la couche [dao]. Ce paramètre va alors apparaître dans la signature des méthodes de l&#x27;interface, ce qui va lier celle-ci à une source de données particulière : la base de données. Les données locales du thread nous apportent une solution plus élégante : la couche [métier] mettra la transaction dans les données locales du thread et c&#x27;est là que la couche [dao] ira la chercher. La signature des méthodes de la couche [dao] n&#x27;a alors pas besoin d&#x27;être changée.</li>
+Pour que les méthodes de la couche [dao] connaissent l'existence d'une éventuelle transaction en cours, on pourrait ajouter la transaction comme paramètre de chaque méthode de la couche [dao]. Ce paramètre va alors apparaître dans la signature des méthodes de l'interface, ce qui va lier celle-ci à une source de données particulière : la base de données. Les données locales du thread nous apportent une solution plus élégante : la couche [métier] mettra la transaction dans les données locales du thread et c'est là que la couche [dao] ira la chercher. La signature des méthodes de la couche [dao] n'a alors pas besoin d'être changée.</li>
 </ul>
 <p>Nous mettons en oeuvre cette solution avec le projet Visual studio suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000669000001080A72351A.png" style="display:inline-block; margin:4px;width:13.019cm;height:2.101cm;" /></td></tr></table>
@@ -3737,8 +3737,8 @@ Pour que les méthodes de la couche [dao] connaissent l&#x27;existence d&#x27;un
 
 <ul>
 <li>en [1] : la solution dans son ensemble</li>
-<li>en [2] : les références utilisées. La base [4] étant une base SQL Server Compact, il est nécessaire d&#x27;avoir la référence [System.Data.SqlServerCe].</li>
-<li>en [3] : les différentes couches de l&#x27;application.
+<li>en [2] : les références utilisées. La base [4] étant une base SQL Server Compact, il est nécessaire d'avoir la référence [System.Data.SqlServerCe].</li>
+<li>en [3] : les différentes couches de l'application.
 La base [4] est  la base SQL Server Compact déjà utilisée dans le chapitre précédent notamment au paragraphe 9.3.1, page 219.</li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001FB000000AB44426734.png" style="display:inline-block; margin:4px;width:9.389cm;height:3.17cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -3800,7 +3800,7 @@ La base [4] est  la base SQL Server Compact déjà utilisée dans le chapitre pr
 <a id="__codelineno-70-27" name="__codelineno-70-27"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p><u><strong>Interface de la couche [dao]</strong></u></p>
-<p>L&#x27;interface <strong>IDao</strong> de la couche [dao] sera la suivante :</p>
+<p>L'interface <strong>IDao</strong> de la couche [dao] sera la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-71-1">1</a></span>
 <span class="normal"><a href="#__codelineno-71-2">2</a></span>
 <span class="normal"><a href="#__codelineno-71-3">3</a></span>
@@ -3821,11 +3821,11 @@ La base [4] est  la base SQL Server Compact déjà utilisée dans le chapitre pr
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 5 : pour insérer un article dans la table [articles]</li>
-<li>ligne 6 : pour mettre toutes les lignes de la table [articles] dans une liste d&#x27;objets Article</li>
+<li>ligne 6 : pour mettre toutes les lignes de la table [articles] dans une liste d'objets Article</li>
 <li>ligne 7 : pour supprimer toutes les lignes de la table [articles]
 <u><strong>Interface de la couche [metier]</strong></u></li>
 </ul>
-<p>L&#x27;interface <strong>IMetier</strong> de la couche [metier] sera la suivante :</p>
+<p>L'interface <strong>IMetier</strong> de la couche [metier] sera la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-72-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-72-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-72-3"> 3</a></span>
@@ -3847,13 +3847,13 @@ La base [4] est  la base SQL Server Compact déjà utilisée dans le chapitre pr
 <a id="__codelineno-72-10" name="__codelineno-72-10"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 5 : pour insérer, à l&#x27;intérieur d&#x27;une transaction, un ensemble d&#x27;articles</li>
+<li>ligne 5 : pour insérer, à l'intérieur d'une transaction, un ensemble d'articles</li>
 <li>ligne 6 : idem mais sans transaction</li>
 <li>ligne 7 : pour obtenir la liste de tous les articles</li>
 <li>ligne 8 : pour supprimer tous les articles
 <u><strong>Implémentation de la couche [metier]</strong></u></li>
 </ul>
-<p>L&#x27;implémentation <strong>Metier</strong> de l&#x27;interface <strong>IMetier</strong> sera la suivante :</p>
+<p>L'implémentation <strong>Metier</strong> de l'interface <strong>IMetier</strong> sera la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-73-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-73-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-73-3"> 3</a></span>
@@ -3980,15 +3980,15 @@ Nous ne commentons que la méthode InsertArticlesInTransaction qui seule présen
 </li>
 <li>ligne 18 : elle est ouverte</li>
 <li>ligne 23 : une transaction est créée</li>
-<li>ligne 25 : elle est enregistrée dans les données locales du thread, associée à la clé &quot;transaction&quot;</li>
-<li>lignes 27-29 : la méthode d&#x27;insertion unitaire de la couche [dao] est appelée pour chaque article à insérer</li>
-<li>lignes 21 et 32 : l&#x27;ensemble de l&#x27;insertion du tableau est contrôlée par un try / catch</li>
-<li>ligne 31 : si on arrive là, c&#x27;est qu&#x27;il n&#x27;y a pas eu d&#x27;exception. On valide alors la transaction.</li>
+<li>ligne 25 : elle est enregistrée dans les données locales du thread, associée à la clé "transaction"</li>
+<li>lignes 27-29 : la méthode d'insertion unitaire de la couche [dao] est appelée pour chaque article à insérer</li>
+<li>lignes 21 et 32 : l'ensemble de l'insertion du tableau est contrôlée par un try / catch</li>
+<li>ligne 31 : si on arrive là, c'est qu'il n'y a pas eu d'exception. On valide alors la transaction.</li>
 <li>lignes 34-35 : il y a eu exception, on défait la transaction</li>
 <li>ligne 37 : on sort de la clause using. La connexion ouverte en ligne 18 est automatiquement fermée.
 <u><strong>Implémentation de la couche [dao]</strong></u></li>
 </ul>
-<p>L&#x27;implémentation <strong>Dao</strong> de l&#x27;interface <strong>IDao</strong> sera la suivante :</p>
+<p>L'implémentation <strong>Dao</strong> de l'interface <strong>IDao</strong> sera la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-74-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-74-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-74-3"> 3</a></span>
@@ -4122,9 +4122,9 @@ Nous ne commentons que la méthode InsertArticlesInTransaction qui seule présen
 <p>La classe a les propriétés suivantes :</p>
 <ul>
 <li>ligne 9 : la chaîne de connexion qui permet de se connecter à la base de données des articles</li>
-<li>ligne 11 : l&#x27;ordre SQL pour insérer un article</li>
-<li>ligne 12 : l&#x27;ordre SQL pour suprrimer tous les articles</li>
-<li>ligne 13 : l&#x27;ordre SQL pour obtenir tous les articles
+<li>ligne 11 : l'ordre SQL pour insérer un article</li>
+<li>ligne 12 : l'ordre SQL pour suprrimer tous les articles</li>
+<li>ligne 13 : l'ordre SQL pour obtenir tous les articles
 Ces propriétés seront initialisées à partir du fichier de configuration [App.config] suivant :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-75-1"> 1</a></span>
@@ -4151,18 +4151,18 @@ Ces propriétés seront initialisées à partir du fichier de configuration [App
 </code></pre></div></td></tr></table></div>
 <p>Nous commentons la méthode InsertArticle :</p>
 <ul>
-<li>ligne 20 : on récupère l&#x27;éventuelle transaction qu&#x27;a pu placer la couche [metier] dans le thread</li>
+<li>ligne 20 : on récupère l'éventuelle transaction qu'a pu placer la couche [metier] dans le thread</li>
 <li>lignes 23-25 : si la transaction est présente, on récupère la connexion à laquelle elle a été liée.</li>
 <li>lignes 26-30 : sinon, une connexion nouvelle est créée et ouverte.</li>
-<li>lignes 33-44 : on prépare la commande d&#x27;insertion. Celle-ci est paramétrée (cf ligne g de App.config).</li>
-<li>ligne 33 : l&#x27;objet Command est créé.</li>
-<li>ligne 34 : il est associé à la transaction courante. Si celle-ci n&#x27;existe pas (transaction=null), cela revient à exécuter l&#x27;ordre SQL sans transaction explicite. On rappelle qu&#x27;alors il y a quand même une transaction implicite. Avec SQL Server CE, cette transaction implicite est par défaut en mode autocommit : l&#x27;ordre SQL est committé après son exécution.</li>
-<li>ligne 35 : l&#x27;objet Command est associé à la connexion courante</li>
-<li>ligne 36 : le texte SQl à exécuter est fixé. C&#x27;est la requête paramétrée de la ligne g de App.config.</li>
+<li>lignes 33-44 : on prépare la commande d'insertion. Celle-ci est paramétrée (cf ligne g de App.config).</li>
+<li>ligne 33 : l'objet Command est créé.</li>
+<li>ligne 34 : il est associé à la transaction courante. Si celle-ci n'existe pas (transaction=null), cela revient à exécuter l'ordre SQL sans transaction explicite. On rappelle qu'alors il y a quand même une transaction implicite. Avec SQL Server CE, cette transaction implicite est par défaut en mode autocommit : l'ordre SQL est committé après son exécution.</li>
+<li>ligne 35 : l'objet Command est associé à la connexion courante</li>
+<li>ligne 36 : le texte SQl à exécuter est fixé. C'est la requête paramétrée de la ligne g de App.config.</li>
 <li>lignes 37-44 : les 4 paramètres de la requête sont initialisés</li>
 <li>ligne 46 : la requête est exécutée.</li>
-<li>lignes 49-51 : il faut se souvenir que s&#x27;il n&#x27;y avait pas de transaction, une nouvelle connexion a été ouverte avec la base, lignes 26-30. Dans ce cas, elle doit être fermée. S&#x27;il y avait une transaction, la connexion ne doit pas être fermée car c&#x27;est la couche [metier] qui la gère.
-Les deux autres méthodes reprennent ce qui a été vu dans le chapitre &quot;Bases de données&quot; :</li>
+<li>lignes 49-51 : il faut se souvenir que s'il n'y avait pas de transaction, une nouvelle connexion a été ouverte avec la base, lignes 26-30. Dans ce cas, elle doit être fermée. S'il y avait une transaction, la connexion ne doit pas être fermée car c'est la couche [metier] qui la gère.
+Les deux autres méthodes reprennent ce qui a été vu dans le chapitre "Bases de données" :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-76-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-76-2"> 2</a></span>
@@ -4226,8 +4226,8 @@ Les deux autres méthodes reprennent ce qui a été vu dans le chapitre &quot;Ba
 <a id="__codelineno-76-30" name="__codelineno-76-30"></a><span class="w">            </span><span class="p">}</span>
 <a id="__codelineno-76-31" name="__codelineno-76-31"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p><u><strong>L&#x27;application [console] de test</strong></u></p>
-<p>L&#x27;application [console] de test est la suivante :</p>
+<p><u><strong>L'application [console] de test</strong></u></p>
+<p>L'application [console] de test est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-77-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-77-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-77-3"> 3</a></span>
@@ -4372,10 +4372,10 @@ Les deux autres méthodes reprennent ce qui a été vu dans le chapitre &quot;Ba
 <li>lignes 12-22 : le fichier [App.config] est exploité.</li>
 <li>lignes 24-28 : la couche [dao] est instanciée et initialisée</li>
 <li>lignes 30-32 : il est fait de même pour la couche [metier]</li>
-<li>lignes 34-37 : on crée un tableau de 2 articles avec le même nom. La table [articles] de la base SQL server Ce [dbarticles.sdf] a une contrainte d&#x27;unicité sur le nom. L&#x27;insertion du 2ième article sera donc refusée. Si l&#x27;insertion du tableau se fait hors transaction, le 1er article sera d&#x27;abord inséré puis le restera. Si l&#x27;insertion du tableau se fait dans une transaction, le 1er article sera d&#x27;abord inséré puis sera retiré, lors du Rollback de la transaction.</li>
+<li>lignes 34-37 : on crée un tableau de 2 articles avec le même nom. La table [articles] de la base SQL server Ce [dbarticles.sdf] a une contrainte d'unicité sur le nom. L'insertion du 2ième article sera donc refusée. Si l'insertion du tableau se fait hors transaction, le 1er article sera d'abord inséré puis le restera. Si l'insertion du tableau se fait dans une transaction, le 1er article sera d'abord inséré puis sera retiré, lors du Rollback de la transaction.</li>
 <li>lignes 39-50 : insertion hors transaction du tableau de 2 articles et vérification.</li>
 <li>lignes 52-59 : idem mais dans une transaction
-Les résultats à l&#x27;exécution sont les suivants :</li>
+Les résultats à l'exécution sont les suivants :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-78-1">1</a></span>
 <span class="normal"><a href="#__codelineno-78-2">2</a></span>
@@ -4396,13 +4396,13 @@ Les résultats à l&#x27;exécution sont les suivants :</li>
 <a id="__codelineno-78-9" name="__codelineno-78-9"></a>Liste des articles
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes 5-6 : l&#x27;insertion hors transaction a laissé le 1er article dans la base</li>
-<li>ligne 9 : l&#x27;insertion faite dans une transaction n&#x27;a laissé aucun article dans la base</li>
+<li>lignes 5-6 : l'insertion hors transaction a laissé le 1er article dans la base</li>
+<li>ligne 9 : l'insertion faite dans une transaction n'a laissé aucun article dans la base</li>
 </ul>
 <h3 id="1093-conclusion">10.9.3. Conclusion</h3>
-<p>L&#x27;exemple précédent a montré l&#x27;intérêt des données locales à un thread pour la gestion des transactions. Il n&#x27;est pas à reproduire tel quel. Des frameworks tels que Spring, Nhibernate, ... utilisent cette technique mais la rendent encore plus transparente : il est possible pour la couche [metier] d&#x27;utiliser des transactions sans que la couche [dao] n&#x27;ait besoin de le savoir. Il n&#x27;y a alors aucun objet Transaction dans le code de la couche [dao]. Cela est obtenu au moyen d&#x27;une technique de proxy appelée AOP (Aspects Oriented Programming). De nouveau on ne peut qu&#x27;inciter le lecteur à utiliser ces frameworks.</p>
+<p>L'exemple précédent a montré l'intérêt des données locales à un thread pour la gestion des transactions. Il n'est pas à reproduire tel quel. Des frameworks tels que Spring, Nhibernate, ... utilisent cette technique mais la rendent encore plus transparente : il est possible pour la couche [metier] d'utiliser des transactions sans que la couche [dao] n'ait besoin de le savoir. Il n'y a alors aucun objet Transaction dans le code de la couche [dao]. Cela est obtenu au moyen d'une technique de proxy appelée AOP (Aspects Oriented Programming). De nouveau on ne peut qu'inciter le lecteur à utiliser ces frameworks.</p>
 <h2 id="1010-pour-approfondir">10.10. Pour approfondir...</h2>
-<p>Pour approfondir le domaine difficile de la synchronisation de threads, on pourra lire le chapitre Threading du livre C# 3.0 référencé dans l&#x27;introduction de ce document. On y présente de nombreuses techniques de synchronisation pour différents types de situation.</p>
+<p>Pour approfondir le domaine difficile de la synchronisation de threads, on pourra lire le chapitre Threading du livre C# 3.0 référencé dans l'introduction de ce document. On y présente de nombreuses techniques de synchronisation pour différents types de situation.</p>
 
 
 

@@ -575,10 +575,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#84-gestion-dx27evenements" class="md-nav__link">
+  <a href="#84-gestion-devenements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.4. Gestion d&amp;#x27;événements
+        8.4. Gestion d'événements
       
     </span>
   </a>
@@ -776,9 +776,9 @@
 
 
 <h1 id="8-evenements-utilisateur">8. Evénements utilisateur</h1>
-<p>Nous avons dans le chapitre précédent abordé la notion d&#x27;événements liés à des composants de formulaire. Nous voyons maintenant comment créer des événements dans nos propres classes.</p>
+<p>Nous avons dans le chapitre précédent abordé la notion d'événements liés à des composants de formulaire. Nous voyons maintenant comment créer des événements dans nos propres classes.</p>
 <h2 id="81-objets-delegate-predefinis">8.1. Objets delegate prédéfinis</h2>
-<p>La notion d&#x27;objet delegate a été rencontrée dans le chapitre précédent mais elle avait été alors survolée. Lorsque nous avions regardé comment les gestionnaires des événements des composants d&#x27;un formulaire étaient déclarés, nous avions rencontré du code similaire au suivant :</p>
+<p>La notion d'objet delegate a été rencontrée dans le chapitre précédent mais elle avait été alors survolée. Lorsque nous avions regardé comment les gestionnaires des événements des composants d'un formulaire étaient déclarés, nous avions rencontré du code similaire au suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>            this.buttonAfficher.Click += new System.EventHandler(this.buttonAfficher_Click);
 </code></pre></div></td></tr></table></div>
 <p>où buttonAfficher était un composant de type [Button]. Cette classe a un champ <strong>Click</strong> défini comme suit :</p>
@@ -787,10 +787,10 @@
 <ul>
 <li>[1] : la classe [Button]</li>
 <li>[2] : ses événements</li>
-<li>[3,4] : l&#x27;événement Click</li>
-<li>[5] : la déclaration de l&#x27;événement [Control.Click] [4].</li>
+<li>[3,4] : l'événement Click</li>
+<li>[5] : la déclaration de l'événement [Control.Click] [4].</li>
 <li>EventHandler est un prototype (un modèle ) de méthode appelé <strong>delegate</strong>.</li>
-<li>event est un mot clé qui restreint les fonctionnalités du delegate <strong>EventHandler</strong> : un objet delegate a des fonctionnalités plus riches qu&#x27;un objet event.
+<li>event est un mot clé qui restreint les fonctionnalités du delegate <strong>EventHandler</strong> : un objet delegate a des fonctionnalités plus riches qu'un objet event.
 Le delegate <strong>EventHandler</strong> est défini comme suit :</li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AE0000013BDE4AB081.png" style="display:inline-block; margin:4px;width:7.96cm;height:5.83cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -814,27 +814,27 @@ Une méthode correspondant au modèle défini par EventHandler pourrait être la
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>evtHandler+=new EvtHandler(M);
 </code></pre></div></td></tr></table></div>
 <p>La notation += peut être utilisée même si evtHandler est une liste vide.</p>
-<p>L&#x27;instruction :</p>
+<p>L'instruction :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>            this.buttonAfficher.Click += new System.EventHandler(this.buttonAfficher_Click);
 </code></pre></div></td></tr></table></div>
-<p>ajoute une méthode de type EventHandler à la liste des méthodes de l&#x27;événement buttonAfficher.Click. Lorsque l&#x27;événement Click sur le composant buttonAfficher se produit, VB exécute l&#x27;instruction :</p>
+<p>ajoute une méthode de type EventHandler à la liste des méthodes de l'événement buttonAfficher.Click. Lorsque l'événement Click sur le composant buttonAfficher se produit, VB exécute l'instruction :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>            buttonAfficher.Click(source, evt);
 </code></pre></div></td></tr></table></div>
 <p>où :</p>
 <ul>
-<li>source est le composant de type object à l&#x27;origine de l&#x27;événement</li>
-<li>evt de type EventArgs et ne contient pas d&#x27;information
-Toutes les méthodes de signature void M(object,EventArgs) qui ont été associées à l&#x27;événement Click par :</li>
+<li>source est le composant de type object à l'origine de l'événement</li>
+<li>evt de type EventArgs et ne contient pas d'information
+Toutes les méthodes de signature void M(object,EventArgs) qui ont été associées à l'événement Click par :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>            this.buttonAfficher.Click += new System.EventHandler(M);
 </code></pre></div></td></tr></table></div>
 <p>seront appelées avec les paramètres (source, evt) transmis par VB.</p>
 <h2 id="82-definir-des-objets-delegate">8.2. Définir des objets delegate</h2>
-<p>L&#x27;instruction</p>
+<p>L'instruction</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>    public delegate int Opération(int n1, int n2);
 </code></pre></div></td></tr></table></div>
-<p>définit un type appelé Opération qui représente un prototype de fonction acceptant deux entiers et rendant un entier. C&#x27;est le mot clé delegate qui fait de Opération une définition de prototype de fonction.</p>
-<p>Une variable op de type Opération aura pour rôle d&#x27;enregistrer une liste de fonctions correspondant au prototype Opération :</p>
+<p>définit un type appelé Opération qui représente un prototype de fonction acceptant deux entiers et rendant un entier. C'est le mot clé delegate qui fait de Opération une définition de prototype de fonction.</p>
+<p>Une variable op de type Opération aura pour rôle d'enregistrer une liste de fonctions correspondant au prototype Opération :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>int f1(int,int)
 </code></pre></div></td></tr></table></div>
@@ -848,8 +848,8 @@ Toutes les méthodes de signature void M(object,EventArgs) qui ont été associ�
 </code></pre></div></td></tr></table></div>
 </div></td></tr></table>
 
-<p>L&#x27;enregistrement d&#x27;une méthode fi dans la variable op se fait par op=new Opération(fi) ou plus simplement par op=fi. Pour ajouter une méthode fj à la liste des fonctions déjà enregistrées, on écrit op+= fj. Pour enlever une méthode fk déjà enregistrée on écrit op-=fk. Si dans notre exemple on écrit n=op(n1,n2), l&#x27;ensemble des méthodes enregistrées dans la variable op seront exécutées avec les paramètres n1 et n2. Le résultat n récupéré sera celui de la dernière méthode exécutée. Il n&#x27;est pas possible d&#x27;obtenir les résultats produits par l&#x27;ensemble des méthodes. Pour cette raison, si on enregistre une liste de méthodes dans une fonction déléguée, celles-ci rendent le plus souvent un résultat de type void.</p>
-<p>Considérons l&#x27;exemple suivant :</p>
+<p>L'enregistrement d'une méthode fi dans la variable op se fait par op=new Opération(fi) ou plus simplement par op=fi. Pour ajouter une méthode fj à la liste des fonctions déjà enregistrées, on écrit op+= fj. Pour enlever une méthode fk déjà enregistrée on écrit op-=fk. Si dans notre exemple on écrit n=op(n1,n2), l'ensemble des méthodes enregistrées dans la variable op seront exécutées avec les paramètres n1 et n2. Le résultat n récupéré sera celui de la dernière méthode exécutée. Il n'est pas possible d'obtenir les résultats produits par l'ensemble des méthodes. Pour cette raison, si on enregistre une liste de méthodes dans une fonction déléguée, celles-ci rendent le plus souvent un résultat de type void.</p>
+<p>Considérons l'exemple suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
@@ -965,21 +965,21 @@ Toutes les méthodes de signature void M(object,EventArgs) qui ont été associ�
 <ul>
 <li>ligne 3 : définit une classe Class1.</li>
 <li>ligne 6 : définition du delegate Opération : un prototype de méthodes acceptant deux paramètres de type int et rendant un résultat de type int</li>
-<li>lignes 9-12 : la méthode d&#x27;instance Ajouter a la signature du delegate Opération.</li>
-<li>lignes 14-17 : la méthode d&#x27;instance Soustraire a la signature du delegate Opération.</li>
+<li>lignes 9-12 : la méthode d'instance Ajouter a la signature du delegate Opération.</li>
+<li>lignes 14-17 : la méthode d'instance Soustraire a la signature du delegate Opération.</li>
 <li>lignes 20-23 : la méthode <strong>de classe</strong> Augmenter a la signature du delegate Opération.</li>
 <li>ligne 25 : la méthode Main exécutée</li>
 <li>ligne 20 : la variable op est de type delegate Opération. Elle contiendra une liste de méthodes ayant la signature du type delegate Opération. On lui affecte une première référence de méthode, celle sur la méthode statique Class1.Augmenter.</li>
 <li>ligne 31 : le delegate op est exécuté : ce sont toutes les méthodes référencées par op qui vont être exécutées. Elles le seront avec les paramètres passés au delegate op. Ici, seule la méthode statique Class1.Augmenter va être exécutée.</li>
 <li>ligne 35 : une instance c1 de la classe Class1 est créée.</li>
-<li>ligne 37 : la méthode d&#x27;instance c1.Ajouter est affectée au delegate op. Augmenter était une méthode statique, Ajouter est une méthode d&#x27;instance. On a voulu montrer que cela n&#x27;avait pas d&#x27;importance.</li>
+<li>ligne 37 : la méthode d'instance c1.Ajouter est affectée au delegate op. Augmenter était une méthode statique, Ajouter est une méthode d'instance. On a voulu montrer que cela n'avait pas d'importance.</li>
 <li>ligne 39 : le delegate op est exécuté : la méthode Ajouter va être exécutée avec les paramètres passés au delegate op.</li>
-<li>ligne 42 : on refait de même avec la méthode d&#x27;instance Soustraire.</li>
+<li>ligne 42 : on refait de même avec la méthode d'instance Soustraire.</li>
 <li>lignes 46-47 : on met les méthodes Ajouter et Soustraire dans le delegate op.</li>
 <li>ligne 49 : le delegate op est exécuté : les deux méthodes Ajouter et Soustraire vont être exécutées avec les paramètres passés au delegate op.</li>
 <li>ligne 51 : la méthode Soustraire est enlevée du delegate op.</li>
 <li>ligne 53 : le delegate op est exécuté : la méthode restante Ajouter va être exécutée.
-Les résultats de l&#x27;exécution sont les suivants :</li>
+Les résultats de l'exécution sont les suivants :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
 <span class="normal"><a href="#__codelineno-13-2">2</a></span>
@@ -1000,7 +1000,7 @@ Les résultats de l&#x27;exécution sont les suivants :</li>
 <a id="__codelineno-13-9" name="__codelineno-13-9"></a>Ajouter(1,1)
 </code></pre></div></td></tr></table></div>
 <h2 id="83-delegates-ou-interfaces">8.3. Delegates ou interfaces ?</h2>
-<p>Les notions de delegates et d&#x27;interfaces peuvent sembler assez proches et on peut se demander quelles sont exactement les différences entre ces deux notions. Prenons l&#x27;exemple suivant proche d&#x27;un exemple déjà étudié :</p>
+<p>Les notions de delegates et d'interfaces peuvent sembler assez proches et on peut se demander quelles sont exactement les différences entre ces deux notions. Prenons l'exemple suivant proche d'un exemple déjà étudié :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
@@ -1161,23 +1161,23 @@ Les résultats de l&#x27;exécution sont les suivants :</li>
 <a id="__codelineno-15-40" name="__codelineno-15-40"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes 6-8 : l&#x27;interface [IOperation] définit une méthode operation.</li>
-<li>lignes 11-16 et 19-24 : les classes [Ajouter] et [Soustraire] implémentent l&#x27;interface [IOperation].</li>
-<li>lignes 29-31 : la méthode Execute dont le 1er paramètre est du type de l&#x27;interface IOperation. La méthode Execute va recevoir successivement comme 1er paramètre, une instance de la classe Ajouter puis une instance de la classe Soustraire.
-On retrouve bien l&#x27;aspect polymorphique qu&#x27;avait le paramètre de type delegate de l&#x27;exemple précédent. Les deux exemples montrent en même temps des différences entre ces deux notions.</li>
+<li>lignes 6-8 : l'interface [IOperation] définit une méthode operation.</li>
+<li>lignes 11-16 et 19-24 : les classes [Ajouter] et [Soustraire] implémentent l'interface [IOperation].</li>
+<li>lignes 29-31 : la méthode Execute dont le 1er paramètre est du type de l'interface IOperation. La méthode Execute va recevoir successivement comme 1er paramètre, une instance de la classe Ajouter puis une instance de la classe Soustraire.
+On retrouve bien l'aspect polymorphique qu'avait le paramètre de type delegate de l'exemple précédent. Les deux exemples montrent en même temps des différences entre ces deux notions.</li>
 </ul>
 <p>Les types delegate et interface sont interchangeables </p>
 <ul>
-<li>si l&#x27;interface n&#x27;a qu&#x27;une méthode. En effet, le type delegate est une enveloppe pour une unique méthode alors que l&#x27;interface peut, elle, définir plusieurs méthodes.</li>
-<li>si l&#x27;aspect multicast du delegate n&#x27;est pas utilisé. Cette notion de multicast n&#x27;existe en effet pas dans l&#x27;interface.
+<li>si l'interface n'a qu'une méthode. En effet, le type delegate est une enveloppe pour une unique méthode alors que l'interface peut, elle, définir plusieurs méthodes.</li>
+<li>si l'aspect multicast du delegate n'est pas utilisé. Cette notion de multicast n'existe en effet pas dans l'interface.
 Si ces deux conditions sont vérifiées, alors on a le choix entre les deux signatures suivantes pour la méthode Execute :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
 <span class="normal"><a href="#__codelineno-16-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>int Execute(IOperation op, int n1, int n2)
 <a id="__codelineno-16-2" name="__codelineno-16-2"></a>int Execute(Opération op, int n1, int n2)
 </code></pre></div></td></tr></table></div>
-<p>La seconde qui utilise le delegate peut se montrer plus souple d&#x27;utilisation. En effet dans la première signature, le premier paramètre de la méthode doit implémenter l&#x27;interface IOperation. Cela oblige à créer une classe pour y définir la méthode appelée à être passée en premier paramètre à la méthode Execute. Dans la seconde signature, toute méthode existante ayant la bonne signature fait l&#x27;affaire. Il n&#x27;y a pas de construction supplémentaire à faire.</p>
-<h2 id="84-gestion-dx27evenements">8.4. Gestion d&#x27;événements</h2>
+<p>La seconde qui utilise le delegate peut se montrer plus souple d'utilisation. En effet dans la première signature, le premier paramètre de la méthode doit implémenter l'interface IOperation. Cela oblige à créer une classe pour y définir la méthode appelée à être passée en premier paramètre à la méthode Execute. Dans la seconde signature, toute méthode existante ayant la bonne signature fait l'affaire. Il n'y a pas de construction supplémentaire à faire.</p>
+<h2 id="84-gestion-devenements">8.4. Gestion d'événements</h2>
 <p>Les objets delegate peuvent servir à définir des événements. Une classe C1 peut définir un événement evt de la façon suivante :</p>
 <ul>
 <li>
@@ -1191,30 +1191,30 @@ Si ces deux conditions sont vérifiées, alors on a le choix entre les deux sign
 </code></pre></div></td></tr></table></div></p>
 </li>
 <li>
-<p>lorsque une instance c1 de la classe C1 voudra signaler un événement, elle exécutera son delegate Evt1 en lui passant les paramètres définis par le delegate Evt. Toutes les méthodes enregistrées dans le delegate Evt1 seront alors exécutées avec ces paramètres. On peut dire qu&#x27;elles ont été averties de l&#x27;événement Evt1.</p>
+<p>lorsque une instance c1 de la classe C1 voudra signaler un événement, elle exécutera son delegate Evt1 en lui passant les paramètres définis par le delegate Evt. Toutes les méthodes enregistrées dans le delegate Evt1 seront alors exécutées avec ces paramètres. On peut dire qu'elles ont été averties de l'événement Evt1.</p>
 </li>
-<li>si un objet c2 utilisant un objet c1 veut être averti de l&#x27;occurrence de l&#x27;événement Evt1 sur l&#x27;objet c1, il enregistrera l&#x27;une de ses méthodes c2.M dans l&#x27;objet délégué c1.Evt1 de l&#x27;objet c1. Ainsi sa méthode c2.M sera exécutée à chaque fois que l&#x27;événement Evt1 se produira sur l&#x27;objet c1. Il pourra également de désinscrire lorsqu&#x27;il ne voudra plus être averti de l&#x27;événement.</li>
+<li>si un objet c2 utilisant un objet c1 veut être averti de l'occurrence de l'événement Evt1 sur l'objet c1, il enregistrera l'une de ses méthodes c2.M dans l'objet délégué c1.Evt1 de l'objet c1. Ainsi sa méthode c2.M sera exécutée à chaque fois que l'événement Evt1 se produira sur l'objet c1. Il pourra également de désinscrire lorsqu'il ne voudra plus être averti de l'événement.</li>
 <li>
-<p>comme l&#x27;objet délégué c1.Evt1 peut enregistrer plusieurs méthodes, différents objets ci pourront s&#x27;enregistrer auprès du délégué c1.Evt1 pour être prévenus de l&#x27;événement Evt1 sur c1.
+<p>comme l'objet délégué c1.Evt1 peut enregistrer plusieurs méthodes, différents objets ci pourront s'enregistrer auprès du délégué c1.Evt1 pour être prévenus de l'événement Evt1 sur c1.
 Dans ce scénario, on a :</p>
 </li>
 <li>
 <p>une classe qui signale un événement</p>
 </li>
-<li>des classes qui sont averties de cet événement. On dit qu&#x27;elles souscrivent à l&#x27;événement ou s&#x27;abonnent à l&#x27;événement.</li>
+<li>des classes qui sont averties de cet événement. On dit qu'elles souscrivent à l'événement ou s'abonnent à l'événement.</li>
 <li>
-<p>un type delegate qui définit la signature des méthodes qui seront averties de l&#x27;événement
+<p>un type delegate qui définit la signature des méthodes qui seront averties de l'événement
 Le framework .NET définit :</p>
 </li>
 <li>
-<p>une signature standard du delegate d&#x27;un événement
+<p>une signature standard du delegate d'un événement
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="k">public</span><span class="w"> </span><span class="k">delegate</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">MyEventHandler</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">evtInfo</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div></p>
 </li>
 <li>
-<p>source : l&#x27;objet qui a signalé l&#x27;événement</p>
+<p>source : l'objet qui a signalé l'événement</p>
 </li>
-<li>evtInfo : un objet de type EventArgs ou dérivé qui apporte des informations sur l&#x27;événement</li>
+<li>evtInfo : un objet de type EventArgs ou dérivé qui apporte des informations sur l'événement</li>
 <li>le nom du delegate doit être terminé par EventHandler</li>
 <li>une façon standard pour déclarer un événement de type MyEventHandler dans une classe :
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
@@ -1226,11 +1226,11 @@ Le framework .NET définit :</p>
 <a id="__codelineno-20-4" name="__codelineno-20-4"></a>}
 </code></pre></div></td></tr></table></div></li>
 </ul>
-<p>Le champ Evt1 est de type delegate. Le mot clé event est là pour restreindre les opérations qu&#x27;on peut faire sur lui :</p>
+<p>Le champ Evt1 est de type delegate. Le mot clé event est là pour restreindre les opérations qu'on peut faire sur lui :</p>
 <ul>
-<li>de l&#x27;extérieur de la classe C1, seules les opérations += et -= sont possibles. Cela empêche la suppression (par erreur du développeur par exemple) des méthodes abonnées à l&#x27;événement. On peut simplement s&#x27;abonner (+=) ou se désabonner (-=) de l&#x27;événement.</li>
-<li>seule une instance de type C1 peut exécuter l&#x27;appel Evt1(source,evtInfo) qui déclenche l&#x27;exécution des méthodes abonnées à l&#x27;événement Evt1.
-Le framework .NET fournit une méthode générique satisfaisant à la signature du delegate d&#x27;un événement :</li>
+<li>de l'extérieur de la classe C1, seules les opérations += et -= sont possibles. Cela empêche la suppression (par erreur du développeur par exemple) des méthodes abonnées à l'événement. On peut simplement s'abonner (+=) ou se désabonner (-=) de l'événement.</li>
+<li>seule une instance de type C1 peut exécuter l'appel Evt1(source,evtInfo) qui déclenche l'exécution des méthodes abonnées à l'événement Evt1.
+Le framework .NET fournit une méthode générique satisfaisant à la signature du delegate d'un événement :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="k">public</span><span class="w"> </span><span class="k">delegate</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="n">EventHandler</span><span class="o">&lt;</span><span class="n">TEventArgs</span><span class="o">&gt;</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="n">TEventArgs</span><span class="w"> </span><span class="n">evtInfo</span><span class="p">)</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TEventArgs</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">EventArgs</span>
 </code></pre></div></td></tr></table></div>
@@ -1238,23 +1238,23 @@ Le framework .NET fournit une méthode générique satisfaisant à la signature 
 <li>le delegate EventHandler utilise le type générique TEventArgs qui est le type de son 2ième paramètre</li>
 <li>
 <p>le type TEventArgs doit dériver du type EventsArgs (where TEventArgs : EventArgs)
-Avec ce delegate générique, la déclaration d&#x27;un événement X dans la classe C suivra le schéma conseillé suivant :</p>
+Avec ce delegate générique, la déclaration d'un événement X dans la classe C suivra le schéma conseillé suivant :</p>
 </li>
 <li>
-<p>définir un type XEventArgs dérivé de EventArgs pour encapsuler les informations sur l&#x27;événement X</p>
+<p>définir un type XEventArgs dérivé de EventArgs pour encapsuler les informations sur l'événement X</p>
 </li>
 <li>définir  dans la classe C un événement de type EventHandler&lt;XEventArgs&gt;.</li>
 <li>définir  dans la classe C une méthode protégée 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="k">protected</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnXHandler</span><span class="p">(</span><span class="n">XEventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div></li>
 </ul>
-<p>destinée à &quot;publier&quot; l&#x27;événement X aux abonnés.</p>
-<p>Considérons l&#x27;exemple suivant :</p>
+<p>destinée à "publier" l'événement X aux abonnés.</p>
+<p>Considérons l'exemple suivant :</p>
 <ul>
 <li>une classe Emetteur encapsule une température. Cette température est observée. Lorsque cette température dépasse un certain seuil, un événement doit être lancé. Nous appellerons cet événement TemperatureTropHaute. Les informations sur cet événement seront encapsulées dans un type TemperatureTropHauteEventArgs.</li>
-<li>une classe Souscripteur s&#x27;abonne à l&#x27;événement précédent. Lorsqu&#x27;elle est avertie de l&#x27;événement, elle affiche un message sur la console.</li>
-<li>un programme console crée un émetteur et deux abonnés. Il saisit les températures au clavier et les enregistre dans une instance Emetteur. Si celle-ci est trop haute, l&#x27;instance  Emetteur publie l&#x27;événement TemperatureTropHaute.
-Pour se conformer à la méthode conseillée de gestion des événements, nous définissons tout d&#x27;abord le type TemperatureTropHauteEventArgs pour encapsuler les informations sur l&#x27;événement :</li>
+<li>une classe Souscripteur s'abonne à l'événement précédent. Lorsqu'elle est avertie de l'événement, elle affiche un message sur la console.</li>
+<li>un programme console crée un émetteur et deux abonnés. Il saisit les températures au clavier et les enregistre dans une instance Emetteur. Si celle-ci est trop haute, l'instance  Emetteur publie l'événement TemperatureTropHaute.
+Pour se conformer à la méthode conseillée de gestion des événements, nous définissons tout d'abord le type TemperatureTropHauteEventArgs pour encapsuler les informations sur l'événement :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
@@ -1285,7 +1285,7 @@ Pour se conformer à la méthode conseillée de gestion des événements, nous d
 <a id="__codelineno-23-14" name="__codelineno-23-14"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 6 : l&#x27;information encapsulée par la classe TemperatureTropHauteEventArgs est la température qui a provoqué l&#x27;événement TemperatureTropHaute.
+<li>ligne 6 : l'information encapsulée par la classe TemperatureTropHauteEventArgs est la température qui a provoqué l'événement TemperatureTropHaute.
 La classe Emetteur est la suivante :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
@@ -1357,12 +1357,12 @@ La classe Emetteur est la suivante :</li>
 <a id="__codelineno-24-34" name="__codelineno-24-34"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 5 : le seuil de température au-delà duquel l&#x27;événement TemperatureTropHaute sera publié.</li>
-<li>ligne 10 : l&#x27;émetteur a un nom pour être identifié</li>
-<li>ligne 12 : l&#x27;événement  TemperatureTropHaute.</li>
-<li>lignes 15-26 : la méthode get qui rend la température et la méthode set qui l&#x27;enregistre. C&#x27;est la méthode set qui fait publier l&#x27;événement TemperatureTropHaute si la température à enregistrer dépasse le seuil de la ligne 5. Elle fait publier l&#x27;événement par la méthode OnTemperatureTropHauteHandler de la ligne 29 en lui passant pour paramètre un objet TemperatureTropHauteEventArgs dans lequel on a enregistré la température qui a dépassé le seuil.</li>
-<li>lignes 29-32 : l&#x27;événement TemperatureTropHaute est publié avec pour 1er paramètre l&#x27;émetteur lui-même et pour second paramètre l&#x27;objet TemperatureTropHauteEventArgs reçu en paramètre.
-La classe Souscripteur qui va s&#x27;abonner à l&#x27;événement TemperatureTropHaute est la suivante :</li>
+<li>ligne 5 : le seuil de température au-delà duquel l'événement TemperatureTropHaute sera publié.</li>
+<li>ligne 10 : l'émetteur a un nom pour être identifié</li>
+<li>ligne 12 : l'événement  TemperatureTropHaute.</li>
+<li>lignes 15-26 : la méthode get qui rend la température et la méthode set qui l'enregistre. C'est la méthode set qui fait publier l'événement TemperatureTropHaute si la température à enregistrer dépasse le seuil de la ligne 5. Elle fait publier l'événement par la méthode OnTemperatureTropHauteHandler de la ligne 29 en lui passant pour paramètre un objet TemperatureTropHauteEventArgs dans lequel on a enregistré la température qui a dépassé le seuil.</li>
+<li>lignes 29-32 : l'événement TemperatureTropHaute est publié avec pour 1er paramètre l'émetteur lui-même et pour second paramètre l'objet TemperatureTropHauteEventArgs reçu en paramètre.
+La classe Souscripteur qui va s'abonner à l'événement TemperatureTropHaute est la suivante :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-25-2"> 2</a></span>
@@ -1394,8 +1394,8 @@ La classe Souscripteur qui va s&#x27;abonner à l&#x27;événement TemperatureTr
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 6 : chaque souscripteur est identifié par un nom.</li>
-<li>lignes 9-12 : la méthode qui sera associée à l&#x27;événement TemperatureTropHaute. Elle a la signature du type delegate EventHandler&lt;TEventArgs&gt; qu&#x27;un gestionnaire d&#x27;événement doit avoir. La méthode affiche sur la console : le nom du souscripteur qui affiche le message, le nom de l&#x27;émetteur qui a signalé l&#x27;événement, la température qui a déclenché ce dernier.</li>
-<li>l&#x27;abonnement à l&#x27;événement TemperatureTropHaute d&#x27;un objet Emetteur n&#x27;est pas fait dans la classe Souscripteur. Il sera fait par une classe externe.
+<li>lignes 9-12 : la méthode qui sera associée à l'événement TemperatureTropHaute. Elle a la signature du type delegate EventHandler&lt;TEventArgs&gt; qu'un gestionnaire d'événement doit avoir. La méthode affiche sur la console : le nom du souscripteur qui affiche le message, le nom de l'émetteur qui a signalé l'événement, la température qui a déclenché ce dernier.</li>
+<li>l'abonnement à l'événement TemperatureTropHaute d'un objet Emetteur n'est pas fait dans la classe Souscripteur. Il sera fait par une classe externe.
 Le programme [Program.cs] lie tous ces éléments entre-eux :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1"> 1</a></span>
@@ -1469,11 +1469,11 @@ Le programme [Program.cs] lie tous ces éléments entre-eux :</li>
 <a id="__codelineno-26-35" name="__codelineno-26-35"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 6 : création de l&#x27;émetteur</li>
-<li>lignes 8-14 : création de deux souscripteurs qu&#x27;on abonne à l&#x27;événement TemperatureTropHaute de l&#x27;émetteur.</li>
+<li>ligne 6 : création de l'émetteur</li>
+<li>lignes 8-14 : création de deux souscripteurs qu'on abonne à l'événement TemperatureTropHaute de l'émetteur.</li>
 <li>lignes 20-32 : boucle de saisie des températures au clavier</li>
-<li>ligne 24 : si la température saisie est correcte, elle est transmise à l&#x27;objet Emetteur e1 qui déclenchera l&#x27;événement TemperatureTropHaute si la température est supérieure à 19 ° C.
-Les résultats de l&#x27;exécution sont les suivants :</li>
+<li>ligne 24 : si la température saisie est correcte, elle est transmise à l'objet Emetteur e1 qui déclenchera l'événement TemperatureTropHaute si la température est supérieure à 19 ° C.
+Les résultats de l'exécution sont les suivants :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
 <span class="normal"><a href="#__codelineno-27-2">2</a></span>

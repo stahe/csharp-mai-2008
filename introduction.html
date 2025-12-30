@@ -697,33 +697,33 @@
 <h1 id="1-introduction">1. Introduction</h1>
 <p>C# est un langage récent. Il a été disponible en versions beta successives depuis l’année 2000 avant d’être officiellement disponible en février 2002 en même temps que la plate-forme .NET 1.0 de Microsoft à laquelle il est lié. C# ne peut fonctionner qu’avec cet environnement d’exécution. Celui-ci rend disponible aux programmes qui s’exécutent en son sein un ensemble très important de classes. En première approximation, on peut dire que la plate-forme .NET est un environnement d’exécution analogue à une machine virtuelle Java. On peut noter cependant deux différences :</p>
 <ul>
-<li>Java s&#x27;exécute sur différents OS (windows, unix, macintosh) depuis ses débuts. En 2002, la plate-forme .NET ne s&#x27;exécutait que sur les machines Windows. Depuis quelques années le projet Mono [http://www.mono-project.com] permet d&#x27;utiliser la plate-forme .NET sur des OS tels que Unix et Linux. La version actuelle de Mono (février 2008) supporte .NET 1.1 et des éléments de .NET 2.0.</li>
-<li>la plate-forme .NET permet l&#x27;exécution de programmes écrits en différents langages. Il suffit que le compilateur de ceux-ci sache produire du code IL (Intermediate Language), code exécuté par la machine virtuelle .NET. Toutes les classes de .NET sont disponibles aux langages compatibles .NET ce qui tend à gommer les différences entre langages dans la mesure où les programmes utilisent largement ces classes. Le choix d&#x27;un langage .NET devient affaire de goût plus que de performances.
-En 2002, C# utilisait la plate-forme .NET 1.0. C# était alors largement une « copie » de Java et .NET une bibliothèque de classes très proche de celle de la plate-forme de développement Java. Dans le cadre de l&#x27;apprentissage du langage, on passait d&#x27;un environnement C# à un environnement Java sans être vraiment dépaysé. On trouvait même des outils de conversion de code source d&#x27;un langage vers l&#x27;autre. Depuis, les choses ont évolué. Chaque langage et chaque plate-forme de développement a désormais ses spécificités. Il n&#x27;est plus aussi immédiat de transférer ses compétences d&#x27;un domaine à l&#x27;autre.</li>
+<li>Java s'exécute sur différents OS (windows, unix, macintosh) depuis ses débuts. En 2002, la plate-forme .NET ne s'exécutait que sur les machines Windows. Depuis quelques années le projet Mono [http://www.mono-project.com] permet d'utiliser la plate-forme .NET sur des OS tels que Unix et Linux. La version actuelle de Mono (février 2008) supporte .NET 1.1 et des éléments de .NET 2.0.</li>
+<li>la plate-forme .NET permet l'exécution de programmes écrits en différents langages. Il suffit que le compilateur de ceux-ci sache produire du code IL (Intermediate Language), code exécuté par la machine virtuelle .NET. Toutes les classes de .NET sont disponibles aux langages compatibles .NET ce qui tend à gommer les différences entre langages dans la mesure où les programmes utilisent largement ces classes. Le choix d'un langage .NET devient affaire de goût plus que de performances.
+En 2002, C# utilisait la plate-forme .NET 1.0. C# était alors largement une « copie » de Java et .NET une bibliothèque de classes très proche de celle de la plate-forme de développement Java. Dans le cadre de l'apprentissage du langage, on passait d'un environnement C# à un environnement Java sans être vraiment dépaysé. On trouvait même des outils de conversion de code source d'un langage vers l'autre. Depuis, les choses ont évolué. Chaque langage et chaque plate-forme de développement a désormais ses spécificités. Il n'est plus aussi immédiat de transférer ses compétences d'un domaine à l'autre.</li>
 </ul>
-<p>C# 3.0 et le framework .NET 3.5 amènent beaucoup de nouveautés. La plus importante est probablement LINQ (Language INtegrated Query) qui permet de requêter de façon uniforme, d&#x27;une façon proche de celle du langage SQL, des séquences d&#x27;objets  provenant de structures en mémoire telles que les tableaux et les listes, de bases de données (SQL Server uniquement pour le moment - février 2008) ou de fichiers XML. </p>
-<p>Ce document n&#x27;est pas un cours exhaustif. Par exemple, LINQ n&#x27;y est pas abordé. Il est destiné à des personnes connaissant déjà la programmation et qui veulent découvrir les bases de C#.  Il est une révision du document originel paru en 2002. </p>
-<p>Plusieurs livres m&#x27;ont aidé à écrire ce cours :</p>
+<p>C# 3.0 et le framework .NET 3.5 amènent beaucoup de nouveautés. La plus importante est probablement LINQ (Language INtegrated Query) qui permet de requêter de façon uniforme, d'une façon proche de celle du langage SQL, des séquences d'objets  provenant de structures en mémoire telles que les tableaux et les listes, de bases de données (SQL Server uniquement pour le moment - février 2008) ou de fichiers XML. </p>
+<p>Ce document n'est pas un cours exhaustif. Par exemple, LINQ n'y est pas abordé. Il est destiné à des personnes connaissant déjà la programmation et qui veulent découvrir les bases de C#.  Il est une révision du document originel paru en 2002. </p>
+<p>Plusieurs livres m'ont aidé à écrire ce cours :</p>
 <p>Pour la version 2002 :</p>
 <ul>
 <li>Professional C# programming, Editions Wrox</li>
 <li>
 <p>C# et .NET, Gérard Leblanc, Editions Eyrolles
-A l&#x27;époque j&#x27;avais trouvé excellents ces deux ouvrages. Depuis Gérard Leblanc a publié des versions mises à jour dont la suivante :</p>
+A l'époque j'avais trouvé excellents ces deux ouvrages. Depuis Gérard Leblanc a publié des versions mises à jour dont la suivante :</p>
 </li>
 <li>
 <p>C# et .NET 2005, Gérard Leblanc, Editions Eyrolles
-Pour la révision de 2008, j&#x27;ai utilisé les sources suivantes :</p>
+Pour la révision de 2008, j'ai utilisé les sources suivantes :</p>
 </li>
 <li>
-<p>le document initial de 2002. Ce document issu d&#x27;un copier / coller de mon cours Java comportait à la fois des erreurs de typographie et des erreurs plus sérieuses telles que dire que les types primitifs comme System.Int32 étaient des classes alors que ce sont des structures. Mea culpa...</p>
+<p>le document initial de 2002. Ce document issu d'un copier / coller de mon cours Java comportait à la fois des erreurs de typographie et des erreurs plus sérieuses telles que dire que les types primitifs comme System.Int32 étaient des classes alors que ce sont des structures. Mea culpa...</p>
 </li>
 <li>la documentation MSDN de Visual Studio Express 2008</li>
-<li>le livre C# 3.0 in a Nutshell de Joseph et Ben Albahari aux éditions O&#x27;Reilly, l&#x27;un des meilleurs livres de programmation qu&#x27;il m&#x27;ait été donné de lire.
+<li>le livre C# 3.0 in a Nutshell de Joseph et Ben Albahari aux éditions O'Reilly, l'un des meilleurs livres de programmation qu'il m'ait été donné de lire.
 Les codes source des exemples de ce document sont disponibles sur le site [http://tahe.developpez.com/dotnet/csharp/].</li>
 </ul>
 <p>Serge Tahé, mai 2008</p>
-<p>Depuis mai 2008, C# a bien sûr évolué. Ce document reste cependant toujours d&#x27;actualité pour l&#x27;apprentissage de ce langage. En complément de ce cours, on trouvera une présentation de l&#x27;ORM (Object Relational Mapper) <strong>Entity Framework</strong> dans l&#x27;article &quot; <strong>Introduction à l&#x27;ORM Entity Framework 5 Code First</strong> &quot; à l&#x27;URL [<a href="http://tahe.developpez.com/dotnet/ef5cf/"><u>http://tahe.developpez.com/dotnet/ef5cf/</u></a>].</p>
+<p>Depuis mai 2008, C# a bien sûr évolué. Ce document reste cependant toujours d'actualité pour l'apprentissage de ce langage. En complément de ce cours, on trouvera une présentation de l'ORM (Object Relational Mapper) <strong>Entity Framework</strong> dans l'article " <strong>Introduction à l'ORM Entity Framework 5 Code First</strong> " à l'URL [<a href="http://tahe.developpez.com/dotnet/ef5cf/"><u>http://tahe.developpez.com/dotnet/ef5cf/</u></a>].</p>
 <p>Serge Tahé, octobre 2013</p>
 
 
