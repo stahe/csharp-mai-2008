@@ -1173,10 +1173,10 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000080B0000025DDDE36EA3.png" style="display:inline-block; margin:4px;width:17.997cm;height:5.288cm;" /></td></tr></table>
 
 <p>En [1], l'option de sauvegarde. En [2], désignez le dossier où sauvegarder le projet. En [3], donnez un nom au projet. En [5], indiquez que vous voulez créer une solution. Une solution est un ensemble de projets. En [4], donnez le nom de la solution. En [6], validez la sauvegarde.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000490000001BB651BBBF8.png" style="display:inline-block; margin:4px;width:10.82cm;height:4.099cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000490000001BB651BBBF8.png" style="display:inline-block; margin:4px;width:15.45cm;height:5.86cm;" /></td></tr></table>
 
 <p>En [1], le projet sauvegardé. En [2], ajoutez un nouvel élément au projet.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005CF0000026CE124A023.png" style="display:inline-block; margin:4px;width:13.771cm;height:5.74cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005CF0000026CE124A023.png" style="display:inline-block; margin:4px;width:17.701cm;height:7.38cm;" /></td></tr></table>
 
 <p>En [1], indiquez que vous voulez ajouter une classe. En [2], le nom de la classe. En [3], validez les informations. En [4], le projet [01] a un nouveau fichier source Personne.cs :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
@@ -1444,7 +1444,7 @@ La syntaxe de déclaration d'une classe C est la suivante :</li>
 <a id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Avant d'exécuter le projet [01], il peut être nécessaire de préciser le fichier source à exécuter :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002BB000001D87E16A0D0.png" style="display:inline-block; margin:4px;width:6.47cm;height:4.369cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002BB000001D87E16A0D0.png" style="display:inline-block; margin:4px;width:9.25cm;height:6.241cm;" /></td></tr></table>
 
 <p>Dans les propriétés du projet [01], on indique en [1] la classe à exécuter.</p>
 <p>Les résultats obtenus à l'exécution sont les suivants :</p>
@@ -2636,11 +2636,11 @@ On obtient les résultats suivants :</li>
 <a id="__codelineno-76-24" name="__codelineno-76-24"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>La classe Enseignant rajoute aux méthodes et attributs de la classe Personne :</p>
-<ul>
+<ol>
 <li>ligne 4 : la classe Enseignant dérive de la classe Personne</li>
 <li>ligne 6 : un attribut section qui est le n° de section auquel appartient l'enseignant dans le corps des enseignants (une section par discipline en gros). Cet attribut privé est accessible via la propriété publique Section des lignes 18-21</li>
 <li>ligne 9 : un nouveau constructeur permettant d'initialiser tous les attributs d'un enseignant</li>
-</ul>
+</ol>
 <h3 id="422-construction-dun-objet-enseignant">4.2.2. Construction d'un objet Enseignant</h3>
 <p>Une classe fille <strong>n'hérite pas des constructeurs</strong> de sa classe Parent. Elle doit alors définir ses propres constructeurs. Le constructeur de la classe Enseignant est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-77-1">1</a></span>
@@ -2671,11 +2671,11 @@ On obtient les résultats suivants :</li>
 </code></pre></div></td></tr></table></div>
 <p>On notera qu'à gauche du signe =, ce n'est pas l'attribut section de l'objet qui a été utilisé, mais la propriété Section qui lui est associée. Cela permet au constructeur de profiter des éventuels contrôles de validité que pourrait faire cette méthode. Cela évite de placer ceux-ci à deux endroits différents : le constructeur et la propriété.</p>
 <p>En résumé, le constructeur d'une classe dérivée :</p>
-<ul>
+<ol>
 <li>passe à sa classe de base les paramètres dont celle-ci a besoin pour se construire</li>
 <li>utilise les autres paramètres pour initialiser les attributs qui lui sont propres
 On aurait pu préférer écrire :</li>
-</ul>
+</ol>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-80-1">1</a></span>
 <span class="normal"><a href="#__codelineno-80-2">2</a></span>
 <span class="normal"><a href="#__codelineno-80-3">3</a></span>
@@ -2712,7 +2712,7 @@ On aurait pu préférer écrire :</li>
 </code></pre></div></td></tr></table></div>
 <p>Ce programme ce contente de créer un objet Enseignant (new) et de l'identifier. La classe Enseignant n'a pas de méthode Identite mais sa classe parent en a une qui de plus est publique : elle devient par héritage une méthode publique de la classe Enseignant.</p>
 <p>L'ensemble du projet est le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046400000109F6A3932E.png" style="display:inline-block; margin:4px;width:10.41cm;height:2.45cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046400000109F6A3932E.png" style="display:inline-block; margin:4px;width:14.87cm;height:3.5cm;" /></td></tr></table>
 
 <p>Les résultats obtenus sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-82-1">1</a></span>
@@ -2722,10 +2722,10 @@ On aurait pu préférer écrire :</li>
 <a id="__codelineno-82-3" name="__codelineno-82-3"></a>[Jean, Dupont, 30]
 </code></pre></div></td></tr></table></div>
 <p>On voit que :</p>
-<ul>
+<ol>
 <li>un objet Personne (ligne 1) a été construit avant l'objet Enseignant (ligne 2)</li>
 <li>l'identité obtenue est celle de l'objet Personne</li>
-</ul>
+</ol>
 <h3 id="423-redefinition-dune-methode-ou-dune-propriete">4.2.3. Redéfinition d'une méthode ou d'une propriété</h3>
 <p>Dans l'exemple précédent, nous avons eu l'identité de la partie Personne de l'enseignant mais il manque certaines informations propres à la classe Enseignant (la section). On est donc amené à écrire une propriété permettant d'identifier l'enseignant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-83-1"> 1</a></span>
@@ -2788,13 +2788,13 @@ On aurait pu préférer écrire :</li>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-84-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1"></a>    public new string Identite{
 </code></pre></div></td></tr></table></div>
 <p>Soit un objet enseignant E. Cet objet contient en son sein un objet Personne :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002AA000001838237ABD8.png" style="display:inline-block; margin:4px;width:6.309cm;height:3.581cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002AA000001838237ABD8.png" style="display:inline-block; margin:4px;width:9.021cm;height:5.121cm;" /></td></tr></table>
 
 <p>La propriété <strong>Identite</strong> est définie à la fois dans la classe Enseignant et sa classe mère Personne. Dans la classe fille Enseignant, la propriété Identite doit être précédée du mot clé <strong>new</strong> pour indiquer qu'on redéfinit une nouvelle propriété Identite pour la classe Enseignant.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-85-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1"></a>    public new string Identite{
 </code></pre></div></td></tr></table></div>
 <p>La classe Enseignant dispose maintenant de deux propriétés Identite :</p>
-<ul>
+<ol>
 <li>celle héritée de la classe parent Personne </li>
 <li>
 <p>la sienne propre
@@ -2807,7 +2807,7 @@ Si E est un ojet Enseignant, E.Identite désigne la propriété Identite de la c
 <li>dans la classe mère de sa classe mère si elle existe</li>
 <li>etc…
 L'héritage permet donc de redéfinir dans la classe fille des méthodes/propriétés de même nom dans la classe mère. C'est ce qui permet d'adapter la classe fille à ses propres besoins. Associée au polymorphisme que nous allons voir un peu plus loin, la redéfinition de méthodes/propriétés est le principal intérêt de l'héritage.</li>
-</ul>
+</ol>
 <p>Considérons le même programme de test que précédemment :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-86-1">1</a></span>
 <span class="normal"><a href="#__codelineno-86-2">2</a></span>
@@ -2966,7 +2966,7 @@ L'héritage permet donc de redéfinir dans la classe fille des méthodes/propri�
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-101-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-101-1" name="__codelineno-101-1"></a>    public class Personne : System.Object
 </code></pre></div></td></tr></table></div>
 <p>La classe System.Object définit une méthode virtuelle <strong>ToString</strong> :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002600000031CE017B6BB.png" style="display:inline-block; margin:4px;width:5.63cm;height:7.37cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002600000031CE017B6BB.png" style="display:inline-block; margin:4px;width:8.04cm;height:10.53cm;" /></td></tr></table>
 
 <p>La méthode ToString rend le nom de la classe à laquelle appartient l'objet comme le montre l'exemple suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-102-1"> 1</a></span>
@@ -3079,18 +3079,18 @@ L'héritage permet donc de redéfinir dans la classe fille des méthodes/propri�
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-110-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-110-1" name="__codelineno-110-1"></a>public static [type] operator ++(C1 opérande1);
 </code></pre></div></td></tr></table></div>
 <p>Ce qui a été dit ici est vrai pour la plupart des opérateurs avec cependant quelques exceptions :</p>
-<ul>
+<ol>
 <li>les opérateurs == et != doivent être redéfinis en même temps</li>
 <li>les opérateurs &amp;&amp; ,||, [], (), +=, -=, ... ne peuvent être redéfinis</li>
-</ul>
+</ol>
 <h3 id="432-un-exemple">4.3.2. Un exemple</h3>
 <p>On crée une classe ListeDePersonnes dérivée de la classe ArrayList. Cette classe implémente une liste dynamique et est présentée dans le chapitre qui suit. De cette classe, nous n'utilisons que les éléments suivants :</p>
-<ul>
+<ol>
 <li>la méthode L.Add(Object o) permettant d'ajouter à la liste L un objet o. Ici l'objet o sera un objet Personne.</li>
 <li>la propriété L.Count qui donne le nombre d'éléments de la liste L</li>
 <li>la notation L[i] qui donne l'élément i de la liste L
 La classe ListeDePersonnes va hériter de tous les attributs, méthodes et propriétés de la classe ArrayList. Sa définition est la suivante :</li>
-</ul>
+</ol>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-111-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-111-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-111-3"> 3</a></span>
@@ -3555,17 +3555,17 @@ Si on exécute ce programme, on obtient les résultats suivants :</li>
 </code></pre></div></td></tr></table></div>
 <p>L'instruction précédente crée un objet CPersonne (grosso modo l'équivalent de notre structure) et la <strong>valeur</strong> de p1 est alors <strong>l'adresse</strong> (la référence) de cet objet. </p>
 <p>Résumons </p>
-<ul>
+<ol>
 <li>dans le cas de la structure, la <strong>valeur</strong> de sp1 est la structure elle-même</li>
 <li>dans le cas de la classe, la <strong>valeur</strong> de op1 est l'<strong>adresse</strong> de l'objet créé</li>
-</ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005780000015F49377F58.png" style="display:inline-block; margin:4px;width:12.959cm;height:3.251cm;" /></td></tr></table>
+</ol>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005780000015F49377F58.png" style="display:inline-block; margin:4px;width:16.671cm;height:4.18cm;" /></td></tr></table>
 
 <p>Lorsque dans  le programme on écrit ligne 12 :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-135-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-135-1" name="__codelineno-135-1"></a>            SPersonne sp2 = sp1;
 </code></pre></div></td></tr></table></div>
 <p>une nouvelle structure sp2(Nom,Age) est créée et initialisée avec la valeur de sp1, donc la structure elle-même.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F300000155EE2EB2C6.png" style="display:inline-block; margin:4px;width:14.101cm;height:3.161cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F300000155EE2EB2C6.png" style="display:inline-block; margin:4px;width:18.129cm;height:4.06cm;" /></td></tr></table>
 
 <p>La structure de sp1 est <strong>dupliquée</strong> dans sp2 [1]. C'est une recopie de valeur. Considérons maintenant l'instruction, ligne 27 :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-136-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-136-1" name="__codelineno-136-1"></a>CPersonne op2=op1;
@@ -3573,11 +3573,11 @@ Si on exécute ce programme, on obtient les résultats suivants :</li>
 <p>Dans le cas des classes, la valeur de op1 est recopiée dans op2, mais comme cette valeur est en fait l'adresse de l'objet, celui-ci n'est pas dupliqué [2].</p>
 <p>Dans le cas de la structure [1], si on modifie la valeur de sp2 on ne modifie pas la valeur de sp1, ce que montre le programme. Dans le cas de l'objet [2], si on modifie l'objet pointé par op2, celui pointé par op1 est modifié puisque c'est le même. C'est ce que montrent également les résultats du programme.</p>
 <p>On retiendra donc de ces explications que :</p>
-<ul>
+<ol>
 <li>la valeur d'une variable de type structure est la structure elle-même</li>
 <li>la valeur d'une variable de type objet est l'adresse de l'objet pointé
 Une fois cette différence fondamentale comprise, la structure se montre très proche de la classe comme le montre le nouvel exemple suivant :</li>
-</ul>
+</ol>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-137-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-137-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-137-3"> 3</a></span>
@@ -5139,7 +5139,7 @@ Nous en savons assez pour trier un tabeau de personnes. Le programme est le suiv
 <li>ligne 8 : le tableau de personnes</li>
 <li>ligne 12 : le tri du tableau de personnes selon les nom et prénom. Le 2ième paramètre de la méthode générique Sort est une instance d'une classe CompareNoms implémentant l'interface générique IComparer&lt;Personne&gt;.</li>
 <li>lignes 30-39 : la classe CompareNoms implémentant l'interface générique IComparer&lt;Personne&gt;.</li>
-<li>lignes 31-38 : implémentation de la méthode générique int CompareTo(T,T) de l'interface IComparer&lt;T&gt;. La méthode utilise la méthode String.CompareTo, présentée page 21, pour comparer deux chaînes de caractères.</li>
+<li>lignes 31-38 : implémentation de la méthode générique int CompareTo(T,T) de l'interface IComparer&lt;T&gt;. La méthode utilise la méthode String.CompareTo, présentée page 22, pour comparer deux chaînes de caractères.</li>
 <li>ligne 16 : le tri du tableau de personnes selon les âges. Le 2ième paramètre de la méthode générique Sort est une instance d'une classe CompareAges implémentant l'interface générique IComparer&lt;Personne&gt; et définie lignes 42-51.
 Les résultats de l'exécution sont les suivants :</li>
 </ul>
@@ -5204,7 +5204,7 @@ Les résultats de l'exécution sont les suivants :</li>
 <a id="__codelineno-187-3" name="__codelineno-187-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="410-application-exemple-v2">4.10. Application exemple - V2</h2>
-<p>On reprend le calcul de l'impôt déjà étudié dans le chapitre précédent page 31 et on le traite maintenant en utilisant des classes et des interfaces. Rappelons le problème :</p>
+<p>On reprend le calcul de l'impôt déjà étudié dans le chapitre précédent page 32 et on le traite maintenant en utilisant des classes et des interfaces. Rappelons le problème :</p>
 <p>On se propose d'écrire un programme permettant de calculer l'impôt d'un contribuable. On se place dans le cas simplifié d'un contribuable n'ayant que son seul salaire à déclarer (chiffres 2004 pour revenus 2003) :</p>
 <ul>
 <li>on calcule le nombre de parts du salarié <strong>nbParts=nbEnfants/2 +1</strong> s'il n'est pas marié, <strong>nbEnfants/2+2</strong> s'il est marié, où nbEnfants est son nombre d'enfants.</li>

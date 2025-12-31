@@ -1622,12 +1622,12 @@
 </ul>
 <h3 id="1112-le-modele-osi">11.1.2. Le modèle OSI</h3>
 <p>Les protocoles TCP/IP suivent à peu près le modèle de réseau ouvert appelé <strong>OSI</strong> (<strong>O</strong>pen <strong>S</strong>ystems <strong>I</strong>nterconnection Reference Model) défini par l'<strong>ISO</strong> (<strong>I</strong>nternational <strong>S</strong>tandards <strong>O</strong>rganisation). Ce modèle décrit un réseau idéal où la communication entre machines peut être représentée par un modèle à sept couches :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003D0000002464BF89594.png" style="display:inline-block; margin:4px;width:7.751cm;height:4.62cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003D0000002464BF89594.png" style="display:inline-block; margin:4px;width:12.91cm;height:7.699cm;" /></td></tr></table>
 
 <p>Chaque couche reçoit des services de la couche inférieure et offre les siens à la couche supérieure. Supposons que deux applications situées sur des machines A et B différentes veulent communiquer : elles le font au niveau de la couche Application. Elles n'ont pas besoin de connaître tous les détails du fonctionnement du réseau : chaque application remet l'information qu'elle souhaite transmettre à la couche du dessous : la couche Présentation. L'application n'a donc à connaître que les règles d'interfaçage avec la couche Présentation.</p>
 <p>Une fois l'information dans la couche Présentation, elle est passée selon d'autres règles à la couche Session et ainsi de suite, jusqu'à ce que l'information arrive sur le support physique et soit transmise physiquement à la machine destination. Là, elle subira le traitement inverse de celui qu'elle a subi sur la machine expéditeur. </p>
 <p>A chaque couche, le processus expéditeur chargé d'envoyer l'information, l'envoie à un processus récepteur sur l'autre machine apartenant à la même couche que lui. Il le fait selon certaines règles que l'on appelle le <strong>protocole</strong> de la couche. On a donc le schéma de communication final suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000641000002A1C5DC01BB.png" style="display:inline-block; margin:4px;width:12.711cm;height:5.339cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000641000002A1C5DC01BB.png" style="display:inline-block; margin:4px;width:16.94cm;height:7.121cm;" /></td></tr></table>
 
 <p>Le rôle des différentes couches est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
@@ -1655,13 +1655,13 @@
 
 <h3 id="1113-le-modele-tcpip">11.1.3. Le modèle TCP/IP</h3>
 <p>Le modèle OSI est un modèle idéal encore jamais réalisé. La suite de protocoles TCP/IP s'en approche sous la forme suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000064D000001F3FD352B9D.png" style="display:inline-block; margin:4px;width:12.801cm;height:3.96cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000064D000001F3FD352B9D.png" style="display:inline-block; margin:4px;width:17.069cm;height:5.279cm;" /></td></tr></table>
 
 <p><strong>Couche Physique</strong></p>
 <p>En réseau local, on trouve généralement une technologie <strong>Ethernet</strong> ou <strong>Token-Ring</strong>. Nous ne présentons ici que la technologie Ethernet.</p>
 <p><strong>Ethernet</strong></p>
 <p>C'est le nom donné à une technologie de réseaux locaux à commutation de paquets inventée à PARC Xerox au début des années 1970 et normalisée par Xerox, Intel et Digital Equipment en 1978. Le réseau est physiquement constitué d'un câble coaxial d'environ 1,27 cm de diamètre et d'une longueur de 500 m au plus. Il peut être étendu au moyen de répéteurs, deux machines ne pouvant être séparées par plus de deux répéteurs. Le câble est passif : tous les éléments actifs sont sur les machines raccordées au câble. Chaque machine est reliée au câble par une carte d'accès au réseau comprenant :</p>
-<ul>
+<ol>
 <li>un transmetteur (transceiver) qui détecte la présence de signaux sur le câble et convertit les signaux analogiques en signaux numérique et inversement.</li>
 <li>
 <p>un coupleur qui reçoit les signaux numériques du transmetteur et les transmet à l'ordinateur pour traitement ou inversement.
@@ -1671,15 +1671,15 @@ Les caractéristiques principales de la technologie Ethernet sont les suivantes 
 <p>Capacité de 10 Mégabits/seconde.</p>
 </li>
 <li>Topologie en bus : toutes les machines sont raccordées au même câble</li>
-</ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000474000001144661A175.png" style="display:inline-block; margin:4px;width:9.051cm;height:2.191cm;" /></td></tr></table>
+</ol>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000474000001144661A175.png" style="display:inline-block; margin:4px;width:15.079cm;height:3.649cm;" /></td></tr></table>
 
-<ul>
+<ol>
 <li>Réseau diffusant - Une machine qui émet transfère des informations sur le câble avec l'adresse de la machine destinatrice. Toutes les machines raccordées reçoivent alors ces informations et seule celle à qui elles sont destinées les conserve.</li>
 <li>La méthode d'accès est la suivante : le transmetteur désirant émettre écoute le câble - il détecte alors la présence ou non d'une onde porteuse, présence qui signifierait qu'une transmission est en cours. C'est la technique <strong>CSMA</strong> (Carrier Sense Multiple Access). En l'absence de porteuse, un transmetteur peut décider de transmettre à son tour. Ils peuvent être plusieurs à prendre cette décision. Les signaux émis se mélangent : on dit qu'il y a <strong>collision</strong>. Le transmetteur détecte cette situation : en même temps qu'il émet sur le câble, il écoute ce qui passe réellement sur celui-ci. S'il détecte que l'information transitant sur le câble n'est pas celle qu'il a émise, il en déduit qu'il y a collision et il s'arrêtera d'émettre. Les autres transmetteurs qui émettaient feront de même. Chacun reprendra son émission après un temps aléatoire dépendant de chaque transmetteur. Cette technique est appelée <strong>CD</strong> (Collision Detect). La méthode d'accès est ainsi appelée <strong>CSMA/CD</strong>.</li>
 <li>un adressage sur 48 bits. Chaque machine a une adresse, appelée ici adresse physique, qui est inscrite sur la carte qui la relie au câble. On appelle cet adresse, l'adresse Ethernet de la machine.
 <strong>Couche Réseau</strong></li>
-</ul>
+</ol>
 <p>Nous trouvons au niveau de cette couche, les protocoles IP, ICMP, ARP et RARP.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>IP (Internet Protocol)
@@ -1741,7 +1741,7 @@ Les caractéristiques principales de la technologie Ethernet sont les suivantes 
 
 <h3 id="1114-fonctionnement-des-protocoles-de-linternet">11.1.4. Fonctionnement des protocoles de l'Internet</h3>
 <p>Les applications développées dans l'environnement TCP/IP utilisent généralement plusieurs des protocoles de cet environnement. Un programme d'application communique avec la couche la plus élevée des protocoles. Celle-ci passe l'information à la couche du dessous et ainsi de suite jusqu'à arriver sur le support physique. Là, l'information est physiquement transférée à la machine destinatrice où elle retraversera les mêmes couches, en sens inverse cette fois-ci, jusqu'à arriver à l'application destinatrice des informations envoyées. Le schéma suivant montre le parcours de l'information :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000579000002BD1D6E9D2D.png" style="display:inline-block; margin:4px;width:11.12cm;height:5.56cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000579000002BD1D6E9D2D.png" style="display:inline-block; margin:4px;width:16.679cm;height:8.34cm;" /></td></tr></table>
 
 <p>Prenons un exemple : l'application FTP, définie au niveau de la couche Application et qui permet des transferts de fichiers entre machines.</p>
 <ul>
@@ -1773,7 +1773,7 @@ Selon la taille de ces deux champs, les adresses IP sont divisées en 3 classes 
 <p>R1    est l'adresse du réseau</p>
 <p>N1.N2.N3    est l'adresse d'une machine dans ce réseau</p>
 <p>Plus exactement, la forme d'une adresse IP de classe A est la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000063300000098C2B06A24.png" style="display:inline-block; margin:4px;width:12.599cm;height:1.21cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000063300000098C2B06A24.png" style="display:inline-block; margin:4px;width:17.84cm;height:1.709cm;" /></td></tr></table>
 
 <p>L'adresse réseau est sur 7 bits et l'adresse du noeud sur 24 bits. On peut donc avoir 127 réseaux de classe A, chacun comportant jusqu'à 224 noeuds.</p>
 <p><strong>Classe B</strong></p>
@@ -1781,7 +1781,7 @@ Selon la taille de ces deux champs, les adresses IP sont divisées en 3 classes 
 <p>R1.R2    est l'adresse du réseau</p>
 <p>N1.N2    est l'adresse d'une machine dans ce réseau</p>
 <p>Plus exactement, la forme d'une adresse IP de classe B est la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006310000008E4046E65F.png" style="display:inline-block; margin:4px;width:12.58cm;height:1.131cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006310000008E4046E65F.png" style="display:inline-block; margin:4px;width:17.821cm;height:1.6cm;" /></td></tr></table>
 
 <p>L'adresse du réseau est sur 2 octets (14 bits exactement) ainsi que celle du noeud. On peut donc avoir 214 réseaux de classe B chacun comportant jusqu'à 216 noeuds.</p>
 <p><strong>Classe C</strong></p>
@@ -1789,7 +1789,7 @@ Selon la taille de ces deux champs, les adresses IP sont divisées en 3 classes 
 <p>R1.R2.R3    est l'adresse du réseau</p>
 <p>N1    est l'adresse d'une machine dans ce réseau</p>
 <p>Plus exactement, la forme d'une adresse IP de classe C est la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000652000000BD60944E62.png" style="display:inline-block; margin:4px;width:12.839cm;height:1.499cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000652000000BD60944E62.png" style="display:inline-block; margin:4px;width:18.189cm;height:2.12cm;" /></td></tr></table>
 
 <p>L'adresse réseau est sur 3 octets (moins 3 bits) et l'adresse du noeud sur 1 octet. On peut donc avoir 221 réseaux de classe C comportant jusqu'à 256 noeuds.</p>
 <p>L'adresse de la machine Lagaffe de la faculté des sciences d'Angers étant 193.49.144.1, on voit que l'octet de poids fort vaut 193, c'est à dire en binaire 11000001. On en déduit que le réseau est de classe C.</p>
@@ -1801,10 +1801,10 @@ Selon la taille de ces deux champs, les adresses IP sont divisées en 3 classes 
 </ul>
 <h4 id="11152-les-protocoles-de-conversion-adresse-internet-adresse-physique">11.1.5.2. Les protocoles de conversion Adresse Internet &lt;--&gt; Adresse physique</h4>
 <p>Nous avons vu que lors d'une émission d'informations d'une machine vers une autre, celles-ci à la traversée de la couche IP étaient encapsulées dans des paquets. Ceux-ci ont la forme suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000669000000B310010D2B.png" style="display:inline-block; margin:4px;width:13.019cm;height:1.42cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000669000000B310010D2B.png" style="display:inline-block; margin:4px;width:17.371cm;height:1.891cm;" /></td></tr></table>
 
 <p>Le paquet IP contient donc les adresses Internet des machines source et destination. Lorsque ce paquet va être transmis à la couche chargée de l'envoyer sur le réseau physique, d'autres informations lui sont ajoutées pour former la trame physique qui sera finalement envoyée sur le réseau. Par exemple, le format d'une trame sur un réseau Ethernet est le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005FE000000BA6559C484.png" style="display:inline-block; margin:4px;width:12.18cm;height:1.48cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005FE000000BA6559C484.png" style="display:inline-block; margin:4px;width:17.251cm;height:2.09cm;" /></td></tr></table>
 
 <p>Dans la trame finale, il y a l'adresse physique des machines source et destination. Comment sont-elles obtenues ?</p>
 <p>La machine expéditrice connaissant l'adresse IP de la machine avec qui elle veut communiquer obtient l'adresse physique de celle-ci en utilisant un protocole particulier appelé <strong>ARP</strong> (Address Resolution Protocol). </p>
@@ -1818,11 +1818,11 @@ L'adresse IP d'une machine est normalement inscrite dans l'un de ses fichiers qu
 <p>Lorsqu'un administrateur désire d'organiser son réseau différemment, il peut être amené à changer les adresses IP de tous les noeuds et donc à éditer les différents fichiers de configuration des différents noeuds. Cela peut être fastidieux et une occasion d'erreurs s'il y a beaucoup de machines. Une méthode  consiste à ne pas affecter d'adresse IP aux machines : on inscrit alors un code spécial dans le fichier dans lequel la machine devrait trouver son adresse IP. Découvrant qu'elle n'a pas d'adresse IP, la machine la demande selon un protocole appelé <strong>RARP</strong> (Reverse Address Resolution Protocol). Elle envoie alors sur un réseau un paquet spécial appelé paquet RARP, analogue au paquet ARP précédent, dans lequel elle met son adresse physique. Ce paquet est envoyé à tous les noeuds qui reconnaissent alors un paquet RARP. L'un d'entre-eux, appelé <strong>serveur RARP</strong>, possède un fichier donnant la correspondance adresse physique &lt;--&gt; adresse IP de tous les noeuds. Il répond alors à l'expéditeur du paquet RARP, en lui renvoyant son adresse IP. Un administrateur désirant reconfigurer son réseau, n'a donc qu'à éditer le fichier de correspondances du serveur RARP. Celui-ci doit normalement avoir une adresse IP fixe qu'il doit pouvoir connaître sans avoir à utiliser lui-même le protocole RARP.</p>
 <h3 id="1116-la-couche-reseau-dite-couche-ip-de-linternet">11.1.6. La couche réseau dite couche IP de l'internet</h3>
 <p>Le protocole IP (Internet Protocol) définit la forme que les paquets doivent prendre et la façon dont ils doivent être gérés lors de leur émission ou de leur réception. Ce type de paquet particulier est appelé un <strong>datagramme IP</strong>. Nous l'avons déjà présenté :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000671000000A77ADB03F7.png" style="display:inline-block; margin:4px;width:13.09cm;height:1.319cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000671000000A77ADB03F7.png" style="display:inline-block; margin:4px;width:17.45cm;height:1.769cm;" /></td></tr></table>
 
 <p>L'important est qu'outre les données à transmettre, le datagramme IP contient les adresses Internet des machines source et destination. Ainsi la machine destinatrice sait qui lui envoie un message.</p>
 <p>A la différence d'une trame de réseau qui a une longueur déterminée par les caractéristiques physiques du réseau sur lequel elle transite, la longueur du datagramme IP est elle fixée par le logiciel et sera donc la même sur différents réseaux physiques. Nous avons vu qu'en descendant de la couche réseau dans la couche physique le datagramme IP était encapsulé dans une trame physique. Nous avons donné l'exemple de la trame physique d'un réseau Ethernet :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005E60000009986258B9B.png" style="display:inline-block; margin:4px;width:11.989cm;height:1.21cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005E60000009986258B9B.png" style="display:inline-block; margin:4px;width:15.981cm;height:1.619cm;" /></td></tr></table>
 
 <p>Les trames physiques circulent de noeud en noeud vers leur destination qui peut ne pas être sur le même réseau physique que la machine expéditrice. Le paquet IP peut donc être encapsulé successivement dans des trames physiques différentes au niveau des noeuds qui font la jonction entre deux réseaux de type différent. Il se peut aussi que le paquet IP soit trop grand pour être encapsulé dans une trame physique. Le logiciel IP du noeud où se pose ce problème, décompose alors le paquet IP en fragments selon des règles précises, chacun d'eux étant ensuite envoyé sur le réseau physique. Ils ne seront réassemblés qu'à leur ultime destination.</p>
 <h4 id="11161-le-routage">11.1.6.1. Le routage</h4>
@@ -1837,7 +1837,7 @@ L'adresse IP d'une machine est normalement inscrite dans l'un de ses fichiers qu
 </ul>
 <p>Le routage indirect désigne l'acheminement d'un paquet IP à une destination se trouvant sur un autre réseau que celui auquel appartient l'expéditeur. Dans ce cas, les parties adresse réseau des adresses IP des machines source et destination sont différentes. La machine source reconnaît ce point. Elle envoie alors le paquet à un noeud spécial appelé <strong>routeur</strong> (router), noeud qui connecte un réseau local aux autres réseaux et dont elle trouve l'adresse IP dans ses tables, adresse obtenue initialement soit dans un fichier soit dans une mémoire permanente ou encore via des informations circulant sur le réseau. </p>
 <p>Un <strong>routeur</strong> est attaché à deux réseaux et possède une adresse IP à l'intérieur de ces deux réseaux.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000035E000000B07D9D8DDC.png" style="display:inline-block; margin:4px;width:6.84cm;height:1.401cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000035E000000B07D9D8DDC.png" style="display:inline-block; margin:4px;width:11.4cm;height:2.33cm;" /></td></tr></table>
 
 <p>Dans notre exemple ci-dessus :</p>
 <p>.    Le réseau n° 1 a l'adresse Internet 193.49.144.0 et le réseau n° 2 l'adresse 193.49.145.0.</p>
@@ -1851,7 +1851,7 @@ L'adresse IP d'une machine est normalement inscrite dans l'un de ses fichiers qu
 <p>Le protocole UDP permet un échange non fiable de données entre deux points, c'est à dire que le bon acheminement d'un paquet à sa destination n'est pas garanti. L'application, si elle le souhaite peut gérer cela elle-même, en attendant par exemple après l'envoi d'un message, un accusé de réception, avant d'envoyer le suivant.</p>
 <p>Pour l'instant, au niveau réseau, nous avons parlé d'adresses IP de machines. Or sur une machine, peuvent coexister en même temps différents processus qui tous peuvent communiquer. Il faut donc indiquer, lors de l'envoi d'un message, non seulement l'adresse IP de la machine destinatrice, mais également le "nom" du processus destinataire. Ce nom est en fait un numéro, appelé <strong>numéro de port</strong>. Certains numéros sont réservés à des applications standard : port 69 pour l'application <strong>tftp</strong> (trivial file transfer protocol) par exemple.</p>
 <p>Les paquets gérés par le protocole UDP sont appelés également des <strong>datagrammes</strong>. Ils ont la forme suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005830000009C049F728F.png" style="display:inline-block; margin:4px;width:11.201cm;height:1.24cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005830000009C049F728F.png" style="display:inline-block; margin:4px;width:15.861cm;height:1.75cm;" /></td></tr></table>
 
 <p>Ces datagrammes seront encapsulés dans des paquets IP, puis dans des trames physiques.</p>
 <h4 id="11172-le-protocole-tcp-transfer-control-protocol">11.1.7.2. Le protocole TCP : Transfer Control Protocol</h4>
@@ -2142,19 +2142,19 @@ Une machine peut être aussi définie par un nom également unique. Ce nom n'est
 <h2 id="113-les-bases-de-la-programmation-internet">11.3. Les bases de la programmation internet</h2>
 <h3 id="1131-generalites">11.3.1. Généralités</h3>
 <p>Considérons la communication entre deux machines distantes A et B :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003CF000001AF9D677C08.png" style="display:inline-block; margin:4px;width:7.74cm;height:3.42cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003CF000001AF9D677C08.png" style="display:inline-block; margin:4px;width:12.899cm;height:5.701cm;" /></td></tr></table>
 
 <p>Lorsque une application AppA d'une machine A veut  communiquer avec une application AppB d'une machine B de l'Internet, elle doit connaître plusieurs choses :</p>
-<ul>
+<ol>
 <li>l'adresse IP ou le nom de la machine B</li>
 <li>le numéro du port avec lequel travaille l'application AppB. En effet la machine B peut supporter de nombreuses applications qui travaillent sur l'Internet. Lorsqu'elle reçoit des informations provenant du réseau, elle doit savoir à quelle application sont destinées ces informations. Les applications de la machine B ont accès au réseau via des guichets appelés également des <strong>ports de communication</strong>. Cette information est contenue dans le paquet reçu par la machine B afin qu'il soit délivré à la bonne application.</li>
 <li>les protocoles de communication compris par la machine B. Dans notre étude, nous utiliserons uniquement les protocoles TCP-IP.</li>
 <li>le protocole de dialogue accepté par l'application AppB. En effet, les machines A et B vont se "parler". Ce qu'elles vont dire va être encapsulé dans les protocoles TCP-IP. Néanmoins, lorsqu'au bout de la chaîne, l'application AppB va recevoir l'information envoyée par l'applicaton AppA, il faut qu'elle soit capable de l'interpréter. Ceci est analogue à la situation où deux personnes A et B communiquent par téléphone : leur dialogue est transporté par le téléphone. La parole va être codée sous forme de signaux par le téléphone A, transportée par des lignes téléphoniques, arriver au téléphone B pour y être décodée. La personne B entend alors des paroles. C'est là qu'intervient la notion de protocole de dialogue : si A parle français et que B ne comprend pas cette langue, A et B ne pourront dialoguer utilement.
 Aussi les deux applications communicantes doivent -elles être d'accord sur le type de dialogue qu'elles vont adopter. Par exemple, le dialogue avec un service ftp n'est pas le même qu'avec un service pop : ces deux services n'acceptent pas les mêmes commandes.  Elles ont un protocole de dialogue différent.</li>
-</ul>
+</ol>
 <h3 id="1132-les-caracteristiques-du-protocole-tcp">11.3.2. Les caractéristiques du protocole TCP</h3>
 <p>Nous n'étudierons ici que des communications réseau utilisant le protocole de transport TCP. Rappelons ici, les caractéristiques de celui-ci : </p>
-<ul>
+<ol>
 <li>Le processus qui souhaite émettre établit tout d'abord une <strong>connexion</strong> avec le processus destinataire des informations qu'il va émettre. Cette connexion se fait entre un port de la machine émettrice et un port de la machine réceptrice. Il y a entre les deux ports un chemin virtuel qui est ainsi créé et qui sera réservé aux deux seuls processus ayant réalisé la connexion.</li>
 <li>Tous les paquets émis par le processus source suivent ce chemin virtuel et arrivent dans l'ordre où ils ont été émis</li>
 <li>L'information émise a un aspect continu. Le processus émetteur envoie des informations à son rythme. Celles-ci ne sont pas nécessairement envoyées tout de suite : le protocole TCP attend d'en avoir assez pour les envoyer. Elles sont stockées dans une structure appelée segment TCP. Ce segment une fois rempli sera transmis à la couche IP où il sera encapsulé dans un paquet IP.</li>
@@ -2162,7 +2162,7 @@ Aussi les deux applications communicantes doivent -elles être d'accord sur le t
 <li>Lorsque ce dernier le reçoit, il l'indique au processus émetteur. Celui-ci peut donc savoir qu'un segment est arrivé à bon port.</li>
 <li>Si au bout d'un certain temps, le protocole TCP ayant émis un segment ne reçoit pas d'accusé de réception, il retransmet le segment en question, garantissant ainsi la qualité du service d'acheminement de l'information.</li>
 <li>Le circuit virtuel établi entre les deux processus qui communiquent est full-duplex : cela signifie que l'information peut transiter dans les deux sens. Ainsi le processus destination peut envoyer des accusés de réception alors même que le processus source continue d'envoyer des informations. Cela permet par exemple au protocole TCP source d'envoyer plusieurs segments sans attendre d'accusé de réception. S'il réalise au bout d'un certain temps qu'il n'a pas reçu l'accusé de réception d'un certain segment n° n, il reprendra l'émission des segments à ce point.</li>
-</ul>
+</ol>
 <h3 id="1133-la-relation-client-serveur">11.3.3. La relation client-serveur</h3>
 <p>Souvent, la communication sur Internet est dissymétrique : la machine A initie une connexion pour demander un service à la machine B : il précise qu'il veut ouvrir une connexion avec le service SB1 de la machine B. Celle-ci accepte ou refuse. Si elle accepte, la machine A peut envoyer ses demandes au service SB1. Celles-ci doivent se conformer au protocole de dialogue compris par le service SB1. Un dialogue demande-réponse s'instaure ainsi entre la machine A qu'on appelle machine <strong>cliente</strong> et la machine B qu'on appelle machine <strong>serveur</strong>. L'un des deux partenaires fermera la connexion.</p>
 <h3 id="1134-architecture-dun-client">11.3.4. Architecture d'un client</h3>
@@ -2232,7 +2232,7 @@ Tous ces protocoles ont la particularité d'être des protocoles à lignes de te
 alors on est capable de dialoguer avec un serveur Tcp ayant un protocole à lignes de texte pour peu qu'on connaisse les règles de ce protocole.</li>
 </ul>
 <p>Le programme <strong>telnet</strong> qu'on trouve sur les machines Unix ou Windows est un tel client. Sur les machines Windows, on trouve également un outil appelé <strong>putty</strong> et c'est lui que nous allons utiliser ici. <strong>putty</strong> est téléchargeable à l'adresse [http://www.putty.org/]. C'est un exécutable (.exe) directement utilisable. Nous le configurerons de la façon suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007C0000003C1BCB0FAD5.png" style="display:inline-block; margin:4px;width:15.75cm;height:7.631cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007C0000003C1BCB0FAD5.png" style="display:inline-block; margin:4px;width:18.369cm;height:8.901cm;" /></td></tr></table>
 
 <ul>
 <li>[1] : l'adresse IP du serveur Tcp auquel on veut se connceter ou son nom</li>
@@ -2242,7 +2242,7 @@ alors on est capable de dialoguer avec un serveur Tcp ayant un protocole à lign
 <li>[6,7] : nombre de colonnes / lignes de la console</li>
 <li>[5] : le nombre maximal de lignes conservées en mémoire. Un serveur HTTP peut envoyer beaucoup de lignes. Il faut pouvoir "scroller" dessus.</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007AE000002A35A24A593.png" style="display:inline-block; margin:4px;width:15.61cm;height:5.36cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007AE000002A35A24A593.png" style="display:inline-block; margin:4px;width:18.21cm;height:6.249cm;" /></td></tr></table>
 
 <ul>
 <li>[8,9] : pour conserver les paramètres précédents, donner un nom à la configuration [8] et la sauvegarder [9].</li>
@@ -2251,7 +2251,7 @@ Avec cet outil ainsi configuré, découvrons quelques protocoles TCP.</li>
 </ul>
 <h3 id="1142-le-protocole-http-hypertext-transfer-protocol">11.4.2. Le protocole HTTP (HyperText Transfer Protocol)</h3>
 <p>Connectons [1] notre client TCP sur le serveur web de la machine istia.univ-angers.fr [2], port 80 [3] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002990000031AC9F4B0B4.png" style="display:inline-block; margin:4px;width:5.279cm;height:6.301cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002990000031AC9F4B0B4.png" style="display:inline-block; margin:4px;width:8.8cm;height:10.5cm;" /></td></tr></table>
 
 <p>Dans la console de putty, nous construisons le dialogue HTTP suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1"> 1</a></span>
@@ -2314,7 +2314,7 @@ Avec cet outil ainsi configuré, découvrons quelques protocoles TCP.</li>
 <li>lignes 15-18 : partie du document reçu.
 La connexion a été fermée et le client putty est inactif. Reconnectons-nous [1] et nettoyons l'écran des affichages précédents [2,3] :</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000739000002E19BA2FFDE.png" style="display:inline-block; margin:4px;width:14.681cm;height:5.851cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000739000002E19BA2FFDE.png" style="display:inline-block; margin:4px;width:18.339cm;height:7.31cm;" /></td></tr></table>
 
 <p>Le dialogue cette fois-ci est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1"> 1</a></span>
@@ -2368,7 +2368,7 @@ La connexion a été fermée et le client putty est inactif. Reconnectons-nous [
 <li>ligne 5 : le serveur HTTP a répondu avec le code 404 signifiant que le document demandé n'a pas été trouvé.
 Si on demande ce document avec un navigateur Firefox :</li>
 </ul>
-<p><img src="images/100000000000018A000000E54C615790.png" style="width:7.301cm;height:4.24cm;" alt="Image" /></p>
+<p><img src="images/100000000000018A000000E54C615790.png" style="width:10.419cm;height:6.061cm;" alt="Image" /></p>
 <p>Si nous demandons à voir le code source [Affichage/Code source] :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-1">1</a></span>
 <span class="normal"><a href="#__codelineno-42-2">2</a></span>
@@ -2390,7 +2390,7 @@ Si on demande ce document avec un navigateur Firefox :</li>
 </code></pre></div></td></tr></table></div>
 <p>Nous obtenons les lignes 13-22 reçues par notre client putty. L'intérêt de celui-ci est de nous montrer en plus, les entêtes HTTP de la réponse. Il est également possible d'avoir ceux-ci avec Firefox.</p>
 <h3 id="1143-le-protocole-smtp-simple-mail-transfer-protocol">11.4.3. Le protocole SMTP (Simple Mail Transfer Protocol)</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006F6000002A685C18185.png" style="display:inline-block; margin:4px;width:14.139cm;height:5.38cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006F6000002A685C18185.png" style="display:inline-block; margin:4px;width:18.86cm;height:7.181cm;" /></td></tr></table>
 
 <p>Les serveurs SMTP opèrent en général sur le port 25 [2]. On se connecte sur le serveur [1]. Ici, il faut en général prendre un serveur </p>
 <p>appartenant au même domaine IP que la machine car le plus souvent les serveurs SMTP sont configurés pour n'accepter que les demandes des machines appartenant au même domaine qu'eux. Par ailleurs, assez souvent également, les pare-feu ou antivirus des machines personnelles sont configurés pour ne pas accepter de connexion vers le port 25 d'une machine extérieure. Il peut être alors nécessaire de reconfigurer [3] ce pare-feu ou antivirus.</p>
@@ -2442,7 +2442,7 @@ Si on demande ce document avec un navigateur Firefox :</li>
 <li>ligne 15 : (R) réponse du serveur qui ensuite ferme la connexion</li>
 </ul>
 <h3 id="1144-le-protocole-pop-post-office-protocol">11.4.4. Le protocole POP (Post Office Protocol)</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028A0000012AAEA3212D.png" style="display:inline-block; margin:4px;width:5.159cm;height:2.371cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028A0000012AAEA3212D.png" style="display:inline-block; margin:4px;width:8.601cm;height:3.941cm;" /></td></tr></table>
 
 <p>Les serveurs POP opèrent en général sur le port 110 [2]. On se connecte sur le serveur [1]. Le dialogue POP dans la fenêtre du client putty est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1"> 1</a></span>
@@ -2514,13 +2514,13 @@ Si on demande ce document avec un navigateur Firefox :</li>
 </ul>
 <h3 id="1145-le-protocole-ftp-file-transfer-protocol">11.4.5. Le protocole FTP (File Transfer Protocol)</h3>
 <p>Le protocole FTP est plus complexe que ceux présentés précédemment. Pour découvrir les lignes de texte échangées entre le client et le serveur, on pourra utiliser un outil tel que FileZilla [http://www.filezilla.fr/].</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000055D00000276FBE1DE34.png" style="display:inline-block; margin:4px;width:10.901cm;height:5.001cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000055D00000276FBE1DE34.png" style="display:inline-block; margin:4px;width:18.159cm;height:8.331cm;" /></td></tr></table>
 
 <p>Filezilla est un client FTP offrant une interface windows pour faire des transferts de fichiers. Les actions de l'utilisateur sur l'interface windows sont traduites en commandes FTP qui sont loguées en [1]. C'est une bonne façon de découvrir les commandes du protocole FTP.</p>
 <h2 id="115-les-classes-net-de-la-programmation-internet">11.5. Les classes .NET de la programmation internet</h2>
 <h3 id="1151-choisir-la-classe-adaptee">11.5.1. Choisir la classe adaptée</h3>
 <p>Le framework .NET offre différentes classes pour travailler avec le réseau :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000590000001A2878DB17D.png" style="display:inline-block; margin:4px;width:11.299cm;height:3.32cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000590000001A2878DB17D.png" style="display:inline-block; margin:4px;width:16.949cm;height:4.979cm;" /></td></tr></table>
 
 <ul>
 <li>la classe <strong>Socket</strong> est celle qui opère le plus près du réseau. Elle permet de gérer finement la connexion réseau. Le terme socket désigne une prise de courant. Le terme a été étendu pour désigner une prise de réseau logicielle. Dans une communication TCP-IP entre deux machines A et B, ce sont deux sockets qui communiquent entre-eux. Une application peut travailler directement avec les sockets. C'est le cas de l'application A ci-dessus. Un socket peut être un socket client ou serveur.</li>
@@ -3103,7 +3103,7 @@ Dans une fenêtre Dos, nous utilisons l'exécutable du projet C# :</li>
 <a id="__codelineno-65-2" name="__codelineno-65-2"></a>Serveur d&#39;écho lancé sur le port 0.0.0.0:100
 </code></pre></div></td></tr></table></div>
 <p>Nous lançons ensuite deux clients putty que nous connectons au port 100 de la machine localhost :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000011A000000BD89A3E647.png" style="display:inline-block; margin:4px;width:5.219cm;height:3.5cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000011A000000BD89A3E647.png" style="display:inline-block; margin:4px;width:7.459cm;height:5.001cm;" /></td></tr></table>
 
 <p>L'affichage console du serveur d'écho devient :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-66-1">1</a></span>
@@ -3113,14 +3113,14 @@ Dans une fenêtre Dos, nous utilisons l'exécutable du projet C# :</li>
 <a id="__codelineno-66-3" name="__codelineno-66-3"></a>Début de service au client 1
 </code></pre></div></td></tr></table></div>
 <p>Le client 1 puis le client 0 envoient les textes suivants :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000074600000134C7A1298D.png" style="display:inline-block; margin:4px;width:14.78cm;height:2.439cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000074600000134C7A1298D.png" style="display:inline-block; margin:4px;width:19.71cm;height:3.26cm;" /></td></tr></table>
 
 <ul>
 <li>[1] : le client n° 1</li>
 <li>[2] : le client n° 0</li>
 <li>[3] : la console du serveur d'écho</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077E000001B80C2B37CB.png" style="display:inline-block; margin:4px;width:15.221cm;height:3.491cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077E000001B80C2B37CB.png" style="display:inline-block; margin:4px;width:17.761cm;height:4.069cm;" /></td></tr></table>
 
 <ul>
 <li>en [4] : le client 1 se déconnecte avec la commande bye.</li>
@@ -3262,11 +3262,11 @@ Le serveur peut être arrêté par Ctrl-C. Le client n° 0 le détecte alors [6]
 <a id="__codelineno-67-65" name="__codelineno-67-65"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>La structure de ce client est conforme à l'architecture générale basique proposée pour les clients Tcp. Voici les résultats obtenus dans la configuration suivante :</p>
-<ul>
+<ol>
 <li>le serveur est lancé sur le port 100 dans une fenêtre Dos</li>
 <li>sur la même machine deux clients sont lancés dans deux autres fenêtres Dos
 Dans la fenêtre du client A (n° 0) on a les affichages suivants :</li>
-</ul>
+</ol>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-68-1">1</a></span>
 <span class="normal"><a href="#__codelineno-68-2">2</a></span>
 <span class="normal"><a href="#__codelineno-68-3">3</a></span>
@@ -3336,7 +3336,7 @@ Dans la fenêtre du client A (n° 0) on a les affichages suivants :</li>
 <h3 id="1163-un-client-tcp-generique">11.6.3. Un client TCP générique</h3>
 <p>Nous allons écrire un client Tcp générique qui sera lancé de la façon suivante : <strong>ClientTcpGenerique serveur port</strong>. Il aura un fonctionnement analogue au client putty mais aura une interface console et ne présentera pas d'option de configuration.</p>
 <p>Dans l'application précédente, le protocole du dialogue était connu : le client envoyait une seule ligne et le serveur répondait par une seule ligne. Chaque service a son protocole particulier et on trouve également les situations suivantes :</p>
-<ul>
+<ol>
 <li>le client doit envoyer plusieurs lignes de texte avant d'avoir une réponse</li>
 <li>
 <p>la réponse d'un serveur peut comporter plusieurs lignes de texte
@@ -3347,7 +3347,7 @@ Aussi le cycle envoi d'une unique ligne au serveur / réception d'une unique lig
 </li>
 <li>un thread secondaire travaillera en parallèle et sera consacré à la lecture des lignes de texte envoyées par le serveur. Dès qu'il en reçoit une, il l'affiche sur la console. Le thread ne s'arrête que lorsque le serveur clôt la connexion. Il travaille donc en continu.
 Le code est le suivant :</li>
-</ul>
+</ol>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-73-1">  1</a></span>
 <span class="normal"><a href="#__codelineno-73-2">  2</a></span>
 <span class="normal"><a href="#__codelineno-73-3">  3</a></span>
@@ -3554,7 +3554,7 @@ Le code est le suivant :</li>
 <li>lignes 57-64 : la boucle saisie commande clavier / envoi commande au serveur. La saisie des commandes clavier est assurée par le thread principal.</li>
 <li>lignes 75-98 :  la méthode Receive exécutée par le thread de lecture des lignes de texte. Cette méthode reçoit en paramètre l'instance TcpClient qui a été connectée au serveur.</li>
 <li>lignes 84-87 : la boucle en continu de lecture des lignes de texte envoyées par le serveur. Elle ne s'arrête que lorsque le serveur clôt la connexion ouverte avec le client.
-Voici quelques exemples reprenant ceux utilisés avec le client putty au paragraphe 11.4, page 319. Le client est exécuté dans une console Dos.</li>
+Voici quelques exemples reprenant ceux utilisés avec le client putty au paragraphe 11.4, page 332. Le client est exécuté dans une console Dos.</li>
 </ul>
 <p><u><strong>Protocole HTTP</strong></u></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-74-1"> 1</a></span>
@@ -3619,7 +3619,7 @@ Voici quelques exemples reprenant ceux utilisés avec le client putty au paragra
 <a id="__codelineno-74-30" name="__codelineno-74-30"></a>
 <a id="__codelineno-74-31" name="__codelineno-74-31"></a>...\Chap9\04\bin\Release&gt;
 </code></pre></div></td></tr></table></div>
-<p>Le lecteur est invité à relire les explications données au paragraphe 11.4.2, page 320. Nous ne commentons que ce qui est propre à l'application :</p>
+<p>Le lecteur est invité à relire les explications données au paragraphe 11.4.2, page 334. Nous ne commentons que ce qui est propre à l'application :</p>
 <ul>
 <li>ligne 28 : après l'envoi de la ligne 27, le serveur HTTP a fermé la connexion, ce qui a provoqué la fin du thread de lecture. Le thread principal qui lit les commandes tapées au clavier est lui toujours actif. La commande de la ligne 29, tapée au clavier, l'arrête.
 <u><strong>Protocole SMTP</strong></u></li>
@@ -3666,10 +3666,10 @@ Voici quelques exemples reprenant ceux utilisés avec le client putty au paragra
 <a id="__codelineno-75-20" name="__codelineno-75-20"></a>
 <a id="__codelineno-75-21" name="__codelineno-75-21"></a>...\Chap9\04\bin\Release&gt;
 </code></pre></div></td></tr></table></div>
-<p>Le lecteur est invité à relire les explications données au paragraphe 11.4.3, page 322 et à tester les autres exemples utilisés avec le client putty.</p>
+<p>Le lecteur est invité à relire les explications données au paragraphe 11.4.3, page 336 et à tester les autres exemples utilisés avec le client putty.</p>
 <h3 id="1164-un-serveur-tcp-generique">11.6.4. Un serveur Tcp générique</h3>
 <p>Maintenant nous nous intéressons à un serveur</p>
-<ul>
+<ol>
 <li>qui affiche à l'écran les commandes envoyées par ses clients</li>
 <li>
 <p>leur envoie comme réponse les lignes de texte tapées au clavier par un utilisateur. C'est donc ce dernier qui fait office de serveur.
@@ -3682,8 +3682,8 @@ Le programme est lancé dans une fenêtre Dos par : <strong>ServeurTcpGenerique 
 <li>qui lira les lignes tapées au clavier par l'utilisateur et les enverra au client. L'utilisateur signalera par la commande <strong>bye</strong> qu'il clôt la connexion avec le client. C'est parce que la console ne peut être utilisée pour deux clients simultanément que notre serveur ne traite qu'un client à la fois.</li>
 <li>un thread secondaire se consacrant exclusivement à la lecture des lignes de texte envoyées par le client
 Le serveur lui ne s'arrête jamais sauf par un Ctrl-C tapé au clavier par l'utilisateur.</li>
-</ul>
-<p>Voyons quelques exemples. Le serveur est lancé sur le port 100 et on utilise le client générique du paragraphe11.6.3, page 332, pour lui parler. La fenêtre du client est la suivante :</p>
+</ol>
+<p>Voyons quelques exemples. Le serveur est lancé sur le port 100 et on utilise le client générique du paragraphe11.6.3, page 347, pour lui parler. La fenêtre du client est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-76-1">1</a></span>
 <span class="normal"><a href="#__codelineno-76-2">2</a></span>
 <span class="normal"><a href="#__codelineno-76-3">3</a></span>
@@ -3752,7 +3752,7 @@ Le serveur lui ne s'arrête jamais sauf par un Ctrl-C tapé au clavier par l'uti
 <a id="__codelineno-80-3" name="__codelineno-80-3"></a>Serveur générique lancé sur le port 0.0.0.0:88
 </code></pre></div></td></tr></table></div>
 <p>Prenons maintenant un navigateur et demandons l'URL http://localhost:88/exemple.html. Le navigateur va alors se connecter sur le port 88 de la machine localhost puis demander la page /exemple.html :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001440000007649125C00.png" style="display:inline-block; margin:4px;width:6.001cm;height:2.191cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001440000007649125C00.png" style="display:inline-block; margin:4px;width:8.571cm;height:3.12cm;" /></td></tr></table>
 
 <p>Regardons maintenant la fenêtre de notre serveur :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-81-1"> 1</a></span>
@@ -3841,7 +3841,7 @@ Le serveur lui ne s'arrête jamais sauf par un Ctrl-C tapé au clavier par l'uti
 </code></pre></div></td></tr></table></div>
 <p>Nous nous sommes limités dans notre réponse aux entêtes HTTP des lignes 1-4. Nous ne donnons pas la taille du document que nous allons envoyer (Content-Length) mais nous contentons de dire que nous allons fermer la connexion (Connection: close) après envoi de celui-ci. Cela est suffisant pour le navigateur. En voyant la connexion fermée, il saura que la réponse du serveur est terminée et affichera la page HTML qui lui a été envoyée. Cette dernière est celle des lignes 6-9. L'utilisateur au clavier ferme ensuite la connexion au client en tapant la commande bye, ligne 10. Sur cette commande clavier le thread principal ferme la connexion avec le client. Ceci provoque l'exception de la ligne 11. Le thread de lecture des lignes de texte du client a été interrompu brutalement par la fermeture de la liaison avec le client et a lancé une exception. Après la ligne 12, le serveur se met en attente d'un nouveau client.</p>
 <p>Le navigateur client affiche désormais la chose suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007BE000001D16DBC52BB.png" style="display:inline-block; margin:4px;width:15.73cm;height:3.69cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007BE000001D16DBC52BB.png" style="display:inline-block; margin:4px;width:18.35cm;height:4.3cm;" /></td></tr></table>
 
 <p>Si ci-dessus, on fait Affichage/Source pour voir ce qu'a reçu le navigateur, on obtient [2], c'est à dire exactement ce qu'on a envoyé depuis le serveur générique.</p>
 <p>Le code du serveur TCP générique est le suivant :</p>
@@ -4098,12 +4098,12 @@ Le serveur lui ne s'arrête jamais sauf par un Ctrl-C tapé au clavier par l'uti
 <a id="__codelineno-86-3" name="__codelineno-86-3"></a>&lt;-- Connection: close
 <a id="__codelineno-86-4" name="__codelineno-86-4"></a>&lt;--
 </code></pre></div></td></tr></table></div>
-<ul>
+<ol>
 <li>le premier entête indique le document désiré</li>
 <li>le second le serveur interrogé</li>
 <li>le troisième que nous souhaitons que le serveur ferme la connexion après nous avoir répondu.
 Si ci-dessus ligne 1, nous remplaçons GET par HEAD, le serveur ne nous enverra que les entêtes HTTP et pas le document précisé ligne 1. </li>
-</ul>
+</ol>
 <p>Notre client web sera appelé de la façon suivante : <strong>ClientWeb URL cmd</strong>, où <strong>URL</strong> est l'URL désirée et <strong>cmd</strong> l'un des deux mots clés GET ou HEAD pour indiquer si on souhaite seulement les entêtes (HEAD) ou également le contenu de la page (GET). Regardons un premier exemple :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-87-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-87-2"> 2</a></span>
@@ -4798,7 +4798,7 @@ Le programme gérant la redirection est le suivant :</li>
 <h2 id="117-les-classes-net-specialisees-dans-un-protocole-particulier-de-linternet">11.7. Les classes .NET spécialisées dans un protocole particulier de l'internet</h2>
 <p>Dans les exemples précédents du client web, le protocole HTTP était géré avec un client TCP. Il nous fallait donc gérer nous-mêmes le protocole de communication particulier utilisé. Nous aurions pu construire de façon analogue, un client SMTP ou POP. Le framework .NET offre des classes spécialisées pour les protocoles HTTP et SMTP. Ces classes connaissent le protocole de communication entre le client et le serveur et évitent au développeur d'avoir à les gérer. Nous les présentons maintenant.</p>
 <h3 id="1171-la-classewebclient">11.7.1. La classeWebClient</h3>
-<p>Il existe une classe WebClient sachant dialoguer avec un serveur web. Considérons l'exemple du client web du paragraphe 11.6.5, page 339, traité ici avec la classe WebClient.</p>
+<p>Il existe une classe WebClient sachant dialoguer avec un serveur web. Considérons l'exemple du client web du paragraphe 11.6.5, page 353, traité ici avec la classe WebClient.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-97-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-97-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-97-3"> 3</a></span>
@@ -4924,7 +4924,7 @@ Le programme gérant la redirection est le suivant :</li>
 <li>ligne 51 : les exceptions qui sont levées lors d'un échange client / serveur sont de type WebException.
 Voyons quelques exemples.</li>
 </ul>
-<p>On lance le serveur TCP générique construit au paragraphe 6.4.6, page 157 :</p>
+<p>On lance le serveur TCP générique construit au paragraphe 6.4.6, page 162 :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-98-1">1</a></span>
 <span class="normal"><a href="#__codelineno-98-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-98-1" name="__codelineno-98-1"></a>...\Chap9\05\bin\Release&gt;ServeurTcpGenerique.exe 88
 <a id="__codelineno-98-2" name="__codelineno-98-2"></a>Serveur générique lancé sur le port 0.0.0.0:88
@@ -5055,7 +5055,7 @@ La classe WebClient dispose de méthodes permettant de recevoir un document (mé
 </div><p style="margin:0;">La différence entre les deux méthodes est que le navigateur affichant l'Uri demandée, affichera /document dans le cas du POST et /document?param1=valeur1&amp;param2=valeur2&amp;... dans le cas du GET.</p></td></tr></table>
 
 <h3 id="1172-les-classes-webrequest-webresponse">11.7.2. Les classes WebRequest / WebResponse</h3>
-<p>Parfois la classe WebClient n'est pas suffisamment souple pour faire ce que l'on souhaite. Reprenons l'exemple du client web avec redirection étudié au paragraphe 11.6.6, page 341. Il nous faut émettre l'entête HTTP :</p>
+<p>Parfois la classe WebClient n'est pas suffisamment souple pour faire ce que l'on souhaite. Reprenons l'exemple du client web avec redirection étudié au paragraphe 11.6.6, page 355. Il nous faut émettre l'entête HTTP :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-114-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-114-1" name="__codelineno-114-1"></a>HEAD /document HTTP/1.1
 </code></pre></div></td></tr></table></div>
 <p>Nous avons vu que les entêtes HTTP émis par défaut par le client web étaient les suivants :</p>
@@ -5076,7 +5076,7 @@ Nous avons dit que la classe WebClient gérait les schémas <strong>http:</stron
 <p><strong>HttpWebRequest</strong>, <strong>HttpWebResponse</strong> pour un client HTTP</p>
 </li>
 <li><strong>FtpWebRequest</strong>, <strong>FtpWebResponse</strong> pour un client FTP
-Nous traitons maintenant avec les classes HttpWebRequest et HttpWebresponse l'exemple du client web avec redirection étudié au paragraphe 11.6.6, page 341. Le code est le suivant :</li>
+Nous traitons maintenant avec les classes HttpWebRequest et HttpWebresponse l'exemple du client web avec redirection étudié au paragraphe 11.6.6, page 355. Le code est le suivant :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-116-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-116-2"> 2</a></span>
@@ -5271,18 +5271,18 @@ Voici un exemple d'exécution :</li>
 <p>Nous montrons maintenant comment les classes précédentes nous permettent d'exploiter les ressources du web.</p>
 <h4 id="11731-lapplication">11.7.3.1. L'application</h4>
 <p>Il existe sur le web des sites de traduction. Celui qui sera utilisé ici est le site <strong>http://trans.voila.fr/traduction_voila.php</strong> :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003CA000001F85CBD50C9.png" style="display:inline-block; margin:4px;width:7.699cm;height:4.001cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Le texte à traduire est inséré dans [1], le sens de traduction est choisi dans [2]. La traduction est demandée par [3] et obtenue en [4].</p></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003CA000001F85CBD50C9.png" style="display:inline-block; margin:4px;width:11.55cm;height:6.001cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Le texte à traduire est inséré dans [1], le sens de traduction est choisi dans [2]. La traduction est demandée par [3] et obtenue en [4].</p></td></tr></table>
 
 <p>Nous allons écrire une application windows cliente de l'application ci-dessus. Elle ne fera rien de plus que l'application du site [trans.voila.fr]. Son interface sera la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051E0000027942B8E9D2.png" style="display:inline-block; margin:4px;width:10.4cm;height:5.02cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051E0000027942B8E9D2.png" style="display:inline-block; margin:4px;width:15.6cm;height:7.541cm;" /></td></tr></table>
 
 <h4 id="11732-larchitecture-de-lapplication">11.7.3.2. L'architecture de l'application</h4>
 <p>L'application aura l'architecture 2 couches suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000665000001B6F3BCDC44.png" style="display:inline-block; margin:4px;width:12.989cm;height:3.48cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000665000001B6F3BCDC44.png" style="display:inline-block; margin:4px;width:17.32cm;height:4.641cm;" /></td></tr></table>
 
 <h4 id="11733-le-projet-visual-studio">11.7.3.3. Le projet Visual studio</h4>
 <p>Le projet Visual studio sera le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006F800000152006F6E1D.png" style="display:inline-block; margin:4px;width:14.161cm;height:2.679cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006F800000152006F6E1D.png" style="display:inline-block; margin:4px;width:17.701cm;height:3.35cm;" /></td></tr></table>
 
 <ul>
 <li>en [1], la solution est composée de deux projets, </li>
@@ -5369,7 +5369,7 @@ L'interface <strong>IServiceTraduction</strong> est la suivante :</li>
 </ul>
 <h4 id="11735-le-client-web-servicetraduction">11.7.3.5. Le client web [ServiceTraduction]</h4>
 <p>Revenons sur l'architecture de notre application :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000661000001B5C78CCC5A.png" style="display:inline-block; margin:4px;width:12.959cm;height:3.47cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000661000001B5C78CCC5A.png" style="display:inline-block; margin:4px;width:17.281cm;height:4.62cm;" /></td></tr></table>
 
 <p>La classe [ServiceTraduction] que nous devons écrire est un client du service web de traduction [trans.voila.fr]. Pour l'écrire, il nous faut comprendre </p>
 <ul>
@@ -5377,7 +5377,7 @@ L'interface <strong>IServiceTraduction</strong> est la suivante :</li>
 <li>ce qu'il renvoie en retour à son client
 Voyons sur un exemple le dialogue client / serveur qui intervient dans une traduction. Reprenons l'exemple présenté en introduction de l'application :</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000399000001E5379B3876.png" style="display:inline-block; margin:4px;width:8.8cm;height:4.634cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Le texte à traduire est inséré dans [1], le sens de traduction est choisi dans [2]. La traduction est demandée par [3] et obtenue en [4].</p></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000399000001E5379B3876.png" style="display:inline-block; margin:4px;width:10.961cm;height:5.77cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Le texte à traduire est inséré dans [1], le sens de traduction est choisi dans [2]. La traduction est demandée par [3] et obtenue en [4].</p></td></tr></table>
 
 <p>Pour obtenir la traduction [4], le navigateur a envoyé la requête GET suivante (affichée dans son champ d'adresse) :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-121-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-121-1" name="__codelineno-121-1"></a>http://trans.voila.fr/traduction_voila.php?isText=1&amp;translationDirection=fe&amp;stext=ce+chien+est+malade
@@ -5710,14 +5710,14 @@ Notre exemple suppose que le proxy Http ne nécessite pas d'authentification. Si
 <a id="__codelineno-129-4" name="__codelineno-129-4"></a>Traduction [Anglais-Français] de [xx] : [xx]
 </code></pre></div></td></tr></table></div>
 <p>Le projet [dao] de la solution est compilée en une DLL HttpTraductions.dll :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000292000000B07A574189.png" style="display:inline-block; margin:4px;width:12.19cm;height:3.26cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000292000000B07A574189.png" style="display:inline-block; margin:4px;width:17.41cm;height:4.66cm;" /></td></tr></table>
 
 <h4 id="11736-linterface-graphique-de-lapplication">11.7.3.6. L'interface graphique de l'application</h4>
 <p>Revenons sur l'architecture de notre application :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000654000001B4A3A5D22F.png" style="display:inline-block; margin:4px;width:12.861cm;height:3.461cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000654000001B4A3A5D22F.png" style="display:inline-block; margin:4px;width:17.15cm;height:4.611cm;" /></td></tr></table>
 
 <p>Nous écrivons maintenant la couche [ui]. Celle-ci fait l'objet du projet [ui] de la solution en construction :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007510000017807555F01.png" style="display:inline-block; margin:4px;width:14.87cm;height:2.979cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007510000017807555F01.png" style="display:inline-block; margin:4px;width:17.341cm;height:3.48cm;" /></td></tr></table>
 
 <p>Le dossier [lib] [3] contient certaines des DLL référencées par le projet [4] :</p>
 <ul>
@@ -5927,13 +5927,13 @@ Le programme [Program.cs] est exécuté au démarrage de l'application. Son code
 <a id="__codelineno-131-60" name="__codelineno-131-60"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-131-61" name="__codelineno-131-61"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Ce code a déjà été utilisé dans l'application Impôts version 6, au paragraphe 7.6.2, page 204.</p>
+<p>Ce code a déjà été utilisé dans l'application Impôts version 6, au paragraphe 7.6.2, page 212.</p>
 <ul>
 <li>le service de traduction est créé ligne 27 par Spring. Si cette création s'est bien passée, le formulaire [Form1] sera affiché (lignes 52-55), sinon c'est le formulaire d'erreur [Form2] qui le sera (lignes 36-48).
-Le formulaire [Form2] est celui utilisé dans l'application Impôts version 6 et a été expliqué au paragraphe 7.6.4, page 207.</li>
+Le formulaire [Form2] est celui utilisé dans l'application Impôts version 6 et a été expliqué au paragraphe 7.6.4, page 216.</li>
 </ul>
 <p>Le formulaire [Form1] est le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005250000027514712B81.png" style="display:inline-block; margin:4px;width:10.449cm;height:4.99cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005250000027514712B81.png" style="display:inline-block; margin:4px;width:17.42cm;height:8.32cm;" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>n°</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>type</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>nom</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>rôle</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">1</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">textBoxTexteATraduire</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">boîte de saisie du texte à traduire</p><p style="margin:0;">MultiLine=true</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">2</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">ComboBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">comboBoxLangues</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">la liste des sens de traduction</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">3</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Button</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">buttonTraduire</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour demander la traduction du texte [1] dans le sens [2]</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">4</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">textBoxTraduction</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">la traduction du texte [1]</p></td></tr></table>
 
@@ -6063,18 +6063,18 @@ Le formulaire [Form2] est celui utilisé dans l'application Impôts version 6 et
 Cette technique est aléatoire. En effet au fil du temps, l'Uri interrogée ou l'expression régulière permettant de trouver le résultat attendu peuvent changer. On a donc intérêt à placer ces deux informations dans un fichier de configuration. Mais cela peut se révéler insuffisant. Nous verrons dans le chapitre suivant qu'il existe des ressources plus stables sur le web : les services web.</li>
 </ul>
 <h3 id="1174-un-client-smtp-simple-mail-tranport-protocol-avec-la-classe-smtpclient">11.7.4. Un client SMTP (Simple Mail Tranport Protocol) avec la classe SmtpClient</h3>
-<p>Un client SMTP est un client d'un serveur SMTP, serveur d'envoi de courrier. La class .NET <strong>SmtpClient</strong> encapsule totalement les besoins d'un tel client. Le développeur n'a pas à connaître les détails du protocole SMTP. Nous connaissons ce dernier. Il a été présenté au paragraphe 11.4.3, page 322.</p>
+<p>Un client SMTP est un client d'un serveur SMTP, serveur d'envoi de courrier. La class .NET <strong>SmtpClient</strong> encapsule totalement les besoins d'un tel client. Le développeur n'a pas à connaître les détails du protocole SMTP. Nous connaissons ce dernier. Il a été présenté au paragraphe 11.4.3, page 336.</p>
 <p>Nous présentons la classe <strong>SmtpClient</strong> dans le cadre d'une application windows basique qui permet d'envoyer des courriers électroniques avec pièces jointes. L'application va se connecter au port 25 d'un serveur SMTP. On rappelle que sur la plupart des PC windows, les pare-feu ou autres antivirus bloquent les connexions vers le port 25. Il est alors nécessaire de désactiver cette protection pour tester l'application :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000035F00000290B4867733.png" style="display:inline-block; margin:4px;width:6.849cm;height:5.211cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000035F00000290B4867733.png" style="display:inline-block; margin:4px;width:11.419cm;height:8.68cm;" /></td></tr></table>
 
 <p>Le client Smtp aura une architecture mono-couche :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000048B0000010C2691BDEB.png" style="display:inline-block; margin:4px;width:9.23cm;height:2.131cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000048B0000010C2691BDEB.png" style="display:inline-block; margin:4px;width:15.379cm;height:3.551cm;" /></td></tr></table>
 
 <p>Le projet Visual studio est le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000009800000054EB78DE68.png" style="display:inline-block; margin:4px;width:2.82cm;height:1.559cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000009800000054EB78DE68.png" style="display:inline-block; margin:4px;width:6.031cm;height:3.33cm;" /></td></tr></table>
 
 <p>L'interface graphique [SendMailForm.cs] de l'application est la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000040100000464718A8ECC.png" style="display:inline-block; margin:4px;width:9.49cm;height:10.41cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000040100000464718A8ECC.png" style="display:inline-block; margin:4px;width:13.561cm;height:14.87cm;" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>n°</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>type</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>nom</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>rôle</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">1</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">textBoxServeur</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">nom du serveur SMTP auquel se connecter</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">2</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">NumericUpDown</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">numericUpDownPort</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le port sur lequel se connecter</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">3</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">textBoxExpediteur</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">adresse de l'expéditeur du message</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">4</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">textBoxTo</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">adresses des destinataires sous la forme : adresse1,adresse2, ...</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">5</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">textBoxCc</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">adresses des destinataires en copie (CC=Carbon Copy) sous la forme : adresse1,adresse2, ...</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">6</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">textBoxBcc</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">adresses des destinataires en copie aveugle (BCC=Blind Carbon Copy) sous la forme : adresse1,adresse2, ... Toutes les adresses de ces trois champs de saisie recevront le même message avec les mêmes attachements. Les personnes destinataires du message pourront connaître les adresses qui étaient dans les champs 4 et 5 mais pas celles du champ 6. Le Bcc est donc une façon de mettre quelqu'un en copie sans que les autres destinataires du message le sachent. </p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">7</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Button</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">buttonAjouter</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour ajouter une pièce jointe au courrier</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">8</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">ListBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">listBoxPiecesJointes</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">liste des pièces à joindre au courrier</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">9</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">textBoxSujet</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">sujet du courrier</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">10</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">textBoxMessage</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le texte du message.</p><p style="margin:0;">MultiLine=true</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">11</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Button</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">buttonEnvoyer</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour envoyer le message et les éventuelles pièces jointes</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">12</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">textBoxRésultat</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">affiche un résumé du message envoyé ou bien un message d'erreur si un problème a été rencontré</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">13</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Button</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">buttonEffacer</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour effacer [12]</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">OpenfileDialog</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">openFileDialog1</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">contrôle non visuel qui permet le choix d'une pièce jointe dans le système de fichiers local</p></td></tr></table>
 
@@ -6250,7 +6250,7 @@ Cette technique est aléatoire. En effet au fil du temps, l'Uri interrogée ou l
 <a id="__codelineno-134-70" name="__codelineno-134-70"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-134-71" name="__codelineno-134-71"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Nous ne commenterons pas ce code qui ne présente pas de nouveautés. Pour comprendre la méthode buttonAjouter_Click de la ligne 14, le lecteur est invité à relire le paragraphe 7.5.1, de la page 196.</p>
+<p>Nous ne commenterons pas ce code qui ne présente pas de nouveautés. Pour comprendre la méthode buttonAjouter_Click de la ligne 14, le lecteur est invité à relire le paragraphe 7.5.1, de la page 204.</p>
 <p>La méthode buttonEnvoyer_Click de la ligne 55, qui envoie le courrier est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-135-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-135-2"> 2</a></span>
@@ -6409,7 +6409,7 @@ Cette technique est aléatoire. En effet au fil du temps, l'Uri interrogée ou l
 <li>côté serveur, les threads de service qui assurent le service au client fonctionnent de la même façon que ci-dessus.
 Dans les interfaces graphiques, il est souvent nécessaire de ne pas bloquer l'utilisateur sur des opérations longues. Le cas souvent cité est celui du téléchargement d'un gros fichier. Pendant ce téléchargement, il faut laisser l'utilisateur libre de continuer à interagir avec l'interface graphique. </li>
 </ul>
-<p>Nous nous proposons ici de réécrire le client Tcp générique du paragraphe 11.6.3, page 332 en y apportant les changements suivants :</p>
+<p>Nous nous proposons ici de réécrire le client Tcp générique du paragraphe 11.6.3, page 347 en y apportant les changements suivants :</p>
 <ul>
 <li>l'interface sera graphique</li>
 <li>l'outil de communication avec le serveur sera un objet <strong>Socket</strong></li>
@@ -6419,15 +6419,15 @@ Dans les interfaces graphiques, il est souvent nécessaire de ne pas bloquer l'u
 <li>le client initiera la réception de données provenant du serveur mais ne restera pas bloqué à attendre la fin de celle-ci.
 Rappelons à quel niveau se situe l'objet <strong>Socket</strong> dans la communication client / serveur Tcp :</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000058C000001A5DBB10E19.png" style="display:inline-block; margin:4px;width:11.269cm;height:3.341cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000058C000001A5DBB10E19.png" style="display:inline-block; margin:4px;width:16.91cm;height:5.009cm;" /></td></tr></table>
 
 <p>La classe <strong>Socket</strong> est celle qui opère le plus près du réseau. Elle permet de gérer finement la connexion réseau. Le terme socket désigne une prise de courant. Le terme a été étendu pour désigner une prise de réseau logicielle. Dans une communication TCP-IP entre deux machines A et B, ce sont deux sockets qui communiquent entre-eux. Une application peut travailler directement avec les sockets. C'est le cas de l'application A ci-dessus. Un socket peut être un socket client ou serveur.</p>
 <h3 id="1182-linterface-graphique-du-client-tcp-asynchrone">11.8.2. L'interface graphique du client Tcp asynchrone</h3>
 <p>L'application Visual studio est la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000BB00000053F40715C6.png" style="display:inline-block; margin:4px;width:3.461cm;height:1.54cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000BB00000053F40715C6.png" style="display:inline-block; margin:4px;width:4.949cm;height:2.2cm;" /></td></tr></table>
 
 <p>[ClientTcpAsynchrone.cs] est l'interface graphique. Celle-ci est la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004CB000003C9B97E97DF.png" style="display:inline-block; margin:4px;width:9.74cm;height:7.691cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004CB000003C9B97E97DF.png" style="display:inline-block; margin:4px;width:16.23cm;height:12.82cm;" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>n°</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>type</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>nom</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>rôle</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">1</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">textBoxNomServeur</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">nom du serveur Tcp auquel se connecter</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">2</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">NumericUpDown</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">numericUpDownPortServeur</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le port sur lequel se connecter</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">3</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">RadioButton</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">radioButtonLF</p><p style="margin:0;">radioButtonRCLF</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour indiquer la marque de fin de ligne que le client doit utiliser : LF "\n" ou RCLF "\r\n"</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">4</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Button</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">buttonConnexion</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour se connecter sur le port [2] du serveur [1]. Le bouton a le libellé [Connecter] lorsque le client n'est pas connecté à un serveur, [Déconnecter] lorsqu'il est connecté.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">5</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">textBoxMsgToServeur</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">message à envoyer au serveur une fois la connexion faite. Lorsque l'utilisateur tape sur la touche [Entrée], le message est envoyé avec la marque de fin de ligne choisie en [3]</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">6</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">ListBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">listBoxEvts</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">liste dans laquelle sont affichés les principaux événements de la liaison client / serveur : connexion, déconnexion, fermeture de flux, erreurs de communication</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">7</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">ListBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">listBoxDialogue</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">liste dans laquelle sont affichés les messages du dialogue client / serveur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">8</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Button</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">buttonRazEvts</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour effacer la liste [6]</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">4</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Button</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">buttonRazDialogue</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour effacer la liste [7]</p></td></tr></table>
 
@@ -6439,7 +6439,7 @@ Rappelons à quel niveau se situe l'objet <strong>Socket</strong> dans la commun
 <li>la communication client / serveur se termine lorsque l'un des partenaires clôt la connexion. L'utilisateur peut prendre cette initiative avec le bouton [4] qui une fois la connexion établie a le libellé [Déconnecter].
 Voici une copie d'écran d'une exécution :</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B9000002FBEF11D045.png" style="display:inline-block; margin:4px;width:9.601cm;height:6.061cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B9000002FBEF11D045.png" style="display:inline-block; margin:4px;width:15.99cm;height:10.089cm;" /></td></tr></table>
 
 <ul>
 <li>en [1] : connexion à un service POP</li>
@@ -6447,7 +6447,7 @@ Voici une copie d'écran d'une exécution :</li>
 <li>en [3] : le message envoyé par le serveur POP à l'issue de la connexion</li>
 <li>en [4] : le bouton [Connecter] est devenu le bouton [Déconnecter]</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C7000003CC983BFED2.png" style="display:inline-block; margin:4px;width:9.71cm;height:7.721cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C7000003CC983BFED2.png" style="display:inline-block; margin:4px;width:16.18cm;height:12.861cm;" /></td></tr></table>
 
 <ul>
 <li>en [1], on a envoyé la commande quit au serveur POP. Le serveur a répondu +OK goodbye et a fermé la connexion</li>
@@ -6984,14 +6984,14 @@ La communication Tcp / Ip asynchrone présente des avantages plus sérieux pour 
 </ul>
 <h2 id="119-application-exemple-version-8-serveur-de-calcul-dimpots">11.9. Application exemple, version 8 : Serveur de calcul d'impôts</h2>
 <h3 id="1191-larchitecture-de-la-nouvelle-version">11.9.1. L'architecture de la nouvelle version</h3>
-<p>Nous reprenons l'application de calcul d'impôt déjà traitée sous diverses formes. Rappelons sa dernière mouture, celle de la version 7 du paragraphe 9.8, page 257.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000669000001B9CC0FCEF2.png" style="display:inline-block; margin:4px;width:13.019cm;height:3.5cm;" /></td></tr></table>
+<p>Nous reprenons l'application de calcul d'impôt déjà traitée sous diverses formes. Rappelons sa dernière mouture, celle de la version 7 du paragraphe 9.8, page 269.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000669000001B9CC0FCEF2.png" style="display:inline-block; margin:4px;width:17.371cm;height:4.671cm;" /></td></tr></table>
 
 <p>Les données étaient dans une base de données et la couche [ui] était une interface graphique :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012600000105D7701C54.png" style="display:inline-block; margin:4px;width:5.45cm;height:4.83cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012600000105D7701C54.png" style="display:inline-block; margin:4px;width:11.67cm;height:10.359cm;" /></td></tr></table>
 
 <p>Nous allons rependre cette architecture et la distribuer sur deux machines :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000756000001C800E382B5.png" style="display:inline-block; margin:4px;width:14.91cm;height:3.62cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000756000001C800E382B5.png" style="display:inline-block; margin:4px;width:17.39cm;height:4.219cm;" /></td></tr></table>
 
 <ul>
 <li>une machine [serveur] hébergera les couches [metier] et [dao] de la version 7. Une couche Tcp/Ip [serveur] [1] sera construite afin de permettre à des clients de l'internet d'interroger le service de calcul de l'impôt.</li>
@@ -7001,15 +7001,15 @@ L'architecture change profondément ici. La version 7 était une application win
 <p>Nous allons tout d'abord écrire la partie [serveur] de l'application.</p>
 <h3 id="1192-le-serveur-de-calcul-dimpot">11.9.2. Le serveur de calcul d'impôt</h3>
 <h4 id="11921-le-projet-visual-studio">11.9.2.1. Le projet Visual Studio</h4>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000758000001C0F0A10E0F.png" style="display:inline-block; margin:4px;width:14.921cm;height:3.56cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000758000001C0F0A10E0F.png" style="display:inline-block; margin:4px;width:17.41cm;height:4.15cm;" /></td></tr></table>
 
 <p>Le projet Visual studio sera le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D90000016CC4A1E363.png" style="display:inline-block; margin:4px;width:13.91cm;height:2.889cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D90000016CC4A1E363.png" style="display:inline-block; margin:4px;width:17.39cm;height:3.611cm;" /></td></tr></table>
 
 <ul>
 <li>en [1], le projet. On y trouve les éléments suivants :</li>
 <li>[ServeurImpot.cs] : le serveur Tcp/Ip de calcul de l'impôt sous la forme d'une application console.</li>
-<li>[dbimpots.sdf] : la base de données SQL Server compact de la version 7 décrite au paragraphe 9.8.5, page 266.</li>
+<li>[dbimpots.sdf] : la base de données SQL Server compact de la version 7 décrite au paragraphe 9.8.5, page 279.</li>
 <li>[App.config] : le fichier de configuration de l'application.</li>
 <li>en [2], le dossier [lib] contient les DLL nécessaires au projet :</li>
 <li>[ImpotsV7-dao] : la couche [dao] de la version 7</li>
@@ -7074,11 +7074,11 @@ L'architecture change profondément ici. La version 7 était une application win
 <ul>
 <li>lignes 16-20 : configuration de la couche [dao] associée à la base SQL Server compact</li>
 <li>lignes 21-23 : configuration de la couche [metier].
-C'est le fichier de configuration utilisée dans la couche [ui] de la version 7. Il a été présenté au paragraphe 9.8.4, page 264.</li>
+C'est le fichier de configuration utilisée dans la couche [ui] de la version 7. Il a été présenté au paragraphe 9.8.4, page 277.</li>
 </ul>
 <h4 id="11923-fonctionnement-du-serveur">11.9.2.3. Fonctionnement du serveur</h4>
 <p>Au démarrage du serveur, l'application serveur instancie les couches [metier] et [dao] puis affiche une interface console d'administration :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010800000041CA1F47C7.png" style="display:inline-block; margin:4px;width:4.89cm;height:1.199cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010800000041CA1F47C7.png" style="display:inline-block; margin:4px;width:10.479cm;height:2.581cm;" /></td></tr></table>
 
 <p>La console d'administration accepte les commandes suivantes :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
@@ -7108,8 +7108,8 @@ C'est le fichier de configuration utilisée dans la couche [ui] de la version 7.
 <a id="__codelineno-157-2" name="__codelineno-157-2"></a>Serveur de calcul d&#39;impôt lancé sur le port 27
 <a id="__codelineno-157-3" name="__codelineno-157-3"></a>Serveur de calcul d&#39;impôt &gt;
 </code></pre></div></td></tr></table></div>
-<p>Lançons maintenant le client Tcp graphique asynchrone étudié précédemment au paragraphe 11.8, page 364.</p>
-<p><img src="images/1000000000000241000001CCC42CB8B9.png" style="width:10.689cm;height:8.52cm;" alt="Image" /></p>
+<p>Lançons maintenant le client Tcp graphique asynchrone étudié précédemment au paragraphe 11.8, page 379.</p>
+<p><img src="images/1000000000000241000001CCC42CB8B9.png" style="width:15.27cm;height:12.171cm;" alt="Image" /></p>
 <p>Le client est connecté. Il peut envoyer les commandes suivantes au serveur de calcul d'impôt :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-158-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-158-1" name="__codelineno-158-1"></a>aide
@@ -7123,7 +7123,7 @@ C'est le fichier de configuration utilisée dans la couche [ui] de la version 7.
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour clôre la connexion avec le serveur</p></td></tr></table>
 
 <p>Voici un exemple de dialogue :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000496000001E53A8076A4.png" style="display:inline-block; margin:4px;width:9.32cm;height:3.851cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000496000001E53A8076A4.png" style="display:inline-block; margin:4px;width:18.641cm;height:7.699cm;" /></td></tr></table>
 
 <p>Côté serveur, la console affiche la chose suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-161-1">1</a></span>
@@ -7135,7 +7135,7 @@ C'est le fichier de configuration utilisée dans la couche [ui] de la version 7.
 <a id="__codelineno-161-4" name="__codelineno-161-4"></a>Fin du service au client 0
 </code></pre></div></td></tr></table></div>
 <p>Mettons l'écho en route et recommençons un nouveau dialogue à partir du client graphique :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001380000006A9F96AA37.png" style="display:inline-block; margin:4px;width:5.78cm;height:1.96cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001380000006A9F96AA37.png" style="display:inline-block; margin:4px;width:12.381cm;height:4.21cm;" /></td></tr></table>
 
 <p>La console d'administration affiche alors la chose suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-162-1">1</a></span>
@@ -7171,11 +7171,11 @@ Arrêtons le service :</li>
 <li>ligne 3 : le service peut être maintenant relancé par start port ou arrêté par quit.
 Avant que le service d'écoute ne soit arrêté, un client était servi sur une autre connexion. Cette connexion n'est pas fermée par la fermeture de la socket d'écoute. Le client peut continuer à émettre des commandes : le thread de service qui lui avait été associé avant la fermeture du service d'écoute, continue à lui répondre :</li>
 </ul>
-<p><img src="images/10000000000001930000006B058F05A2.png" style="width:7.459cm;height:1.981cm;" alt="Image" /></p>
+<p><img src="images/10000000000001930000006B058F05A2.png" style="width:16cm;height:4.249cm;" alt="Image" /></p>
 <h3 id="1193-le-code-du-serveur-tcp-de-calcul-dimpot">11.9.3. Le code du serveur Tcp de calcul d'impôt</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000076F000001EB1F5B9E50.png" style="display:inline-block; margin:4px;width:15.101cm;height:3.9cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000076F000001EB1F5B9E50.png" style="display:inline-block; margin:4px;width:17.619cm;height:4.551cm;" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>1</b></p><img src="images/10000000000000970000007C7BDAF4EC.png" style="display:inline-block; margin:4px;width:2.799cm;height:2.3cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012E000000C2D54027C9.png" style="display:inline-block; margin:4px;width:7.99cm;height:5.129cm;" /></td></tr></table>
 
 <p>Le code du serveur [ServeurImpot.cs] est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-164-1">  1</a></span>
@@ -7469,7 +7469,7 @@ Le thread chargé d'écouter les demandes des clients exécute la méthode doEco
 <a id="__codelineno-165-34" name="__codelineno-165-34"></a><span class="w">            </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">NumClient</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">            </span><span class="c1">// n° de client</span>
 <a id="__codelineno-165-35" name="__codelineno-165-35"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>On a là un code similaire à celui du serveur d'écho étudié au paragraphe 11.6.1, page 328. Nous ne commentons que ce qui est différent :</p>
+<p>On a là un code similaire à celui du serveur d'écho étudié au paragraphe 11.6.1, page 342. Nous ne commentons que ce qui est différent :</p>
 <ul>
 <li>ligne 7 : le service d'écoute est lancé</li>
 <li>ligne 9 : on note le fait que le service est désormais actif
@@ -7619,7 +7619,7 @@ Ligne 21, les clients sont servis par des threads de service exécutant la méth
 <a id="__codelineno-166-71" name="__codelineno-166-71"></a><span class="w">            </span><span class="n">writer</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
 <a id="__codelineno-166-72" name="__codelineno-166-72"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>De nouveau, on a là un code similaire à celui du serveur d'écho étudié au paragraphe 11.6.1, page 328. Nous ne commentons que ce qui est différent :</p>
+<p>De nouveau, on a là un code similaire à celui du serveur d'écho étudié au paragraphe 11.6.1, page 342. Nous ne commentons que ce qui est différent :</p>
 <ul>
 <li>ligne 15 : une fois le client connecté, le serveur lui envoie un message de bienvenue.</li>
 <li>lignes 19-52 : la boucle de lecture des commandes du client. La boucle s'arrête lorsque le client envoie la commande "aurevoir".</li>
@@ -7705,10 +7705,10 @@ Le traitement de la commande impot est assurée par la méthode calculImpot suiv
 </ul>
 <h3 id="1194-le-client-graphique-du-serveur-tcp-de-calcul-dimpot">11.9.4. Le client graphique du serveur Tcp de calcul d'impôt</h3>
 <h4 id="11941-le-projet-visual-studio">11.9.4.1. Le projet Visual Studio</h4>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000749000001CEE567B5C1.png" style="display:inline-block; margin:4px;width:14.801cm;height:3.671cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000749000001CEE567B5C1.png" style="display:inline-block; margin:4px;width:17.27cm;height:4.279cm;" /></td></tr></table>
 
 <p>Le projet Visual studio du client graphique sera le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D4000001B29C583F6A.png" style="display:inline-block; margin:4px;width:13.869cm;height:3.44cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D4000001B29C583F6A.png" style="display:inline-block; margin:4px;width:18.5cm;height:4.59cm;" /></td></tr></table>
 
 <ul>
 <li>en [1], les deux projets de la solution, un pour chacune des deux couches de l'application</li>
@@ -7804,11 +7804,11 @@ Le traitement de la commande impot est assurée par la méthode calculImpot suiv
 <li>lignes 25-28 : libération de toutes les ressources utilisées avec une clause "using".
 La couche [metier] est compilée dans la DLL ImpotsV8-metier.dll :</li>
 </ul>
-<p><img src="images/1000000000000177000000699E38D319.png" style="width:6.939cm;height:1.94cm;" alt="Image" /></p>
+<p><img src="images/1000000000000177000000699E38D319.png" style="width:14.891cm;height:4.17cm;" alt="Image" /></p>
 <h4 id="11943-la-couche-ui">11.9.4.3. La couche [ui]</h4>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D8000001A84D3E7A62.png" style="display:inline-block; margin:4px;width:13.91cm;height:3.371cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D8000001A84D3E7A62.png" style="display:inline-block; margin:4px;width:18.54cm;height:4.491cm;" /></td></tr></table>
 
-<p>La couche [ui] [1,3] est celle étudiée dans la version 7 au paragraphe 9.8.4, page 264 à trois détails près :</p>
+<p>La couche [ui] [1,3] est celle étudiée dans la version 7 au paragraphe 9.8.4, page 277 à trois détails près :</p>
 <ul>
 <li>la configuration de la couche [metier] dans [App.config] est différente parce que l'implémentation de celle-ci a changé</li>
 <li>l'interface graphique [Form1.cs] a été modifiée pour afficher une éventuelle exception</li>
@@ -7864,11 +7864,11 @@ Le fichier [App.config] est le suivant :</li>
 <li>lignes 17-18 : les propriétés <strong>Serveur</strong> et <strong>Port</strong> de la classe Metier.ImpotMetierTcp sont initialisées. Le serveur sera sur la machine localhost et opèrera sur le port 27.
 L'interface graphique présentée à l'utilisateur est la suivante :</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006A20000030D5F4E3A7B.png" style="display:inline-block; margin:4px;width:13.48cm;height:6.2cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006A20000030D5F4E3A7B.png" style="display:inline-block; margin:4px;width:17.971cm;height:8.271cm;" /></td></tr></table>
 
 <ul>
 <li>en [1], on a ajouté un TextBox pour afficher une éventuelle exception. Ce champ n'existait pas dans la version précédente.
-A part ce détail, le code du formulaire est celui déjà étudié au paragraphe 6.4.3, page 148. Le lecteur est invité à s'y reporter. En [2], on voit un exemple d'exécution obtenu avec un serveur lancé de la façon suivante :</li>
+A part ce détail, le code du formulaire est celui déjà étudié au paragraphe 6.4.3, page 152. Le lecteur est invité à s'y reporter. En [2], on voit un exemple d'exécution obtenu avec un serveur lancé de la façon suivante :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-171-1">1</a></span>
 <span class="normal"><a href="#__codelineno-171-2">2</a></span>
