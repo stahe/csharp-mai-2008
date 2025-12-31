@@ -913,24 +913,22 @@
 <h2 id="121-introduction">12.1. Introduction</h2>
 <p>Nous avons présenté dans le chapitre précédent plusieurs applications client-serveur Tcp-Ip. Dans la mesure où les clients et le serveur échangent des lignes de texte, ils peuvent être écrits en n'importe quel langage. Le client doit simplement connaître le protocole de dialogue attendu par le serveur.</p>
 <p>Les services Web sont également des applications serveur Tcp-Ip. Ils présentent les caractéristiques suivantes :</p>
-<ol>
+<ul>
 <li>Ils sont hébergés par des serveurs web et le protocole d'échanges client-serveur est HTTP (HyperText Transport Protocol), un protocole au-dessus de TCP-IP.</li>
 <li>Le service Web a un protocole de dialogue standard quelque soit le service assuré. Un service Web offre divers services S1, S2, .., Sn. Chacun d'eux attend des paramètres fournis par le client et rend à celui-ci un résultat. Pour chaque service, le client a besoin de savoir :</li>
 <li>le nom exact du service Si</li>
 <li>la liste des paramètres qu'il faut lui fournir et leur type</li>
-<li>
-<p>le type de résultat retourné par le service
-Une fois, ces éléments connus, le dialogue client-serveur suit le même format, quelque soit le service web interrogé. L'écriture des clients est ainsi normalisée.</p>
-</li>
-<li>
-<p>Pour des raisons de sécurité vis à vis des attaques venant de l'internet, beaucoup d'organisations ont des réseaux privés et n'ouvrent sur Internet que certains ports de leurs serveurs : essentiellement le port 80 du service web. Tous les autres ports sont verrouillés. Aussi les applications client-serveur telles que présentées dans le chapitre précédent sont-elles construites au sein du réseau privé (intranet) et ne sont en général pas accessibles de l'extérieur. Loger un service au sein d'un serveur web le rend accessible à toute la communauté internet.</p>
-</li>
+<li>le type de résultat retourné par le service</li>
+</ul>
+<p>Une fois, ces éléments connus, le dialogue client-serveur suit le même format, quelque soit le service web interrogé. L'écriture des clients est ainsi normalisée.</p>
+<ul>
+<li>Pour des raisons de sécurité vis à vis des attaques venant de l'internet, beaucoup d'organisations ont des réseaux privés et n'ouvrent sur Internet que certains ports de leurs serveurs : essentiellement le port 80 du service web. Tous les autres ports sont verrouillés. Aussi les applications client-serveur telles que présentées dans le chapitre précédent sont-elles construites au sein du réseau privé (intranet) et ne sont en général pas accessibles de l'extérieur. Loger un service au sein d'un serveur web le rend accessible à toute la communauté internet.</li>
 <li>Le service Web peut être modélisé comme un objet distant. Les services offerts deviennent alors des méthodes de cet objet. Un client peut avoir accès à cet objet distant comme s'il était local. Cela cache toute la partie communication réseau et permet de construire un client indépendant de cette couche. Si celle-ci vient à changer, le client n'a pas à être modifié.</li>
 <li>Comme pour les applications client-serveur Tcp-Ip présentées dans le chapitre précédent, le client et le serveur peuvent être écrits dans un langage quelconque. Ils échangent des lignes de texte. Celles-ci comportent deux parties :</li>
 <li>les entêtes nécessaires au protocole HTTP</li>
-<li>le corps du message. Pour une réponse du serveur au client, celui-ci est au format XML (eXtensible Markup Language). Pour une demande du client au serveur, le corps du message peut avoir plusieurs formes dont XML. La demande XML du client peut avoir un format particulier appelé SOAP (Simple Object Access Protocol). Dans ce cas, la réponse du serveur suit aussi le format SOAP.
-L'architecture d'une application client / serveur à base d'un service web est la suivante :</li>
-</ol>
+<li>le corps du message. Pour une réponse du serveur au client, celui-ci est au format XML (eXtensible Markup Language). Pour une demande du client au serveur, le corps du message peut avoir plusieurs formes dont XML. La demande XML du client peut avoir un format particulier appelé SOAP (Simple Object Access Protocol). Dans ce cas, la réponse du serveur suit aussi le format SOAP.</li>
+</ul>
+<p>L'architecture d'une application client / serveur à base d'un service web est la suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007A70000012D7EBF84DB.png" style="display:inline-block; margin:4px;width:18.14cm;height:2.79cm;" /></td></tr></table>
 
 <p>C'est une extension de l'architecture 3 couches à laquelle on ajoute des classes de communication réseau spécialisées. On a déjà rencontré une architecture similaire avec l'application client graphique windows / serveur Tcp d'impôts au paragraphe 11.9.1, page 389.</p>
@@ -946,9 +944,9 @@ L'architecture d'une application client / serveur à base d'un service web est l
 <ul>
 <li>[1] : l'adresse de téléchargement</li>
 <li>[2] : l'onglet des téléchargements</li>
-<li>[3] : télécharger Visual Developer 2008
-Pour créer un premier service web, on pourra procéder comme suit, après avoir lancé Visual Developer :</li>
+<li>[3] : télécharger Visual Developer 2008</li>
 </ul>
+<p>Pour créer un premier service web, on pourra procéder comme suit, après avoir lancé Visual Developer :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075C000002787C127EDF.png" style="display:inline-block; margin:4px;width:17.45cm;height:5.851cm;" /></td></tr></table>
 
 <ul>
@@ -961,27 +959,25 @@ Pour créer un premier service web, on pourra procéder comme suit, après avoir
 
 <ul>
 <li>[5] : le projet créé dans Visual Web Developer</li>
-<li>
-<p>[6] : le dossier du projet sur le disque
-Une application web est structurée de la façon suivante dans Web Developer :</p>
-</li>
-<li>
-<p>une racine dans laquelle on trouve les documents du site web (pages web statiques Html, images, pages web dynamiques .aspx, services web .asmx, ...). On y trouve également le fichier [web.config] qui est le fichier de configuration de l'application web. Il joue le même rôle que le fichier [App.config] des applications windows et est structuré de la même façon.</p>
-</li>
-<li>un dossier [App_Code] dans lequel on trouve les classes et interfaces du site web destinées à être compilées.</li>
-<li>un dossier [App_Data] dans lequel on mettra des données exploitées par les classes de [App_Code]. On pourra par exemple y trouver une base SQL Server *.mdf.
-[Service.asmx] est le service web dont nous avons demandé la création. Il ne contient que la ligne suivante :</li>
+<li>[6] : le dossier du projet sur le disque</li>
 </ul>
+<p>Une application web est structurée de la façon suivante dans Web Developer :</p>
+<ul>
+<li>une racine dans laquelle on trouve les documents du site web (pages web statiques Html, images, pages web dynamiques .aspx, services web .asmx, ...). On y trouve également le fichier [web.config] qui est le fichier de configuration de l'application web. Il joue le même rôle que le fichier [App.config] des applications windows et est structuré de la même façon.</li>
+<li>un dossier [App_Code] dans lequel on trouve les classes et interfaces du site web destinées à être compilées.</li>
+<li>un dossier [App_Data] dans lequel on mettra des données exploitées par les classes de [App_Code]. On pourra par exemple y trouver une base SQL Server *.mdf.</li>
+</ul>
+<p>[Service.asmx] est le service web dont nous avons demandé la création. Il ne contient que la ligne suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>&lt;%@ WebService Language=&quot;C#&quot; CodeBehind=&quot;~/App_Code/Service.cs&quot; Class=&quot;Service&quot; %&gt;
 </code></pre></div></td></tr></table></div>
 <p>Le code-source ci-dessus est destiné au serveur Web qui hébergera l'application. En mode production, ce serveur est en général IIS (Internet Information Server), le serveur web de Microsoft. Visual Web Developer embarque un serveur web léger qui est utilisé en mode développement. La directive précédente indique au serveur web :</p>
-<ol>
+<ul>
 <li>[Service.asmx] est un service Web (directive WebService)</li>
 <li>écrit en C# (attribut Language)</li>
-<li>que le code C# du service web se trouve dans le fichier [~/App_Code/Service.cs] (attribut CodeBehind). C'est là qu'ira le chercher le serveur web pour le compiler.</li>
-<li>que la classe implémentant le service web s'appelle Service (attribut Class)
-Le code C# [Service.cs] du service web généré par Visual Developer est le suivant :</li>
-</ol>
+<li>que le code C# du service web se trouve dans le fichier [\~/App_Code/Service.cs] (attribut CodeBehind). C'est là qu'ira le chercher le serveur web pour le compiler.</li>
+<li>que la classe implémentant le service web s'appelle Service (attribut Class)</li>
+</ul>
+<p>Le code C# [Service.cs] du service web généré par Visual Developer est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -1023,13 +1019,13 @@ Le code C# [Service.cs] du service web généré par Visual Developer est le sui
 <a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>La classe Service ressemble à une classe C# classique avec cependant quelques points à noter :</p>
-<ol>
+<ul>
 <li>ligne 7 : la classe dérive de la classe WebService définie dans l'espace de noms System.Web.Services. Cet héritage n'est pas toujours obligatoire. Dans cet exemple notamment on pourrait s'en passer.</li>
 <li>ligne 3 : la classe elle-même est précédée d'un attribut <strong>[WebService(Namespace="</strong><strong>http://tempuri.org/</strong><strong>")]</strong> destiné à donner un espace de noms au service web. Un vendeur de classes donne un espace de noms à ses classes afin de leur donner un nom unique et éviter ainsi des conflits avec des classes d'autres vendeurs qui pourraient porter le même nom. Pour les services Web, c'est pareil. Chaque service web doit pouvoir être identifié par un nom unique, ici par <strong>http://tempuri.org/</strong>. Ce nom peut être quelconque. Il n'a pas forcément la forme d'une Uri Http.</li>
 <li>ligne 15 : la méthode HelloWorld est précédée d'un attribut <strong>[WebMethod]</strong> qui indique au compilateur que la méthode doit être rendue visible aux clients distants du service web. Une méthode non précédée de cet attribut n'est pas visible par les clients du service web. Ce pourrait être une méthode interne utilisée par d'autres méthodes mais pas destinée à être publiée.</li>
-<li>ligne 9 : le constructeur du service web. Il est inutile dans notre application.
-La classe [Service.cs] générée est transformée de la façon suivante :</li>
-</ol>
+<li>ligne 9 : le constructeur du service web. Il est inutile dans notre application.</li>
+</ul>
+<p>La classe [Service.cs] générée est transformée de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -1107,16 +1103,16 @@ La classe [Service.cs] générée est transformée de la façon suivante :</li>
 
 <ul>
 <li>[1,2] : on clique droit sur [Service.asmx] et on demande à voir la page dans un navigateur</li>
-<li>[3] : Visual Web Developer lance son serveur web intégré et met l'icône de celui-ci en bas à droite dans la barre des tâches. Le serveur web est lancé sur un port aléatoire, ici 1906. L'Uri affichée /WsHello est le nom du site web [4].
-Visual Web Developer a également lancé un navigateur pour afficher la page demandée à savoir [Service.asmx] :</li>
+<li>[3] : Visual Web Developer lance son serveur web intégré et met l'icône de celui-ci en bas à droite dans la barre des tâches. Le serveur web est lancé sur un port aléatoire, ici 1906. L'Uri affichée /WsHello est le nom du site web [4].</li>
 </ul>
+<p>Visual Web Developer a également lancé un navigateur pour afficher la page demandée à savoir [Service.asmx] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000037400000240C63BD81F.png" style="display:inline-block; margin:4px;width:14.03cm;height:9.14cm;" /></td></tr></table>
 
 <ul>
 <li>en [1], l'Uri de la page. On retrouve l'Uri du site [http://localhost:1906/WsHello] suivi de celle de la page /Service.asmx.</li>
-<li>en [2], le suffixe .asmx a indiqué au serveur web qu'il s'agissait non pas d'une page web normale (suffixe .aspx) donnant naissance à une page Html, mais de la page d'un service web. Il génère alors de façon automatique une page web présentant un lien pour chacune des méthodes du service web ayant l'attribut [WebMethod]. Ces liens sont des liens permettant de tester les méthodes.
-Un clic sur le lien [2] ci-dessus nous amène à la page suivante :</li>
+<li>en [2], le suffixe .asmx a indiqué au serveur web qu'il s'agissait non pas d'une page web normale (suffixe .aspx) donnant naissance à une page Html, mais de la page d'un service web. Il génère alors de façon automatique une page web présentant un lien pour chacune des méthodes du service web ayant l'attribut [WebMethod]. Ces liens sont des liens permettant de tester les méthodes.</li>
 </ul>
+<p>Un clic sur le lien [2] ci-dessus nous amène à la page suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000054A000003A056D62805.png" style="display:inline-block; margin:4px;width:16.12cm;height:11.051cm;" /></td></tr></table>
 
 <ul>
@@ -1200,9 +1196,9 @@ Un clic sur le lien [2] ci-dessus nous amène à la page suivante :</li>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 11 : les valeurs du formulaire (balise <strong>form</strong>) seront postées (attribut <strong>method</strong>) à l'Url [ http://localhost:1906/WsHello/Service.asmx/DisBonjourALaDame] (attribut <strong>action</strong>).</li>
-<li>ligne 19 : le champ de saisie s'appelle nomDeLaDame (attribut <strong>name</strong>).
-Demander l'exécution du service web [/Service.asmx] nous a permis de tester ses méthodes et d'avoir un minimum de compréhension des échanges client serveur.</li>
+<li>ligne 19 : le champ de saisie s'appelle nomDeLaDame (attribut <strong>name</strong>).</li>
 </ul>
+<p>Demander l'exécution du service web [/Service.asmx] nous a permis de tester ses méthodes et d'avoir un minimum de compréhension des échanges client serveur.</p>
 <h3 id="1222-la-partie-client">12.2.2. La partie client</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000054600000123739A93BD.png" style="display:inline-block; margin:4px;width:16.071cm;height:3.461cm;" /></td></tr></table>
 
@@ -1257,9 +1253,9 @@ Demander l'exécution du service web [/Service.asmx] nous a permis de tester ses
 <li>lignes 6-10 : réponse du serveur. Elle signifie que le client peut envoyer les valeurs du POST.</li>
 <li>ligne 11 : les valeurs postées sous la forme param1=val1&amp;param2=val2&amp; .... Certains caractères doivent être en caractères acceptables dans une Url. C'est ce qu'on a appelé précédemment une Url encodée. Ici le formulaire n'a qu'un unique paramètre nommé nomDeLaDame. La valeur postée a au total 23 caractères. Cette taille doit être déclarée dans l'entête Http de la ligne 4.</li>
 <li>lignes 12-22 : la réponse du serveur</li>
-<li>ligne 22 : le résultat de la méthode web [DisBonjourALaDame].
-Avec Visual C#, il est possible de générer à l'aide d'un assistant le client d'un service web distant. C'est ce que nous voyons maintenant.</li>
+<li>ligne 22 : le résultat de la méthode web [DisBonjourALaDame].</li>
 </ul>
+<p>Avec Visual C#, il est possible de générer à l'aide d'un assistant le client d'un service web distant. C'est ce que nous voyons maintenant.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051E00000120F136B490.png" style="display:inline-block; margin:4px;width:17.33cm;height:3.81cm;" /></td></tr></table>
 
 <p>La couche [1] ci-dessus est implémentée par un projet Visual studio C# de type Application Windows et nommé <strong>ClientWsHello</strong> :</p>
@@ -1414,9 +1410,9 @@ Avec Visual C#, il est possible de générer à l'aide d'un assistant le client 
 <li>ajouter(a,b) qui rendra a+b</li>
 <li>soustraire(a,b) qui rendra a-b</li>
 <li>multiplier(a,b) qui rendra a*b</li>
-<li>diviser(a,b) qui rendra a/b
-et qui sera interrogé par l'interface graphique suivante :</li>
+<li>diviser(a,b) qui rendra a/b</li>
 </ol>
+<p>et qui sera interrogé par l'interface graphique suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046C000001D130AC6502.png" style="display:inline-block; margin:4px;width:14.981cm;height:6.151cm;" /></td></tr></table>
 
 <ul>
@@ -1434,9 +1430,9 @@ et qui sera interrogé par l'interface graphique suivante :</li>
 <li>en [2], l'application web WsOperations relookée de la façon suivante :</li>
 <li>la page web [Service.asmx] a été renommée [Operations.asmx]</li>
 <li>la classe [Service.cs] a été renommée [Operations.cs]</li>
-<li>le fichier [web.config] a été supprimé afin de montrer qu'il n'est pas indispensable.
-La page web [Service.asmx] contient la ligne suivante :</li>
+<li>le fichier [web.config] a été supprimé afin de montrer qu'il n'est pas indispensable.</li>
 </ul>
+<p>La page web [Service.asmx] contient la ligne suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>&lt;%@ WebService Language=&quot;C#&quot; CodeBehind=&quot;~/App_Code/Operations.cs&quot; Class=&quot;Operations&quot; %&gt;
 </code></pre></div></td></tr></table></div>
 <p>Le service web est assuré par classe [Operations.cs] suivante :</p>
@@ -1524,16 +1520,14 @@ La page web [Service.asmx] contient la ligne suivante :</li>
 <li>en [5], une fois la description  du service web récupérée, Visual C# peut en afficher les méthodes publiques</li>
 <li>en [6], indiquer un espace de noms pour le client qui va être généré. Celui-ci sera ajouté à l'espace de noms défini en [2]. Ainsi l'espace de noms du client sera Client.WsOperations.</li>
 <li>en [6b] valider l'assistant.</li>
-<li>
-<p>en [7], la référence au service web WsOperations apparaît dans le projet. Par ailleurs, un fichier de configuration [app.config] a été créé.
-On rappelle que le client généré est de type Client.WsOperations.OperationsSoapClient où</p>
-</li>
-<li>
-<p>Client.WsOperations est l'espace de noms du client du service web</p>
-</li>
-<li>Operations est la classe du service web distant.
-Même s'il y a une façon logique de construire ce nom, il est souvent plus simple de le retrouver dans le fichier [Reference.cs] qui est un fichier caché par défaut. Son contenu est le suivant :</li>
+<li>en [7], la référence au service web WsOperations apparaît dans le projet. Par ailleurs, un fichier de configuration [app.config] a été créé.</li>
 </ul>
+<p>On rappelle que le client généré est de type Client.WsOperations.OperationsSoapClient où</p>
+<ul>
+<li>Client.WsOperations est l'espace de noms du client du service web</li>
+<li>Operations est la classe du service web distant.</li>
+</ul>
+<p>Même s'il y a une façon logique de construire ce nom, il est souvent plus simple de le retrouver dans le fichier [Reference.cs] qui est un fichier caché par défaut. Son contenu est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
@@ -1739,9 +1733,9 @@ Même s'il y a une façon logique de construire ce nom, il est souvent plus simp
 <li>en [1], l'application web WsImpot générée</li>
 <li>en [2], l'application web WsImpot relookée de la façon suivante :</li>
 <li>la page web [Service.asmx] a été renommée [ServiceImpot.asmx]</li>
-<li>la classe [Service.cs] a été renommée [ServiceImpot .cs]
-La page web [ServiceImpot.asmx] contient la ligne suivante :</li>
+<li>la classe [Service.cs] a été renommée [ServiceImpot .cs]</li>
 </ul>
+<p>La page web [ServiceImpot.asmx] contient la ligne suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>&lt;%@ WebService Language=&quot;C#&quot; CodeBehind=&quot;~/App_Code/ServiceImpot.cs&quot; Class=&quot;ServiceImpot&quot; %&gt;
 </code></pre></div></td></tr></table></div>
 <p>Le service web est assuré par classe [ServiceImpot.cs] suivante :</p>
@@ -1789,16 +1783,16 @@ La page web [ServiceImpot.asmx] contient la ligne suivante :</li>
 <li>[ImpotsV7-dao] : la couche [dao] de la version 7</li>
 <li>[ImpotsV7-metier] : la couche [metier] de la version 7</li>
 <li>[antlr.runtime, CommonLogging, Spring.Core] pour Spring</li>
-<li>en [3], les références du projet
-Les couches [metier] et [dao] de la version existent déjà : ce sont celles utilisées dans les versions 7 et 8. Elles sont sous forme de DLL que nous intégrons au projet de la façon suivante : </li>
+<li>en [3], les références du projet</li>
 </ul>
+<p>Les couches [metier] et [dao] de la version existent déjà : ce sont celles utilisées dans les versions 7 et 8. Elles sont sous forme de DLL que nous intégrons au projet de la façon suivante : </p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077E000003A72EA5E7F8.png" style="display:inline-block; margin:4px;width:17.761cm;height:8.661cm;" /></td></tr></table>
 
 <ul>
 <li>en [1] le dossier [lib] du serveur de la version 8 a été recopié dans le projet du service web de la version 9.</li>
-<li>en [2] on modifie les propriétés de la page pour ajouter les DLL du dossier [lib] [4] aux références du projet [3].
-Après cette opération, nous avons la totalité des couches nécessaires au serveur [1] ci-dessous :</li>
+<li>en [2] on modifie les propriétés de la page pour ajouter les DLL du dossier [lib] [4] aux références du projet [3].</li>
 </ul>
+<p>Après cette opération, nous avons la totalité des couches nécessaires au serveur [1] ci-dessous :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075A000001BEB1359C68.png" style="display:inline-block; margin:4px;width:17.431cm;height:4.129cm;" /></td></tr></table>
 
 <p>Si les éléments du serveur [1], [serveur], [metier], [dao], [entites], [spring] sont bien tous présents dans le projet Visual Studio, il nous manque l'élément qui va les instancier au démarrage de l'application web. Dans la version 8, une classe principale ayant la méthode statique [Main] faisait le travail d'instancier les couches avec l'aide de Spring. Dans une application web, la classe capable de faire un travail analogue est la classe associée au fichier [Global.asax] :</p>
@@ -1809,9 +1803,9 @@ Après cette opération, nous avons la totalité des couches nécessaires au ser
 <li>en [2], on choisit le type Global Application Class</li>
 <li>en [3], le nom proposé par défaut pour cet élément</li>
 <li>en [4], on valide l'ajout</li>
-<li>en [5], le nouvel élément a été intégré dans le projet
-Regardons le contenu du fichier [Global.asax] :</li>
+<li>en [5], le nouvel élément a été intégré dans le projet</li>
 </ul>
+<p>Regardons le contenu du fichier [Global.asax] :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
@@ -1885,16 +1879,14 @@ Regardons le contenu du fichier [Global.asax] :</li>
 <li>pour la récupérer, on écrit T valeur=(T)Application["clé"]; où T est le type de valeur.</li>
 <li>la méthode Session_Start est exécutée à chaque fois qu'un nouvel utilisateur fait une requête. Comment reconnaît-on un nouvel utilisateur ? Chaque utilisateur (un navigateur le plus souvent) reçoit à l'issue de sa première requête, un jeton de session qui est une chaîne de caractères unique pour chaque utilisateur. Ensuite, l'utilisateur renvoie le jeton de session qu'il a reçu à chaque nouvelle requête qu'il fait. Ceci permet au serveur web de le reconnaître. Au fil des différentes requêtes d'un même utilisateur, des données qui lui sont propres peuvent être mémorisées dans le conteneur <strong>Session</strong> :</li>
 <li>pour mettre une donnée dans ce conteneur, on écrit Session["clé"]=valeur;</li>
-<li>
-<p>pour la récupérer, on écrit T valeur=(T)Session["clé"]; où T est le type de valeur.
-La durée de vie d'une session est limitée par défaut à 20 mn d'inactivité de l'utilisateur (c.a.d. qu'il n'a pas renvoyé son jeton de session depuis 20 mn).</p>
-</li>
-<li>
-<p>la méthode Application_Error est exécutée lorsqu'une exception non gérée par l'application web remonte jusqu'au serveur web.</p>
-</li>
-<li>les autres méthodes sont plus rarement utilisées.
-Après ces généralités, à quoi peut nous servir Global.asax ? Nous allons utiliser sa méthode Application_Start pour initialiser les couches [metier], [dao] et [entites] contenues dans les DLL [ImpotsV7-metier, ImpotsV7-dao]. Nous utiliserons Spring pour les instancier. Les références des couches ainsi créées seront ensuite mémorisées dans des champs statiques de la classe associée à  Global.asax.</li>
+<li>pour la récupérer, on écrit T valeur=(T)Session["clé"]; où T est le type de valeur.</li>
 </ul>
+<p>La durée de vie d'une session est limitée par défaut à 20 mn d'inactivité de l'utilisateur (c.a.d. qu'il n'a pas renvoyé son jeton de session depuis 20 mn).</p>
+<ul>
+<li>la méthode Application_Error est exécutée lorsqu'une exception non gérée par l'application web remonte jusqu'au serveur web.</li>
+<li>les autres méthodes sont plus rarement utilisées.</li>
+</ul>
+<p>Après ces généralités, à quoi peut nous servir Global.asax ? Nous allons utiliser sa méthode Application_Start pour initialiser les couches [metier], [dao] et [entites] contenues dans les DLL [ImpotsV7-metier, ImpotsV7-dao]. Nous utiliserons Spring pour les instancier. Les références des couches ainsi créées seront ensuite mémorisées dans des champs statiques de la classe associée à  Global.asax.</p>
 <p>Première étape, nous déportons le code C# de Global.asax dans une classe à part. Le projet évolue de la façon suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019F000001BB2BAF6171.png" style="display:inline-block; margin:4px;width:6.59cm;height:7.031cm;" /></td></tr></table>
 
@@ -1943,9 +1935,9 @@ Après ces généralités, à quoi peut nous servir Global.asax ? Nous allons ut
 <li>ligne 6 : la classe Global. On peut lui donner le nom qu'on veut. L'important est qu'elle dérive de la classe <strong>System.Web.HttpApplication</strong>.</li>
 <li>ligne 9 : un champ statique public qui va contenir une référence sur la couche [metier].</li>
 <li>ligne 12 : la méthode Application_Start qui va être exécutée au démarrage de l'application.</li>
-<li>ligne 15 : Spring est utilisé pour exploiter le fichier [web.config] dans lequel il va trouver les objets à instancier pour créer les couches [metier] et [dao]. Il n'y a aucune différence entre l'utilisation de Spring avec [App.config] dans une application windows, et celle de Spring avec [web.config] dans une application web. [web.config] et [App.config] ont par ailleurs la même structure. La ligne 15 range la référence de la couche [metier] dans le champ statique de la ligne 9, afin que cette référence soit disponible pour toutes les requêtes de tous les utilisateurs.
-Le fichier [web.config] sera le suivant :</li>
+<li>ligne 15 : Spring est utilisé pour exploiter le fichier [web.config] dans lequel il va trouver les objets à instancier pour créer les couches [metier] et [dao]. Il n'y a aucune différence entre l'utilisation de Spring avec [App.config] dans une application windows, et celle de Spring avec [web.config] dans une application web. [web.config] et [App.config] ont par ailleurs la même structure. La ligne 15 range la référence de la couche [metier] dans le champ statique de la ligne 9, afin que cette référence soit disponible pour toutes les requêtes de tous les utilisateurs.</li>
 </ul>
+<p>Le fichier [web.config] sera le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
@@ -2001,9 +1993,9 @@ Le fichier [web.config] sera le suivant :</li>
 <p>C'est le fichier [App.config] utilisée dans la version 7 de l'application et étudiée au paragraphe 9.8.4, page 277.</p>
 <ul>
 <li>lignes 16-20 : définissent une couche [dao] travaillant avec une base de données MySQL5. Cette base de données a été décrite au paragraphe 9.8.1, page 269.</li>
-<li>lignes 21-23 : définissent la couche [metier]
-Revenons au puzzle du serveur :</li>
+<li>lignes 21-23 : définissent la couche [metier]</li>
 </ul>
+<p>Revenons au puzzle du serveur :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000762000001CBA64E53E5.png" style="display:inline-block; margin:4px;width:17.5cm;height:4.249cm;" /></td></tr></table>
 
 <p>Au démarrage de l'application, les couches [metier] et [dao] ont été instanciées. La durée de vie des couches est celle de l'application elle-même. Quand est instancié le service web ? En fait à chaque requête qu'on lui fait. A la fin de la requête, l'objet qui l'a servie est supprimé. Un service web est donc à première vue <strong>sans état</strong>. Il ne peut mémoriser des informations entre deux requêtes dans des champs qui lui appartiendraient. Il peut en mémoriser dans la session de l'utilisateur. Pour cela, les méthodes qu'il expose doivent être taguées avec un attribut spécial :</p>
@@ -2047,9 +2039,9 @@ Revenons au puzzle du serveur :</li>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 10 : l'unique méthode du service web</li>
-<li>ligne 12 : on utilise la méthode CalculerImpot de la couche [metier]. Une référence de cette couche est trouvée dans le champ statique Metier de la class Global. Celle-ci appartient à l'espace de noms WsImpot (ligne 2).
-Nous sommes prêts pour lancer le service web. Auparavant il faut lancer le SGBD MySQL5 afin que la base de données bdimpots soit accessible. Ceci fait, nous lançons [1] le service web :</li>
+<li>ligne 12 : on utilise la méthode CalculerImpot de la couche [metier]. Une référence de cette couche est trouvée dans le champ statique Metier de la class Global. Celle-ci appartient à l'espace de noms WsImpot (ligne 2).</li>
 </ul>
+<p>Nous sommes prêts pour lancer le service web. Auparavant il faut lancer le SGBD MySQL5 afin que la base de données bdimpots soit accessible. Ceci fait, nous lançons [1] le service web :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006A6000002A68065E486.png" style="display:inline-block; margin:4px;width:16.889cm;height:6.729cm;" /></td></tr></table>
 
 <p>Le navigateur affiche alors la page [2]. Nous suivons le lien :</p>
@@ -2070,13 +2062,11 @@ Nous sommes prêts pour lancer le service web. Auparavant il faut lancer le SGBD
 <p>La solution Visual Studio de la version 8 était constituée de 2 projets :</p>
 <ul>
 <li>le projet [metier] [1] qui était un client Tcp du serveur Tcp de calcul d'impôt</li>
-<li>
-<p>le projet [ui] [2] de l'interface graphique.
-Les modifications à faire sont les suivantes :</p>
-</li>
-<li>
-<p>le projet [metier] doit être désormais le client d'un service web</p>
-</li>
+<li>le projet [ui] [2] de l'interface graphique.</li>
+</ul>
+<p>Les modifications à faire sont les suivantes :</p>
+<ul>
+<li>le projet [metier] doit être désormais le client d'un service web</li>
 <li>le projet [ui] doit référencer la DLL de la nouvelle couche [metier]</li>
 <li>la configuration de la couche [metier] dans [App.config] doit changer.</li>
 </ul>
@@ -2093,13 +2083,11 @@ Les modifications à faire sont les suivantes :</p>
 <ul>
 <li>en [4], nous créons une référence au service web WsImpot.</li>
 <li>en [5], nous le configurons et le validons.</li>
-<li>
-<p>en [6], la référence au service web WsImpot a été créée et un fichier [app.config] a été généré.
-Dans le fichier caché [Reference.cs] :</p>
-</li>
-<li>
-<p>l'espace de noms est Client.WsImpot</p>
-</li>
+<li>en [6], la référence au service web WsImpot a été créée et un fichier [app.config] a été généré.</li>
+</ul>
+<p>Dans le fichier caché [Reference.cs] :</p>
+<ul>
+<li>l'espace de noms est Client.WsImpot</li>
 <li>la classe cliente s'appelle ServiceImpotSoapClient</li>
 <li>elle a une unique méthode de signature :
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a>        public int CalculerImpot(bool marié, int nbEnfants, int salaire) ;
@@ -2155,9 +2143,9 @@ Dans le fichier caché [Reference.cs] :</p>
 <li>ligne 6 : la classe ImpotMetierWs implémente l'interface IImpotMetier.</li>
 <li>ligne 9 : à la création d'une instance ImpotMetierWs, le champ client est initialisé avec une instance d'un client du service web de calcul d'impôt.</li>
 <li>ligne 12 : l'unique méthode de  l'interface IImpotMetier à implémenter.</li>
-<li>ligne 13 : on utilise la méthode CalculerImpot du client du service web distant de calcul d'impôt. Au final, c'est  la méthode CalculerImpot du service web distant qui sera interrogée.
-On peut générer la DLL du projet :</li>
+<li>ligne 13 : on utilise la méthode CalculerImpot du client du service web distant de calcul d'impôt. Au final, c'est  la méthode CalculerImpot du service web distant qui sera interrogée.</li>
 </ul>
+<p>On peut générer la DLL du projet :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006C600000192B3D82CDB.png" style="display:inline-block; margin:4px;width:18.35cm;height:4.249cm;" /></td></tr></table>
 
 <ul>
@@ -2174,9 +2162,9 @@ On peut générer la DLL du projet :</li>
 <ul>
 <li>en [1], le projet [ui] issu de la version 8</li>
 <li>en [2], la DLL ImpotsV8-metier de l'ancienne couche [metier] est remplacée par la DLL ImpotsV9-metier de la nouvelle couche</li>
-<li>en [3],  la DLL ImpotsV9-metier est ajoutée aux références du projet.
-Le second changement intervient dans [App.config]. Il faut se rappeler que ce fichier est utilisé par Spring pour instancier la couche [metier]. Comme celle-ci a changé, la configuration de [App.config] doit changer. D'autre part, [App.config] doit avoir la configuration permettant de joindre le service web distant de calcul d'impôt. Cette configuration a été générée dans le fichier [app.config] du projet [metier] lorsque la référence au service web distant y a été ajoutée.</li>
+<li>en [3],  la DLL ImpotsV9-metier est ajoutée aux références du projet.</li>
 </ul>
+<p>Le second changement intervient dans [App.config]. Il faut se rappeler que ce fichier est utilisé par Spring pour instancier la couche [metier]. Comme celle-ci a changé, la configuration de [App.config] doit changer. D'autre part, [App.config] doit avoir la configuration permettant de joindre le service web distant de calcul d'impôt. Cette configuration a été générée dans le fichier [app.config] du projet [metier] lorsque la référence au service web distant y a été ajoutée.</p>
 <p>Le fichier [App.config] devient donc le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-29-2"> 2</a></span>
@@ -2275,9 +2263,9 @@ Le second changement intervient dans [App.config]. Il faut se rappeler que ce fi
 <ul>
 <li>lignes 15-18 : Spring n'instancie qu'un objet, la couche [metier]</li>
 <li>ligne 16 : la couche [metier] est instanciée par la classe [Metier.ImpotMetierWs] qui se trouve dans la DLL ImpotsV9-metier.</li>
-<li>lignes 22-46 : la configuration du client du service web distant. C'est un copier / coller du contenu du fichier [app.config] du projet [metier].
-On est prêts. On exécute l'application par Ctrl-F5 ( le service web doit être lancé, le SGBD MySQL5 doit être lancé, le port ligne 42 ci-dessus doit être le bon) :</li>
+<li>lignes 22-46 : la configuration du client du service web distant. C'est un copier / coller du contenu du fichier [app.config] du projet [metier].</li>
 </ul>
+<p>On est prêts. On exécute l'application par Ctrl-F5 ( le service web doit être lancé, le SGBD MySQL5 doit être lancé, le port ligne 42 ci-dessus doit être le bon) :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012700000169CACC5363.png" style="display:inline-block; margin:4px;width:7.811cm;height:9.55cm;" /></td></tr></table>
 
 <h2 id="125-un-client-web-pour-le-service-web-de-calcul-dimpot">12.5. Un client web pour le service web de calcul d'impôt</h2>
@@ -2292,9 +2280,9 @@ On est prêts. On exécute l'application par Ctrl-F5 ( le service web doit être
 <ul>
 <li>le côté serveur ne bouge pas. Il reste ce qu'il est dans la version 9.</li>
 <li>côté client, la couche [client du service web] ne bouge pas. Elle a été encapsulée dans la DLL [ImpotsV9-metier]. Nous allons réutiliser cette DLL.</li>
-<li>au final le seul changement consiste à remplacer une interface graphique windows par une interface web.
-Nous allons aborder de nouvelles notions de programmation web côté serveur. Le but de ce document n'étant pas d'enseigner la programmation web, nous essaierons d'expliquer la démarche qui va être suivie mais sans entrer dans les détails. Il y aura donc un côté un peu "magique" dans cette section. Il nous semble cependant intéressant de faire cette démarche pour montrer un nouvel exemple d'architecture multi-couches où l'une des couches est changée.</li>
+<li>au final le seul changement consiste à remplacer une interface graphique windows par une interface web.</li>
 </ul>
+<p>Nous allons aborder de nouvelles notions de programmation web côté serveur. Le but de ce document n'étant pas d'enseigner la programmation web, nous essaierons d'expliquer la démarche qui va être suivie mais sans entrer dans les détails. Il y aura donc un côté un peu "magique" dans cette section. Il nous semble cependant intéressant de faire cette démarche pour montrer un nouvel exemple d'architecture multi-couches où l'une des couches est changée.</p>
 <p>L'architecture de la version 10 est donc la suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000769000001C67CA8FF24.png" style="display:inline-block; margin:4px;width:17.56cm;height:4.2cm;" /></td></tr></table>
 
@@ -2306,17 +2294,15 @@ Nous allons aborder de nouvelles notions de programmation web côté serveur. Le
 <li>ce formulaire est posté au serveur web 1 qui le fait traiter par la couche [web]</li>
 <li>la couche [web] aura besoin des services du client du service web distant, encapsulé dans [ImpotsV9-metier.dll].</li>
 <li>le client du service web distant communiquera avec le serveur web 2 qui héberge le service web distant.</li>
-<li>
-<p>la réponse du service web distant va remonter jusqu'à la couche web du client qui va la mettre en forme dans une page qu'il va envoyer à l'utilisateur.
-Notre travail ici est donc :</p>
-</li>
-<li>
-<p>de construire le formulaire web que verra l'utilisateur dans son navigateur</p>
-</li>
-<li>d'écrire l'application web qui va traiter la demande de l'utilisateur et lui envoyer une réponse sous la forme d'une nouvelle page web. Celle-ci sera en fait la même que le formulaire dans lequel on aura rajouté le montant de l'impôt à payer</li>
-<li>d'écrire la "glue" qui fait que tout ça marche ensemble.
-Tout ceci sera fait à l'aide d'un nouveau site web créé avec Visual Web Developer :</li>
+<li>la réponse du service web distant va remonter jusqu'à la couche web du client qui va la mettre en forme dans une page qu'il va envoyer à l'utilisateur.</li>
 </ul>
+<p>Notre travail ici est donc :</p>
+<ul>
+<li>de construire le formulaire web que verra l'utilisateur dans son navigateur</li>
+<li>d'écrire l'application web qui va traiter la demande de l'utilisateur et lui envoyer une réponse sous la forme d'une nouvelle page web. Celle-ci sera en fait la même que le formulaire dans lequel on aura rajouté le montant de l'impôt à payer</li>
+<li>d'écrire la "glue" qui fait que tout ça marche ensemble.</li>
+</ul>
+<p>Tout ceci sera fait à l'aide d'un nouveau site web créé avec Visual Web Developer :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007B800000281E1A7D7F6.png" style="display:inline-block; margin:4px;width:18.3cm;height:5.93cm;" /></td></tr></table>
 
 <ul>
@@ -2331,24 +2317,24 @@ Tout ceci sera fait à l'aide d'un nouveau site web créé avec Visual Web Devel
 <li>[5] : le projet créé dans Visual Web Developer</li>
 <li>[Default.aspx] est une page web appelée la page par défaut. C'est celle qui sera délivrée si on demande l'Url http://.../ClientAspImpot sans préciser de document. C'est cette page qui contiendra le formulaire de calcul de l'impôt que l'utilisateur verra dans son navigateur.</li>
 <li>[Default.aspx.cs] est la classe associée à la page, celle qui va générer le formulaire envoyé à l'utilisateur puis le traiter lorsque celui-ci l'aura rempli et validé. </li>
-<li>[web.config] est le fichier de configuration de l'application. Contrairement aux fois précédentes nous allons le garder.
-Si nous revenons à l'architecture que nous devons construire :</li>
+<li>[web.config] est le fichier de configuration de l'application. Contrairement aux fois précédentes nous allons le garder.</li>
 </ul>
+<p>Si nous revenons à l'architecture que nous devons construire :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000072A000001A7E88F9CD2.png" style="display:inline-block; margin:4px;width:16.979cm;height:3.919cm;" /></td></tr></table>
 
 <ul>
 <li>[1] va être implémentée par [Default.aspx]</li>
 <li>[2] va être implémentée par [Default.aspx.cs]</li>
-<li>[3] va être implémentée par la DLL [ImpotV9-metier]
-Commençons par implémenter la couche [3]. Il y a plusieurs étapes :</li>
+<li>[3] va être implémentée par la DLL [ImpotV9-metier]</li>
 </ul>
+<p>Commençons par implémenter la couche [3]. Il y a plusieurs étapes :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000076300000373F9C30151.png" style="display:inline-block; margin:4px;width:17.51cm;height:8.179cm;" /></td></tr></table>
 
 <ul>
 <li>en [1], le dossier [lib] du client graphique windows version 9 est copié dans le dossier du projet web [ClientAspWsImpot]. Cela se fait avec l'explorateur windows. Pour faire apparaître ce dossier dans la solution Web Developer, il faut rafraîchir la solution avec le bouton [2].</li>
-<li>puis les ajouter aux références du projet [3,4,5]. Les Dll référencées sont automatiquement recopiées dans le dossier /bin du projet [6].
-On a désormais les Dll nécessaires au fonctionnement de Spring et la couche client du service web distant est également implémentée. Si le code de celui-ci est bien présent, sa configuration reste à faire. Dans la version 9, il était configuré par le fichier [App.config] suivant :</li>
+<li>puis les ajouter aux références du projet [3,4,5]. Les Dll référencées sont automatiquement recopiées dans le dossier /bin du projet [6].</li>
 </ul>
+<p>On a désormais les Dll nécessaires au fonctionnement de Spring et la couche client du service web distant est également implémentée. Si le code de celui-ci est bien présent, sa configuration reste à faire. Dans la version 9, il était configuré par le fichier [App.config] suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-30-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-30-3"> 3</a></span>
@@ -2518,17 +2504,17 @@ On a désormais les Dll nécessaires au fonctionnement de Spring et la couche cl
 <ul>
 <li>[1] va être implémentée par [Default.aspx]</li>
 <li>[2] va être implémentée par [Default.aspx.cs]</li>
-<li>[3] a été implémentée par la DLL [ImpotV9-metier]
-Nous venons d'implémenter la couche [3]. Nous passons à l'interface web [1] implémentée par la page [Default.aspx]. Double-cliquons sur la page [Default.aspx] pour passer en mode conception.</li>
+<li>[3] a été implémentée par la DLL [ImpotV9-metier]</li>
 </ul>
+<p>Nous venons d'implémenter la couche [3]. Nous passons à l'interface web [1] implémentée par la page [Default.aspx]. Double-cliquons sur la page [Default.aspx] pour passer en mode conception.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006B90000027D5B050CF9.png" style="display:inline-block; margin:4px;width:17.069cm;height:6.32cm;" /></td></tr></table>
 
 <p>Il y a deux façons de construire une page web :</p>
 <ul>
 <li>graphiquement comme en [2]. Il faut alors choisir le mode [Design] en [1]. On trouvera cette barre de boutons en bas dans la barre d'état de l'éditeur de la page web.</li>
-<li>avec un langage de balises comme en [3]. Il faut alors choisir le mode [Source] en [1].
-Les modes [Design] et [Source] sont bidirectionnels : une modification faite en mode [Design] se traduit par une modification en mode [Source] et vice-versa. Rappelons que le formulaire web à présenter dans le navigateur est le suivant :</li>
+<li>avec un langage de balises comme en [3]. Il faut alors choisir le mode [Source] en [1].</li>
 </ul>
+<p>Les modes [Design] et [Source] sont bidirectionnels : une modification faite en mode [Design] se traduit par une modification en mode [Source] et vice-versa. Rappelons que le formulaire web à présenter dans le navigateur est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000073C0000026841EEAC8C.png" style="display:inline-block; margin:4px;width:18.369cm;height:6.11cm;" /></td></tr></table>
 
 <ul>
@@ -2539,18 +2525,18 @@ Les modes [Design] et [Source] sont bidirectionnels : une modification faite en 
 <li>ligne B, une zone de saisie nommée TextBoxEnfants et un label nommé LabelErreurEnfants</li>
 <li>ligne C, une zone de saisie nommée TextBoxSalaire et un label nommé LabelErreurSalaire</li>
 <li>ligne D, un label nommé LabelImpot</li>
-<li>ligne E, deux boutons nommés ButtonCalculer et ButtonEffacer
-Une fois un composant déposé sur la surface de conception, on a accès à ses propriétés :</li>
+<li>ligne E, deux boutons nommés ButtonCalculer et ButtonEffacer</li>
 </ul>
+<p>Une fois un composant déposé sur la surface de conception, on a accès à ses propriétés :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DA000002F58F8F8FDF.png" style="display:inline-block; margin:4px;width:16.431cm;height:10.01cm;" /></td></tr></table>
 
 <ul>
 <li>en [1], accès aux propriétés d'un composant</li>
 <li>en [2], la fiche des propriétés du composant [LabelErreurEnfants ]</li>
 <li>en [3], (ID) est le nom du composant</li>
-<li>en [4], nous avons donné la couleur rouge aux caractères du label.
-Il n'est pas suffisant de déposer des composants sur le formulaire puis de fixer leurs propriétés. Il faut également organiser leur disposition. Dans une interface graphique windows, cette disposition est absolue. On fait glisser le composant là où on veut qu'il soit. Dans une page web, c'est différent, plus complexe mais aussi plus puissant. Cet aspect ne sera pas abordé ici.</li>
+<li>en [4], nous avons donné la couleur rouge aux caractères du label.</li>
 </ul>
+<p>Il n'est pas suffisant de déposer des composants sur le formulaire puis de fixer leurs propriétés. Il faut également organiser leur disposition. Dans une interface graphique windows, cette disposition est absolue. On fait glisser le composant là où on veut qu'il soit. Dans une page web, c'est différent, plus complexe mais aussi plus puissant. Cet aspect ne sera pas abordé ici.</p>
 <p>Le code source [Default.aspx] généré par cette conception est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-33-2"> 2</a></span>
@@ -2715,9 +2701,9 @@ Il n'est pas suffisant de déposer des composants sur le formulaire puis de fixe
 <ul>
 <li>[1] a été implémentée par [Default.aspx]</li>
 <li>[2] va être implémentée par [Default.aspx.cs]</li>
-<li>[3] a été implémentée par la DLL [ImpotV9-metier]
-Les couches [1] et [3] sont désormais implémentées. Il nous reste à écrire la couche [2], celle qui génère le formulaire, l'envoie à l'utilisateur, le traite lorsque celui-ci le lui renvoie rempli, utilise la couche [3] pour le calcul de l'impôt, génère la page web de réponse à l'utilisateur et la lui renvoie. C'est le code [Default.aspx.cs] qui fait tout ce travail :</li>
+<li>[3] a été implémentée par la DLL [ImpotV9-metier]</li>
 </ul>
+<p>Les couches [1] et [3] sont désormais implémentées. Il nous reste à écrire la couche [2], celle qui génère le formulaire, l'envoie à l'utilisateur, le traite lorsque celui-ci le lui renvoie rempli, utilise la couche [3] pour le calcul de l'impôt, génère la page web de réponse à l'utilisateur et la lui renvoie. C'est le code [Default.aspx.cs] qui fait tout ce travail :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-34-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-34-3"> 3</a></span>
@@ -2758,9 +2744,9 @@ Les couches [1] et [3] sont désormais implémentées. Il nous reste à écrire 
 <li>les valeurs postées vont être affectées à leurs composants (RadioButtonOui, RadioButtonNon, TextBoxEnfants, TextBoxSalaire). Ainsi si l'utilisateur a mis 2 comme nombre d'enfants, on aura TextBoxEnfants.Text="2".</li>
 <li>si la page [Default.aspx]  a une méthode [Page_Load], celle-ci sera exécutée</li>
 <li>la méthode [ButtonCalculer_Click] de la ligne 6 sera exécutée si c'est le bouton [Calculer] qui a été cliqué</li>
-<li>la méthode [ButtonEffacer_Click] de la ligne 10 sera exécutée si c'est le bouton [Effacer] qui a été cliqué
-Entre le moment où l'utilisateur crée un événement dans son navigateur et celui où il est traité dans [Default.aspx.cs], il y a une grande complexité. Celle-ci est cachée et on peut faire comme si elle n'existait pas lorsqu'on écrit les gestionnaires d'événements de la page web. Mais on ne doit jamais oublier qu'il y a le réseau entre l'événement et son gestionnaire et qu'il n'est donc pas question de gérer des événements souris tels Mouse_Move qui provoqueraient des aller /retour client / serveur coûteux ...</li>
+<li>la méthode [ButtonEffacer_Click] de la ligne 10 sera exécutée si c'est le bouton [Effacer] qui a été cliqué</li>
 </ul>
+<p>Entre le moment où l'utilisateur crée un événement dans son navigateur et celui où il est traité dans [Default.aspx.cs], il y a une grande complexité. Celle-ci est cachée et on peut faire comme si elle n'existait pas lorsqu'on écrit les gestionnaires d'événements de la page web. Mais on ne doit jamais oublier qu'il y a le réseau entre l'événement et son gestionnaire et qu'il n'est donc pas question de gérer des événements souris tels Mouse_Move qui provoqueraient des aller /retour client / serveur coûteux ...</p>
 <p>Le code des gestionnaires des clics sur les boutons [Calculer] et [Effacer] est celui qu'on aurait écrit pour une application windows classique :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-35-2"> 2</a></span>
@@ -2831,9 +2817,9 @@ Entre le moment où l'utilisateur crée un événement dans son navigateur et ce
 <ul>
 <li>pour comprendre ce code, il faut savoir </li>
 <li>qu'au début de son exécution, le formulaire [Default.aspx] est tel que l'utilisateur l'a rempli. Ainsi les champs (RadioButtonOui, RadioButtonNon, TextBoxEnfants, TextBoxSalaire) ont les valeurs saisies par l'utilisateur.</li>
-<li>qu'à l'issue de son exécution, la même page [Default.aspx] va être renvoyée à l'utilisateur. Cela est fait de façon automatique.
-La procédure ButtonCalculer_Click doit donc à partir des valeurs actuelles des champs (RadioButtonOui, RadioButtonNon, TextBoxEnfants, TextBoxSalaire) fixer la valeur de tous les champs (RadioButtonOui, RadioButtonNon, TextBoxEnfants, TextBoxSalaire, LabelErreurEnfants, LabelErreurSalaire, LabelImpot) de la nouvelle page [Default.aspx] qui va être renvoyée à l'utilisateur.</li>
+<li>qu'à l'issue de son exécution, la même page [Default.aspx] va être renvoyée à l'utilisateur. Cela est fait de façon automatique.</li>
 </ul>
+<p>La procédure ButtonCalculer_Click doit donc à partir des valeurs actuelles des champs (RadioButtonOui, RadioButtonNon, TextBoxEnfants, TextBoxSalaire) fixer la valeur de tous les champs (RadioButtonOui, RadioButtonNon, TextBoxEnfants, TextBoxSalaire, LabelErreurEnfants, LabelErreurSalaire, LabelImpot) de la nouvelle page [Default.aspx] qui va être renvoyée à l'utilisateur.</p>
 <p>Il n'y a pas de difficulté particulière à ce code. Seule la ligne 27 mérite d'être expliquée. Elle utilise la méthode CalculerImpot d'un champ Global.Metier qui n'a pas été rencontré. Nous allons y revenir prochainement.</p>
 <p>La méthode ButtonEffacer_Click est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span>
@@ -2860,31 +2846,27 @@ La procédure ButtonCalculer_Click doit donc à partir des valeurs actuelles des
 <ul>
 <li>[1] a été implémentée par [Default.aspx]</li>
 <li>[2] a été implémentée par [Default.aspx.cs]</li>
-<li>
-<p>[3] a été implémentée par la DLL [ImpotV9-metier]
-Il nous reste à mettre la "glue" autour de ces trois couches. Il s'agit essentiellement :</p>
-</li>
-<li>
-<p>d'instancier la couche [3] au démarrage de l'application</p>
-</li>
-<li>
-<p>d'en mettre une référence dans un endroit où la page web [Default.aspx.cs] pourra aller la chercher à chaque fois qu'elle sera instanciée et qu'on lui demandera de calculer l'impôt.
-Ce n'est pas un problème nouveau. Il a déjà été rencontré dans la construction du service web distant et étudié au paragraphe 12.4.1, page 422. On sait que la solution consiste : </p>
-</li>
-<li>
-<p>à créer un fichier [Global.asax] associé à une classe [Global.cs]</p>
-</li>
-<li>à instancier la couche [3] dans la méthode Application_Start de [Global.cs]</li>
-<li>à mettre la référence de la couche [3] dans un champ statique de la classe [Global.cs], car la durée de vie de cette classe est celle de l'application.
-Aussi notre projet web évolue-t-il de la façon suivante :</li>
+<li>[3] a été implémentée par la DLL [ImpotV9-metier]</li>
 </ul>
+<p>Il nous reste à mettre la "glue" autour de ces trois couches. Il s'agit essentiellement :</p>
+<ul>
+<li>d'instancier la couche [3] au démarrage de l'application</li>
+<li>d'en mettre une référence dans un endroit où la page web [Default.aspx.cs] pourra aller la chercher à chaque fois qu'elle sera instanciée et qu'on lui demandera de calculer l'impôt.</li>
+</ul>
+<p>Ce n'est pas un problème nouveau. Il a déjà été rencontré dans la construction du service web distant et étudié au paragraphe 12.4.1, page 422. On sait que la solution consiste : </p>
+<ul>
+<li>à créer un fichier [Global.asax] associé à une classe [Global.cs]</li>
+<li>à instancier la couche [3] dans la méthode Application_Start de [Global.cs]</li>
+<li>à mettre la référence de la couche [3] dans un champ statique de la classe [Global.cs], car la durée de vie de cette classe est celle de l'application.</li>
+</ul>
+<p>Aussi notre projet web évolue-t-il de la façon suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000461000001B435D12D00.png" style="display:inline-block; margin:4px;width:17.799cm;height:6.92cm;" /></td></tr></table>
 
 <ul>
 <li>en [1], le fichier [Global.asax].</li>
-<li>en [2], le code [Global.cs] associé. Le dossier [App_Code] dans lequel se trouve ce fichier n'est pas présent par défaut dans la solution web. Utiliser [3] pour le créer.
-Le fichier Global.asax est le suivant :</li>
+<li>en [2], le code [Global.cs] associé. Le dossier [App_Code] dans lequel se trouve ce fichier n'est pas présent par défaut dans la solution web. Utiliser [3] pour le créer.</li>
 </ul>
+<p>Le fichier Global.asax est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a>&lt;%@ Application Language=&quot;C#&quot; Inherits=&quot;WsImpot.Global&quot;%&gt;
 </code></pre></div></td></tr></table></div>
 <p>Le code [Global.cs] est le suivant :</p>
@@ -2969,9 +2951,9 @@ Le fichier Global.asax est le suivant :</li>
 
 <ul>
 <li>le client [1] sera écrit en Java</li>
-<li>le serveur [2] est celui écrit en C#
-Tout d'abord, nous allons changer un détail dans notre service web de calcul d'impôt. Sa définition actuelle dans [ServiceImpot.cs] est la suivante :</li>
+<li>le serveur [2] est celui écrit en C#</li>
 </ul>
+<p>Tout d'abord, nous allons changer un détail dans notre service web de calcul d'impôt. Sa définition actuelle dans [ServiceImpot.cs] est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-41-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-41-3"> 3</a></span>
@@ -3040,9 +3022,9 @@ Tout d'abord, nous allons changer un détail dans notre service web de calcul d'
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000079B00000377B0069281.png" style="display:inline-block; margin:4px;width:18.03cm;height:8.209cm;" /></td></tr></table>
 
 <ul>
-<li>en [11], l'Url du fichier décrivant le service web de calcul d'impôt :
-http://localhost:1089/WsImpotSansAccents/ServiceImpot.asmx?WSDL</li>
+<li>en [11], l'Url du fichier décrivant le service web de calcul d'impôt :</li>
 </ul>
+<p>http://localhost:1089/WsImpotSansAccents/ServiceImpot.asmx?WSDL</p>
 <p>Cette Url est celle du service [ServiceImpot.asmx] à laquelle on ajoute le paramètre ?WSDL. Le document situé à cette Url décrit en langage Xml ce que sait faire le service [15]. C'est un élément standard d'un service web.</p>
 <ul>
 <li>en [12], le package (équivalent de l'espace de noms du C#) dans lequel mettre les classes qui vont être générées</li>
@@ -3059,9 +3041,9 @@ http://localhost:1089/WsImpotSansAccents/ServiceImpot.asmx?WSDL</li>
 
 <ul>
 <li>en [18], nous allons insérer du code dans la méthode [main]. Mettre le curseur à l'endroit où le code doit être inséré, cliquer droit et prendre l'option [19]</li>
-<li>en [20], indiquer que vous voulez générer le code d'appel de la fonction CalculerImpot du service distant de calcul d'impôt puis faire Ok.
-Le code généré dans [Main] est le suivant :</li>
+<li>en [20], indiquer que vous voulez générer le code d'appel de la fonction CalculerImpot du service distant de calcul d'impôt puis faire Ok.</li>
 </ul>
+<p>Le code généré dans [Main] est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-43-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-43-3"> 3</a></span>
@@ -3125,9 +3107,9 @@ Le code généré dans [Main] est le suivant :</li>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 1 : nous importons la classe ServiceImpot qui représente le client généré par l'assistant.</li>
-<li>ligne 6 : nous appelons la méthode distante CalculerImpot en suivant la procédure indiquée dans le code généré dans main.
-Les résultats obtenus dans la console à l'exécution (F6) sont les suivants :</li>
+<li>ligne 6 : nous appelons la méthode distante CalculerImpot en suivant la procédure indiquée dans le code généré dans main.</li>
 </ul>
+<p>Les résultats obtenus dans la console à l'exécution (F6) sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-45-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-45-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-45-3"> 3</a></span>
