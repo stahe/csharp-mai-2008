@@ -65,14 +65,10 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    // CORRECTION ICI : Utilisation de guillemets doubles pour entourer le titre qui contient une apostrophe
     var siteName = "Apprentissage du langage C# Version 3.0 avec le Framework .NET 3.5";
-
     gtag('config', 'G-EBZC3JVJNR', {
         'page_title': siteName
     });
-    console.log("[GA Debug] page_title forced to: " + siteName);
   </script>
 
     
@@ -715,16 +711,14 @@
 <li>une étude de XML avec les classes .NET permettant de gérer les documents XML.</li>
 <li>la programmation Web avec les pages et contrôles ASP.NET.</li>
 <li>.NET Remoting qui permet de faire du client / serveur avec un protocole propriétaire mais efficace</li>
-<li>
-<p>...
-Le point 3 est développé dans les documents suivants écrits en 2004 mais sans doute encore d&#x27;actualité en 2008 :</p>
-</li>
-<li>
-<p>Programmation ASP.NET / VB.NET, volume 1, [http://tahe.developpez.com/dotnet/aspnet/vol1/]</p>
-</li>
-<li>Programmation ASP.NET / VB.NET , volume 2, [http://tahe.developpez.com/dotnet/aspnet/vol2/]
-Les exemples de ces documents sont en VB.NET.</li>
+<li>...</li>
 </ul>
+<p>Le point 3 est développé dans les documents suivants écrits en 2004 mais sans doute encore d&#x27;actualité en 2008 :</p>
+<ul>
+<li>Programmation ASP.NET / VB.NET, volume 1, [http://tahe.developpez.com/dotnet/aspnet/vol1/]</li>
+<li>Programmation ASP.NET / VB.NET , volume 2, [http://tahe.developpez.com/dotnet/aspnet/vol2/]</li>
+</ul>
+<p>Les exemples de ces documents sont en VB.NET.</p>
 
 
 
@@ -755,7 +749,23 @@ Les exemples de ces documents sont en VB.NET.</li>
         
       </main>
       
-        <footer>Pied de page</footer>
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://tahe.developpez.com" target="_blank">
+          https://tahe.developpez.com
+        </a>
+        <br>
+        Ce cours-tutoriel écrit par <strong>Serge Tahé</strong> est mis à disposition du public selon les termes de la
+        <em>Licence Creative Commons Attribution – Pas d’Utilisation Commerciale –
+        Partage dans les Mêmes Conditions 3.0 non transposé</em>.
+      </div>
+
+    </div>
+  </div>
+
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
