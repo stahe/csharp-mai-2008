@@ -2971,7 +2971,7 @@
 <li>ligne 6 : celle-ci doit être affichée dans le chronomètre sous la forme <em>hh:mm:ss</em>. Pour cela nous utilisons les propriétés <em>Hours</em>, <em>Minutes</em>, <em>Seconds</em> de l&#x27;objet <em>TimeSPan</em> qui représentent respectivement les heures, minutes, secondes de la durée que nous affichons au format <em>ToString(&quot;d2&quot;)</em> pour avoir un affichage sur 2 chiffres.</li>
 </ul>
 <h2 id="76-application-exemple-version-6">7.6. Application exemple - version 6</h2>
-<p>On reprend l&#x27;application exemple IMPOTS. La dernière version a été étudiée au paragraphe 6.4, page 139. C&#x27;était l&#x27;application à trois couches suivante :</p>
+<p>On reprend l&#x27;application exemple IMPOTS. La dernière version a été étudiée au paragraphe 6.4, page 140. C&#x27;était l&#x27;application à trois couches suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006B1000001ED067E6A7E.png" style="display:inline-block; margin:4px;width:13.6cm;height:3.911cm;" /></td></tr></table>
 
 <ul>
@@ -2992,11 +2992,11 @@
 <li>[Form1.cs] : la classe d&#x27;un 1er formulaire</li>
 <li>[Form2] : la classe d&#x27;un 2ième formulaire</li>
 <li>[lib] détaillé dans [2] : on y a mis toutes les DLL nécessaires au projet :</li>
-<li>[ImpotsV5-dao.dll] : la DLL de la couche [dao] générée au paragraphe 6.4.3, page 152</li>
-<li>[ImpotsV5-metier.dll] : la DLL de la couche [dao] générée au paragraphe 6.4.4, page 156</li>
-<li>[Spring.Core.dll], [Common.Logging.dll], [antlr.runtime.dll] : les DLL de Spring déjà utilisées dans la version précédente (cf paragraphe 6.4.6, page 157).</li>
+<li>[ImpotsV5-dao.dll] : la DLL de la couche [dao] générée au paragraphe 6.4.3, page 153</li>
+<li>[ImpotsV5-metier.dll] : la DLL de la couche [dao] générée au paragraphe 6.4.4, page 157</li>
+<li>[Spring.Core.dll], [Common.Logging.dll], [antlr.runtime.dll] : les DLL de Spring déjà utilisées dans la version précédente (cf paragraphe 6.4.6, page 158).</li>
 <li>[references] détaillé dans [3] : les références du projet. On a ajouté une référence pour chacune des DLL du dossier [lib]</li>
-<li>[App.config] : le fichier de configuration du projet. Il est identique à celui de la version précédente décrit au paragraphe 6.4.6, page 162.</li>
+<li>[App.config] : le fichier de configuration du projet. Il est identique à celui de la version précédente décrit au paragraphe 6.4.6, page 163.</li>
 <li>[DataImpot.txt] : le fichier des tranches d&#x27;impôt configuré pour être recopié automatiquement dans le dossier d&#x27;exécution du projet [4]</li>
 </ul>
 <p>Le formulaire [Form1] est le formulaire de saisies des paramètres du calcul de l&#x27;impôt [A] déjà présenté plus haut. Le formulaire [Form2] [B] sert à afficher un message d&#x27;erreur :</p>

@@ -862,10 +862,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#971-parmi-les-methodes-de-linterface-idbcommand-decrite-page-224-il-y-avait-la-methode-suivante" class="md-nav__link">
+  <a href="#971-parmi-les-methodes-de-linterface-idbcommand-decrite-page-225-il-y-avait-la-methode-suivante" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9.7.1. Parmi les méthodes de l&#x27;interface IDbCommand décrite page 224, il y avait la méthode suivante :
+        9.7.1. Parmi les méthodes de l&#x27;interface IDbCommand décrite page 225, il y avait la méthode suivante :
       
     </span>
   </a>
@@ -1960,8 +1960,8 @@
 <li>la clause <strong>using (Ressource) {...}</strong> est une facilité syntaxique garantissant la libération de la ressource <em>Ressource</em>, ici une connexion, à la sortie du bloc contrôlé par le <em>using</em>.</li>
 <li>la connexion est d&#x27;un type propriétaire : <em>SqlCeConnection</em>, propre au SGBD SQL Server Compact.</li>
 <li>ligne 7 : la connexion est ouverte. C&#x27;est à ce moment que les paramètres de la chaîne de connexion sont utilisés.</li>
-<li>ligne 9 : un ordre SQL est émis via un objet propriétaire <em>SqlCeCommand</em>. La ligne 9 initialise cet objet avec deux informations : la connexion à utiliser et l&#x27;ordre SQL à émettre dessus. L&#x27;objet <em>SqlCeCommand</em> sert aussi bien à exécuter un ordre <em>Select</em> qu&#x27;un ordre <em>Update</em>, <em>Insert</em>, <em>Delete</em>. Ses propriétés et méthodes ont été présentées page 224.</li>
-<li>ligne 10 : un ordre SQL <em>Select</em> est exécuté via la méthode <em>ExecuteReader</em> de l&#x27;objet <em>SqlCeCommand</em> qui rend un objet <em>IDataReader</em> dont a présenté les méthodes et propriétés page 225.</li>
+<li>ligne 9 : un ordre SQL est émis via un objet propriétaire <em>SqlCeCommand</em>. La ligne 9 initialise cet objet avec deux informations : la connexion à utiliser et l&#x27;ordre SQL à émettre dessus. L&#x27;objet <em>SqlCeCommand</em> sert aussi bien à exécuter un ordre <em>Select</em> qu&#x27;un ordre <em>Update</em>, <em>Insert</em>, <em>Delete</em>. Ses propriétés et méthodes ont été présentées page 225.</li>
+<li>ligne 10 : un ordre SQL <em>Select</em> est exécuté via la méthode <em>ExecuteReader</em> de l&#x27;objet <em>SqlCeCommand</em> qui rend un objet <em>IDataReader</em> dont a présenté les méthodes et propriétés page 226.</li>
 <li>ligne 12 : l&#x27;affichage des résultats est confiée à la méthode <em>AfficheReader</em> suivante :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1"> 1</a></span>
@@ -2060,14 +2060,14 @@
 <li>ligne 10 : l&#x27;ordre <em>Update</em>, <em>Insert</em>, <em>Delete</em> est exécuté par la méthode <em>ExecuteNonQuery</em> de l&#x27;objet <em>SqlCeCommand</em>. Si elle réussit, cette méthode rend le nombre de lignes mises à jour (update) ou insérées (insert) ou détruites (delete).</li>
 <li>ligne 12 : ce nombre de lignes est affiché à l&#x27;écran</li>
 </ul>
-<p>Le lecteur est invité à revoir un exemple d&#x27;exécution de ce code, page 223.</p>
+<p>Le lecteur est invité à revoir un exemple d&#x27;exécution de ce code, page 224.</p>
 <h2 id="94-autres-connecteurs-adonet">9.4. Autres connecteurs ADO.NET</h2>
 <p>Le code que nous avons étudié est propriétaire : il dépend de l&#x27;espace de noms [System.Data.SqlServerCe] destiné au SGBD SQL Server Compact. Nous allons maintenant construire le même programme avec différents connecteurs .NET et voir ce qui change.</p>
 <h3 id="941-connecteur-sql-server-2005">9.4.1. Connecteur SQL Server 2005</h3>
 <p>L&#x27;architecture utilisée sera la suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000063B00000102F01B0F3E.png" style="display:inline-block; margin:4px;width:12.659cm;height:2.05cm;" /></td></tr></table>
 
-<p>L&#x27;installation de SQL Server 2005 est décrite en annexes au paragraphe 1.1, page 426.</p>
+<p>L&#x27;installation de SQL Server 2005 est décrite en annexes au paragraphe 1.1, page 427.</p>
 <p>Nous créons un second projet dans la même solution que précédemment puis nous créons la base de données SQL server 2005. Le  SGBD SQL Server 2005 doit être lancé avant les opérations qui suivent :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006F70000018EEBC02A28.png" style="display:inline-block; margin:4px;width:14.15cm;height:3.161cm;" /></td></tr></table>
 
@@ -2127,7 +2127,7 @@
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 4 : la chaîne de connexion à la base [dbarticles.mdf] avec une authentification windows</li>
-<li>ligne 5 : la chaîne de connexion à la base [dbarticles.mdf] avec une authentification SQL Server. [sa,msde] est le couple (login,password) de l&#x27;administrateur du serveur SQL Server tel que défini au paragraphe 1.1, page 426.</li>
+<li>ligne 5 : la chaîne de connexion à la base [dbarticles.mdf] avec une authentification SQL Server. [sa,msde] est le couple (login,password) de l&#x27;administrateur du serveur SQL Server tel que défini au paragraphe 1.1, page 427.</li>
 </ul>
 <p>Le programme [Program.cs] évolue de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1"> 1</a></span>
@@ -2253,7 +2253,7 @@
 <p>L&#x27;architecture utilisée sera la suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000062C00000116C1F40819.png" style="display:inline-block; margin:4px;width:12.539cm;height:2.21cm;" /></td></tr></table>
 
-<p>L&#x27;installation de MySQL5 est décrite en annexes au paragraphe 1.2, page 432 et celle du connecteur Ado.Net au paragraphe 1.2.5, page 441.</p>
+<p>L&#x27;installation de MySQL5 est décrite en annexes au paragraphe 1.2, page 433 et celle du connecteur Ado.Net au paragraphe 1.2.5, page 442.</p>
 <p>Nous créons un troisième projet dans la même solution que précédemment et nous lui ajoutons les références dont il a besoin :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075E000001AB49040587.png" style="display:inline-block; margin:4px;width:14.97cm;height:3.39cm;" /></td></tr></table>
 
@@ -2262,7 +2262,7 @@
 <li>[2] : auquel on ajoute des références</li>
 <li>[3] : la DLL [MySQL.Data] du connecteur Ado.Net de MySql5 ainsi que celle de [System.Configuration] [4].</li>
 </ul>
-<p>Nous créons maintenant la base de données [dbarticles] et sa table [articles]. Le SGBD MySQL5 doit être lancé. Par ailleurs, on lance le client [Query Browser] (cf paragraphe 1.2.3, page 436).</p>
+<p>Nous créons maintenant la base de données [dbarticles] et sa table [articles]. Le SGBD MySQL5 doit être lancé. Par ailleurs, on lance le client [Query Browser] (cf paragraphe 1.2.3, page 437).</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077A000001C9D4749933.png" style="display:inline-block; margin:4px;width:15.191cm;height:3.63cm;" /></td></tr></table>
 
 <ul>
@@ -2349,7 +2349,7 @@
 <li><strong>Server</strong> : nom de la machine sur laquelle se trouve le SGBD MySQL, ici <em>localhost</em>, c.a.d. la machine sur laquelle va être exécutée le programme.</li>
 <li><strong>Database</strong> : le nom de la base de données gérée, ici <em>dbarticles</em></li>
 <li><strong>Uid</strong> : le login de l&#x27;utilisateur, ici <em>root</em></li>
-<li><strong>Pwd</strong> : son mot de passe, ici <em>root</em>. Ces deux informations désignent l&#x27;administrateur créé au paragraphe 1.2, page 432.</li>
+<li><strong>Pwd</strong> : son mot de passe, ici <em>root</em>. Ces deux informations désignent l&#x27;administrateur créé au paragraphe 1.2, page 433.</li>
 </ul>
 <p>Le programme [Program.cs] est identique à celui des versions précédentes aux détails près suivants :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
@@ -2397,13 +2397,13 @@
 <p>Nous étudions un exemple où l&#x27;application exploite une base MySQL5 ou une base SQL server Express selon la chaîne de connexion qu&#x27;on lui donne. Dans ce qui suit, nous supposons que :</p>
 <ul>
 <li>les SGBD SQL Server Express et MySQL5 ont été lancés</li>
-<li>que le pilote ODBC de MySQL5 est présent sur la machine (cf paragraphe 1.2.6, page 442). Celui de SQL Server 2005 est présent par défaut.</li>
-<li>les bases de données utilisées sont celles du paragraphe 9.4.2, page 234 pour la base MySQL5, celle du paragraphe 9.4.1, page 231 pour la base SQL Server Express.</li>
+<li>que le pilote ODBC de MySQL5 est présent sur la machine (cf paragraphe 1.2.6, page 443). Celui de SQL Server 2005 est présent par défaut.</li>
+<li>les bases de données utilisées sont celles du paragraphe 9.4.2, page 235 pour la base MySQL5, celle du paragraphe 9.4.1, page 232 pour la base SQL Server Express.</li>
 </ul>
 <p>Le nouveau projet Visual studio est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AF0000015FF7977D37.png" style="display:inline-block; margin:4px;width:3.42cm;height:2.79cm;" /></td></tr></table>
 
-<p>Ci-dessus, la base SQL Server [dbarticles.mdf] créée au paragraphe 9.4.1, page 231 a été recopiée dans le dossier du projet.</p>
+<p>Ci-dessus, la base SQL Server [dbarticles.mdf] créée au paragraphe 9.4.1, page 232 a été recopiée dans le dossier du projet.</p>
 <p>Le fichier de configuration [App.config] est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-48-1">1</a></span>
 <span class="normal"><a href="#__codelineno-48-2">2</a></span>
@@ -2586,7 +2586,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075C0000011FB0E76D4C.png" style="display:inline-block; margin:4px;width:14.951cm;height:2.281cm;" /></td></tr></table>
 
 <p>Comme les connecteurs ODBC et OLE DB, le connecteur générique présente une interface standard aux applications qui l&#x27;utilise mais améliore les performances sans sacrifier la souplesse. En effet, le connecteur générique s&#x27;appuie sur les connecteurs propriétaires des SGBD. L&#x27;application utilise des classes du connecteur générique. Ces classes servent d&#x27;intermédiaires entre l&#x27;application et le connecteur propriétaire.</p>
-<p>Ci-dessus, lorsque l&#x27;application demande par exemple une connexion au connecteur générique, celui-ci lui rend une instance <strong>IDbConnection</strong>, l&#x27;interface des connexions décrite page 224, implémentée par une classe <strong>MySQLConnection</strong> ou <strong>SQLConnection</strong> selon la nature de la demande qui lui a été faite. On dit que le connecteur générique a des classes de type <strong>factory</strong> : on utilise une classe <strong>factory</strong> pour lui demander de créer des objets et en donner des références (pointeurs). D&#x27;où son nom (<strong>factory</strong>=usine, usine de production d&#x27;objets). </p>
+<p>Ci-dessus, lorsque l&#x27;application demande par exemple une connexion au connecteur générique, celui-ci lui rend une instance <strong>IDbConnection</strong>, l&#x27;interface des connexions décrite page 225, implémentée par une classe <strong>MySQLConnection</strong> ou <strong>SQLConnection</strong> selon la nature de la demande qui lui a été faite. On dit que le connecteur générique a des classes de type <strong>factory</strong> : on utilise une classe <strong>factory</strong> pour lui demander de créer des objets et en donner des références (pointeurs). D&#x27;où son nom (<strong>factory</strong>=usine, usine de production d&#x27;objets). </p>
 <p>Il n&#x27;existe pas de connecteur générique pour tous les SGBD (avril 2008). Pour connaître ceux installés sur une machine, on pourra utiliser le programme suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-61-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-61-2"> 2</a></span>
@@ -3027,7 +3027,7 @@
 <p>Avec MySQL5, la même requête s&#x27;écrirait :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-74-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1"></a>insert into articles(nom,prix,stockactuel,stockminimum) values(?,?,?,?)
 </code></pre></div></td></tr></table></div>
-<p>Il y a donc une différence de syntaxe. La propriété de l&#x27;interface <strong>IDbCommand</strong> décrite page 224, liée aux paramètres est la suivante :</p>
+<p>Il y a donc une différence de syntaxe. La propriété de l&#x27;interface <strong>IDbCommand</strong> décrite page 225, liée aux paramètres est la suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-75-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1"></a>Parameters
 </code></pre></div></td></tr></table></div>
@@ -3479,7 +3479,7 @@
 <p>Dans ce mode d&#x27;isolation, les transactions sont complètement étanches les unes des autres. Il assure que le résultat de deux transactions menées simultanément donneront le même résultat que si elles étaient faites l&#x27;une après l&#x27;autre. Pour arriver à ce résultat, lors de l&#x27;opération 4 où l&#x27;utilisateur U1 veut ajouter des lignes qui changeraient le résultat du SELECT de l&#x27;utilisateur U1, il en sera empêché. Un message d&#x27;erreur lui indiquera que l&#x27;insertion n&#x27;est pas possible. Elle le deviendra lorsque l&#x27;utilisateur U2 aura validé sa transaction.</p>
 <p>Les quatres niveaux SQL d&#x27;isolation des transactions ne sont pas disponibles dans tous les SGBD. Le niveau d&#x27;étanchéité par défaut est en général le niveau <strong>Committed Read.</strong> Le niveau d&#x27;étanchéité désiré pour une transaction peut être indiqué explicitement lors de la création d&#x27;une transaction explicite par un client .NET.</p>
 <h3 id="962-lapi-de-gestion-des-transactions">9.6.2. L&#x27;API de gestion des transactions</h3>
-<p>Une connexion implémente l&#x27;interface <em>IDbConnection</em> présentée page 224. Cette interface à la méthode suivante :</p>
+<p>Une connexion implémente l&#x27;interface <em>IDbConnection</em> présentée page 225. Cette interface à la méthode suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-96-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-96-1" name="__codelineno-96-1"></a>BeginTransaction
 </code></pre></div></td></tr></table></div>
@@ -3688,7 +3688,7 @@
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 12-19 : la chaîne de connexion à la base SQLServer Ce est lue dans [App.config]</li>
-<li>lignes 25-28 : un tableau de deux objets <em>Article</em> est créé. Ces deux articles ont le même nom &quot;article&quot;. Or, la base [dbarticles.sdf] a une contrainte d&#x27;unicité sur sa colonne [nom] (cf page 221). Donc ces deux articles ne peuvent être présents en même temps dans la base. Les deux articles de nom &quot;article&quot; sont ajoutés dans la table <em>articles</em>. Il va donc y avoir un problème, c.a.d. une exception lancée par le SGBD et relayée par son connecteur ADO.NET. Pour montrer l&#x27;effet de la transaction, les deux articles vont être insérés dans deux environnements différents :</li>
+<li>lignes 25-28 : un tableau de deux objets <em>Article</em> est créé. Ces deux articles ont le même nom &quot;article&quot;. Or, la base [dbarticles.sdf] a une contrainte d&#x27;unicité sur sa colonne [nom] (cf page 222). Donc ces deux articles ne peuvent être présents en même temps dans la base. Les deux articles de nom &quot;article&quot; sont ajoutés dans la table <em>articles</em>. Il va donc y avoir un problème, c.a.d. une exception lancée par le SGBD et relayée par son connecteur ADO.NET. Pour montrer l&#x27;effet de la transaction, les deux articles vont être insérés dans deux environnements différents :</li>
 <li>d&#x27;abord en-dehors de toute transaction. Il faut se rappeler ici que, dans ce cas, SQLServer Compact travaille en mode <strong>autocommit</strong>, c.a.d. insère chaque ordre SQL dans une transaction <strong>implicite</strong>. Le 1er article va être inséré. Le second ne le sera pas.</li>
 <li>ensuite dans une transaction <strong>explicite</strong> encapsulant les deux insertions. Parce que la deuxième insertion va échouer, la première sera alors défaite. Au final aucune insertion ne sera faite.</li>
 <li>ligne 33 : la table <em>articles</em> est vidée</li>
@@ -3852,7 +3852,7 @@
 <li>lignes 18-20 : montrent qu&#x27;aucune insertion n&#x27;a été faite. Le <em>Rollback</em> de la transaction a défait la 1ère insertion.</li>
 </ul>
 <h2 id="97-la-methode-executescalar">9.7. La méthode ExecuteScalar</h2>
-<h3 id="971-parmi-les-methodes-de-linterface-idbcommand-decrite-page-224-il-y-avait-la-methode-suivante">9.7.1. Parmi les méthodes de l&#x27;interface <em>IDbCommand</em> décrite page 224, il y avait la méthode suivante :</h3>
+<h3 id="971-parmi-les-methodes-de-linterface-idbcommand-decrite-page-225-il-y-avait-la-methode-suivante">9.7.1. Parmi les méthodes de l&#x27;interface <em>IDbCommand</em> décrite page 225, il y avait la méthode suivante :</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-108-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-108-1" name="__codelineno-108-1"></a>ExecuteScalar
 </code></pre></div></td></tr></table></div>
@@ -4046,7 +4046,7 @@
 </code></pre></div></td></tr></table></div>
 <p>Les lignes 15 et 16 montrent les deux valeurs renvoyées par la méthode <em>ExecuteScalar</em>.</p>
 <h2 id="98-application-exemple-version-7">9.8. Application exemple - version 7</h2>
-<p>On reprend l&#x27;application exemple IMPOTS. La dernière version a été étudiée au paragraphe 7.6, page 202. C&#x27;était l&#x27;application à trois couches suivante :</p>
+<p>On reprend l&#x27;application exemple IMPOTS. La dernière version a été étudiée au paragraphe 7.6, page 203. C&#x27;était l&#x27;application à trois couches suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000065E000001DA0CCAD1CC.png" style="display:inline-block; margin:4px;width:12.94cm;height:3.761cm;" /></td></tr></table>
 
 <ul>
@@ -4090,14 +4090,14 @@
 <h3 id="982-la-solution-visual-studio">9.8.2. La solution Visual Studio</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000066F000001B0C3D47A8B.png" style="display:inline-block; margin:4px;width:13.07cm;height:3.431cm;" /></td></tr></table>
 
-<p>Nous suivrons la démarche étudiée pour la version 5 de l&#x27;application exemple (cf paragraphe 6.4, page 139). Nous allons construire progressivement la solution Visual Studio suivante :</p>
+<p>Nous suivrons la démarche étudiée pour la version 5 de l&#x27;application exemple (cf paragraphe 6.4, page 140). Nous allons construire progressivement la solution Visual Studio suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000782000002CBE17DFBBB.png" style="display:inline-block; margin:4px;width:15.259cm;height:5.669cm;" /></td></tr></table>
 
 <ul>
 <li>en [1] : la solution <em>ImpotsV7</em> est formée de trois projets, un pour chacune des trois couches de l&#x27;application</li>
 <li>en [2] : le projet [dao] de la couche [dao] qui va désormais exploiter une base de données</li>
-<li>en [3] : le projet [metier] de la couche [metier]. Nous reprenons ici la couche [metier] de la version 5, décrite au paragraphe 6.4.4, page 153.</li>
-<li>en [4] : le projet [ui] de la couche [ui]. Nous reprenons ici la couche [ui] de la version 6, décrite au paragraphe 7.6, page 202.</li>
+<li>en [3] : le projet [metier] de la couche [metier]. Nous reprenons ici la couche [metier] de la version 5, décrite au paragraphe 6.4.4, page 154.</li>
+<li>en [4] : le projet [ui] de la couche [ui]. Nous reprenons ici la couche [ui] de la version 6, décrite au paragraphe 7.6, page 203.</li>
 </ul>
 <p>Nous nous appuyons sur l&#x27;acquis pour récupérer deux couches déjà écrites, les couches [ui] et [metier]. Cela est rendu possible par l&#x27;architecture en couches choisie. Nous aurons néanmoins besoin des codes source des couches [ui] et [metier]. Il n&#x27;est en effet pas possible de se contenter des DLL des couches. Lorsque dans la version 5, la DLL de la couche [metier] a été créée, elle avait une dépendance sur la DLL de la couche [dao]. Cette dépendance a été inscrite en dur dans la DLL de la couche [metier] (nom de la DLL de la couche [dao], version, jeton d&#x27;identité, ...). Ainsi la DLL de la version 5 [ImpotsV5-metier.dll] n&#x27;accepte de travailler qu&#x27;avec la DLL [ImpotsV5-dao.dll] avec laquelle elle a été compilée. Si on change la DLL de la couche [dao] il faut recompiler la couche [metier] pour lui créer une nouvelle DLL. Il en est de même pour la couche [ui]. Les couches [ui] et [metier] ne seront donc pas modifiées mais elles seront recompilées pour travailler avec la DLL de la nouvelle couche [dao].</p>
 <h3 id="983-la-couche-dao">9.8.3. La couche [dao]</h3>
@@ -4229,7 +4229,7 @@
 <ul>
 <li>ligne 7 : la classe [DataBaseImpot] implémente l&#x27;interface [IImpotDao].</li>
 <li>ligne 10 : l&#x27;implémentation de la méthode [TranchesImpot] de l&#x27;interface. Elle se contente de rendre une référence sur le tableau des tranches d&#x27;impôt de la ligne 9. Ce tableau va être construit par le constructeur de la classe.</li>
-<li>ligne 13 : le constructeur. Il utilise un connecteur générique (cf paragraphe 9.4.5, page 240) pour exploiter la base de données des tranches d&#x27;impôt. Le constructeur reçoit trois paramètres :</li>
+<li>ligne 13 : le constructeur. Il utilise un connecteur générique (cf paragraphe 9.4.5, page 241) pour exploiter la base de données des tranches d&#x27;impôt. Le constructeur reçoit trois paramètres :</li>
 <li>le nom de la &quot;factory&quot; auprès de laquelle il va demander les classes pour se connecter à la base, émettre des ordres SQL, exploiter le résultat d&#x27;un Select.</li>
 <li>la chaîne de connexion qu&#x27;il doit utiliser pour se connecter à la base de données</li>
 <li>l&#x27;ordre SQL Select qu&#x27;il doit excécuter pour avoir les tranches d&#x27;impôt.</li>
@@ -4247,7 +4247,7 @@
 <li>lignes 40-43 : une éventuelle exception est encapsulée dans un type [ImpotException] et se voit attribuer le code d&#x27;erreur 101 (arbitraire).</li>
 </ul>
 <p><u><strong>Le test [Test1] (cf [4] dans le projet)</strong></u></p>
-<p>La classe [Test1] se contente d&#x27;afficher les tranches d&#x27;impôt à l&#x27;écran. C&#x27;est celle déjà utilisée dans la version 5 (page 148) sauf pour l&#x27;instruction qui instancie la couche [dao] (ligne 14).</p>
+<p>La classe [Test1] se contente d&#x27;afficher les tranches d&#x27;impôt à l&#x27;écran. C&#x27;est celle déjà utilisée dans la version 5 (page 149) sauf pour l&#x27;instruction qui instancie la couche [dao] (ligne 14).</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-113-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-113-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-113-3"> 3</a></span>
@@ -4350,7 +4350,7 @@
 <a id="__codelineno-115-7" name="__codelineno-115-7"></a>0:0,481:9505,54
 </code></pre></div></td></tr></table></div>
 <p><u><strong>Le test NUnit [NUnit1] (cf [4] dans le projet)</strong></u></p>
-<p>Le test unitaire [NUnit1] est celui déjà utilisé dans la version 5 (page 148) sauf pour l&#x27;instruction qui instancie la couche [dao] (ligne 16).</p>
+<p>Le test unitaire [NUnit1] est celui déjà utilisé dans la version 5 (page 149) sauf pour l&#x27;instruction qui instancie la couche [dao] (ligne 16).</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-116-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-116-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-116-3"> 3</a></span>
@@ -4442,8 +4442,8 @@
 
 <ul>
 <li>en [1], le projet [metier] est devenu le projet actif de la solution</li>
-<li>en [2] : les références du projet. On notera la référence sur la DLL de la couche [dao] créée précédemment. Cette procédure d&#x27;ajout de référence a été décrite dans la version 5, au paragraphe 6.4.4, page 153. </li>
-<li>en [3] : la couche [metier]. C&#x27;est celle de la version 5, décrite au paragraphe 6.4.4, page 153.</li>
+<li>en [2] : les références du projet. On notera la référence sur la DLL de la couche [dao] créée précédemment. Cette procédure d&#x27;ajout de référence a été décrite dans la version 5, au paragraphe 6.4.4, page 154. </li>
+<li>en [3] : la couche [metier]. C&#x27;est celle de la version 5, décrite au paragraphe 6.4.4, page 154.</li>
 </ul>
 <p>Le projet [metier] est configuré pour générer une DLL :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007010000017D5303E8A4.png" style="display:inline-block; margin:4px;width:14.229cm;height:3.02cm;" /></td></tr></table>
@@ -4461,7 +4461,7 @@
 <ul>
 <li>en [1], le projet [ui] est devenu le projet actif de la solution</li>
 <li>en [2] : les références du projet. On notera les références sur les DLL des couches [dao] et [metier].</li>
-<li>en [3] : la couche [ui]. C&#x27;est celle de la version 6 décrite au paragraphe 7.6, page 202.</li>
+<li>en [3] : la couche [ui]. C&#x27;est celle de la version 6 décrite au paragraphe 7.6, page 203.</li>
 <li>en [4], le fichier de configuration [App.config] est analogue à celui de la version 6. Il n&#x27;en diffère que par la façon dont la couche [dao] est instanciée par Spring :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-117-1"> 1</a></span>

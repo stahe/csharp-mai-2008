@@ -3564,7 +3564,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li>lignes 75-98 :  la méthode <em>Receive</em> exécutée par le thread de lecture des lignes de texte. Cette méthode reçoit en paramètre l&#x27;instance <em>TcpClient</em> qui a été connectée au serveur.</li>
 <li>lignes 84-87 : la boucle en continu de lecture des lignes de texte envoyées par le serveur. Elle ne s&#x27;arrête que lorsque le serveur clôt la connexion ouverte avec le client.</li>
 </ul>
-<p>Voici quelques exemples reprenant ceux utilisés avec le client <em>putty</em> au paragraphe 11.4, page 319. Le client est exécuté dans une console Dos.</p>
+<p>Voici quelques exemples reprenant ceux utilisés avec le client <em>putty</em> au paragraphe 11.4, page 320. Le client est exécuté dans une console Dos.</p>
 <p><u><strong>Protocole HTTP</strong></u></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-74-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-74-2"> 2</a></span>
@@ -3628,7 +3628,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <a id="__codelineno-74-30" name="__codelineno-74-30"></a>
 <a id="__codelineno-74-31" name="__codelineno-74-31"></a>...\Chap9\04\bin\Release&gt;
 </code></pre></div></td></tr></table></div>
-<p>Le lecteur est invité à relire les explications données au paragraphe 11.4.2, page 320. Nous ne commentons que ce qui est propre à l&#x27;application :</p>
+<p>Le lecteur est invité à relire les explications données au paragraphe 11.4.2, page 321. Nous ne commentons que ce qui est propre à l&#x27;application :</p>
 <ul>
 <li>ligne 28 : après l&#x27;envoi de la ligne 27, le serveur HTTP a fermé la connexion, ce qui a provoqué la fin du thread de lecture. Le thread principal qui lit les commandes tapées au clavier est lui toujours actif. La commande de la ligne 29, tapée au clavier, l&#x27;arrête.</li>
 </ul>
@@ -3675,7 +3675,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <a id="__codelineno-75-20" name="__codelineno-75-20"></a>
 <a id="__codelineno-75-21" name="__codelineno-75-21"></a><span class="o">...</span>\<span class="n">Chap9</span>\<span class="mi">04</span>\<span class="nb">bin</span>\<span class="n">Release</span><span class="o">&gt;</span>
 </code></pre></div></td></tr></table></div>
-<p>Le lecteur est invité à relire les explications données au paragraphe 11.4.3, page 322 et à tester les autres exemples utilisés avec le client <em>putty</em>.</p>
+<p>Le lecteur est invité à relire les explications données au paragraphe 11.4.3, page 323 et à tester les autres exemples utilisés avec le client <em>putty</em>.</p>
 <h3 id="1164-un-serveur-tcp-generique">11.6.4. Un serveur Tcp générique</h3>
 <p>Maintenant nous nous intéressons à un serveur</p>
 <ul>
@@ -3690,7 +3690,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li>un thread secondaire se consacrant exclusivement à la lecture des lignes de texte envoyées par le client</li>
 </ul>
 <p>Le serveur lui ne s&#x27;arrête jamais sauf par un Ctrl-C tapé au clavier par l&#x27;utilisateur.</p>
-<p>Voyons quelques exemples. Le serveur est lancé sur le port 100 et on utilise le client générique du paragraphe11.6.3, page 332, pour lui parler. La fenêtre du client est la suivante :</p>
+<p>Voyons quelques exemples. Le serveur est lancé sur le port 100 et on utilise le client générique du paragraphe11.6.3, page 333, pour lui parler. La fenêtre du client est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-76-1">1</a></span>
 <span class="normal"><a href="#__codelineno-76-2">2</a></span>
 <span class="normal"><a href="#__codelineno-76-3">3</a></span>
@@ -4805,7 +4805,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <h2 id="117-les-classes-net-specialisees-dans-un-protocole-particulier-de-linternet">11.7. Les classes .NET spécialisées dans un protocole particulier de l&#x27;internet</h2>
 <p>Dans les exemples précédents du client web, le protocole HTTP était géré avec un client TCP. Il nous fallait donc gérer nous-mêmes le protocole de communication particulier utilisé. Nous aurions pu construire de façon analogue, un client SMTP ou POP. Le framework .NET offre des classes spécialisées pour les protocoles HTTP et SMTP. Ces classes connaissent le protocole de communication entre le client et le serveur et évitent au développeur d&#x27;avoir à les gérer. Nous les présentons maintenant.</p>
 <h3 id="1171-la-classewebclient">11.7.1. La classeWebClient</h3>
-<p>Il existe une classe <em>WebClient</em> sachant dialoguer avec un serveur web. Considérons l&#x27;exemple du client web du paragraphe 11.6.5, page 339, traité ici avec la classe <em>WebClient</em>.</p>
+<p>Il existe une classe <em>WebClient</em> sachant dialoguer avec un serveur web. Considérons l&#x27;exemple du client web du paragraphe 11.6.5, page 340, traité ici avec la classe <em>WebClient</em>.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-97-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-97-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-97-3"> 3</a></span>
@@ -4931,7 +4931,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li>ligne 51 : les exceptions qui sont levées lors d&#x27;un échange client / serveur sont de type <em>WebException</em>.</li>
 </ul>
 <p>Voyons quelques exemples.</p>
-<p>On lance le serveur TCP générique construit au paragraphe 6.4.6, page 157 :</p>
+<p>On lance le serveur TCP générique construit au paragraphe 6.4.6, page 158 :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-98-1">1</a></span>
 <span class="normal"><a href="#__codelineno-98-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-98-1" name="__codelineno-98-1"></a>...\Chap9\05\bin\Release&gt;ServeurTcpGenerique.exe 88
 <a id="__codelineno-98-2" name="__codelineno-98-2"></a>Serveur générique lancé sur le port 0.0.0.0:88
@@ -5062,7 +5062,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 </div><p style="margin:0;">La différence entre les deux méthodes est que le navigateur affichant l&#x27;Uri demandée, affichera <i>/document</i> dans le cas du POST et <i>/document?param1=valeur1&amp;param2=valeur2&amp;...</i> dans le cas du GET.</p></td></tr></table>
 
 <h3 id="1172-les-classes-webrequest-webresponse">11.7.2. Les classes WebRequest / WebResponse</h3>
-<p>Parfois la classe <em>WebClient</em> n&#x27;est pas suffisamment souple pour faire ce que l&#x27;on souhaite. Reprenons l&#x27;exemple du client web avec redirection étudié au paragraphe 11.6.6, page 341. Il nous faut émettre l&#x27;entête HTTP :</p>
+<p>Parfois la classe <em>WebClient</em> n&#x27;est pas suffisamment souple pour faire ce que l&#x27;on souhaite. Reprenons l&#x27;exemple du client web avec redirection étudié au paragraphe 11.6.6, page 342. Il nous faut émettre l&#x27;entête HTTP :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-114-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-114-1" name="__codelineno-114-1"></a>HEAD /document HTTP/1.1
 </code></pre></div></td></tr></table></div>
 <p>Nous avons vu que les entêtes HTTP émis par défaut par le client web étaient les suivants :</p>
@@ -5082,7 +5082,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li><strong>HttpWebRequest</strong>, <strong>HttpWebResponse</strong> pour un client HTTP</li>
 <li><strong>FtpWebRequest</strong>, <strong>FtpWebResponse</strong> pour un client FTP</li>
 </ul>
-<p>Nous traitons maintenant avec les classes <em>HttpWebRequest</em> et <em>HttpWebresponse</em> l&#x27;exemple du client web avec redirection étudié au paragraphe 11.6.6, page 341. Le code est le suivant :</p>
+<p>Nous traitons maintenant avec les classes <em>HttpWebRequest</em> et <em>HttpWebresponse</em> l&#x27;exemple du client web avec redirection étudié au paragraphe 11.6.6, page 342. Le code est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-116-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-116-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-116-3"> 3</a></span>
@@ -5936,11 +5936,11 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <a id="__codelineno-131-60" name="__codelineno-131-60"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-131-61" name="__codelineno-131-61"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Ce code a déjà été utilisé dans l&#x27;application Impôts version 6, au paragraphe 7.6.2, page 204.</p>
+<p>Ce code a déjà été utilisé dans l&#x27;application Impôts version 6, au paragraphe 7.6.2, page 205.</p>
 <ul>
 <li>le service de traduction est créé ligne 27 par Spring. Si cette création s&#x27;est bien passée, le formulaire [Form1] sera affiché (lignes 52-55), sinon c&#x27;est le formulaire d&#x27;erreur [Form2] qui le sera (lignes 36-48).</li>
 </ul>
-<p>Le formulaire [Form2] est celui utilisé dans l&#x27;application Impôts version 6 et a été expliqué au paragraphe 7.6.4, page 207.</p>
+<p>Le formulaire [Form2] est celui utilisé dans l&#x27;application Impôts version 6 et a été expliqué au paragraphe 7.6.4, page 208.</p>
 <p>Le formulaire [Form1] est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005250000027514712B81.png" style="display:inline-block; margin:4px;width:10.449cm;height:4.99cm;" /></td></tr></table>
 
@@ -6072,7 +6072,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 </ul>
 <p>Cette technique est aléatoire. En effet au fil du temps, l&#x27;Uri interrogée ou l&#x27;expression régulière permettant de trouver le résultat attendu peuvent changer. On a donc intérêt à placer ces deux informations dans un fichier de configuration. Mais cela peut se révéler insuffisant. Nous verrons dans le chapitre suivant qu&#x27;il existe des ressources plus stables sur le web : les services web.</p>
 <h3 id="1174-un-client-smtp-simple-mail-tranport-protocol-avec-la-classe-smtpclient">11.7.4. Un client SMTP (Simple Mail Tranport Protocol) avec la classe SmtpClient</h3>
-<p>Un client SMTP est un client d&#x27;un serveur SMTP, serveur d&#x27;envoi de courrier. La class .NET <strong>SmtpClient</strong> encapsule totalement les besoins d&#x27;un tel client. Le développeur n&#x27;a pas à connaître les détails du protocole SMTP. Nous connaissons ce dernier. Il a été présenté au paragraphe 11.4.3, page 322.</p>
+<p>Un client SMTP est un client d&#x27;un serveur SMTP, serveur d&#x27;envoi de courrier. La class .NET <strong>SmtpClient</strong> encapsule totalement les besoins d&#x27;un tel client. Le développeur n&#x27;a pas à connaître les détails du protocole SMTP. Nous connaissons ce dernier. Il a été présenté au paragraphe 11.4.3, page 323.</p>
 <p>Nous présentons la classe <strong>SmtpClient</strong> dans le cadre d&#x27;une application windows basique qui permet d&#x27;envoyer des courriers électroniques avec pièces jointes. L&#x27;application va se connecter au port 25 d&#x27;un serveur SMTP. On rappelle que sur la plupart des PC windows, les pare-feu ou autres antivirus bloquent les connexions vers le port 25. Il est alors nécessaire de désactiver cette protection pour tester l&#x27;application :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000035F00000290B4867733.png" style="display:inline-block; margin:4px;width:6.849cm;height:5.211cm;" /></td></tr></table>
 
@@ -6259,7 +6259,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <a id="__codelineno-134-70" name="__codelineno-134-70"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-134-71" name="__codelineno-134-71"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Nous ne commenterons pas ce code qui ne présente pas de nouveautés. Pour comprendre la méthode <em>buttonAjouter_Click</em> de la ligne 14, le lecteur est invité à relire le paragraphe 7.5.1, de la page 196.</p>
+<p>Nous ne commenterons pas ce code qui ne présente pas de nouveautés. Pour comprendre la méthode <em>buttonAjouter_Click</em> de la ligne 14, le lecteur est invité à relire le paragraphe 7.5.1, de la page 197.</p>
 <p>La méthode <em>buttonEnvoyer_Click</em> de la ligne 55, qui envoie le courrier est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-135-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-135-2"> 2</a></span>
@@ -6418,7 +6418,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li>côté serveur, les threads de service qui assurent le service au client fonctionnent de la même façon que ci-dessus.</li>
 </ul>
 <p>Dans les interfaces graphiques, il est souvent nécessaire de ne pas bloquer l&#x27;utilisateur sur des opérations longues. Le cas souvent cité est celui du téléchargement d&#x27;un gros fichier. Pendant ce téléchargement, il faut laisser l&#x27;utilisateur libre de continuer à interagir avec l&#x27;interface graphique. </p>
-<p>Nous nous proposons ici de réécrire le client Tcp générique du paragraphe 11.6.3, page 332 en y apportant les changements suivants :</p>
+<p>Nous nous proposons ici de réécrire le client Tcp générique du paragraphe 11.6.3, page 333 en y apportant les changements suivants :</p>
 <ul>
 <li>l&#x27;interface sera graphique</li>
 <li>l&#x27;outil de communication avec le serveur sera un objet <strong>Socket</strong></li>
@@ -6989,7 +6989,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <p>La communication Tcp / Ip asynchrone présente des avantages plus sérieux pour un serveur que ceux affichés par l&#x27;exemple précédent. On sait que le serveur sert ses clients à l&#x27;aide de threads secondaires. Si son pool de threads a N threads, cela signifie qu&#x27;il ne peut servir que N clients simultanément. Si les N threads font tous une opération bloquante (synchrone), il n&#x27;y a plus de threads disponibles pour un nouveau client jusqu&#x27;à ce que l&#x27;une des opérations bloquantes s&#x27;achève et libère un thread. Si sur les threads, on fait des opérations asynchrones plutôt que synchrones, un thread n&#x27;est jamais bloqué et peut être rapidement recyclé pour de nouveaux clients.</p>
 <h2 id="119-application-exemple-version-8-serveur-de-calcul-dimpots">11.9. Application exemple, version 8 : Serveur de calcul d&#x27;impôts</h2>
 <h3 id="1191-larchitecture-de-la-nouvelle-version">11.9.1. L&#x27;architecture de la nouvelle version</h3>
-<p>Nous reprenons l&#x27;application de calcul d&#x27;impôt déjà traitée sous diverses formes. Rappelons sa dernière mouture, celle de la version 7 du paragraphe 9.8, page 257.</p>
+<p>Nous reprenons l&#x27;application de calcul d&#x27;impôt déjà traitée sous diverses formes. Rappelons sa dernière mouture, celle de la version 7 du paragraphe 9.8, page 258.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000669000001B9CC0FCEF2.png" style="display:inline-block; margin:4px;width:13.019cm;height:3.5cm;" /></td></tr></table>
 
 <p>Les données étaient dans une base de données et la couche [ui] était une interface graphique :</p>
@@ -7014,7 +7014,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <ul>
 <li>en [1], le projet. On y trouve les éléments suivants :</li>
 <li>[ServeurImpot.cs] : le serveur Tcp/Ip de calcul de l&#x27;impôt sous la forme d&#x27;une application console.</li>
-<li>[dbimpots.sdf] : la base de données SQL Server compact de la version 7 décrite au paragraphe 9.8.5, page 266.</li>
+<li>[dbimpots.sdf] : la base de données SQL Server compact de la version 7 décrite au paragraphe 9.8.5, page 267.</li>
 <li>[App.config] : le fichier de configuration de l&#x27;application.</li>
 <li>en [2], le dossier [lib] contient les DLL nécessaires au projet :</li>
 <li>[ImpotsV7-dao] : la couche [dao] de la version 7</li>
@@ -7080,7 +7080,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li>lignes 16-20 : configuration de la couche [dao] associée à la base SQL Server compact</li>
 <li>lignes 21-23 : configuration de la couche [metier].</li>
 </ul>
-<p>C&#x27;est le fichier de configuration utilisée dans la couche [ui] de la version 7. Il a été présenté au paragraphe 9.8.4, page 264.</p>
+<p>C&#x27;est le fichier de configuration utilisée dans la couche [ui] de la version 7. Il a été présenté au paragraphe 9.8.4, page 265.</p>
 <h4 id="11923-fonctionnement-du-serveur">11.9.2.3. Fonctionnement du serveur</h4>
 <p>Au démarrage du serveur, l&#x27;application serveur instancie les couches [metier] et [dao] puis affiche une interface console d&#x27;administration :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010800000041CA1F47C7.png" style="display:inline-block; margin:4px;width:4.89cm;height:1.199cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -7113,7 +7113,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <a id="__codelineno-157-2" name="__codelineno-157-2"></a>Serveur de calcul d&#39;impôt lancé sur le port 27
 <a id="__codelineno-157-3" name="__codelineno-157-3"></a>Serveur de calcul d&#39;impôt &gt;
 </code></pre></div></td></tr></table></div>
-<p>Lançons maintenant le client Tcp graphique asynchrone étudié précédemment au paragraphe 11.8, page 364.</p>
+<p>Lançons maintenant le client Tcp graphique asynchrone étudié précédemment au paragraphe 11.8, page 365.</p>
 <p><img src="images/1000000000000241000001CCC42CB8B9.png" style="width:10.689cm;height:8.52cm;" alt="Image" /></p>
 <p>Le client est connecté. Il peut envoyer les commandes suivantes au serveur de calcul d&#x27;impôt :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
@@ -7474,7 +7474,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <a id="__codelineno-165-34" name="__codelineno-165-34"></a><span class="w">            </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">NumClient</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">            </span><span class="c1">// n° de client</span>
 <a id="__codelineno-165-35" name="__codelineno-165-35"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>On a là un code similaire à celui du serveur d&#x27;écho étudié au paragraphe 11.6.1, page 328. Nous ne commentons que ce qui est différent :</p>
+<p>On a là un code similaire à celui du serveur d&#x27;écho étudié au paragraphe 11.6.1, page 329. Nous ne commentons que ce qui est différent :</p>
 <ul>
 <li>ligne 7 : le service d&#x27;écoute est lancé</li>
 <li>ligne 9 : on note le fait que le service est désormais actif</li>
@@ -7624,7 +7624,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <a id="__codelineno-166-71" name="__codelineno-166-71"></a><span class="w">            </span><span class="n">writer</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
 <a id="__codelineno-166-72" name="__codelineno-166-72"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>De nouveau, on a là un code similaire à celui du serveur d&#x27;écho étudié au paragraphe 11.6.1, page 328. Nous ne commentons que ce qui est différent :</p>
+<p>De nouveau, on a là un code similaire à celui du serveur d&#x27;écho étudié au paragraphe 11.6.1, page 329. Nous ne commentons que ce qui est différent :</p>
 <ul>
 <li>ligne 15 : une fois le client connecté, le serveur lui envoie un message de bienvenue.</li>
 <li>lignes 19-52 : la boucle de lecture des commandes du client. La boucle s&#x27;arrête lorsque le client envoie la commande &quot;<em>aurevoir</em>&quot;.</li>
@@ -7813,7 +7813,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <h4 id="11943-la-couche-ui">11.9.4.3. La couche [ui]</h4>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D8000001A84D3E7A62.png" style="display:inline-block; margin:4px;width:13.91cm;height:3.371cm;" /></td></tr></table>
 
-<p>La couche [ui] [1,3] est celle étudiée dans la version 7 au paragraphe 9.8.4, page 264 à trois détails près :</p>
+<p>La couche [ui] [1,3] est celle étudiée dans la version 7 au paragraphe 9.8.4, page 265 à trois détails près :</p>
 <ul>
 <li>la configuration de la couche [metier] dans [App.config] est différente parce que l&#x27;implémentation de celle-ci a changé</li>
 <li>l&#x27;interface graphique [Form1.cs] a été modifiée pour afficher une éventuelle exception</li>
@@ -7874,7 +7874,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <ul>
 <li>en [1], on a ajouté un <em>TextBox</em> pour afficher une éventuelle exception. Ce champ n&#x27;existait pas dans la version précédente.</li>
 </ul>
-<p>A part ce détail, le code du formulaire est celui déjà étudié au paragraphe 6.4.3, page 148. Le lecteur est invité à s&#x27;y reporter. En [2], on voit un exemple d&#x27;exécution obtenu avec un serveur lancé de la façon suivante :</p>
+<p>A part ce détail, le code du formulaire est celui déjà étudié au paragraphe 6.4.3, page 149. Le lecteur est invité à s&#x27;y reporter. En [2], on voit un exemple d&#x27;exécution obtenu avec un serveur lancé de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-171-1">1</a></span>
 <span class="normal"><a href="#__codelineno-171-2">2</a></span>
 <span class="normal"><a href="#__codelineno-171-3">3</a></span>

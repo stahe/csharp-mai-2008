@@ -1174,7 +1174,7 @@
 
 <ul>
 <li>[1] : le dossier [Entites] contient les objets transversaux aux couches [ui, metier, dao] : la structure <em>TrancheImpot</em>, l&#x27;exception <em>FileImpotException</em>.</li>
-<li>[2] : le dossier [Dao] contient les classes et interfaces de la couche [dao]. Nous utiliserons deux implémentations de l&#x27;interface <em>IImpotDao</em> : la classe <em>HardwiredImpot</em> étudiée au paragraphe 4.10 page 84 et <em>FileImpot</em> étudiée au paragraphe 5.8 page 122.</li>
+<li>[2] : le dossier [Dao] contient les classes et interfaces de la couche [dao]. Nous utiliserons deux implémentations de l&#x27;interface <em>IImpotDao</em> : la classe <em>HardwiredImpot</em> étudiée au paragraphe 4.10 page 85 et <em>FileImpot</em> étudiée au paragraphe 5.8 page 123.</li>
 <li>[3] : le dossier [Metier] contient les classes et interfaces de la couche [metier]</li>
 <li>[4] : le dossier [Ui] contient les classes de la couche [ui]</li>
 <li>[5] : le fichier [DataImpot.txt] contient les tranches d&#x27;impôt utilisées par l&#x27;implémentation <em>FileImpot</em> de la couche [dao]. Il est configuré [6] pour être automatiquement recopié dans le dossier d&#x27;exécution du projet.</li>
@@ -1269,7 +1269,7 @@
 <a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Nous implémenterons cette interface de deux façons différentes.</p>
-<p>Tout d&#x27;abord avec la classe <em>HardwiredImpot</em> étudiée au paragraphe 4.10 page 84 :</p>
+<p>Tout d&#x27;abord avec la classe <em>HardwiredImpot</em> étudiée au paragraphe 4.10 page 85 :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
@@ -1322,7 +1322,7 @@
 <li>ligne 5 : la classe <em>HardwiredImpot</em> implémente l&#x27;interface <em>IImpotDao</em></li>
 <li>ligne 12 : implémentation de la propriété <em>TranchesImpot</em> de l&#x27;interface <em>IImpotDao.</em> Cette propriété est une propriété automatique. Elle implémente la méthode <em>get</em> de la propriété <em>TranchesImpot</em> de l&#x27;interface <em>IImpotDao.</em> On a de plus déclaré une méthode <em>set</em> privée donc interne à la classe afin que le constructeur des lignes 15-22 puisse initialiser le tableau des tranches d&#x27;impôt.</li>
 </ul>
-<p>L&#x27;interface <em>IImpotDao</em> sera également implémentée par la classe <em>FileImpot</em> étudiée au paragraphe 5.8 page 122 :</p>
+<p>L&#x27;interface <em>IImpotDao</em> sera également implémentée par la classe <em>FileImpot</em> étudiée au paragraphe 5.8 page 123 :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
@@ -1484,7 +1484,7 @@
 <a id="__codelineno-11-80" name="__codelineno-11-80"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ce code a déjà été étudié au paragraphe 5.8 page 122.</li>
+<li>ce code a déjà été étudié au paragraphe 5.8 page 123.</li>
 <li>ligne 14 : la méthode <em>TranchesImpot</em> de l&#x27;interface <em>IImpotDao</em></li>
 <li>ligne 76 : initialisation des tranches d&#x27;impôt dans le constructeur de la classe, à partir du fichier dont le contructeur a reçu le nom ligne 17.</li>
 </ul>

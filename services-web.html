@@ -945,7 +945,7 @@
 <p>L&#x27;architecture d&#x27;une application client / serveur à base d&#x27;un service web est la suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007A70000012D7EBF84DB.png" style="display:inline-block; margin:4px;width:18.14cm;height:2.79cm;" /></td></tr></table>
 
-<p>C&#x27;est une extension de l&#x27;architecture 3 couches à laquelle on ajoute des classes de communication réseau spécialisées. On a déjà rencontré une architecture similaire avec l&#x27;application client graphique windows / serveur Tcp d&#x27;impôts au paragraphe 11.9.1, page 372.</p>
+<p>C&#x27;est une extension de l&#x27;architecture 3 couches à laquelle on ajoute des classes de communication réseau spécialisées. On a déjà rencontré une architecture similaire avec l&#x27;application client graphique windows / serveur Tcp d&#x27;impôts au paragraphe 11.9.1, page 373.</p>
 <p>Explicitons ces généralités avec un premier exemple.</p>
 <h2 id="122-un-premier-service-web-avec-visual-web-developer">12.2. Un premier service Web avec Visual Web Developer</h2>
 <p>Nous allons construire une première application client / serveur ayant l&#x27;architecture simplifiée suivante :</p>
@@ -1734,7 +1734,7 @@
 <p>L&#x27;architecture de la version 9 sera similaire :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000758000001C2D56E96AE.png" style="display:inline-block; margin:4px;width:14.921cm;height:3.57cm;" /></td></tr></table>
 
-<p>C&#x27;est une architecture similaire à celle de la version 8 étudiée au paragraphe 11.9.1, page 372 mais où le serveur et le client Tcp sont remplacés par un service web et son client proxy. Nous allons reprendre intégralement les couches [ui], [metier] et [dao] de la version 8.</p>
+<p>C&#x27;est une architecture similaire à celle de la version 8 étudiée au paragraphe 11.9.1, page 373 mais où le serveur et le client Tcp sont remplacés par un service web et son client proxy. Nous allons reprendre intégralement les couches [ui], [metier] et [dao] de la version 8.</p>
 <h3 id="1241-la-partie-serveur">12.4.1. La partie serveur</h3>
 <p>Nous construisons un projet de type service web avec Visual Web Developer :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000034C0000015717001A0B.png" style="display:inline-block; margin:4px;width:6.699cm;height:2.72cm;" /></td></tr></table>
@@ -1787,7 +1787,7 @@
 <ul>
 <li>en [1], le projet. On y trouvait les éléments suivants :</li>
 <li>[ServeurImpot.cs] : le serveur Tcp/Ip de calcul de l&#x27;impôt sous la forme d&#x27;une application console.</li>
-<li>[dbimpots.sdf] : la base de données SQL Server compact de la version 7 décrite au paragraphe 9.8.5, page 266.</li>
+<li>[dbimpots.sdf] : la base de données SQL Server compact de la version 7 décrite au paragraphe 9.8.5, page 267.</li>
 <li>[App.config] : le fichier de configuration de l&#x27;application.</li>
 <li>en [2], le dossier [lib] contient les DLL nécessaires au projet :</li>
 <li>[ImpotsV7-dao] : la couche [dao] de la version 7</li>
@@ -2000,9 +2000,9 @@
 <a id="__codelineno-23-25" name="__codelineno-23-25"></a><span class="w">  </span><span class="nt">&lt;/spring&gt;</span>
 <a id="__codelineno-23-26" name="__codelineno-23-26"></a><span class="nt">&lt;/configuration&gt;</span>
 </code></pre></div></td></tr></table></div>
-<p>C&#x27;est le fichier [App.config] utilisée dans la version 7 de l&#x27;application et étudiée au paragraphe 9.8.4, page 264.</p>
+<p>C&#x27;est le fichier [App.config] utilisée dans la version 7 de l&#x27;application et étudiée au paragraphe 9.8.4, page 265.</p>
 <ul>
-<li>lignes 16-20 : définissent une couche [dao] travaillant avec une base de données MySQL5. Cette base de données a été décrite au paragraphe 9.8.1, page 257.</li>
+<li>lignes 16-20 : définissent une couche [dao] travaillant avec une base de données MySQL5. Cette base de données a été décrite au paragraphe 9.8.1, page 258.</li>
 <li>lignes 21-23 : définissent la couche [metier]</li>
 </ul>
 <p>Revenons au puzzle du serveur :</p>
@@ -2066,7 +2066,7 @@
 <p>Il nous faut écrire le client [2]. L&#x27;interface graphique sera identique à celle de la version 8 :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006AE0000030D9779C74B.png" style="display:inline-block; margin:4px;width:13.57cm;height:6.2cm;" /></td></tr></table>
 
-<p>Pour écrire la partie [client] de la version 9, nous allons partir de la partie [client] de la version 8, puis nous apporterons les modifications nécessaires. Nous dupliquons le projet Visual studio étudié au paragraphe 11.9.4.1, page 381, le renommons <em>ClientWsImpot</em> et le chargeons dans Visual Studio :</p>
+<p>Pour écrire la partie [client] de la version 9, nous allons partir de la partie [client] de la version 8, puis nous apporterons les modifications nécessaires. Nous dupliquons le projet Visual studio étudié au paragraphe 11.9.4.1, page 382, le renommons <em>ClientWsImpot</em> et le chargeons dans Visual Studio :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002020000027824163AED.png" style="display:inline-block; margin:4px;width:4.08cm;height:5.02cm;" /></td></tr></table>
 
 <p>La solution Visual Studio de la version 8 était constituée de 2 projets :</p>
@@ -2867,7 +2867,7 @@
 <li>d&#x27;instancier la couche [3] au démarrage de l&#x27;application</li>
 <li>d&#x27;en mettre une référence dans un endroit où la page web [Default.aspx.cs] pourra aller la chercher à chaque fois qu&#x27;elle sera instanciée et qu&#x27;on lui demandera de calculer l&#x27;impôt.</li>
 </ul>
-<p>Ce n&#x27;est pas un problème nouveau. Il a déjà été rencontré dans la construction du service web distant et étudié au paragraphe 12.4.1, page 401. On sait que la solution consiste : </p>
+<p>Ce n&#x27;est pas un problème nouveau. Il a déjà été rencontré dans la construction du service web distant et étudié au paragraphe 12.4.1, page 402. On sait que la solution consiste : </p>
 <ul>
 <li>à créer un fichier [Global.asax] associé à une classe [Global.cs]</li>
 <li>à instancier la couche [3] dans la méthode <em>Application_Start</em> de [Global.cs]</li>
