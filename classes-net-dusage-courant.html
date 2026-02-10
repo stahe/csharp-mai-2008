@@ -3335,12 +3335,14 @@
 
 <ul>
 <li>ligne 4 : la classe <em>FileImpotException</em> dérive de la classe <em>Exception</em>. Elle servira à mémoriser toute erreur survenant lors de l&#x27;exploitation du fichier texte des données.</li>
-<li>ligne 7 : une énumération représentant des codes d&#x27;erreur :</li>
+<li>ligne 7 : une énumération représentant des codes d&#x27;erreur :<ul>
 <li><em>Acces</em> : erreur d&#x27;accès au fichier texte des données</li>
 <li><em>Ligne</em> : ligne n&#x27;ayant pas les trois champs attendus</li>
 <li><em>Champ1</em> : le champ n° 1 est erroné</li>
 <li><em>Champ2</em> : le champ n° 2 est erroné</li>
 <li><em>Champ3</em> : le champ n° 3 est erroné</li>
+</ul>
+</li>
 </ul>
 <p>Certaines de ces erreurs peuvent se combiner (<em>Champ1</em>, <em>Champ2</em>, <em>Champ3</em>). Aussi l&#x27;énumération <em>CodeErreurs</em> a-t-elle été annotée avec l&#x27;attribut [Flags] qui implique que les différentes valeurs de l&#x27;énumération doivent être des puissances de 2. Une erreur sur les champs 1 et 2 se traduira alors par le code d&#x27;erreur <em>Champ1</em> | <em>Champ2</em>. </p>
 <ul>

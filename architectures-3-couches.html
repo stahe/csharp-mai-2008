@@ -1058,9 +1058,11 @@
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a>ib.getData(...);
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 1 : une instance [ib] implémentant l&#x27;interface [IB] de la couche [B]. Cette instance est créée par Spring sur la base d&#x27;informations trouvées dans un fichier de configuration. Spring va s&#x27;occuper de créer :</li>
+<li>ligne 1 : une instance [ib] implémentant l&#x27;interface [IB] de la couche [B]. Cette instance est créée par Spring sur la base d&#x27;informations trouvées dans un fichier de configuration. Spring va s&#x27;occuper de créer :<ul>
 <li>l&#x27;instance [b] implémentant la couche [B]</li>
 <li>l&#x27;instance [a] implémentant la couche [A]. Cette instance sera initialisée. Le champ [ib] ci-dessus recevra pour valeur la référence [b] de l&#x27;objet implémentant la couche [B]</li>
+</ul>
+</li>
 <li>ligne 3 : des données sont demandées à l&#x27;instance [ib]</li>
 </ul>
 <p>On voit maintenant que, la classe d&#x27;implémentation [B1] de la couche B n&#x27;apparaît nulle part dans le code de la couche [A]. Lorsque l&#x27;implémentation [B1] sera remplacée par une nouvelle implémentation [B2], rien ne changera dans le code de la classe [A]. On changera simplement les fichiers de configuration de Spring pour instancier [B2] au lieu de [B1].</p>
@@ -1110,7 +1112,7 @@
 
 <p>Quelle interface la couche [metier] doit-elle présenter à la couche [ui] ? Rappelons les interactions entre ces deux couches :</p>
 <ol>
-<li>la couche [ui] demandee à l&#x27;utilisateur son nombre d&#x27;enfants, son statut marital et son salaire annuel. C&#x27;est l&#x27;opération [1] ci-dessus.</li>
+<li>la couche [ui] demande à l&#x27;utilisateur son nombre d&#x27;enfants, son statut marital et son salaire annuel. C&#x27;est l&#x27;opération [1] ci-dessus.</li>
 <li>ceci fait, la couche [ui] va demander à la couche métier de faire le calcul des sièges. Pour cela elle va lui transmettre les données qu&#x27;elle a reçues de l&#x27;utilisateur. C&#x27;est l&#x27;opération [2].</li>
 </ol>
 <p>Une définition de l&#x27;interface de la couche [metier] pourrait être la suivante :</p>
@@ -1700,10 +1702,12 @@
 
 <ul>
 <li>en [11] : les différents onglets de la fenêtre des résultats</li>
-<li>en [12] : l&#x27;onglet [Console.Out]. On y voit que :</li>
+<li>en [12] : l&#x27;onglet [Console.Out]. On y voit que :<ul>
 <li>le constructeur n&#x27;a été exécuté qu&#x27;une fois</li>
 <li>la méthode [SetUp] a été exécutée avant chacun des deux tests</li>
 <li>la méthode [TearDown] a été exécutée après chacun des deux tests</li>
+</ul>
+</li>
 </ul>
 <p>Il est possible de préciser les méthodes à tester :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C80000015AB5B9E078.png" style="display:inline-block; margin:4px;width:11.329cm;height:3.2cm;" /></td></tr></table>
@@ -2458,20 +2462,24 @@
 </code></pre></div>
 
 <p>Les paramètres du constructeur sont définis à l&#x27;aide de balises <strong>&lt;constructor-arg&gt;</strong>.</p>
-<div class="highlight"><pre><span></span><code>- ligne 17 : définit le 1er et seul paramètre du constructeur. L&amp;#x27;attribut **index** est le n° du paramètre du constructeur, l&amp;#x27;attribut **value** sa valeur : **&amp;lt;constructor-arg index=&amp;quot;i&amp;quot; value=&amp;quot;valuei&amp;quot;/&amp;gt;**
-</code></pre></div>
 <ul>
-<li>lignes 19-21 : définissent la classe à instancier pour la couche [metier] : la classe [Metier.ImpotMetier] qui se trouve dans la DLL [ImpotsV5-metier.dll].<ul>
+<li>ligne 17 : définit le 1er et seul paramètre du constructeur. L&#x27;attribut <strong>index</strong> est le n° du paramètre du constructeur, l&#x27;attribut <strong>value</strong> sa valeur : <strong>&lt;constructor-arg index=&quot;i&quot; value=&quot;valuei&quot;/&gt;</strong></li>
+<li>
+<p>lignes 19-21 : définissent la classe à instancier pour la couche [metier] : la classe [Metier.ImpotMetier] qui se trouve dans la DLL [ImpotsV5-metier.dll].</p>
+<ul>
 <li>ligne 19 : la classe instanciée est la classe <em>ImpotMetier</em>. Celle-ci a le constructeur suivant :</li>
+</ul>
+<p><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">        <span style="color:#0000ff">public</span> ImpotMetier(<span style="color:#2b91af">IImpotDao</span> dao);</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>(suite)</p>
+<ul>
+<li>ligne 20 : définit le 1er et seul paramètre du constructeur. Ci-dessus, le paramètre <em>dao</em> du constructeur est une référence d&#x27;objet. Dans ce cas, dans la balise &lt;constructor-arg&gt; on utilise l&#x27;attribut <strong>ref</strong> au lieu de l&#x27;attribut <strong>value</strong> qui a été utilisé pour la couche [dao] : <strong>&lt;constructor-arg index=&quot;i&quot; ref=&quot;refi&quot;/&gt;</strong>. Dans le constructeur ci-dessus, le paramètre <em>dao</em> représente une instance sur la couche [dao]. Cette instance a été définie par les lignes 16-18 du fichier de configuration. Ainsi dans la ligne 20 :</li>
 </ul>
 </li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">        <span style="color:#0000ff">public</span> ImpotMetier(<span style="color:#2b91af">IImpotDao</span> dao);</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>- ligne 20 : définit le 1er et seul paramètre du constructeur. Ci-dessus, le paramètre *dao* du constructeur est une référence d&amp;#x27;objet. Dans ce cas, dans la balise &amp;lt;constructor-arg&amp;gt; on utilise l&amp;#x27;attribut **ref** au lieu de l&amp;#x27;attribut **value** qui a été utilisé pour la couche [dao] : **&amp;lt;constructor-arg index=&amp;quot;i&amp;quot; ref=&amp;quot;refi&amp;quot;/&amp;gt;**. Dans le constructeur ci-dessus, le paramètre *dao* représente une instance sur la couche [dao]. Cette instance a été définie par les lignes 16-18 du fichier de configuration. Ainsi dans la ligne 20 :
-</code></pre></div>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="color:#0000ff">                &lt;</span><span style="color:#a31515">constructor-arg</span><span style="color:#0000ff"> </span><span style="color:#ff0000">index</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">0</span>&quot;<span style="color:#0000ff"> </span><span style="color:#ff0000">ref</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">dao</span>&quot;<span style="color:#0000ff">/&gt;</span></span>
 </code></pre></div>

@@ -1111,9 +1111,9 @@
 <ol>
 <li>L&#x27;exécution du thread T est lancé par <strong>T.Start()</strong> : la méthode <em>Start</em> passée au constructeur de T va alors être exécutée par le thread T. Le programme qui exécute l&#x27;instruction <em>T.Start()</em> n&#x27;attend pas la fin de la tâche T : il passe aussitôt à l&#x27;instruction qui suit. On a alors deux tâches qui s&#x27;exécutent en parallèle. Elles doivent souvent pouvoir communiquer entre elles pour savoir où en est le travail commun à réaliser. C&#x27;est le problème de synchronisation des threads.</li>
 <li>Une fois lancé, le t<em>hread T </em>s&#x27;exécute de façon autonome. Il s&#x27;arrêtera lorsque la méthode S<em>tart</em> qu&#x27;il exécute aura fini son travail.</li>
-<li>On peut forcer le thread T à se terminer :<ul>
+<li>On peut forcer le thread T à se terminer :<ol>
 <li><strong>T.Abort()</strong> demande au thread T de se terminer.</li>
-</ul>
+</ol>
 </li>
 <li>On peut aussi attendre la fin de son exécution par <strong>T.Join()</strong>. On a là une instruction bloquante : le programme qui l&#x27;exécute est bloqué jusqu&#x27;à ce que la tâche T ait terminé son travail. C&#x27;est un moyen de synchronisation.</li>
 </ol>
