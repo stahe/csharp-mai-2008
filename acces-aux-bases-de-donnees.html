@@ -1139,7 +1139,7 @@
 <p><a id="refheading10401691168783983"></a></p>
 <h2 id="91-connecteur-adonet">9.1. Connecteur ADO.NET</h2>
 <p>Reprenons l&#x27;architecture en couches utilisée à diverses reprises </p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006BC000001858C87E1E8.png" style="display:inline-block; margin:4px;width:13.681cm;height:3.09cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006BC000001858C87E1E8.png" style="display:inline-block; margin:4px;width:13.681cm;height:3.09cm;" class="odt-zoomable" data-zoom-src="images/10000000000006BC000001858C87E1E8.png" /></td></tr></table>
 
 <p>Dans les exemples étudiés, la couche [dao] a pour l&#x27;instant exploité deux types de sources de données :</p>
 <ul>
@@ -1147,7 +1147,7 @@
 <li>des données provenant de fichiers texte</li>
 </ul>
 <p>Nous étudions dans ce chapitre le cas où les données proviennent d&#x27;une base de données. L&#x27;architecture 3 couches évolue alors vers une architecture multi-couches. Il en existe diverses. Nous allons étudier les concepts de base avec la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007C200000186560F4615.png" style="display:inline-block; margin:4px;width:15.76cm;height:3.099cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007C200000186560F4615.png" style="display:inline-block; margin:4px;width:15.76cm;height:3.099cm;" class="odt-zoomable" data-zoom-src="images/10000000000007C200000186560F4615.png" /></td></tr></table>
 
 <p>Dans le schéma ci-dessus, la couche [dao] [1] dialogue avec le SGBD [3] au travers d&#x27;une bibliothèque de classes propre au SGBD utilisé et livrée avec lui. Cette couche implémente des fonctionnalités standard réunies sous le vocable ADO (Active X Data Objects). On appelle une telle couche, un <strong>provider</strong> (fournisseur d&#x27;accès à une base de données ici) ou encore <strong>connecteur</strong>. La plupart des SGBD disposent désormais d&#x27;un connecteur ADO.NET, ce qui n&#x27;était pas le cas aux débuts de la plate-forme .NET.  Les connecteurs .NET n&#x27;offrent pas une interface standard à la couche [dao], aussi celle-ci a-t-elle dans son code le nom des classes du connecteur. Si on change de SGBD, on change de connecteur et de classes et il faut alors changer la couche [dao]. C&#x27;est à la fois une architecture <strong>performante</strong> parce le connecteur .NET ayant été écrit pour un SGBD particulier sait utiliser au mieux celui-ci et <strong>rigide</strong> car changer de SGBD implique de changer la couche [dao]. Ce deuxième argument est à relativiser : les entreprises ne changent pas de SGBD très souvent. Par ailleurs, nous verrons ultérieurement que depuis la version 2.0 de .NET, il existe un connecteur générique qui amène de la souplesse sans sacrifier la performance.</p>
 <p><a id="refheading10401711168783983"></a></p>
@@ -1176,21 +1176,21 @@
 <h2 id="93-les-concepts-de-base-de-lexploitation-dune-base-de-donnees">9.3. Les concepts de base de l&#x27;exploitation d&#x27;une base de données</h2>
 <p>Nous allons exposer les principaux concepts d&#x27;utilisation d&#x27;une base de données avec une base de données SQL Server Compact 3.5. Ce SGBD est livré avec Visual Studio Express. C&#x27;est un SGBD léger qui ne sait gérer qu&#x27;un utilisateur à la fois. Il est cependant suffisant pour introduire la programmation avec les bases de données. Ultérieurement, nous présenterons d&#x27;autres SGBD.</p>
 <p>L&#x27;architecture utilisée sera la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006880000011E7C514492.png" style="display:inline-block; margin:4px;width:13.27cm;height:2.27cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006880000011E7C514492.png" style="display:inline-block; margin:4px;width:13.27cm;height:2.27cm;" class="odt-zoomable" data-zoom-src="images/10000000000006880000011E7C514492.png" /></td></tr></table>
 
 <p>Une application console [1] exploitera une base de données de type SqlServer Compact [3,4] via le connecteur Ado.Net de ce SGBD [2].</p>
 <p><a id="refheading10401751168783983"></a>
 <a id="sqlce-dbarticles"></a></p>
 <h3 id="931-la-base-de-donnees-exemple">9.3.1. La base de données exemple</h3>
 <p>Nous allons construire la base de données directement dans Visual studio Express. Pour cela, nous créons un nouveau projet de type console.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000082C0000024F683DD123.png" style="display:inline-block; margin:4px;width:16.611cm;height:4.69cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000082C0000024F683DD123.png" style="display:inline-block; margin:4px;width:16.611cm;height:4.69cm;" class="odt-zoomable" data-zoom-src="images/100000000000082C0000024F683DD123.png" /></td></tr></table>
 
 <ul>
 <li>[1] : le projet</li>
 <li>[2] : on ouvre une vue &quot;Explorateur de bases de données&quot;</li>
 <li>[3] : on crée une nouvelle connexion</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000733000004C2CE5905AB.png" style="display:inline-block; margin:4px;width:14.63cm;height:9.67cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000733000004C2CE5905AB.png" style="display:inline-block; margin:4px;width:14.63cm;height:9.67cm;" class="odt-zoomable" data-zoom-src="images/1000000000000733000004C2CE5905AB.png" /></td></tr></table>
 
 <ul>
 <li>[4] : on sélectionne le type du SGBD</li>
@@ -1202,7 +1202,7 @@
 <li>[11,12] : la base de données peut être protégée par un mot de passe. Ici &quot;<em>dbarticles</em>&quot;.</li>
 <li>[13] : on valide la page de renseignements. La base va être physiquement créée :</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006EB000003D9F2653DB1.png" style="display:inline-block; margin:4px;width:14.06cm;height:7.819cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006EB000003D9F2653DB1.png" style="display:inline-block; margin:4px;width:14.06cm;height:7.819cm;" class="odt-zoomable" data-zoom-src="images/10000000000006EB000003D9F2653DB1.png" /></td></tr></table>
 
 <ul>
 <li>[14] : le nom de la base qui vient d&#x27;être créée</li>
@@ -1220,20 +1220,20 @@
 </ul>
 </li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000738000000EE0CECDDA0.png" style="display:inline-block; margin:4px;width:14.67cm;height:1.891cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000738000000EE0CECDDA0.png" style="display:inline-block; margin:4px;width:14.67cm;height:1.891cm;" class="odt-zoomable" data-zoom-src="images/1000000000000738000000EE0CECDDA0.png" /></td></tr></table>
 
 <ul>
 <li>[21] : le champ [id] est de type entier et est clé primaire [22] de la table.</li>
 <li>[23] : cette clé primaire est de type <em>Identity</em>. Cette notion propre aux SGBD SQL Server indique que la clé primaire sera générée par le SGBD lui-même. Ici la clé primaire sera un nombre entier commençant à 1 et incrémenté de 1 à chaque nouvelle clé.</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006FD00000217A571D54E.png" style="display:inline-block; margin:4px;width:14.199cm;height:4.249cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006FD00000217A571D54E.png" style="display:inline-block; margin:4px;width:14.199cm;height:4.249cm;" class="odt-zoomable" data-zoom-src="images/10000000000006FD00000217A571D54E.png" /></td></tr></table>
 
 <ul>
 <li>[24] : les autres champs sont créés. On notera que le champ [nom] a une <a id="sqlce-dbarticles-nom-unique"></a>contrainte d&#x27;unicité [25].</li>
 <li>[26] : on donne un nom à la table</li>
 <li>[27] : après avoir validé la structure de la table, celle-ci apparaît dans la base.</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000076B000002258C76CAA8.png" style="display:inline-block; margin:4px;width:15.071cm;height:4.36cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000076B000002258C76CAA8.png" style="display:inline-block; margin:4px;width:15.071cm;height:4.36cm;" class="odt-zoomable" data-zoom-src="images/100000000000076B000002258C76CAA8.png" /></td></tr></table>
 
 <ul>
 <li>[28] : on demande à voir le contenu de la table</li>
@@ -1241,14 +1241,14 @@
 <li>[30] : on la remplit avec quelques données. Une ligne est validée dès qu&#x27;on passe à la saisie de la ligne suivante. Le champ [id] n&#x27;est pas saisi : il est généré automatiquement lorsque la ligne est validée.</li>
 </ul>
 <p>Il nous reste à configurer le projet pour que cette base qui est actuellement à la racine du projet soit recopiée automatiquement dans le dossier d&#x27;exécution du projet :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005570000015FFB5295D5.png" style="display:inline-block; margin:4px;width:10.85cm;height:2.79cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005570000015FFB5295D5.png" style="display:inline-block; margin:4px;width:10.85cm;height:2.79cm;" class="odt-zoomable" data-zoom-src="images/10000000000005570000015FFB5295D5.png" /></td></tr></table>
 
 <ul>
 <li>[1] : on demande à voir tous les fichiers</li>
 <li>[2] : la base [dbarticles.sdf] apparaît</li>
 <li>[3] : on l&#x27;inclut dans le projet</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007CA00000325C4D47E79.png" style="display:inline-block; margin:4px;width:15.829cm;height:6.391cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007CA00000325C4D47E79.png" style="display:inline-block; margin:4px;width:15.829cm;height:6.391cm;" class="odt-zoomable" data-zoom-src="images/10000000000007CA00000325C4D47E79.png" /></td></tr></table>
 
 <ul>
 <li>[4] : l&#x27;opération d&#x27;ajout d&#x27;une source de données dans un projet lance un assistant dont nous n&#x27;avons pas besoin ici [5].</li>
@@ -1409,7 +1409,7 @@
 <p><a id="refheading10401791168783983"></a></p>
 <h3 id="933-les-interfaces-de-base-dadonet-pour-le-mode-connecte">9.3.3. Les interfaces de base d&#x27;ADO.NET pour le mode connecté</h3>
 <p>Revenons au schéma d&#x27;une application exploitant une base de données au travers d&#x27;un connecteur ADO.NET :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007650000011A50B5371B.png" style="display:inline-block; margin:4px;width:15.02cm;height:2.24cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007650000011A50B5371B.png" style="display:inline-block; margin:4px;width:15.02cm;height:2.24cm;" class="odt-zoomable" data-zoom-src="images/10000000000007650000011A50B5371B.png" /></td></tr></table>
 
 <p>En mode <strong>connecté</strong>, l&#x27;application :</p>
 <ol>
@@ -1584,7 +1584,7 @@
 <p><a id="refheading10401811168783983"></a></p>
 <h3 id="934-la-gestion-des-erreurs">9.3.4. La gestion des erreurs</h3>
 <p>Revenons sur l&#x27;architecture d&#x27;une application avec base de données :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075E00000120C7A17B43.png" style="display:inline-block; margin:4px;width:14.97cm;height:2.29cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075E00000120C7A17B43.png" style="display:inline-block; margin:4px;width:14.97cm;height:2.29cm;" class="odt-zoomable" data-zoom-src="images/100000000000075E00000120C7A17B43.png" /></td></tr></table>
 
 <p>La couche [dao] peut rencontrer de nombreuses erreurs lors de l&#x27;exploitation de la base de données. Celles-ci vont être remontées en tant qu&#x27;exceptions lancées par le connecteur ADO.NET. Le code de la couche [dao] doit les gérer. Toute opération avec la base de données doit se faire dans un try / catch / finally pour intercepter et gérer une éventuelle exception et libérer les ressources qui doivent l&#x27;être. Ainsi le code vu plus haut pour exploiter le résultat d&#x27;un ordre <em>Select</em> devient le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1"> 1</a></span>
@@ -1698,7 +1698,7 @@
 </ul>
 <h3 id="935-configuration-du-projet-exemple">9.3.5. Configuration du projet exemple</h3>
 <p>Le projet final sera le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077000000324F1455C23.png" style="display:inline-block; margin:4px;width:15.109cm;height:6.38cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077000000324F1455C23.png" style="display:inline-block; margin:4px;width:15.109cm;height:6.38cm;" class="odt-zoomable" data-zoom-src="images/100000000000077000000324F1455C23.png" /></td></tr></table>
 
 <ul>
 <li>[1] : le projet aura un fichier de configuration [App.config]</li>
@@ -1958,18 +1958,18 @@
 <a id="sqlserver2005-connecteur-adonet"></a></p>
 <h3 id="941-connecteur-sql-server-2005">9.4.1. Connecteur SQL Server 2005</h3>
 <p>L&#x27;architecture utilisée sera la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000063B00000102F01B0F3E.png" style="display:inline-block; margin:4px;width:12.659cm;height:2.05cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000063B00000102F01B0F3E.png" style="display:inline-block; margin:4px;width:12.659cm;height:2.05cm;" class="odt-zoomable" data-zoom-src="images/100000000000063B00000102F01B0F3E.png" /></td></tr></table>
 
 <p>L&#x27;installation de SQL Server 2005 est décrite en annexes au paragraphe <a href="annexes.html#sqlserver2005">1.1</a>.</p>
 <p>Nous créons un second projet dans la même solution que précédemment puis nous créons la base de données SQL server 2005. Le  SGBD SQL Server 2005 doit être lancé avant les opérations qui suivent :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006F70000018EEBC02A28.png" style="display:inline-block; margin:4px;width:14.15cm;height:3.161cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006F70000018EEBC02A28.png" style="display:inline-block; margin:4px;width:14.15cm;height:3.161cm;" class="odt-zoomable" data-zoom-src="images/10000000000006F70000018EEBC02A28.png" /></td></tr></table>
 
 <ul>
 <li>[1] : créer un nouveau projet dans la solution actuelle et en faire le projet courant.</li>
 <li>[2] : créer une nouvelle connexion</li>
 <li>[3] : choisir le type de connexion</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000078D00000370DF05DB00.png" style="display:inline-block; margin:4px;width:15.341cm;height:6.99cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000078D00000370DF05DB00.png" style="display:inline-block; margin:4px;width:15.341cm;height:6.99cm;" class="odt-zoomable" data-zoom-src="images/100000000000078D00000370DF05DB00.png" /></td></tr></table>
 
 <ul>
 <li>[4] : choisir le SGBD SQL Server</li>
@@ -1979,7 +1979,7 @@
 <li>[8] : utiliser une authentification windows.</li>
 <li>[9] : valider la page de renseignements</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000076E0000027E6B7981CA.png" style="display:inline-block; margin:4px;width:15.101cm;height:5.061cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000076E0000027E6B7981CA.png" style="display:inline-block; margin:4px;width:15.101cm;height:5.061cm;" class="odt-zoomable" data-zoom-src="images/100000000000076E0000027E6B7981CA.png" /></td></tr></table>
 
 <ul>
 <li>[11] : la base SQL Server</li>
@@ -1988,20 +1988,20 @@
 <li>[14] : le champ [id] est de type <em>Identity</em>.</li>
 <li>[15,16] : le champ [id] est clé primaire</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000050000000190FF9E17D9.png" style="display:inline-block; margin:4px;width:10.16cm;height:3.18cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000050000000190FF9E17D9.png" style="display:inline-block; margin:4px;width:10.16cm;height:3.18cm;" class="odt-zoomable" data-zoom-src="images/100000000000050000000190FF9E17D9.png" /></td></tr></table>
 
 <ul>
 <li>[17] : les autres champs de la table</li>
 <li>[18] : donner le nom [articles] à la table au moment de sa sauvegarde (Ctrl+S).</li>
 </ul>
 <p>Il nous reste à mettre des données dans la table :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F600000098214790EF.png" style="display:inline-block; margin:4px;width:4.56cm;height:2.82cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000191000000AC89FF5946.png" style="display:inline-block; margin:4px;width:7.43cm;height:3.191cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F600000098214790EF.png" style="display:inline-block; margin:4px;width:4.56cm;height:2.82cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F600000098214790EF.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000191000000AC89FF5946.png" style="display:inline-block; margin:4px;width:7.43cm;height:3.191cm;" class="odt-zoomable" data-zoom-src="images/1000000000000191000000AC89FF5946.png" /></td></tr></table>
 
 <p>Nous incluons la base de données dans le projet :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006CF000001CAF5B15CEC.png" style="display:inline-block; margin:4px;width:13.831cm;height:3.641cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006CF000001CAF5B15CEC.png" style="display:inline-block; margin:4px;width:13.831cm;height:3.641cm;" class="odt-zoomable" data-zoom-src="images/10000000000006CF000001CAF5B15CEC.png" /></td></tr></table>
 
 <p>Les références du projet sont les suivantes :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002060000018E5079993B.png" style="display:inline-block; margin:4px;width:4.11cm;height:3.161cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002060000018E5079993B.png" style="display:inline-block; margin:4px;width:4.11cm;height:3.161cm;" class="odt-zoomable" data-zoom-src="images/10000000000002060000018E5079993B.png" /></td></tr></table>
 
 <p>Le fichier de configuration [App.config] est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -2089,11 +2089,11 @@
 <a id="mysql5-connecteur-adonet"></a></p>
 <h3 id="942-connecteur-mysql5">9.4.2. Connecteur MySQL5</h3>
 <p>L&#x27;architecture utilisée sera la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000062C00000116C1F40819.png" style="display:inline-block; margin:4px;width:12.539cm;height:2.21cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000062C00000116C1F40819.png" style="display:inline-block; margin:4px;width:12.539cm;height:2.21cm;" class="odt-zoomable" data-zoom-src="images/100000000000062C00000116C1F40819.png" /></td></tr></table>
 
 <p>L&#x27;installation de MySQL5 est décrite en annexes au paragraphe <a href="annexes.html#mysql5">1.2</a> et celle du connecteur Ado.Net au paragraphe <a href="annexes.html#mysql5-adonet">1.2.5</a>.</p>
 <p>Nous créons un troisième projet dans la même solution que précédemment et nous lui ajoutons les références dont il a besoin :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075E000001AB49040587.png" style="display:inline-block; margin:4px;width:14.97cm;height:3.39cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075E000001AB49040587.png" style="display:inline-block; margin:4px;width:14.97cm;height:3.39cm;" class="odt-zoomable" data-zoom-src="images/100000000000075E000001AB49040587.png" /></td></tr></table>
 
 <ul>
 <li>[1] : le nouveau projet</li>
@@ -2101,7 +2101,7 @@
 <li>[3] : la DLL [MySQL.Data] du connecteur Ado.Net de MySql5 ainsi que celle de [System.Configuration] [4].</li>
 </ul>
 <p>Nous créons maintenant la base de données [dbarticles] et sa table [articles]. Le SGBD MySQL5 doit être lancé. Par ailleurs, on lance le client [Query Browser] (cf paragraphe <a href="annexes.html#mysql5-clients-gui">1.2.3</a>).</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077A000001C9D4749933.png" style="display:inline-block; margin:4px;width:15.191cm;height:3.63cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077A000001C9D4749933.png" style="display:inline-block; margin:4px;width:15.191cm;height:3.63cm;" class="odt-zoomable" data-zoom-src="images/100000000000077A000001C9D4749933.png" /></td></tr></table>
 
 <ul>
 <li>[1] : dans [Query Browser], cliquer droit dans la zone [Schemata] [2] pour créer [3] un nouveau schéma, terme qui désigne une base de données.</li>
@@ -2156,18 +2156,18 @@
 <li>lignes 16-21 : ajout de contraintes d&#x27;intégrité sur les colonnes.</li>
 </ul>
 <p>Ce script est exécuté dans [MySQL Query Browser] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007D10000033CE414F5A1.png" style="display:inline-block; margin:4px;width:15.88cm;height:6.57cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007D10000033CE414F5A1.png" style="display:inline-block; margin:4px;width:15.88cm;height:6.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000007D10000033CE414F5A1.png" /></td></tr></table>
 
 <ul>
 <li>dans [MySQL Query Browser] [6], on charge le script [7]. On le voit en [8]. En [9], il est exécuté.</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000079F00000242EF4C59C3.png" style="display:inline-block; margin:4px;width:15.49cm;height:4.59cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000079F00000242EF4C59C3.png" style="display:inline-block; margin:4px;width:15.49cm;height:4.59cm;" class="odt-zoomable" data-zoom-src="images/100000000000079F00000242EF4C59C3.png" /></td></tr></table>
 
 <ul>
 <li>en [10], la table [articles] a été créée. On double-clique dessus. Cela fait apparaître la fenêtre [11] avec la requête [12] dedans prête à être exécutée par [13]. En [14], le résultat de l&#x27;exécution. On a bien les trois lignes attendues. On notera que les valeurs du champ [ID] ont été générées automatiquement (attribut AUTO_INCREMENT du champ).</li>
 </ul>
 <p>Maintenant que la base de données est prête, nous pouvons revenir au développement de l&#x27;application dans Visual studio.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001EB0000019A6A963D9B.png" style="display:inline-block; margin:4px;width:3.9cm;height:3.251cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001EB0000019A6A963D9B.png" style="display:inline-block; margin:4px;width:3.9cm;height:3.251cm;" class="odt-zoomable" data-zoom-src="images/10000000000001EB0000019A6A963D9B.png" /></td></tr></table>
 
 <p>En [1], le programme [Program.cs] et le fichier de configuration [App.config]. Celui-ci est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -2227,7 +2227,7 @@
 <p><a id="refheading10401971168783983"></a></p>
 <h3 id="943-connecteur-odbc">9.4.3. Connecteur ODBC</h3>
 <p>L&#x27;architecture utilisée sera la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000062D000001145EBED070.png" style="display:inline-block; margin:4px;width:12.55cm;height:2.191cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000062D000001145EBED070.png" style="display:inline-block; margin:4px;width:12.55cm;height:2.191cm;" class="odt-zoomable" data-zoom-src="images/100000000000062D000001145EBED070.png" /></td></tr></table>
 
 <p>L&#x27;intérêt des connecteurs ODBC est qu&#x27;ils présentent une interface standard aux applications qui les utilisent. Ainsi la nouvelle application va-t-elle, avec un unique code, pouvoir dialoguer avec tout SGBD ayant un connecteur ODBC, c.a.d. la plupart des SGBD. Les performances des connecteurs ODBC sont moins bonnes que celles des connecteurs &quot;propriétaires&quot; qui savent exploiter toutes les caractéristiques d&#x27;un SGBD particulier. En contre-partie, on obtient une grande souplesse de l&#x27;application : on peut changer de SGBD sans changer le code.</p>
 <p>Nous étudions un exemple où l&#x27;application exploite une base MySQL5 ou une base SQL server Express selon la chaîne de connexion qu&#x27;on lui donne. Dans ce qui suit, nous supposons que :</p>
@@ -2237,7 +2237,7 @@
 <li>les bases de données utilisées sont celles du paragraphe <a href="#mysql5-connecteur-adonet">9.4.2</a> pour la base MySQL5, celle du paragraphe <a href="#sqlserver2005-connecteur-adonet">9.4.1</a> pour la base SQL Server Express.</li>
 </ul>
 <p>Le nouveau projet Visual studio est le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AF0000015FF7977D37.png" style="display:inline-block; margin:4px;width:3.42cm;height:2.79cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AF0000015FF7977D37.png" style="display:inline-block; margin:4px;width:3.42cm;height:2.79cm;" class="odt-zoomable" data-zoom-src="images/10000000000001AF0000015FF7977D37.png" /></td></tr></table>
 
 <p>Ci-dessus, la base SQL Server [dbarticles.mdf] créée au paragraphe <a href="#sqlserver2005-connecteur-adonet">9.4.1</a> a été recopiée dans le dossier du projet.</p>
 <p>Le fichier de configuration [App.config] est le suivant :</p>
@@ -2326,19 +2326,19 @@
 <p><a id="refheading10401991168783983"></a></p>
 <h3 id="944-connecteur-ole-db">9.4.4. Connecteur OLE DB</h3>
 <p>L&#x27;architecture utilisée sera la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006220000011D0704AB46.png" style="display:inline-block; margin:4px;width:12.46cm;height:2.26cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006220000011D0704AB46.png" style="display:inline-block; margin:4px;width:12.46cm;height:2.26cm;" class="odt-zoomable" data-zoom-src="images/10000000000006220000011D0704AB46.png" /></td></tr></table>
 
 <p>Comme les connecteurs ODBC, les connecteurs OLE DB (Object Linking and Embedding DataBase) présentent une interface standard aux applications qui les utilisent. Les pilotes ODBC permettent l&#x27;accès à des bases de données. Les sources de données pour les pilotes OLE DB sont plus variées : bases de données, messageries, annuaires, ... Toute source de données peut faire l&#x27;objet d&#x27;un pilote Ole DB si un éditeur le décide. On a ainsi un accès standard à une grande variété de données.</p>
 <p>Nous étudions un exemple où l&#x27;application exploite une base ACCESS ou une base SQL server Express selon la chaîne de connexion qu&#x27;on lui donne. Dans ce qui suit, nous supposons que le SGBD SQL Server Express a été lancé et que la base de données utilisée est celle de l&#x27;exemple précédent.</p>
 <p>Le nouveau projet Visual studio est le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004AA000001D0D69ECE30.png" style="display:inline-block; margin:4px;width:9.479cm;height:3.679cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004AA000001D0D69ECE30.png" style="display:inline-block; margin:4px;width:9.479cm;height:3.679cm;" class="odt-zoomable" data-zoom-src="images/10000000000004AA000001D0D69ECE30.png" /></td></tr></table>
 
 <ul>
 <li>en [1] : l&#x27;espace de noms nécessaire aux connecteurs OLE DB est [System.Data.OleDb] présent dans la référence [System.Data] ci-dessus. La base SQL Server [dbarticles.mdf] a été recopiée à partir du projet précédent. La base [dbarticles.mdb] a été créée avec Access.</li>
 <li>en [2] : comme la base SQL Server, la base ACCESS a la propriété [Copy to Output Directory=Copy Always] afin qu&#x27;elle soit automatiquement recopiée dans le dossier d&#x27;exécution du projet.</li>
 </ul>
 <p>La base de données ACCESS [dbarticles.mdb] est la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006E8000001D97627E735.png" style="display:inline-block; margin:4px;width:14.03cm;height:3.75cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006E8000001D97627E735.png" style="display:inline-block; margin:4px;width:14.03cm;height:3.75cm;" class="odt-zoomable" data-zoom-src="images/10000000000006E8000001D97627E735.png" /></td></tr></table>
 
 <p>En [1], la structure de la table [articles] et en [2] son contenu.</p>
 <p>Le fichier de configuration [App.config] est le suivant :</p>
@@ -2410,7 +2410,7 @@
 <a id="connecteur-generique"></a></p>
 <h3 id="945-connecteur-generique">9.4.5. Connecteur générique</h3>
 <p>L&#x27;architecture utilisée sera la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075C0000011FB0E76D4C.png" style="display:inline-block; margin:4px;width:14.951cm;height:2.281cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075C0000011FB0E76D4C.png" style="display:inline-block; margin:4px;width:14.951cm;height:2.281cm;" class="odt-zoomable" data-zoom-src="images/100000000000075C0000011FB0E76D4C.png" /></td></tr></table>
 
 <p>Comme les connecteurs ODBC et OLE DB, le connecteur générique présente une interface standard aux applications qui l&#x27;utilise mais améliore les performances sans sacrifier la souplesse. En effet, le connecteur générique s&#x27;appuie sur les connecteurs propriétaires des SGBD. L&#x27;application utilise des classes du connecteur générique. Ces classes servent d&#x27;intermédiaires entre l&#x27;application et le connecteur propriétaire.</p>
 <p>Ci-dessus, lorsque l&#x27;application demande par exemple une connexion au connecteur générique, celui-ci lui rend une instance <strong>IDbConnection</strong>, l&#x27;interface des connexions décrite paragraphe <a href="#idbconnection">9.3.3</a>, implémentée par une classe <strong>MySQLConnection</strong> ou <strong>SQLConnection</strong> selon la nature de la demande qui lui a été faite. On dit que le connecteur générique a des classes de type <strong>factory</strong> : on utilise une classe <strong>factory</strong> pour lui demander de créer des objets et en donner des références (pointeurs). D&#x27;où son nom (<strong>factory</strong>=usine, usine de production d&#x27;objets). </p>
@@ -2510,7 +2510,7 @@
 <li>le second paramètre précise la base de données gérée, via une chaîne de connexion.</li>
 </ul>
 <p>Le nouveau projet Visual studio est le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001CF000001AABBF4E241.png" style="display:inline-block; margin:4px;width:3.671cm;height:3.38cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001CF000001AABBF4E241.png" style="display:inline-block; margin:4px;width:3.671cm;height:3.38cm;" class="odt-zoomable" data-zoom-src="images/10000000000001CF000001AABBF4E241.png" /></td></tr></table>
 
 <ul>
 <li>en [1] : l&#x27;espace de noms nécessaire aux connecteurs génériques est [System.Data.common] présent dans la référence [System.Data].</li>
@@ -2657,7 +2657,7 @@
 </ul>
 <p>Voici quelques exemples d&#x27;exécution.</p>
 <p>Avec la base MySQL5 :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003E60000019463E0D5CE.png" style="display:inline-block; margin:4px;width:7.92cm;height:3.21cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003E60000019463E0D5CE.png" style="display:inline-block; margin:4px;width:7.92cm;height:3.21cm;" class="odt-zoomable" data-zoom-src="images/10000000000003E60000019463E0D5CE.png" /></td></tr></table>
 
 <p>On ouvre la page de propriétés du projet [1] et on sélectionne l&#x27;onglet [Debug] [2]. En [3], la clé du connecteur de la ligne 14 de [App.config]. En [4], la clé de la chaîne de connexion de la ligne 6 de [App.config]. Les résultats de l&#x27;exécution sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-57-1"> 1</a></span>
@@ -2685,7 +2685,7 @@
 <a id="__codelineno-57-12" name="__codelineno-57-12"></a><span class="mi">3</span> <span class="n">article3</span> <span class="mi">300</span> <span class="mi">30</span> <span class="mi">3</span>
 </code></pre></div></td></tr></table></div>
 <p>Avec la base SQL Server Compact :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004520000018863A12D07.png" style="display:inline-block; margin:4px;width:8.781cm;height:3.11cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004520000018863A12D07.png" style="display:inline-block; margin:4px;width:8.781cm;height:3.11cm;" class="odt-zoomable" data-zoom-src="images/10000000000004520000018863A12D07.png" /></td></tr></table>
 
 <p>En [1], la clé du connecteur de la ligne 13 de [App.config]. En [2], la clé de la chaîne de connexion de la ligne 4 de [App.config]. Les résultats de l&#x27;exécution sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-58-1"> 1</a></span>
@@ -2722,7 +2722,7 @@
 <p><a id="refheading10402031168783983"></a></p>
 <h3 id="946-quel-connecteur-choisir">9.4.6. Quel connecteur choisir ?</h3>
 <p>Revenons à l&#x27;architecture d&#x27;une application avec bases de données :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075F0000011FAEC46B60.png" style="display:inline-block; margin:4px;width:14.981cm;height:2.281cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075F0000011FAEC46B60.png" style="display:inline-block; margin:4px;width:14.981cm;height:2.281cm;" class="odt-zoomable" data-zoom-src="images/100000000000075F0000011FAEC46B60.png" /></td></tr></table>
 
 <p>Nous avons vu divers types de connecteurs ADO.NET :</p>
 <ul>
@@ -2758,7 +2758,7 @@
 </code></pre></div>
 <p>car les paramètres ne sont pas nommés. C&#x27;et l&#x27;ordre d&#x27;ajout des paramètres dans la collection [IDbCommand.Parameters] qui est alors pris en compte. Dans cet exemple, il faudra insérer les 4 paramètres dans l&#x27;ordre <em>nom</em>, <em>prix</em>, <em>stockactuel</em>, <em>stockminimum</em>. Dans la requête avec paramètres nommés, l&#x27;ordre d&#x27;ajout des paramètres n&#x27;a pas d&#x27;importance. Au final, le développeur ne peut faire totalement abstraction du SGBD qu&#x27;il utilise lorsqu&#x27;il initialise les paramètres d&#x27;une requête paramétrée. On a là une des limites actuelles du connecteur générique.</p>
 <p>Il existe des <em>frameworks</em> qui s&#x27;affranchissent de ces limites et qui apportent par ailleurs de nouvelles fonctionnalités à la couche [dao] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000074F0000011B491736C7.png" style="display:inline-block; margin:4px;width:14.85cm;height:2.251cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000074F0000011B491736C7.png" style="display:inline-block; margin:4px;width:14.85cm;height:2.251cm;" class="odt-zoomable" data-zoom-src="images/100000000000074F0000011B491736C7.png" /></td></tr></table>
 
 <p>Un framework est un ensemble de bibliothèques de classes visant à faciliter une certaine façon d&#x27;architecturer l&#x27;application. Il en existe plusieurs qui permettent l&#x27;écriture de couches [dao] à la fois performantes et insensibles au changement de SGBD :</p>
 <ul>
@@ -2776,7 +2776,7 @@
 <p><a id="refheading10402051168783983"></a></p>
 <h2 id="95-requetes-parametrees">9.5. Requêtes paramétrées</h2>
 <p>Nous avons évoqué dans le paragraphe précédent les requêtes paramétrées. Nous les présentons ici avec un exemple pour le SGBD SQL Server Compact. Le projet est le suivant</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000073600000180ADFE79A7.png" style="display:inline-block; margin:4px;width:14.651cm;height:3.05cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000073600000180ADFE79A7.png" style="display:inline-block; margin:4px;width:14.651cm;height:3.05cm;" class="odt-zoomable" data-zoom-src="images/100000000000073600000180ADFE79A7.png" /></td></tr></table>
 
 <ul>
 <li>en [1], le projet. Seuls [App.config], [Article.cs] et [Parametres.cs] sont utilisés. On notera également la base SQL Server Ce [dbarticles.sdf].</li>
@@ -3130,7 +3130,7 @@
 <p><a id="refheading10402131168783983"></a></p>
 <h3 id="963-le-programme-exemple">9.6.3. Le programme exemple</h3>
 <p>Nous reprenons le projet précédent pour nous intéresser maintenant au programme [Transactions.cs] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C400000193828A8B95.png" style="display:inline-block; margin:4px;width:9.68cm;height:3.2cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C400000193828A8B95.png" style="display:inline-block; margin:4px;width:9.68cm;height:3.2cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C400000193828A8B95.png" /></td></tr></table>
 
 <ul>
 <li>en [1], le projet.</li>
@@ -3334,7 +3334,7 @@
 <li>ligne 4 : affichée par le <em>ExecuteUpdate</em>(&quot;delete from articles&quot;) - il n&#x27;y avait pas de lignes dans la table</li>
 <li>ligne 5 : l&#x27;exception provoquée par la deuxième insertion. Le message indique que la contrainte UQ__ARTICLES__0000000000000010 n&#x27;a pas été vérifiée. On peut en savoir plus en regardant les propriétés de la base :</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000072C00000243F1B19707.png" style="display:inline-block; margin:4px;width:14.57cm;height:4.59cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000072C00000243F1B19707.png" style="display:inline-block; margin:4px;width:14.57cm;height:4.59cm;" class="odt-zoomable" data-zoom-src="images/100000000000072C00000243F1B19707.png" /></td></tr></table>
 
 <ul>
 <li>en [1] dans la vue [Database Explorer] de Visual Studio, on a créé une connexion [2] sur la base [dbarticles.sdf]. Celle-ci a un index  <em>UQ__ARTICLES__0000000000000010</em>. En cliquant droit sur cet index, on a accès à ses propriétés (Index properties)</li>
@@ -3358,7 +3358,7 @@
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">M</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour exécuter un ordre SQL <i>Select</i> ne rendant qu&#x27;un unique résultat comme dans : <i>select count(*) from articles</i>.</p></td></tr></table>
 
 <p>Nous montrons ici un exemple d&#x27;utilisation de cette méthode. Revenons au projet :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E1000001D679DE5DB6.png" style="display:inline-block; margin:4px;width:9.91cm;height:3.731cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E1000001D679DE5DB6.png" style="display:inline-block; margin:4px;width:9.91cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E1000001D679DE5DB6.png" /></td></tr></table>
 
 <ul>
 <li>en [1], le projet.</li>
@@ -3483,20 +3483,20 @@
 <a id="impots-v7"></a></p>
 <h2 id="98-application-exemple-version-7">9.8. Application exemple - version 7</h2>
 <p>On reprend l&#x27;application exemple IMPOTS. La dernière version a été étudiée au paragraphe <a href="interfaces-graphiques-avec-c-et-vsnet.html#impots-v6">7.6</a>. C&#x27;était l&#x27;application à trois couches suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000065E000001DA0CCAD1CC.png" style="display:inline-block; margin:4px;width:12.94cm;height:3.761cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000065E000001DA0CCAD1CC.png" style="display:inline-block; margin:4px;width:12.94cm;height:3.761cm;" class="odt-zoomable" data-zoom-src="images/100000000000065E000001DA0CCAD1CC.png" /></td></tr></table>
 
 <ul>
 <li>la couche [ui] était une interface graphique [A] et la couche [dao] trouvait ses données dans un fichier texte [B].</li>
 <li>l&#x27;instanciation des couches et leur intégration dans l&#x27;application étaient assurées par Spring.</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000066100000243B19E5688.png" style="display:inline-block; margin:4px;width:12.959cm;height:4.59cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000066100000243B19E5688.png" style="display:inline-block; margin:4px;width:12.959cm;height:4.59cm;" class="odt-zoomable" data-zoom-src="images/100000000000066100000243B19E5688.png" /></td></tr></table>
 
 <p>Nous modifions la couche [dao] afin qu&#x27;elle aille chercher ses données dans une base de données.</p>
 <p><a id="refheading10402211168783983"></a>
 <a id="impotsv7-bd-mysql5"></a></p>
 <h3 id="981-la-base-de-donnees">9.8.1. La base de données</h3>
 <p>Le contenu du fichier texte [B] précédent est mis dans une base de données MySQL5. Nous montrons comment procéder :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007AE000001B322732668.png" style="display:inline-block; margin:4px;width:15.61cm;height:3.45cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007AE000001B322732668.png" style="display:inline-block; margin:4px;width:15.61cm;height:3.45cm;" class="odt-zoomable" data-zoom-src="images/10000000000007AE000001B322732668.png" /></td></tr></table>
 
 <ul>
 <li>[1] :MySQL Administrator a été lancé</li>
@@ -3504,7 +3504,7 @@
 <li>[4] : la base s&#x27;appellera [bdimpots]</li>
 <li>[5] : elle a été ajoutée aux bases de la zone [Schemata].</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007A7000001C51E42D166.png" style="display:inline-block; margin:4px;width:15.55cm;height:3.59cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007A7000001C51E42D166.png" style="display:inline-block; margin:4px;width:15.55cm;height:3.59cm;" class="odt-zoomable" data-zoom-src="images/10000000000007A7000001C51E42D166.png" /></td></tr></table>
 
 <ul>
 <li>[6,7] : cliquer droit sur la table et prendre l&#x27;option [Create New Table] pour créer une table</li>
@@ -3513,24 +3513,24 @@
 <li>les colonnes [limite, coeffR, coeffN] sont de type DOUBLE.</li>
 <li>[11,12] : la nouvelle table apparaît dans l&#x27;onglet [Schema Tables] de la base de données. </li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000681000002AA860B53A1.png" style="display:inline-block; margin:4px;width:13.22cm;height:5.41cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000681000002AA860B53A1.png" style="display:inline-block; margin:4px;width:13.22cm;height:5.41cm;" class="odt-zoomable" data-zoom-src="images/1000000000000681000002AA860B53A1.png" /></td></tr></table>
 
 <ul>
 <li>[13,14] : pour mettre des données dans la table</li>
 <li>[15] : [Query Browser] a été lancé</li>
 <li>[16] : les données ont été entrées et validées pour les colonnes [limite, coeffR, coeffN]. La colonne [id] a été remplie par le SGBD. La validation a eu lieu avec [17].</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007CF000000E1CB915ADF.png" style="display:inline-block; margin:4px;width:15.87cm;height:1.79cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007CF000000E1CB915ADF.png" style="display:inline-block; margin:4px;width:15.87cm;height:1.79cm;" class="odt-zoomable" data-zoom-src="images/10000000000007CF000000E1CB915ADF.png" /></td></tr></table>
 
 <ul>
 <li>toujours dans [Query Browser] [18], on exécute [20] la requête [19]. Celle-ci crée un utilisateur &#x27;<em>admimpots</em>&#x27; de mot de passe &#x27;<em>mdpimpots</em>&#x27; et lui donne tous les privilèges (<em>grant all privileges</em>) sur tous les objets de la base <em>bdimpots</em> (<em>on bdimpots.*</em>). Cela va nous permettre de travailler sur la base [bdimpots] avec l&#x27;utilisateur [admimpots] plutôt qu&#x27;avec l&#x27;administrateur [root].</li>
 </ul>
 <p><a id="refheading10402231168783983"></a></p>
 <h3 id="982-la-solution-visual-studio">9.8.2. La solution Visual Studio</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000066F000001B0C3D47A8B.png" style="display:inline-block; margin:4px;width:13.07cm;height:3.431cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000066F000001B0C3D47A8B.png" style="display:inline-block; margin:4px;width:13.07cm;height:3.431cm;" class="odt-zoomable" data-zoom-src="images/100000000000066F000001B0C3D47A8B.png" /></td></tr></table>
 
 <p>Nous suivrons la démarche étudiée pour la version 5 de l&#x27;application exemple (cf paragraphe <a href="architectures-3-couches.html#impots-v5">6.4</a>). Nous allons construire progressivement la solution Visual Studio suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000782000002CBE17DFBBB.png" style="display:inline-block; margin:4px;width:15.259cm;height:5.669cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000782000002CBE17DFBBB.png" style="display:inline-block; margin:4px;width:15.259cm;height:5.669cm;" class="odt-zoomable" data-zoom-src="images/1000000000000782000002CBE17DFBBB.png" /></td></tr></table>
 
 <ul>
 <li>en [1] : la solution <em>ImpotsV7</em> est formée de trois projets, un pour chacune des trois couches de l&#x27;application</li>
@@ -3541,9 +3541,9 @@
 <p>Nous nous appuyons sur l&#x27;acquis pour récupérer deux couches déjà écrites, les couches [ui] et [metier]. Cela est rendu possible par l&#x27;architecture en couches choisie. Nous aurons néanmoins besoin des codes source des couches [ui] et [metier]. Il n&#x27;est en effet pas possible de se contenter des DLL des couches. Lorsque dans la version 5, la DLL de la couche [metier] a été créée, elle avait une dépendance sur la DLL de la couche [dao]. Cette dépendance a été inscrite en dur dans la DLL de la couche [metier] (nom de la DLL de la couche [dao], version, jeton d&#x27;identité, ...). Ainsi la DLL de la version 5 [ImpotsV5-metier.dll] n&#x27;accepte de travailler qu&#x27;avec la DLL [ImpotsV5-dao.dll] avec laquelle elle a été compilée. Si on change la DLL de la couche [dao] il faut recompiler la couche [metier] pour lui créer une nouvelle DLL. Il en est de même pour la couche [ui]. Les couches [ui] et [metier] ne seront donc pas modifiées mais elles seront recompilées pour travailler avec la DLL de la nouvelle couche [dao].</p>
 <p><a id="refheading10402251168783983"></a></p>
 <h3 id="983-la-couche-dao">9.8.3. La couche [dao]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000066C000001BAB7565ABE.png" style="display:inline-block; margin:4px;width:13.049cm;height:3.51cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000066C000001BAB7565ABE.png" style="display:inline-block; margin:4px;width:13.049cm;height:3.51cm;" class="odt-zoomable" data-zoom-src="images/100000000000066C000001BAB7565ABE.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000223000002B87DC3A046.png" style="display:inline-block; margin:4px;width:4.339cm;height:5.519cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000223000002B87DC3A046.png" style="display:inline-block; margin:4px;width:4.339cm;height:5.519cm;" class="odt-zoomable" data-zoom-src="images/1000000000000223000002B87DC3A046.png" /></td></tr></table>
 
 <p><u><strong>Les références du projet (cf [1] dans le projet)</strong></u></p>
 <ul>
@@ -3693,7 +3693,7 @@
 <li>ligne 7 : la requête SQL Select pour obtenir les tranches d&#x27;impôt.</li>
 </ul>
 <p>Le projet est configuré pour exécuter [Test1.cs] :</p>
-<p><img src="images/1000000000000292000000AF53C3305E.png" style="width:12.19cm;height:3.24cm;" alt="Image" /></p>
+<p><img src="images/1000000000000292000000AF53C3305E.png" style="width:12.19cm;height:3.24cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000292000000AF53C3305E.png" /></p>
 <p>L&#x27;exécution du test donne les résultats suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-91-1">1</a></span>
 <span class="normal"><a href="#__codelineno-91-2">2</a></span>
@@ -3749,7 +3749,7 @@
 </code></pre></div>
 
 <p>Pour exécuter ce test unitaire, le projet doit être de type [Class Library] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000076E000001773D913024.png" style="display:inline-block; margin:4px;width:15.101cm;height:2.979cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000076E000001773D913024.png" style="display:inline-block; margin:4px;width:15.101cm;height:2.979cm;" class="odt-zoomable" data-zoom-src="images/100000000000076E000001773D913024.png" /></td></tr></table>
 
 <ul>
 <li>en [1] : la nature du projet a été changée</li>
@@ -3757,7 +3757,7 @@
 <li>en [3] : après génération (F6) du projet, le dossier [dao/bin/Release] contient la DLL [ImpotsV7-dao.dll]. Il contient aussi le fichier de configuration [App.config] renommé [nom DLL].config. C&#x27;est standard dans Visual studio.</li>
 </ul>
 <p>La DLL [ImpotsV7-dao.dll] est ensuite chargée dans le framework <em>NUnit</em> et exécutée :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007BF0000018C95FC42E1.png" style="display:inline-block; margin:4px;width:15.739cm;height:3.14cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007BF0000018C95FC42E1.png" style="display:inline-block; margin:4px;width:15.739cm;height:3.14cm;" class="odt-zoomable" data-zoom-src="images/10000000000007BF0000018C95FC42E1.png" /></td></tr></table>
 
 <ul>
 <li>en [1] : les tests ont été réussis. Nous considérons désormais la couche [dao] opérationnelle. Sa DLL contient toutes les classes du projet dont les classes de test. Celles-ci sont inutiles. Nous reconstruisons la DLL afin d&#x27;en exclure les classes de tests.</li>
@@ -3767,9 +3767,9 @@
 <p><a id="refheading10402271168783983"></a>
 <a id="impots-v5-metier1"></a></p>
 <h3 id="984-la-couche-metier">9.8.4. La couche [metier]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000064E000001C01B23331C.png" style="display:inline-block; margin:4px;width:12.809cm;height:3.56cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000064E000001C01B23331C.png" style="display:inline-block; margin:4px;width:12.809cm;height:3.56cm;" class="odt-zoomable" data-zoom-src="images/100000000000064E000001C01B23331C.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046F0000016892BC20C5.png" style="display:inline-block; margin:4px;width:9.01cm;height:2.859cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046F0000016892BC20C5.png" style="display:inline-block; margin:4px;width:9.01cm;height:2.859cm;" class="odt-zoomable" data-zoom-src="images/100000000000046F0000016892BC20C5.png" /></td></tr></table>
 
 <ul>
 <li>en [1], le projet [metier] est devenu le projet actif de la solution</li>
@@ -3777,7 +3777,7 @@
 <li>en [3] : la couche [metier]. C&#x27;est celle de la version 5, décrite au paragraphe <a href="architectures-3-couches.html#impots-v5-metier">6.4.4</a>.</li>
 </ul>
 <p>Le projet [metier] est configuré pour générer une DLL :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007010000017D5303E8A4.png" style="display:inline-block; margin:4px;width:14.229cm;height:3.02cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007010000017D5303E8A4.png" style="display:inline-block; margin:4px;width:14.229cm;height:3.02cm;" class="odt-zoomable" data-zoom-src="images/10000000000007010000017D5303E8A4.png" /></td></tr></table>
 
 <ul>
 <li>[1] : le projet est de type &quot;bibliothèque de classes&quot;</li>
@@ -3787,9 +3787,9 @@
 <p><a id="refheading10402291168783983"></a>
 <a id="impots-v7-ui"></a></p>
 <h3 id="985-la-couche-ui">9.8.5. La couche [ui]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000661000001C44A9F15D3.png" style="display:inline-block; margin:4px;width:12.959cm;height:3.59cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000661000001C44A9F15D3.png" style="display:inline-block; margin:4px;width:12.959cm;height:3.59cm;" class="odt-zoomable" data-zoom-src="images/1000000000000661000001C44A9F15D3.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003960000027F6838F611.png" style="display:inline-block; margin:4px;width:7.29cm;height:5.069cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003960000027F6838F611.png" style="display:inline-block; margin:4px;width:7.29cm;height:5.069cm;" class="odt-zoomable" data-zoom-src="images/10000000000003960000027F6838F611.png" /></td></tr></table>
 
 <ul>
 <li>en [1], le projet [ui] est devenu le projet actif de la solution</li>
@@ -3836,7 +3836,7 @@
 </ul>
 <p><u><strong>Tests</strong></u></p>
 <p>Le projet [ui] est configuré comme suit :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000074F0000024136074EF7.png" style="display:inline-block; margin:4px;width:14.85cm;height:4.581cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000074F0000024136074EF7.png" style="display:inline-block; margin:4px;width:14.85cm;height:4.581cm;" class="odt-zoomable" data-zoom-src="images/100000000000074F0000024136074EF7.png" /></td></tr></table>
 
 <ul>
 <li>[1] : le projet est de type &quot;Windows Application&quot;</li>
@@ -3845,11 +3845,11 @@
 <p>Un exemple d&#x27;exécution est donné en [3].</p>
 <p><a id="refheading10402311168783983"></a></p>
 <h3 id="986-changer-la-base-de-donnees">9.8.6. Changer la base de données</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000065D000001C2E404BC95.png" style="display:inline-block; margin:4px;width:12.929cm;height:3.57cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000065D000001C2E404BC95.png" style="display:inline-block; margin:4px;width:12.929cm;height:3.57cm;" class="odt-zoomable" data-zoom-src="images/100000000000065D000001C2E404BC95.png" /></td></tr></table>
 
 <p>La couche [dao] ci-dessus a été écrite avec un connecteur générique et une base MySQL5. Nous nous proposons ici de passer à une base SQL Server Compact afin de montrer que seule la configuration va changer.</p>
 <p>La base <a id="impotsv7-bd-sqlserverce"></a>SQL Server Compact sera la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000748000002199D3BC638.png" style="display:inline-block; margin:4px;width:14.801cm;height:4.26cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000748000002199D3BC638.png" style="display:inline-block; margin:4px;width:14.801cm;height:4.26cm;" class="odt-zoomable" data-zoom-src="images/1000000000000748000002199D3BC638.png" /></td></tr></table>
 
 <ul>
 <li>[1] : la base [dbimpots.sdf] dans la vue [DataBase Explorer] de Visual studio [2]. Elle a été créée sans mot de passe.</li>
@@ -3857,7 +3857,7 @@
 <li>[4] : la colonne [id] est clé primaire et a l&#x27;attribut <em>Identity</em> : c&#x27;est le SGBD qui va lui attribuer ses valeurs.</li>
 <li>[5] : le contenu de la table [data].</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BB0000021A2C659376.png" style="display:inline-block; margin:4px;width:9.61cm;height:4.27cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BB0000021A2C659376.png" style="display:inline-block; margin:4px;width:9.61cm;height:4.27cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BB0000021A2C659376.png" /></td></tr></table>
 
 <ul>
 <li>[6] : la base [dbimpots.sdf] a été placée dans le dossier du projet [ui] et intégrée à ce projet.</li>

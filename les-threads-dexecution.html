@@ -1013,7 +1013,7 @@
 <h2 id="101-la-classe-thread">10.1. La classe Thread</h2>
 <p>Lorsqu&#x27;on lance une application, elle s&#x27;exécute dans un flux d&#x27;exécution appelé un <strong>thread</strong>. La classe .NET modélisant un <em>thread</em> est la classe <strong><em>System.Threading.Thread</em></strong> et a la définition suivante :</p>
 <p><u><strong>Constructeurs</strong></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007340000019C65426C4A.png" style="display:inline-block; margin:4px;width:14.64cm;height:3.27cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007340000019C65426C4A.png" style="display:inline-block; margin:4px;width:14.64cm;height:3.27cm;" class="odt-zoomable" data-zoom-src="images/10000000000007340000019C65426C4A.png" /></td></tr></table>
 
 <p>Nous n&#x27;utiliserons dans les exemples à suivre que les constructeurs [1,3]. Le constructeur [1] admet comme paramètre une méthode ayant la signature [2], c.a.d. ayant un paramètre de type <em>object</em> et ne rendant pas de résultat. Le constructeur [3] admet comme paramètre une méthode ayant la signature [4], c.a.d. n&#x27;ayant pas de paramètre et ne rendant pas de résultat.</p>
 <p><u><strong>Propriétés</strong></u></p>
@@ -1276,10 +1276,10 @@
 <p><a id="refheading10402411168783983"></a></p>
 <h2 id="103-interet-des-threads">10.3. Intérêt des threads</h2>
 <p>Maintenant que nous avons mis en évidence l&#x27;existence d&#x27;un thread par défaut, celui qui exécute la méthode <em>Main</em>, et que nous savons comment en créer d&#x27;autres, arrêtons-nous sur l&#x27;intérêt pour nous des threads et sur les raisons pour lesquelles nous les présentons ici. Il y a un type d&#x27;applications qui se prêtent bien à l&#x27;utilisation des threads, ce sont les applications client-serveur de l&#x27;internet. Nous allons les présenter dans le chapitre qui suit. Dans une application client-serveur de l&#x27;internet, un serveur situé sur une machine S1 répond aux demandes de clients situés sur des machines distantes C1, C2, ..., Cn.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003B000000129D6411AAD.png" style="display:inline-block; margin:4px;width:7.489cm;height:2.36cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003B000000129D6411AAD.png" style="display:inline-block; margin:4px;width:7.489cm;height:2.36cm;" class="odt-zoomable" data-zoom-src="images/10000000000003B000000129D6411AAD.png" /></td></tr></table>
 
 <p>Nous utilisons tous les jours des applications de l&#x27;internet correspondant à ce schéma : services Web, messagerie électronique, consultation de forums, transfert de fichiers... Dans le schéma ci-dessus, le serveur S1 doit servir les clients Ci de façon simultanée. Si nous prenons l&#x27;exemple d&#x27;un serveur FTP (File Transfer Protocol) qui délivre des fichiers à ses clients, nous savons qu&#x27;un transfert de fichier peut prendre parfois plusieurs minutes. Il est bien sûr hors de question qu&#x27;un client monopolise tout seul le serveur pendant une telle durée. Ce qui est fait habituellement, c&#x27;est que le serveur crée autant de threads d&#x27;exécution qu&#x27;il y a de clients. Chaque thread est alors chargé de s&#x27;occuper d&#x27;un client particulier. Le processeur étant partagé cycliquement entre tous les threads actifs de la machine, le serveur passe alors un peu de temps avec chaque client assurant ainsi la simultanéité du service.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003D1000001E451775926.png" style="display:inline-block; margin:4px;width:7.751cm;height:3.84cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003D1000001E451775926.png" style="display:inline-block; margin:4px;width:7.751cm;height:3.84cm;" class="odt-zoomable" data-zoom-src="images/10000000000003D1000001E451775926.png" /></td></tr></table>
 
 <p>Dans la pratique, le serveur utilise un pool de threads avec un nombre limité de threads, 50 par exemple. Le 51 ième client est alors prié d&#x27;attendre.</p>
 <p><a id="refheading10402431168783983"></a></p>
@@ -1772,7 +1772,7 @@
 <p><a id="refheading10402551168783983"></a></p>
 <h3 id="1055-la-classe-interlocked">10.5.5. La classe Interlocked</h3>
 <p>La classe <strong>Interlocked</strong> permet de rendre <strong>atomique</strong> un groupe d&#x27;opérations. Dans un groupe d&#x27;opérations <em>atomique</em>, soit toutes les opérations sont exécutées par le thread qui exécute le groupe soit aucune. On ne reste pas dans un état ou certaines ont été exécutées et d&#x27;autres pas. Les objets de synchronisation <em>lock</em>, <em>Mutex</em>, <em>AutoResetEvent</em> ont toutes pour but de rendre <em>atomique</em> un groupe d&#x27;opérations. Ce résultat est obtenu au prix du blocage de threads. La classe <strong>Interlocked</strong> permet, pour des opérations simples mais assez fréquentes, d&#x27;éviter le blocage de threads. La classe <strong>Interlocked</strong> offre les méthodes statiques suivantes :</p>
-<p><img src="images/10000000000003D7000000B3CD37BDC6.png" style="width:17.604cm;height:3.205cm;" alt="Image" /></p>
+<p><img src="images/10000000000003D7000000B3CD37BDC6.png" style="width:17.604cm;height:3.205cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003D7000000B3CD37BDC6.png" /></p>
 <p>La méthode <em>Increment</em> a la signature suivante :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>public static int Increment(ref int location);
 </code></pre></div>
@@ -2038,7 +2038,7 @@
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">chaque thread vérifie s&#x27;il est l&#x27;élu. Si oui, il passe la barrière. Si non, il se remet en attente.</p></td></tr></table>
 
 <p>La classe <strong>Monitor</strong> permet de mettre en oeuvre ce scénario.</p>
-<p><img src="images/10000000000002A40000009E2C021AE4.png" style="width:12.52cm;height:2.93cm;" alt="Image" /></p>
+<p><img src="images/10000000000002A40000009E2C021AE4.png" style="width:12.52cm;height:2.93cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002A40000009E2C021AE4.png" /></p>
 <p>Nous décrivons maintenant une construction standard (<em>pattern</em>), proposée dans le chapitre <em>Threading</em> du livre <em>C# 3.0</em> référencé dans l&#x27;introduction de ce document, capable de résoudre les problèmes de barrière avec condition d&#x27;entrée.</p>
 <ul>
 <li>Tout d&#x27;abord, les threads qui se partagent une ressource (le guichet, ...) y accèdent via un objet que nous appellerons un <strong>jeton</strong>. Pour ouvrir la barrière qui mène au guichet, il faut avoir le jeton pour l&#x27;ouvrir et il n&#x27;y a qu&#x27;un seul jeton. Les threads doivent donc se passer le jeton entre-eux.</li>
@@ -2899,7 +2899,7 @@
 <p><a id="refheading10402731168783983"></a></p>
 <h3 id="1091-le-principe">10.9.1. Le principe</h3>
 <p>Considérons une application à trois couches :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006610000010A90DA1457.png" style="display:inline-block; margin:4px;width:12.959cm;height:2.11cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006610000010A90DA1457.png" style="display:inline-block; margin:4px;width:12.959cm;height:2.11cm;" class="odt-zoomable" data-zoom-src="images/10000000000006610000010A90DA1457.png" /></td></tr></table>
 
 <p>Supposons que l&#x27;application soit multi-utilisateurs, une application web par exemple. Chaque utilisateur est servi par un thread qui lui est dédié. La vie du thread est la suivante :</p>
 <ol>
@@ -2909,7 +2909,7 @@
 </ol>
 <p>Dans l&#x27;opération 2, il peut être intéressant que le thread ait des données qui lui soient propres, c.a.d. non partagées avec les autres threads. Ces données pourraient par exemple appartenir à l&#x27;utilisateur particulier que le thread sert. Ces données pourraient alors être utilisées dans les différentes couches [ui, metier, dao].</p>
 <p>La classe <em>Thread</em> permet ce scénario grâce à une sorte de dictionnaire privé où les clés seraient de type <em>LocalDataStoreSlot</em> :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001680000002E7BDE5E1E.png" style="display:inline-block; margin:4px;width:6.669cm;height:0.85cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">crée une entrée dans le dictionnaire privé du thread pour la clé <i>name</i>.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F00000003FDDE50098.png" style="display:inline-block; margin:4px;width:4.45cm;height:1.169cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">associe la valeur <i>data</i> à la clé <i>name</i> du  dictionnaire privé du thread</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E700000031F1B1D2A6.png" style="display:inline-block; margin:4px;width:4.279cm;height:0.91cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">récupère la valeur associée à la clé <i>name</i> du dictionnaire privé du thread</p></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001680000002E7BDE5E1E.png" style="display:inline-block; margin:4px;width:6.669cm;height:0.85cm;" class="odt-zoomable" data-zoom-src="images/10000000000001680000002E7BDE5E1E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">crée une entrée dans le dictionnaire privé du thread pour la clé <i>name</i>.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F00000003FDDE50098.png" style="display:inline-block; margin:4px;width:4.45cm;height:1.169cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F00000003FDDE50098.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">associe la valeur <i>data</i> à la clé <i>name</i> du  dictionnaire privé du thread</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E700000031F1B1D2A6.png" style="display:inline-block; margin:4px;width:4.279cm;height:0.91cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E700000031F1B1D2A6.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">récupère la valeur associée à la clé <i>name</i> du dictionnaire privé du thread</p></td></tr></table>
 
 <p>Un modèle d&#x27;utilisation pourrait être le suivant :</p>
 <ul>
@@ -2925,7 +2925,7 @@
 <p><a id="refheading10402751168783983"></a></p>
 <h3 id="1092-application-du-principe">10.9.2. Application du principe</h3>
 <p>Considérons l&#x27;application à trois couches suivantes :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000668000001133EA847C6.png" style="display:inline-block; margin:4px;width:13.019cm;height:2.18cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000668000001133EA847C6.png" style="display:inline-block; margin:4px;width:13.019cm;height:2.18cm;" class="odt-zoomable" data-zoom-src="images/1000000000000668000001133EA847C6.png" /></td></tr></table>
 
 <p>Supposons que la couche [dao] gère une base d&#x27;articles et que son interface soit initialement la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -2975,9 +2975,9 @@
 </ul>
 <p>Pour que les méthodes de la couche [dao] connaissent l&#x27;existence d&#x27;une éventuelle transaction en cours, on pourrait ajouter la transaction comme paramètre de chaque méthode de la couche [dao]. Ce paramètre va alors apparaître dans la signature des méthodes de l&#x27;interface, ce qui va lier celle-ci à une source de données particulière : la base de données. Les données locales du thread nous apportent une solution plus élégante : la couche [métier] mettra la transaction dans les données locales du thread et c&#x27;est là que la couche [dao] ira la chercher. La signature des méthodes de la couche [dao] n&#x27;a alors pas besoin d&#x27;être changée.</p>
 <p>Nous mettons en oeuvre cette solution avec le projet Visual studio suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000669000001080A72351A.png" style="display:inline-block; margin:4px;width:13.019cm;height:2.101cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000669000001080A72351A.png" style="display:inline-block; margin:4px;width:13.019cm;height:2.101cm;" class="odt-zoomable" data-zoom-src="images/1000000000000669000001080A72351A.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DA0000018D1AA31F03.png" style="display:inline-block; margin:4px;width:9.86cm;height:3.15cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DA0000018D1AA31F03.png" style="display:inline-block; margin:4px;width:9.86cm;height:3.15cm;" class="odt-zoomable" data-zoom-src="images/10000000000004DA0000018D1AA31F03.png" /></td></tr></table>
 
 <ul>
 <li>en [1] : la solution dans son ensemble</li>
@@ -2985,7 +2985,7 @@
 <li>en [3] : les différentes couches de l&#x27;application.</li>
 </ul>
 <p>La base [4] est  la base SQL Server Compact déjà utilisée dans le chapitre précédent notamment au paragraphe <a href="acces-aux-bases-de-donnees.html#sqlce-dbarticles">9.3.1</a>.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001FB000000AB44426734.png" style="display:inline-block; margin:4px;width:9.389cm;height:3.17cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001FB000000AB44426734.png" style="display:inline-block; margin:4px;width:9.389cm;height:3.17cm;" class="odt-zoomable" data-zoom-src="images/10000000000001FB000000AB44426734.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><u><strong>La classe Article</strong></u></p>
 <p>Une ligne de la table [articles] précédente est encapsulée dans un objet de type <em>Article</em> :</p>
