@@ -1743,7 +1743,7 @@
 <p><a id="refheading10401851168783983"></a></p>
 <h3 id="936-le-programme-exemple">9.3.6. Le programme exemple</h3>
 <p>Le programme [program.cs] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Data.SqlServerCe;</span>
@@ -1844,7 +1844,7 @@
 </ol>
 <p>Les étapes 2 et 3 sont réalisées de façon répétée, la fermeture de connexion n’ayant lieu qu’à la fin de l’exploitation de la base. Les connexions ouvertes sont des ressources limitées d&#x27;un SGBD. Il faut les économiser. Aussi cherchera-t-on toujours à limiter la durée de vie d&#x27;une connexion ouverte. Dans l&#x27;exemple étudié, la connexion est fermée après chaque ordre SQL. Une nouvelle connexion est ouverte pour l&#x27;ordre SQL suivant. L&#x27;ouverture / fermeture d&#x27;une connexion est coûteuse. Pour diminuer ce coût, certains SGBD offrent la notion de <strong>pools de connexions</strong> ouvertes : lors de l&#x27;initialisation de l&#x27;application, N connexions sont ouvertes et sont affectées au pool. Elles resteront ouvertes jusqu&#x27;à la fin de l&#x27;application. Lorsque l&#x27;application ouvre une connexion, elle reçoit l&#x27;une des N connexions déjà ouvertes du pool. Lorsqu&#x27;elle ferme la connexion, celle-ci est simplement remise dans le pool. L&#x27;intérêt de ce système est qu&#x27;il est transparent pour le développeur : le programme n&#x27;a pas à être modifié pour utiliser le pool de connexions. La configuration du pool de connexions est dépendant du SGBD.</p>
 <p>Nous nous intéressons tout d&#x27;abord à l&#x27;exécution des ordres SQL <em>Select</em>. La méthode <em>ExecuteSelect</em> de notre programme exemple est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">// exécution d&#x27;une requête Select</span>
 <span class="odt-code-line">        <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> ExecuteSelect(<span style="color:#0000ff">string</span> connectionString, <span style="color:#0000ff">string</span> requête) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// on gère les éventuelles exceptions</span></span>
@@ -1888,7 +1888,7 @@
 <li>ligne 10 : un ordre SQL <em>Select</em> est exécuté via la méthode <em>ExecuteReader</em> de l&#x27;objet <em>SqlCeCommand</em> qui rend un objet <em>IDataReader</em> dont a présenté les méthodes et propriétés paragraphe <a href="#idatareader">9.3.3</a>.</li>
 <li>ligne 12 : l&#x27;affichage des résultats est confiée à la méthode <em>AfficheReader</em> suivante :</li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">        <span style="color:#008000">// affichage reader</span></span>
 <span class="odt-code-line">        <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> AfficheReader(<span style="color:#2b91af">IDataReader</span> reader) {</span>
 <span class="odt-code-line">            <span style="color:#0000ff">using</span> (reader) {</span>
@@ -1924,7 +1924,7 @@
 <p><a id="refheading10401891168783983"></a></p>
 <h3 id="938-execution-dun-ordre-de-mise-a-jour-insert-update-delete">9.3.8. Exécution d&#x27;un ordre de mise à jour : INSERT, UPDATE, DELETE</h3>
 <p>Le code de la méthode <em>ExecuteUpdate</em> est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">        <span style="color:#008000">// exécution d&#x27;une requête de mise à jour</span></span>
 <span class="odt-code-line">        <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> ExecuteUpdate(<span style="color:#0000ff">string</span> connectionString, <span style="color:#0000ff">string</span> requête) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// on gère les éventuelles exceptions</span></span>
@@ -2019,7 +2019,7 @@
 <li>ligne 5 : la chaîne de connexion à la base [dbarticles.mdf] avec une authentification SQL Server. [sa,msde] est le couple (login,password) de l&#x27;administrateur du serveur SQL Server tel que défini au paragraphe <a href="annexes.html#sqlserver2005">1.1</a>.</li>
 </ul>
 <p>Le programme [Program.cs] évolue de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Data.SqlClient;</span>
 <span class="odt-code-line">...</span>
 <span class="odt-code-line"></span>
@@ -2415,7 +2415,7 @@
 <p>Comme les connecteurs ODBC et OLE DB, le connecteur générique présente une interface standard aux applications qui l&#x27;utilise mais améliore les performances sans sacrifier la souplesse. En effet, le connecteur générique s&#x27;appuie sur les connecteurs propriétaires des SGBD. L&#x27;application utilise des classes du connecteur générique. Ces classes servent d&#x27;intermédiaires entre l&#x27;application et le connecteur propriétaire.</p>
 <p>Ci-dessus, lorsque l&#x27;application demande par exemple une connexion au connecteur générique, celui-ci lui rend une instance <strong>IDbConnection</strong>, l&#x27;interface des connexions décrite paragraphe <a href="#idbconnection">9.3.3</a>, implémentée par une classe <strong>MySQLConnection</strong> ou <strong>SQLConnection</strong> selon la nature de la demande qui lui a été faite. On dit que le connecteur générique a des classes de type <strong>factory</strong> : on utilise une classe <strong>factory</strong> pour lui demander de créer des objets et en donner des références (pointeurs). D&#x27;où son nom (<strong>factory</strong>=usine, usine de production d&#x27;objets). </p>
 <p>Il n&#x27;existe pas de connecteur générique pour tous les SGBD (avril 2008). Pour connaître ceux installés sur une machine, on pourra utiliser le programme suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Data;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Data.Common;</span>
@@ -2543,7 +2543,7 @@
 <li>lignes 13-17 : les noms des connecteurs génériques à utiliser</li>
 </ul>
 <p>Le programme [Program.cs] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">...</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Data.Common;</span>
 <span class="odt-code-line"></span>
@@ -2821,7 +2821,7 @@
 </code></pre></div>
 
 <p>L&#x27;application [Parametres.cs] met en oeuvre les requêtes paramétrées :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Data.SqlServerCe;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Text;</span>
@@ -3137,7 +3137,7 @@
 <li>en [2], le projet est configuré pour exécuter [Transactions.cs]</li>
 </ul>
 <p>Le code de [Transactions.cs] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Configuration;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Data;</span>
@@ -3235,7 +3235,7 @@
 <li>lignes 69-71 : idem pour la méthode <em>ExecuteSelect</em>.</li>
 </ul>
 <p>La méthode <em>InsertArticlesInTransaction</em> est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">// insertion d&#x27;un tableau d&#x27;articles dans une transaction</span>
 <span class="odt-code-line">        <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> InsertArticlesInTransaction(<span style="color:#0000ff">string</span> connectionString, <span style="color:#2b91af">Article</span>[] articles) {</span>
 <span class="odt-code-line">            <span style="color:#0000ff">using</span> (<span style="color:#2b91af">SqlCeConnection</span> connexion = <span style="color:#0000ff">new</span> <span style="color:#2b91af">SqlCeConnection</span>(connectionString)) {</span>
@@ -3316,8 +3316,8 @@
 <a id="__codelineno-88-5" name="__codelineno-88-5"></a>Erreur d&#39;accès à la base de données (A duplicate value cannot be inserted into a unique index. [ Table name = ARTICLES,Constraint name = UQ__ARTICLES__0000000000000010 ])
 <a id="__codelineno-88-6" name="__codelineno-88-6"></a>
 <a id="__codelineno-88-7" name="__codelineno-88-7"></a>------------------------------------
-<a id="__codelineno-88-8" name="__codelineno-88-8"></a>ID,NOM,PRIX,STOCKACTUEL,STOCKMINIMUM
-<a id="__codelineno-88-9" name="__codelineno-88-9"></a>------------------------------------
+<a id="__codelineno-88-8" name="__codelineno-88-8"></a><span class="gu">ID,NOM,PRIX,STOCKACTUEL,STOCKMINIMUM</span>
+<a id="__codelineno-88-9" name="__codelineno-88-9"></a><span class="gu">------------------------------------</span>
 <a id="__codelineno-88-10" name="__codelineno-88-10"></a>
 <a id="__codelineno-88-11" name="__codelineno-88-11"></a>126 article 100 10 1
 <a id="__codelineno-88-12" name="__codelineno-88-12"></a>
@@ -3327,8 +3327,8 @@
 <a id="__codelineno-88-16" name="__codelineno-88-16"></a>transaction invalidée...
 <a id="__codelineno-88-17" name="__codelineno-88-17"></a>
 <a id="__codelineno-88-18" name="__codelineno-88-18"></a>------------------------------------
-<a id="__codelineno-88-19" name="__codelineno-88-19"></a>ID,NOM,PRIX,STOCKACTUEL,STOCKMINIMUM
-<a id="__codelineno-88-20" name="__codelineno-88-20"></a>------------------------------------
+<a id="__codelineno-88-19" name="__codelineno-88-19"></a><span class="gu">ID,NOM,PRIX,STOCKACTUEL,STOCKMINIMUM</span>
+<a id="__codelineno-88-20" name="__codelineno-88-20"></a><span class="gu">------------------------------------</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 4 : affichée par le <em>ExecuteUpdate</em>(&quot;delete from articles&quot;) - il n&#x27;y avait pas de lignes dans la table</li>
@@ -3365,7 +3365,7 @@
 <li>en [2], le projet est configuré pour exécuter [ExecuteScalar.cs]</li>
 </ul>
 <p>Le programme [ExecuteScalar.cs] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line">...</span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap7 {</span>
 <span class="odt-code-line">    <span style="color:#0000ff">class</span> <span style="color:#2b91af">Scalar</span> {</span>
@@ -3555,7 +3555,7 @@
 <p>Les classes [TrancheImpot] et [ImpotException] sont celles des versions précédentes.</p>
 <p><u><strong>La couche [dao] (cf [3] dans le projet)</strong></u></p>
 <p>L&#x27;interface [IImpotDao] n&#x27;a pas changé :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Entites;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Dao {</span>
@@ -3567,7 +3567,7 @@
 </code></pre></div>
 
 <p>La classe d&#x27;implémentation [DataBaseImpot] de cette interface est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Data.Common;</span>
@@ -3641,7 +3641,7 @@
 </ul>
 <p><u><strong>Le test [Test1] (cf [4] dans le projet)</strong></u></p>
 <p>La classe [Test1] se contente d&#x27;afficher les tranches d&#x27;impôt à l&#x27;écran. C&#x27;est celle déjà utilisée dans la version 5 (paragraphe <a href="architectures-3-couches.html#impotsv5-dao">6.4.3</a>) sauf pour l&#x27;instruction qui instancie la couche [dao] (ligne 14).</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Dao;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Entites;</span>
@@ -3711,7 +3711,7 @@
 </code></pre></div></td></tr></table></div>
 <p><u><strong>Le test NUnit [NUnit1] (cf [4] dans le projet)</strong></u></p>
 <p>Le test unitaire [NUnit1] est celui déjà utilisé dans la version 5 (paragraphe <a href="architectures-3-couches.html#impotsv5-dao">6.4.3</a>) sauf pour l&#x27;instruction qui instancie la couche [dao] (ligne 16).</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Configuration;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Dao;</span>

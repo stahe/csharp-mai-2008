@@ -998,7 +998,7 @@
 <li>que la classe implémentant le service web s&#x27;appelle <em>Service</em> (attribut <em>Class</em>)</li>
 </ul>
 <p>Le code C# [Service.cs] du service web généré par Visual Developer est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Web.Services;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">[<span style="color:#2b91af">WebService</span>(Namespace = <span style="color:#a31515">&quot;http://tempuri.org/&quot;</span>)]</span>
@@ -1029,7 +1029,7 @@
 <li>ligne 9 : le constructeur du service web. Il est inutile dans notre application.</li>
 </ul>
 <p>La classe [Service.cs] générée est transformée de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Web.Services;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">[<span style="color:#2b91af">WebService</span>(Namespace = <span style="color:#a31515">&quot;http://st.istia.univ-angers.fr&quot;</span>)]</span>
@@ -1109,7 +1109,7 @@
 </ul>
 </li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">[<span style="color:#2b91af">WebService</span>(Namespace = <span style="color:#a31515">&quot;http://st.istia.univ-angers.fr&quot;</span>)]</span>
 <span class="odt-code-line">[<span style="color:#2b91af">WebServiceBinding</span>(ConformsTo = <span style="color:#2b91af">WsiProfiles</span>.BasicProfile1_1)]</span>
 <span class="odt-code-line"><span style="color:#0000ff">public</span> <span style="color:#0000ff">class</span> <span style="color:#2b91af">Service</span> : System.Web.Services.<span style="color:#2b91af">WebService</span></span>
@@ -1312,7 +1312,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>n°</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>type</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>nom</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>rôle</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">1</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">textBoxNomDame</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">nom de la dame</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">2</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Button</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">buttonSalutations</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour se connecter au service web <i>WsHello</i> distant et interroger la méthode <i>DisBonjourALaDame</i>.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">3</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Label</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">labelBonjour</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le résultat renvoyé par le service web</p></td></tr></table>
 
 <p>Le code du formulaire [Form1.cs] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Windows.Forms;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Client.WsHello;</span>
@@ -1377,7 +1377,7 @@
 </code></pre></div>
 
 <p>Le service web est assuré par classe [Operations.cs] suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Web.Services;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">[<span style="color:#2b91af">WebService</span>(Namespace = <span style="color:#a31515">&quot;http://st.istia.univ-angers.fr/&quot;</span>)]</span>
@@ -1476,7 +1476,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>n°</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>type</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>nom</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>rôle</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">1</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">ComboBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">comboBoxOperations</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">liste des opérations arithmétiques</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">2</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">textBoxA</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">nombre a</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">3</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">textBoxB</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">nombre b</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">4</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Button</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">buttonExécuter</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">interroge le service web distant</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">5</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Label</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">labelRésultat</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le résultat de l&#x27;opération</p></td></tr></table>
 
 <p>Le code de [Form1.cs] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Windows.Forms;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Client.WsOperations;</span>
@@ -1579,7 +1579,7 @@
 </code></pre></div>
 
 <p>Le service web est assuré par classe [ServiceImpot.cs] suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Web.Services;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">[<span style="color:#2b91af">WebService</span>(Namespace = <span style="color:#a31515">&quot;http://st.istia.univ-angers.fr/&quot;</span>)]</span>
@@ -1639,7 +1639,7 @@
 <li>en [5], le nouvel élément a été intégré dans le projet</li>
 </ul>
 <p>Regardons le contenu du fichier [Global.asax] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">&lt;%<span style="color:#0000ff">@</span> <span style="color:#a31515">Application</span> <span style="color:#ff0000">Language</span><span style="color:#0000ff">=&quot;C#&quot;</span> %&gt;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#a31515">script</span> <span style="color:#ff0000">runat</span><span style="color:#0000ff">=&quot;server&quot;&gt;</span></span>
@@ -1710,7 +1710,7 @@
 </code></pre></div>
 
 <p>L&#x27;attribut <em>Inherits=&quot;WsImpot.Global&quot;</em> indique que la classe associée à <em>Global.asax</em> hérite de la classe <em>WsImpot.Global</em>. Cette classe est définie dans [Global.cs] de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Metier;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Spring.Context.Support;</span>
@@ -1777,7 +1777,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000762000001CBA64E53E5.png" style="display:inline-block; margin:4px;width:15cm;height:3.641cm;" class="odt-zoomable" data-zoom-src="images/1000000000000762000001CBA64E53E5.png" /></td></tr></table>
 
 <p>Au démarrage de l&#x27;application, les couches [metier] et [dao] ont été instanciées. La durée de vie des couches est celle de l&#x27;application elle-même. Quand est instancié le service web ? En fait à chaque requête qu&#x27;on lui fait. A la fin de la requête, l&#x27;objet qui l&#x27;a servie est supprimé. Un service web est donc à première vue <strong>sans état</strong>. Il ne peut mémoriser des informations entre deux requêtes dans des champs qui lui appartiendraient. Il peut en mémoriser dans la session de l&#x27;utilisateur. Pour cela, les méthodes qu&#x27;il expose doivent être taguées avec un attribut spécial :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">    [<span style="color:#2b91af">WebMethod</span>(EnableSession=<span style="color:#0000ff">true</span>)]</span>
 <span class="odt-code-line">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">int</span> CalculerImpot(<span style="color:#0000ff">bool</span> marié, <span style="color:#0000ff">int</span> nbEnfants, <span style="color:#0000ff">int</span> salaire)</span>
 <span class="odt-code-line">....</span>
@@ -1785,7 +1785,7 @@
 
 <p>Ci-dessus, la ligne 1 autorise la méthode <em>CalculerImpot</em> à avoir accès au conteneur <em>Session</em> dont nous avons parlé précédemment. Nous n&#x27;aurons pas à utiliser cet attribut dans notre application. Le service web <em>WsImpot</em> sera donc instancié à chaque requête et sera sans état.</p>
 <p>Nous pouvons maintenant écrire le code [ServiceImpot.cs] qui implémente le service web :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Web.Services;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> WsImpot;</span>
 <span class="odt-code-line"></span>
@@ -1872,7 +1872,7 @@
 </code></pre></div>
 
 <p>Nous l&#x27;implémentons avec la classe <em>ImpotMetierWs</em> suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Net.Sockets;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.IO;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Client.WsImpot;</span>
@@ -2268,7 +2268,7 @@
 <li>[3] a été implémentée par la DLL [ImpotV9-metier]</li>
 </ul>
 <p>Les couches [1] et [3] sont désormais implémentées. Il nous reste à écrire la couche [2], celle qui génère le formulaire, l&#x27;envoie à l&#x27;utilisateur, le traite lorsque celui-ci le lui renvoie rempli, utilise la couche [3] pour le calcul de l&#x27;impôt, génère la page web de réponse à l&#x27;utilisateur et la lui renvoie. C&#x27;est le code [Default.aspx.cs] qui fait tout ce travail :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> WsImpot;</span>
 <span class="odt-code-line"></span>
@@ -2301,7 +2301,7 @@
 </ul>
 <p>Entre le moment où l&#x27;utilisateur crée un événement dans son navigateur et celui où il est traité dans [Default.aspx.cs], il y a une grande complexité. Celle-ci est cachée et on peut faire comme si elle n&#x27;existait pas lorsqu&#x27;on écrit les gestionnaires d&#x27;événements de la page web. Mais on ne doit jamais oublier qu&#x27;il y a le réseau entre l&#x27;événement et son gestionnaire et qu&#x27;il n&#x27;est donc pas question de gérer des événements souris tels <em>Mouse_Move</em> qui provoqueraient des aller /retour client / serveur coûteux ...</p>
 <p>Le code des gestionnaires des clics sur les boutons [Calculer] et [Effacer] est celui qu&#x27;on aurait écrit pour une application windows classique :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">protected</span> <span style="color:#0000ff">void</span> ButtonCalculer_Click(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e)</span>
 <span class="odt-code-line">    {</span>
 <span class="odt-code-line">        <span style="color:#008000">// vérification données</span></span>
@@ -2347,7 +2347,7 @@
 <p>La procédure <em>ButtonCalculer_Click</em> doit donc à partir des valeurs actuelles des champs (<em>RadioButtonOui</em>, <em>RadioButtonNon</em>, <em>TextBoxEnfants</em>, <em>TextBoxSalaire</em>) fixer la valeur de tous les champs (<em>RadioButtonOui</em>, <em>RadioButtonNon</em>, <em>TextBoxEnfants</em>, <em>TextBoxSalaire</em>, <em>LabelErreurEnfants</em>, <em>LabelErreurSalaire</em>, <em>LabelImpot</em>) de la nouvelle page [Default.aspx] qui va être renvoyée à l&#x27;utilisateur.</p>
 <p>Il n&#x27;y a pas de difficulté particulière à ce code. Seule la ligne 27 mérite d&#x27;être expliquée. Elle utilise la méthode <em>CalculerImpot</em> d&#x27;un champ <em>Global.Metier</em> qui n&#x27;a pas été rencontré. Nous allons y revenir prochainement.</p>
 <p>La méthode <em>ButtonEffacer_Click</em> est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">    <span style="color:#0000ff">protected</span> <span style="color:#0000ff">void</span> ButtonEffacer_Click(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e)</span>
 <span class="odt-code-line">    {</span>
 <span class="odt-code-line">        <span style="color:#008000">// raz formulaire</span></span>
@@ -2391,7 +2391,7 @@
 </code></pre></div>
 
 <p>Le code [Global.cs] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Metier;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Spring.Context.Support;</span>
@@ -2433,7 +2433,7 @@
 
 <p>La classe [Metier.ImpotMetierWS] de la ligne (g) ci-dessus se trouve dans [ImpotsV9-metier.dll].</p>
 <p>La référence de la couche [metier] créée est mise dans le champ statique de la ligne 9. C&#x27;est ce champ qui est utilisé dans la ligne 27 de la procédure <em>ButtonCalculer_Click</em> :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">LabelImpot.Text = <span style="color:#2b91af">String</span>.Format(<span style="color:#a31515">&quot;{0} euros&quot;</span>,Global.Metier.CalculerImpot(marié, nbEnfants, salaire));</span>
 </code></pre></div>
 
@@ -2456,7 +2456,7 @@
 <li>le serveur [2] est celui écrit en C#</li>
 </ul>
 <p>Tout d&#x27;abord, nous allons changer un détail dans notre service web de calcul d&#x27;impôt. Sa définition actuelle dans [ServiceImpot.cs] est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">...</span>
 <span class="odt-code-line"><span style="color:#0000ff">public</span> <span style="color:#0000ff">class</span> <span style="color:#2b91af">ServiceImpot</span> : System.Web.Services.<span style="color:#2b91af">WebService</span></span>
 <span class="odt-code-line">{</span>
@@ -2471,7 +2471,7 @@
 </code></pre></div>
 
 <p>Les tests ont montré que l&#x27;accent du paramètre <em>marié</em> des lignes 6 et 8 pouvait être un problème dans l&#x27;interopérabilité Java / C#. Nous adopterons la nouvelle définition suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">...</span>
 <span class="odt-code-line"><span style="color:#0000ff">public</span> <span style="color:#0000ff">class</span> <span style="color:#2b91af">ServiceImpot</span> : System.Web.Services.<span style="color:#2b91af">WebService</span></span>
 <span class="odt-code-line">{</span>

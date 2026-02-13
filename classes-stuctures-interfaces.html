@@ -709,15 +709,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#43-redefir-la-signification-dun-operateur-pour-une-classe" class="md-nav__link">
+  <a href="#43-redefinir-la-signification-dun-operateur-pour-une-classe" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.3. Redéfir la signification d&#x27;un opérateur pour une classe
+        4.3. Redéfinir la signification d&#x27;un opérateur pour une classe
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4.3. Redéfir la signification d&#39;un opérateur pour une classe">
+    <nav class="md-nav" aria-label="4.3. Redéfinir la signification d&#39;un opérateur pour une classe">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1150,7 +1150,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000081000000273DB1E1E1B.png" style="display:inline-block; margin:4px;width:18.002cm;height:5.468cm;" class="odt-zoomable" data-zoom-src="images/100000000000081000000273DB1E1E1B.png" /></td></tr></table>
 
 <p>En [1], créez un nouveau projet. En [2], choisissez une Application Console. En [3], laissez la valeur par défaut. En [4], validez. En [5], le projet qui a été généré. Le contenu de <em>Program.cs</em> est le suivant : </p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Linq;</span>
@@ -1174,7 +1174,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005CF0000026CE124A023.png" style="display:inline-block; margin:4px;width:13.771cm;height:5.74cm;" class="odt-zoomable" data-zoom-src="images/10000000000005CF0000026CE124A023.png" /></td></tr></table>
 
 <p>En [1], indiquez que vous voulez ajouter une classe. En [2], le nom de la classe. En [3], validez les informations. En [4], le projet [01] a un nouveau fichier source <em>Personne.cs</em> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Linq;</span>
@@ -1187,7 +1187,7 @@
 </code></pre></div>
 
 <p>On modifie l&#x27;espace de noms de chacun des fichiers source en <em>Chap2</em> et on supprime l&#x27;importation des espaces de noms inutiles :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -1196,7 +1196,7 @@
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -1210,7 +1210,7 @@
 <p><a id="refheading10399731168783983"></a></p>
 <h3 id="413-definition-de-la-classe-personne">4.1.3. Définition de la classe Personne</h3>
 <p>La définition de la classe <em>P</em><em>ersonne</em> dans le fichier source [<em>Personne.cs</em>] sera la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -1267,7 +1267,7 @@
 <p><a id="refheading10399751168783983"></a></p>
 <h3 id="414-la-methode-initialise">4.1.4. La méthode Initialise</h3>
 <p>Revenons à notre classe <strong>Personne</strong> déclarée comme :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -1358,7 +1358,7 @@
 <p><a id="refheading10399811168783983"></a></p>
 <h3 id="417-un-programme-de-test">4.1.7. Un programme de test</h3>
 <p>Voici un court programme de test. Celui-ci est écrit dans le fichier source [<em>Program.cs</em>] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -1377,9 +1377,7 @@
 
 <p>Dans les propriétés du projet [01], on indique en [1] la classe à exécuter.</p>
 <p>Les résultats obtenus à l&#x27;exécution sont les suivants :</p>
-<div class="highlight"><pre><span></span><code>        ```text
-        [Jean, Dupont, 30]
-        ```
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>[Jean, Dupont, 30]
 </code></pre></div>
 <p><a id="refheading10399831168783983"></a></p>
 <h3 id="418-une-autre-methode-initialise">4.1.8. Une autre méthode Initialise</h3>
@@ -1394,7 +1392,7 @@
 
 <p>On a maintenant deux méthodes portant le nom <em>I</em><em>nitialise</em> : c&#x27;est légal tant qu&#x27;elles admettent des paramètres différents. C&#x27;est le cas ici. Le paramètre est maintenant une référence <em>p</em> à une personne. Les attributs de la personne <em>p</em> sont alors affectés à l&#x27;objet courant (<em>this</em>). On remarquera que la méthode <em>I</em><em>nitialise</em> a un accès direct aux attributs de l&#x27;objet <em>p</em> bien que ceux-ci soient de type <em>private</em>. C&#x27;est toujours vrai : un objet o<em>1</em> d&#x27;une classe <em>C</em> a toujours accès aux attributs des objets de la même classe <em>C</em>.</p>
 <p>Voici un test de la nouvelle classe P<em>ersonne</em> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -1420,23 +1418,19 @@
 <h3 id="419-constructeurs-de-la-classe-personne">4.1.9. Constructeurs de la classe Personne</h3>
 <p>Un constructeur est une méthode qui porte le nom de la classe et qui est appelée lors de la création de l&#x27;objet. On s&#x27;en sert généralement pour l&#x27;initialiser. C&#x27;est une méthode qui peut accepter des arguments mais qui ne rend aucun résultat. Son prototype ou sa définition ne sont précédés d&#x27;aucun type (pas même <em>void</em>).</p>
 <p>Si une classe C a un constructeur acceptant n arguments <em>argi</em>, la déclaration et l&#x27;initialisation d&#x27;un objet de cette classe pourra se faire sous la forme :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">        C objet =new C(<span style="font-style:italic">arg1,arg2, ... argn</span>);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>        C objet =new C(arg1,arg2, ... argn);
 </code></pre></div>
-
 <p>ou</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">        C objet;</span>
-<span class="odt-code-line">        …</span>
-<span class="odt-code-line">        objet=new C(<span style="font-style:italic">arg1,arg2, ... argn</span>);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>        C objet;
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>        …
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>        objet=new C(arg1,arg2, ... argn);
 </code></pre></div>
-
 <p>Lorsqu&#x27;une classe <em>C</em> a un ou plusieurs constructeurs, l&#x27;un de ces constructeurs doit être obligatoirement utilisé pour créer un objet de cette classe. Si une classe <em>C</em> n&#x27;a aucun constructeur, elle en a un par défaut qui est le constructeur sans paramètres : <em>public C()</em>. Les attributs de l&#x27;objet sont alors initialisés avec des valeurs par défaut. C&#x27;est ce qui s&#x27;est passé lorsque dans les programmes précédents, où on avait écrit :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>    Personne p1;
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    p1=new Personne();
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>    Personne p1;
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    p1=new Personne();
 </code></pre></div>
 <p>Créons deux constructeurs à notre classe <em>P</em><em>ersonne</em> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -1474,7 +1468,7 @@
 
 <p>Nos deux constructeurs se contentent de faire appel aux méthodes <em>I</em><em>nitialise</em> étudiées précédemment. On rappelle que lorsque dans un constructeur, on trouve la notation <em>I</em><em>nitialise(p)</em> par exemple, le compilateur traduit par <em>this.Initialise(p)</em>. Dans le constructeur, la méthode <em>I</em><em>nitialise</em> est donc appelée pour travailler sur l&#x27;objet référencé par <em>this</em>, c&#x27;est à dire l&#x27;objet courant, celui qui est en cours de construction. </p>
 <p>Voici un court programme de test :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -1491,13 +1485,13 @@
 </code></pre></div>
 
 <p>et les résultats obtenus :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>[Jean, Dupont, 30]
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>[Jean, Dupont, 30]
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>[Jean, Dupont, 30]
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>[Jean, Dupont, 30]
 </code></pre></div>
 <p><a id="refheading10399871168783983"></a></p>
 <h3 id="4110-les-references-dobjets">4.1.10. Les références d&#x27;objets</h3>
 <p>Nous utilisons toujours la même classe <em>P</em><em>ersonne</em>. Le programme de test devient le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -1525,37 +1519,37 @@
 </code></pre></div>
 
 <p>Les résultats obtenus sont les suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
-<span class="normal"><a href="#__codelineno-17-2">2</a></span>
-<span class="normal"><a href="#__codelineno-17-3">3</a></span>
-<span class="normal"><a href="#__codelineno-17-4">4</a></span>
-<span class="normal"><a href="#__codelineno-17-5">5</a></span>
-<span class="normal"><a href="#__codelineno-17-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>p1=[Jean, Dupont, 30]
-<a id="__codelineno-17-2" name="__codelineno-17-2"></a>p2=[Jean, Dupont, 30]
-<a id="__codelineno-17-3" name="__codelineno-17-3"></a>p3=[Jean, Dupont, 30]
-<a id="__codelineno-17-4" name="__codelineno-17-4"></a>p1=[Micheline, Benoît, 67]
-<a id="__codelineno-17-5" name="__codelineno-17-5"></a>p2=[Micheline, Benoît, 67]
-<a id="__codelineno-17-6" name="__codelineno-17-6"></a>p3=[Jean, Dupont, 30]
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">4</a></span>
+<span class="normal"><a href="#__codelineno-19-5">5</a></span>
+<span class="normal"><a href="#__codelineno-19-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>p1=[Jean, Dupont, 30]
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>p2=[Jean, Dupont, 30]
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a>p3=[Jean, Dupont, 30]
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a>p1=[Micheline, Benoît, 67]
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a>p2=[Micheline, Benoît, 67]
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a>p3=[Jean, Dupont, 30]
 </code></pre></div></td></tr></table></div>
 <p>Lorsqu&#x27;on déclare la variable <em>p1</em> par </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Personne p1=new Personne(&quot;Jean&quot;,&quot;Dupont&quot;,30);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Personne p1=new Personne(&quot;Jean&quot;,&quot;Dupont&quot;,30);
 </code></pre></div>
 <p><em>p1</em> référence l&#x27;objet <em>P</em><em>ersonne(&quot;Jean&quot;,&quot;Dupont&quot;,30)</em> mais n&#x27;est pas l&#x27;objet lui-même. En C, on dirait que c&#x27;est un pointeur, c.a.d. l&#x27;adresse de l&#x27;objet créé. Si on écrit ensuite :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>    p1=null;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>    p1=null;
 </code></pre></div>
 <p>Ce n&#x27;est pas l&#x27;objet <em>P</em><em>ersonne(&quot;Jean&quot;,&quot;Dupont&quot;,30</em><em>)</em> qui est modifié, c&#x27;est la référence <em>p1</em> qui change de valeur. L&#x27;objet <em>Personne(&quot;Jean&quot;,&quot;Dupont&quot;,30)</em> sera &quot;perdu&quot; s&#x27;il n&#x27;est référencé par aucune autre variable.</p>
 <p>Lorsqu&#x27;on écrit :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Personne p2=p1;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Personne p2=p1;
 </code></pre></div>
 <p>on initialise le pointeur <em>p2</em> : il &quot;pointe&quot; sur le même objet (il désigne le même objet) que le pointeur <em>p1</em>. Ainsi si on modifie l&#x27;objet &quot;pointé&quot; (ou référencé) par <em>p1</em>, on modifie aussi celui référencé par <em>p2</em>.</p>
 <p>Lorsqu&#x27;on écrit :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Personne p3=new Personne(p1);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Personne p3=new Personne(p1);
 </code></pre></div>
 <p>il y a création d&#x27;un nouvel objet<em> Personne</em>. Ce nouvel objet sera référencé par <em>p3</em>. Si on modifie l&#x27;objet &quot;pointé&quot; (ou référencé) par <em>p1</em>, on ne modifie en rien celui référencé par <em>p3</em>. C&#x27;est ce que montrent les résultats obtenus.</p>
 <p><a id="refheading10399891168783983"></a></p>
 <h3 id="4111-passage-de-parametres-de-type-reference-dobjet">4.1.11. Passage de paramètres de type référence d&#x27;objet</h3>
 <p>Dans le chapitre précédent, nous avons étudié les modes de passage des paramètres d&#x27;une fonction lorsque ceux-ci représentaient un type C# simple représenté par une structure .NET. Voyons ce qui se passe lorsque la paramètre est une référence d&#x27;objet :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Text;</span>
 <span class="odt-code-line"></span>
@@ -1585,9 +1579,9 @@
 <ul>
 <li>ligne 8 : définit 3 objets de type <em>StringBuilder</em>. Un objet <em>StringBuilder</em> est proche d&#x27;un objet <em>string.</em> Lorsqu&#x27;on manipule un objet <em>string</em>, on obtient en retour un nouvel objet <em>string</em>. Ainsi dans la séquence de code :</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
-<span class="normal"><a href="#__codelineno-22-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a>string s=&quot;une chaîne&quot;;
-<a id="__codelineno-22-2" name="__codelineno-22-2"></a>s=s.ToUpperCase();
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a>string s=&quot;une chaîne&quot;;
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a>s=s.ToUpperCase();
 </code></pre></div></td></tr></table></div>
 <p>La ligne 1 crée un objet <em>string</em> en mémoire et s est son adresse. Ligne 2, <em>s.ToUpperCase()</em> crée un autre objet <em>string</em> en mémoire. Ainsi entre les lignes 1 et 2, <em>s</em> a changé de valeur (il pointe sur le nouvel objet). La classe <em>StringBuilder</em> elle, permet de transformer une chaîne sans qu&#x27;un second objet soit créé. C&#x27;est l&#x27;exemple donné plus haut :</p>
 <ul>
@@ -1600,13 +1594,13 @@
 <li><em>sbf3</em> et <em>sb3</em> sont, après exécution de la méthode, une <strong>même référence</strong> sur le même objet (mot clé <em>out</em>) </li>
 </ul>
 <p>Les résultats obtenus sont les suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
-<span class="normal"><a href="#__codelineno-23-2">2</a></span>
-<span class="normal"><a href="#__codelineno-23-3">3</a></span>
-<span class="normal"><a href="#__codelineno-23-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>Dans fonction appelante avant appel : sb0=essai0, sb1=essai1, sb2=essai2
-<a id="__codelineno-23-2" name="__codelineno-23-2"></a>Début fonction appelée : sbf0=essai0, sbf1=essai1, sbf2=essai2
-<a id="__codelineno-23-3" name="__codelineno-23-3"></a>Fin fonction appelée : sbf0=essai0*****, sbf1=essai1*****, sbf2=essai2*****, sbf3=essai3*****
-<a id="__codelineno-23-4" name="__codelineno-23-4"></a>Dans fonction appelante après appel : sb0=essai0*****, sb1=essai1, sb2=essai2*****, sb3=essai3*****
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span>
+<span class="normal"><a href="#__codelineno-25-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>Dans fonction appelante avant appel : sb0=essai0, sb1=essai1, sb2=essai2
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>Début fonction appelée : sbf0=essai0, sbf1=essai1, sbf2=essai2
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a>Fin fonction appelée : sbf0=essai0*****, sbf1=essai1*****, sbf2=essai2*****, sbf3=essai3*****
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a>Dans fonction appelante après appel : sb0=essai0*****, sb1=essai1, sb2=essai2*****, sb3=essai3*****
 </code></pre></div></td></tr></table></div>
 <p>Explications :</p>
 <ul>
@@ -1619,7 +1613,7 @@
 <h3 id="4112-les-objets-temporaires">4.1.12. Les objets temporaires</h3>
 <p>Dans une expression, on peut faire appel explicitement au constructeur d&#x27;un objet : celui-ci est construit, mais nous n&#x27;y avons pas accès (pour le modifier par exemple). Cet objet temporaire est construit pour les besoins d&#x27;évaluation de l&#x27;expression puis abandonné. L&#x27;espace mémoire qu&#x27;il occupait sera automatiquement récupéré ultérieurement par un programme appelé &quot;ramasse-miettes&quot; dont le rôle est de récupérer l&#x27;espace mémoire occupé par des objets qui ne sont plus référencés par des données du programme.</p>
 <p>Considérons le nouveau programme de test suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -1632,7 +1626,7 @@
 </code></pre></div>
 
 <p>et modifions les constructeurs de la classe <em>Personne</em> afin qu&#x27;ils affichent un message :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">        <span style="color:#008000">// constructeurs</span></span>
 <span class="odt-code-line">        <span style="color:#0000ff">public</span> Personne(<span style="color:#2b91af">String</span> p, <span style="color:#2b91af">String</span> n, <span style="color:#0000ff">int</span> age) {</span>
 <span class="odt-code-line">            <span style="color:#2b91af">Console</span>.WriteLine(<span style="color:#a31515">&quot;Constructeur Personne(string, string, int)&quot;</span>);</span>
@@ -1645,17 +1639,17 @@
 </code></pre></div>
 
 <p>Nous obtenons les résultats suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
-<span class="normal"><a href="#__codelineno-24-2">2</a></span>
-<span class="normal"><a href="#__codelineno-24-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a>Constructeur Personne(string, string, int)
-<a id="__codelineno-24-2" name="__codelineno-24-2"></a>Constructeur Personne(Personne)
-<a id="__codelineno-24-3" name="__codelineno-24-3"></a>[Jean, Dupont, 30]
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a>Constructeur Personne(string, string, int)
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a>Constructeur Personne(Personne)
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a>[Jean, Dupont, 30]
 </code></pre></div></td></tr></table></div>
 <p>montrant la construction successive des deux objets temporaires.</p>
 <p><a id="refheading10399931168783983"></a></p>
 <h3 id="4113-methodes-de-lecture-et-decriture-des-attributs-prives">4.1.13. Méthodes de lecture et d&#x27;écriture des attributs privés</h3>
 <p>Nous rajoutons à la classe <em>Personne</em> les méthodes nécessaires pour lire ou modifier l&#x27;état des attributs des objets :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -1720,7 +1714,7 @@
 </code></pre></div>
 
 <p>Nous testons la nouvelle classe avec le programme suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -1736,17 +1730,17 @@
 </code></pre></div>
 
 <p>et nous obtenons les résultats :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
-<span class="normal"><a href="#__codelineno-25-2">2</a></span>
-<span class="normal"><a href="#__codelineno-25-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>Constructeur Personne(string, string, int)
-<a id="__codelineno-25-2" name="__codelineno-25-2"></a>p=(Jean,Michelin,34)
-<a id="__codelineno-25-3" name="__codelineno-25-3"></a>p=(Jean,Michelin,56)
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<span class="normal"><a href="#__codelineno-27-2">2</a></span>
+<span class="normal"><a href="#__codelineno-27-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a>Constructeur Personne(string, string, int)
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a>p=(Jean,Michelin,34)
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a>p=(Jean,Michelin,56)
 </code></pre></div></td></tr></table></div>
 <p><a id="refheading10399951168783983"></a></p>
 <h3 id="4114-les-proprietes">4.1.14. Les propriétés</h3>
 <p>Il existe une autre façon d&#x27;avoir accès aux attributs d&#x27;une classe, c&#x27;est de créer des propriétés. Celles-ci nous permettent de manipuler des attributs privés comme s&#x27;ils étaient publics.</p>
 <p>Considérons la classe P<em>ersonne</em> suivante où les accesseurs et modifieurs précédents ont été remplacés par des <strong>propriétés</strong> en lecture et écriture :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -1822,14 +1816,14 @@
 </code></pre></div>
 
 <p>Une propriété permet de lire (<strong>get</strong>) ou de fixer (<strong>set</strong>) la valeur d&#x27;un attribut. Une propriété est déclarée comme suit :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>public Type Propriété{
-<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>    get {...}
-<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>    set {...}
-<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>public Type Propriété{
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>    get {...}
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>    set {...}
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>}
 </code></pre></div>
 <p>où <em>Type</em> doit être le type de l&#x27;attribut géré par la propriété. Elle peut avoir deux méthodes appelées <strong>get</strong> et <strong>set</strong>. La méthode <strong>get</strong> est habituellement chargée de rendre la valeur de l&#x27;attribut qu&#x27;elle gère (elle pourrait rendre autre chose, rien ne l&#x27;empêche). La méthode <strong>set</strong> reçoit un paramètre appelé <strong>value</strong> qu&#x27;elle affecte normalement à l&#x27;attribut qu&#x27;elle gère. Elle peut en profiter pour faire des vérifications sur la validité de la valeur reçue et éventuellement lancer un exception si la valeur se révèle invalide. C&#x27;est ce qui est fait ici.</p>
 <p>Comment ces méthodes <strong>get</strong> et <strong>set</strong> sont-elles appelées ? Considérons le programme de test suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -1850,34 +1844,34 @@
 </code></pre></div>
 
 <p>Dans l&#x27;instruction</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">    <span style="color:#2b91af">Console</span>.Out.WriteLine(<span style="color:#a31515">&quot;p=(&quot;</span> + p.Prenom + <span style="color:#a31515">&quot;,&quot;</span> + p.Nom + <span style="color:#a31515">&quot;,&quot;</span> + p.Age + <span style="color:#a31515">&quot;)&quot;</span>);</span>
 </code></pre></div>
 
 <p>on cherche à avoir les valeurs des propriétés P<em>renom</em>, N<em>om</em> et A<em>ge</em> de la personne <strong>p</strong>. C&#x27;est la méthode <strong>get</strong> de ces propriétés qui est alors appelée et qui rend la valeur de l&#x27;attribut qu&#x27;elles gèrent.</p>
 <p>Dans l&#x27;instruction</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>        p.Age=56;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>        p.Age=56;
 </code></pre></div>
 <p>on veut fixer la valeur de la propriété A<em>ge</em>. C&#x27;est alors la méthode <strong>set</strong> de cette propriété qui est alors appelée. Elle recevra 56 dans son paramètre <strong>value</strong>.</p>
 <p>Une propriété <strong>P</strong> d&#x27;une classe <strong>C</strong> qui ne définirait que la méthode <strong>get</strong> est dite en lecture seule. Si c est un objet de classe C, l&#x27;opération <em>c.P=valeur</em> sera alors refusée par le compilateur.</p>
 <p>L&#x27;exécution du programme de test précédent donne les résultats suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
-<span class="normal"><a href="#__codelineno-28-2">2</a></span>
-<span class="normal"><a href="#__codelineno-28-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a>p=(Jean,Michelin,34)
-<a id="__codelineno-28-2" name="__codelineno-28-2"></a>p=(Jean,Michelin,56)
-<a id="__codelineno-28-3" name="__codelineno-28-3"></a>âge (-4) invalide
-</code></pre></div></td></tr></table></div>
-<p>Les propriétés nous permettent donc de manipuler des attributs privés comme s&#x27;ils étaient publics. Une autre caractéristique des propriétés est qu&#x27;elles peuvent être utilisées conjointement avec un constructeur selon la syntaxe suivante :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>Classe objet=new Classe (...) {Propriété1=val1, Propriété2=val2, ...}
-</code></pre></div>
-<p>Cette syntaxe est équivalente au code suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
 <span class="normal"><a href="#__codelineno-30-2">2</a></span>
-<span class="normal"><a href="#__codelineno-30-3">3</a></span>
-<span class="normal"><a href="#__codelineno-30-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a>Classe objet=new Classe(...);
-<a id="__codelineno-30-2" name="__codelineno-30-2"></a>objet.Propriété1=val1;
-<a id="__codelineno-30-3" name="__codelineno-30-3"></a>objet.Propriété2=val2;
-<a id="__codelineno-30-4" name="__codelineno-30-4"></a>...
+<span class="normal"><a href="#__codelineno-30-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a>p=(Jean,Michelin,34)
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a>p=(Jean,Michelin,56)
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a>âge (-4) invalide
+</code></pre></div></td></tr></table></div>
+<p>Les propriétés nous permettent donc de manipuler des attributs privés comme s&#x27;ils étaient publics. Une autre caractéristique des propriétés est qu&#x27;elles peuvent être utilisées conjointement avec un constructeur selon la syntaxe suivante :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>Classe objet=new Classe (...) {Propriété1=val1, Propriété2=val2, ...}
+</code></pre></div>
+<p>Cette syntaxe est équivalente au code suivant :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
+<span class="normal"><a href="#__codelineno-32-2">2</a></span>
+<span class="normal"><a href="#__codelineno-32-3">3</a></span>
+<span class="normal"><a href="#__codelineno-32-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a>Classe objet=new Classe(...);
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a>objet.Propriété1=val1;
+<a id="__codelineno-32-3" name="__codelineno-32-3"></a>objet.Propriété2=val2;
+<a id="__codelineno-32-4" name="__codelineno-32-4"></a>...
 </code></pre></div></td></tr></table></div>
 <p>L&#x27;ordre des propriétés n&#x27;importe pas. Voici un exemple.</p>
 <p>La classe <em>Personne</em> se voit ajouter un nouveau constructeur sans paramètres :</p>
@@ -1888,7 +1882,7 @@
 
 <p>Le constructeur n&#x27;initialise pas les membres de l&#x27;objet. C&#x27;est ce qu&#x27;on appelle le constructeur par défaut. C&#x27;est lui qui est utilisé lorsque la classe ne définit aucun constructeur.</p>
 <p>Le code suivant crée et initialise (ligne 6) une nouvelle <em>Personne</em> avec la syntaxe présentée précédemment :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -1908,10 +1902,10 @@
 
 <p>mais les parenthèses du constructeur <em>Personne</em>() sans paramètres ne sont pas obligatoires dans cette syntaxe.</p>
 <p>Les résultats de l&#x27;exécution sont les suivants :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>p2=(Arthur,Martin,7)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>p2=(Arthur,Martin,7)
 </code></pre></div>
 <p>Dans beaucoup de cas, les méthodes <em>get</em> et <em>set</em> d&#x27;une propriété se contentent de lire et écrire un champ privé sans autre traitement. On peut alors, dans ce scénario, utiliser une propriété <strong>automatique</strong> déclarée comme suit :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>public Type Propriété{ get ; set ; }
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>public Type Propriété{ get ; set ; }
 </code></pre></div>
 <p>Le champ privé associé à la propriété n&#x27;est pas déclaré. Il est automatiquement généré par le compilateur. On y accède que via sa propriété. Ainsi, au lieu d&#x27;écrire :</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1932,11 +1926,11 @@
 </code></pre></div>
 
 <p>on pourra écrire :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>public string Prenom {get; set;}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>public string Prenom {get; set;}
 </code></pre></div>
 <p>sans déclarer le champ privé <em>prenom</em>. La différence entre les deux propriétés précédentes est que la première vérifie la validité du prénom dans le <em>set</em>, alors que la deuxième ne fait aucune vérification.</p>
 <p>Utiliser la propriété automatique <em>Prenom</em> revient à déclarer un champ <em>Prenom</em> <strong>public</strong> :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>public string Prenom;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>public string Prenom;
 </code></pre></div>
 <p>On peut se demander s&#x27;il y a une différence entre les deux déclarations. Déclarer <em>public</em> un champ d&#x27;une classe est déconseillé. Cela rompt avec le concept d&#x27;encapsulation de l&#x27;état d&#x27;un objet, état qui doit être privé et exposé par des méthodes publiques.</p>
 <p>Si la propriété automatique est déclarée <em>virtuelle, </em>elle peut alors être redéfinie dans une classe fille :</p>
@@ -1969,7 +1963,7 @@
 
 <p>qui de l&#x27;extérieur sera appelée avec la syntaxe P<em>ersonne.NbPersonnes</em>. Voici un exemple.</p>
 <p>La classe P<em>ersonne</em> devient la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -2002,7 +1996,7 @@
 
 <p>Lignes 20 et 24, les constructeurs incrémentent le champ statique de la ligne 7.</p>
 <p>Avec le programme suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -2018,12 +2012,12 @@
 </code></pre></div>
 
 <p>on obtient les résultats suivants :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>    Nombre de personnes créées : 3
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>    Nombre de personnes créées : 3
 </code></pre></div>
 <p><a id="refheading10399991168783983"></a></p>
 <h3 id="4116-un-tableau-de-personnes">4.1.16. Un tableau de personnes</h3>
 <p>Un objet est une donnée comme une autre et à ce titre plusieurs objets peuvent être rassemblés dans un tableau :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -2049,11 +2043,11 @@
 <li>lignes 12-14 : affichage du contenu du tableau <em>amis</em></li>
 </ul>
 <p>On obtient les résultats suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span>
-<span class="normal"><a href="#__codelineno-36-2">2</a></span>
-<span class="normal"><a href="#__codelineno-36-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a>[Jean, Dupont, 30]
-<a id="__codelineno-36-2" name="__codelineno-36-2"></a>[Sylvie, Vartan, 52]
-<a id="__codelineno-36-3" name="__codelineno-36-3"></a>[Neil, Armstrong, 66]
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
+<span class="normal"><a href="#__codelineno-38-2">2</a></span>
+<span class="normal"><a href="#__codelineno-38-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a>[Jean, Dupont, 30]
+<a id="__codelineno-38-2" name="__codelineno-38-2"></a>[Sylvie, Vartan, 52]
+<a id="__codelineno-38-3" name="__codelineno-38-3"></a>[Neil, Armstrong, 66]
 </code></pre></div></td></tr></table></div>
 <p><a id="refheading10400011168783983"></a></p>
 <h2 id="42-lheritage-par-lexemple">4.2. L&#x27;héritage par l&#x27;exemple</h2>
@@ -2061,11 +2055,11 @@
 <h3 id="421-generalites">4.2.1. Généralités</h3>
 <p>Nous abordons ici la notion d&#x27;héritage. Le but de l&#x27;héritage est de &quot;personnaliser&quot; une classe existante pour qu&#x27;elle satisfasse à nos besoins. Supposons qu&#x27;on veuille créer une classe <em>E</em><em>nseignant</em> : un enseignant est une personne particulière. Il a des attributs qu&#x27;une autre personne n&#x27;aura pas : la matière qu&#x27;il enseigne par exemple. Mais il a aussi les attributs de toute personne : prénom, nom et âge. Un enseignant fait donc pleinement partie de la classe <em>P</em><em>ersonne</em> mais a des attributs supplémentaires. Plutôt que d&#x27;écrire une classe <em>E</em><em>nseignant</em> à partir de rien, on préfèrerait reprendre l&#x27;acquis de la classe <em>P</em><em>ersonne</em> qu&#x27;on adapterait au caractère particulier des enseignants. C&#x27;est le concept d&#x27;<strong>héritage</strong> qui nous permet cela.</p>
 <p>Pour exprimer que la classe <em>Enseignant</em> hérite des propriétés de la classe <em>Personne</em>, on écrira :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>    public class Enseignant : Personne
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>    public class Enseignant : Personne
 </code></pre></div>
 <p><em>Personne</em> est appelée la classe parent (ou mère) et <em>E</em><em>nseignant</em> la classe dérivée (ou fille). Un objet <em>E</em><em>nseignant</em> a toutes les qualités d&#x27;un objet <em>P</em><em>ersonne</em> : il a les mêmes attributs et les mêmes méthodes. Ces attributs et méthodes de la classe parent ne sont pas répétées dans la définition de la classe fille : on se contente d&#x27;indiquer les attributs et méthodes rajoutés par la classe fille :</p>
 <p>Nous supposons que la classe <em>P</em><em>ersonne</em> est définie comme suit :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -2142,7 +2136,7 @@
 </code></pre></div>
 
 <p>La méthode <em>I</em><em>dentifie</em> a été remplacée par la propriété <em>Identite</em> en lecture seule et qui identifie la personne. Nous créons une classe <em>E</em><em>nseignant</em>  héritant de la classe <em>Personne</em> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -2178,7 +2172,7 @@
 <p><a id="refheading10400051168783983"></a></p>
 <h3 id="422-construction-dun-objet-enseignant">4.2.2. Construction d&#x27;un objet Enseignant</h3>
 <p>Une classe fille <strong>n&#x27;hérite pas des constructeurs</strong> de sa classe Parent. Elle doit alors définir ses propres constructeurs. Le constructeur de la classe <em>E</em><em>nseignant</em> est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">        <span style="color:#008000">// constructeur</span></span>
 <span class="odt-code-line">        <span style="color:#0000ff">public</span> Enseignant(<span style="color:#0000ff">string</span> prenom, <span style="color:#0000ff">string</span> nom, <span style="color:#0000ff">int</span> age, <span style="color:#0000ff">int</span> section)</span>
 <span class="odt-code-line">            : <span style="color:#0000ff">base</span>(prenom, nom, age) {</span>
@@ -2220,7 +2214,7 @@
 
 <p>C&#x27;est impossible. La classe <em>P</em><em>ersonne</em> a déclaré privés (<em>private</em>) ses trois champs <em>prenom</em>, <em>nom</em> et <em>age</em>. Seuls des objets de la même classe ont un accès direct à ces champs. Tous les autres objets, y compris des objets fils comme ici, doivent passer par des méthodes publiques pour y avoir accès. Cela aurait été différent si la classe <em>P</em><em>ersonne</em> avait déclaré protégés (<em>protected</em>) les trois champs : elle autorisait alors des classes dérivées à avoir un accès direct aux trois champs. Dans notre exemple, utiliser le constructeur de la classe parent était donc la bonne solution et c&#x27;est la méthode habituelle : lors de la construction d&#x27;un objet fils, on appelle d&#x27;abord le constructeur de l&#x27;objet parent puis on complète les initialisations propres cette fois à l&#x27;objet fils (<em>section</em> dans notre exemple).</p>
 <p>Tentons un premier programme de test [Program.cs] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -2237,11 +2231,11 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046400000109F6A3932E.png" style="display:inline-block; margin:4px;width:10.41cm;height:2.45cm;" class="odt-zoomable" data-zoom-src="images/100000000000046400000109F6A3932E.png" /></td></tr></table>
 
 <p>Les résultats obtenus sont les suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
-<span class="normal"><a href="#__codelineno-38-2">2</a></span>
-<span class="normal"><a href="#__codelineno-38-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a>Constructeur Personne(string, string, int)
-<a id="__codelineno-38-2" name="__codelineno-38-2"></a>Construction Enseignant(string, string, int, int)
-<a id="__codelineno-38-3" name="__codelineno-38-3"></a>[Jean, Dupont, 30]
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1">1</a></span>
+<span class="normal"><a href="#__codelineno-40-2">2</a></span>
+<span class="normal"><a href="#__codelineno-40-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1"></a>Constructeur Personne(string, string, int)
+<a id="__codelineno-40-2" name="__codelineno-40-2"></a>Construction Enseignant(string, string, int, int)
+<a id="__codelineno-40-3" name="__codelineno-40-3"></a>[Jean, Dupont, 30]
 </code></pre></div></td></tr></table></div>
 <p>On voit que :</p>
 <ul>
@@ -2251,7 +2245,7 @@
 </ul>
 <h3 id="423-redefinition-dune-methode-ou-dune-propriete">4.2.3. Redéfinition d&#x27;une méthode ou d&#x27;une propriété</h3>
 <p>Dans l&#x27;exemple précédent, nous avons eu l&#x27;identité de la partie P<em>ersonne</em> de l&#x27;enseignant mais il manque certaines informations propres à la classe <em>E</em><em>nseignant</em> (la section). On est donc amené à écrire une propriété permettant d&#x27;identifier l&#x27;enseignant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -2309,7 +2303,7 @@
 </ul>
 <p>L&#x27;héritage permet donc de redéfinir dans la classe fille des méthodes/propriétés de même nom dans la classe mère. C&#x27;est ce qui permet d&#x27;adapter la classe fille à ses propres besoins. Associée au polymorphisme que nous allons voir un peu plus loin, la redéfinition de méthodes/propriétés est le principal intérêt de l&#x27;héritage.</p>
 <p>Considérons le même programme de test que précédemment :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -2322,43 +2316,43 @@
 </code></pre></div>
 
 <p>Les résultats obtenus sont cette fois les suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span>
-<span class="normal"><a href="#__codelineno-39-2">2</a></span>
-<span class="normal"><a href="#__codelineno-39-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a>Constructeur Personne(string, string, int)
-<a id="__codelineno-39-2" name="__codelineno-39-2"></a>Construction Enseignant(string, string, int, int)
-<a id="__codelineno-39-3" name="__codelineno-39-3"></a>Enseignant[[Jean, Dupont, 30],27]
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1">1</a></span>
+<span class="normal"><a href="#__codelineno-41-2">2</a></span>
+<span class="normal"><a href="#__codelineno-41-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a>Constructeur Personne(string, string, int)
+<a id="__codelineno-41-2" name="__codelineno-41-2"></a>Construction Enseignant(string, string, int, int)
+<a id="__codelineno-41-3" name="__codelineno-41-3"></a>Enseignant[[Jean, Dupont, 30],27]
 </code></pre></div></td></tr></table></div>
 <p><a id="refheading10400091168783983"></a></p>
 <h3 id="424-le-polymorphisme">4.2.4. Le polymorphisme</h3>
 <p>Considérons une lignée de classes : C0 <strong>←</strong> C1 <strong>←</strong> C2 <strong>←</strong> … <strong>←</strong>Cn</p>
 <p>où <em>C</em><em>i</em><em> </em><strong><em>←</em></strong><em> C</em><em>j</em> indique que la classe <em>C</em><em>j</em> est dérivée de la classe <em>C</em><em>i</em>. Cela entraîne que la classe <em>C</em><em>j</em> a toutes les caractéristiques de la classe <em>C</em><em>i</em> plus d&#x27;autres. Soient des objets Oi de type Ci. Il est légal d&#x27;écrire :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>    Oi=Oj avec j&gt;i
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>    Oi=Oj avec j&gt;i
 </code></pre></div>
 <p>En effet, par héritage, la classe Cj a toutes les caractéristiques de la classe Ci plus d&#x27;autres. Donc un objet Oj de type Cj contient en lui un objet de type Ci. L&#x27;opération</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>    Oi=Oj
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>    Oi=Oj
 </code></pre></div>
 <p>fait que Oi est une référence à l&#x27;objet de type Ci contenu dans l&#x27;objet Oj.</p>
 <p>Le fait qu&#x27;une variable <em>Oi</em> de classe <em>Ci</em> puisse en fait référencer non seulement un objet de la classe <em>Ci</em> mais en fait tout objet dérivé de la classe <em>Ci,</em> est appelé <strong>polymorphisme</strong> : la faculté pour une variable de référencer différents types d&#x27;objets.</p>
 <p>Prenons un exemple et considérons la fonction suivante indépendante de toute classe (<em>static</em>):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>    public static void Affiche(Personne p){
-<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>        ….
-<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>    }
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>    public static void Affiche(Personne p){
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>        ….
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>    }
 </code></pre></div>
 <p>On pourra aussi bien écrire</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>    Personne p;
-<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>    ...
-<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>    Affiche(p);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>    Personne p;
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>    ...
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>    Affiche(p);
 </code></pre></div>
 <p>que </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>    Enseignant e;
-<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>    ...
-<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>    Affiche(e);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>    Enseignant e;
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>    ...
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>    Affiche(e);
 </code></pre></div>
 <p>Dans ce dernier cas, le paramètre formel <em>p</em> de type <em>P</em><em>ersonne</em> de la méthode statique A<em>ffiche</em> va recevoir une valeur de type <em>E</em><em>nseignant</em>. Comme le type <em>Enseignant</em> dérive du type <em>Personne</em>, c&#x27;est légal.</p>
 <p><a id="refheading10400111168783983"></a></p>
 <h3 id="425-redefinition-et-polymorphisme">4.2.5. Redéfinition et polymorphisme</h3>
 <p>Complétons notre méthode A<em>ffiche</em> : </p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> Affiche(<span style="color:#2b91af">Personne</span> p) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// affiche identité de p</span></span>
 <span class="odt-code-line">            <span style="color:#2b91af">Console</span>.WriteLine(p.Identite);</span>
@@ -2372,7 +2366,7 @@
 </code></pre></div>
 
 <p>Regardons l&#x27;exemple suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -2396,53 +2390,53 @@
 </code></pre></div>
 
 <p>Les résultats obtenus sont les suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-45-1">1</a></span>
-<span class="normal"><a href="#__codelineno-45-2">2</a></span>
-<span class="normal"><a href="#__codelineno-45-3">3</a></span>
-<span class="normal"><a href="#__codelineno-45-4">4</a></span>
-<span class="normal"><a href="#__codelineno-45-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1"></a>Constructeur Personne(string, string, int)
-<a id="__codelineno-45-2" name="__codelineno-45-2"></a>Construction Enseignant(string, string, int, int)
-<a id="__codelineno-45-3" name="__codelineno-45-3"></a>[Lucile, Dumas, 56]
-<a id="__codelineno-45-4" name="__codelineno-45-4"></a>Constructeur Personne(string, string, int)
-<a id="__codelineno-45-5" name="__codelineno-45-5"></a>[Jean, Dupont, 30]
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-47-1">1</a></span>
+<span class="normal"><a href="#__codelineno-47-2">2</a></span>
+<span class="normal"><a href="#__codelineno-47-3">3</a></span>
+<span class="normal"><a href="#__codelineno-47-4">4</a></span>
+<span class="normal"><a href="#__codelineno-47-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1"></a>Constructeur Personne(string, string, int)
+<a id="__codelineno-47-2" name="__codelineno-47-2"></a>Construction Enseignant(string, string, int, int)
+<a id="__codelineno-47-3" name="__codelineno-47-3"></a>[Lucile, Dumas, 56]
+<a id="__codelineno-47-4" name="__codelineno-47-4"></a>Constructeur Personne(string, string, int)
+<a id="__codelineno-47-5" name="__codelineno-47-5"></a>[Jean, Dupont, 30]
 </code></pre></div></td></tr></table></div>
 <p>L&#x27;exécution montre que l&#x27;instruction <em>p.Identite</em> (ligne 17) a exécuté à chaque fois la propriété <em>Identite</em> d&#x27;une <em>Personne</em>, d&#x27;abord (ligne 7) la personne contenue dans l&#x27;<em>Enseignant</em> e, puis (ligne 10) la <em>Personne</em> p elle-même. Elle ne s&#x27;est pas adaptée à l&#x27;objet réellement passé en paramètre à <em>Affiche</em>. On aurait préféré avoir l&#x27;identité complète de l&#x27;<em>Enseignant</em> e. Il aurait fallu pour cela que la notation <em>p.Identite</em> référence la propriété <em>Identite</em> de l&#x27;objet réellement pointé par <em>p</em> plutôt que la propriété <em>Identite</em> de partie &quot;<em>Personne</em>&quot; de l&#x27;objet réellement par <em>p</em>.</p>
 <p>Il est possible d&#x27;obtenir ce résultat en déclarant <em>Identite</em> comme une propriété <strong>virtuelle</strong> (<strong>virtual</strong>) dans la classe de base <em>Personne</em> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">public</span> <span style="font-weight:bold;color:#0000ff">virtual</span> <span style="color:#0000ff">string</span> Identite {</span>
 <span class="odt-code-line">            <span style="color:#0000ff">get</span> { <span style="color:#0000ff">return</span> <span style="color:#2b91af">String</span>.Format(<span style="color:#a31515">&quot;[{0}, {1}, {2}]&quot;</span>, prenom, nom, age); }</span>
 <span class="odt-code-line">        }</span>
 </code></pre></div>
 
 <p>Le mot clé <strong>virtual</strong> fait de <em>Identite</em> une propriété virtuelle. Ce mot clé peut s&#x27;appliquer également aux méthodes. Les classes filles qui redéfinissent une propriété ou méthode virtuelle doivent alors utiliser le mot clé <strong>override</strong> au lieu de <strong>new</strong> pour qualifier leur propriété/méthode redéfinie. Ainsi dans la classe <em>Enseignant</em>, la propriété <em>Identite</em> est redéfinie comme suit :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">        <span style="color:#0000ff">public</span> <span style="font-weight:bold;color:#0000ff">override</span> <span style="color:#0000ff">string</span> Identite {</span>
 <span class="odt-code-line">            <span style="color:#0000ff">get</span> { <span style="color:#0000ff">return</span> <span style="color:#2b91af">String</span>.Format(<span style="color:#a31515">&quot;Enseignant[{0},{1}]&quot;</span>, <span style="color:#0000ff">base</span>.Identite, Section); }</span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
 <p>Le programme précédent produit alors les résultats suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-46-1">1</a></span>
-<span class="normal"><a href="#__codelineno-46-2">2</a></span>
-<span class="normal"><a href="#__codelineno-46-3">3</a></span>
-<span class="normal"><a href="#__codelineno-46-4">4</a></span>
-<span class="normal"><a href="#__codelineno-46-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1"></a>Constructeur Personne(string, string, int)
-<a id="__codelineno-46-2" name="__codelineno-46-2"></a>Construction Enseignant(string, string, int, int)
-<a id="__codelineno-46-3" name="__codelineno-46-3"></a>Enseignant[[Lucile, Dumas, 56],61]
-<a id="__codelineno-46-4" name="__codelineno-46-4"></a>Constructeur Personne(string, string, int)
-<a id="__codelineno-46-5" name="__codelineno-46-5"></a>[Jean, Dupont, 30]
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-48-1">1</a></span>
+<span class="normal"><a href="#__codelineno-48-2">2</a></span>
+<span class="normal"><a href="#__codelineno-48-3">3</a></span>
+<span class="normal"><a href="#__codelineno-48-4">4</a></span>
+<span class="normal"><a href="#__codelineno-48-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1"></a>Constructeur Personne(string, string, int)
+<a id="__codelineno-48-2" name="__codelineno-48-2"></a>Construction Enseignant(string, string, int, int)
+<a id="__codelineno-48-3" name="__codelineno-48-3"></a>Enseignant[[Lucile, Dumas, 56],61]
+<a id="__codelineno-48-4" name="__codelineno-48-4"></a>Constructeur Personne(string, string, int)
+<a id="__codelineno-48-5" name="__codelineno-48-5"></a>[Jean, Dupont, 30]
 </code></pre></div></td></tr></table></div>
 <p>Cette fois-ci, ligne 3, on a bien eu l&#x27;identité complète de l&#x27;enseignant. Redéfinissons maintenant une méthode plutôt qu&#x27;une propriété. La classe o<em>bject</em> (alias C# de <em>System.Object</em>) est la classe &quot;mère&quot; de toutes les classes C#. Ainsi lorsqu&#x27;on écrit :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>    public class Personne
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>    public class Personne
 </code></pre></div>
 <p>on écrit implicitement :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>    public class Personne : System.Object
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>    public class Personne : System.Object
 </code></pre></div>
 <p>La classe <em>System.Object</em> définit une méthode virtuelle <strong>ToString</strong> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002600000031CE017B6BB.png" style="display:inline-block; margin:4px;width:5.63cm;height:7.37cm;" class="odt-zoomable" data-zoom-src="images/10000000000002600000031CE017B6BB.png" /></td></tr></table>
 
 <p>La méthode <em>ToString</em> rend le nom de la classe à laquelle appartient l&#x27;objet comme le montre l&#x27;exemple suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -2458,15 +2452,15 @@
 </code></pre></div>
 
 <p>Les résultats produits sont les suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-49-1">1</a></span>
-<span class="normal"><a href="#__codelineno-49-2">2</a></span>
-<span class="normal"><a href="#__codelineno-49-3">3</a></span>
-<span class="normal"><a href="#__codelineno-49-4">4</a></span>
-<span class="normal"><a href="#__codelineno-49-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1"></a>Constructeur Personne(string, string, int)
-<a id="__codelineno-49-2" name="__codelineno-49-2"></a>Construction Enseignant(string, string, int, int)
-<a id="__codelineno-49-3" name="__codelineno-49-3"></a>Chap2.Enseignant
-<a id="__codelineno-49-4" name="__codelineno-49-4"></a>Constructeur Personne(string, string, int)
-<a id="__codelineno-49-5" name="__codelineno-49-5"></a>Chap2.Personne
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-51-1">1</a></span>
+<span class="normal"><a href="#__codelineno-51-2">2</a></span>
+<span class="normal"><a href="#__codelineno-51-3">3</a></span>
+<span class="normal"><a href="#__codelineno-51-4">4</a></span>
+<span class="normal"><a href="#__codelineno-51-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1"></a>Constructeur Personne(string, string, int)
+<a id="__codelineno-51-2" name="__codelineno-51-2"></a>Construction Enseignant(string, string, int, int)
+<a id="__codelineno-51-3" name="__codelineno-51-3"></a>Chap2.Enseignant
+<a id="__codelineno-51-4" name="__codelineno-51-4"></a>Constructeur Personne(string, string, int)
+<a id="__codelineno-51-5" name="__codelineno-51-5"></a>Chap2.Personne
 </code></pre></div></td></tr></table></div>
 <p>On remarquera que bien que nous n&#x27;ayons pas redéfini la méthode <em>ToString</em> dans les classes <em>Personne</em> et <em>Enseignant</em>, on peut cependant constater que la méthode <em>ToString</em> de la classe <em>Object</em> a été capable d&#x27;afficher le nom réel de la classe de l&#x27;objet.</p>
 <p>Redéfinissons la méthode <em>ToString</em> dans les classes <em>Personne</em> et <em>Enseignant</em> :</p>
@@ -2478,7 +2472,7 @@
 </code></pre></div>
 
 <p>La définition est la même dans les deux classes. Considérons le programme de test suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
 <span class="odt-code-line">    <span style="color:#0000ff">class</span> <span style="color:#2b91af">Program3</span> {</span>
@@ -2501,32 +2495,32 @@
 
 <p>Attardons-nous sur la méthode <em>Affiche</em> qui admet pour paramètre une personne <em>p</em>. Ligne 15, la méthode <em>WriteLine</em> de la classe <em>Console</em> n&#x27;a aucune variante admettant un paramètre de type <em>Personne</em>. Parmi les différentes variantes de <em>Writeline</em>, il en existe une qui admet comme paramètre un type <em>Object</em>. Le compilateur va utiliser cette méthode, <em>WriteLine(Object o),</em> parce que cette signature signifie que le paramètre <em>o</em> peut être de type <em>Object</em> ou dérivé. Puisque <em>Object</em> est la classe mère de toutes les classes, tout objet peut être passé en paramètre à <em>WriteLine</em> et donc un objet de type <em>Personne</em> ou <em>Enseignant</em>. La méthode <em>WriteLine(Object o)</em> écrit <em>o.ToString()</em> dans le flux d&#x27;écriture <em>Out</em>. La méthode <em>ToString</em> étant virtuelle, si l&#x27;objet o (de type <em>Object</em> ou dérivé) a redéfini la méthode <em>ToString</em>, ce sera cette dernière qui sera utilisée. C&#x27;est ici le cas avec les classes <em>Personne</em> et <em>Enseignant</em>.</p>
 <p>C&#x27;est ce que montrent les résultats d&#x27;exécution :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-50-1">1</a></span>
-<span class="normal"><a href="#__codelineno-50-2">2</a></span>
-<span class="normal"><a href="#__codelineno-50-3">3</a></span>
-<span class="normal"><a href="#__codelineno-50-4">4</a></span>
-<span class="normal"><a href="#__codelineno-50-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1"></a>Constructeur Personne(string, string, int)
-<a id="__codelineno-50-2" name="__codelineno-50-2"></a>Construction Enseignant(string, string, int, int)
-<a id="__codelineno-50-3" name="__codelineno-50-3"></a>Enseignant[[Lucile, Dumas, 56],61]
-<a id="__codelineno-50-4" name="__codelineno-50-4"></a>Constructeur Personne(string, string, int)
-<a id="__codelineno-50-5" name="__codelineno-50-5"></a>[Jean, Dupont, 30]
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-52-1">1</a></span>
+<span class="normal"><a href="#__codelineno-52-2">2</a></span>
+<span class="normal"><a href="#__codelineno-52-3">3</a></span>
+<span class="normal"><a href="#__codelineno-52-4">4</a></span>
+<span class="normal"><a href="#__codelineno-52-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1"></a>Constructeur Personne(string, string, int)
+<a id="__codelineno-52-2" name="__codelineno-52-2"></a>Construction Enseignant(string, string, int, int)
+<a id="__codelineno-52-3" name="__codelineno-52-3"></a>Enseignant[[Lucile, Dumas, 56],61]
+<a id="__codelineno-52-4" name="__codelineno-52-4"></a>Constructeur Personne(string, string, int)
+<a id="__codelineno-52-5" name="__codelineno-52-5"></a>[Jean, Dupont, 30]
 </code></pre></div></td></tr></table></div>
 <p><a id="refheading10400131168783983"></a></p>
-<h2 id="43-redefir-la-signification-dun-operateur-pour-une-classe">4.3. Redéfir la signification d&#x27;un opérateur pour une classe</h2>
+<h2 id="43-redefinir-la-signification-dun-operateur-pour-une-classe">4.3. Redéfinir la signification d&#x27;un opérateur pour une classe</h2>
 <p><a id="refheading10400151168783983"></a></p>
 <h3 id="431-introduction">4.3.1. Introduction</h3>
 <p>Considérons l&#x27;instruction</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>op1 + op2
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>op1 + op2
 </code></pre></div>
 <p>où <em>op1</em> et <em>op2</em> sont deux opérandes. Il est possible de redéfinir la signification de l&#x27;opérateur + . Si l&#x27;opérande <em>op1</em> est un objet de classe <em>C1,</em> il faut définir une méthode statique dans la classe <em>C1</em> avec la signature suivante :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>public static [type] operator +(C1 opérande1, C2 opérande2);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>public static [type] operator +(C1 opérande1, C2 opérande2);
 </code></pre></div>
 <p>Lorsque le compilateur rencontre l&#x27;instruction</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>op1 + op2
+<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>op1 + op2
 </code></pre></div>
 <p>il la traduit alors par <em>C1.operator+(op1,op2)</em>. Le type rendu par la méthode <em>operator</em> est important. En effet, considérons l&#x27;opération <em>op1+op2+op3</em>. Elle est traduite par le compilateur par <em>(op1+op2)+op3</em>. Soit <em>res12</em> le résultat de <em>op1+op2</em>. L&#x27;opération qui est faite ensuite est <em>res12+op3</em>. Si <em>res12</em> est de type <em>C1</em>, elle sera traduite elle aussi par <em>C1.operator+(res12,op3)</em>. Cela permet d&#x27;enchaîner les opérations.</p>
 <p>On peut redéfinir également les opérateurs unaires n&#x27;ayant qu&#x27;un seul opérande. Ainsi si <em>op1</em> est un objet de type <em>C1</em>, l&#x27;opération <em>op1++</em> peut être redéfinie par une méthode statique de la classe <em>C1</em> :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>public static [type] operator ++(C1 opérande1);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>public static [type] operator ++(C1 opérande1);
 </code></pre></div>
 <p>Ce qui a été dit ici est vrai pour la plupart des opérateurs avec cependant quelques exceptions :</p>
 <ul>
@@ -2542,7 +2536,7 @@
 <li>la notation L<em>[i]</em> qui donne l&#x27;élément i de la liste L</li>
 </ul>
 <p>La classe <em>ListeDePersonnes</em> va hériter de tous les attributs, méthodes et propriétés de la classe <em>ArrayList</em>. Sa définition est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Text;</span>
@@ -2591,16 +2585,16 @@
 <li>ligne 31 : il nous faut rendre un objet de type <em>string</em> (ligne 16). La classe <em>StringBuilder</em> a une méthode <em>ToString</em> qui permet de passer d&#x27;un type <em>StringBuilder</em> à un type <em>string</em>.</li>
 </ul>
 <p>On notera que la classe <em>ListeDePersonnes</em> n&#x27;a pas de constructeur. Dans ce cas, on sait que le constructeur </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>public ListeDePersonnes(){
-<a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a>}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>public ListeDePersonnes(){
+<a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>}
 </code></pre></div>
 <p>sera utilisé. Ce constructeur ne fait rien si ce n&#x27;est appeler le constructeur sans paramètres de sa classe parent :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>public ArrayList(){
-<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a>...
-<a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a>}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>public ArrayList(){
+<a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a>...
+<a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a>}
 </code></pre></div>
 <p>Une classe de test pourrait être la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -2626,9 +2620,9 @@
 <li>lignes 11 et 13 : utilisation de la méthode redéfinie <em>ListeDePersonnes.ToString()</em>.</li>
 </ul>
 <p>Les résultats :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-57-1">1</a></span>
-<span class="normal"><a href="#__codelineno-57-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1"></a>l=([jean, martin, 10],[pauline, leduc, 12])
-<a id="__codelineno-57-2" name="__codelineno-57-2"></a>l=([jean, martin, 10],[pauline, leduc, 12],Enseignant[[camille, germain, 27],60])
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-59-1">1</a></span>
+<span class="normal"><a href="#__codelineno-59-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1"></a>l=([jean, martin, 10],[pauline, leduc, 12])
+<a id="__codelineno-59-2" name="__codelineno-59-2"></a>l=([jean, martin, 10],[pauline, leduc, 12],Enseignant[[camille, germain, 27],60])
 </code></pre></div></td></tr></table></div>
 <p><a id="refheading10400191168783983"></a></p>
 <h2 id="44-definir-un-indexeur-pour-une-classe">4.4. Définir un indexeur pour une classe</h2>
@@ -2643,7 +2637,7 @@
 
 <p>On appelle la méthode <em>this[int i]</em>, un <strong>indexeur</strong> car elle donne une signification à l&#x27;expression <em>obj[i]</em> qui rappelle la notation des tableaux alors que <em>obj</em> n&#x27;est pas un tableau mais un objet. La méthode <em>get</em> de la méthode <em>this</em> de l&#x27;objet <em>obj</em> est appelée lorsqu&#x27;on écrit <em>variable=obj[i]</em> et la méthode <em>set</em> lorsqu&#x27;on écrit <em>obj[i]=valeur</em>.</p>
 <p>La classe <em>ListeDePersonnes</em> dérive de la classe <em>ArrayList</em> qui a elle-même un indexeur :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>    public object this[int i] { ... }
+<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>    public object this[int i] { ... }
 </code></pre></div>
 <p>Il y a un conflit entre la méthode <em>this</em> de la classe <em>ListeDePersonnes</em> :</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -2711,7 +2705,7 @@
 <p>indique qu&#x27;on indexe la classe <em>ListeDePersonnes</em> par une chaîne de caractères <em>nom</em> et que le résultat de <em>l[nom]</em> est un entier. Cet entier sera la position dans la liste, de la personne portant le nom <em>nom</em> ou -1 si cette personne n&#x27;est pas dans la liste. On ne définit que la propriété <em>get,</em> interdisant ainsi l&#x27;écriture <em>l[&quot;nom&quot;]=valeur</em> qui aurait nécessité la définition de la propriété <em>set</em>. Le mot clé <em>new</em> n&#x27;est pas nécessaire dans la déclaration de l&#x27;indexeur car la classe de base <em>ArrayList</em> ne définit pas d&#x27;indexeur <em>this[string]</em>.</p>
 <p>Dans le corps du <em>get</em>, on parcourt la liste des personnes à la recherche du nom passé en paramètre. Si on le trouve en position i, on renvoie i sinon on renvoie -1.</p>
 <p>Le programme de test précédent est complété de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -2746,36 +2740,36 @@
 </code></pre></div>
 
 <p>Son exécution donne les résultats suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-59-1">1</a></span>
-<span class="normal"><a href="#__codelineno-59-2">2</a></span>
-<span class="normal"><a href="#__codelineno-59-3">3</a></span>
-<span class="normal"><a href="#__codelineno-59-4">4</a></span>
-<span class="normal"><a href="#__codelineno-59-5">5</a></span>
-<span class="normal"><a href="#__codelineno-59-6">6</a></span>
-<span class="normal"><a href="#__codelineno-59-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1"></a>l=([jean, martin, 10],[pauline, leduc, 12])
-<a id="__codelineno-59-2" name="__codelineno-59-2"></a>l=([jean, martin, 10],[pauline, leduc, 12],Enseignant[[camille, germain, 27],60])
-<a id="__codelineno-59-3" name="__codelineno-59-3"></a>l[1]=[franck, gallon, 5]
-<a id="__codelineno-59-4" name="__codelineno-59-4"></a>l=([jean, martin, 10],[franck, gallon, 5],Enseignant[[camille, germain, 27],60])
-<a id="__codelineno-59-5" name="__codelineno-59-5"></a>Personne(martin)=[jean, martin, 10]
-<a id="__codelineno-59-6" name="__codelineno-59-6"></a>Personne(germain)=Enseignant[[camille, germain, 27],60]
-<a id="__codelineno-59-7" name="__codelineno-59-7"></a>Personne(xx) n&#39;existe pas
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-61-1">1</a></span>
+<span class="normal"><a href="#__codelineno-61-2">2</a></span>
+<span class="normal"><a href="#__codelineno-61-3">3</a></span>
+<span class="normal"><a href="#__codelineno-61-4">4</a></span>
+<span class="normal"><a href="#__codelineno-61-5">5</a></span>
+<span class="normal"><a href="#__codelineno-61-6">6</a></span>
+<span class="normal"><a href="#__codelineno-61-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1"></a>l=([jean, martin, 10],[pauline, leduc, 12])
+<a id="__codelineno-61-2" name="__codelineno-61-2"></a>l=([jean, martin, 10],[pauline, leduc, 12],Enseignant[[camille, germain, 27],60])
+<a id="__codelineno-61-3" name="__codelineno-61-3"></a>l[1]=[franck, gallon, 5]
+<a id="__codelineno-61-4" name="__codelineno-61-4"></a>l=([jean, martin, 10],[franck, gallon, 5],Enseignant[[camille, germain, 27],60])
+<a id="__codelineno-61-5" name="__codelineno-61-5"></a>Personne(martin)=[jean, martin, 10]
+<a id="__codelineno-61-6" name="__codelineno-61-6"></a>Personne(germain)=Enseignant[[camille, germain, 27],60]
+<a id="__codelineno-61-7" name="__codelineno-61-7"></a>Personne(xx) n&#39;existe pas
 </code></pre></div></td></tr></table></div>
 <p><a id="refheading10400211168783983"></a></p>
 <h2 id="45-les-structures">4.5. Les structures</h2>
 <p>La structure C# est analogue à la structure du langage C et est très proche de la notion de classe. Une structure est définie comme suit :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>struct NomStructure{
-<a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a>// attributs
-<a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a>    ...
-<a id="__codelineno-60-4" name="__codelineno-60-4" href="#__codelineno-60-4"></a>// propriétés
-<a id="__codelineno-60-5" name="__codelineno-60-5" href="#__codelineno-60-5"></a>...
-<a id="__codelineno-60-6" name="__codelineno-60-6" href="#__codelineno-60-6"></a>// constructeurs
-<a id="__codelineno-60-7" name="__codelineno-60-7" href="#__codelineno-60-7"></a>...
-<a id="__codelineno-60-8" name="__codelineno-60-8" href="#__codelineno-60-8"></a>// méthodes
-<a id="__codelineno-60-9" name="__codelineno-60-9" href="#__codelineno-60-9"></a>...
-<a id="__codelineno-60-10" name="__codelineno-60-10" href="#__codelineno-60-10"></a>}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>struct NomStructure{
+<a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>// attributs
+<a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a>    ...
+<a id="__codelineno-62-4" name="__codelineno-62-4" href="#__codelineno-62-4"></a>// propriétés
+<a id="__codelineno-62-5" name="__codelineno-62-5" href="#__codelineno-62-5"></a>...
+<a id="__codelineno-62-6" name="__codelineno-62-6" href="#__codelineno-62-6"></a>// constructeurs
+<a id="__codelineno-62-7" name="__codelineno-62-7" href="#__codelineno-62-7"></a>...
+<a id="__codelineno-62-8" name="__codelineno-62-8" href="#__codelineno-62-8"></a>// méthodes
+<a id="__codelineno-62-9" name="__codelineno-62-9" href="#__codelineno-62-9"></a>...
+<a id="__codelineno-62-10" name="__codelineno-62-10" href="#__codelineno-62-10"></a>}
 </code></pre></div>
 <p>Il y a, malgré une similitude de déclaration des différences importantes entre <strong>classe</strong> et <strong>structure</strong>. La notion d&#x27;héritage n&#x27;existe par exemple pas avec les structures. Si on écrit une classe qui ne doit pas être dérivée, quelles sont les différences entre <strong>structure</strong> et <strong>classe</strong> qui vont nous aider à choisir entre les deux ? Aidons-nous de l&#x27;exemple suivant pour le découvrir :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -2832,21 +2826,21 @@
 <li>lignes 44-47 : une classe avec deux champs publics : N<em>om</em>, A<em>ge</em></li>
 </ul>
 <p>Si on exécute ce programme, on obtient les résultats suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-61-1">1</a></span>
-<span class="normal"><a href="#__codelineno-61-2">2</a></span>
-<span class="normal"><a href="#__codelineno-61-3">3</a></span>
-<span class="normal"><a href="#__codelineno-61-4">4</a></span>
-<span class="normal"><a href="#__codelineno-61-5">5</a></span>
-<span class="normal"><a href="#__codelineno-61-6">6</a></span>
-<span class="normal"><a href="#__codelineno-61-7">7</a></span>
-<span class="normal"><a href="#__codelineno-61-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1"></a>sp1=SPersonne(paul,10)
-<a id="__codelineno-61-2" name="__codelineno-61-2"></a>sp2=SPersonne(paul,10)
-<a id="__codelineno-61-3" name="__codelineno-61-3"></a>sp1=SPersonne(paul,10)
-<a id="__codelineno-61-4" name="__codelineno-61-4"></a>sp2=SPersonne(nicole,30)
-<a id="__codelineno-61-5" name="__codelineno-61-5"></a>op1=CPersonne(paul,10)
-<a id="__codelineno-61-6" name="__codelineno-61-6"></a>op2=CPersonne(paul,10)
-<a id="__codelineno-61-7" name="__codelineno-61-7"></a>op1=CPersonne(nicole,30)
-<a id="__codelineno-61-8" name="__codelineno-61-8"></a>op2=CPersonne(nicole,30)
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-63-1">1</a></span>
+<span class="normal"><a href="#__codelineno-63-2">2</a></span>
+<span class="normal"><a href="#__codelineno-63-3">3</a></span>
+<span class="normal"><a href="#__codelineno-63-4">4</a></span>
+<span class="normal"><a href="#__codelineno-63-5">5</a></span>
+<span class="normal"><a href="#__codelineno-63-6">6</a></span>
+<span class="normal"><a href="#__codelineno-63-7">7</a></span>
+<span class="normal"><a href="#__codelineno-63-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1"></a>sp1=SPersonne(paul,10)
+<a id="__codelineno-63-2" name="__codelineno-63-2"></a>sp2=SPersonne(paul,10)
+<a id="__codelineno-63-3" name="__codelineno-63-3"></a>sp1=SPersonne(paul,10)
+<a id="__codelineno-63-4" name="__codelineno-63-4"></a>sp2=SPersonne(nicole,30)
+<a id="__codelineno-63-5" name="__codelineno-63-5"></a>op1=CPersonne(paul,10)
+<a id="__codelineno-63-6" name="__codelineno-63-6"></a>op2=CPersonne(paul,10)
+<a id="__codelineno-63-7" name="__codelineno-63-7"></a>op1=CPersonne(nicole,30)
+<a id="__codelineno-63-8" name="__codelineno-63-8"></a>op2=CPersonne(nicole,30)
 </code></pre></div></td></tr></table></div>
 <p>Là où précédemment on utilisait une classe <em>Personne</em>, nous utilisons maintenant une structure <em>SPersonne</em> :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -2903,7 +2897,7 @@
 <li>la valeur d&#x27;une variable de type objet est l&#x27;adresse de l&#x27;objet pointé</li>
 </ul>
 <p>Une fois cette différence fondamentale comprise, la structure se montre très proche de la classe comme le montre le nouvel exemple suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -2946,7 +2940,7 @@
 <li>lignes 29-31 : redéfinition de la méthode <em>ToString</em>.</li>
 </ul>
 <p>Un programme de test pourrait être le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -2992,46 +2986,47 @@
 <li>ligne 24 :  création d&#x27;une structure avec le constructeur sans paramètres <em>SPersonne()</em> avec, entre accolades, initialisation des champs privés via leurs propriétés publiques.</li>
 </ul>
 <p>On obtient les résultats d&#x27;exécution suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-62-1">1</a></span>
-<span class="normal"><a href="#__codelineno-62-2">2</a></span>
-<span class="normal"><a href="#__codelineno-62-3">3</a></span>
-<span class="normal"><a href="#__codelineno-62-4">4</a></span>
-<span class="normal"><a href="#__codelineno-62-5">5</a></span>
-<span class="normal"><a href="#__codelineno-62-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1"></a>p1=SPersonne(paul,10)
-<a id="__codelineno-62-2" name="__codelineno-62-2"></a>p2=SPersonne(paul,10)
-<a id="__codelineno-62-3" name="__codelineno-62-3"></a>p1=SPersonne(paul,10)
-<a id="__codelineno-62-4" name="__codelineno-62-4"></a>p2=SPersonne(nicole,30)
-<a id="__codelineno-62-5" name="__codelineno-62-5"></a>p3=SPersonne(amandin,18)
-<a id="__codelineno-62-6" name="__codelineno-62-6"></a>p4=SPersonne(x,10)
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-64-1">1</a></span>
+<span class="normal"><a href="#__codelineno-64-2">2</a></span>
+<span class="normal"><a href="#__codelineno-64-3">3</a></span>
+<span class="normal"><a href="#__codelineno-64-4">4</a></span>
+<span class="normal"><a href="#__codelineno-64-5">5</a></span>
+<span class="normal"><a href="#__codelineno-64-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1"></a>p1=SPersonne(paul,10)
+<a id="__codelineno-64-2" name="__codelineno-64-2"></a>p2=SPersonne(paul,10)
+<a id="__codelineno-64-3" name="__codelineno-64-3"></a>p1=SPersonne(paul,10)
+<a id="__codelineno-64-4" name="__codelineno-64-4"></a>p2=SPersonne(nicole,30)
+<a id="__codelineno-64-5" name="__codelineno-64-5"></a>p3=SPersonne(amandin,18)
+<a id="__codelineno-64-6" name="__codelineno-64-6"></a>p4=SPersonne(x,10)
 </code></pre></div></td></tr></table></div>
 <p>La seule différence notable ici entre structure et classe, c&#x27;est qu&#x27;avec une classe les objets <em>p1</em> et <em>p2</em> auraient pointé sur le même objet à la fin du programme.</p>
 <p><a id="refheading10400231168783983"></a></p>
 <h2 id="46-les-interfaces">4.6. Les interfaces</h2>
 <p>Une interface est un ensemble de prototypes de méthodes ou de propriétés qui forme un contrat. Une classe qui décide d&#x27;implémenter une interface s&#x27;engage à fournir une implémentation de toutes les méthodes définies dans l&#x27;interface. C&#x27;est le compilateur qui vérifie cette implémentation.</p>
 <p>Voici par exemple la définition de l&#x27;interface <em>System.Collections.IEnumerator</em> :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#0000ff">public interface </span>System.Collections.IEnumerator 
-{
-
-    // Properties
-    O<span style="color:#0000ff">bject</span> Current { <span style="color:#0000ff">get</span>; }
-
-    // Methods
-    <span style="color:#0000ff">bool</span> MoveNext();
-    <span style="color:#0000ff">void</span> Reset();
-}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>public interface System.Collections.IEnumerator 
+<a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a>{
+<a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a>
+<a id="__codelineno-65-4" name="__codelineno-65-4" href="#__codelineno-65-4"></a>    // Properties
+<a id="__codelineno-65-5" name="__codelineno-65-5" href="#__codelineno-65-5"></a>    Object Current { get; }
+<a id="__codelineno-65-6" name="__codelineno-65-6" href="#__codelineno-65-6"></a>
+<a id="__codelineno-65-7" name="__codelineno-65-7" href="#__codelineno-65-7"></a>    // Methods
+<a id="__codelineno-65-8" name="__codelineno-65-8" href="#__codelineno-65-8"></a>    bool MoveNext();
+<a id="__codelineno-65-9" name="__codelineno-65-9" href="#__codelineno-65-9"></a>    void Reset();
+<a id="__codelineno-65-10" name="__codelineno-65-10" href="#__codelineno-65-10"></a>}
 </code></pre></div>
-
 <p>Les propriétés et méthodes de l&#x27;interface ne sont définies que par leurs signatures. Elles ne sont pas implémentées (n&#x27;ont pas de code). Ce sont les classes qui implémentent l&#x27;interface qui donnent du code aux méthodes et propriétés de l&#x27;interface.</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="font-weight:bold">public class C : IEnumerator</span>{</span>
-<span class="odt-code-line">    ...</span>
-<span class="odt-code-line">    Object Current{ get {...}}</span>
-<span class="odt-code-line">    bool MoveNext{...}</span>
-<span class="odt-code-line">    void Reset(){...}</span>
-<span class="odt-code-line">}</span>
-</code></pre></div>
-
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-66-1">1</a></span>
+<span class="normal"><a href="#__codelineno-66-2">2</a></span>
+<span class="normal"><a href="#__codelineno-66-3">3</a></span>
+<span class="normal"><a href="#__codelineno-66-4">4</a></span>
+<span class="normal"><a href="#__codelineno-66-5">5</a></span>
+<span class="normal"><a href="#__codelineno-66-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1"></a>public class C : IEnumerator{
+<a id="__codelineno-66-2" name="__codelineno-66-2"></a>    ...
+<a id="__codelineno-66-3" name="__codelineno-66-3"></a>    Object Current{ get {...}}
+<a id="__codelineno-66-4" name="__codelineno-66-4"></a>    bool MoveNext{...}
+<a id="__codelineno-66-5" name="__codelineno-66-5"></a>    void Reset(){...}
+<a id="__codelineno-66-6" name="__codelineno-66-6"></a>}
+</code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 1 : la classe C implémente la classe <em>IEnumerator</em>. On notera que le signe : utilisé pour l&#x27;implémentation d&#x27;une interface est le même que celui utilisé pour la dérivation d&#x27;une classe.</li>
 <li>lignes 3-5 : l&#x27;implémentation des méthodes et propriétés de l&#x27;interface <em>IEnumerator</em>.</li>
@@ -3071,7 +3066,7 @@
 
 <p>La note serait identifiée par l&#x27;élève noté et la note elle-même. Lignes 2-3, on trouve les propriétés automatiques pour ces deux attributs.</p>
 <p>Les notes de tous les élèves dans une matière donnée sont rassemblées dans la classe <em>TableauDeNotes</em> suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Text;</span>
 <span class="odt-code-line"></span>
@@ -3150,7 +3145,7 @@
 </ul>
 <p>Dans la classe précédente, les notes étaient enregistrées dans un tableau. Il n&#x27;était pas possible d&#x27;ajouter une nouvelle note après construction de l&#x27;objet <em>TableauDeNotes</em>. Nous proposons maintenant une seconde implémentation de l&#x27;interface <em>IStats</em>, appelée <em>ListeDeNotes</em>, où cette fois les notes seraient enregistrées dans une liste, avec possibilité d&#x27;ajouter des notes après construction initiale de l&#x27;objet <em>ListeDeNotes.</em></p>
 <p>Le code de la classe <em>ListeDeNotes</em> est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Text;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
@@ -3238,7 +3233,7 @@
 <li>lignes 15-19 : du coup, la moyenne et l&#x27;écart-type ne sont plus calculés dans le constructeur mais dans les méthodes de l&#x27;interface elles-mêmes : <em>Moyenne</em> (lignes 48-60) et <em>EcartType</em> (62-76). Le recalcul n&#x27;est cependant relancé que si la moyenne et l&#x27;écart-type sont différents de -1 (lignes 50 et 64).</li>
 </ul>
 <p>Une classe de test pourrait être la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
 <span class="odt-code-line"></span>
@@ -3274,14 +3269,14 @@
 <li>ligne 21 : recalcul de la moyenne et écart-type</li>
 </ul>
 <p>Les résultats de l&#x27;exécution sont les suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-63-1">1</a></span>
-<span class="normal"><a href="#__codelineno-63-2">2</a></span>
-<span class="normal"><a href="#__codelineno-63-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1"></a>matière=anglais, notes=([Paul,Martin,14],[Maxime,Germain,16],[Berthine,Samin,18]), Moyenne=16, Ecart-type=1,63299316185545
-<a id="__codelineno-63-2" name="__codelineno-63-2"></a>matière=français, notes=([Paul,Martin,14],[Maxime,Germain,16],[Berthine,Samin,18]), Moyenne=16, Ecart-type=1,63299316185545
-<a id="__codelineno-63-3" name="__codelineno-63-3"></a>matière=français, notes=([Paul,Martin,14],[Maxime,Germain,16],[Berthine,Samin,18],[Jérôme,Jaric,10]), Moyenne=14,5, Ecart-type=2,95803989154981
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-67-1">1</a></span>
+<span class="normal"><a href="#__codelineno-67-2">2</a></span>
+<span class="normal"><a href="#__codelineno-67-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1"></a>matière=anglais, notes=([Paul,Martin,14],[Maxime,Germain,16],[Berthine,Samin,18]), Moyenne=16, Ecart-type=1,63299316185545
+<a id="__codelineno-67-2" name="__codelineno-67-2"></a>matière=français, notes=([Paul,Martin,14],[Maxime,Germain,16],[Berthine,Samin,18]), Moyenne=16, Ecart-type=1,63299316185545
+<a id="__codelineno-67-3" name="__codelineno-67-3"></a>matière=français, notes=([Paul,Martin,14],[Maxime,Germain,16],[Berthine,Samin,18],[Jérôme,Jaric,10]), Moyenne=14,5, Ecart-type=2,95803989154981
 </code></pre></div></td></tr></table></div>
 <p>Dans l&#x27;exemple précédent, deux classes implémentent l&#x27;interface <em>IStats</em>. Ceci dit, l&#x27;exemple ne fait pas apparaître l&#x27;intérêt de l&#x27;interface <em>IStats</em>. Réécrivons le programme de test de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
 <span class="odt-code-line"></span>
@@ -3320,24 +3315,24 @@
 </ul>
 <p>Les résultats de l&#x27;exécution sont identiques à ceux de la précédente.</p>
 <p>Une variable <strong>peut être du type d&#x27;une interface</strong>. Ainsi, on peut écrire :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-64-1">1</a></span>
-<span class="normal"><a href="#__codelineno-64-2">2</a></span>
-<span class="normal"><a href="#__codelineno-64-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1"></a>IStats stats1=new TableauDeNotes(...);
-<a id="__codelineno-64-2" name="__codelineno-64-2"></a>...
-<a id="__codelineno-64-3" name="__codelineno-64-3"></a>stats1=new ListeDeNotes(...);
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-68-1">1</a></span>
+<span class="normal"><a href="#__codelineno-68-2">2</a></span>
+<span class="normal"><a href="#__codelineno-68-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1"></a>IStats stats1=new TableauDeNotes(...);
+<a id="__codelineno-68-2" name="__codelineno-68-2"></a>...
+<a id="__codelineno-68-3" name="__codelineno-68-3"></a>stats1=new ListeDeNotes(...);
 </code></pre></div></td></tr></table></div>
 <p>La déclaration de la ligne 1 indique que <strong><em>stats1</em></strong><strong> est l&#x27;instance d&#x27;une classe implémentant l&#x27;interface </strong><strong><em>IStats</em></strong>. Cette déclaration implique que le compilateur ne permettra l&#x27;accès dans <em>stats1</em> qu&#x27;aux méthodes de l&#x27;interface : la propriété <em>Moyenne</em> et la méthode <em>EcartType</em>.</p>
 <p>Notons enfin que l&#x27;implémentation d&#x27;interfaces peut être multiple, c.a.d. qu&#x27;on peut écrire</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>public class ClasseDérivée:ClasseDeBase,I1,I2,..,In{
-<a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a>...
-<a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a>}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>public class ClasseDérivée:ClasseDeBase,I1,I2,..,In{
+<a id="__codelineno-69-2" name="__codelineno-69-2" href="#__codelineno-69-2"></a>...
+<a id="__codelineno-69-3" name="__codelineno-69-3" href="#__codelineno-69-3"></a>}
 </code></pre></div>
 <p>où les Ij sont des interfaces.</p>
 <p><a id="refheading10400251168783983"></a></p>
 <h2 id="47-les-classes-abstraites">4.7. Les classes abstraites</h2>
 <p>Une classe abstraite est une classe qu&#x27;on ne peut instancier. Il faut créer des classes dérivées qui elles pourront être instanciées.</p>
 <p>On peut utiliser des classes abstraites pour factoriser le code d&#x27;une lignée de classes. Examinons le cas suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -3381,7 +3376,7 @@
 </ul>
 <p>On suppose ici que le développeur veut avoir la maîtrise de la construction des instances de la classe <em>Utilisateur</em> et des classes dérivées, peut-être parce qu&#x27;il veut être sûr qu&#x27;une exception d&#x27;un certain type est lancée si l&#x27;utilisateur n&#x27;est pas reconnu (ligne 19). Les classes dérivées pourront s&#x27;appuyer sur ce constructeur. Elles devront pour cela fournir la méthode <strong>identifie</strong>.</p>
 <p>La classe <em>ExceptionUtilisateurInconnu</em> est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -3469,7 +3464,7 @@
 <li>ligne 13 : la méthode <em>identifie</em> rend le pointeur <em>null</em> pour indiquer que l&#x27;utilisateur n&#x27;a pas été reconnu.</li>
 </ul>
 <p>Un programme de test pourrait être le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -3489,11 +3484,11 @@
 
 <p>On notera que lignes 6, 7 et 9, c&#x27;est la méthode <strong>[Utilisateur].ToString()</strong> qui sera utilisée par la méthode W<em>riteLine</em>.</p>
 <p>Les résultats de l&#x27;exécution sont les suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-66-1">1</a></span>
-<span class="normal"><a href="#__codelineno-66-2">2</a></span>
-<span class="normal"><a href="#__codelineno-66-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1"></a>Utilisateur[observer,mdp1,observateur]
-<a id="__codelineno-66-2" name="__codelineno-66-2"></a>Utilisateur[admin,mdp2,admin]
-<a id="__codelineno-66-3" name="__codelineno-66-3"></a>Utilisateur non connu : [xx,yy]
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-70-1">1</a></span>
+<span class="normal"><a href="#__codelineno-70-2">2</a></span>
+<span class="normal"><a href="#__codelineno-70-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1"></a>Utilisateur[observer,mdp1,observateur]
+<a id="__codelineno-70-2" name="__codelineno-70-2"></a>Utilisateur[admin,mdp2,admin]
+<a id="__codelineno-70-3" name="__codelineno-70-3"></a>Utilisateur non connu : [xx,yy]
 </code></pre></div></td></tr></table></div>
 <p><a id="refheading10400271168783983"></a></p>
 <h2 id="48-les-classes-interfaces-methodes-generiques">4.8. Les classes, interfaces, méthodes génériques</h2>
@@ -3538,7 +3533,7 @@
 <li>ligne 5 : la variable temporaire <em>temp</em> a le type T.</li>
 </ul>
 <p>Un programme de test de la classe pourrait être le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -3568,11 +3563,11 @@
 <li>ligne 16 : on utilise la méthode statique <em>Echanger</em> du type <em>Generic1&lt;Personne&gt;</em> pour indiquer que les références passées à la méthode <em>Echanger</em> sont de type <em>Personne</em>.</li>
 </ul>
 <p>Les résultats de l&#x27;exécution sont les suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-67-1">1</a></span>
-<span class="normal"><a href="#__codelineno-67-2">2</a></span>
-<span class="normal"><a href="#__codelineno-67-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1"></a>i1=2,i2=1
-<a id="__codelineno-67-2" name="__codelineno-67-2"></a>s1=s2,s2=s1
-<a id="__codelineno-67-3" name="__codelineno-67-3"></a>p1=[pauline, dard, 55],p2=[jean, clu, 20]
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-71-1">1</a></span>
+<span class="normal"><a href="#__codelineno-71-2">2</a></span>
+<span class="normal"><a href="#__codelineno-71-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1"></a>i1=2,i2=1
+<a id="__codelineno-71-2" name="__codelineno-71-2"></a>s1=s2,s2=s1
+<a id="__codelineno-71-3" name="__codelineno-71-3"></a>p1=[pauline, dard, 55],p2=[jean, clu, 20]
 </code></pre></div></td></tr></table></div>
 <p>La méthode <em>Echanger</em> aurait pu également être écrite de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -3593,7 +3588,7 @@
 <li>ligne 3 : la méthode statique <em>Echanger</em> est générique</li>
 </ul>
 <p>Le programme de test devient alors le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -3648,7 +3643,7 @@
 <li>ligne 3 : on exige que le type T soit une référence (classe, interface)</li>
 </ul>
 <p>Considérons le programme de test suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -3707,7 +3702,7 @@
 </code></pre></div>
 
 <p>Elle est implémentée par la classe <em>Class1</em> suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Threading;</span>
 <span class="odt-code-line"></span>
@@ -3745,7 +3740,7 @@
 <li>lignes 23-25 : la méthode <em>ToString</em> de la classe</li>
 </ul>
 <p>L&#x27;interface <em>Interface1</em> est également implémentée par la classe <em>Class2</em> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -3781,7 +3776,7 @@
 <li>lignes 21-22 : la méthode <em>ToString</em> de la classe</li>
 </ul>
 <p>Un programme de test pourrait être le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -3813,34 +3808,34 @@
 <li>lignes 16-22 : des instances de type <em>Class2</em> sont échangées</li>
 </ul>
 <p>Les résultats de l&#x27;exécution sont les suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-68-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-68-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-68-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-68-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-68-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-68-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-68-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-68-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-68-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-68-10">10</a></span>
-<span class="normal"><a href="#__codelineno-68-11">11</a></span>
-<span class="normal"><a href="#__codelineno-68-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1"></a>Avant échange --&gt; c1=43,c2=79
-<a id="__codelineno-68-2" name="__codelineno-68-2"></a>Après échange --&gt; c1=43,c2=79
-<a id="__codelineno-68-3" name="__codelineno-68-3"></a>Avant échange --&gt; c1=72,c2=56
-<a id="__codelineno-68-4" name="__codelineno-68-4"></a>Après échange --&gt; c1=56,c2=72
-<a id="__codelineno-68-5" name="__codelineno-68-5"></a>Avant échange --&gt; c1=92,c2=75
-<a id="__codelineno-68-6" name="__codelineno-68-6"></a>Après échange --&gt; c1=75,c2=92
-<a id="__codelineno-68-7" name="__codelineno-68-7"></a>Avant échange --&gt; c1=11,c2=47
-<a id="__codelineno-68-8" name="__codelineno-68-8"></a>Après échange --&gt; c1=11,c2=47
-<a id="__codelineno-68-9" name="__codelineno-68-9"></a>Avant échange --&gt; c1=31,c2=67
-<a id="__codelineno-68-10" name="__codelineno-68-10"></a>Après échange --&gt; c1=31,c2=67
-<a id="__codelineno-68-11" name="__codelineno-68-11"></a>Avant échange --&gt; c3=xxxxxxxxxxxxxx,c4=xx
-<a id="__codelineno-68-12" name="__codelineno-68-12"></a>Après échange --&gt; c3=xx,c4=xxxxxxxxxxxxxx
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-72-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-72-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-72-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-72-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-72-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-72-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-72-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-72-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-72-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-72-10">10</a></span>
+<span class="normal"><a href="#__codelineno-72-11">11</a></span>
+<span class="normal"><a href="#__codelineno-72-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1"></a>Avant échange --&gt; c1=43,c2=79
+<a id="__codelineno-72-2" name="__codelineno-72-2"></a>Après échange --&gt; c1=43,c2=79
+<a id="__codelineno-72-3" name="__codelineno-72-3"></a>Avant échange --&gt; c1=72,c2=56
+<a id="__codelineno-72-4" name="__codelineno-72-4"></a>Après échange --&gt; c1=56,c2=72
+<a id="__codelineno-72-5" name="__codelineno-72-5"></a>Avant échange --&gt; c1=92,c2=75
+<a id="__codelineno-72-6" name="__codelineno-72-6"></a>Après échange --&gt; c1=75,c2=92
+<a id="__codelineno-72-7" name="__codelineno-72-7"></a>Avant échange --&gt; c1=11,c2=47
+<a id="__codelineno-72-8" name="__codelineno-72-8"></a>Après échange --&gt; c1=11,c2=47
+<a id="__codelineno-72-9" name="__codelineno-72-9"></a>Avant échange --&gt; c1=31,c2=67
+<a id="__codelineno-72-10" name="__codelineno-72-10"></a>Après échange --&gt; c1=31,c2=67
+<a id="__codelineno-72-11" name="__codelineno-72-11"></a>Avant échange --&gt; c3=xxxxxxxxxxxxxx,c4=xx
+<a id="__codelineno-72-12" name="__codelineno-72-12"></a>Après échange --&gt; c3=xx,c4=xxxxxxxxxxxxxx
 </code></pre></div></td></tr></table></div>
 <p>Pour illustrer la notion <a id="interfacegenerique"></a>d&#x27;<strong>interface générique</strong>, nous allons trier un tableau de personnes d&#x27;abord sur leurs noms, puis sur leurs ages. La méthode qui nous permet de trier un tableau est la méthode statique <strong>Sort</strong> de la classe <strong>Array</strong> :</p>
 <p><img src="images/100000000000035B0000009B6F41DFD4.png" style="width:17.604cm;height:3.175cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000035B0000009B6F41DFD4.png" /></p>
 <p>On rappelle qu&#x27;une méthode statique s&#x27;utilise en préfixant la méthode par le nom de la classe et non par celui d&#x27;une instance de la classe. La méthode <strong>Sort</strong> a différentes signatures (elle est surchargée). Nous utiliserons la signature suivante :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>public static void Sort&lt;T&gt;(T[] tableau, IComparer&lt;T&gt; comparateur)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a>public static void Sort&lt;T&gt;(T[] tableau, IComparer&lt;T&gt; comparateur)
 </code></pre></div>
 <p><strong>Sort</strong> une <strong>méthode générique</strong> où T désigne un type quelconque. La méthode reçoit deux paramètres :</p>
 <ul>
@@ -3848,11 +3843,11 @@
 <li><strong>IComparer&lt;T&gt; comparateur</strong> : une référence d&#x27;objet implémentant l&#x27;interface <em>IComparer&lt;T&gt;</em>.</li>
 </ul>
 <p><strong>IComparer&lt;T&gt;</strong> est une <strong>interface générique</strong> définie comme suit :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-70-1">1</a></span>
-<span class="normal"><a href="#__codelineno-70-2">2</a></span>
-<span class="normal"><a href="#__codelineno-70-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1"></a>public interface IComparer&lt;T&gt;{
-<a id="__codelineno-70-2" name="__codelineno-70-2"></a>    int Compare(T t1, T t2);
-<a id="__codelineno-70-3" name="__codelineno-70-3"></a>}
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-74-1">1</a></span>
+<span class="normal"><a href="#__codelineno-74-2">2</a></span>
+<span class="normal"><a href="#__codelineno-74-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1"></a>public interface IComparer&lt;T&gt;{
+<a id="__codelineno-74-2" name="__codelineno-74-2"></a>    int Compare(T t1, T t2);
+<a id="__codelineno-74-3" name="__codelineno-74-3"></a>}
 </code></pre></div></td></tr></table></div>
 <p>L&#x27;interface <strong>IComparer&lt;T&gt;</strong> n&#x27;a qu&#x27;une unique méthode. La méthode <strong>Compare</strong> :</p>
 <ul>
@@ -3861,7 +3856,7 @@
 <li>pour avoir un tri dans l&#x27;ordre décroissant, il suffit d&#x27;inverser les résultats +1 et -1</li>
 </ul>
 <p>Nous en savons assez pour trier un tabeau de personnes. Le programme est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
 <span class="odt-code-line"></span>
@@ -3926,65 +3921,63 @@
 <li>ligne 16 : le tri du tableau de personnes selon les âges. Le 2ième paramètre de la méthode générique <em>Sort</em> est une instance d&#x27;une classe <em>CompareAges</em> implémentant l&#x27;interface générique <em>IComparer&lt;Personne</em>&gt; et définie lignes 42-51.</li>
 </ul>
 <p>Les résultats de l&#x27;exécution sont les suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-71-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-71-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-71-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-71-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-71-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-71-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-71-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-71-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-71-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-71-10">10</a></span>
-<span class="normal"><a href="#__codelineno-71-11">11</a></span>
-<span class="normal"><a href="#__codelineno-71-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1"></a>Tableau à trier-----------------------------------
-<a id="__codelineno-71-2" name="__codelineno-71-2"></a>[claude, pollon, 25]
-<a id="__codelineno-71-3" name="__codelineno-71-3"></a>[valentine, germain, 35]
-<a id="__codelineno-71-4" name="__codelineno-71-4"></a>[paul, germain, 32]
-<a id="__codelineno-71-5" name="__codelineno-71-5"></a>Tableau après le tri selon les nom et prénom------
-<a id="__codelineno-71-6" name="__codelineno-71-6"></a>[paul, germain, 32]
-<a id="__codelineno-71-7" name="__codelineno-71-7"></a>[valentine, germain, 35]
-<a id="__codelineno-71-8" name="__codelineno-71-8"></a>[claude, pollon, 25]
-<a id="__codelineno-71-9" name="__codelineno-71-9"></a>Tableau après le tri selon l&#39;âge------------------
-<a id="__codelineno-71-10" name="__codelineno-71-10"></a>[claude, pollon, 25]
-<a id="__codelineno-71-11" name="__codelineno-71-11"></a>[paul, germain, 32]
-<a id="__codelineno-71-12" name="__codelineno-71-12"></a>[valentine, germain, 35]
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-75-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-75-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-75-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-75-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-75-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-75-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-75-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-75-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-75-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-75-10">10</a></span>
+<span class="normal"><a href="#__codelineno-75-11">11</a></span>
+<span class="normal"><a href="#__codelineno-75-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1"></a>Tableau à trier-----------------------------------
+<a id="__codelineno-75-2" name="__codelineno-75-2"></a>[claude, pollon, 25]
+<a id="__codelineno-75-3" name="__codelineno-75-3"></a>[valentine, germain, 35]
+<a id="__codelineno-75-4" name="__codelineno-75-4"></a>[paul, germain, 32]
+<a id="__codelineno-75-5" name="__codelineno-75-5"></a>Tableau après le tri selon les nom et prénom------
+<a id="__codelineno-75-6" name="__codelineno-75-6"></a>[paul, germain, 32]
+<a id="__codelineno-75-7" name="__codelineno-75-7"></a>[valentine, germain, 35]
+<a id="__codelineno-75-8" name="__codelineno-75-8"></a>[claude, pollon, 25]
+<a id="__codelineno-75-9" name="__codelineno-75-9"></a>Tableau après le tri selon l&#39;âge------------------
+<a id="__codelineno-75-10" name="__codelineno-75-10"></a>[claude, pollon, 25]
+<a id="__codelineno-75-11" name="__codelineno-75-11"></a>[paul, germain, 32]
+<a id="__codelineno-75-12" name="__codelineno-75-12"></a>[valentine, germain, 35]
 </code></pre></div></td></tr></table></div>
 <p><a id="refheading10400291168783983"></a></p>
 <h2 id="49-les-espaces-de-noms">4.9. Les espaces de noms</h2>
 <p>Pour écrire une ligne à l&#x27;écran, nous utilisons l&#x27;instruction</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(...)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a>Console.WriteLine(...)
 </code></pre></div>
 <p>Si nous regardons la définition de la classe <em>Console</em></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
-<span class="odt-code-line"><span style="font-weight:bold">Namespace: </span><a href="http://frlrfsystem.htm/"><span style="text-decoration:underline;color:#0000ff">System</span></a></span>
-<span class="odt-code-line"><span style="font-weight:bold">Assembly: </span>Mscorlib (in Mscorlib.dll)</span>
+<span class="odt-code-line">Namespace: <a href="http://frlrfsystem.htm/"><span style="text-decoration:underline;color:#0000ff">System</span></a></span>
+<span class="odt-code-line">Assembly: Mscorlib (in Mscorlib.dll)</span>
 </code></pre></div>
 
 <p>on découvre qu&#x27;elle fait partie de l&#x27;espace de noms <em>System</em>. Cela signifie que la classe <em>Console</em> devrait être désignée par <em>System.Console</em> et on devrait en fait écrire :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a><span class="n">System</span><span class="p">.</span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(...)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a>System.Console.WriteLine(...)
 </code></pre></div>
 <p>On évite cela en utilisant une clause <em>using</em> :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
-<a id="__codelineno-74-2" name="__codelineno-74-2" href="#__codelineno-74-2"></a><span class="p">...</span>
-<a id="__codelineno-74-3" name="__codelineno-74-3" href="#__codelineno-74-3"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(...)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a>using System;
+<a id="__codelineno-78-2" name="__codelineno-78-2" href="#__codelineno-78-2"></a>...
+<a id="__codelineno-78-3" name="__codelineno-78-3" href="#__codelineno-78-3"></a>Console.WriteLine(...)
 </code></pre></div>
 <p>On dit qu&#x27;on <strong>importe</strong> l&#x27;espace de noms <em>System</em> avec la clause <em>using</em>. Lorsque le compilateur va rencontrer le nom d&#x27;une classe (ici <em>Console</em>) il va chercher à la trouver dans les différents espaces de noms importés par les clauses <em>using</em>. Ici il trouvera la classe <em>Console</em> dans l&#x27;espace de noms <em>System</em>. Notons maintenant la seconde information attachée à la classe <em>Console</em> :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="font-weight:bold">Assembly: </span>Mscorlib (in Mscorlib.dll)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a>Assembly: Mscorlib (in Mscorlib.dll)
 </code></pre></div>
-
 <p>Cette ligne indique dans quelle &quot;assemblage&quot; se trouve la définition de la classe <em>Console</em>. Lorsqu&#x27;on compile en-dehors de Visual Studio et qu&#x27;on doit donner les références des différentes <em>dll</em> contenant les classes que l&#x27;on doit utiliser, cette information peut s&#x27;avérer utile. Pour référencer les <em>dll</em> nécessaires à la compilation d&#x27;une classe, on écrit :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a>csc /r:fic1.dll /r:fic2.dll ... prog.cs
+<div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a>csc /r:fic1.dll /r:fic2.dll ... prog.cs
 </code></pre></div>
 <p>où <em>csc</em> est le compilateur C#. Lorsqu&#x27;on crée une classe, on peut la créer à l&#x27;intérieur d&#x27;un espace de noms. Le but de ces espaces de noms est d&#x27;éviter les conflits de noms entre classes lorsque celles-ci sont vendues par exemple. Considérons deux entreprises E1 et E2 distribuant des classes empaquetées respectivement dans les <em>dll</em>, e<em>1.dll</em> et e<em>2.dll</em>. Soit un client C qui achète ces deux ensembles de classes dans lesquelles les deux entreprises ont défini toutes deux une classe <em>Personne</em>. Le client C compile un programme de la façon suivante :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a>csc /r:e1.dll /r:e2.dll prog.cs
+<div class="highlight"><pre><span></span><code><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a>csc /r:e1.dll /r:e2.dll prog.cs
 </code></pre></div>
 <p>Si le source <em>prog.cs</em> utilise la classe P<em>ersonne</em>, le compilateur ne saura pas s&#x27;il doit prendre la classe P<em>ersonne</em> de e<em>1.dll</em> ou celle de e<em>2.dll</em>. Il signalera une erreur. Si l&#x27;entreprise E1 prend soin de créer ses classes dans un espace de noms appelé E1 et l&#x27;entreprise E2 dans un espace de noms appelé E2, les deux classes P<em>ersonne</em> s&#x27;appelleront alors E<em>1.Personne</em> et <em>E2.Personne</em>. Le client devra employer dans ses classes soit <em>E1.Personne</em>, soit <em>E2.Personne</em> mais pas <em>Personne</em>. L&#x27;espace de noms permet de lever l&#x27;ambiguïté.</p>
 <p>Pour créer une classe dans un espace de noms, on écrit :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a>namespace EspaceDeNoms{
-<a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a>    // définition de la classe
-<a id="__codelineno-77-3" name="__codelineno-77-3" href="#__codelineno-77-3"></a>}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a>namespace EspaceDeNoms{
+<a id="__codelineno-82-2" name="__codelineno-82-2" href="#__codelineno-82-2"></a>    // définition de la classe
+<a id="__codelineno-82-3" name="__codelineno-82-3" href="#__codelineno-82-3"></a>}
 </code></pre></div>
 <p><a id="refheading10400311168783983"></a>
 <a id="impots-v2"></a></p>
@@ -4001,10 +3994,10 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">4262        </p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">0</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">0</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">8382</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">0.0683</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">291.09</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">14753</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">0.1914</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">1322.92</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">23888</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">0.2826</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">2668.39</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">38868</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">0.3738</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">4846.98</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">47932</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">0.4262</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">6883.66</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">0        </p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">0.4809</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">9505.54</p></td></tr></table>
 
 <p>Chaque ligne a 3 champs. Pour calculer l&#x27;impôt I, on recherche la première ligne où <em>QF&lt;=champ1</em>. Par exemple, si QF=5000 on trouvera la ligne</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a>    8382        0.0683        291.09
+<div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a>    8382        0.0683        291.09
 </code></pre></div>
 <p>L&#x27;impôt I est alors égal à <strong>0.0683*R - 291.09*nbParts</strong>. Si QF est tel que la relation <em>QF&lt;=champ1</em> n&#x27;est jamais vérifiée, alors ce sont les coefficients de la dernière ligne qui sont utilisés. Ici :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a>    0                0.4809    9505.54
+<div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a>    0                0.4809    9505.54
 </code></pre></div>
 <p>ce qui donne l&#x27;impôt I=0.4809*R - 9505.54*nbParts.</p>
 <p>Tout d&#x27;abord, nous définissons une structure capable d&#x27;encapsuler une ligne du tableau précédent :</p>
@@ -4070,7 +4063,7 @@
 <li>lignes 10-25 : l&#x27;implémentation de la méthode <em>calculer</em> de l&#x27;interface <em>IImpot</em>. Les classes dérivées n&#x27;auront pas à réécrire cette méthode. La classe <em>AbstractImpot</em> sert ainsi de classe de factorisation des classes dérivées. On y met ce qui est commun à toutes les classes dérivées.</li>
 </ul>
 <p>Une classe implémentant l&#x27;interface <em>IImpot</em> peut être construite en dérivant la classe <em>AbstractImpot</em>. C&#x27;est ce que nous faisons maintenant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -4095,7 +4088,7 @@
 
 <p>La classe <em>HardwiredImpot</em> définit, lignes 7-9, en dur les données nécessaires au calcul de l&#x27;impôt. Son constructeur (lignes 11-18) utilise ces données pour initialiser le champ protégé <em>tranchesImpot</em> de la classe mère <em>AbstractImpot</em>.</p>
 <p>Un programme de test pourait être le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -4178,43 +4171,43 @@
 <li>ligne 66 : appel de la méthode <em>calculer</em> de l&#x27;objet <em>impot</em> implémentant l&#x27;interface <em>IImpot</em>.</li>
 </ul>
 <p>Voici un exemple d&#x27;exécution du programme :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-80-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-80-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-80-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-80-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-80-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-80-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-80-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-80-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-80-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-80-10">10</a></span>
-<span class="normal"><a href="#__codelineno-80-11">11</a></span>
-<span class="normal"><a href="#__codelineno-80-12">12</a></span>
-<span class="normal"><a href="#__codelineno-80-13">13</a></span>
-<span class="normal"><a href="#__codelineno-80-14">14</a></span>
-<span class="normal"><a href="#__codelineno-80-15">15</a></span>
-<span class="normal"><a href="#__codelineno-80-16">16</a></span>
-<span class="normal"><a href="#__codelineno-80-17">17</a></span>
-<span class="normal"><a href="#__codelineno-80-18">18</a></span>
-<span class="normal"><a href="#__codelineno-80-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1"></a>Paramètres du calcul de l&#39;Impot au format : Marié (o/n) NbEnfants Salaire ou rien pour arrêter :q s d
-<a id="__codelineno-80-2" name="__codelineno-80-2"></a>syntaxe : Marié NbEnfants Salaire
-<a id="__codelineno-80-3" name="__codelineno-80-3"></a>Marié : o pour marié, n pour non marié
-<a id="__codelineno-80-4" name="__codelineno-80-4"></a>NbEnfants : nombre d&#39;enfants
-<a id="__codelineno-80-5" name="__codelineno-80-5"></a>Salaire : salaire annuel en euros
-<a id="__codelineno-80-6" name="__codelineno-80-6"></a>Argument marié incorrect : tapez o ou n
-<a id="__codelineno-80-7" name="__codelineno-80-7"></a>Paramètres du calcul de l&#39;Impot au format : Marié (o/n) NbEnfants Salaire ou rien pour arrêter :o 2 d
-<a id="__codelineno-80-8" name="__codelineno-80-8"></a>syntaxe : Marié NbEnfants Salaire
-<a id="__codelineno-80-9" name="__codelineno-80-9"></a>Marié : o pour marié, n pour non marié
-<a id="__codelineno-80-10" name="__codelineno-80-10"></a>NbEnfants : nombre d&#39;enfants
-<a id="__codelineno-80-11" name="__codelineno-80-11"></a>Salaire : salaire annuel en euros
-<a id="__codelineno-80-12" name="__codelineno-80-12"></a>Argument salaire incorrect : tapez un entier positif ou nul
-<a id="__codelineno-80-13" name="__codelineno-80-13"></a>Paramètres du calcul de l&#39;Impot au format : Marié (o/n) NbEnfants Salaire ou rien pour arrêter :q s d f
-<a id="__codelineno-80-14" name="__codelineno-80-14"></a>syntaxe : Marié NbEnfants Salaire
-<a id="__codelineno-80-15" name="__codelineno-80-15"></a>Marié : o pour marié, n pour non marié
-<a id="__codelineno-80-16" name="__codelineno-80-16"></a>NbEnfants : nombre d&#39;enfants
-<a id="__codelineno-80-17" name="__codelineno-80-17"></a>Salaire : salaire annuel en euros
-<a id="__codelineno-80-18" name="__codelineno-80-18"></a>Paramètres du calcul de l&#39;Impot au format : Marié (o/n) NbEnfants Salaire ou rien pour arrêter :o 2 60000
-<a id="__codelineno-80-19" name="__codelineno-80-19"></a>Impot=4282 euros
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-85-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-85-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-85-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-85-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-85-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-85-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-85-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-85-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-85-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-85-10">10</a></span>
+<span class="normal"><a href="#__codelineno-85-11">11</a></span>
+<span class="normal"><a href="#__codelineno-85-12">12</a></span>
+<span class="normal"><a href="#__codelineno-85-13">13</a></span>
+<span class="normal"><a href="#__codelineno-85-14">14</a></span>
+<span class="normal"><a href="#__codelineno-85-15">15</a></span>
+<span class="normal"><a href="#__codelineno-85-16">16</a></span>
+<span class="normal"><a href="#__codelineno-85-17">17</a></span>
+<span class="normal"><a href="#__codelineno-85-18">18</a></span>
+<span class="normal"><a href="#__codelineno-85-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1"></a>Paramètres du calcul de l&#39;Impot au format : Marié (o/n) NbEnfants Salaire ou rien pour arrêter :q s d
+<a id="__codelineno-85-2" name="__codelineno-85-2"></a>syntaxe : Marié NbEnfants Salaire
+<a id="__codelineno-85-3" name="__codelineno-85-3"></a>Marié : o pour marié, n pour non marié
+<a id="__codelineno-85-4" name="__codelineno-85-4"></a>NbEnfants : nombre d&#39;enfants
+<a id="__codelineno-85-5" name="__codelineno-85-5"></a>Salaire : salaire annuel en euros
+<a id="__codelineno-85-6" name="__codelineno-85-6"></a>Argument marié incorrect : tapez o ou n
+<a id="__codelineno-85-7" name="__codelineno-85-7"></a>Paramètres du calcul de l&#39;Impot au format : Marié (o/n) NbEnfants Salaire ou rien pour arrêter :o 2 d
+<a id="__codelineno-85-8" name="__codelineno-85-8"></a>syntaxe : Marié NbEnfants Salaire
+<a id="__codelineno-85-9" name="__codelineno-85-9"></a>Marié : o pour marié, n pour non marié
+<a id="__codelineno-85-10" name="__codelineno-85-10"></a>NbEnfants : nombre d&#39;enfants
+<a id="__codelineno-85-11" name="__codelineno-85-11"></a>Salaire : salaire annuel en euros
+<a id="__codelineno-85-12" name="__codelineno-85-12"></a>Argument salaire incorrect : tapez un entier positif ou nul
+<a id="__codelineno-85-13" name="__codelineno-85-13"></a>Paramètres du calcul de l&#39;Impot au format : Marié (o/n) NbEnfants Salaire ou rien pour arrêter :q s d f
+<a id="__codelineno-85-14" name="__codelineno-85-14"></a>syntaxe : Marié NbEnfants Salaire
+<a id="__codelineno-85-15" name="__codelineno-85-15"></a>Marié : o pour marié, n pour non marié
+<a id="__codelineno-85-16" name="__codelineno-85-16"></a>NbEnfants : nombre d&#39;enfants
+<a id="__codelineno-85-17" name="__codelineno-85-17"></a>Salaire : salaire annuel en euros
+<a id="__codelineno-85-18" name="__codelineno-85-18"></a>Paramètres du calcul de l&#39;Impot au format : Marié (o/n) NbEnfants Salaire ou rien pour arrêter :o 2 60000
+<a id="__codelineno-85-19" name="__codelineno-85-19"></a>Impot=4282 euros
 </code></pre></div></td></tr></table></div>
 
 

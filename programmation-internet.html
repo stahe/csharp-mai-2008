@@ -1970,7 +1970,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>IPAdress None
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">C</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">l&#x27;adresse IP &quot;255.255.255.255&quot;. Lorsqu&#x27;un service est associé à cette adresse, cela signifie qu&#x27;il n&#x27;accepte aucun client.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kt">bool</span><span class="w"> </span><span class="nf">TryParse</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">ipString</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">IPAddress</span><span class="w"> </span><span class="n">address</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>bool TryParse(string ipString, out IPAddress address)
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">M</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">essaie de passer l&#x27;adresse IP <i>ipString</i> de forme &quot;I1.I2.I3.I4&quot; sous la forme d&#x27;un objet <i>IPAddress address</i>. Rend <i>true</i> si l&#x27;opération a réussi.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>bool IsLoopBack
@@ -2008,7 +2008,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">P</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le nom d&#x27;hôte principal de la machine</p></td></tr></table>
 
 <p>Considérons le programme suivant  qui affiche le nom de la machine sur laquelle il s&#x27;exécute puis de façon interactive donne les correspondances adresse <em>IP &lt;--&gt; nom Machine</em> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Net;</span>
 <span class="odt-code-line"></span>
@@ -2507,26 +2507,26 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">P</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">vrai si la connexion a été établie</p></td></tr></table>
 
 <p>La classe <strong>NetworkStream</strong> représente le flux réseau entre le client et le serveur. Elle est dérivée de la classe <em>Stream</em>. Beaucoup d&#x27;applications client-serveur échangent des lignes de texte terminées par les caractères de fin de ligne &quot;\r\n&quot;. Aussi est-il intéressant d&#x27;utiliser des objets <em>StreamReader</em> et <em>StreamWriter</em> pour lire et écrire ces lignes dans le flux réseau. Ainsi si une machine M1 a établi une liaison avec une machine M2 à l&#x27;aide d&#x27;un objet TcpClient <em>client1</em> et qu&#x27;elles échangent des lignes de texte, elle pourra créer ses flux de lecture et écriture de la façon suivante :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="n">StreamReader</span><span class="w"> </span><span class="n">in1</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">StreamReader</span><span class="p">(</span><span class="n">client1</span><span class="p">.</span><span class="n">GetStream</span><span class="p">());</span>
-<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="n">StreamWriter</span><span class="w"> </span><span class="n">out1</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">StreamWriter</span><span class="p">(</span><span class="n">client1</span><span class="p">.</span><span class="n">GetStream</span><span class="p">());</span>
-<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="n">out1</span><span class="p">.</span><span class="n">AutoFlush</span><span class="o">=</span><span class="k">true</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>StreamReader in1=new StreamReader(client1.GetStream());
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>StreamWriter out1=new StreamWriter(client1.GetStream());
+<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a>out1.AutoFlush=true;
 </code></pre></div>
 <p>L&#x27;instruction</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>out1.AutoFlush=true;
 </code></pre></div>
 <p>signifie que le flux d&#x27;écriture de <em>client1</em> ne transitera pas par un buffer intermédiaire mais ira directement sur le réseau. Ce point est important. En général lorsque <em>client1</em> envoie une ligne de texte à son partenaire il en attend une réponse. Celle-ci ne viendra jamais si la ligne a été en réalité bufferisée sur la machine M1 et jamais envoyée à la machine M2. </p>
 <p>Pour envoyer une ligne de texte à la machine M2, on écrira :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="n">client1</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;un texte&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>client1.WriteLine(&quot;un texte&quot;);
 </code></pre></div>
 <p>Pour lire la réponse de M2, on écrira :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">réponse</span><span class="o">=</span><span class="n">client1</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>string réponse=client1.ReadLine();
 </code></pre></div>
 <p>Nous avons maintenant les éléments pour écrire l&#x27;architecture de base d&#x27;un client internet ayant le protocole de communication basique suivant avec le serveur : </p>
 <ul>
 <li>le client envoie une demande contenue dans une unique ligne</li>
 <li>le serveur envoie une réponse contenue dans une unique ligne</li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.IO;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Net.Sockets;</span>
@@ -2610,7 +2610,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li>le serveur envoie une réponse contenue dans une unique ligne</li>
 </ul>
 <p>pourrait ressembler à ceci :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.IO;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Net.Sockets;</span>
@@ -2709,7 +2709,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <p>Nous nous proposons d&#x27;écrire un serveur d&#x27;écho qui sera lancé depuis une fenêtre DOS par la commande :</p>
 <p><strong>ServeurEcho port</strong></p>
 <p>Le serveur officie sur le port passé en paramètre. Il se contente de renvoyer au client la demande que celui-ci lui a envoyée. Le programme est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.IO;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Net.Sockets;</span>
@@ -2864,7 +2864,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <p>Nous écrivons maintenant un client pour le serveur précédent. Il sera appelé de la façon suivante :</p>
 <p><strong>ClientEcho nomServeur port</strong></p>
 <p>Il se connecte à la machine <em>nomServeur</em> sur le port <em>port</em> puis envoie au serveur des lignes de texte que celui-ci lui renvoie en écho.</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.IO;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Net.Sockets;</span>
@@ -3019,7 +3019,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li>un thread secondaire travaillera en parallèle et sera consacré à la lecture des lignes de texte envoyées par le serveur. Dès qu&#x27;il en reçoit une, il l&#x27;affiche sur la console. Le thread ne s&#x27;arrête que lorsque le serveur clôt la connexion. Il travaille donc en continu.</li>
 </ul>
 <p>Le code est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.IO;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Net.Sockets;</span>
@@ -3421,7 +3421,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 
 <p>Si ci-dessus, on fait <em>Affichage/Source</em> pour voir ce qu&#x27;a reçu le navigateur, on obtient [2], c&#x27;est à dire exactement ce qu&#x27;on a envoyé depuis le serveur générique.</p>
 <p>Le code du serveur TCP générique est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.IO;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Net;</span>
@@ -3609,7 +3609,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 </ul>
 <p>Si nous utilisons GET au lieu de HEAD dans l&#x27;appel au client Web, nous obtenons le même résultat qu&#x27;avec HEAD avec de plus le corps du document demandé.</p>
 <p>Le code du client web est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.IO;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Net.Sockets;</span>
@@ -3941,7 +3941,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li>ligne 15 : l&#x27;accès à la page  <em>http://localhost/localstart.asp</em> nous a été refusé.</li>
 </ul>
 <p>Le programme gérant la redirection est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.IO;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Net.Sockets;</span>
@@ -4090,7 +4090,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <p><a id="refheading10403531168783983"></a></p>
 <h3 id="1171-la-classewebclient">11.7.1. La classeWebClient</h3>
 <p>Il existe une classe <em>WebClient</em> sachant dialoguer avec un serveur web. Considérons l&#x27;exemple du client web du paragraphe <a href="#program-clientweb">11.6.5</a>, traité ici avec la classe <em>WebClient</em>.</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.IO;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Net;</span>
@@ -4308,7 +4308,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li><strong>FtpWebRequest</strong>, <strong>FtpWebResponse</strong> pour un client FTP</li>
 </ul>
 <p>Nous traitons maintenant avec les classes <em>HttpWebRequest</em> et <em>HttpWebresponse</em> l&#x27;exemple du client web avec redirection étudié au paragraphe <a href="#program-clientwebavecredirection">11.6.6</a>. Le code est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.IO;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Net.Sockets;</span>
@@ -4462,7 +4462,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li><strong>WebTraductionsException</strong> : une exception spécifique à l&#x27;application</li>
 </ul>
 <p>L&#x27;interface <strong>IServiceTraduction</strong> est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> dao {</span>
@@ -4486,7 +4486,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 </ul>
 <p><strong>ServiceTraduction</strong> est une classe d&#x27;implémentation de l&#x27;interface <strong>IServiceTraduction</strong>. Nous la détaillons dans la section qui suit.</p>
 <p><strong>WebTraductionsException</strong> est la classe d&#x27;exception suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> entites {</span>
@@ -4586,7 +4586,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <div class="highlight"><pre><span></span><code><a id="__codelineno-111-1" name="__codelineno-111-1" href="#__codelineno-111-1"></a>@&quot;<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="na">txtTrad</span><span class="err">&quot;&quot;</span><span class="p">&gt;</span>(.*?)<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>&quot;
 </code></pre></div>
 <p>Nous avons désormais les éléments pour écrire la classe d&#x27;implémentation <em>ServiceTraduction</em> de l&#x27;interface <em>IServiceTraduction</em> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.IO;</span>
@@ -4693,7 +4693,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 
 <p>Nous avons utilisé ici <em>WebRequest / WebResponse</em> plutôt que <em>WebClient</em> parce que nous n&#x27;avons pas à exploiter la totalité de la réponse Html du serveur de traduction. Une fois la traduction trouvée dans cette réponse, nous n&#x27;avons plus besoin du reste des lignes de la réponse. La classe <em>WebClient</em> ne permet pas de faire cela.</p>
 <p>Voici un programme de test de la classe <em>ServiceTraduction</em> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> dao;</span>
@@ -4811,7 +4811,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li>lignes 24-33 : la propriété <em>LanguesTraduites</em> de la classe <em>ServiceTraduction.</em></li>
 </ul>
 <p>Le programme [Program.cs] est exécuté au démarrage de l&#x27;application. Son code est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Text;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Windows.Forms;</span>
@@ -4886,7 +4886,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>n°</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>type</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>nom</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>rôle</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">1</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">textBoxTexteATraduire</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">boîte de saisie du texte à traduire</p><p style="margin:0;">MultiLine=true</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">2</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">ComboBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">comboBoxLangues</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">la liste des sens de traduction</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">3</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Button</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">buttonTraduire</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour demander la traduction du texte [1] dans le sens [2]</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">4</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">textBoxTraduction</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">la traduction du texte [1]</p></td></tr></table>
 
 <p>Le code du formulaire [Form1] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Linq;</span>
@@ -4995,7 +4995,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <a id="__codelineno-113-14" name="__codelineno-113-14" href="#__codelineno-113-14"></a>ST
 </code></pre></div>
 <p>Le code du formulaire [SendMailForm.cs] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Windows.Forms;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Net.Mail;</span>
@@ -5071,7 +5071,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 
 <p>Nous ne commenterons pas ce code qui ne présente pas de nouveautés. Pour comprendre la méthode <em>buttonAjouter_Click</em> de la ligne 14, le lecteur est invité à relire le paragraphe <a href="interfaces-graphiques-avec-c-et-vsnet.html#openfiledialog">7.5.1</a>.</p>
 <p>La méthode <em>buttonEnvoyer_Click</em> de la ligne 55, qui envoie le courrier est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> buttonEnvoyer_Click(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e) {</span>
 <span class="odt-code-line">            <span style="color:#0000ff">try</span> {</span>
 <span class="odt-code-line">                <span style="color:#008000">// sablier</span></span>
@@ -5218,7 +5218,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 </ul>
 <h3 id="1183-connexion-asynchrone-au-serveur">11.8.3. Connexion asynchrone au serveur</h3>
 <p>L&#x27;appui sur le bouton [Connecter] provoque l&#x27;exécution de la méthode suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> buttonConnexion_Click(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// connexion ou déconnexion ?</span></span>
 <span class="odt-code-line">            <span style="color:#0000ff">if</span> (buttonConnexion.Text == <span style="color:#a31515">&quot;Déconnecter&quot;</span>)</span>
@@ -5232,7 +5232,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li>ligne 3 : le bouton peut avoir le libellé [Connecter] ou [Déconnecter].</li>
 </ul>
 <p>La méthode de connexion est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Net.Sockets;</span>
 <span class="odt-code-line">...</span>
 <span class="odt-code-line"></span>
@@ -5326,7 +5326,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li>ligne 38 : la méthode est terminée. L&#x27;utilisateur peut de nouveau interagir avec l&#x27;interface graphique. La connexion se passe en tâche de fond, en parallèle de la gestion des événements de l&#x27;interface graphique. Toujours en parallèle, la méthode <em>connecté</em> de la ligne 41 va être appelée à la fin de la connexion, que celle-ci se termine bien ou mal.</li>
 </ul>
 <p>Le code de la méthode <em>connecté</em> est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">// la connexion a eu lieu</span>
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> connecté(<span style="color:#2b91af">IAsyncResult</span> résultat) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// on récupère la socket du client</span></span>
@@ -5373,7 +5373,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 </li>
 </ul>
 <p>On notera que tout ceci se passe sans action de l&#x27;utilisateur, autre que la demande initiale de connexion avec le bouton [Connecter]. A la fin de la méthode <em>connecté</em>, une autre méthode est exécutée en tâche de fond : la méthode <em>lecture</em> que nous examinons maintenant.</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">// réception de données</span>
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> lecture(<span style="color:#2b91af">IAsyncResult</span> résultat) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// on récupère la socket du client</span></span>
@@ -5432,7 +5432,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <p><a id="refheading10403691168783983"></a></p>
 <h3 id="1184-deconnexion-du-serveur">11.8.4. Déconnexion du serveur</h3>
 <p>L&#x27;appui sur le bouton [Déconnecter] provoque l&#x27;exécution de la méthode suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> buttonConnexion_Click(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// connexion ou déconnexion ?</span></span>
 <span class="odt-code-line">            <span style="color:#0000ff">if</span> (buttonConnexion.Text == <span style="color:#a31515">&quot;Déconnecter&quot;</span>)</span>
@@ -5446,7 +5446,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li>ligne 3 : le bouton peut avoir le libellé [Connecter] ou [Déconnecter].</li>
 </ul>
 <p>La méthode <em>déconnexion</em> assure la déconnexion du client :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> déconnexion() {</span>
 <span class="odt-code-line">            <span style="color:#008000">// fermeture socket</span></span>
 <span class="odt-code-line">            <span style="color:#0000ff">if</span> (client != <span style="color:#0000ff">null</span> &amp;&amp; client.Connected) {</span>
@@ -5477,7 +5477,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <p><a id="refheading10403711168783983"></a></p>
 <h3 id="1185-envoi-asynchrone-de-donnees-au-serveur">11.8.5. Envoi asynchrone de données au serveur</h3>
 <p>Lorsque l&#x27;utilisateur valide le message du champ <em>textBoxMsgToServeur</em>, la méthode suivante est exécutée :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> textBoxMsgToServeur_KeyPress(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">KeyPressEventArgs</span> e) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// touche [Entrée] ?</span></span>
 <span class="odt-code-line">            <span style="color:#0000ff">if</span> (e.KeyChar == 13 &amp;&amp; client.Connected) {</span>
@@ -5511,7 +5511,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li>ligne 10 : le message envoyé est effacé de l&#x27;interface graphique</li>
 </ul>
 <p>La méthode de rappel <em>écriture</em> est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> écriture(<span style="color:#2b91af">IAsyncResult</span> résultat) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// résultat de l&#x27;émission d&#x27;un message</span></span>
 <span class="odt-code-line">            <span style="color:#2b91af">Socket</span> client = résultat.AsyncState <span style="color:#0000ff">as</span> <span style="color:#2b91af">Socket</span>;</span>
@@ -5533,7 +5533,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <p><a id="refheading10403731168783983"></a></p>
 <h3 id="1186-affichage-des-evenements-et-du-dialogue-client-serveur">11.8.6. Affichage des événements et du dialogue client / serveur</h3>
 <p>Les événements sont affichés par la méthode <em>logEvents</em> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#008000">// suivi du processus</span></span>
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> logEvent(<span style="color:#0000ff">string</span> msg) {</span>
 <span class="odt-code-line">            listBoxEvts.Invoke(<span style="color:#0000ff">new</span> <span style="color:#2b91af">writeLog</span>(logEventCallBack), msg);</span>
@@ -5571,7 +5571,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li>ligne 9 : l&#x27;événement est logué en 1ère position de la liste afin d&#x27;avoir les événements les plus récents en haut de la liste.</li>
 </ul>
 <p>Les messages du dialogue client / serveur sont affichés par la méthode <em>logDialogue</em> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#008000">// suivi du dialogue</span></span>
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> logDialogue(<span style="color:#0000ff">string</span> msg) {</span>
 <span class="odt-code-line">            listBoxDialogue.Invoke(<span style="color:#0000ff">new</span> <span style="color:#2b91af">writeLog</span>(logDialogueCallBack), msg);</span>
@@ -5781,7 +5781,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>1</b></p><img src="images/10000000000000970000007C7BDAF4EC.png" style="display:inline-block; margin:4px;width:2.799cm;height:2.3cm;" class="odt-zoomable" data-zoom-src="images/10000000000000970000007C7BDAF4EC.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le code du serveur [ServeurImpot.cs] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">...</span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap9 {</span>
 <span class="odt-code-line">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">class</span> <span style="color:#2b91af">ServeurImpot</span> {</span>
@@ -5910,7 +5910,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li>lignes 76-80 : la commande <em>quit</em> qui arrête tout.</li>
 </ul>
 <p>Le thread chargé d&#x27;écouter les demandes des clients exécute la méthode <em>doEcoute</em> suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> doEcoute(<span style="color:#2b91af">Object</span> data) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// thread d&#x27;écoute des demandes des clients</span></span>
 <span class="odt-code-line">            <span style="color:#0000ff">try</span> {</span>
@@ -5954,7 +5954,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li>ligne 9 : on note le fait que le service est désormais actif</li>
 </ul>
 <p>Ligne 21, les clients sont servis par des threads de service exécutant la méthode <em>doService</em> suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">private</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> doService(<span style="color:#2b91af">Object</span> infos) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// on récupère le client qu&#x27;il faut servir</span></span>
 <span class="odt-code-line">            <span style="color:#2b91af">Client</span> client = infos <span style="color:#0000ff">as</span> <span style="color:#2b91af">Client</span>;</span>
@@ -6043,7 +6043,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <li>ligne 48 : une commande incorrecte. On envoie au client un message d&#x27;erreur.</li>
 </ul>
 <p>Le traitement de la commande <em>impot</em> est assurée par la méthode <em>calculImpot</em> suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">private</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">string</span> calculImpot(<span style="color:#2b91af">StreamWriter</span> writer, <span style="color:#0000ff">int</span> numClient, <span style="color:#0000ff">string</span>[] champs) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// demande calcul marié(O/N) nbEnfants salaireAnnuel</span></span>
 <span class="odt-code-line">            <span style="color:#008000">// il faut 4 champs</span></span>
@@ -6111,7 +6111,7 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 </code></pre></div>
 
 <p>L&#x27;implémentation de cette interface est la classe [ImpotMetierTcp] suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Net.Sockets;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.IO;</span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Metier {</span>

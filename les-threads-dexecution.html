@@ -1032,7 +1032,7 @@
 <li><em>Sleep(int n)</em> : méthode statique - le thread exécutant la méthode est suspendu pendant <em>n</em> millisecondes. Il perd alors le processeur qui est donné à un autre thread.</li>
 </ul>
 <p>Regardons une première application mettant en évidence l&#x27;existence d&#x27;un thread principal d&#x27;exécution, celui dans lequel s&#x27;exécute la fonction <em>Main</em> d&#x27;une classe :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Threading;</span>
 <span class="odt-code-line"></span>
@@ -1118,7 +1118,7 @@
 <li>On peut aussi attendre la fin de son exécution par <strong>T.Join()</strong>. On a là une instruction bloquante : le programme qui l&#x27;exécute est bloqué jusqu&#x27;à ce que la tâche T ait terminé son travail. C&#x27;est un moyen de synchronisation.</li>
 </ol>
 <p>Examinons le programme suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Threading;</span>
 <span class="odt-code-line"></span>
@@ -1203,7 +1203,7 @@
 <li>on voit dans les résultats une conséquence de la méthode <em>Sleep</em>. Dans l&#x27;exemple, c&#x27;est le thread 0 qui exécute le premier la méthode A<em>ffiche</em>. Le message de début d&#x27;exécution est affiché puis il exécute la méthode <em>Sleep</em> qui le suspend pendant 1 seconde. Il perd alors le processeur qui devient ainsi disponible pour un autre thread. L&#x27;exemple montre que c&#x27;est le thread 1 qui va l&#x27;obtenir. Le thread 1 va suivre le même parcours ainsi que les autres threads. Lorsque la seconde de sommeil du thread 0 va être terminée, son exécution peut reprendre. Le système lui donne le processeur et il peut terminer l&#x27;exécution de la méthode A<em>ffiche</em>.</li>
 </ul>
 <p>Modifions notre programme pour terminer la méthode <em>Main</em> par les instructions :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">            <span style="color:#008000">// fin de main</span></span>
 <span class="odt-code-line">            <span style="color:#2b91af">Console</span>.WriteLine(<span style="color:#a31515">&quot;Fin du thread &quot;</span> + main.Name);</span>
 <span class="odt-code-line">            <span style="color:#008000">// on arrête tous les threads</span></span>
@@ -1231,7 +1231,7 @@
 </code></pre></div>
 <p>Cette instruction arrête <strong>tous les threads</strong> de l&#x27;application et non simplement le thread <em>Main</em>.</p>
 <p>Si la méthode <em>Main</em> veut attendre la fin d&#x27;exécution des threads qu&#x27;elle a créés, elle peut utiliser la méthode <em>Join</em> de la classe <em>Thread</em> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> Main() {</span>
 <span class="odt-code-line">...</span>
 <span class="odt-code-line">            <span style="color:#008000">// on attend tous les threads</span></span>
@@ -1297,7 +1297,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>t.Start(obj1);
 </code></pre></div>
 <p>va lancer le thread <em>t</em> qui va alors exécuter la méthode <em>Run</em> qui lui a été associée par construction, en lui passant le paramètre effectif <em>obj1</em>. Voici un exemple :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Threading;</span>
 <span class="odt-code-line"></span>
@@ -1404,7 +1404,7 @@
 <li>à la fin de l&#x27;application, la valeur du compteur est affichée. On devrait donc trouver <em>n</em>.</li>
 </ul>
 <p>Le programme est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Threading;</span>
 <span class="odt-code-line"></span>
@@ -1539,7 +1539,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>lock(obj){section critique}
 </code></pre></div>
 <p><em>obj</em> doit être une référence d&#x27;objet visible par tous les threads exécutant la section critique. La clause <strong>lock</strong> assure qu&#x27;un seul thread à la fois exécutera la section critique. L&#x27;exemple précédent est réécrit comme suit :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Threading;</span>
 <span class="odt-code-line"></span>
@@ -1668,7 +1668,7 @@
 </code></pre></div>
 <p>où M est un objet <em>Mutex</em>. Il ne faut pas oublier de libérer un <em>Mutex</em> devenu inutile afin qu&#x27;un autre thread puisse entrer dans la section critique, sinon les threads en attente du <em>Mutex</em> jamais libéré n&#x27;auront jamais accès au processeur. </p>
 <p>Si nous mettons en pratique sur l&#x27;exemple précédent ce que nous venons de voir, notre application devient la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Threading;</span>
 <span class="odt-code-line"></span>
@@ -1723,7 +1723,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>barrière.Reset(); 
 </code></pre></div>
 <p>Si dans l&#x27;exemple précédent, on remplace l&#x27;objet <em>Mutex</em> par un objet de type <em>AutoResetEvent</em>, le code devient le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Threading;</span>
 <span class="odt-code-line"></span>
@@ -1778,7 +1778,7 @@
 </code></pre></div>
 <p>Elle permet d&#x27;incrémenter de 1 le paramètre <em>location</em>. L&#x27;opération est garantie <em>atomique</em>.</p>
 <p>Notre programme de comptage de threads peut alors être le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Threading;</span>
 <span class="odt-code-line"></span>
@@ -1842,7 +1842,7 @@
 <li>lorsqu&#x27;un lecteur aura terminé son travail, il ouvrira la barrière <em>peutEcrire</em> pour laisser entrer un écrivain.</li>
 </ul>
 <p>Le programme illustrant cette synchronisation par événements est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Threading;</span>
 <span class="odt-code-line"></span>
@@ -1913,7 +1913,7 @@
 <li>lignes 37-44 : création et lancement des threads écrivains</li>
 </ul>
 <p>La méthode <em>Lire</em> exécutée par les threads lecteurs est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">public</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> Lire() {</span>
 <span class="odt-code-line">            <span style="color:#008000">// suivi</span></span>
 <span class="odt-code-line">            <span style="color:#2b91af">Console</span>.WriteLine(<span style="color:#a31515">&quot;Méthode [Lire] démarrée par le thread n° {0}&quot;</span>, <span style="color:#2b91af">Thread</span>.CurrentThread.Name);</span>
@@ -1939,7 +1939,7 @@
 <li>ligne 14 : indique aux threads écrivains que le tableau a été lu et qu&#x27;il peut être rempli de nouveau.</li>
 </ul>
 <p>La méthode <em>Ecrire</em> exécutée par les threads écrivains est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">public</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> Ecrire() {</span>
 <span class="odt-code-line">            <span style="color:#008000">// suivi</span></span>
 <span class="odt-code-line">            <span style="color:#2b91af">Console</span>.WriteLine(<span style="color:#a31515">&quot;Méthode [Ecrire] démarrée par le thread n° {0}&quot;</span>, <span style="color:#2b91af">Thread</span>.CurrentThread.Name);</span>
@@ -2160,7 +2160,7 @@
 </code></pre></div>
 <p>si le thread a déjà le jeton. </p>
 <p>Muni de ces informations, nous pouvons réécrire l&#x27;application lecteurs / écrivains en fixant un ordre des lecteurs et des écrivains pour l&#x27;accès à leurs guichets respectifs. Le code est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Threading;</span>
 <span class="odt-code-line"></span>
@@ -2270,7 +2270,7 @@
 <li>ligne 65 : on avertit les écrivains que quelque chose a changé.</li>
 </ul>
 <p>La méthode <em>Lire</em> est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> Lire() {</span>
 <span class="odt-code-line">            <span style="color:#008000">// suivi</span></span>
 <span class="odt-code-line">            <span style="color:#2b91af">Console</span>.WriteLine(<span style="color:#a31515">&quot;Méthode [Lire] démarrée par le thread n° {0}&quot;</span>, <span style="color:#2b91af">Thread</span>.CurrentThread.Name);</span>
@@ -2310,7 +2310,7 @@
 <li>ligne 27 : le <em>lock</em> se termine, le jeton <em>peutLire</em> est relâché. Un thread de lecture pourrait alors l&#x27;acquérir ligne 5 mais il ne passerait pas la condition d&#x27;accès puisque le booléen <em>lectureAutorisée</em> est à faux. Par ailleurs, tous les threads qui sont en attente du jeton <em>peutLire</em> le restent car l&#x27;opération <em>PulseAll</em>(<em>peutLire</em>) n&#x27;a pas encore eu lieu.</li>
 </ul>
 <p>La méthode <em>Ecrire</em> est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> Ecrire() {</span>
 <span class="odt-code-line">            <span style="color:#008000">// suivi</span></span>
 <span class="odt-code-line">            <span style="color:#2b91af">Console</span>.WriteLine(<span style="color:#a31515">&quot;Méthode [Ecrire] démarrée par le thread n° {0}&quot;</span>, <span style="color:#2b91af">Thread</span>.CurrentThread.Name);</span>
@@ -2455,7 +2455,7 @@
 </ol>
 <p>où <em>WaitCallBack</em> est toute méthode ayant la signature <em>void WaitCallBack(object)</em>. La méthode 1 demande à un thread d&#x27;exécuter la méthode <em>WaitCallBack</em> sans lui passer de paramètre. La méthode 2 fait la même chose mais en passant un paramètre de type <em>object</em> à la méthode  <em>WaitCallBack</em>.</p>
 <p>Voici un programme illustrant ces concepts :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System;</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Threading;</span></span>
 <span class="odt-code-line"></span>
@@ -2617,7 +2617,7 @@
 <li>les objets <em>BackgroundWorker</em> appartiennent à un pool et sont recyclés selon les besoins. Une application qui a besoin d&#x27;un objet <em>BackgroundWorker</em> l&#x27;obtiendra auprès du pool qui lui donnera un thread déjà existant mais inutilisé. Le fait de recycler ainsi les threads plutôt que de créer à chaque fois un thread neuf, améliore les performances.</li>
 </ul>
 <p>Nous utilisons cet outil sur l&#x27;application précédente dans le cas où l&#x27;accès au guichet est non contrôlé :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Threading;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.ComponentModel;</span>
@@ -2722,7 +2722,7 @@
 <li>ligne 54 : le thread est lancé</li>
 </ul>
 <p>Les méthodes <em>Lire</em> et <em>Ecrire</em> restent inchangées. La méthode <em>EndLecteur</em> est exécutée à la fin de chaque thread lecteur. Son code est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> EndLecteur(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">RunWorkerCompletedEventArgs</span> infos) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// incrémentation nbre de lecteurs terminés</span></span>
 <span class="odt-code-line">            <span style="color:#0000ff">lock</span> (appli) {</span>
@@ -2748,7 +2748,7 @@
 <li>la remontée d&#x27;une exception lancée dans la tâche</li>
 <li>le passage d&#x27;un paramètre d&#x27;E/S à la tâche</li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Threading;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.ComponentModel;</span>
@@ -2821,7 +2821,7 @@
 <li>ligne 29 : le thread n° 4 est annulé</li>
 </ul>
 <p>Tous les threads exécutent la méthode <em>Sleep</em> suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> Sleep(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">DoWorkEventArgs</span> infos) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// on exploite le paramètre infos</span></span>
 <span class="odt-code-line">            <span style="color:#2b91af">Data</span> data = (<span style="color:#2b91af">Data</span>)infos.Argument;</span>
@@ -2854,7 +2854,7 @@
 <li>ligne 16 : le thread peut rendre un résultat au thread qui l&#x27;a lancé. Il place ce résultat dans <em>infos.Result</em>.</li>
 </ul>
 <p>Une fois terminés, les threads exécutent la méthode <em>End</em> suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="color:#0000ff">public</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> End(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">RunWorkerCompletedEventArgs</span> infos) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// on exploite le paramètre infos pour afficher le résultat de l&#x27;exécution</span></span>
 <span class="odt-code-line">            <span style="color:#008000">// exception ?</span></span>
@@ -2928,7 +2928,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000668000001133EA847C6.png" style="display:inline-block; margin:4px;width:13.019cm;height:2.18cm;" class="odt-zoomable" data-zoom-src="images/1000000000000668000001133EA847C6.png" /></td></tr></table>
 
 <p>Supposons que la couche [dao] gère une base d&#x27;articles et que son interface soit initialement la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap8 {</span>
@@ -2946,7 +2946,7 @@
 <li>ligne 7 : pour supprimer tous les articles de la base</li>
 </ul>
 <p>Ultérieurement, apparaît le besoin d&#x27;une méthode pour insérer un tableau d&#x27;articles à l&#x27;aide d&#x27;une transaction parce qu&#x27;on souhaite fonctionner en tout ou rien : soit tous les articles sont insérés soit aucun. On peut alors modifier l&#x27;interface pour intégrer ce nouveau besoin :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap8 {</span>
@@ -3021,7 +3021,7 @@
 
 <p><u><strong>Interface de la couche [dao]</strong></u></p>
 <p>L&#x27;interface <strong>IDao</strong> de la couche [dao] sera la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap8 {</span>
@@ -3040,7 +3040,7 @@
 </ul>
 <p><u><strong>Interface de la couche [metier]</strong></u></p>
 <p>L&#x27;interface <strong>IMetier</strong> de la couche [metier] sera la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap8 {</span>
@@ -3061,7 +3061,7 @@
 </ul>
 <p><u><strong>Implémentation de la couche [metier]</strong></u></p>
 <p>L&#x27;implémentation <strong>Metier</strong> de l&#x27;interface <strong>IMetier</strong> sera la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Data;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Data.SqlServerCe;</span>
@@ -3140,7 +3140,7 @@
 </ul>
 <p><u><strong>Implémentation de la couche [dao]</strong></u></p>
 <p>L&#x27;implémentation <strong>Dao</strong> de l&#x27;interface <strong>IDao</strong> sera la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Data;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Data.SqlServerCe;</span>
@@ -3245,7 +3245,7 @@
 <li>lignes 49-51 : il faut se souvenir que s&#x27;il n&#x27;y avait pas de transaction, une nouvelle connexion a été ouverte avec la base, lignes 26-30. Dans ce cas, elle doit être fermée. S&#x27;il y avait une transaction, la connexion ne doit pas être fermée car c&#x27;est la couche [metier] qui la gère.</li>
 </ul>
 <p>Les deux autres méthodes reprennent ce qui a été vu dans le chapitre &quot;Bases de données&quot; :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line">        <span style="color:#008000">// liste des articles</span></span>
 <span class="odt-code-line">        <span style="color:#0000ff">public</span> <span style="color:#2b91af">List</span>&lt;<span style="color:#2b91af">Article</span>&gt; GetAllArticles() {</span>
 <span class="odt-code-line">            <span style="color:#008000">// liste des articles - vide au départ</span></span>
@@ -3281,7 +3281,7 @@
 
 <p><u><strong>L&#x27;application [console] de test</strong></u></p>
 <p>L&#x27;application [console] de test est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Configuration;</span>
 <span class="odt-code-line"></span>

@@ -1081,7 +1081,7 @@
 <li>[12] : l&#x27;application générée peut être exécutée par (Ctrl-F5). La fenêtre [Form1] s&#x27;affiche. On peut la déplacer, la redimensionner et la fermer. On a donc les éléments de base d&#x27;une fenêtre graphique.</li>
 </ul>
 <p>La classe principale [Program.cs] est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Windows.Forms;</span>
 <span class="odt-code-line"></span>
@@ -1110,7 +1110,7 @@
 <li>ligne 13 : la seule ligne indispensable de la méthode [Main] : instancie la classe [Form1] qui est la classe du formulaire et lui demande de s&#x27;exécuter.</li>
 </ul>
 <p>Le fichier source [Form1.cs] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Windows.Forms;</span>
 <span class="odt-code-line"></span>
@@ -1373,7 +1373,7 @@
 <li>[2] : la colonne de droite contient le nom de la procédure appelée lorsque l&#x27;événement correspondant se produit.</li>
 <li>[3] : si on double-clique sur la cellule de l&#x27;événement <em>Click</em>, on passe alors automatiquement dans la fenêtre de code pour écrire le gestionnaire de l&#x27;événement <em>Click</em> sur le bouton <em>buttonAfficher</em> :</li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Windows.Forms;</span>
 <span class="odt-code-line"></span>
@@ -1404,7 +1404,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000074B000002C59EC0E723.png" style="display:inline-block; margin:4px;width:17.997cm;height:6.833cm;" class="odt-zoomable" data-zoom-src="images/100000000000074B000002C59EC0E723.png" /></td></tr></table>
 
 <p>Le code réalisant cela pourrait-être le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> buttonAfficher_Click(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// on affiche le texte qui a été saisi dans le TextBox textboxSaisie</span></span>
 <span class="odt-code-line">            <span style="color:#0000ff">string</span> texte = textBoxSaisie.Text.Trim();</span>
@@ -1525,7 +1525,7 @@
 <li>ne rendant aucun résultat</li>
 </ul>
 <p>C&#x27;est le cas de la méthode de gestion du clic sur le bouton <em>buttonAfficher</em> qui a été générée par Visual Studio :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> buttonAfficher_Click(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e);</span>
 </code></pre></div>
 
@@ -1548,7 +1548,7 @@
 
 <p>Cette instruction ajoute une méthode de type <em>EventHandler</em> à la liste des méthodes du champ <em>buttonAfficher.Click</em>. Ces méthodes seront appelées à chaque fois que l&#x27;événement <em>Click</em> sur le composant <em>buttonAfficher</em> sera détecté. Il n&#x27;y en a souvent qu&#x27;une. On l&#x27;appelle le &quot;gestionnaire de l&#x27;événement&quot;.</p>
 <p>Revenons sur la signature de <em>EventHandler</em> :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> delegate <span style="color:#0000ff">void</span> EventHandler(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e);</span>
 </code></pre></div>
 
@@ -1590,7 +1590,7 @@
 <li>[2] : les trois événements traités</li>
 </ul>
 <p>Le code de [Form1.cs] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Windows.Forms;</span>
 <span class="odt-code-line"></span>
@@ -1634,7 +1634,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>n°</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>type</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>nom</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>rôle</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">1</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">textBoxSaisie</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">champ de saisie</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">2</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Label</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">labelControle</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">affiche le texte de 1 en temps réel</p><p style="margin:0;">AutoSize=False, Text=(rien)</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">3</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Button</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">buttonEffacer</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour effacer les champs 1 et 2</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">4</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Button</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">buttonQuitter</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour quitter l&#x27;application</p></td></tr></table>
 
 <p>Le code de cette application est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Windows.Forms;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap5 {</span>
@@ -1707,7 +1707,7 @@
 
 <p>L&#x27;application permet de taper des lignes directement dans [1] ou d&#x27;en ajouter via [2] et [3].</p>
 <p>Le code de l&#x27;application est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Windows.Forms;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
@@ -1815,7 +1815,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001010000010F67311BAC.png" style="display:inline-block; margin:4px;width:4.761cm;height:5.02cm;" class="odt-zoomable" data-zoom-src="images/10000000000001010000010F67311BAC.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le code de l&#x27;application est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Windows.Forms;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap5 {</span>
@@ -1900,7 +1900,7 @@
 </code></pre></div>
 
 <p>L&#x27;état du bouton <em>Ajouter</em> est contrôlé par le contenu du champ de saisie. C&#x27;est l&#x27;événement <em>TextChanged</em> qui nous permet de suivre les changements de ce contenu :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> textBoxSaisie_TextChanged(<span style="color:#0000ff">object</span> sender, System.<span style="color:#2b91af">EventArgs</span> e) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// le contenu de textBoxSaisie a changé</span></span>
 <span class="odt-code-line">            <span style="color:#008000">// le bouton Ajouter n&#x27;est allumé que si la saisie est non vide</span></span>
@@ -1910,7 +1910,7 @@
 </code></pre></div>
 
 <p>L&#x27;état des boutons de transfert dépend du fait qu&#x27;un élément a été sélectionné ou non dans la liste qu&#x27;ils contrôlent :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> listBox1_SelectedIndexChanged(<span style="color:#0000ff">object</span> sender, System.<span style="color:#2b91af">EventArgs</span> e) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// un élément a été sélectionné</span></span>
 <span class="odt-code-line">            <span style="color:#008000">// on allume le bouton de transfert 1 vers 2</span></span>
@@ -1925,7 +1925,7 @@
 </code></pre></div>
 
 <p>Le code associé au clic sur le bouton <em>Ajouter</em> est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> buttonAjouter_Click(<span style="color:#0000ff">object</span> sender, System.<span style="color:#2b91af">EventArgs</span> e) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// ajout d&#x27;un nouvel élément à la liste 1</span></span>
 <span class="odt-code-line">            listBox1.Items.Add(textBoxSaisie.Text.Trim());</span>
@@ -1939,7 +1939,7 @@
 </code></pre></div>
 
 <p>On notera la méthode <em>Focus</em> qui permet de mettre le &quot;focus&quot; sur un contrôle du formulaire. Le code associé au clic sur les boutons <em>Effacer</em> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> buttonEffacer1_Click(<span style="color:#0000ff">object</span> sender, System.<span style="color:#2b91af">EventArgs</span> e) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// on efface la liste 1</span></span>
 <span class="odt-code-line">            listBox1.Items.Clear();</span>
@@ -1956,7 +1956,7 @@
 </code></pre></div>
 
 <p>Le code de transfert des éléments sélectionnés d&#x27;une liste vers l&#x27;autre :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> button1vers2_Click(<span style="color:#0000ff">object</span> sender, System.<span style="color:#2b91af">EventArgs</span> e) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// transfert de l&#x27;élément sélectionné dans Liste 1 dans Liste 2</span></span>
 <span class="odt-code-line">            transfert(listBox1, button1vers2, buttonEffacer1, listBox2, button2vers1, buttonEffacer2);</span>
@@ -2023,7 +2023,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051C0000015F62996113.png" style="display:inline-block; margin:4px;width:10.38cm;height:2.79cm;" class="odt-zoomable" data-zoom-src="images/100000000000051C0000015F62996113.png" /></td></tr></table>
 
 <p>Dans l&#x27;onglet <em>événements</em> [1], on associe la méthode <em>affiche</em> [2] à l&#x27;événement <em>CheckChanged</em>. Cela signifie que l&#x27;on souhaite que le clic sur l&#x27;option <em>A1</em> soit traitée par une méthode appelée <em>affiche</em>. Visual studio génère automatiquement la méthode <em>affiche</em> dans la fenêtre de code :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> affiche(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e) {</span>
 <span class="odt-code-line">        }</span>
 </code></pre></div>
@@ -2041,7 +2041,7 @@
 </code></pre></div>
 
 <p>La méthode <em>affiche</em> est complétée comme suit :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> affiche(<span style="color:#0000ff">object</span> sender, System.<span style="color:#2b91af">EventArgs</span> e) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// affiche l&#x27;état du bouton radio ou de la case à cocher</span></span>
 <span class="odt-code-line">            <span style="color:#008000">// est-ce un checkbox ?</span></span>
@@ -2083,7 +2083,7 @@
 </ul>
 <p>Un composant <strong>NumericUpDown</strong> est proche du variateur : il a lui aussi les propriétés <em>Minimum</em>, <em>Maximum</em> et <em>Value</em>, par défaut 0, 100, 0. Mais ici, la propriété <em>Value</em> est affichée dans une boîte de saisie faisant partie intégrante du contrôle. L&#x27;utilisateur peut lui même modifier cette valeur sauf si on a mis la propriété <em>ReadOnly</em> du contrôle à vrai. La valeur de l&#x27;incrément est fixée par la propriété <em>Increment</em>, par défaut 1. L&#x27;événement principal du composant <em>NumericUpDown</em> est celui qui signale un changement de valeur : l&#x27;événement <strong>ValueChanged</strong></p>
 <p>Le code de l&#x27;application est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Windows.Forms;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap5 {</span>
@@ -2175,7 +2175,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000008110000016BC486C293.png" style="display:inline-block; margin:4px;width:16.39cm;height:2.88cm;" class="odt-zoomable" data-zoom-src="images/10000000000008110000016BC486C293.png" /></td></tr></table>
 
 <p>Le code de la procédure <em>affiche</em> est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> affiche(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">MouseEventArgs</span> e) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// mvt souris - on affiche les coordonnées (X,Y) de celle-ci</span></span>
 <span class="odt-code-line">            labelPositionSouris.Text = <span style="color:#a31515">&quot;(&quot;</span> + e.X + <span style="color:#a31515">&quot;,&quot;</span> + e.Y + <span style="color:#a31515">&quot;)&quot;</span>;</span>
@@ -2187,7 +2187,7 @@
 
 <p>Cette propriété permet de fixer la forme du curseur de souris lorsque celle-ci entre dans le domaine du contrôle. Ainsi dans notre exemple, nous avons fixé le curseur à <strong>Default</strong> pour le formulaire lui-même [2], <strong>Hand</strong> pour la liste 2 [3] et à <strong>Cross</strong> pour le bouton 3 [4].</p>
 <p>Par ailleurs, pour détecter les entrées et sorties de la souris sur la liste 2, nous traitons les événements <em>MouseEnter</em> et <em>MouseLeave</em> de cette même liste :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> listBoxEvts_MouseEnter(<span style="color:#0000ff">object</span> sender, System.<span style="color:#2b91af">EventArgs</span> e) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// on signale l&#x27;évt</span></span>
 <span class="odt-code-line">            listBoxEvts.Items.Insert(0, <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;MouseEnter à {0:hh:mm:ss}&quot;</span>,<span style="color:#2b91af">DateTime</span>.Now));</span>
@@ -2200,7 +2200,7 @@
 </code></pre></div>
 
 <p>Pour traiter les clics sur le formulaire, nous traitons les événements <em>MouseDown</em> et <em>MouseUp</em> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> listBoxEvts_MouseDown(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">MouseEventArgs</span> e) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// on signale l&#x27;évt</span></span>
 <span class="odt-code-line">            listBoxEvts.Items.Insert(0, <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;MouseDown à {0:hh:mm:ss}&quot;</span>, <span style="color:#2b91af">DateTime</span>.Now));</span>
@@ -2218,7 +2218,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EC000000D3B2B79FB2.png" style="display:inline-block; margin:4px;width:4.369cm;height:3.911cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EC000000D3B2B79FB2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Enfin, le code du gestionnaire de clic sur le bouton <em>Effacer</em> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> buttonEffacer_Click(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e) {</span>
 <span class="odt-code-line">            listBoxEvts.Items.Clear();</span>
 <span class="odt-code-line">}</span>
@@ -2266,13 +2266,13 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004EB000001C51B8B715C.png" style="display:inline-block; margin:4px;width:9.991cm;height:3.59cm;" class="odt-zoomable" data-zoom-src="images/10000000000004EB000001C51B8B715C.png" /></td></tr></table>
 
 <p>Dans l&#x27;onglet <em>événements</em> [1], on associe la méthode <em>affiche</em> [2] à l&#x27;événement <em>Click</em>. Cela signifie que l&#x27;on souhaite que le clic sur l&#x27;option <em>A1</em> soit traitée par une méthode appelée <em>affiche</em>. Visual studio génère automatiquement la méthode <em>affiche</em> dans la fenêtre de code :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> affiche(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e) {</span>
 <span class="odt-code-line">        }</span>
 </code></pre></div>
 
 <p>Dans cette méthode, nous nous contenterons d&#x27;afficher dans le label <em>labelStatut</em> la propriété <em>Text</em> de l&#x27;option de menu qui a été cliquée :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> affiche(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// affiche dans le TextBox le nom du sous-menu choisi</span></span>
 <span class="odt-code-line">            labelStatut.Text = ((<span style="color:#2b91af">ToolStripMenuItem</span>)sender).Text;</span>
@@ -2297,7 +2297,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>N°</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>type</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>nom</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>rôle</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">1</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBoxLignes</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">texte tapé par l&#x27;utilisateur ou chargé à partir d&#x27;un fichier</p><p style="margin:0;"><i>MultiLine</i>=True, <i>ScrollBars</i>=Both, <i>AccepReturn</i>=True, <i>AcceptTab</i>=True</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">2</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Button</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">buttonSauvegarder</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">permet de sauvegarder le texte de [1] dans un fichier texte</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">3</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Button</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">buttonCharger</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">permet de charger le contenu d&#x27;un fichier texte dans [1]</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">4</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Button</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">buttonEffacer</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">efface le contenu de [1]</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">5</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">SaveFileDialog</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">saveFileDialog1</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">composant permettant de choisir le nom et l&#x27;emplacement du fichier de sauvegarde de [1]. Ce composant est pris dans la barre d&#x27;outils [7] et simplement déposé sur le formulaire. Il est alors enregistré mais il n&#x27;occupe pas de place sur le formulaire. C&#x27;est un composant non visuel.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">6</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">OpenFileDialog</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">openFileDialog1</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">composant permettant de choisir le fichier à charger dans [1].</p></td></tr></table>
 
 <p>Le code associé au bouton <em>Effacer</em> est simple :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> buttonEffacer_Click(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// on met la chaîne vide dans le TexBox</span></span>
 <span class="odt-code-line">            textBoxLignes.Text = <span style="color:#a31515">&quot;&quot;</span>;</span>
@@ -2340,7 +2340,7 @@
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">boutons <b>Enregistrer/Annuler</b>. Si le bouton <i>Enregistrer</i> est utilisé, la fonction <i>ShowDialog</i> rend le résultat <b>DialogResult.OK</b></p></td></tr></table>
 
 <p>La procédure de sauvegarde peut s&#x27;écrire ainsi :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> buttonSauvegarder_Click(<span style="color:#0000ff">object</span> sender, System.<span style="color:#2b91af">EventArgs</span> e) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// on sauvegarde la boîte de saisie dans un fichier texte</span></span>
 <span class="odt-code-line">            <span style="color:#008000">// on paramètre la boîte de dialogue savefileDialog1</span></span>
@@ -2397,7 +2397,7 @@
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">boutons <b>Ouvrir/Annuler</b>. Si le bouton <i>Ouvrir</i> est utilisé, la fonction <i>ShowDialog</i> rend le résultat <b>DialogResult.OK</b></p></td></tr></table>
 
 <p>La procédure de chargement du fichier texte peut s&#x27;écrire ainsi :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> buttonCharger_Click(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// on charge un fichier texte dans la boîte de saisie</span></span>
 <span class="odt-code-line">            <span style="color:#008000">// on paramètre la boîte de dialogue openfileDialog1</span></span>
@@ -2453,7 +2453,7 @@
 <li>[2] : si l&#x27;utilisateur quitte la boîte de dialogue avec le bouton <em>OK</em>, le résultat de la méthode <em>ShowDialog</em> est <em>DialogResult.OK</em> et la police choisie est dans la propriété <em>Font</em> de l&#x27;objet <em>FontDialog</em> utilisé.</li>
 </ul>
 <p>Nous avons désormais les éléments pour traiter les clics sur les boutons <em>Couleur</em> et <em>Police</em> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> buttonCouleur_Click(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e) {<span style="color:#008000">// choix d&#x27;une couleur de texte</span></span>
 <span class="odt-code-line">            <span style="color:#0000ff">if</span> (colorDialog1.ShowDialog() == <span style="color:#2b91af">DialogResult</span>.OK) {</span>
 <span class="odt-code-line">                <span style="color:#008000">// on change la propriété Forecolor du TextBox</span></span>
@@ -2497,7 +2497,7 @@
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">rend le timer actif (true) ou inactif (false)</p></td></tr></table>
 
 <p>Dans notre exemple le timer s&#x27;appelle <em>timer1</em> et <em>timer1.Interval</em> est mis à 1000 ms (1s). L&#x27;événement <em>Tick</em> se produira donc toutes les secondes. Le clic sur le bouton Arrêt/Marche est traité par la procédure <em>buttonArretMarche_Click</em> suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Windows.Forms;</span>
 <span class="odt-code-line"></span>
@@ -2550,7 +2550,7 @@
 <li>ligne 31 : on passe le libellé du bouton à &quot;Marche&quot;.</li>
 </ul>
 <p>Il nous reste à traiter l&#x27;événement <em>Tick</em> sur l&#x27;objet <em>timer1</em>, événement qui se produit toutes les secondes :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> timer1_Tick(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e) {</span>
 <span class="odt-code-line">            <span style="color:#008000">// une seconde s&#x27;est écoulée</span></span>
 <span class="odt-code-line">            <span style="color:#2b91af">DateTime</span> maintenant = <span style="color:#2b91af">DateTime</span>.Now;</span>
@@ -2604,7 +2604,7 @@
 <a id="impots-v6-program"></a></p>
 <h3 id="762-la-classe-programcs">7.6.2. La classe [Program.cs]</h3>
 <p>La classe [Program.cs] lance l&#x27;application. Son code est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Windows.Forms;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Spring.Context;</span>
@@ -2742,7 +2742,7 @@
 <li>si lorsque le calcul est lancé, il s&#x27;avère que le salaire est incorrect, l&#x27;erreur est signalée [9]</li>
 </ul>
 <p>Le code de la classe est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Windows.Forms;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Metier;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -2812,7 +2812,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>n°</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>type</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>nom</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>rôle</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">1</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">TextBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">textBoxErreur</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><i>Multiline</i>=True, <i>Scrollbars</i>=Both</p></td></tr></table>
 
 <p>Le code de la classe est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Windows.Forms;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap5 {</span>

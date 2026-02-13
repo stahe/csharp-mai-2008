@@ -818,7 +818,7 @@
 <li>ne rendant aucun résultat</li>
 </ul>
 <p>Une méthode correspondant au modèle défini par <em>EventHandler</em> pourrait être la suivante :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> buttonAfficher_Click(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e);</span>
 </code></pre></div>
 
@@ -876,7 +876,7 @@
 
 <p>L&#x27;enregistrement d&#x27;une méthode <em>fi</em> dans la variable <em>op</em> se fait par <em>op=new Opération(fi)</em> ou plus simplement par <em>op=fi.</em> Pour ajouter une méthode <em>fj</em> à la liste des fonctions déjà enregistrées, on écrit <em>op+= fj</em>. Pour enlever une méthode <em>fk</em> déjà enregistrée on écrit <em>op-=fk</em>. Si dans notre exemple on écrit <em>n=op(n1,n2)</em>, l&#x27;ensemble des méthodes enregistrées dans la variable <em>op</em> seront exécutées avec les paramètres <em>n1</em> et <em>n2</em>. Le résultat <em>n</em> récupéré sera celui de la dernière méthode exécutée. Il n&#x27;est pas possible d&#x27;obtenir les résultats produits par l&#x27;ensemble des méthodes. Pour cette raison, si on enregistre une liste de méthodes dans une fonction déléguée, celles-ci rendent le plus souvent un résultat de type <em>void</em>.</p>
 <p>Considérons l&#x27;exemple suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap6 {</span>
 <span class="odt-code-line">    <span style="color:#0000ff">class</span> <span style="color:#2b91af">Class1</span> {</span>
@@ -975,7 +975,7 @@
 <p><a id="refheading10401631168783983"></a></p>
 <h2 id="83-delegates-ou-interfaces">8.3. Delegates ou interfaces ?</h2>
 <p>Les notions de <em>delegates</em> et d&#x27;interfaces peuvent sembler assez proches et on peut se demander quelles sont exactement les différences entre ces deux notions. Prenons l&#x27;exemple suivant proche d&#x27;un exemple déjà étudié :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap6 {</span>
 <span class="odt-code-line">    <span style="color:#0000ff">class</span> <span style="color:#2b91af">Program1</span> {</span>
@@ -1018,7 +1018,7 @@
 </code></pre></div>
 
 <p>Ligne 20, la méthode <em>Execute</em> attend une référence sur un objet du type <em>delegate Opération</em> défini ligne 6. Cela permet de passer à la méthode <em>Execute</em>, différentes méthodes (lignes 26, 28, 32 et 36). Cette propriété de polymorphisme peut être obtenue également avec une interface :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap6 {</span>
@@ -1107,7 +1107,7 @@
 <ul>
 <li>une signature standard du <em>delegate</em> d&#x27;un événement</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">public</span><span class="w"> </span><span class="k">delegate</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">MyEventHandler</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">evtInfo</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>public delegate void MyEventHandler(object source, EventArgs evtInfo);
 </code></pre></div>
 <ul>
 <li><em>source</em> : l&#x27;objet qui a signalé l&#x27;événement</li>
@@ -1133,7 +1133,7 @@
 <li>seule une instance de type <em>C1</em> peut exécuter l&#x27;appel <em>Evt1(source,evtInfo)</em> qui déclenche l&#x27;exécution des méthodes abonnées à l&#x27;événement <em>Evt1.</em></li>
 </ul>
 <p>Le framework .NET fournit une méthode générique satisfaisant à la signature du <em>delegate</em> d&#x27;un événement :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">public</span><span class="w"> </span><span class="k">delegate</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="n">EventHandler</span><span class="o">&lt;</span><span class="n">TEventArgs</span><span class="o">&gt;</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="n">TEventArgs</span><span class="w"> </span><span class="n">evtInfo</span><span class="p">)</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TEventArgs</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">EventArgs</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>public delegate void EventHandler&lt;TEventArgs&gt;(object source, TEventArgs evtInfo) where TEventArgs : EventArgs
 </code></pre></div>
 <ul>
 <li>le <em>delegate</em> <em>EventHandler</em> utilise le type générique <em>TEventArgs</em> qui est le type de son 2ième paramètre</li>
@@ -1145,7 +1145,7 @@
 <li>définir  dans la classe C un événement de type <em>EventHandler&lt;XEventArgs&gt;</em>.</li>
 <li>définir  dans la classe C une méthode protégée </li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">protected</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnXHandler</span><span class="p">(</span><span class="n">XEventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>protected void OnXHandler(XEventArgs e);
 </code></pre></div>
 <p>destinée à &quot;publier&quot; l&#x27;événement X aux abonnés.</p>
 <p>Considérons l&#x27;exemple suivant :</p>
@@ -1155,7 +1155,7 @@
 <li>un programme console crée un émetteur et deux abonnés. Il saisit les températures au clavier et les enregistre dans une instance <em>Emetteur</em>. Si celle-ci est trop haute, l&#x27;instance  <em>Emetteur</em> publie l&#x27;événement <em>TemperatureTropHaute.</em></li>
 </ul>
 <p>Pour se conformer à la méthode conseillée de gestion des événements, nous définissons tout d&#x27;abord le type <em>TemperatureTropHauteEventArgs</em> pour encapsuler les informations sur l&#x27;événement :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap6 {</span>
@@ -1176,7 +1176,7 @@
 <li>ligne 6 : l&#x27;information encapsulée par la classe <em>TemperatureTropHauteEventArgs</em> est la température qui a provoqué l&#x27;événement <em>TemperatureTropHaute</em>.</li>
 </ul>
 <p>La classe <em>Emetteur</em> est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap6 {</span>
@@ -1221,7 +1221,7 @@
 <li>lignes 29-32 : l&#x27;événement <em>TemperatureTropHaute</em> est publié avec pour 1er paramètre l&#x27;émetteur lui-même et pour second paramètre l&#x27;objet <em>TemperatureTropHauteEventArgs</em> reçu en paramètre.</li>
 </ul>
 <p>La classe <em>Souscripteur</em> qui va s&#x27;abonner à l&#x27;événement <em>TemperatureTropHaute</em> est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap6 {</span>
@@ -1244,7 +1244,7 @@
 <li>l&#x27;abonnement à l&#x27;événement <em>TemperatureTropHaute</em> d&#x27;un objet <em>Emetteur</em> n&#x27;est pas fait dans la classe <em>Souscripteur</em>. Il sera fait par une classe externe.</li>
 </ul>
 <p>Le programme [Program.cs] lie tous ces éléments entre-eux :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap6 {</span>
 <span class="odt-code-line">    <span style="color:#0000ff">class</span> <span style="color:#2b91af">Program</span> {</span>

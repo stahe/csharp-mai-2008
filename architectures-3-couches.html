@@ -934,7 +934,7 @@
 <p><a id="refheading10400791168783983"></a></p>
 <h2 id="61-introduction">6.1. Introduction</h2>
 <p>Revenons sur la dernière version de l&#x27;application de calcul d&#x27;impôt :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap3 {</span>
@@ -1080,7 +1080,7 @@
 <li>les tranches d&#x27;impôt</li>
 </ul>
 <p>Dans notre application, la couche [dao] exploite des données existantes mais n&#x27;en crée pas de nouvelles. Une définition de l&#x27;interface de la couche [dao] pourrait être la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Entites;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Dao {</span>
@@ -1163,7 +1163,7 @@
 </code></pre></div>
 
 <p><u>L</u><u><em>&#x27;</em></u><u>exception </u><u><em>FileImpotException</em></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Entites {</span>
@@ -1194,7 +1194,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006B6000001683D85C8FF.png" style="display:inline-block; margin:4px;width:15.91cm;height:3.33cm;" class="odt-zoomable" data-zoom-src="images/10000000000006B6000001683D85C8FF.png" /></td></tr></table>
 
 <p>Rappelons l&#x27;interface de la couche [dao] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Entites;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Dao {</span>
@@ -1207,7 +1207,7 @@
 
 <p>Nous implémenterons cette interface de deux façons différentes.</p>
 <p>Tout d&#x27;abord avec la classe <em>HardwiredImpot</em> étudiée au paragraphe <a href="classes-stuctures-interfaces.html#impots-v2">4.10</a> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Entites;</span>
 <span class="odt-code-line"></span>
@@ -1239,7 +1239,7 @@
 <li>ligne 12 : implémentation de la propriété <em>TranchesImpot</em> de l&#x27;interface <em>IImpotDao.</em> Cette propriété est une propriété automatique. Elle implémente la méthode <em>get</em> de la propriété <em>TranchesImpot</em> de l&#x27;interface <em>IImpotDao.</em> On a de plus déclaré une méthode <em>set</em> privée donc interne à la classe afin que le constructeur des lignes 15-22 puisse initialiser le tableau des tranches d&#x27;impôt.</li>
 </ul>
 <p>L&#x27;interface <em>IImpotDao</em> sera également implémentée par la classe <em>FileImpot</em> étudiée au paragraphe <a href="classes-net-dusage-courant.html#impots-v3">5.8</a> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.IO;</span>
@@ -1341,7 +1341,7 @@
 </code></pre></div>
 
 <p>L&#x27;implémentation <em>ImpotMetier</em> de cette interface est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Entites;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Dao;</span>
 <span class="odt-code-line"></span>
@@ -1400,7 +1400,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006B700000180F1F14DF5.png" style="display:inline-block; margin:4px;width:15.921cm;height:3.56cm;" class="odt-zoomable" data-zoom-src="images/10000000000006B700000180F1F14DF5.png" /></td></tr></table>
 
 <p>Les classes de dialogue avec l&#x27;utilisateur des versions 2 et 3 étaient très proches. Celle de la version 2 était la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -1421,7 +1421,7 @@
 </code></pre></div>
 
 <p>et celle de la version 3 :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap3 {</span>
@@ -1452,7 +1452,7 @@
 
 <p>Seule change la façon d&#x27;instancier l&#x27;objet de type <em>IImpot</em> qui permet le calcul de l&#x27;impôt. Cet objet correspond ici à notre couche [métier].</p>
 <p>Pour une implémentation [dao] avec la classe <em>HardwiredImpot</em>, la classe de dialogue est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Metier;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Dao;</span>
@@ -1483,7 +1483,7 @@
 <li>ligne 18 : utilisation de la couche [metier] pour calculer l&#x27;impôt</li>
 </ul>
 <p>Pour une implémentation [dao] avec la classe <em>FileImpot</em>, la classe de dialogue est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Metier;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Dao;</span>
@@ -1530,7 +1530,7 @@
 </code></pre></div>
 
 <p>dans un cas et :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">// on crée les couches [metier et dao]</span>
 <span class="odt-code-line">            <span style="color:#2b91af">IImpotMetier</span> metier = <span style="color:#0000ff">null</span>;</span>
 <span class="odt-code-line">            <span style="color:#0000ff">try</span> {</span>
@@ -1547,7 +1547,7 @@
 
 <p>dans l&#x27;autre. Si on excepte la gestion de l&#x27;exception dans le cas 2, l&#x27;instanciation des couches [dao] et [metier] est similaire dans les deux applications. Une fois les couches [dao] et [metier] instanciées, le code de la couche [ui] est identique dans les deux cas. Ceci est du au fait que la couche [métier] est manipulée via son interface <em>IImpotMetier</em> et non via la classe d&#x27;implémentation de celle-ci. Changer la couche [metier] ou la couche [dao] de l&#x27;application sans changer leurs interfaces reviendra toujours à changer les seules lignes précédentes dans la couche [ui].</p>
 <p>Un autre exemple de souplesse amenée par cette architecture est celui de l&#x27;implémentation de la couche [métier] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Entites;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Dao;</span>
 <span class="odt-code-line"></span>
@@ -1615,7 +1615,7 @@
 <p>En [6], on voit la présence de la DLL [nunit.framework.dll]. C&#x27;est l&#x27;ajout de la référence [nunit.framework] qui a provoqué la copie de cette DLL dans le dossier d&#x27;exécution. Celui-ci est en effet l&#x27;un des dossiers qui seront explorés par le CLR (Common Language Runtime) .NET pour trouver les classes et interfaces référencées par le projet.</p>
 <p>Construisons une première classe de test NUnit. Pour cela, nous supprimons la classe [Program.cs] générée par défaut puis nous ajoutons une nouvelle classe [Nunit1.cs] au projet. Nous supprimons également les références inutiles [7].</p>
 <p>La classe de test <em>NUnit1</em> sera la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> NUnit.Framework;</span>
 <span class="odt-code-line"></span>
@@ -1719,7 +1719,7 @@
 </ul>
 <p>Pour corriger les erreurs, il suffit de corriger le projet C# et de le régénérer. NUnit détecte que la DLL qu&#x27;il teste a été changée et  charge la nouvelle automatiquement. Il suffit alors de relancer les tests.</p>
 <p>Considérons la nouvelle classe de test suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> NUnit.Framework;</span>
 <span class="odt-code-line"></span>
@@ -1899,7 +1899,7 @@
 <p>On ajoute la référence [nunit.framework] nécessaire aux tests [NUnit]</p>
 <p><u><strong>Les entités (cf [2] dans le projet)</strong></u></p>
 <p>La classe [TrancheImpot] est celle des versions précédentes. La classe [FileImpotException] de la version précédente est renommée en [ImpotException] pour la rendre plus générique et ne pas la lier à une couche [dao] particulière :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Entites {</span>
@@ -1923,7 +1923,7 @@
 
 <p><u><strong>La couche [dao] (cf [3] dans le projet)</strong></u></p>
 <p>L&#x27;interface [IImpotDao] est celle de la version précédente. Il en est de même pour la classe [HardwiredImpot]. La classe [FileImpot] évolue pour tenir compte du changement de l&#x27;exception [FileImpotException] en [ImpotException] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">...</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Dao {</span>
@@ -1972,7 +1972,7 @@
 </ul>
 <p><u><strong>Le test [Test1] (cf [4] dans le projet)</strong></u></p>
 <p>La classe [Test1] se contente d&#x27;afficher les tranches d&#x27;impôt à l&#x27;écran :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Dao;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Entites;</span>
@@ -2036,7 +2036,7 @@
 <p>Les résultats écran sont les mêmes que précédemment.</p>
 <p><u><strong>Le test NUnit [NUnit1] (cf [4] dans le projet)</strong></u></p>
 <p>Le test unitaire [NUnit1] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Dao;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Entites;</span>
@@ -2127,7 +2127,7 @@
 <p>L&#x27;interface [IImpotMetier] est celle de la version précédente. Il en est de même pour la classe [ImpotMetier].</p>
 <p><u><strong>Le test [Test1] (cf [4] dans le projet)</strong></u></p>
 <p>La classe [Test1] se contente de faire quelques calculs de salaire :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Dao;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Entites;</span>
@@ -2183,7 +2183,7 @@
 </code></pre></div></td></tr></table></div>
 <p><u><strong>Le test [NUnit1] (cf [4] dans le projet)</strong></u></p>
 <p>La classe de tests unitaires [NUnit1] reprend les quatre calculs précédents et en vérifie le résultat :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Dao;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Metier;</span>
 <span class="odt-code-line"><span style="color:#0000ff">using</span> NUnit.Framework;</span>
@@ -2505,7 +2505,7 @@
 <li>en [6] : on fait de [Dialogue2.cs] la classe principale du projet [ui].</li>
 </ul>
 <p>Le code suivant de [Dialogue.cs] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">            <span style="color:#008000">// on crée les couches [metier et dao]</span></span>
 <span class="odt-code-line">            <span style="color:#2b91af">IImpotMetier</span> metier = <span style="color:#0000ff">null</span>;</span>
 <span class="odt-code-line">            <span style="color:#0000ff">try</span> {</span>
@@ -2524,7 +2524,7 @@
 </code></pre></div>
 
 <p>devient le suivant dans [Dialogue2.cs] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">            <span style="color:#008000">// on crée les couches [metier et dao]</span></span>
 <span class="odt-code-line">            <span style="color:#2b91af">IApplicationContext</span> ctx = <span style="color:#0000ff">null</span>;</span>
 <span class="odt-code-line">            <span style="color:#0000ff">try</span> {</span>
@@ -2598,23 +2598,23 @@
 <span class="normal"><a href="#__codelineno-23-14">14</a></span>
 <span class="normal"><a href="#__codelineno-23-15">15</a></span>
 <span class="normal"><a href="#__codelineno-23-16">16</a></span>
-<span class="normal"><a href="#__codelineno-23-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="n">Chaîne</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">exceptions</span><span class="w"> </span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-23-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="n">Chaîne</span> <span class="n">des</span> <span class="n">exceptions</span> <span class="p">:</span>
 <a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="o">----------------------------------------</span>
-<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="n">System</span><span class="p">.</span><span class="n">Configuration</span><span class="p">.</span><span class="n">ConfigurationErrorsException</span><span class="p">:</span><span class="w"> </span><span class="n">Error</span><span class="w"> </span><span class="n">creating</span><span class="w"> </span><span class="n">context</span><span class="w"> </span><span class="err">&#39;</span><span class="n">spring</span><span class="p">.</span><span class="n">root</span><span class="err">&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">Could</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="err">&#39;</span><span class="n">C</span><span class="p">:</span><span class="err">\</span><span class="n">data</span><span class="err">\</span><span class="mi">2007</span><span class="o">-</span><span class="mi">2008</span><span class="err">\</span><span class="n">c</span><span class="err">#</span><span class="w"> </span><span class="mi">2008</span><span class="err">\</span><span class="n">poly</span><span class="err">\</span><span class="n">Chap4</span><span class="err">\</span><span class="n">ImpotsV5</span><span class="err">\</span><span class="n">ui</span><span class="err">\</span><span class="n">bin</span><span class="err">\</span><span class="n">Release</span><span class="err">\</span><span class="n">DataImpotInexistant</span><span class="p">.</span><span class="n">txt</span><span class="err">&#39;</span><span class="p">.</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="n">System</span><span class="o">.</span><span class="n">Configuration</span><span class="o">.</span><span class="n">ConfigurationErrorsException</span><span class="p">:</span> <span class="n">Error</span> <span class="n">creating</span> <span class="n">context</span> <span class="s1">&#39;spring.root&#39;</span><span class="p">:</span> <span class="n">Could</span> <span class="ow">not</span> <span class="n">find</span> <span class="n">file</span> <span class="s1">&#39;C:\data</span><span class="se">\200</span><span class="s1">7-2008\c# 2008\poly\Chap4\ImpotsV5\ui</span><span class="se">\b</span><span class="s1">in\Release\DataImpotInexistant.txt&#39;</span><span class="o">.</span>
 <a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="o">----------------------------------------</span>
-<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="n">Spring</span><span class="p">.</span><span class="n">Util</span><span class="p">.</span><span class="n">FatalReflectionException</span><span class="p">:</span><span class="w"> </span><span class="n">Cannot</span><span class="w"> </span><span class="n">instantiate</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="p">[</span><span class="n">Spring</span><span class="p">.</span><span class="n">Context</span><span class="p">.</span><span class="n">Support</span><span class="p">.</span><span class="n">XmlApplicationContext</span><span class="p">]</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="nn">ctor</span><span class="w"> </span><span class="p">[</span><span class="n">Void</span><span class="w"> </span><span class="p">.</span><span class="n">ctor</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Boolean</span><span class="p">,</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">String</span><span class="p">[])]</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="n">Exception</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">thrown</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">invocation</span><span class="p">.</span><span class="err">&#39;</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="n">Spring</span><span class="o">.</span><span class="n">Util</span><span class="o">.</span><span class="n">FatalReflectionException</span><span class="p">:</span> <span class="n">Cannot</span> <span class="n">instantiate</span> <span class="n">Type</span> <span class="p">[</span><span class="n">Spring</span><span class="o">.</span><span class="n">Context</span><span class="o">.</span><span class="n">Support</span><span class="o">.</span><span class="n">XmlApplicationContext</span><span class="p">]</span> <span class="n">using</span> <span class="n">ctor</span> <span class="p">[</span><span class="n">Void</span> <span class="o">.</span><span class="n">ctor</span><span class="p">(</span><span class="n">System</span><span class="o">.</span><span class="n">String</span><span class="p">,</span> <span class="n">Boolean</span><span class="p">,</span> <span class="n">System</span><span class="o">.</span><span class="n">String</span><span class="p">[])]</span> <span class="p">:</span> <span class="s1">&#39;Exception has been thrown by the target of an invocation.&#39;</span>
 <a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="o">----------------------------------------</span>
-<a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="n">System</span><span class="p">.</span><span class="n">Reflection</span><span class="p">.</span><span class="n">TargetInvocationException</span><span class="p">:</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">thrown</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">invocation</span><span class="p">.</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="n">System</span><span class="o">.</span><span class="n">Reflection</span><span class="o">.</span><span class="n">TargetInvocationException</span><span class="p">:</span> <span class="ne">Exception</span> <span class="n">has</span> <span class="n">been</span> <span class="n">thrown</span> <span class="n">by</span> <span class="n">the</span> <span class="n">target</span> <span class="n">of</span> <span class="n">an</span> <span class="n">invocation</span><span class="o">.</span>
 <a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="o">----------------------------------------</span>
-<a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="n">Spring</span><span class="p">.</span><span class="n">Objects</span><span class="p">.</span><span class="n">Factory</span><span class="p">.</span><span class="n">ObjectCreationException</span><span class="p">:</span><span class="w"> </span><span class="n">Error</span><span class="w"> </span><span class="n">creating</span><span class="w"> </span><span class="kt">object</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">name</span><span class="err">&#39;</span><span class="n">dao</span><span class="err">&#39;</span><span class="w"> </span><span class="n">defined</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="err">&#39;</span><span class="n">config</span><span class="w"> </span><span class="p">[</span><span class="n">spring</span><span class="o">/</span><span class="n">objects</span><span class="p">]</span><span class="err">&#39;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Initialization</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="kt">object</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Cannot</span><span class="w"> </span><span class="n">instantiate</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="p">[</span><span class="n">Dao</span><span class="p">.</span><span class="n">FileImpot</span><span class="p">]</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="nn">ctor</span><span class="w"> </span><span class="p">[</span><span class="n">Void</span><span class="w"> </span><span class="p">.</span><span class="n">ctor</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">String</span><span class="p">)]</span><span class="w"> </span><span class="p">:</span><span class="err">&#39;</span><span class="n">Exception</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">thrown</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">invocation</span><span class="p">.</span><span class="err">&#39;</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="n">Spring</span><span class="o">.</span><span class="n">Objects</span><span class="o">.</span><span class="n">Factory</span><span class="o">.</span><span class="n">ObjectCreationException</span><span class="p">:</span> <span class="n">Error</span> <span class="n">creating</span> <span class="nb">object</span> <span class="k">with</span> <span class="n">name</span><span class="s1">&#39;dao&#39;</span> <span class="n">defined</span> <span class="ow">in</span> <span class="s1">&#39;config [spring/objects]&#39;</span> <span class="p">:</span> <span class="n">Initialization</span> <span class="n">of</span> <span class="nb">object</span> <span class="n">failed</span> <span class="p">:</span> <span class="n">Cannot</span> <span class="n">instantiate</span> <span class="n">Type</span> <span class="p">[</span><span class="n">Dao</span><span class="o">.</span><span class="n">FileImpot</span><span class="p">]</span> <span class="n">using</span> <span class="n">ctor</span> <span class="p">[</span><span class="n">Void</span> <span class="o">.</span><span class="n">ctor</span><span class="p">(</span><span class="n">System</span><span class="o">.</span><span class="n">String</span><span class="p">)]</span> <span class="p">:</span><span class="s1">&#39;Exception has been thrown by the target of an invocation.&#39;</span>
 <a id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="o">----------------------------------------</span>
-<a id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="n">Spring</span><span class="p">.</span><span class="n">Util</span><span class="p">.</span><span class="n">FatalReflectionException</span><span class="p">:</span><span class="w"> </span><span class="n">Cannot</span><span class="w"> </span><span class="n">instantiate</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="p">[</span><span class="n">Dao</span><span class="p">.</span><span class="n">FileImpot</span><span class="p">]</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="nn">ctor</span><span class="w"> </span><span class="p">[</span><span class="n">Void</span><span class="w"> </span><span class="p">.</span><span class="n">ctor</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">String</span><span class="p">)]</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="n">Exception</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">thrown</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">targetof</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">invocation</span><span class="p">.</span><span class="err">&#39;</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="n">Spring</span><span class="o">.</span><span class="n">Util</span><span class="o">.</span><span class="n">FatalReflectionException</span><span class="p">:</span> <span class="n">Cannot</span> <span class="n">instantiate</span> <span class="n">Type</span> <span class="p">[</span><span class="n">Dao</span><span class="o">.</span><span class="n">FileImpot</span><span class="p">]</span> <span class="n">using</span> <span class="n">ctor</span> <span class="p">[</span><span class="n">Void</span> <span class="o">.</span><span class="n">ctor</span><span class="p">(</span><span class="n">System</span><span class="o">.</span><span class="n">String</span><span class="p">)]</span> <span class="p">:</span> <span class="s1">&#39;Exception has been thrown by the targetof an invocation.&#39;</span>
 <a id="__codelineno-23-12" name="__codelineno-23-12"></a><span class="o">----------------------------------------</span>
-<a id="__codelineno-23-13" name="__codelineno-23-13"></a><span class="n">System</span><span class="p">.</span><span class="n">Reflection</span><span class="p">.</span><span class="n">TargetInvocationException</span><span class="p">:</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">thrown</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">invocation</span><span class="p">.</span>
+<a id="__codelineno-23-13" name="__codelineno-23-13"></a><span class="n">System</span><span class="o">.</span><span class="n">Reflection</span><span class="o">.</span><span class="n">TargetInvocationException</span><span class="p">:</span> <span class="ne">Exception</span> <span class="n">has</span> <span class="n">been</span> <span class="n">thrown</span> <span class="n">by</span> <span class="n">the</span> <span class="n">target</span> <span class="n">of</span> <span class="n">an</span> <span class="n">invocation</span><span class="o">.</span>
 <a id="__codelineno-23-14" name="__codelineno-23-14"></a><span class="o">----------------------------------------</span>
-<a id="__codelineno-23-15" name="__codelineno-23-15"></a><span class="n">Entites</span><span class="p">.</span><span class="n">ImpotException</span><span class="p">:</span><span class="w"> </span><span class="n">Erreur</span><span class="w"> </span><span class="n">lors</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">lecture</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">fichier</span><span class="w"> </span><span class="n">DataImpotInexistant</span><span class="p">.</span><span class="n">txt</span>
+<a id="__codelineno-23-15" name="__codelineno-23-15"></a><span class="n">Entites</span><span class="o">.</span><span class="n">ImpotException</span><span class="p">:</span> <span class="n">Erreur</span> <span class="n">lors</span> <span class="n">de</span> <span class="n">la</span> <span class="n">lecture</span> <span class="n">du</span> <span class="n">fichier</span> <span class="n">DataImpotInexistant</span><span class="o">.</span><span class="n">txt</span>
 <a id="__codelineno-23-16" name="__codelineno-23-16"></a><span class="o">----------------------------------------</span>
-<a id="__codelineno-23-17" name="__codelineno-23-17"></a><span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">FileNotFoundException</span><span class="p">:</span><span class="w"> </span><span class="n">Could</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="err">&#39;</span><span class="n">C</span><span class="p">:</span><span class="err">\</span><span class="n">data</span><span class="err">\</span><span class="mi">2007</span><span class="o">-</span><span class="mi">2008</span><span class="err">\</span><span class="n">c</span><span class="err">#</span><span class="w"> </span><span class="mi">2008</span><span class="err">\</span><span class="n">poly</span><span class="err">\</span><span class="n">Chap4</span><span class="err">\</span><span class="n">ImpotsV5</span><span class="err">\</span><span class="n">ui</span><span class="err">\</span><span class="n">bin</span><span class="err">\</span><span class="n">Release</span><span class="err">\</span><span class="n">DataImpotInexistant</span><span class="p">.</span><span class="n">txt</span><span class="err">&#39;</span><span class="p">.</span>
+<a id="__codelineno-23-17" name="__codelineno-23-17"></a><span class="n">System</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">FileNotFoundException</span><span class="p">:</span> <span class="n">Could</span> <span class="ow">not</span> <span class="n">find</span> <span class="n">file</span> <span class="s1">&#39;C:\data</span><span class="se">\200</span><span class="s1">7-2008\c# 2008\poly\Chap4\ImpotsV5\ui</span><span class="se">\b</span><span class="s1">in\Release\DataImpotInexistant.txt&#39;</span><span class="o">.</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 17 : l&#x27;exception originelle de type [FileNotFoundException]</li>
