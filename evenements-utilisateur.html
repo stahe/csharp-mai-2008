@@ -823,15 +823,13 @@
 </code></pre></div>
 
 <p>Pour créer un objet de type <em>EventHandler</em>, on procède comme suit :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">EventHandler evtHandler=new EventHandler(méthode correspondant au prototype  défini par le type <span style="font-style:italic">EventHandler</span>);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>EventHandler evtHandler=new EventHandler(méthode correspondant au prototype  défini par le type EventHandler);
 </code></pre></div>
-
 <p>On pourra ainsi écrire :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>EventHandler evtHandler=new EventHandler(buttonAfficher_Click);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>EventHandler evtHandler=new EventHandler(buttonAfficher_Click);
 </code></pre></div>
 <p>Une variable de type <em>delegate</em> est en fait une liste de références sur des méthodes correspondant au modèle du <em>delegate</em>. Pour ajouter une nouvelle méthode <em>M</em> à la variable <em>evtHandler</em> ci-dessus, on utilise la syntaxe :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>evtHandler+=new EvtHandler(M);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>evtHandler+=new EvtHandler(M);
 </code></pre></div>
 <p>La notation += peut être utilisée même si <em>evtHandler</em> est une liste vide.</p>
 <p>L&#x27;instruction :</p>
@@ -840,7 +838,7 @@
 </code></pre></div>
 
 <p>ajoute une méthode de type <em>EventHandler</em> à la liste des méthodes de l&#x27;événement <em>buttonAfficher.Click</em>. Lorsque l&#x27;événement <em>Click</em> sur le composant buttonAfficher se produit, VB exécute l&#x27;instruction :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>            buttonAfficher.Click(source, evt);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>            buttonAfficher.Click(source, evt);
 </code></pre></div>
 <p>où :</p>
 <ul>
@@ -863,14 +861,14 @@
 <p>définit un type appelé O<em>pération</em> qui représente un prototype de fonction acceptant deux entiers et rendant un entier. C&#x27;est le mot clé <em>delegate</em> qui fait de <em>Opération</em> une définition de prototype de fonction.</p>
 <p>Une variable <em>op</em> de type <em>Opération</em> aura pour rôle d&#x27;enregistrer une liste de fonctions correspondant au prototype <em>Opération</em> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>int f1(int,int)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>int f1(int,int)
 </code></pre></div>
 </div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>int f2(int,int)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>int f2(int,int)
 </code></pre></div>
 </div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>...
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>int fn(int,int)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>...
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>int fn(int,int)
 </code></pre></div>
 </div></td></tr></table>
 
@@ -954,23 +952,23 @@
 <li>ligne 53 : le <em>delegate</em> <em>op</em> est exécuté : la méthode restante <em>Ajouter</em> va être exécutée.</li>
 </ul>
 <p>Les résultats de l&#x27;exécution sont les suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span>
-<span class="normal"><a href="#__codelineno-6-4">4</a></span>
-<span class="normal"><a href="#__codelineno-6-5">5</a></span>
-<span class="normal"><a href="#__codelineno-6-6">6</a></span>
-<span class="normal"><a href="#__codelineno-6-7">7</a></span>
-<span class="normal"><a href="#__codelineno-6-8">8</a></span>
-<span class="normal"><a href="#__codelineno-6-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>Augmenter(4,7)
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>n=18
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a>Ajouter(2,3)
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a>n=5
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a>Soustraire(2,3)
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a>n=-1
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a>Ajouter(0,0)
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a>Soustraire(0,0)
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a>Ajouter(1,1)
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span>
+<span class="normal"><a href="#__codelineno-7-8">8</a></span>
+<span class="normal"><a href="#__codelineno-7-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>Augmenter(4,7)
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>n=18
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>Ajouter(2,3)
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>n=5
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>Soustraire(2,3)
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>n=-1
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>Ajouter(0,0)
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>Soustraire(0,0)
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>Ajouter(1,1)
 </code></pre></div></td></tr></table></div>
 <p><a id="refheading10401631168783983"></a></p>
 <h2 id="83-delegates-ou-interfaces">8.3. Delegates ou interfaces ?</h2>
@@ -1085,12 +1083,12 @@
 <ul>
 <li>un type <em>delegate</em> est défini dans ou en-dehors de la classe C1 :</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>delegate TResult Evt(T1 param1, T2 param2, ...);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>delegate TResult Evt(T1 param1, T2 param2, ...);
 </code></pre></div>
 <ul>
 <li>la classe <em>C1</em> définit un champ de type <em>delegate</em> <em>Evt</em> :</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>public Evt Evt1;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>public Evt Evt1;
 </code></pre></div>
 <ul>
 <li>lorsque une instance <em>c1</em> de la classe <em>C1</em> voudra signaler un événement, elle exécutera son <em>delegate Evt1</em> en lui passant les paramètres définis par le <em>delegate Evt</em>. Toutes les méthodes enregistrées dans le <em>delegate</em> <em>Evt1</em> seront alors exécutées avec ces paramètres. On peut dire qu&#x27;elles ont été averties de l&#x27;événement <em>Evt1</em>.</li>
@@ -1107,7 +1105,7 @@
 <ul>
 <li>une signature standard du <em>delegate</em> d&#x27;un événement</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>public delegate void MyEventHandler(object source, EventArgs evtInfo);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>public delegate void MyEventHandler(object source, EventArgs evtInfo);
 </code></pre></div>
 <ul>
 <li><em>source</em> : l&#x27;objet qui a signalé l&#x27;événement</li>
@@ -1119,13 +1117,13 @@
 <p>une façon standard pour déclarer un événement de type <em>MyEventHandler</em> dans une classe :</p>
 </li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
-<span class="normal"><a href="#__codelineno-10-2">2</a></span>
-<span class="normal"><a href="#__codelineno-10-3">3</a></span>
-<span class="normal"><a href="#__codelineno-10-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>public Class C1{
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a>    public event MyEventHandler Evt1;
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a>...
-<a id="__codelineno-10-4" name="__codelineno-10-4"></a>}
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>public Class C1{
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>    public event MyEventHandler Evt1;
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>...
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>}
 </code></pre></div></td></tr></table></div>
 <p>Le champ E<em>vt1</em> est de type <em>delegate</em>. Le mot clé <em>event</em> est là pour restreindre les opérations qu&#x27;on peut faire sur lui :</p>
 <ul>
@@ -1133,7 +1131,7 @@
 <li>seule une instance de type <em>C1</em> peut exécuter l&#x27;appel <em>Evt1(source,evtInfo)</em> qui déclenche l&#x27;exécution des méthodes abonnées à l&#x27;événement <em>Evt1.</em></li>
 </ul>
 <p>Le framework .NET fournit une méthode générique satisfaisant à la signature du <em>delegate</em> d&#x27;un événement :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>public delegate void EventHandler&lt;TEventArgs&gt;(object source, TEventArgs evtInfo) where TEventArgs : EventArgs
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>public delegate void EventHandler&lt;TEventArgs&gt;(object source, TEventArgs evtInfo) where TEventArgs : EventArgs
 </code></pre></div>
 <ul>
 <li>le <em>delegate</em> <em>EventHandler</em> utilise le type générique <em>TEventArgs</em> qui est le type de son 2ième paramètre</li>
@@ -1145,7 +1143,7 @@
 <li>définir  dans la classe C un événement de type <em>EventHandler&lt;XEventArgs&gt;</em>.</li>
 <li>définir  dans la classe C une méthode protégée </li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>protected void OnXHandler(XEventArgs e);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>protected void OnXHandler(XEventArgs e);
 </code></pre></div>
 <p>destinée à &quot;publier&quot; l&#x27;événement X aux abonnés.</p>
 <p>Considérons l&#x27;exemple suivant :</p>
@@ -1289,13 +1287,13 @@
 <li>ligne 24 : si la température saisie est correcte, elle est transmise à l&#x27;objet <em>Emetteur</em> e1 qui déclenchera l&#x27;événement <em>TemperatureTropHaute</em> si la température est supérieure à 19 ° C.</li>
 </ul>
 <p>Les résultats de l&#x27;exécution sont les suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
-<span class="normal"><a href="#__codelineno-13-2">2</a></span>
-<span class="normal"><a href="#__codelineno-13-3">3</a></span>
-<span class="normal"><a href="#__codelineno-13-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>Température (rien pour arrêter) : 17
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a>Température (rien pour arrêter) : 21
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a>Souscripteur [s0] : la source [e] a signalé une température trop haute : [21]
-<a id="__codelineno-13-4" name="__codelineno-13-4"></a>Souscripteur [s1] : la source [e] a signalé une température trop haute : [21]
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>Température (rien pour arrêter) : 17
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>Température (rien pour arrêter) : 21
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a>Souscripteur [s0] : la source [e] a signalé une température trop haute : [21]
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>Souscripteur [s1] : la source [e] a signalé une température trop haute : [21]
 </code></pre></div></td></tr></table></div>
 
 
