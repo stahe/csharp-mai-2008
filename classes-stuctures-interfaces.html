@@ -577,17 +577,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4112-les-objets-temporaires" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1.12. Les objets temporaires
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#4113-methodes-de-lecture-et-decriture-des-attributs-prives" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -671,17 +660,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#423-redefinition-dune-methode-ou-dune-propriete" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2.3. Redéfinition d&#x27;une méthode ou d&#x27;une propriété
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#424-le-polymorphisme" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -725,17 +703,6 @@
     <span class="md-ellipsis">
       
         4.3.1. Introduction
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#432-un-exemple" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.3.2. Un exemple
       
     </span>
   </a>
@@ -1241,19 +1208,22 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>privé
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Un champ privé (private) n&#x27;est accessible que par les seules méthodes internes de la classe</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Un champ privé (private) n&#x27;est accessible que par les seules méthodes internes de la classe</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>public
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Un champ public (public) est accessible par toute méthode définie ou non au sein de la classe</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Un champ public (public) est accessible par toute méthode définie ou non au sein de la classe</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>protégé
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Un champ protégé (protected) n&#x27;est accessible que par les seules méthodes internes de la classe ou d&#x27;un objet dérivé (voir ultérieurement le concept d&#x27;héritage).</p></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Un champ protégé (protected) n&#x27;est accessible que par les seules méthodes internes de la classe ou d&#x27;un objet dérivé (voir ultérieurement le concept d&#x27;héritage).</div></td></tr></table>
 
 <p>En général, les données d&#x27;une classe sont déclarées <strong>privées</strong> alors que ses méthodes et propriétés sont déclarées <strong>publiques</strong>. Cela signifie que l&#x27;utilisateur d&#x27;un objet (le programmeur) </p>
 <ul>
-<li>n&#x27;aura pas accès directement aux données privées de l&#x27;objet</li>
-<li>pourra faire appel aux méthodes publiques de l&#x27;objet et notamment à celles qui donneront accès à ses données privées.</li>
+  <li>n&#x27;aura pas accès directement aux données privées de l&#x27;objet
+  </li>
+  <li>pourra faire appel aux méthodes publiques de l&#x27;objet et notamment à celles qui donneront accès à ses données privées.
+  </li>
 </ul>
+
 <p>La syntaxe de déclaration d&#x27;une classe C est la suivante :</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">public<span style="color:#000000"> </span>class<span style="color:#000000"> C{</span></span>
@@ -1545,7 +1515,7 @@
 <p>Lorsqu&#x27;on écrit :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Personne p3=new Personne(p1);
 </code></pre></div>
-<p>il y a création d&#x27;un nouvel objet<em> Personne</em>. Ce nouvel objet sera référencé par <em>p3</em>. Si on modifie l&#x27;objet &quot;pointé&quot; (ou référencé) par <em>p1</em>, on ne modifie en rien celui référencé par <em>p3</em>. C&#x27;est ce que montrent les résultats obtenus.</p>
+<p>il y a création d&#x27;un nouvel objet <em>Personne</em>. Ce nouvel objet sera référencé par <em>p3</em>. Si on modifie l&#x27;objet &quot;pointé&quot; (ou référencé) par <em>p1</em>, on ne modifie en rien celui référencé par <em>p3</em>. C&#x27;est ce que montrent les résultats obtenus.</p>
 <p><a id="refheading10399891168783983"></a></p>
 <h3 id="4111-passage-de-parametres-de-type-reference-dobjet">4.1.11. Passage de paramètres de type référence d&#x27;objet</h3>
 <p>Dans le chapitre précédent, nous avons étudié les modes de passage des paramètres d&#x27;une fonction lorsque ceux-ci représentaient un type C# simple représenté par une structure .NET. Voyons ce qui se passe lorsque la paramètre est une référence d&#x27;objet :</p>
@@ -1577,22 +1547,32 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 8 : définit 3 objets de type <em>StringBuilder</em>. Un objet <em>StringBuilder</em> est proche d&#x27;un objet <em>string.</em> Lorsqu&#x27;on manipule un objet <em>string</em>, on obtient en retour un nouvel objet <em>string</em>. Ainsi dans la séquence de code :</li>
+  <li>ligne 8 : définit 3 objets de type <i>StringBuilder</i>. Un objet <i>StringBuilder</i> est proche d&#x27;un objet <i>string.</i> Lorsqu&#x27;on manipule un objet <i>string</i>, on obtient en retour un nouvel objet <i>string</i>. Ainsi dans la séquence de code :
+  </li>
 </ul>
+
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
 <span class="normal"><a href="#__codelineno-24-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a>string s=&quot;une chaîne&quot;;
 <a id="__codelineno-24-2" name="__codelineno-24-2"></a>s=s.ToUpperCase();
 </code></pre></div></td></tr></table></div>
 <p>La ligne 1 crée un objet <em>string</em> en mémoire et s est son adresse. Ligne 2, <em>s.ToUpperCase()</em> crée un autre objet <em>string</em> en mémoire. Ainsi entre les lignes 1 et 2, <em>s</em> a changé de valeur (il pointe sur le nouvel objet). La classe <em>StringBuilder</em> elle, permet de transformer une chaîne sans qu&#x27;un second objet soit créé. C&#x27;est l&#x27;exemple donné plus haut :</p>
 <ul>
-<li>ligne 8 : 4 références [sb0, sb1, sb2, sb3] à des objets de type <em>StringBuilder</em></li>
-<li>ligne 10 : sont passées à la méthode <em>ChangeStringBuilder</em> avec des modes différents : <em>sb0</em>, <em>sb1</em> avec le mode par défaut, <em>sb2</em> avec le mot clé <strong>ref</strong>, <em>sb3</em> avec le mot clé <strong>out</strong>.</li>
-<li>lignes 15-22 : une méthode qui a les paramètres formels [sbf0, sbf1, sbf2, sbf3]. Les relations entre paramètres formels formels <em>sbfi</em> et effectifs <em>sbi</em> sont les suivantes :</li>
-<li><em>sbf0</em> et <em>sb0</em> sont, au démarrage de la méthode, deux <strong>références</strong> <strong>distinctes</strong> qui pointent sur le même objet (passage par valeur des adresses)</li>
-<li>idem pour <em>sbf1</em> et <em>sb1</em></li>
-<li><em>sbf2</em> et <em>sb2</em> sont, au démarrage de la méthode, une <strong>même référence</strong> sur le même objet (mot clé <em>ref</em>)</li>
-<li><em>sbf3</em> et <em>sb3</em> sont, après exécution de la méthode, une <strong>même référence</strong> sur le même objet (mot clé <em>out</em>) </li>
+  <li>ligne 8 : 4 références [sb0, sb1, sb2, sb3] à des objets de type <i>StringBuilder</i>
+  </li>
+  <li>ligne 10 : sont passées à la méthode <i>ChangeStringBuilder</i> avec des modes différents : <i>sb0</i>, <i>sb1</i> avec le mode par défaut, <i>sb2</i> avec le mot clé <b>ref</b>, <i>sb3</i> avec le mot clé <b>out</b>.
+  </li>
+  <li>lignes 15-22 : une méthode qui a les paramètres formels [sbf0, sbf1, sbf2, sbf3]. Les relations entre paramètres formels formels <i>sbfi</i> et effectifs <i>sbi</i> sont les suivantes :
+  </li>
+  <li><i>sbf0</i> et <i>sb0</i> sont, au démarrage de la méthode, deux <b>références</b> <b>distinctes</b> qui pointent sur le même objet (passage par valeur des adresses)
+  </li>
+  <li>idem pour <i>sbf1</i> et <i>sb1</i>
+  </li>
+  <li><i>sbf2</i> et <i>sb2</i> sont, au démarrage de la méthode, une <b>même référence</b> sur le même objet (mot clé <i>ref</i>)
+  </li>
+  <li><i>sbf3</i> et <i>sb3</i> sont, après exécution de la méthode, une <b>même référence</b> sur le même objet (mot clé <i>out</i>) 
+  </li>
 </ul>
+
 <p>Les résultats obtenus sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
 <span class="normal"><a href="#__codelineno-25-2">2</a></span>
@@ -1604,13 +1584,20 @@
 </code></pre></div></td></tr></table></div>
 <p>Explications :</p>
 <ul>
-<li><em>sb0</em> et <em>sbf0</em> sont deux références distinctes sur le même objet. Celui-ci a été modifié via <em>sbf0</em> - ligne 3. Cette modification peut être vue via <em>sb0</em> - ligne 4.</li>
-<li><em>sb1</em> et <em>sbf1</em> sont deux références distinctes sur le même objet. <em>sbf1</em> voit sa valeur modifiée dans la méthode et pointe désormais sur un nouvel objet - ligne 3. Cela ne change en rien la valeur de <em>sb1</em> qui continue à pointer sur le même objet - ligne 4.</li>
-<li><em>sb2</em> et <em>sbf2</em> sont une même référence sur le même objet. <em>sbf2</em> voit sa valeur modifiée dans la méthode et pointe désormais sur un nouvel objet - ligne 3. Comme <em>sbf2</em> et <em>sb2</em> sont une seule et même entité, la valeur de <em>sb2</em> a été également modifiée et <em>sb2</em> pointe sur le même objet que <em>sbf2</em> - lignes 3 et 4.</li>
-<li>avant appel de la méthode, <em>sb3</em> n&#x27;avait pas de valeur. Après la méthode, <em>sb3</em> reçoit la valeur de <em>sbf3</em>. On a donc deux références sur le même objet - lignes 3 et 4
-<a id="refheading10399911168783983"></a></li>
+  <li><i>sb0</i> et <i>sbf0</i> sont deux références distinctes sur le même objet. Celui-ci a été modifié via <i>sbf0</i> - ligne 3. Cette modification peut être vue via <i>sb0</i> - ligne 4.
+  </li>
+  <li><i>sb1</i> et <i>sbf1</i> sont deux références distinctes sur le même objet. <i>sbf1</i> voit sa valeur modifiée dans la méthode et pointe désormais sur un nouvel objet - ligne 3. Cela ne change en rien la valeur de <i>sb1</i> qui continue à pointer sur le même objet - ligne 4.
+  </li>
+  <li><i>sb2</i> et <i>sbf2</i> sont une même référence sur le même objet. <i>sbf2</i> voit sa valeur modifiée dans la méthode et pointe désormais sur un nouvel objet - ligne 3. Comme <i>sbf2</i> et <i>sb2</i> sont une seule et même entité, la valeur de <i>sb2</i> a été également modifiée et <i>sb2</i> pointe sur le même objet que <i>sbf2</i> - lignes 3 et 4.
+  </li>
+  <li>avant appel de la méthode, <i>sb3</i> n&#x27;avait pas de valeur. Après la méthode, <i>sb3</i> reçoit la valeur de <i>sbf3</i>. On a donc deux références sur le même objet - lignes 3 et 4
+<a id="refheading10399911168783983"></a>
+
+### 4.1.12. Les objets temporaires
+
+  </li>
 </ul>
-<h3 id="4112-les-objets-temporaires">4.1.12. Les objets temporaires</h3>
+
 <p>Dans une expression, on peut faire appel explicitement au constructeur d&#x27;un objet : celui-ci est construit, mais nous n&#x27;y avons pas accès (pour le modifier par exemple). Cet objet temporaire est construit pour les besoins d&#x27;évaluation de l&#x27;expression puis abandonné. L&#x27;espace mémoire qu&#x27;il occupait sera automatiquement récupéré ultérieurement par un programme appelé &quot;ramasse-miettes&quot; dont le rôle est de récupérer l&#x27;espace mémoire occupé par des objets qui ne sont plus référencés par des données du programme.</p>
 <p>Considérons le nouveau programme de test suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1933,7 +1920,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>public string Prenom;
 </code></pre></div>
 <p>On peut se demander s&#x27;il y a une différence entre les deux déclarations. Déclarer <em>public</em> un champ d&#x27;une classe est déconseillé. Cela rompt avec le concept d&#x27;encapsulation de l&#x27;état d&#x27;un objet, état qui doit être privé et exposé par des méthodes publiques.</p>
-<p>Si la propriété automatique est déclarée <em>virtuelle, </em>elle peut alors être redéfinie dans une classe fille :</p>
+<p>Si la propriété automatique est déclarée <em>virtuelle,</em> elle peut alors être redéfinie dans une classe fille :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">    <span style="color:#0000ff">class</span> <span style="color:#2b91af">Class1</span> {</span>
 <span class="odt-code-line">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">virtual</span> <span style="color:#0000ff">string</span> Prop { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
@@ -2038,10 +2025,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 7 : crée un tableau de 3 éléments de type P<em>ersonne</em>. Ces 3 éléments sont initialisés ici avec la valeur <em>null</em>, c.a.d. qu&#x27;ils ne référencent aucun objet. De nouveau, par abus de langage, on parle de tableau d&#x27;objets alors que ce n&#x27;est qu&#x27;un tableau de références d&#x27;objets. La création du tableau d&#x27;objets, qui est un objet lui-même (présence de <em>new</em>) ne crée aucun objet du type de ses éléments : il faut le faire ensuite.</li>
-<li>lignes 8-10 : création des 3 objets de type <em>Personne</em></li>
-<li>lignes 12-14 : affichage du contenu du tableau <em>amis</em></li>
+  <li>ligne 7 : crée un tableau de 3 éléments de type P<i>ersonne</i>. Ces 3 éléments sont initialisés ici avec la valeur <i>null</i>, c.a.d. qu&#x27;ils ne référencent aucun objet. De nouveau, par abus de langage, on parle de tableau d&#x27;objets alors que ce n&#x27;est qu&#x27;un tableau de références d&#x27;objets. La création du tableau d&#x27;objets, qui est un objet lui-même (présence de <i>new</i>) ne crée aucun objet du type de ses éléments : il faut le faire ensuite.
+  </li>
+  <li>lignes 8-10 : création des 3 objets de type <i>Personne</i>
+  </li>
+  <li>lignes 12-14 : affichage du contenu du tableau <i>amis</i>
+  </li>
 </ul>
+
 <p>On obtient les résultats suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
 <span class="normal"><a href="#__codelineno-38-2">2</a></span>
@@ -2165,10 +2156,14 @@
 
 <p>La classe <em>Enseignant</em> rajoute aux méthodes et attributs de la classe <em>P</em><em>ersonne</em> :</p>
 <ul>
-<li>ligne 4 : la classe <em>Enseignant</em> dérive de la classe <em>Personne</em></li>
-<li>ligne 6 : un attribut <em>section</em> qui est le n° de section auquel appartient l&#x27;enseignant dans le corps des enseignants (une section par discipline en gros). Cet attribut privé est accessible via la propriété publique <em>Section</em> des lignes 18-21</li>
-<li>ligne 9 : un nouveau constructeur permettant d&#x27;initialiser tous les attributs d&#x27;un enseignant</li>
+  <li>ligne 4 : la classe <i>Enseignant</i> dérive de la classe <i>Personne</i>
+  </li>
+  <li>ligne 6 : un attribut <i>section</i> qui est le n° de section auquel appartient l&#x27;enseignant dans le corps des enseignants (une section par discipline en gros). Cet attribut privé est accessible via la propriété publique <i>Section</i> des lignes 18-21
+  </li>
+  <li>ligne 9 : un nouveau constructeur permettant d&#x27;initialiser tous les attributs d&#x27;un enseignant
+  </li>
 </ul>
+
 <p><a id="refheading10400051168783983"></a></p>
 <h3 id="422-construction-dun-objet-enseignant">4.2.2. Construction d&#x27;un objet Enseignant</h3>
 <p>Une classe fille <strong>n&#x27;hérite pas des constructeurs</strong> de sa classe Parent. Elle doit alors définir ses propres constructeurs. Le constructeur de la classe <em>E</em><em>nseignant</em> est le suivant :</p>
@@ -2198,9 +2193,12 @@
 <p>On notera qu&#x27;à gauche du signe =, ce n&#x27;est pas l&#x27;attribut <em>section</em> de l&#x27;objet qui a été utilisé, mais la propriété <em>Section</em> qui lui est associée. Cela permet au constructeur de profiter des éventuels contrôles de validité que pourrait faire cette méthode. Cela évite de placer ceux-ci à deux endroits différents : le constructeur et la propriété.</p>
 <p>En résumé, le constructeur d&#x27;une classe dérivée :</p>
 <ul>
-<li>passe à sa classe de base les paramètres dont celle-ci a besoin pour se construire</li>
-<li>utilise les autres paramètres pour initialiser les attributs qui lui sont propres</li>
+  <li>passe à sa classe de base les paramètres dont celle-ci a besoin pour se construire
+  </li>
+  <li>utilise les autres paramètres pour initialiser les attributs qui lui sont propres
+  </li>
 </ul>
+
 <p>On aurait pu préférer écrire :</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">// constructeur</span>
@@ -2239,11 +2237,16 @@
 </code></pre></div></td></tr></table></div>
 <p>On voit que :</p>
 <ul>
-<li>un objet P<em>ersonne</em> (ligne 1) a été construit avant l&#x27;objet E<em>nseignant</em> (ligne 2)</li>
-<li>l&#x27;identité obtenue est celle de l&#x27;objet <em>Personne</em>
-<a id="refheading10400071168783983"></a></li>
+  <li>un objet P<i>ersonne</i> (ligne 1) a été construit avant l&#x27;objet E<i>nseignant</i> (ligne 2)
+  </li>
+  <li>l&#x27;identité obtenue est celle de l&#x27;objet <i>Personne</i>
+<a id="refheading10400071168783983"></a>
+
+### 4.2.3. Redéfinition d&#x27;une méthode ou d&#x27;une propriété
+
+  </li>
 </ul>
-<h3 id="423-redefinition-dune-methode-ou-dune-propriete">4.2.3. Redéfinition d&#x27;une méthode ou d&#x27;une propriété</h3>
+
 <p>Dans l&#x27;exemple précédent, nous avons eu l&#x27;identité de la partie P<em>ersonne</em> de l&#x27;enseignant mais il manque certaines informations propres à la classe <em>E</em><em>nseignant</em> (la section). On est donc amené à écrire une propriété permettant d&#x27;identifier l&#x27;enseignant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -2291,16 +2294,24 @@
 
 <p>La classe E<em>nseignant</em> dispose maintenant de deux propriétés I<em>dentite</em> :</p>
 <ul>
-<li>celle héritée de la classe parent P<em>ersonne</em> </li>
-<li>la sienne propre</li>
+  <li>celle héritée de la classe parent P<i>ersonne</i> 
+  </li>
+  <li>la sienne propre
+  </li>
 </ul>
+
 <p>Si E est un ojet E<em>nseignant</em>, <em>E.Identite</em> désigne la propriété I<em>dentite</em> de la classe E<em>nseignant</em>. On dit que la propriété I<em>dentite</em> de la classe fille <strong>redéfinit</strong> ou cache la propriété I<em>dentite</em> de la classe mère. De façon générale, si <em>O</em> est un objet et <em>M</em> une méthode, pour exécuter la méthode <em>O.M</em>, le système cherche une méthode <em>M</em> dans l&#x27;ordre suivant :</p>
 <ul>
-<li>dans la classe de l&#x27;objet O</li>
-<li>dans sa classe mère s&#x27;il en a une</li>
-<li>dans la classe mère de sa classe mère si elle existe</li>
-<li>etc…</li>
+  <li>dans la classe de l&#x27;objet O
+  </li>
+  <li>dans sa classe mère s&#x27;il en a une
+  </li>
+  <li>dans la classe mère de sa classe mère si elle existe
+  </li>
+  <li>etc…
+  </li>
 </ul>
+
 <p>L&#x27;héritage permet donc de redéfinir dans la classe fille des méthodes/propriétés de même nom dans la classe mère. C&#x27;est ce qui permet d&#x27;adapter la classe fille à ses propres besoins. Associée au polymorphisme que nous allons voir un peu plus loin, la redéfinition de méthodes/propriétés est le principal intérêt de l&#x27;héritage.</p>
 <p>Considérons le même programme de test que précédemment :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -2325,7 +2336,7 @@
 <p><a id="refheading10400091168783983"></a></p>
 <h3 id="424-le-polymorphisme">4.2.4. Le polymorphisme</h3>
 <p>Considérons une lignée de classes : C0 <strong>←</strong> C1 <strong>←</strong> C2 <strong>←</strong> … <strong>←</strong>Cn</p>
-<p>où <em>C</em><em>i</em><em> </em><strong><em>←</em></strong><em> C</em><em>j</em> indique que la classe <em>C</em><em>j</em> est dérivée de la classe <em>C</em><em>i</em>. Cela entraîne que la classe <em>C</em><em>j</em> a toutes les caractéristiques de la classe <em>C</em><em>i</em> plus d&#x27;autres. Soient des objets Oi de type Ci. Il est légal d&#x27;écrire :</p>
+<p>où <em>C</em><em>i</em> <strong><em>←</em></strong> <em>C</em><em>j</em> indique que la classe <em>C</em><em>j</em> est dérivée de la classe <em>C</em><em>i</em>. Cela entraîne que la classe <em>C</em><em>j</em> a toutes les caractéristiques de la classe <em>C</em><em>i</em> plus d&#x27;autres. Soient des objets Oi de type Ci. Il est légal d&#x27;écrire :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>    Oi=Oj avec j&gt;i
 </code></pre></div>
 <p>En effet, par héritage, la classe Cj a toutes les caractéristiques de la classe Ci plus d&#x27;autres. Donc un objet Oj de type Cj contient en lui un objet de type Ci. L&#x27;opération</p>
@@ -2524,17 +2535,26 @@
 </code></pre></div>
 <p>Ce qui a été dit ici est vrai pour la plupart des opérateurs avec cependant quelques exceptions :</p>
 <ul>
-<li>les opérateurs == et != doivent être redéfinis en même temps</li>
-<li>les opérateurs &amp;&amp; ,||, [], (), +=, -=, ... ne peuvent être redéfinis
-<a id="refheading10400171168783983"></a></li>
+  <li>les opérateurs == et != doivent être redéfinis en même temps
+  </li>
+  <li>les opérateurs &amp;&amp; ,||, [], (), +=, -=, ... ne peuvent être redéfinis
+<a id="refheading10400171168783983"></a>
+
+### 4.3.2. Un exemple
+
+  </li>
 </ul>
-<h3 id="432-un-exemple">4.3.2. Un exemple</h3>
+
 <p>On crée une classe <em>ListeDePersonnes</em> dérivée de la classe <em>ArrayList</em>. Cette classe implémente une liste dynamique et est présentée dans le chapitre qui suit. De cette classe, nous n&#x27;utilisons que les éléments suivants :</p>
 <ul>
-<li>la méthode L.<em>Add(Object o)</em> permettant d&#x27;ajouter à la liste <em>L</em> un objet <em>o</em>. Ici l&#x27;objet <em>o</em> sera un objet <em>Personne</em>.</li>
-<li>la propriété L.<em>Count</em> qui donne le nombre d&#x27;éléments de la liste L</li>
-<li>la notation L<em>[i]</em> qui donne l&#x27;élément i de la liste L</li>
+  <li>la méthode L.<i>Add(Object o)</i> permettant d&#x27;ajouter à la liste <i>L</i> un objet <i>o</i>. Ici l&#x27;objet <i>o</i> sera un objet <i>Personne</i>.
+  </li>
+  <li>la propriété L.<i>Count</i> qui donne le nombre d&#x27;éléments de la liste L
+  </li>
+  <li>la notation L<i>[i]</i> qui donne l&#x27;élément i de la liste L
+  </li>
 </ul>
+
 <p>La classe <em>ListeDePersonnes</em> va hériter de tous les attributs, méthodes et propriétés de la classe <em>ArrayList</em>. Sa définition est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -2574,16 +2594,26 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 6 : la classe <em>ListeDePersonnes</em> dérive de la classe <em>ArrayList</em></li>
-<li>lignes 8-13 : définition de l&#x27;opérateur + pour l&#x27;opération l + p, où l est de type <em>ListeDePersonnes</em> et p de type <em>Personne</em> ou dérivé.</li>
-<li>ligne 10 : la personne p est ajoutée à la liste l. C&#x27;est la méthode <em>Add</em> de la classe parent <em>ArrayList</em> qui est ici utilisée.</li>
-<li>ligne 12 : la référence sur la liste l est rendue afin de pouvoir enchaîner les opérateurs + tels que dans l + p1 + p2. L&#x27;opération <em>l+p1+p2</em> sera interprétée (priorité des opérateurs) comme <em>(l+p1)+p2</em>. L&#x27;opération <em>l+p1</em> rendra la référence <em>l</em>. L&#x27;opération <em>(l+p1)+p2</em> devient alors <em>l+p2</em> qui ajoute la personne <em>p2</em> à la liste de personnes <em>l</em>.</li>
-<li>ligne 16 : nous redéfinissons la méthode <em>ToString</em> afin d&#x27;afficher une liste de personnes sous la forme <em>(personne1, personne2, ..)</em> où <em>personnei</em> est lui-même le résultat de la méthode <em>ToString</em> de la classe <em>Personne</em>.</li>
-<li>ligne 19 : nous utilisons un objet de type <em>StringBuilder</em>. Cette classe convient mieux que la classe <em>string</em> dès qu&#x27;il faut faire de nombreuses opérations sur la chaîne de caractères, ici des ajouts. En effet, chaque opération sur un objet <em>string</em> rend un nouvel objet <em>string</em>, alors que les mêmes opérations sur un objet <em>StringBuilder</em> modifient l&#x27;objet mais n&#x27;en créent pas un nouveau. Nous utilisons la méthode <em>Append</em> pour concaténer les chaînes de caractères.</li>
-<li>ligne 21 : on parcourt les éléments de la liste de personnes. Cette liste est ici désignée par <strong>this</strong>. C&#x27;est l&#x27;objet courant sur laquelle est exécutée la méthode <em>ToString</em>. La propriété <em>Count</em> est une propriété de la classe parent <em>ArrayList</em>.</li>
-<li>ligne 22 : l&#x27;élément n° i de la liste courante <em>this</em> est accessible via la notation <em>this[i]</em>. Là encore, c&#x27;est une propriété de la classe <em>ArrayList</em>. Comme il s&#x27;agit d&#x27;ajouter des chaînes, c&#x27;est la méthode <em>this[i].ToString()</em> qui va être utilisée. Comme cette méthode est virtuelle, c&#x27;est la méthode <em>ToString</em> de l&#x27;objet <em>this</em>, de type <em>Personne</em> ou dérivé, qui va être utilisée.</li>
-<li>ligne 31 : il nous faut rendre un objet de type <em>string</em> (ligne 16). La classe <em>StringBuilder</em> a une méthode <em>ToString</em> qui permet de passer d&#x27;un type <em>StringBuilder</em> à un type <em>string</em>.</li>
+  <li>ligne 6 : la classe <i>ListeDePersonnes</i> dérive de la classe <i>ArrayList</i>
+  </li>
+  <li>lignes 8-13 : définition de l&#x27;opérateur + pour l&#x27;opération l + p, où l est de type <i>ListeDePersonnes</i> et p de type <i>Personne</i> ou dérivé.
+  </li>
+  <li>ligne 10 : la personne p est ajoutée à la liste l. C&#x27;est la méthode <i>Add</i> de la classe parent <i>ArrayList</i> qui est ici utilisée.
+  </li>
+  <li>ligne 12 : la référence sur la liste l est rendue afin de pouvoir enchaîner les opérateurs + tels que dans l + p1 + p2. L&#x27;opération <i>l+p1+p2</i> sera interprétée (priorité des opérateurs) comme <i>(l+p1)+p2</i>. L&#x27;opération <i>l+p1</i> rendra la référence <i>l</i>. L&#x27;opération <i>(l+p1)+p2</i> devient alors <i>l+p2</i> qui ajoute la personne <i>p2</i> à la liste de personnes <i>l</i>.
+  </li>
+  <li>ligne 16 : nous redéfinissons la méthode <i>ToString</i> afin d&#x27;afficher une liste de personnes sous la forme <i>(personne1, personne2, ..)</i> où <i>personnei</i> est lui-même le résultat de la méthode <i>ToString</i> de la classe <i>Personne</i>.
+  </li>
+  <li>ligne 19 : nous utilisons un objet de type <i>StringBuilder</i>. Cette classe convient mieux que la classe <i>string</i> dès qu&#x27;il faut faire de nombreuses opérations sur la chaîne de caractères, ici des ajouts. En effet, chaque opération sur un objet <i>string</i> rend un nouvel objet <i>string</i>, alors que les mêmes opérations sur un objet <i>StringBuilder</i> modifient l&#x27;objet mais n&#x27;en créent pas un nouveau. Nous utilisons la méthode <i>Append</i> pour concaténer les chaînes de caractères.
+  </li>
+  <li>ligne 21 : on parcourt les éléments de la liste de personnes. Cette liste est ici désignée par <b>this</b>. C&#x27;est l&#x27;objet courant sur laquelle est exécutée la méthode <i>ToString</i>. La propriété <i>Count</i> est une propriété de la classe parent <i>ArrayList</i>.
+  </li>
+  <li>ligne 22 : l&#x27;élément n° i de la liste courante <i>this</i> est accessible via la notation <i>this[i]</i>. Là encore, c&#x27;est une propriété de la classe <i>ArrayList</i>. Comme il s&#x27;agit d&#x27;ajouter des chaînes, c&#x27;est la méthode <i>this[i].ToString()</i> qui va être utilisée. Comme cette méthode est virtuelle, c&#x27;est la méthode <i>ToString</i> de l&#x27;objet <i>this</i>, de type <i>Personne</i> ou dérivé, qui va être utilisée.
+  </li>
+  <li>ligne 31 : il nous faut rendre un objet de type <i>string</i> (ligne 16). La classe <i>StringBuilder</i> a une méthode <i>ToString</i> qui permet de passer d&#x27;un type <i>StringBuilder</i> à un type <i>string</i>.
+  </li>
 </ul>
+
 <p>On notera que la classe <em>ListeDePersonnes</em> n&#x27;a pas de constructeur. Dans ce cas, on sait que le constructeur </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>public ListeDePersonnes(){
 <a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>}
@@ -2614,11 +2644,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 7 : création d&#x27;une liste de personnes l</li>
-<li>ligne 9 : ajout de 2 personnes avec l&#x27;opérateur +</li>
-<li>ligne 12 : ajout d&#x27;un enseignant</li>
-<li>lignes 11 et 13 : utilisation de la méthode redéfinie <em>ListeDePersonnes.ToString()</em>.</li>
+  <li>ligne 7 : création d&#x27;une liste de personnes l
+  </li>
+  <li>ligne 9 : ajout de 2 personnes avec l&#x27;opérateur +
+  </li>
+  <li>ligne 12 : ajout d&#x27;un enseignant
+  </li>
+  <li>lignes 11 et 13 : utilisation de la méthode redéfinie <i>ListeDePersonnes.ToString()</i>.
+  </li>
 </ul>
+
 <p>Les résultats :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-59-1">1</a></span>
 <span class="normal"><a href="#__codelineno-59-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1"></a>l=([jean, martin, 10],[pauline, leduc, 12])
@@ -2657,7 +2692,7 @@
 <span class="odt-code-line">    }</span>
 </code></pre></div>
 
-<p>Complétons cette méthode. La méthode <em>this.get</em> est appelée lorsqu&#x27;on écrit <em>variable=l[i]</em> par exemple, où <em>l</em> est de type <em>ListeDePersonnes</em>. On doit alors retourner la personne n° i de la liste <em>l</em>. Ceci se fait avec la notation <em>base[i], </em>qui rend l&#x27;objet n° i de la classe <em>ArrayList</em> sous-jacente à la classe <em>ListeDePersonnes</em> . L&#x27;objet retourné étant de type <em>Object</em>, un transtypage vers la classe <em>Personne</em> est nécessaire.</p>
+<p>Complétons cette méthode. La méthode <em>this.get</em> est appelée lorsqu&#x27;on écrit <em>variable=l[i]</em> par exemple, où <em>l</em> est de type <em>ListeDePersonnes</em>. On doit alors retourner la personne n° i de la liste <em>l</em>. Ceci se fait avec la notation <em>base[i],</em> qui rend l&#x27;objet n° i de la classe <em>ArrayList</em> sous-jacente à la classe <em>ListeDePersonnes</em> . L&#x27;objet retourné étant de type <em>Object</em>, un transtypage vers la classe <em>Personne</em> est nécessaire.</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">new</span> Personne <span style="color:#0000ff">this</span>[<span style="color:#0000ff">int</span> i]{</span>
 <span class="odt-code-line">        <span style="color:#0000ff">get</span> { <span style="color:#0000ff">return</span> (Personne) <span style="color:#0000ff">base</span>[i]; }</span>
@@ -2822,9 +2857,12 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 38-41 : une structure avec deux champs publics : N<em>om</em>, A<em>ge</em></li>
-<li>lignes 44-47 : une classe avec deux champs publics : N<em>om</em>, A<em>ge</em></li>
+  <li>lignes 38-41 : une structure avec deux champs publics : N<i>om</i>, A<i>ge</i>
+  </li>
+  <li>lignes 44-47 : une classe avec deux champs publics : N<i>om</i>, A<i>ge</i>
+  </li>
 </ul>
+
 <p>Si on exécute ce programme, on obtient les résultats suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-63-1">1</a></span>
 <span class="normal"><a href="#__codelineno-63-2">2</a></span>
@@ -2852,8 +2890,10 @@
 
 <p>La structure n&#x27;a ici pas de constructeur. Elle pourrait en avoir un comme nous le montrerons plus loin. Par défaut, elle dispose toujours du constructeur sans paramètres, ici  <em>SPersonne()</em>.</p>
 <ul>
-<li>ligne 7 du code : la déclaration</li>
+  <li>ligne 7 du code : la déclaration
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">    <span style="color:#2b91af">SPersonne</span> sp1;</span>
 </code></pre></div>
@@ -2871,9 +2911,12 @@
 <p>L&#x27;instruction précédente crée un objet <em>CPersonne</em> (grosso modo l&#x27;équivalent de notre structure) et la <strong>valeur</strong> de <em>p1</em> est alors <strong>l&#x27;adresse</strong> (la référence) de cet objet. </p>
 <p>Résumons </p>
 <ul>
-<li>dans le cas de la structure, la <strong>valeur</strong> de sp1 est la structure elle-même</li>
-<li>dans le cas de la classe, la <strong>valeur</strong> de op1 est l&#x27;<strong>adresse</strong> de l&#x27;objet créé</li>
+  <li>dans le cas de la structure, la <b>valeur</b> de sp1 est la structure elle-même
+  </li>
+  <li>dans le cas de la classe, la <b>valeur</b> de op1 est l&#x27;<b>adresse</b> de l&#x27;objet créé
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005780000015F49377F58.png" style="display:inline-block; margin:4px;width:12.959cm;height:3.251cm;" class="odt-zoomable" data-zoom-src="images/10000000000005780000015F49377F58.png" /></td></tr></table>
 
 <p>Lorsque dans  le programme on écrit ligne 12 :</p>
@@ -2893,9 +2936,12 @@
 <p>Dans le cas de la structure [1], si on modifie la valeur de s<em>p2</em> on ne modifie pas la valeur de s<em>p1</em>, ce que montre le programme. Dans le cas de l&#x27;objet [2], si on modifie l&#x27;objet pointé par <em>op2</em>, celui pointé par <em>op1</em> est modifié puisque c&#x27;est le même. C&#x27;est ce que montrent également les résultats du programme.</p>
 <p>On retiendra donc de ces explications que :</p>
 <ul>
-<li>la valeur d&#x27;une variable de type structure est la structure elle-même</li>
-<li>la valeur d&#x27;une variable de type objet est l&#x27;adresse de l&#x27;objet pointé</li>
+  <li>la valeur d&#x27;une variable de type structure est la structure elle-même
+  </li>
+  <li>la valeur d&#x27;une variable de type objet est l&#x27;adresse de l&#x27;objet pointé
+  </li>
 </ul>
+
 <p>Une fois cette différence fondamentale comprise, la structure se montre très proche de la classe comme le montre le nouvel exemple suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -2934,11 +2980,16 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 8-9 : deux champs privés</li>
-<li>lignes 12-20 : les propriétés publiques associées</li>
-<li>lignes 23-26 : on définit un constructeur. A noter que le constructeur sans paramètres <em>SPersonne</em>() est toujours présent et n&#x27;a pas à être déclaré. Sa déclaration est refusée par le compilateur. Dans le constructeur des lignes 23-26, on pourrait être tenté d&#x27;initialiser les champs privés <em>nom</em>, <em>age</em> via leurs propriétés publiques <em>Nom</em>, <em>Age</em>. C&#x27;est refusé par le compilateur. Les méthodes de la structure ne peuvent être utilisées lors de la construction de celle-ci.</li>
-<li>lignes 29-31 : redéfinition de la méthode <em>ToString</em>.</li>
+  <li>lignes 8-9 : deux champs privés
+  </li>
+  <li>lignes 12-20 : les propriétés publiques associées
+  </li>
+  <li>lignes 23-26 : on définit un constructeur. A noter que le constructeur sans paramètres <i>SPersonne</i>() est toujours présent et n&#x27;a pas à être déclaré. Sa déclaration est refusée par le compilateur. Dans le constructeur des lignes 23-26, on pourrait être tenté d&#x27;initialiser les champs privés <i>nom</i>, <i>age</i> via leurs propriétés publiques <i>Nom</i>, <i>Age</i>. C&#x27;est refusé par le compilateur. Les méthodes de la structure ne peuvent être utilisées lors de la construction de celle-ci.
+  </li>
+  <li>lignes 29-31 : redéfinition de la méthode <i>ToString</i>.
+  </li>
 </ul>
+
 <p>Un programme de test pourrait être le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -2972,19 +3023,26 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 7 : on est obligés d&#x27;utiliser explicitement le constructeur sans paramètres, ceci parce qu&#x27;il existe un autre constructeur dans la structure. Si la structure n&#x27;avait eu aucun constructeur, l&#x27;instruction </li>
+  <li>ligne 7 : on est obligés d&#x27;utiliser explicitement le constructeur sans paramètres, ceci parce qu&#x27;il existe un autre constructeur dans la structure. Si la structure n&#x27;avait eu aucun constructeur, l&#x27;instruction 
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">            <span style="color:#2b91af">SPersonne</span> p1;</span>
 </code></pre></div>
 
 <p>aurait suffi pour créer une structure vide.</p>
 <ul>
-<li>lignes 8-9 : la structure est initialisée via ses propriétés publiques</li>
-<li>ligne 10 : la méthode <em>p1.ToString</em> va être utilisée dans le <em>WriteLine</em>.</li>
-<li>ligne 21 : création d&#x27;une structure avec le constructeur <em>SPersonne(string,int)</em></li>
-<li>ligne 24 :  création d&#x27;une structure avec le constructeur sans paramètres <em>SPersonne()</em> avec, entre accolades, initialisation des champs privés via leurs propriétés publiques.</li>
+  <li>lignes 8-9 : la structure est initialisée via ses propriétés publiques
+  </li>
+  <li>ligne 10 : la méthode <i>p1.ToString</i> va être utilisée dans le <i>WriteLine</i>.
+  </li>
+  <li>ligne 21 : création d&#x27;une structure avec le constructeur <i>SPersonne(string,int)</i>
+  </li>
+  <li>ligne 24 :  création d&#x27;une structure avec le constructeur sans paramètres <i>SPersonne()</i> avec, entre accolades, initialisation des champs privés via leurs propriétés publiques.
+  </li>
 </ul>
+
 <p>On obtient les résultats d&#x27;exécution suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-64-1">1</a></span>
 <span class="normal"><a href="#__codelineno-64-2">2</a></span>
@@ -3028,9 +3086,12 @@
 <a id="__codelineno-66-6" name="__codelineno-66-6"></a>}
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 1 : la classe C implémente la classe <em>IEnumerator</em>. On notera que le signe : utilisé pour l&#x27;implémentation d&#x27;une interface est le même que celui utilisé pour la dérivation d&#x27;une classe.</li>
-<li>lignes 3-5 : l&#x27;implémentation des méthodes et propriétés de l&#x27;interface <em>IEnumerator</em>.</li>
+  <li>ligne 1 : la classe C implémente la classe <i>IEnumerator</i>. On notera que le signe : utilisé pour l&#x27;implémentation d&#x27;une interface est le même que celui utilisé pour la dérivation d&#x27;une classe.
+  </li>
+  <li>lignes 3-5 : l&#x27;implémentation des méthodes et propriétés de l&#x27;interface <i>IEnumerator</i>.
+  </li>
 </ul>
+
 <p>Considérons l&#x27;interface suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -3043,9 +3104,12 @@
 
 <p>L&#x27;interface <em>IStats</em> présente :</p>
 <ul>
-<li>une propriété en lecture seule <em>Moyenne</em> : pour calculer la moyenne d&#x27;une série de valeurs</li>
-<li>une méthode <em>EcartType</em> : pour en calculer l&#x27;écart-type</li>
+  <li>une propriété en lecture seule <i>Moyenne</i> : pour calculer la moyenne d&#x27;une série de valeurs
+  </li>
+  <li>une méthode <i>EcartType</i> : pour en calculer l&#x27;écart-type
+  </li>
 </ul>
+
 <p>On notera qu&#x27;il n&#x27;est nulle part précisé de quelle série de valeurs il s&#x27;agit. Il peut s&#x27;agir de la moyenne des notes d&#x27;une classe, de la moyenne mensuelle des ventes d&#x27;un produit particulier, de la température moyenne dans un lieu donné, ... C&#x27;est le principe des interfaces : on suppose l&#x27;existence de méthodes dans l&#x27;objet mais pas celle de données particulières.</p>
 <p>Une première classe d&#x27;implémentation de l&#x27;interface <em>IStats</em> pourrait une classe servant à mémoriser les notes des élèves d&#x27;une classe dans une matière donnée. Un élève serait caractérisé par la structure <em>Elève</em> suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -3127,22 +3191,36 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 6 : la classe <em>TableauDeNotes</em> implémente l&#x27;interface <em>IStats</em>. Elle doit donc implémenter la propriété <em>Moyenne</em> et la méthode <em>EcartType</em>. Celles-ci sont implémentées lignes 10 (<em>Moyenne</em>) et 35-37 (<em>EcartType</em>)</li>
-<li>lignes 8-10 : trois propriétés automatiques</li>
-<li>ligne 8 : la matière dont l&#x27;objet mémorise les notes</li>
-<li>ligne 9 : le tableau des notes des élèves (Elève, Note)</li>
-<li>ligne 10 : la moyenne des notes - propriété implémentant la propriété <em>Moyenne</em> de l&#x27;interface IStats.</li>
-<li>ligne 11 : champ mémorisant l&#x27;écart-type des notes - la méthode <em>get</em> associée <em>EcartType</em> des lignes 35-37 implémente la méthode <em>EcartType</em> de l&#x27;interface <em>IStats</em>.</li>
-<li>ligne 9 : les notes sont mémorisées dans un tableau. Celui-ci est transmis lors de la construction de la classe <em>TableauDeNotes</em> au constructeur des lignes 14-33.</li>
-<li>lignes 14-33 : le constructeur. On suppose ici que les notes transmises au constructeur ne bougeront plus par la suite. Aussi utilise-t-on le constructeur pour calculer tout de suite la moyenne et l&#x27;écart-type de ces notes et les mémoriser dans les champs des lignes 10-11. La moyenne est mémorisée dans le champ privé sous-jacent à la propriété automatique <em>Moyenne</em> de la ligne 10 et l&#x27;écart-type dans le champ privé de la ligne 11.</li>
-<li>ligne 10 : la méthode <em>get</em> de la propriété automatique <em>Moyenne</em> rendra le champ privé sous-jacent.</li>
-<li>lignes 35-37 : la méthode <em>EcartType</em> rend la valeur du champ privé de la ligne 11.</li>
+  <li>ligne 6 : la classe <i>TableauDeNotes</i> implémente l&#x27;interface <i>IStats</i>. Elle doit donc implémenter la propriété <i>Moyenne</i> et la méthode <i>EcartType</i>. Celles-ci sont implémentées lignes 10 (<i>Moyenne</i>) et 35-37 (<i>EcartType</i>)
+  </li>
+  <li>lignes 8-10 : trois propriétés automatiques
+  </li>
+  <li>ligne 8 : la matière dont l&#x27;objet mémorise les notes
+  </li>
+  <li>ligne 9 : le tableau des notes des élèves (Elève, Note)
+  </li>
+  <li>ligne 10 : la moyenne des notes - propriété implémentant la propriété <i>Moyenne</i> de l&#x27;interface IStats.
+  </li>
+  <li>ligne 11 : champ mémorisant l&#x27;écart-type des notes - la méthode <i>get</i> associée <i>EcartType</i> des lignes 35-37 implémente la méthode <i>EcartType</i> de l&#x27;interface <i>IStats</i>.
+  </li>
+  <li>ligne 9 : les notes sont mémorisées dans un tableau. Celui-ci est transmis lors de la construction de la classe <i>TableauDeNotes</i> au constructeur des lignes 14-33.
+  </li>
+  <li>lignes 14-33 : le constructeur. On suppose ici que les notes transmises au constructeur ne bougeront plus par la suite. Aussi utilise-t-on le constructeur pour calculer tout de suite la moyenne et l&#x27;écart-type de ces notes et les mémoriser dans les champs des lignes 10-11. La moyenne est mémorisée dans le champ privé sous-jacent à la propriété automatique <i>Moyenne</i> de la ligne 10 et l&#x27;écart-type dans le champ privé de la ligne 11.
+  </li>
+  <li>ligne 10 : la méthode <i>get</i> de la propriété automatique <i>Moyenne</i> rendra le champ privé sous-jacent.
+  </li>
+  <li>lignes 35-37 : la méthode <i>EcartType</i> rend la valeur du champ privé de la ligne 11.
+  </li>
 </ul>
+
 <p>Il y a quelques subtilités dans ce code :</p>
 <ul>
-<li>ligne 23 : la méthode <em>set</em> de la propriété <em>Moyenne</em> est utilisée pour faire l&#x27;affectation. Cette méthode a été déclarée privée ligne 10 afin que l&#x27;affectation d&#x27;une valeur à la propriété <em>Moyenne</em> ne soit possible qu&#x27;à l&#x27;intérieur de la classe.</li>
-<li>lignes 40-54 : utilisent un objet <em>StringBuilder</em> pour construire la chaîne représentant l&#x27;objet <em>TableauDeNotes</em> afin d&#x27;améliorer les performances. On peut noter que la lisibilité du code en pâtit beaucoup. C&#x27;est le revers de la médaille.</li>
+  <li>ligne 23 : la méthode <i>set</i> de la propriété <i>Moyenne</i> est utilisée pour faire l&#x27;affectation. Cette méthode a été déclarée privée ligne 10 afin que l&#x27;affectation d&#x27;une valeur à la propriété <i>Moyenne</i> ne soit possible qu&#x27;à l&#x27;intérieur de la classe.
+  </li>
+  <li>lignes 40-54 : utilisent un objet <i>StringBuilder</i> pour construire la chaîne représentant l&#x27;objet <i>TableauDeNotes</i> afin d&#x27;améliorer les performances. On peut noter que la lisibilité du code en pâtit beaucoup. C&#x27;est le revers de la médaille.
+  </li>
 </ul>
+
 <p>Dans la classe précédente, les notes étaient enregistrées dans un tableau. Il n&#x27;était pas possible d&#x27;ajouter une nouvelle note après construction de l&#x27;objet <em>TableauDeNotes</em>. Nous proposons maintenant une seconde implémentation de l&#x27;interface <em>IStats</em>, appelée <em>ListeDeNotes</em>, où cette fois les notes seraient enregistrées dans une liste, avec possibilité d&#x27;ajouter des notes après construction initiale de l&#x27;objet <em>ListeDeNotes.</em></p>
 <p>Le code de la classe <em>ListeDeNotes</em> est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -3226,12 +3304,18 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 7 : la classe <em>ListeDeNotes</em> implémente l&#x27;interface <em>IStats</em></li>
-<li>ligne 10 : les notes sont mises maintenant dans une liste plutôt qu&#x27;un tableau</li>
-<li>ligne 11 : la propriété automatique <em>Moyenne</em> de la classe <em>TableauDeNotes</em> a été abandonnée ici au profit d&#x27;un champ privé <em>moyenne</em>, ligne 11, associé à la propriété publique en lecture seule <em>Moyenne</em> des lignes 48-60</li>
-<li>lignes 22-28 : on peut désormais ajouter une note à celles déjà mémorisées, ce qu&#x27;on ne pouvait pas faire précédemment.</li>
-<li>lignes 15-19 : du coup, la moyenne et l&#x27;écart-type ne sont plus calculés dans le constructeur mais dans les méthodes de l&#x27;interface elles-mêmes : <em>Moyenne</em> (lignes 48-60) et <em>EcartType</em> (62-76). Le recalcul n&#x27;est cependant relancé que si la moyenne et l&#x27;écart-type sont différents de -1 (lignes 50 et 64).</li>
+  <li>ligne 7 : la classe <i>ListeDeNotes</i> implémente l&#x27;interface <i>IStats</i>
+  </li>
+  <li>ligne 10 : les notes sont mises maintenant dans une liste plutôt qu&#x27;un tableau
+  </li>
+  <li>ligne 11 : la propriété automatique <i>Moyenne</i> de la classe <i>TableauDeNotes</i> a été abandonnée ici au profit d&#x27;un champ privé <i>moyenne</i>, ligne 11, associé à la propriété publique en lecture seule <i>Moyenne</i> des lignes 48-60
+  </li>
+  <li>lignes 22-28 : on peut désormais ajouter une note à celles déjà mémorisées, ce qu&#x27;on ne pouvait pas faire précédemment.
+  </li>
+  <li>lignes 15-19 : du coup, la moyenne et l&#x27;écart-type ne sont plus calculés dans le constructeur mais dans les méthodes de l&#x27;interface elles-mêmes : <i>Moyenne</i> (lignes 48-60) et <i>EcartType</i> (62-76). Le recalcul n&#x27;est cependant relancé que si la moyenne et l&#x27;écart-type sont différents de -1 (lignes 50 et 64).
+  </li>
 </ul>
+
 <p>Une classe de test pourrait être la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -3261,13 +3345,20 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 8 : création d&#x27;un tableau d&#x27;élèves avec utilisation du constructeur sans paramètres et initialisation via les propriétés publiques</li>
-<li>ligne 9 : création d&#x27;un tableau de notes selon la même technique</li>
-<li>ligne 11 : un objet <em>TableauDeNotes</em> dont on calcule la moyenne et l&#x27;écart-type ligne 13</li>
-<li>ligne 15 : un objet <em>ListeDeNotes</em> dont on calcule la moyenne et l&#x27;écart-type ligne 17. La classe <em>List&lt;Note&gt;</em> a un constructeur admettant un objet implémentant l&#x27;interface <em>IEnumerable&lt;Note&gt;</em>. Le tableau <em>notes1</em> implémente cette interface et peut être utilisé pour construire l&#x27;objet <em>List&lt;Note&gt;</em>.</li>
-<li>ligne 19 : ajout d&#x27;une nouvelle note</li>
-<li>ligne 21 : recalcul de la moyenne et écart-type</li>
+  <li>ligne 8 : création d&#x27;un tableau d&#x27;élèves avec utilisation du constructeur sans paramètres et initialisation via les propriétés publiques
+  </li>
+  <li>ligne 9 : création d&#x27;un tableau de notes selon la même technique
+  </li>
+  <li>ligne 11 : un objet <i>TableauDeNotes</i> dont on calcule la moyenne et l&#x27;écart-type ligne 13
+  </li>
+  <li>ligne 15 : un objet <i>ListeDeNotes</i> dont on calcule la moyenne et l&#x27;écart-type ligne 17. La classe <i>List&lt;Note&gt;</i> a un constructeur admettant un objet implémentant l&#x27;interface <i>IEnumerable&lt;Note&gt;</i>. Le tableau <i>notes1</i> implémente cette interface et peut être utilisé pour construire l&#x27;objet <i>List&lt;Note&gt;</i>.
+  </li>
+  <li>ligne 19 : ajout d&#x27;une nouvelle note
+  </li>
+  <li>ligne 21 : recalcul de la moyenne et écart-type
+  </li>
 </ul>
+
 <p>Les résultats de l&#x27;exécution sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-67-1">1</a></span>
 <span class="normal"><a href="#__codelineno-67-2">2</a></span>
@@ -3309,10 +3400,14 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 25-27 : la méthode statique <em>AfficheStats</em> reçoit pour paramètre un type <em>IStats</em>, donc un type Interface. <strong>Cela signifie que le paramètre effectif peut être tout objet implémentant l&#x27;interface </strong><strong><em>IStats</em></strong>. Quand on utilise une donnée ayant le type d&#x27;une interface, cela signifie qu&#x27;on n&#x27;utilisera que les méthodes de l&#x27;interface implémentées par la donnée. On fait abstraction du reste. On a là une propriété proche du polymorphisme vu pour les classes. Si un ensemble de classes <strong>Ci</strong> non liées entre-elles par héritage (donc on ne peut utiliser le polymorphisme de l&#x27;héritage) présente un ensemble de méthodes de même signature, il peut être intéressant de regrouper ces méthodes dans une interface <strong>I</strong> qu&#x27;implémenteraient toutes les classes concernées. Des instances de ces classes <strong>Ci</strong> peuvent alors être utilisées comme paramètres effectifs de fonctions admettant un paramètre formel de type <strong>I</strong>, c.a.d. des fonctions n&#x27;utilisant que les méthodes des objets <strong>Ci</strong> définies dans l&#x27;interface <strong>I</strong> et non les attributs et méthodes particuliers des différentes classes <strong>Ci</strong>.</li>
-<li>ligne 13 : la méthode <em>AfficheStats</em> est appelée avec un type <em>TableauDeNotes</em> qui implémente l&#x27;interface <em>IStats</em></li>
-<li>ligne 17 : idem avec un type <em>ListeDeNotes</em></li>
+  <li>lignes 25-27 : la méthode statique <i>AfficheStats</i> reçoit pour paramètre un type <i>IStats</i>, donc un type Interface. <b>Cela signifie que le paramètre effectif peut être tout objet implémentant l&#x27;interface </b><i><b>IStats</b></i>. Quand on utilise une donnée ayant le type d&#x27;une interface, cela signifie qu&#x27;on n&#x27;utilisera que les méthodes de l&#x27;interface implémentées par la donnée. On fait abstraction du reste. On a là une propriété proche du polymorphisme vu pour les classes. Si un ensemble de classes <b>Ci</b> non liées entre-elles par héritage (donc on ne peut utiliser le polymorphisme de l&#x27;héritage) présente un ensemble de méthodes de même signature, il peut être intéressant de regrouper ces méthodes dans une interface <b>I</b> qu&#x27;implémenteraient toutes les classes concernées. Des instances de ces classes <b>Ci</b> peuvent alors être utilisées comme paramètres effectifs de fonctions admettant un paramètre formel de type <b>I</b>, c.a.d. des fonctions n&#x27;utilisant que les méthodes des objets <b>Ci</b> définies dans l&#x27;interface <b>I</b> et non les attributs et méthodes particuliers des différentes classes <b>Ci</b>.
+  </li>
+  <li>ligne 13 : la méthode <i>AfficheStats</i> est appelée avec un type <i>TableauDeNotes</i> qui implémente l&#x27;interface <i>IStats</i>
+  </li>
+  <li>ligne 17 : idem avec un type <i>ListeDeNotes</i>
+  </li>
 </ul>
+
 <p>Les résultats de l&#x27;exécution sont identiques à ceux de la précédente.</p>
 <p>Une variable <strong>peut être du type d&#x27;une interface</strong>. Ainsi, on peut écrire :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-68-1">1</a></span>
@@ -3321,7 +3416,7 @@
 <a id="__codelineno-68-2" name="__codelineno-68-2"></a>...
 <a id="__codelineno-68-3" name="__codelineno-68-3"></a>stats1=new ListeDeNotes(...);
 </code></pre></div></td></tr></table></div>
-<p>La déclaration de la ligne 1 indique que <strong><em>stats1</em></strong><strong> est l&#x27;instance d&#x27;une classe implémentant l&#x27;interface </strong><strong><em>IStats</em></strong>. Cette déclaration implique que le compilateur ne permettra l&#x27;accès dans <em>stats1</em> qu&#x27;aux méthodes de l&#x27;interface : la propriété <em>Moyenne</em> et la méthode <em>EcartType</em>.</p>
+<p>La déclaration de la ligne 1 indique que <strong><em>stats1</em></strong> <strong>est l&#x27;instance d&#x27;une classe implémentant l&#x27;interface</strong> <strong><em>IStats</em></strong>. Cette déclaration implique que le compilateur ne permettra l&#x27;accès dans <em>stats1</em> qu&#x27;aux méthodes de l&#x27;interface : la propriété <em>Moyenne</em> et la méthode <em>EcartType</em>.</p>
 <p>Notons enfin que l&#x27;implémentation d&#x27;interfaces peut être multiple, c.a.d. qu&#x27;on peut écrire</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>public class ClasseDérivée:ClasseDeBase,I1,I2,..,In{
 <a id="__codelineno-69-2" name="__codelineno-69-2" href="#__codelineno-69-2"></a>...
@@ -3367,13 +3462,20 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 11-21 : le contructeur de la classe <em>Utilisateur</em>. Cette classe mémorise des informations sur l&#x27;utilisateur d&#x27;une application web. Celle-ci a divers types d&#x27;utilisateurs authentifiés par un login / mot de passe (lignes 6-7). Ces deux informations sont vérifiées auprès d&#x27;un service LDAP pour certains utilisateurs, auprès d&#x27;un SGBD pour d&#x27;autres, etc...</li>
-<li>lignes 13-14 : les informations d&#x27;authentification sont mémorisées</li>
-<li>ligne 16 : elles sont vérifiées par une méthode <strong>identifie</strong>. Parce que la méthode d&#x27;identification n&#x27;est pas connue, elle est déclarée abstraite ligne 29 avec le mot clé <strong>abstract</strong>. La méthode <em>identifie</em> rend une chaîne de caractères précisant le rôle de l&#x27;utilisateur (en gros ce qu&#x27;il a le droit de faire). Si cette chaîne est le pointeur <em>null</em>, une exception est lancée ligne 19.</li>
-<li>ligne 4 : parce qu&#x27;elle a une méthode abstraite, la classe elle-même est déclarée abstraite avec le mot clé <strong>abstract</strong>.</li>
-<li>ligne 29 : la méthode abstraite <strong>identifie</strong> n&#x27;a pas de définition. Ce sont les classes dérivées qui lui en donneront une.</li>
-<li>lignes 24-26 : la méthode <em>ToString</em> qui identifie une instance de la classe.</li>
+  <li>lignes 11-21 : le contructeur de la classe <i>Utilisateur</i>. Cette classe mémorise des informations sur l&#x27;utilisateur d&#x27;une application web. Celle-ci a divers types d&#x27;utilisateurs authentifiés par un login / mot de passe (lignes 6-7). Ces deux informations sont vérifiées auprès d&#x27;un service LDAP pour certains utilisateurs, auprès d&#x27;un SGBD pour d&#x27;autres, etc...
+  </li>
+  <li>lignes 13-14 : les informations d&#x27;authentification sont mémorisées
+  </li>
+  <li>ligne 16 : elles sont vérifiées par une méthode <b>identifie</b>. Parce que la méthode d&#x27;identification n&#x27;est pas connue, elle est déclarée abstraite ligne 29 avec le mot clé <b>abstract</b>. La méthode <i>identifie</i> rend une chaîne de caractères précisant le rôle de l&#x27;utilisateur (en gros ce qu&#x27;il a le droit de faire). Si cette chaîne est le pointeur <i>null</i>, une exception est lancée ligne 19.
+  </li>
+  <li>ligne 4 : parce qu&#x27;elle a une méthode abstraite, la classe elle-même est déclarée abstraite avec le mot clé <b>abstract</b>.
+  </li>
+  <li>ligne 29 : la méthode abstraite <b>identifie</b> n&#x27;a pas de définition. Ce sont les classes dérivées qui lui en donneront une.
+  </li>
+  <li>lignes 24-26 : la méthode <i>ToString</i> qui identifie une instance de la classe.
+  </li>
 </ul>
+
 <p>On suppose ici que le développeur veut avoir la maîtrise de la construction des instances de la classe <em>Utilisateur</em> et des classes dérivées, peut-être parce qu&#x27;il veut être sûr qu&#x27;une exception d&#x27;un certain type est lancée si l&#x27;utilisateur n&#x27;est pas reconnu (ligne 19). Les classes dérivées pourront s&#x27;appuyer sur ce constructeur. Elles devront pour cela fournir la méthode <strong>identifie</strong>.</p>
 <p>La classe <em>ExceptionUtilisateurInconnu</em> est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -3388,9 +3490,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : elle dérive de la classe <em>Exception</em></li>
-<li>lignes 4-6 : elle n&#x27;a qu&#x27;un unique constructeur qui admet pour paramètre un message d&#x27;erreur. Celui-ci est passé à la classe parent (ligne 5) qui a ce même constructeur.</li>
+  <li>ligne 3 : elle dérive de la classe <i>Exception</i>
+  </li>
+  <li>lignes 4-6 : elle n&#x27;a qu&#x27;un unique constructeur qui admet pour paramètre un message d&#x27;erreur. Celui-ci est passé à la classe parent (ligne 5) qui a ce même constructeur.
+  </li>
 </ul>
+
 <p>Nous dérivons maintenant la classe <em>Utilisateur</em> dans la classe fille <em>Administrateur</em> :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -3411,9 +3516,12 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 4-6 : le constructeur se contente de passer à sa classe parent les paramètres qu&#x27;il reçoit</li>
-<li>lignes 9-12 : la méthode <strong>identifie</strong> de la classe <em>Administrateur</em>. On suppose qu&#x27;un administrateur est identifié par un système LDAP. Cette méthode redéfinit la méthode <strong>identifie</strong> de sa classe parent. Parce qu&#x27;elle redéfinit une méthode <strong>abstraite</strong>, il est inutile de mettre le mot clé <em>override.</em></li>
+  <li>lignes 4-6 : le constructeur se contente de passer à sa classe parent les paramètres qu&#x27;il reçoit
+  </li>
+  <li>lignes 9-12 : la méthode <b>identifie</b> de la classe <i>Administrateur</i>. On suppose qu&#x27;un administrateur est identifié par un système LDAP. Cette méthode redéfinit la méthode <b>identifie</b> de sa classe parent. Parce qu&#x27;elle redéfinit une méthode <b>abstraite</b>, il est inutile de mettre le mot clé <i>override.</i>
+  </li>
 </ul>
+
 <p>Nous dérivons maintenant la classe <em>Utilisateur</em> dans la classe fille <em>Observateur</em> :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -3435,9 +3543,12 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 4-6 : le constructeur se contente de passer à sa classe parent les paramètres qu&#x27;il reçoit</li>
-<li>lignes 9-13 : la méthode <strong>identifie</strong> de la classe <em>Observateur</em>. On suppose qu&#x27;un observateur est identifié par vérification de ses données d&#x27;identification dans une base de données.</li>
+  <li>lignes 4-6 : le constructeur se contente de passer à sa classe parent les paramètres qu&#x27;il reçoit
+  </li>
+  <li>lignes 9-13 : la méthode <b>identifie</b> de la classe <i>Observateur</i>. On suppose qu&#x27;un observateur est identifié par vérification de ses données d&#x27;identification dans une base de données.
+  </li>
 </ul>
+
 <p>Au final, les objets <em>Administrateur</em> et <em>Observateur</em> sont instanciés par le même constructeur, celui de la classe parent <em>Utilisateur.</em> Ce constructeur va utiliser la méthode <strong>identifie</strong> que ces classes fournissent.</p>
 <p>Une troisième classe <em>Inconnu</em> dérive également de la classe <em>Utilisateur</em> :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -3461,8 +3572,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 13 : la méthode <em>identifie</em> rend le pointeur <em>null</em> pour indiquer que l&#x27;utilisateur n&#x27;a pas été reconnu.</li>
+  <li>ligne 13 : la méthode <i>identifie</i> rend le pointeur <i>null</i> pour indiquer que l&#x27;utilisateur n&#x27;a pas été reconnu.
+  </li>
 </ul>
+
 <p>Un programme de test pourrait être le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -3528,10 +3641,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : la classe <em>Generic1</em> est paramétrée par un type noté T. On peut lui donner le nom que l&#x27;on veut. Ce type T est ensuite réutilisé dans la classe aux lignes 3 et 5. On dit que la classe <em>Generic1</em> est une classe générique.</li>
-<li>ligne 3 : définit les deux références sur un type T à permuter</li>
-<li>ligne 5 : la variable temporaire <em>temp</em> a le type T.</li>
+  <li>ligne 2 : la classe <i>Generic1</i> est paramétrée par un type noté T. On peut lui donner le nom que l&#x27;on veut. Ce type T est ensuite réutilisé dans la classe aux lignes 3 et 5. On dit que la classe <i>Generic1</i> est une classe générique.
+  </li>
+  <li>ligne 3 : définit les deux références sur un type T à permuter
+  </li>
+  <li>ligne 5 : la variable temporaire <i>temp</i> a le type T.
+  </li>
 </ul>
+
 <p>Un programme de test de la classe pourrait être le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -3558,10 +3675,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 8 : lorsqu&#x27;on utilise une classe générique paramétrée par des types T1, T2, ... ces derniers doivent être &quot;instanciés&quot;. Ligne 8, on utilise la méthode statique <em>Echanger</em> du type <em>Generic1&lt;int&gt;</em> pour indiquer que les références passées à la méthode <em>Echanger</em> sont de type <em>int</em>.</li>
-<li>ligne 12 : on utilise la méthode statique <em>Echanger</em> du type <em>Generic1&lt;string&gt;</em> pour indiquer que les références passées à la méthode <em>Echanger</em> sont de type <em>string</em>.</li>
-<li>ligne 16 : on utilise la méthode statique <em>Echanger</em> du type <em>Generic1&lt;Personne&gt;</em> pour indiquer que les références passées à la méthode <em>Echanger</em> sont de type <em>Personne</em>.</li>
+  <li>ligne 8 : lorsqu&#x27;on utilise une classe générique paramétrée par des types T1, T2, ... ces derniers doivent être &quot;instanciés&quot;. Ligne 8, on utilise la méthode statique <i>Echanger</i> du type <i>Generic1&lt;int&gt;</i> pour indiquer que les références passées à la méthode <i>Echanger</i> sont de type <i>int</i>.
+  </li>
+  <li>ligne 12 : on utilise la méthode statique <i>Echanger</i> du type <i>Generic1&lt;string&gt;</i> pour indiquer que les références passées à la méthode <i>Echanger</i> sont de type <i>string</i>.
+  </li>
+  <li>ligne 16 : on utilise la méthode statique <i>Echanger</i> du type <i>Generic1&lt;Personne&gt;</i> pour indiquer que les références passées à la méthode <i>Echanger</i> sont de type <i>Personne</i>.
+  </li>
 </ul>
+
 <p>Les résultats de l&#x27;exécution sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-71-1">1</a></span>
 <span class="normal"><a href="#__codelineno-71-2">2</a></span>
@@ -3584,9 +3705,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : la classe <em>Generic2</em> n&#x27;est plus générique</li>
-<li>ligne 3 : la méthode statique <em>Echanger</em> est générique</li>
+  <li>ligne 2 : la classe <i>Generic2</i> n&#x27;est plus générique
+  </li>
+  <li>ligne 3 : la méthode statique <i>Echanger</i> est générique
+  </li>
 </ul>
+
 <p>Le programme de test devient alors le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -3612,8 +3736,10 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 8, 12 et 16 : on appelle la méthode <em>Echanger</em> en précisant dans &lt;&gt; le type des paramètres. En fait, le compilateur est capable de déduire d&#x27;après le type des paramètres effectifs, la variante de la méthode <em>Echanger</em> à utiliser. Aussi, l&#x27;écriture suivante est-elle légale :</li>
+  <li>lignes 8, 12 et 16 : on appelle la méthode <i>Echanger</i> en précisant dans &lt;&gt; le type des paramètres. En fait, le compilateur est capable de déduire d&#x27;après le type des paramètres effectifs, la variante de la méthode <i>Echanger</i> à utiliser. Aussi, l&#x27;écriture suivante est-elle légale :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">            <span style="color:#2b91af">Generic2</span>.Echanger(<span style="color:#0000ff">ref</span> i1, <span style="color:#0000ff">ref</span> i2);</span>
 <span class="odt-code-line">...</span>
@@ -3640,8 +3766,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : on exige que le type T soit une référence (classe, interface)</li>
+  <li>ligne 3 : on exige que le type T soit une référence (classe, interface)
+  </li>
 </ul>
+
 <p>Considérons le programme de test suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -3689,9 +3817,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : le type T doit implémenter l&#x27;interface <em>Interface1</em>. Celle-ci a une méthode <em>Value,</em> utilisée lignes 5 et 6, qui donne la valeur de l&#x27;objet de type T.</li>
-<li>lignes 8-12 : les deux références <em>element1</em> et <em>element2</em> ne sont échangées que si la valeur de <em>element1</em> est supérieure à la valeur de <em>element2</em>.</li>
+  <li>ligne 3 : le type T doit implémenter l&#x27;interface <i>Interface1</i>. Celle-ci a une méthode <i>Value,</i> utilisée lignes 5 et 6, qui donne la valeur de l&#x27;objet de type T.
+  </li>
+  <li>lignes 8-12 : les deux références <i>element1</i> et <i>element2</i> ne sont échangées que si la valeur de <i>element1</i> est supérieure à la valeur de <i>element2</i>.
+  </li>
 </ul>
+
 <p>L&#x27;interface <em>Interface1</em> est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -3733,12 +3864,18 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 5 : <em>Class1</em> implémente l&#x27;interface <em>Interface1</em></li>
-<li>ligne 7 : la valeur d&#x27;une instance de <em>Class1</em></li>
-<li>lignes 10-14 : le champ <em>value</em> est initialisé avec une valeur aléatoire entre 0 et 99</li>
-<li>lignes 18-20 : la méthode <em>Value</em> de l&#x27;interface <em>Interface1</em></li>
-<li>lignes 23-25 : la méthode <em>ToString</em> de la classe</li>
+  <li>ligne 5 : <i>Class1</i> implémente l&#x27;interface <i>Interface1</i>
+  </li>
+  <li>ligne 7 : la valeur d&#x27;une instance de <i>Class1</i>
+  </li>
+  <li>lignes 10-14 : le champ <i>value</i> est initialisé avec une valeur aléatoire entre 0 et 99
+  </li>
+  <li>lignes 18-20 : la méthode <i>Value</i> de l&#x27;interface <i>Interface1</i>
+  </li>
+  <li>lignes 23-25 : la méthode <i>ToString</i> de la classe
+  </li>
 </ul>
+
 <p>L&#x27;interface <em>Interface1</em> est également implémentée par la classe <em>Class2</em> :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -3769,12 +3906,18 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 4 : <em>Class2</em> implémente l&#x27;interface <em>Interface1</em></li>
-<li>ligne 6 : la valeur d&#x27;une instance de <em>Class2</em></li>
-<li>lignes 10-13 : le champ <em>value</em> est initialisé avec la longueur de la chaîne de caractères passée au constructeur</li>
-<li>lignes 16-18 : la méthode <em>Value</em> de l&#x27;interface <em>Interface1</em></li>
-<li>lignes 21-22 : la méthode <em>ToString</em> de la classe</li>
+  <li>ligne 4 : <i>Class2</i> implémente l&#x27;interface <i>Interface1</i>
+  </li>
+  <li>ligne 6 : la valeur d&#x27;une instance de <i>Class2</i>
+  </li>
+  <li>lignes 10-13 : le champ <i>value</i> est initialisé avec la longueur de la chaîne de caractères passée au constructeur
+  </li>
+  <li>lignes 16-18 : la méthode <i>Value</i> de l&#x27;interface <i>Interface1</i>
+  </li>
+  <li>lignes 21-22 : la méthode <i>ToString</i> de la classe
+  </li>
 </ul>
+
 <p>Un programme de test pourrait être le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -3804,9 +3947,12 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 8-14 : des instances de type <em>Class1</em> sont échangées</li>
-<li>lignes 16-22 : des instances de type <em>Class2</em> sont échangées</li>
+  <li>lignes 8-14 : des instances de type <i>Class1</i> sont échangées
+  </li>
+  <li>lignes 16-22 : des instances de type <i>Class2</i> sont échangées
+  </li>
 </ul>
+
 <p>Les résultats de l&#x27;exécution sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-72-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-72-2"> 2</a></span>
@@ -3839,9 +3985,12 @@
 </code></pre></div>
 <p><strong>Sort</strong> une <strong>méthode générique</strong> où T désigne un type quelconque. La méthode reçoit deux paramètres :</p>
 <ul>
-<li><strong>T[] tableau</strong> : le tableau d&#x27;éléments de type T à trier</li>
-<li><strong>IComparer&lt;T&gt; comparateur</strong> : une référence d&#x27;objet implémentant l&#x27;interface <em>IComparer&lt;T&gt;</em>.</li>
+  <li><b>T[] tableau</b> : le tableau d&#x27;éléments de type T à trier
+  </li>
+  <li><b>IComparer&lt;T&gt; comparateur</b> : une référence d&#x27;objet implémentant l&#x27;interface <i>IComparer&lt;T&gt;</i>.
+  </li>
 </ul>
+
 <p><strong>IComparer&lt;T&gt;</strong> est une <strong>interface générique</strong> définie comme suit :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-74-1">1</a></span>
 <span class="normal"><a href="#__codelineno-74-2">2</a></span>
@@ -3851,10 +4000,14 @@
 </code></pre></div></td></tr></table></div>
 <p>L&#x27;interface <strong>IComparer&lt;T&gt;</strong> n&#x27;a qu&#x27;une unique méthode. La méthode <strong>Compare</strong> :</p>
 <ul>
-<li>reçoit en paramètres deux éléments <em>t1</em> et <em>t2</em> de type <em>T</em></li>
-<li>rend 1 si t1&gt;t2, 0 si t1==t2, -1 si t1&lt;t2. C&#x27;est au développeur de donner une signification aux opérateurs &lt;, ==, &gt;. Par exemple, si p1 et p2 sont deux objets <em>Personne</em>, on pourra dire que p1&gt;p2 si le nom de p1 précède le nom de p2 dans l&#x27;ordre alphabétique. On aura alors un tri croissant selon le nom des personnes. Si on veut un tri selon l&#x27;âge, on dira que p1&gt;p2 si l&#x27;âge de p1 est supérieur à l&#x27;âge de p2.</li>
-<li>pour avoir un tri dans l&#x27;ordre décroissant, il suffit d&#x27;inverser les résultats +1 et -1</li>
+  <li>reçoit en paramètres deux éléments <i>t1</i> et <i>t2</i> de type <i>T</i>
+  </li>
+  <li>rend 1 si t1&gt;t2, 0 si t1==t2, -1 si t1&lt;t2. C&#x27;est au développeur de donner une signification aux opérateurs &lt;, ==, &gt;. Par exemple, si p1 et p2 sont deux objets <i>Personne</i>, on pourra dire que p1&gt;p2 si le nom de p1 précède le nom de p2 dans l&#x27;ordre alphabétique. On aura alors un tri croissant selon le nom des personnes. Si on veut un tri selon l&#x27;âge, on dira que p1&gt;p2 si l&#x27;âge de p1 est supérieur à l&#x27;âge de p2.
+  </li>
+  <li>pour avoir un tri dans l&#x27;ordre décroissant, il suffit d&#x27;inverser les résultats +1 et -1
+  </li>
 </ul>
+
 <p>Nous en savons assez pour trier un tabeau de personnes. Le programme est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -3914,12 +4067,18 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 8 : le tableau de personnes</li>
-<li>ligne 12 : le tri du tableau de personnes selon les nom et prénom. Le 2ième paramètre de la méthode générique <em>Sort</em> est une instance d&#x27;une classe <em>CompareNoms</em> implémentant l&#x27;interface générique <em>IComparer&lt;Personne&gt;</em>.</li>
-<li>lignes 30-39 : la classe <em>CompareNoms</em> implémentant l&#x27;interface générique <em>IComparer&lt;Personne&gt;.</em></li>
-<li>lignes 31-38 : implémentation de la méthode générique <em>int CompareTo(T,T)</em> de l&#x27;interface <em>IComparer&lt;T&gt;</em>. La méthode utilise la méthode <em>String.CompareTo</em>, présentée paragraphe <a href="----les-bases-du-langage-c.html#stringcompareto">3.3.5.4</a>, pour comparer deux chaînes de caractères.</li>
-<li>ligne 16 : le tri du tableau de personnes selon les âges. Le 2ième paramètre de la méthode générique <em>Sort</em> est une instance d&#x27;une classe <em>CompareAges</em> implémentant l&#x27;interface générique <em>IComparer&lt;Personne</em>&gt; et définie lignes 42-51.</li>
+  <li>ligne 8 : le tableau de personnes
+  </li>
+  <li>ligne 12 : le tri du tableau de personnes selon les nom et prénom. Le 2ième paramètre de la méthode générique <i>Sort</i> est une instance d&#x27;une classe <i>CompareNoms</i> implémentant l&#x27;interface générique <i>IComparer&lt;Personne&gt;</i>.
+  </li>
+  <li>lignes 30-39 : la classe <i>CompareNoms</i> implémentant l&#x27;interface générique <i>IComparer&lt;Personne&gt;.</i>
+  </li>
+  <li>lignes 31-38 : implémentation de la méthode générique <i>int CompareTo(T,T)</i> de l&#x27;interface <i>IComparer&lt;T&gt;</i>. La méthode utilise la méthode <i>String.CompareTo</i>, présentée paragraphe <a href="----les-bases-du-langage-c.html#stringcompareto">3.3.5.4</a>, pour comparer deux chaînes de caractères.
+  </li>
+  <li>ligne 16 : le tri du tableau de personnes selon les âges. Le 2ième paramètre de la méthode générique <i>Sort</i> est une instance d&#x27;une classe <i>CompareAges</i> implémentant l&#x27;interface générique <i>IComparer&lt;Personne</i>&gt; et définie lignes 42-51.
+  </li>
 </ul>
+
 <p>Les résultats de l&#x27;exécution sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-75-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-75-2"> 2</a></span>
@@ -3979,19 +4138,25 @@
 <a id="__codelineno-82-2" name="__codelineno-82-2" href="#__codelineno-82-2"></a>    // définition de la classe
 <a id="__codelineno-82-3" name="__codelineno-82-3" href="#__codelineno-82-3"></a>}
 </code></pre></div>
-<p><a id="impots-v2"></a>
-<a id="refheading10400311168783983"></a></p>
+<p><a id="refheading10400311168783983"></a>
+<a id="impots-v2"></a></p>
 <h2 id="410-application-exemple-v2">4.10. Application exemple - V2</h2>
 <p>On reprend le calcul de l&#x27;impôt déjà étudié dans le chapitre précédent paragraphe <a href="----les-bases-du-langage-c.html#impots-v1">3.6</a> et on le traite maintenant en utilisant des classes et des interfaces. Rappelons le problème :</p>
 <p>On se propose d&#x27;écrire un programme permettant de calculer l&#x27;impôt d&#x27;un contribuable. On se place dans le cas simplifié d&#x27;un contribuable n&#x27;ayant que son seul salaire à déclarer (chiffres 2004 pour revenus 2003) :</p>
 <ul>
-<li>on calcule le nombre de parts du salarié <strong>nbParts=nbEnfants/2 +1</strong> s&#x27;il n&#x27;est pas marié, <strong>nbEnfants/2+2</strong> s&#x27;il est marié, où <em>nbEnfants</em> est son nombre d&#x27;enfants.</li>
-<li>s&#x27;il a au moins trois enfants, il a une demi part de plus</li>
-<li>on calcule son revenu imposable <strong>R=0.72*S</strong> où S est son salaire annuel</li>
-<li>on calcule son coefficient familial <strong>QF=R/nbParts</strong></li>
-<li>on calcule son impôt <strong>I</strong>. Considérons le tableau suivant :</li>
+  <li>on calcule le nombre de parts du salarié <b>nbParts=nbEnfants/2 +1</b> s&#x27;il n&#x27;est pas marié, <b>nbEnfants/2+2</b> s&#x27;il est marié, où <i>nbEnfants</i> est son nombre d&#x27;enfants.
+  </li>
+  <li>s&#x27;il a au moins trois enfants, il a une demi part de plus
+  </li>
+  <li>on calcule son revenu imposable <b>R=0.72*S</b> où S est son salaire annuel
+  </li>
+  <li>on calcule son coefficient familial <b>QF=R/nbParts</b>
+  </li>
+  <li>on calcule son impôt <b>I</b>. Considérons le tableau suivant :
+  </li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">4262        </p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">0</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">0</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">8382</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">0.0683</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">291.09</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">14753</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">0.1914</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">1322.92</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">23888</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">0.2826</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">2668.39</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">38868</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">0.3738</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">4846.98</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">47932</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">0.4262</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">6883.66</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">0        </p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">0.4809</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">9505.54</p></td></tr></table>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4262        </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">8382</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.0683</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">291.09</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">14753</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.1914</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1322.92</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">23888</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.2826</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2668.39</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">38868</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.3738</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4846.98</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">47932</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.4262</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">6883.66</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0        </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.4809</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">9505.54</div></td></tr></table>
 
 <p>Chaque ligne a 3 champs. Pour calculer l&#x27;impôt I, on recherche la première ligne où <em>QF&lt;=champ1</em>. Par exemple, si QF=5000 on trouvera la ligne</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a>    8382        0.0683        291.09
@@ -4023,8 +4188,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : la méthode de calcul de l&#x27;impôt à partir de trois données : l&#x27;état marié ou non du contribuable, son nombre d&#x27;enfants, son salaire</li>
+  <li>ligne 3 : la méthode de calcul de l&#x27;impôt à partir de trois données : l&#x27;état marié ou non du contribuable, son nombre d&#x27;enfants, son salaire
+  </li>
 </ul>
+
 <p>Ensuite, nous définissons une classe abstraite implémentant cette interface :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Chap2 {</span>
@@ -4058,10 +4225,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : la classe <em>AbstractImpot</em> implémente l&#x27;interface <em>IImpot</em>.</li>
-<li>ligne 7 : les données annuelles du calcul de l&#x27;impôt sous forme d&#x27;un champ protégé. La classe <em>AbstractImpot</em> ne sait pas comment sera initialisé ce champ. Elle en laisse le soin aux classes dérivées. C&#x27;est pourquoi elle est déclarée abstraite (ligne 2) afin d&#x27;en interdire toute instanciation.</li>
-<li>lignes 10-25 : l&#x27;implémentation de la méthode <em>calculer</em> de l&#x27;interface <em>IImpot</em>. Les classes dérivées n&#x27;auront pas à réécrire cette méthode. La classe <em>AbstractImpot</em> sert ainsi de classe de factorisation des classes dérivées. On y met ce qui est commun à toutes les classes dérivées.</li>
+  <li>ligne 2 : la classe <i>AbstractImpot</i> implémente l&#x27;interface <i>IImpot</i>.
+  </li>
+  <li>ligne 7 : les données annuelles du calcul de l&#x27;impôt sous forme d&#x27;un champ protégé. La classe <i>AbstractImpot</i> ne sait pas comment sera initialisé ce champ. Elle en laisse le soin aux classes dérivées. C&#x27;est pourquoi elle est déclarée abstraite (ligne 2) afin d&#x27;en interdire toute instanciation.
+  </li>
+  <li>lignes 10-25 : l&#x27;implémentation de la méthode <i>calculer</i> de l&#x27;interface <i>IImpot</i>. Les classes dérivées n&#x27;auront pas à réécrire cette méthode. La classe <i>AbstractImpot</i> sert ainsi de classe de factorisation des classes dérivées. On y met ce qui est commun à toutes les classes dérivées.
+  </li>
 </ul>
+
 <p>Une classe implémentant l&#x27;interface <em>IImpot</em> peut être construite en dérivant la classe <em>AbstractImpot</em>. C&#x27;est ce que nous faisons maintenant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -4164,12 +4335,18 @@
 
 <p>Le programme ci-dessus permet à l&#x27;utilisateur de faire des simulations répétées de calcul d&#x27;impôt.</p>
 <ul>
-<li>ligne 16 : création d&#x27;un objet <em>impot</em> implémentant l&#x27;interface <em>IImpot</em>. Cet objet est obtenu par instanciation d&#x27;un type <em>HardwiredImpot</em>, un type qui implémente l&#x27;interface <em>IImpot</em>. On notera qu&#x27;on n&#x27;a pas donné à la variable <em>impot</em>, le type <em>HardwiredImpot</em> mais le type <em>IImpot</em>. En écrivant cela, on indique qu&#x27;on ne s&#x27;intéresse qu&#x27;à la méthode <em>calculer</em> de l&#x27;objet <em>impot</em> et pas au reste.</li>
-<li>lignes 19-68 : la boucle des simulations de calcul de l&#x27;impôt</li>
-<li>ligne 22 : les trois paramètres nécessaires à la méthode <em>calculer</em> sont demandés en une seule ligne tapée au clavier.</li>
-<li>ligne 26 : la méthode [chaine].Split(null) permet de décomposer [chaine] en mots. Ceux-ci sont stockés dans un tableau <em>args</em>.</li>
-<li>ligne 66 : appel de la méthode <em>calculer</em> de l&#x27;objet <em>impot</em> implémentant l&#x27;interface <em>IImpot</em>.</li>
+  <li>ligne 16 : création d&#x27;un objet <i>impot</i> implémentant l&#x27;interface <i>IImpot</i>. Cet objet est obtenu par instanciation d&#x27;un type <i>HardwiredImpot</i>, un type qui implémente l&#x27;interface <i>IImpot</i>. On notera qu&#x27;on n&#x27;a pas donné à la variable <i>impot</i>, le type <i>HardwiredImpot</i> mais le type <i>IImpot</i>. En écrivant cela, on indique qu&#x27;on ne s&#x27;intéresse qu&#x27;à la méthode <i>calculer</i> de l&#x27;objet <i>impot</i> et pas au reste.
+  </li>
+  <li>lignes 19-68 : la boucle des simulations de calcul de l&#x27;impôt
+  </li>
+  <li>ligne 22 : les trois paramètres nécessaires à la méthode <i>calculer</i> sont demandés en une seule ligne tapée au clavier.
+  </li>
+  <li>ligne 26 : la méthode [chaine].Split(null) permet de décomposer [chaine] en mots. Ceux-ci sont stockés dans un tableau <i>args</i>.
+  </li>
+  <li>ligne 66 : appel de la méthode <i>calculer</i> de l&#x27;objet <i>impot</i> implémentant l&#x27;interface <i>IImpot</i>.
+  </li>
 </ul>
+
 <p>Voici un exemple d&#x27;exécution du programme :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-85-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-85-2"> 2</a></span>

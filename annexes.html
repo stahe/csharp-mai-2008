@@ -905,17 +905,24 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F8000004986CB3F57F.png" style="display:inline-block; margin:4px;width:11.779cm;height:10.89cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F8000004986CB3F57F.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : d&#x27;abord télécharger et installer la plate-forme .NET 2.0</li>
-<li>en [2] : puis installer et télécharger SQL Server Express 2005</li>
-<li>en [3] : puis installer et télécharger SQL Server Management Studio Express qui permet d&#x27;administrer SQL Server</li>
+  <li>en [1] : d&#x27;abord télécharger et installer la plate-forme .NET 2.0
+  </li>
+  <li>en [2] : puis installer et télécharger SQL Server Express 2005
+  </li>
+  <li>en [3] : puis installer et télécharger SQL Server Management Studio Express qui permet d&#x27;administrer SQL Server
+  </li>
 </ul>
+
 <p>L&#x27;installation de SQL Server Express donne naissance à un dossier dans [Démarrer / Programmes ] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000068F000000E26B28488E.png" style="display:inline-block; margin:4px;width:15.55cm;height:2.09cm;" class="odt-zoomable" data-zoom-src="images/100000000000068F000000E26B28488E.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : l&#x27;application de configuration de SQL Server. Permet également de lancer / arrêter le serveur</li>
-<li>en [2] : l&#x27;application d&#x27;administration du serveur</li>
+  <li>en [1] : l&#x27;application de configuration de SQL Server. Permet également de lancer / arrêter le serveur
+  </li>
+  <li>en [2] : l&#x27;application d&#x27;administration du serveur
+  </li>
 </ul>
+
 <p><a id="refheading10404231168783983"></a></p>
 <h3 id="1412-lancer-arreter-sql-server">14.1.2. Lancer / Arrêter SQL Server</h3>
 <p>Comme pour les SGBD précédents, SQL server Express a été installé comme un service windows à démarrage automatique. Nous changeons cette configuration :</p>
@@ -923,37 +930,53 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007D60000018C7A96A1AF.png" style="display:inline-block; margin:4px;width:15.921cm;height:3.14cm;" class="odt-zoomable" data-zoom-src="images/10000000000007D60000018C7A96A1AF.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : nous double-cliquons sur [Services]</li>
-<li>en [2] : on voit qu&#x27;un service appelé [SQL Server] est présent, qu&#x27;il est démarré [3] et que son démarrage est automatique [4].</li>
-<li>en [5] : un autre service lié à SQL Server, appelé &quot;SQL Server Browser&quot; est également actif et à démarrage automatique.</li>
+  <li>en [1] : nous double-cliquons sur [Services]
+  </li>
+  <li>en [2] : on voit qu&#x27;un service appelé [SQL Server] est présent, qu&#x27;il est démarré [3] et que son démarrage est automatique [4].
+  </li>
+  <li>en [5] : un autre service lié à SQL Server, appelé &quot;SQL Server Browser&quot; est également actif et à démarrage automatique.
+  </li>
 </ul>
+
 <p>Pour modifier ce fonctionnement, nous double-cliquons sur le service [SQL Server] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000779000003EF4BCBA005.png" style="display:inline-block; margin:4px;width:15.18cm;height:7.99cm;" class="odt-zoomable" data-zoom-src="images/1000000000000779000003EF4BCBA005.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : on met le service en démarrage manuel</li>
-<li>en [2] : on l&#x27;arrête</li>
-<li>en [3] : on valide la nouvelle configuration du service</li>
+  <li>en [1] : on met le service en démarrage manuel
+  </li>
+  <li>en [2] : on l&#x27;arrête
+  </li>
+  <li>en [3] : on valide la nouvelle configuration du service
+  </li>
 </ul>
+
 <p>On procèdera de même avec le service [SQL Server Browser] (cf [5] plus haut). Pour lancer et arrêter manuellement le service SQL Server 2005, on pourra utiliser l&#x27;application [1] du dossier [SQL server] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006EC000000DB19048572.png" style="display:inline-block; margin:4px;width:14.071cm;height:1.739cm;" class="odt-zoomable" data-zoom-src="images/10000000000006EC000000DB19048572.png" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007400000032E76E35439.png" style="display:inline-block; margin:4px;width:14.73cm;height:6.459cm;" class="odt-zoomable" data-zoom-src="images/10000000000007400000032E76E35439.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : s&#x27;assurer que le protocole TCP/IP est actif (enabled) puis passer aux propriétés du protocole.</li>
-<li>en [2] : dans l&#x27;onglet [IP Addresses], option [IPAll] :<ul>
-<li>le champ [TCP Dynamic ports] est laissé vide</li>
-<li>le port d&#x27;écoute du serveur est fixé à 1433 dans [TCP Port]</li>
+  <li>en [1] : s&#x27;assurer que le protocole TCP/IP est actif (enabled) puis passer aux propriétés du protocole.
+  </li>
+  <li>en [2] : dans l&#x27;onglet [IP Addresses], option [IPAll] :
+    <ul>
+      <li>le champ [TCP Dynamic ports] est laissé vide
+      </li>
+      <li>le port d&#x27;écoute du serveur est fixé à 1433 dans [TCP Port]
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000741000002474F71C69E.png" style="display:inline-block; margin:4px;width:14.741cm;height:4.63cm;" class="odt-zoomable" data-zoom-src="images/1000000000000741000002474F71C69E.png" /></td></tr></table>
 
 <ul>
-<li>en [3] : un clic droit sur le service [SQL Server] donne accès aux options de démarrage / arrêt du serveur. Ici, on le lance.</li>
-<li>en [4] : SQL Server est lancé</li>
+  <li>en [3] : un clic droit sur le service [SQL Server] donne accès aux options de démarrage / arrêt du serveur. Ici, on le lance.
+  </li>
+  <li>en [4] : SQL Server est lancé
+  </li>
 </ul>
+
 <p><a id="refheading10404251168783983"></a></p>
 <h3 id="1413-creation-dun-utilisateur-jpa-et-dune-base-de-donnees-jpa">14.1.3. Création d&#x27;un utilisateur jpa et d&#x27;une base de données jpa</h3>
 <p>Lançons le SGBD comme indiqué ci-dessus, puis l&#x27;application d&#x27;administration [1] via le menu ci-dessous :</p>
@@ -962,45 +985,68 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000070F000002B1AB4DA4AB.png" style="display:inline-block; margin:4px;width:14.34cm;height:5.47cm;" class="odt-zoomable" data-zoom-src="images/100000000000070F000002B1AB4DA4AB.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : on se connecte à SQL Server en tant qu&#x27;<strong>administrateur</strong> Windows</li>
-<li>en [2] : on configure les propriétés de la connexion</li>
+  <li>en [1] : on se connecte à SQL Server en tant qu&#x27;<b>administrateur</b> Windows
+  </li>
+  <li>en [2] : on configure les propriétés de la connexion
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006EE000001CE617452C5.png" style="display:inline-block; margin:4px;width:14.079cm;height:3.671cm;" class="odt-zoomable" data-zoom-src="images/10000000000006EE000001CE617452C5.png" /></td></tr></table>
 
 <ul>
-<li>en [3] : on autorise un mode mixte de connexion au serveur : soit avec un login windows (un utilisateur windows), soit avec un login SQL Server (compte défini au sein de SQL Server, indépendant de tout compte windows).</li>
-<li>en [3b] : on crée un utilisateur SQL Server</li>
+  <li>en [3] : on autorise un mode mixte de connexion au serveur : soit avec un login windows (un utilisateur windows), soit avec un login SQL Server (compte défini au sein de SQL Server, indépendant de tout compte windows).
+  </li>
+  <li>en [3b] : on crée un utilisateur SQL Server
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000730000001EE91E64558.png" style="display:inline-block; margin:4px;width:14.61cm;height:3.919cm;" class="odt-zoomable" data-zoom-src="images/1000000000000730000001EE91E64558.png" /></td></tr></table>
 
 <ul>
-<li>en [4] : option [General]</li>
-<li>en [5] : le login</li>
-<li>en [6] : le mot de passe (<strong>jpa</strong> ici)</li>
-<li>en [7] : option [Server Roles]</li>
-<li>en [8] : l&#x27;utilisateur <strong>jpa</strong> aura le droit de créer des bases de données</li>
+  <li>en [4] : option [General]
+  </li>
+  <li>en [5] : le login
+  </li>
+  <li>en [6] : le mot de passe (<b>jpa</b> ici)
+  </li>
+  <li>en [7] : option [Server Roles]
+  </li>
+  <li>en [8] : l&#x27;utilisateur <b>jpa</b> aura le droit de créer des bases de données
+  </li>
 </ul>
+
 <p>On valide cette configuration :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000688000001A3137DA9B5.png" style="display:inline-block; margin:4px;width:13.27cm;height:3.32cm;" class="odt-zoomable" data-zoom-src="images/1000000000000688000001A3137DA9B5.png" /></td></tr></table>
 
 <ul>
-<li>en [9] : l&#x27;utilisateur <strong>jpa</strong> a été créé</li>
-<li>en [10] : on se déconnecte</li>
-<li>en [11] : on se reconnecte</li>
+  <li>en [9] : l&#x27;utilisateur <b>jpa</b> a été créé
+  </li>
+  <li>en [10] : on se déconnecte
+  </li>
+  <li>en [11] : on se reconnecte
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006AC0000025D8C5C4763.png" style="display:inline-block; margin:4px;width:13.561cm;height:4.8cm;" class="odt-zoomable" data-zoom-src="images/10000000000006AC0000025D8C5C4763.png" /></td></tr></table>
 
 <ul>
-<li>en [12] : on se connecte en tant qu&#x27;utilisateur jpa/jpa</li>
-<li>en [13] : une fois connecté, l&#x27;utilisateur <strong>jpa</strong> crée une base de données</li>
+  <li>en [12] : on se connecte en tant qu&#x27;utilisateur jpa/jpa
+  </li>
+  <li>en [13] : une fois connecté, l&#x27;utilisateur <b>jpa</b> crée une base de données
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006C80000028F68F2AB16.png" style="display:inline-block; margin:4px;width:13.78cm;height:5.2cm;" class="odt-zoomable" data-zoom-src="images/10000000000006C80000028F68F2AB16.png" /></td></tr></table>
 
 <ul>
-<li>en [14] : la base s&#x27;appellera <strong>jpa</strong></li>
-<li>en [15] : et appartiendra à l&#x27;utilisateur <strong>jpa</strong></li>
-<li>en [16] : la base <strong>jpa</strong> a été créée</li>
+  <li>en [14] : la base s&#x27;appellera <b>jpa</b>
+  </li>
+  <li>en [15] : et appartiendra à l&#x27;utilisateur <b>jpa</b>
+  </li>
+  <li>en [16] : la base <b>jpa</b> a été créée
+  </li>
 </ul>
+
 <p><a id="refheading10404271168783983"></a></p>
 <h3 id="1414-creation-de-la-table-articles-de-la-base-de-donnees-jpa">14.1.4. Création de la table [ARTICLES] de la base de données jpa</h3>
 <p>Nous créons une table [ARTICLES] à partir du script SQL suivant :</p>
@@ -1037,20 +1083,31 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007AD00000436F571C94A.png" style="display:inline-block; margin:4px;width:15.6cm;height:8.56cm;" class="odt-zoomable" data-zoom-src="images/10000000000007AD00000436F571C94A.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : on ouvre un script SQL</li>
-<li>en [2] : on désigne le script SQL</li>
-<li>en [3] : on doit s&#x27;identifier de nouveau (jpa/jpa)</li>
-<li>en [4] : le script qui va être exécuté</li>
-<li>en [5] : sélectionner la base dans laquelle le script va être exécuté</li>
-<li>en [6] : l&#x27;exécuter</li>
+  <li>en [1] : on ouvre un script SQL
+  </li>
+  <li>en [2] : on désigne le script SQL
+  </li>
+  <li>en [3] : on doit s&#x27;identifier de nouveau (jpa/jpa)
+  </li>
+  <li>en [4] : le script qui va être exécuté
+  </li>
+  <li>en [5] : sélectionner la base dans laquelle le script va être exécuté
+  </li>
+  <li>en [6] : l&#x27;exécuter
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007B100000254EFD783AF.png" style="display:inline-block; margin:4px;width:15.63cm;height:4.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000007B100000254EFD783AF.png" /></td></tr></table>
 
 <ul>
-<li>en [7] : le résultat de l&#x27;exécution : la table [ARTICLES] a été créée.</li>
-<li>en [8] : on demande à voir son contenu</li>
-<li>en [9] : le contenu de la table.</li>
+  <li>en [7] : le résultat de l&#x27;exécution : la table [ARTICLES] a été créée.
+  </li>
+  <li>en [8] : on demande à voir son contenu
+  </li>
+  <li>en [9] : le contenu de la table.
+  </li>
 </ul>
+
 <p><a id="refheading10404291168783983"></a></p>
 <h3 id="1415-le-connecteur-adonet-de-sql-server-express">14.1.5. Le connecteur ADO.NET de SQL Server Express</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000063D000000F7A9616365.png" style="display:inline-block; margin:4px;width:12.681cm;height:1.96cm;" class="odt-zoomable" data-zoom-src="images/100000000000063D000000F7A9616365.png" /></td></tr></table>
@@ -1065,33 +1122,48 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007530000013581C306A0.png" style="display:inline-block; margin:4px;width:14.88cm;height:2.45cm;" class="odt-zoomable" data-zoom-src="images/10000000000007530000013581C306A0.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : choisir la version désirée</li>
-<li>en [2] : choisir une version Windows</li>
+  <li>en [1] : choisir la version désirée
+  </li>
+  <li>en [2] : choisir une version Windows
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006E50000020A704D94B1.png" style="display:inline-block; margin:4px;width:14.011cm;height:4.14cm;" class="odt-zoomable" data-zoom-src="images/10000000000006E50000020A704D94B1.png" /></td></tr></table>
 
 <ul>
-<li>en [3] : choisir la version windows désirée</li>
-<li>en [4] : le zip téléchargé contient un exécutable [Setup.exe] [4b] qu&#x27;il faut extraire et exécuter pour installer MySQL5</li>
+  <li>en [3] : choisir la version windows désirée
+  </li>
+  <li>en [4] : le zip téléchargé contient un exécutable [Setup.exe] [4b] qu&#x27;il faut extraire et exécuter pour installer MySQL5
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007F7000002774CA03BD0.png" style="display:inline-block; margin:4px;width:16.18cm;height:5.009cm;" class="odt-zoomable" data-zoom-src="images/10000000000007F7000002774CA03BD0.png" /></td></tr></table>
 
 <ul>
-<li>en [5] : choisir une installation typique</li>
-<li>en [6] : une fois l&#x27;installation terminée, on peut configurer le serveur MySQL5</li>
+  <li>en [5] : choisir une installation typique
+  </li>
+  <li>en [6] : une fois l&#x27;installation terminée, on peut configurer le serveur MySQL5
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007F000000258D1668C40.png" style="display:inline-block; margin:4px;width:16.131cm;height:4.761cm;" class="odt-zoomable" data-zoom-src="images/10000000000007F000000258D1668C40.png" /></td></tr></table>
 
 <ul>
-<li>en [7] : choisir une configuration standard, celle qui pose le moins de questions</li>
-<li>en [8] : le serveur MySQL5 sera un service windows</li>
+  <li>en [7] : choisir une configuration standard, celle qui pose le moins de questions
+  </li>
+  <li>en [8] : le serveur MySQL5 sera un service windows
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007EF000002AB0D17EDA4.png" style="display:inline-block; margin:4px;width:16.12cm;height:5.42cm;" class="odt-zoomable" data-zoom-src="images/10000000000007EF000002AB0D17EDA4.png" /></td></tr></table>
 
 <ul>
-<li>en [9] : par défaut l&#x27;administrateur du serveur est <strong>root</strong> sans mot de passe. On peut garder cette configuration ou donner un nouveau mot de passe à <strong>root</strong>. Si l&#x27;installation de MySQL5 vient derrière une désinstallation d&#x27;une version précédente, cette opération peut échouer. Il y a moins moyen d&#x27;y revenir.</li>
-<li>en [10] : on demande la configuration du serveur</li>
+  <li>en [9] : par défaut l&#x27;administrateur du serveur est <b>root</b> sans mot de passe. On peut garder cette configuration ou donner un nouveau mot de passe à <b>root</b>. Si l&#x27;installation de MySQL5 vient derrière une désinstallation d&#x27;une version précédente, cette opération peut échouer. Il y a moins moyen d&#x27;y revenir.
+  </li>
+  <li>en [10] : on demande la configuration du serveur
+  </li>
 </ul>
+
 <p>L&#x27;installation de MySQL5 donne naissance à un dossier dans [Démarrer / Programmes ] :</p>
 <p><img src="images/10000000000002CC000000607DE6A22C.png" style="width:13.259cm;height:1.78cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002CC000000607DE6A22C.png" /></p>
 <p>On peut utiliser [MySQL Server Instance Config Wizard] pour reconfigurer le serveur :</p>
@@ -1102,8 +1174,10 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077D000001A0C75B1F22.png" style="display:inline-block; margin:4px;width:15.221cm;height:3.3cm;" class="odt-zoomable" data-zoom-src="images/100000000000077D000001A0C75B1F22.png" /></td></tr></table>
 
 <ul>
-<li>en [3] : nous changeons le mot de passe de root (ici root/root)</li>
+  <li>en [3] : nous changeons le mot de passe de root (ici root/root)
+  </li>
 </ul>
+
 <p><a id="refheading10404351168783983"></a></p>
 <h3 id="1422-lancer-arreter-mysql5">14.2.2. Lancer / Arrêter MySQL5</h3>
 <p>Le serveur MySQL5 a été installé comme un service windows à démarrage automatique, c.a.d lancé dès le démarrage de windows. Ce mode de fonctionnement est peu pratique. Nous allons le changer :</p>
@@ -1111,108 +1185,157 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007E20000018EF1D4D5AE.png" style="display:inline-block; margin:4px;width:16.02cm;height:3.161cm;" class="odt-zoomable" data-zoom-src="images/10000000000007E20000018EF1D4D5AE.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : nous double-cliquons sur [Services]</li>
-<li>en [2] : on voit qu&#x27;un service appelé [MySQL] est présent, qu&#x27;il est démarré [3] et que son démarrage est automatique [4].</li>
+  <li>en [1] : nous double-cliquons sur [Services]
+  </li>
+  <li>en [2] : on voit qu&#x27;un service appelé [MySQL] est présent, qu&#x27;il est démarré [3] et que son démarrage est automatique [4].
+  </li>
 </ul>
+
 <p>Pour modifier ce fonctionnement, nous double-cliquons sur le service [MySQL] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000078E000003EFEEB5D634.png" style="display:inline-block; margin:4px;width:15.349cm;height:7.99cm;" class="odt-zoomable" data-zoom-src="images/100000000000078E000003EFEEB5D634.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : on met le service en démarrage manuel</li>
-<li>en [2] : on l&#x27;arrête</li>
-<li>en [3] : on valide la nouvelle configuration du service</li>
+  <li>en [1] : on met le service en démarrage manuel
+  </li>
+  <li>en [2] : on l&#x27;arrête
+  </li>
+  <li>en [3] : on valide la nouvelle configuration du service
+  </li>
 </ul>
+
 <p>Pour lancer et arrêter manuellement le service MySQL, on pourra créer deux raccourcis :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007AD000001EB00B57175.png" style="display:inline-block; margin:4px;width:15.6cm;height:3.9cm;" class="odt-zoomable" data-zoom-src="images/10000000000007AD000001EB00B57175.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : le raccourci pour lancer MySQL5</li>
-<li>en [2] : le raccourci pour l&#x27;arrêter</li>
+  <li>en [1] : le raccourci pour lancer MySQL5
+  </li>
+  <li>en [2] : le raccourci pour l&#x27;arrêter
+  </li>
 </ul>
-<p><a id="mysql5-clients-gui"></a>
-<a id="refheading10404371168783983"></a></p>
+
+<p><a id="refheading10404371168783983"></a>
+<a id="mysql5-clients-gui"></a></p>
 <h3 id="1423-clients-dadministration-mysql">14.2.3. Clients d&#x27;administration MySQL</h3>
 <p>Sur le site de MySQL, on peut trouver des clients d&#x27;administration du SGBD :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007B30000016A21CF87ED.png" style="display:inline-block; margin:4px;width:15.64cm;height:2.87cm;" class="odt-zoomable" data-zoom-src="images/10000000000007B30000016A21CF87ED.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : choisir [MySQL GUI Tools] qui rassemble divers clients graphiques permettant soit d&#x27;administrer le SGBD, soit de l&#x27;exploiter</li>
-<li>en [2] : prendre la version Windows qui convient</li>
+  <li>en [1] : choisir [MySQL GUI Tools] qui rassemble divers clients graphiques permettant soit d&#x27;administrer le SGBD, soit de l&#x27;exploiter
+  </li>
+  <li>en [2] : prendre la version Windows qui convient
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000742000001257C8AE0CD.png" style="display:inline-block; margin:4px;width:14.75cm;height:2.32cm;" class="odt-zoomable" data-zoom-src="images/1000000000000742000001257C8AE0CD.png" /></td></tr></table>
 
 <ul>
-<li>en [3] : on récupère un fichier .msi à exécuter</li>
-<li>en [4] : une fois l&#x27;installation faite, de nouveaux raccourcis apparaissent dans le dossier [Menu Démarrer / Programmes / mySQL].</li>
+  <li>en [3] : on récupère un fichier .msi à exécuter
+  </li>
+  <li>en [4] : une fois l&#x27;installation faite, de nouveaux raccourcis apparaissent dans le dossier [Menu Démarrer / Programmes / mySQL].
+  </li>
 </ul>
+
 <p>Lançons MySQL (via les raccourcis que vous avez créés), puis lançons [MySQL Administrator] via le menu ci-dessus :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007CF000002BBA31D8BFC.png" style="display:inline-block; margin:4px;width:15.87cm;height:5.549cm;" class="odt-zoomable" data-zoom-src="images/10000000000007CF000002BBA31D8BFC.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : mettre le mot de passe de l&#x27;utilisateur root (root ici)</li>
-<li>en [2] : on est connecté et on voit que MySQL est actif</li>
+  <li>en [1] : mettre le mot de passe de l&#x27;utilisateur root (root ici)
+  </li>
+  <li>en [2] : on est connecté et on voit que MySQL est actif
+  </li>
 </ul>
+
 <p><a id="refheading10404391168783983"></a></p>
 <h3 id="1424-creation-dun-utilisateur-jpa-et-dune-base-de-donnees-jpa">14.2.4. Création d&#x27;un utilisateur jpa et d&#x27;une base de données jpa</h3>
 <p>Nous créons maintenant une base de données appelée <strong>jpa</strong> et un utilisateur de même nom. D&#x27;abord l&#x27;utilisateur :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000073C000003B44350B48E.png" style="display:inline-block; margin:4px;width:14.7cm;height:7.519cm;" class="odt-zoomable" data-zoom-src="images/100000000000073C000003B44350B48E.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : on sélectionne [User Administration]</li>
-<li>en [2] : on clique droit dans la partie [User accounts] pour créer un nouvel utilisateur</li>
-<li>en [3] : l&#x27;utilisateur s&#x27;appelle <strong>jpa</strong> et son mot de passe est <strong>jpa</strong></li>
-<li>en [4] : on valide la création</li>
-<li>en [5] : l&#x27;utilisateur [jpa] apparaît dans la fenêtre [User Accounts]</li>
+  <li>en [1] : on sélectionne [User Administration]
+  </li>
+  <li>en [2] : on clique droit dans la partie [User accounts] pour créer un nouvel utilisateur
+  </li>
+  <li>en [3] : l&#x27;utilisateur s&#x27;appelle <b>jpa</b> et son mot de passe est <b>jpa</b>
+  </li>
+  <li>en [4] : on valide la création
+  </li>
+  <li>en [5] : l&#x27;utilisateur [jpa] apparaît dans la fenêtre [User Accounts]
+  </li>
 </ul>
+
 <p>La base de données maintenant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006AC0000035C08DBB227.png" style="display:inline-block; margin:4px;width:13.561cm;height:6.83cm;" class="odt-zoomable" data-zoom-src="images/10000000000006AC0000035C08DBB227.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : choix de l&#x27;option [Catalogs]</li>
-<li>en [2] : clic droit sur la fenêtre [Schemata] pour créer un nouveau schéma (désigne une base de données)</li>
-<li>en [3] : on nomme le nouveau schéma</li>
-<li>en [4] : il apparaît dans la fenêtre [Schemata]</li>
+  <li>en [1] : choix de l&#x27;option [Catalogs]
+  </li>
+  <li>en [2] : clic droit sur la fenêtre [Schemata] pour créer un nouveau schéma (désigne une base de données)
+  </li>
+  <li>en [3] : on nomme le nouveau schéma
+  </li>
+  <li>en [4] : il apparaît dans la fenêtre [Schemata]
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000061E0000023F97A16228.png" style="display:inline-block; margin:4px;width:12.43cm;height:4.56cm;" class="odt-zoomable" data-zoom-src="images/100000000000061E0000023F97A16228.png" /></td></tr></table>
 
 <ul>
-<li>en [5] : on sélectionne le schéma [jpa]</li>
-<li>en [6] : les objets du schéma [jpa] apparaissent, notamment les tables. Il n&#x27;y en a pas encore. Un clic droit permettrait d&#x27;en créer. Nous laissons le lecteur le faire.</li>
+  <li>en [5] : on sélectionne le schéma [jpa]
+  </li>
+  <li>en [6] : les objets du schéma [jpa] apparaissent, notamment les tables. Il n&#x27;y en a pas encore. Un clic droit permettrait d&#x27;en créer. Nous laissons le lecteur le faire.
+  </li>
 </ul>
+
 <p>Revenons à l&#x27;utilisateur [jpa] afin de lui donner tous les droits sur le schéma [jpa] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006B300000348B1B61CEA.png" style="display:inline-block; margin:4px;width:13.61cm;height:6.669cm;" class="odt-zoomable" data-zoom-src="images/10000000000006B300000348B1B61CEA.png" /></td></tr></table>
 
 <ul>
-<li>en [1], puis [2] : on sélectionne l&#x27;utilisateur [jpa]</li>
-<li>en [3] : on sélectionne l&#x27;onglet [Schema Privileges]</li>
-<li>en [4] : on sélectionne le schéma [jpa]</li>
-<li>en [5] : on va donner à l&#x27;utilisateur [jpa] tous les privilèges sur le schéma [jpa]</li>
+  <li>en [1], puis [2] : on sélectionne l&#x27;utilisateur [jpa]
+  </li>
+  <li>en [3] : on sélectionne l&#x27;onglet [Schema Privileges]
+  </li>
+  <li>en [4] : on sélectionne le schéma [jpa]
+  </li>
+  <li>en [5] : on va donner à l&#x27;utilisateur [jpa] tous les privilèges sur le schéma [jpa]
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000059C000003D9DF0F33C0.png" style="display:inline-block; margin:4px;width:11.4cm;height:7.819cm;" class="odt-zoomable" data-zoom-src="images/100000000000059C000003D9DF0F33C0.png" /></td></tr></table>
 
 <ul>
-<li>en [6] : on valide les changements faits</li>
+  <li>en [6] : on valide les changements faits
+  </li>
 </ul>
+
 <p>Pour vérifier que l&#x27;utilisateur [jpa] peut travailler avec le schéma [jpa], on ferme l&#x27;administrateur MySQL. On le relance et on se connecte cette fois sous le nom [jpa/jpa] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000064B0000027AB14B03A9.png" style="display:inline-block; margin:4px;width:12.79cm;height:5.031cm;" class="odt-zoomable" data-zoom-src="images/100000000000064B0000027AB14B03A9.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : on s&#x27;identifie (jpa/jpa)</li>
-<li>en [2] : la connexion a réussi et dans [Schemata], on voit les schémas sur lesquels on a des droits. On voit le schéma [jpa].</li>
+  <li>en [1] : on s&#x27;identifie (jpa/jpa)
+  </li>
+  <li>en [2] : la connexion a réussi et dans [Schemata], on voit les schémas sur lesquels on a des droits. On voit le schéma [jpa].
+  </li>
 </ul>
+
 <p>Nous allons maintenant créer une table [ARTICLES] à l&#x27;aide d&#x27;un script SQL.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007830000023DF0CDB6C1.png" style="display:inline-block; margin:4px;width:15.259cm;height:4.551cm;" class="odt-zoomable" data-zoom-src="images/10000000000007830000023DF0CDB6C1.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : utiliser l&#x27;application [MySQL Query Browser]</li>
-<li>en [2], [3], [4] : s&#x27;identifier (jpa / jpa / jpa)</li>
+  <li>en [1] : utiliser l&#x27;application [MySQL Query Browser]
+  </li>
+  <li>en [2], [3], [4] : s&#x27;identifier (jpa / jpa / jpa)
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000693000001A3D1B497A6.png" style="display:inline-block; margin:4px;width:13.36cm;height:3.32cm;" class="odt-zoomable" data-zoom-src="images/1000000000000693000001A3D1B497A6.png" /></td></tr></table>
 
 <ul>
-<li>en [5] : ouvrir un script SQL afin de l&#x27;exécuter</li>
-<li>en [6] : désigner le script [schema-articles.sql] suivant :</li>
+  <li>en [5] : ouvrir un script SQL afin de l&#x27;exécuter
+  </li>
+  <li>en [6] : désigner le script [schema-articles.sql] suivant :
+  </li>
 </ul>
+
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -1302,10 +1425,14 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007EC0000048FED74F14D.png" style="display:inline-block; margin:4px;width:16.101cm;height:9.26cm;" class="odt-zoomable" data-zoom-src="images/10000000000007EC0000048FED74F14D.png" /></td></tr></table>
 
 <ul>
-<li>en [7] : le script chargé</li>
-<li>en [8] : on l&#x27;exécute</li>
-<li>en [9] : la table [ARTICLES] a été créée</li>
+  <li>en [7] : le script chargé
+  </li>
+  <li>en [8] : on l&#x27;exécute
+  </li>
+  <li>en [9] : la table [ARTICLES] a été créée
+  </li>
 </ul>
+
 <p><a id="refheading10404411168783983"></a>
 <a id="mysql5-adonet"></a></p>
 <h3 id="1425-installation-du-connecteur-adonet-de-mysql5">14.2.5. Installation du connecteur ADO.NET de MySQL5</h3>
@@ -1324,10 +1451,14 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004CA00000224FA7B01AD.png" style="display:inline-block; margin:4px;width:9.73cm;height:4.35cm;" class="odt-zoomable" data-zoom-src="images/10000000000004CA00000224FA7B01AD.png" /></td></tr></table>
 
 <ul>
-<li>en [1], sélectionner [Outils d&#x27;administration] (sur XP Pro : Menu Démarrer / Panneau de configuration /  Performances et maintenance / Outils d&#x27;administration)</li>
-<li>en [2], double-cliquer sur [Sources de données (ODBC)]</li>
-<li>en [3], sélectionner l&#x27;onglet [Pilotes ODBC]</li>
-<li>en [4], le pilote ODBC de MySQL</li>
+  <li>en [1], sélectionner [Outils d&#x27;administration] (sur XP Pro : Menu Démarrer / Panneau de configuration /  Performances et maintenance / Outils d&#x27;administration)
+  </li>
+  <li>en [2], double-cliquer sur [Sources de données (ODBC)]
+  </li>
+  <li>en [3], sélectionner l&#x27;onglet [Pilotes ODBC]
+  </li>
+  <li>en [4], le pilote ODBC de MySQL
+  </li>
 </ul>
 
 

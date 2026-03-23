@@ -543,17 +543,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#632-les-entites-de-lapplication" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.3.2. Les entités de l&#x27;application
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#633-la-couche-dao" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -973,31 +962,44 @@
 
 <p>La solution précédente inclut des traitements classiques en programmation :</p>
 <ol>
-<li>la récupération de données mémorisées dans des fichiers, bases de données, ... lignes 12-21</li>
-<li>le dialogue avec l&#x27;utilisateur, lignes 26 (saisies) et 29 (affichages)</li>
-<li>l&#x27;utilisation d&#x27;un algorithme métier, ligne 29</li>
+  <li>la récupération de données mémorisées dans des fichiers, bases de données, ... lignes 12-21
+  </li>
+  <li>le dialogue avec l&#x27;utilisateur, lignes 26 (saisies) et 29 (affichages)
+  </li>
+  <li>l&#x27;utilisation d&#x27;un algorithme métier, ligne 29
+  </li>
 </ol>
+
 <p>La pratique a montré qu&#x27;isoler ces différents traitements dans des classes séparées améliorait la maintenabilité des applications. L&#x27;architecture d&#x27;une application ainsi structurée est la suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006B200000183A0AF0EE9.png" style="display:inline-block; margin:4px;width:15.87cm;height:3.581cm;" class="odt-zoomable" data-zoom-src="images/10000000000006B200000183A0AF0EE9.png" /></td></tr></table>
 
 <p>On appelle cette architecture, &quot;<strong>architecture trois tiers</strong>&quot;, traduction de l&#x27;anglais &quot;three tier architecture&quot;. Le terme &quot;trois tiers&quot; désigne normalement une architecture où chaque tier est sur une machine différente. Lorsque les tiers sont sur une même machine, l&#x27;architecture devient une architecture &quot;<strong>trois couches</strong>&quot;.</p>
 <ul>
-<li>la couche [metier] est celle qui contient les règles métier de l&#x27;application. Pour notre application de calcul d&#x27;impôt, ce sont les règles qui permettent de calculer l&#x27;impôt d&#x27;un contribuable. Cette couche a besoin de données pour travailler :</li>
-<li>les tranches d&#x27;impôt, données qui changent chaque année</li>
-<li>le nombre d&#x27;enfants, le statut marital et le salaire annuel du contribuable</li>
+  <li>la couche [metier] est celle qui contient les règles métier de l&#x27;application. Pour notre application de calcul d&#x27;impôt, ce sont les règles qui permettent de calculer l&#x27;impôt d&#x27;un contribuable. Cette couche a besoin de données pour travailler :
+  </li>
+  <li>les tranches d&#x27;impôt, données qui changent chaque année
+  </li>
+  <li>le nombre d&#x27;enfants, le statut marital et le salaire annuel du contribuable
+  </li>
 </ul>
+
 <p>Dans le schéma ci-dessus, les données peuvent provenir de deux endroits :</p>
 <ul>
-<li>la couche d&#x27;accès aux données ou [dao] (DAO = Data Access Object) pour les données déjà enregistrées dans des fichiers ou bases de données. Ce pourrait être le cas ici des tranches d&#x27;impôt comme il a été fait dans la version précédente de l&#x27;application.</li>
-<li>
-<p>la couche d&#x27;interface avec l&#x27;utilisateur ou [ui] (UI = User Interface) pour les données saisies par l&#x27;utilisateur ou affichées à l&#x27;utilisateur. Ce pourrait être le cas ici du nombre d&#x27;enfants, du statut marital et du salaire annuel du contribuable</p>
-</li>
-<li>
-<p>de façon générale, la couche [dao] s&#x27;occupe de l&#x27;accès aux données persistantes (fichiers, bases de données) ou non persistantes (réseau, capteurs, ...).</p>
-</li>
-<li>la couche [ui] elle, s&#x27;occupe des interactions avec l&#x27;utilisateur s&#x27;il y en a un.</li>
-<li>les trois couches sont rendues indépendantes grâce à l&#x27;utilisation d&#x27;interfaces.</li>
+  <li>la couche d&#x27;accès aux données ou [dao] (DAO = Data Access Object) pour les données déjà enregistrées dans des fichiers ou bases de données. Ce pourrait être le cas ici des tranches d&#x27;impôt comme il a été fait dans la version précédente de l&#x27;application.
+  </li>
+  <li>la couche d&#x27;interface avec l&#x27;utilisateur ou [ui] (UI = User Interface) pour les données saisies par l&#x27;utilisateur ou affichées à l&#x27;utilisateur. Ce pourrait être le cas ici du nombre d&#x27;enfants, du statut marital et du salaire annuel du contribuable
+  </li>
 </ul>
+
+<ul>
+  <li>de façon générale, la couche [dao] s&#x27;occupe de l&#x27;accès aux données persistantes (fichiers, bases de données) ou non persistantes (réseau, capteurs, ...).
+  </li>
+  <li>la couche [ui] elle, s&#x27;occupe des interactions avec l&#x27;utilisateur s&#x27;il y en a un.
+  </li>
+  <li>les trois couches sont rendues indépendantes grâce à l&#x27;utilisation d&#x27;interfaces.
+  </li>
+</ul>
+
 <p>Nous allons reprendre l&#x27;application [Impots] déjà étudiée à plusieurs reprises pour lui donner une architecture 3 couches. Pour cela, nous allons étudier les couches [ui, metier, dao] les unes après les autres, en commençant par la couche [dao], couche qui s&#x27;occupe des données persistantes.</p>
 <p>Auparavant, il nous faut définir les interfaces des différentes couches de l&#x27;application [Impots].</p>
 <p><a id="refheading10400811168783983"></a></p>
@@ -1008,14 +1010,22 @@
 
 <p>Dans ce type d&#x27;architecture, c&#x27;est souvent l&#x27;utilisateur qui prend les initiatives. Il fait une demande en [1] et reçoit une réponse en [8]. On appelle cela le cycle demande - réponse. Prenons l&#x27;exemple du calcul de l&#x27;impôt d&#x27;un contribuable. Celui-ci va nécessiter plusieurs étapes :</p>
 <ol>
-<li>la couche [ui] va devoir demander à l&#x27;utilisateur son nombre d&#x27;enfants, son statut marital et son salaire annuel. C&#x27;est l&#x27;opération [1] ci-dessus.</li>
-<li>ceci fait, la couche [ui] va demander à la couche métier de faire le calcul de l&#x27;impôt. Pour cela elle va lui transmettre les données qu&#x27;elle a reçues de l&#x27;utilisateur. C&#x27;est l&#x27;opération [2].</li>
-<li>la couche [metier] a besoin de certaines informations pour mener à bien son travail : les tranches d&#x27;impôt. Elle va demander ces informations à la couche [dao] avec le chemin [3, 4, 5, 6]. [3] est la demande initiale et [6] la réponse à cette demande.</li>
-<li>ayant toutes les données dont elle avait besoin, la couche [metier] calcule l&#x27;impôt.</li>
-<li>la couche [metier] peut maintenant répondre à la demande de la couche [ui] faite en (b). C&#x27;est le chemin [7].</li>
-<li>la couche [ui] va mettre en forme ces résultats puis les présenter à l&#x27;utilisateur. C&#x27;est le chemin [8].</li>
-<li>on pourrait imaginer que l&#x27;utilisateur fait des simulations d&#x27;impôt et qu&#x27;il veuille mémoriser celles-ci. Il utilisera le chemin [1-8] pour le faire.</li>
+  <li>la couche [ui] va devoir demander à l&#x27;utilisateur son nombre d&#x27;enfants, son statut marital et son salaire annuel. C&#x27;est l&#x27;opération [1] ci-dessus.
+  </li>
+  <li>ceci fait, la couche [ui] va demander à la couche métier de faire le calcul de l&#x27;impôt. Pour cela elle va lui transmettre les données qu&#x27;elle a reçues de l&#x27;utilisateur. C&#x27;est l&#x27;opération [2].
+  </li>
+  <li>la couche [metier] a besoin de certaines informations pour mener à bien son travail : les tranches d&#x27;impôt. Elle va demander ces informations à la couche [dao] avec le chemin [3, 4, 5, 6]. [3] est la demande initiale et [6] la réponse à cette demande.
+  </li>
+  <li>ayant toutes les données dont elle avait besoin, la couche [metier] calcule l&#x27;impôt.
+  </li>
+  <li>la couche [metier] peut maintenant répondre à la demande de la couche [ui] faite en (b). C&#x27;est le chemin [7].
+  </li>
+  <li>la couche [ui] va mettre en forme ces résultats puis les présenter à l&#x27;utilisateur. C&#x27;est le chemin [8].
+  </li>
+  <li>on pourrait imaginer que l&#x27;utilisateur fait des simulations d&#x27;impôt et qu&#x27;il veuille mémoriser celles-ci. Il utilisera le chemin [1-8] pour le faire.
+  </li>
 </ol>
+
 <p>On voit dans cette description qu&#x27;une couche est amenée à utiliser les ressources de la couche qui est à sa droite, jamais de celle qui est à sa gauche. Considérons deux couches contigües :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000342000000FAFBA4418D.png" style="display:inline-block; margin:4px;width:7.721cm;height:2.311cm;" class="odt-zoomable" data-zoom-src="images/1000000000000342000000FAFBA4418D.png" /></td></tr></table>
 
@@ -1027,9 +1037,12 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>b1.getData(...);
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 1 : une instance de la classe [B1] est créée</li>
-<li>ligne 3 : des données sont demandées à cette instance</li>
+  <li>ligne 1 : une instance de la classe [B1] est créée
+  </li>
+  <li>ligne 3 : des données sont demandées à cette instance
+  </li>
 </ul>
+
 <p>Si on suppose, que la nouvelle classe d&#x27;implémentation [B2] utilise des méthodes de même signature que celle de la classe [B1], il faudra changer tous les [B1] en [B2]. Ca, c&#x27;est le cas très favorable et assez improbable si on n&#x27;a pas prêté attention à ces signatures de méthodes. Dans la pratique, il est fréquent que les classes [B1] et [B2] n&#x27;aient pas les mêmes signatures de méthodes et que donc une bonne partie de la couche [A] doive être totalement réécrite.</p>
 <p>On peut améliorer les choses si on met une interface entre les couches [A] et [B]. Cela signifie qu&#x27;on fige dans une interface les signatures des méthodes présentées par la couche [B] à la couche [A]. Le schéma précédent devient alors le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D400000105FC2991C3.png" style="display:inline-block; margin:4px;width:11.449cm;height:2.42cm;" class="odt-zoomable" data-zoom-src="images/10000000000004D400000105FC2991C3.png" /></td></tr></table>
@@ -1042,9 +1055,12 @@
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a>ib.getData(...);
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 1 : une instance [ib] implémentant l&#x27;interface [IB] est créée par instanciation de la classe [B1]</li>
-<li>ligne 3 : des données sont demandées à l&#x27;instance [ib]</li>
+  <li>ligne 1 : une instance [ib] implémentant l&#x27;interface [IB] est créée par instanciation de la classe [B1]
+  </li>
+  <li>ligne 3 : des données sont demandées à l&#x27;instance [ib]
+  </li>
 </ul>
+
 <p>Désormais si on remplace l&#x27;implémentation [B1] de la couche [B] par une implémentation [B2], et que ces deux implémentations respectent la même interface [IB], alors seule la ligne 1 de la couche [A] doit être modifiée et aucune autre. C&#x27;est un grand avantage qui à lui seul justifie l&#x27;usage systématique des interfaces entre deux couches.</p>
 <p>On peut aller encore plus loin et rendre la couche [A] totalement indépendante de la couche [B]. Dans le code ci-dessus, la ligne 1 pose problème parce qu&#x27;elle référence en dur la classe [B1]. L&#x27;idéal serait que la couche [A] puisse disposer d&#x27;une implémentation de l&#x27;interface [IB] sans avoir à nommer de classe. Ce serait cohérent avec notre schéma ci-dessus. On y voit que la couche [A] s&#x27;adresse à l&#x27;interface [IB] et on ne voit pas pourquoi elle aurait besoin de connaître le nom de la classe qui implémente cette interface. Ce détail n&#x27;est pas utile à la couche [A].</p>
 <p>Le framework Spring (http://www.springframework.org) permet d&#x27;obtenir ce résultat. L&#x27;architecture précédente évolue de la façon suivante :</p>
@@ -1058,13 +1074,18 @@
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a>ib.getData(...);
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 1 : une instance [ib] implémentant l&#x27;interface [IB] de la couche [B]. Cette instance est créée par Spring sur la base d&#x27;informations trouvées dans un fichier de configuration. Spring va s&#x27;occuper de créer :<ul>
-<li>l&#x27;instance [b] implémentant la couche [B]</li>
-<li>l&#x27;instance [a] implémentant la couche [A]. Cette instance sera initialisée. Le champ [ib] ci-dessus recevra pour valeur la référence [b] de l&#x27;objet implémentant la couche [B]</li>
+  <li>ligne 1 : une instance [ib] implémentant l&#x27;interface [IB] de la couche [B]. Cette instance est créée par Spring sur la base d&#x27;informations trouvées dans un fichier de configuration. Spring va s&#x27;occuper de créer :
+    <ul>
+      <li>l&#x27;instance [b] implémentant la couche [B]
+      </li>
+      <li>l&#x27;instance [a] implémentant la couche [A]. Cette instance sera initialisée. Le champ [ib] ci-dessus recevra pour valeur la référence [b] de l&#x27;objet implémentant la couche [B]
+      </li>
+    </ul>
+  </li>
+  <li>ligne 3 : des données sont demandées à l&#x27;instance [ib]
+  </li>
 </ul>
-</li>
-<li>ligne 3 : des données sont demandées à l&#x27;instance [ib]</li>
-</ul>
+
 <p>On voit maintenant que, la classe d&#x27;implémentation [B1] de la couche B n&#x27;apparaît nulle part dans le code de la couche [A]. Lorsque l&#x27;implémentation [B1] sera remplacée par une nouvelle implémentation [B2], rien ne changera dans le code de la classe [A]. On changera simplement les fichiers de configuration de Spring pour instancier [B2] au lieu de [B1].</p>
 <p>Le couple <strong>Spring</strong> et <strong>interfaces</strong> <strong>C#</strong> apporte une amélioration décisive à la maintenance d&#x27;applications en rendant les couches de celles-ci étanches entre elles. C&#x27;est cette solution que nous utiliserons pour une nouvelle version de l&#x27;application [Impots].</p>
 <p>Revenons à l&#x27;architecture trois couches de notre application :</p>
@@ -1072,13 +1093,18 @@
 
 <p>Dans les cas simples, on peut partir de la couche [metier] pour découvrir les interfaces de l&#x27;application. Pour travailler, elle a besoin de données :</p>
 <ul>
-<li>déjà disponibles dans des fichiers, bases de données ou via le réseau. Elles sont fournies par la couche [dao].</li>
-<li>pas encore disponibles. Elles sont alors fournies par la couche [ui] qui les obtient auprès de l&#x27;utilisateur de l&#x27;application.</li>
+  <li>déjà disponibles dans des fichiers, bases de données ou via le réseau. Elles sont fournies par la couche [dao].
+  </li>
+  <li>pas encore disponibles. Elles sont alors fournies par la couche [ui] qui les obtient auprès de l&#x27;utilisateur de l&#x27;application.
+  </li>
 </ul>
+
 <p>Quelle interface doit offrir la couche [dao] à la couche [metier] ? Quelles sont les interactions possibles entre ces deux couches ? La couche [dao] doit fournir les données suivantes à la couche [metier] :</p>
 <ul>
-<li>les tranches d&#x27;impôt</li>
+  <li>les tranches d&#x27;impôt
+  </li>
 </ul>
+
 <p>Dans notre application, la couche [dao] exploite des données existantes mais n&#x27;en crée pas de nouvelles. Une définition de l&#x27;interface de la couche [dao] pourrait être la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> Entites;</span>
@@ -1092,10 +1118,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : la couche [dao] sera placée dans l&#x27;espace de noms [Dao]</li>
-<li>ligne 6 : l&#x27;interface <em>IImpotDao</em> définit la propriété <em>TranchesImpot</em> qui fournira les tranches d&#x27;impôt à la couche [métier].</li>
-<li>ligne 1 :  importe l&#x27;espace de noms dans lequel est définie la structure <em>TrancheImpot</em> :</li>
+  <li>ligne 3 : la couche [dao] sera placée dans l&#x27;espace de noms [Dao]
+  </li>
+  <li>ligne 6 : l&#x27;interface <i>IImpotDao</i> définit la propriété <i>TranchesImpot</i> qui fournira les tranches d&#x27;impôt à la couche [métier].
+  </li>
+  <li>ligne 1 :  importe l&#x27;espace de noms dans lequel est définie la structure <i>TrancheImpot</i> :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Entites {</span>
 <span class="odt-code-line">    <span style="color:#008000">// une tranche d&#x27;impôt</span></span>
@@ -1112,9 +1142,12 @@
 
 <p>Quelle interface la couche [metier] doit-elle présenter à la couche [ui] ? Rappelons les interactions entre ces deux couches :</p>
 <ol>
-<li>la couche [ui] demande à l&#x27;utilisateur son nombre d&#x27;enfants, son statut marital et son salaire annuel. C&#x27;est l&#x27;opération [1] ci-dessus.</li>
-<li>ceci fait, la couche [ui] va demander à la couche métier de faire le calcul des sièges. Pour cela elle va lui transmettre les données qu&#x27;elle a reçues de l&#x27;utilisateur. C&#x27;est l&#x27;opération [2].</li>
+  <li>la couche [ui] demande à l&#x27;utilisateur son nombre d&#x27;enfants, son statut marital et son salaire annuel. C&#x27;est l&#x27;opération [1] ci-dessus.
+  </li>
+  <li>ceci fait, la couche [ui] va demander à la couche métier de faire le calcul des sièges. Pour cela elle va lui transmettre les données qu&#x27;elle a reçues de l&#x27;utilisateur. C&#x27;est l&#x27;opération [2].
+  </li>
 </ol>
+
 <p>Une définition de l&#x27;interface de la couche [metier] pourrait être la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Metier {</span>
@@ -1125,9 +1158,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 1 : on mettra tout ce qui concerne la couche [metier] dans l&#x27;espace de noms [Metier].</li>
-<li>ligne 2 : l&#x27;interface <em>IImpotMetier</em> ne définit qu&#x27;une méthode : celles qui permet de calculer l&#x27;impôt d&#x27;un contribuable à partir de son état marital, son nombre d&#x27;enfants et son salaire annuel.</li>
+  <li>ligne 1 : on mettra tout ce qui concerne la couche [metier] dans l&#x27;espace de noms [Metier].
+  </li>
+  <li>ligne 2 : l&#x27;interface <i>IImpotMetier</i> ne définit qu&#x27;une méthode : celles qui permet de calculer l&#x27;impôt d&#x27;un contribuable à partir de son état marital, son nombre d&#x27;enfants et son salaire annuel.
+  </li>
 </ul>
+
 <p>Nous étudions une première implémentation de cette architecture en couches.</p>
 <p><a id="refheading10400831168783983"></a></p>
 <h2 id="63-application-exemple-version-4">6.3. Application exemple - version 4</h2>
@@ -1137,14 +1173,22 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000620000002A7A3628E03.png" style="display:inline-block; margin:4px;width:14.52cm;height:6.29cm;" class="odt-zoomable" data-zoom-src="images/1000000000000620000002A7A3628E03.png" /></td></tr></table>
 
 <ul>
-<li>[1] : le dossier [Entites] contient les objets transversaux aux couches [ui, metier, dao] : la structure <em>TrancheImpot</em>, l&#x27;exception <em>FileImpotException</em>.</li>
-<li>[2] : le dossier [Dao] contient les classes et interfaces de la couche [dao]. Nous utiliserons deux implémentations de l&#x27;interface <em>IImpotDao</em> : la classe <em>HardwiredImpot</em> étudiée au paragraphe <a href="classes-stuctures-interfaces.html#impots-v2">4.10</a> et <em>FileImpot</em> étudiée au paragraphe <a href="classes-net-dusage-courant.html#impots-v3">5.8</a>.</li>
-<li>[3] : le dossier [Metier] contient les classes et interfaces de la couche [metier]</li>
-<li>[4] : le dossier [Ui] contient les classes de la couche [ui]</li>
-<li>[5] : le fichier [DataImpot.txt] contient les tranches d&#x27;impôt utilisées par l&#x27;implémentation <em>FileImpot</em> de la couche [dao]. Il est configuré [6] pour être automatiquement recopié dans le dossier d&#x27;exécution du projet.
-<a id="refheading10400871168783983"></a></li>
+  <li>[1] : le dossier [Entites] contient les objets transversaux aux couches [ui, metier, dao] : la structure <i>TrancheImpot</i>, l&#x27;exception <i>FileImpotException</i>.
+  </li>
+  <li>[2] : le dossier [Dao] contient les classes et interfaces de la couche [dao]. Nous utiliserons deux implémentations de l&#x27;interface <i>IImpotDao</i> : la classe <i>HardwiredImpot</i> étudiée au paragraphe <a href="classes-stuctures-interfaces.html#impots-v2">4.10</a> et <i>FileImpot</i> étudiée au paragraphe <a href="classes-net-dusage-courant.html#impots-v3">5.8</a>.
+  </li>
+  <li>[3] : le dossier [Metier] contient les classes et interfaces de la couche [metier]
+  </li>
+  <li>[4] : le dossier [Ui] contient les classes de la couche [ui]
+  </li>
+  <li>[5] : le fichier [DataImpot.txt] contient les tranches d&#x27;impôt utilisées par l&#x27;implémentation <i>FileImpot</i> de la couche [dao]. Il est configuré [6] pour être automatiquement recopié dans le dossier d&#x27;exécution du projet.
+<a id="refheading10400871168783983"></a>
+
+### 6.3.2. Les entités de l&#x27;application
+
+  </li>
 </ul>
-<h3 id="632-les-entites-de-lapplication">6.3.2. Les entités de l&#x27;application</h3>
+
 <p>Revenons sur l&#x27;architecture 3 couches de notre application :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006CF0000019F730C355B.png" style="display:inline-block; margin:4px;width:16.14cm;height:3.84cm;" class="odt-zoomable" data-zoom-src="images/10000000000006CF0000019F730C355B.png" /></td></tr></table>
 
@@ -1235,9 +1279,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 5 : la classe <em>HardwiredImpot</em> implémente l&#x27;interface <em>IImpotDao</em></li>
-<li>ligne 12 : implémentation de la propriété <em>TranchesImpot</em> de l&#x27;interface <em>IImpotDao.</em> Cette propriété est une propriété automatique. Elle implémente la méthode <em>get</em> de la propriété <em>TranchesImpot</em> de l&#x27;interface <em>IImpotDao.</em> On a de plus déclaré une méthode <em>set</em> privée donc interne à la classe afin que le constructeur des lignes 15-22 puisse initialiser le tableau des tranches d&#x27;impôt.</li>
+  <li>ligne 5 : la classe <i>HardwiredImpot</i> implémente l&#x27;interface <i>IImpotDao</i>
+  </li>
+  <li>ligne 12 : implémentation de la propriété <i>TranchesImpot</i> de l&#x27;interface <i>IImpotDao.</i> Cette propriété est une propriété automatique. Elle implémente la méthode <i>get</i> de la propriété <i>TranchesImpot</i> de l&#x27;interface <i>IImpotDao.</i> On a de plus déclaré une méthode <i>set</i> privée donc interne à la classe afin que le constructeur des lignes 15-22 puisse initialiser le tableau des tranches d&#x27;impôt.
+  </li>
 </ul>
+
 <p>L&#x27;interface <em>IImpotDao</em> sera également implémentée par la classe <em>FileImpot</em> étudiée au paragraphe <a href="classes-net-dusage-courant.html#impots-v3">5.8</a> :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -1323,10 +1370,14 @@
 </code></pre></div>
 
 <ul>
-<li>ce code a déjà été étudié au paragraphe <a href="classes-net-dusage-courant.html#impots-v3">5.8</a>.</li>
-<li>ligne 14 : la méthode <em>TranchesImpot</em> de l&#x27;interface <em>IImpotDao</em></li>
-<li>ligne 76 : initialisation des tranches d&#x27;impôt dans le constructeur de la classe, à partir du fichier dont le contructeur a reçu le nom ligne 17.</li>
+  <li>ce code a déjà été étudié au paragraphe <a href="classes-net-dusage-courant.html#impots-v3">5.8</a>.
+  </li>
+  <li>ligne 14 : la méthode <i>TranchesImpot</i> de l&#x27;interface <i>IImpotDao</i>
+  </li>
+  <li>ligne 76 : initialisation des tranches d&#x27;impôt dans le constructeur de la classe, à partir du fichier dont le contructeur a reçu le nom ligne 17.
+  </li>
 </ul>
+
 <p><a id="refheading10400911168783983"></a></p>
 <h3 id="634-la-couche-metier">6.3.4. La couche [metier]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D30000017C8124682C.png" style="display:inline-block; margin:4px;width:16.18cm;height:3.521cm;" class="odt-zoomable" data-zoom-src="images/10000000000006D30000017C8124682C.png" /></td></tr></table>
@@ -1389,12 +1440,18 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 5 : la classe [Metier] implémente l&#x27;interface [IImpotMetier].</li>
-<li>lignes 14-19 : la couche [metier] doit collaborer avec la couche [dao]. Elle doit donc avoir une référence sur l&#x27;objet implémentant l&#x27;interface <em>IImpotDao</em>. C&#x27;est pourquoi cette reférence est-elle passée en paramètre au constructeur.</li>
-<li>ligne 16 : la référence sur la couche [dao] est mémorisé dans le champ privé de la ligne 8</li>
-<li>ligne 18 : à partir de cette référence, le constructeur demande le tableau des tranches d&#x27;impôt et en mémorise une référence dans la propriété privée de la ligne 8.</li>
-<li>lignes 22-41 : implémentation de la méthode <em>CalculerImpot</em> de l&#x27;interface <em>IImpotMetier</em>. Cette implémentation utilise le tableau des tranches d&#x27;impôt initialisé par le constructeur.</li>
+  <li>ligne 5 : la classe [Metier] implémente l&#x27;interface [IImpotMetier].
+  </li>
+  <li>lignes 14-19 : la couche [metier] doit collaborer avec la couche [dao]. Elle doit donc avoir une référence sur l&#x27;objet implémentant l&#x27;interface <i>IImpotDao</i>. C&#x27;est pourquoi cette reférence est-elle passée en paramètre au constructeur.
+  </li>
+  <li>ligne 16 : la référence sur la couche [dao] est mémorisé dans le champ privé de la ligne 8
+  </li>
+  <li>ligne 18 : à partir de cette référence, le constructeur demande le tableau des tranches d&#x27;impôt et en mémorise une référence dans la propriété privée de la ligne 8.
+  </li>
+  <li>lignes 22-41 : implémentation de la méthode <i>CalculerImpot</i> de l&#x27;interface <i>IImpotMetier</i>. Cette implémentation utilise le tableau des tranches d&#x27;impôt initialisé par le constructeur.
+  </li>
 </ul>
+
 <p><a id="refheading10400931168783983"></a></p>
 <h3 id="635-la-couche-ui">6.3.5. La couche [ui]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006B700000180F1F14DF5.png" style="display:inline-block; margin:4px;width:15.921cm;height:3.56cm;" class="odt-zoomable" data-zoom-src="images/10000000000006B700000180F1F14DF5.png" /></td></tr></table>
@@ -1479,9 +1536,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 12 : instanciation des couches [dao] et [metier]. On rappelle que la couche [metier] a besoin de la couche [dao].</li>
-<li>ligne 18 : utilisation de la couche [metier] pour calculer l&#x27;impôt</li>
+  <li>ligne 12 : instanciation des couches [dao] et [metier]. On rappelle que la couche [metier] a besoin de la couche [dao].
+  </li>
+  <li>ligne 18 : utilisation de la couche [metier] pour calculer l&#x27;impôt
+  </li>
 </ul>
+
 <p>Pour une implémentation [dao] avec la classe <em>FileImpot</em>, la classe de dialogue est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -1518,9 +1578,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 11-21 : instanciation des couches [dao] et [metier]. L&#x27;instanciation de la couche [dao] pouvant lancer une exception, celle-ci est gérée</li>
-<li>ligne 26 : utilisation de la couche [metier] pour calculer l&#x27;impôt, comme dans la version précédente</li>
+  <li>ligne 11-21 : instanciation des couches [dao] et [metier]. L&#x27;instanciation de la couche [dao] pouvant lancer une exception, celle-ci est gérée
+  </li>
+  <li>ligne 26 : utilisation de la couche [metier] pour calculer l&#x27;impôt, comme dans la version précédente
+  </li>
 </ul>
+
 <p><a id="refheading10400951168783983"></a></p>
 <h3 id="636-conclusion">6.3.6. Conclusion</h3>
 <p>L&#x27;architecture en couches et l&#x27;utilisation d&#x27;interfaces a amené une certaine souplesse à notre application. Celle-ci apparaît notamment dans la façon dont la couche [ui] instancie les couches [dao] et [métier] :</p>
@@ -1585,9 +1648,12 @@
 
 <p>Cette nouvelle version reprend la précédente en y apportant les modifications suivantes : </p>
 <ul>
-<li>les couches [métier] et [dao] sont chacune encapsulées dans une DLL et testée avec le framework de tests unitaires NUnit.</li>
-<li>l&#x27;intégration des couches est assurée par le framework Spring</li>
+  <li>les couches [métier] et [dao] sont chacune encapsulées dans une DLL et testée avec le framework de tests unitaires NUnit.
+  </li>
+  <li>l&#x27;intégration des couches est assurée par le framework Spring
+  </li>
 </ul>
+
 <p>Dans les grands projets, plusieurs développeurs travaillent sur le même projet. Les architectures en couches facilitent ce mode de travail : parce que les couches communiquent entre-elles avec des interfaces bien définies, un développeurs travaillant sur une couche n&#x27;a pas à se préoccuper du travail des autres développeurs sur les autres couches. Il suffit juste que tout le monde respecte les interfaces.</p>
 <p>Ci-dessus, le développeur de la couche [métier] aura besoin au moment des tests de sa couche d&#x27;une implémentation de la couche [dao]. Tant que celle-ci n&#x27;est pas terminée, il peut utiliser une implémentation factice de la couche [dao] tant qu&#x27;elle respecte l&#x27;interface <em>IImpotDao</em>. C&#x27;est là également un avantage de l&#x27;architecture en couches : un retard dans la couche [dao] n&#x27;empêche pas les tests de la couche [métier]. L&#x27;implémentation factice de la couche [dao] a également l&#x27;avantage d&#x27;être bien souvent plus facile à mettre en oeuvre que la véritable couche [dao] qui peut nécessiter de lancer un SGBD, d&#x27;avoir des connexions réseau, ...</p>
 <p>Lorsque la couche [dao] est terminée et testée, elle sera fournie aux développeurs de la couche [métier] sous la forme d&#x27;une DLL plutôt que de code source. Au final, l&#x27;application est souvent délivrée sous la forme d&#x27;un exécutable .exe (celui de la couche [ui]) et de bibliothèques de classes .dll (les autres couches).</p>
@@ -1602,7 +1668,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006A5000001A6B460531F.png" style="display:inline-block; margin:4px;width:13.501cm;height:3.35cm;" class="odt-zoomable" data-zoom-src="images/10000000000006A5000001A6B460531F.png" /></td></tr></table>
 
 <p>Un double-clic sur l&#x27;icône [1] lance l&#x27;interface graphique de NUnit [2]. Celle-ci n&#x27;aide en rien à l&#x27;automatisation des tests puisque de nouveau nous sommes ramenés à une vérification visuelle : le testeur vérifie les résultats des tests affichés dans l&#x27;interface graphique. Néanmoins les tests peuvent être également exécutés par des outils batch et leurs résultats enregistrés dans des fichiers XML. C&#x27;est cette méthode qui est utilisée par les équipes de développement : les tests sont lancés la nuit et les développeurs ont le résultat le lendemain matin.</p>
-<p>Examinons avec un exemple le principe des tests NUnit. Tout d&#x27;abord, créons un nouveau projet C# de type <em>Console Application </em>: </p>
+<p>Examinons avec un exemple le principe des tests NUnit. Tout d&#x27;abord, créons un nouveau projet C# de type <em>Console Application</em> : </p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000681000001ACE37D94D3.png" style="display:inline-block; margin:4px;width:13.22cm;height:3.401cm;" class="odt-zoomable" data-zoom-src="images/1000000000000681000001ACE37D94D3.png" /></td></tr></table>
 
 <p>En [1], on voit les <em>références</em> du projet. Ces références sont des DLL contenant des classes et interfaces utilisées par le projet. Celles présentées en [1] sont incluses par défaut dans chaque nouveau projet C#. Pour pouvoir utiliser les classes et interfaces du framework NUnit, il nous faut ajouter [2] une nouvelle référence au projet.</p>
@@ -1648,75 +1714,117 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 6 : la classe <em>NUnit1</em> doit être publique. Le mot clé <strong>public</strong> n&#x27;est pas généré par défaut par Visual Studio. Il faut le rajouter.</li>
-<li>ligne 5 : l&#x27;attribut [<em>TestFixture</em>] est un attribut <em>NUnit</em>. Il indique que la classe est une classe de test.</li>
-<li>lignes 7-9 : le constructeur. Il n&#x27;est utilisé ici que pour écrire un message à l&#x27;écran. On veut voir quand il est exécuté.</li>
-<li>ligne 10 : l&#x27;attribut [<em>SetUp</em>] définit une méthode exécutée <strong>avant</strong> chaque test unitaire.</li>
-<li>ligne 14 : l&#x27;attribut [<em>TearDown</em>] définit une méthode exécuté <strong>après</strong> chaque test unitaire.</li>
-<li>ligne 18 :  l&#x27;attribut [<em>Test</em>] définit une méthode de test. Pour chaque méthode annotée avec l&#x27;attribut [<em>Test</em>], la méthode annotée [<em>SetUp</em>] sera exécutée avant le test et la méthode annotée [<em>TearDown</em>] sera exécutée après le test.</li>
-<li>
-<p>ligne 21 : l&#x27;une des méthodes [<em>Assert.*</em>] définies par le framework NUnit. On trouve les méthodes [Assert] suivantes :</p>
+  <li>ligne 6 : la classe <i>NUnit1</i> doit être publique. Le mot clé <b>public</b> n&#x27;est pas généré par défaut par Visual Studio. Il faut le rajouter.
+  </li>
+  <li>ligne 5 : l&#x27;attribut [<i>TestFixture</i>] est un attribut <i>NUnit</i>. Il indique que la classe est une classe de test.
+  </li>
+  <li>lignes 7-9 : le constructeur. Il n&#x27;est utilisé ici que pour écrire un message à l&#x27;écran. On veut voir quand il est exécuté.
+  </li>
+  <li>ligne 10 : l&#x27;attribut [<i>SetUp</i>] définit une méthode exécutée <b>avant</b> chaque test unitaire.
+  </li>
+  <li>ligne 14 : l&#x27;attribut [<i>TearDown</i>] définit une méthode exécuté <b>après</b> chaque test unitaire.
+  </li>
+  <li>ligne 18 :  l&#x27;attribut [<i>Test</i>] définit une méthode de test. Pour chaque méthode annotée avec l&#x27;attribut [<i>Test</i>], la méthode annotée [<i>SetUp</i>] sera exécutée avant le test et la méthode annotée [<i>TearDown</i>] sera exécutée après le test.
+  </li>
+  <li>ligne 21 : l&#x27;une des méthodes [<i>Assert.*</i>] définies par le framework NUnit. On trouve les méthodes [Assert] suivantes :
+    <ul>
+      <li><b>[</b><i>Assert.AreEqual</i><i>(expression1, expression2)</i><b>]</b> : vérifie que les valeurs des deux expressions sont égales. De nombreux types d&#x27;expression sont acceptés (int, string, float, double, decimal, ...). Si les deux expressions ne sont pas égales, alors une exception est lancée.
+      </li>
+      <li><b>[</b><i>Assert.AreEqual</i><i>(réel1, réel2, delta)</i><b>]</b> : vérifie que deux réels sont égaux à <b>delta</b> près, c.a.d abs(réel1-réel2)&lt;=delta. On pourra écrire par exemple [<i>Assert.AreEqual</i><i>(réel1, réel2, 1E-6)</i><b>]</b> pour vérifier que deux valeurs sont égales à 10-6 près.
+      </li>
+      <li><b>[</b><i>Assert.AreEqual</i><i>(expression1, expression2, message)</i><b>]</b> et [<i>Assert.AreEqual</i><i>(réel1, réel2, delta, message)</i><b>]</b> sont des variantes permettant de préciser le message d&#x27;erreur à associer à l&#x27;exception lancée lorsque la méthode [<i>Assert.AreEqual</i>] échoue.
+      </li>
+      <li><b>[</b><i>Assert.IsNotNull</i><i>(object)</i><b>]</b> et [<i>Assert.IsNotNull</i><i>(object, message)</i><b>]</b> <b> </b>: vérifie que o<b>bject</b> n&#x27;est pas égal à <b>null</b>.
+      </li>
+      <li><b>[</b><i>Assert.IsNull</i><i>(object)</i><b>]</b> et [<i>Assert.IsNull</i><i>(object, message)</i><b>]</b> <b> </b>: vérifie que o<b>bject</b> est égal à <b>null</b>.
+      </li>
+      <li><b>[</b><i>Assert.IsTrue</i><i>(expression)</i><b>]</b> et [<i>Assert.IsTrue</i><i>(expression, message)</i><b>]</b> <b> </b>: vérifie que <b>expression</b> est égale à <b>true</b>.
+      </li>
+      <li><b>[</b><i>Assert.IsFalse</i><i>(expression)</i><b>]</b> et [<i>Assert.IsFalse</i><i>(expression, message)</i><b>]</b> <b> </b>: vérifie que <b>expression</b> est égale à <b>false</b>.
+      </li>
+      <li><b>[</b><i>Assert.AreSame</i><i>(object1, object2)</i><b>]</b> et [<i>Assert.AreSame</i><i>(object1, object2, message)</i><b>]</b> : vérifie que les références <b>object1</b> et <b>object2</b> désignent le même objet.
+      </li>
+      <li><b>[</b><i>Assert.AreNotSame</i><i>(object1, object2)</i><b>]</b> et [<i>Assert.AreNotSame</i><i>(object1, object2, message)</i><b>]</b> : vérifie que les références <b>object1</b> et <b>object2</b> ne désignent pas le même objet.
+      </li>
+    </ul>
+  </li>
+</ul>
+
 <ul>
-<li><strong>[</strong><em>Assert.AreEqual</em><em>(expression1, expression2)</em><strong>]</strong> : vérifie que les valeurs des deux expressions sont égales. De nombreux types d&#x27;expression sont acceptés (int, string, float, double, decimal, ...). Si les deux expressions ne sont pas égales, alors une exception est lancée.</li>
-<li><strong>[</strong><em>Assert.AreEqual</em><em>(réel1, réel2, delta)</em><strong>]</strong> : vérifie que deux réels sont égaux à <strong>delta</strong> près, c.a.d abs(réel1-réel2)&lt;=delta. On pourra écrire par exemple [<em>Assert.AreEqual</em><em>(réel1, réel2, 1E-6)</em><strong>]</strong> pour vérifier que deux valeurs sont égales à 10-6 près.</li>
-<li><strong>[</strong><em>Assert.AreEqual</em><em>(expression1, expression2, message)</em><strong>]</strong> et [<em>Assert.AreEqual</em><em>(réel1, réel2, delta, message)</em><strong>]</strong> sont des variantes permettant de préciser le message d&#x27;erreur à associer à l&#x27;exception lancée lorsque la méthode [<em>Assert.AreEqual</em>] échoue.</li>
-<li><strong>[</strong><em>Assert.IsNotNull</em><em>(object)</em><strong>]</strong> et [<em>Assert.IsNotNull</em><em>(object, message)</em><strong>]</strong> ** <strong>: vérifie que o</strong>bject<strong> n&#x27;est pas égal à </strong>null**.</li>
-<li><strong>[</strong><em>Assert.IsNull</em><em>(object)</em><strong>]</strong> et [<em>Assert.IsNull</em><em>(object, message)</em><strong>]</strong> ** <strong>: vérifie que o</strong>bject<strong> est égal à </strong>null**.</li>
-<li><strong>[</strong><em>Assert.IsTrue</em><em>(expression)</em><strong>]</strong> et [<em>Assert.IsTrue</em><em>(expression, message)</em><strong>]</strong> ** <strong>: vérifie que </strong>expression<strong> est égale à </strong>true**.</li>
-<li><strong>[</strong><em>Assert.IsFalse</em><em>(expression)</em><strong>]</strong> et [<em>Assert.IsFalse</em><em>(expression, message)</em><strong>]</strong> ** <strong>: vérifie que </strong>expression<strong> est égale à </strong>false**.</li>
-<li><strong>[</strong><em>Assert.AreSame</em><em>(object1, object2)</em><strong>]</strong> et [<em>Assert.AreSame</em><em>(object1, object2, message)</em><strong>]</strong> : vérifie que les références <strong>object1</strong> et <strong>object2</strong> désignent le même objet.</li>
-<li><strong>[</strong><em>Assert.AreNotSame</em><em>(object1, object2)</em><strong>]</strong> et [<em>Assert.AreNotSame</em><em>(object1, object2, message)</em><strong>]</strong> : vérifie que les références <strong>object1</strong> et <strong>object2</strong> ne désignent pas le même objet.</li>
+  <li>ligne 21 : l&#x27;assertion doit réussir
+  </li>
+  <li>ligne 26 : l&#x27;assertion doit échouer
+  </li>
 </ul>
-</li>
-<li>
-<p>ligne 21 : l&#x27;assertion doit réussir</p>
-</li>
-<li>ligne 26 : l&#x27;assertion doit échouer</li>
-</ul>
+
 <p>Configurons le projet afin que sa génération produise une DLL plutôt qu&#x27;un exécutable .exe :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000081700000334AE742D3D.png" style="display:inline-block; margin:4px;width:16.439cm;height:6.511cm;" class="odt-zoomable" data-zoom-src="images/100000000000081700000334AE742D3D.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : propriétés du projet</li>
-<li>en [2, 3] : comme type de projet, on choisit [Class Library] (Bibliothèque de classes)</li>
-<li>en [4] : la génération du projet produira une DLL (assembly) appelée [Nunit.dll]</li>
+  <li>en [1] : propriétés du projet
+  </li>
+  <li>en [2, 3] : comme type de projet, on choisit [Class Library] (Bibliothèque de classes)
+  </li>
+  <li>en [4] : la génération du projet produira une DLL (assembly) appelée [Nunit.dll]
+  </li>
 </ul>
+
 <p>Utilisons maintenant, NUnit pour exécuter la classe de test :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000080F00000187B129520D.png" style="display:inline-block; margin:4px;width:16.371cm;height:3.099cm;" class="odt-zoomable" data-zoom-src="images/100000000000080F00000187B129520D.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : ouverture d&#x27;un projet NUnit</li>
-<li>en [2, 3] : on charge la DLL bin/Release/Nunit.dll produite par la génération du projet C#</li>
-<li>en [4] : la DLL a été chargée</li>
-<li>en [5] : l&#x27;arbre des tests</li>
-<li>en [6] : on les exécute</li>
+  <li>en [1] : ouverture d&#x27;un projet NUnit
+  </li>
+  <li>en [2, 3] : on charge la DLL bin/Release/Nunit.dll produite par la génération du projet C#
+  </li>
+  <li>en [4] : la DLL a été chargée
+  </li>
+  <li>en [5] : l&#x27;arbre des tests
+  </li>
+  <li>en [6] : on les exécute
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000838000002DAC020B66E.png" style="display:inline-block; margin:4px;width:16.701cm;height:5.791cm;" class="odt-zoomable" data-zoom-src="images/1000000000000838000002DAC020B66E.png" /></td></tr></table>
 
 <ul>
-<li>en [7] : les résultats : t1 a réussi, t2 a échoué</li>
-<li>en [8] : une barre rouge indique l&#x27;échec global de la classe de tests</li>
-<li>en [9] : le message d&#x27;erreur lié au test raté</li>
+  <li>en [7] : les résultats : t1 a réussi, t2 a échoué
+  </li>
+  <li>en [8] : une barre rouge indique l&#x27;échec global de la classe de tests
+  </li>
+  <li>en [9] : le message d&#x27;erreur lié au test raté
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005760000012CBD1B437D.png" style="display:inline-block; margin:4px;width:12.95cm;height:2.78cm;" class="odt-zoomable" data-zoom-src="images/10000000000005760000012CBD1B437D.png" /></td></tr></table>
 
 <ul>
-<li>en [11] : les différents onglets de la fenêtre des résultats</li>
-<li>en [12] : l&#x27;onglet [Console.Out]. On y voit que :<ul>
-<li>le constructeur n&#x27;a été exécuté qu&#x27;une fois</li>
-<li>la méthode [SetUp] a été exécutée avant chacun des deux tests</li>
-<li>la méthode [TearDown] a été exécutée après chacun des deux tests</li>
+  <li>en [11] : les différents onglets de la fenêtre des résultats
+  </li>
+  <li>en [12] : l&#x27;onglet [Console.Out]. On y voit que :
+    <ul>
+      <li>le constructeur n&#x27;a été exécuté qu&#x27;une fois
+      </li>
+      <li>la méthode [SetUp] a été exécutée avant chacun des deux tests
+      </li>
+      <li>la méthode [TearDown] a été exécutée après chacun des deux tests
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>Il est possible de préciser les méthodes à tester :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C80000015AB5B9E078.png" style="display:inline-block; margin:4px;width:11.329cm;height:3.2cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C80000015AB5B9E078.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : on demande l&#x27;affichage d&#x27;une case à cocher à côté de chaque test</li>
-<li>en [2] : on coche les tests à exécuter</li>
-<li>en [3] : on les exécute</li>
+  <li>en [1] : on demande l&#x27;affichage d&#x27;une case à cocher à côté de chaque test
+  </li>
+  <li>en [2] : on coche les tests à exécuter
+  </li>
+  <li>en [3] : on les exécute
+  </li>
 </ul>
+
 <p>Pour corriger les erreurs, il suffit de corriger le projet C# et de le régénérer. NUnit détecte que la DLL qu&#x27;il teste a été changée et  charge la nouvelle automatiquement. Il suffit alors de relancer les tests.</p>
 <p>Considérons la nouvelle classe de test suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1826,10 +1934,14 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007BD000001C0063A20E2.png" style="display:inline-block; margin:4px;width:15.72cm;height:3.56cm;" class="odt-zoomable" data-zoom-src="images/10000000000007BD000001C0063A20E2.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : la nouvelle classe de test [NUnit2] a été automatiquement détectée</li>
-<li>en [2] : on exécute le test t3 de NUnit2</li>
-<li>en [3] : le test t3 a été réussi</li>
+  <li>en [1] : la nouvelle classe de test [NUnit2] a été automatiquement détectée
+  </li>
+  <li>en [2] : on exécute le test t3 de NUnit2
+  </li>
+  <li>en [3] : le test t3 a été réussi
+  </li>
 </ul>
+
 <p>Pour approfondir NUnit, on lira l&#x27;aide de NUnit :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000011B0000006BB378F215.png" style="display:inline-block; margin:4px;width:5.241cm;height:1.981cm;" class="odt-zoomable" data-zoom-src="images/100000000000011B0000006BB378F215.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E9000000E7A082B620.png" style="display:inline-block; margin:4px;width:4.309cm;height:4.279cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E9000000E7A082B620.png" /></td></tr></table>
 
@@ -1841,53 +1953,84 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007CB000002AFFEABEF4C.png" style="display:inline-block; margin:4px;width:15.829cm;height:5.45cm;" class="odt-zoomable" data-zoom-src="images/10000000000007CB000002AFFEABEF4C.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : la solution <em>ImpotsV5</em> est formée de trois projets, un pour chacune des trois couches de l&#x27;application</li>
-<li>en [2] : le projet [dao] de la couche [dao]</li>
-<li>en [3] : le projet [metier] de la couche [metier]</li>
-<li>en [4] : le projet [ui] de la couche [ui]</li>
+  <li>en [1] : la solution <i>ImpotsV5</i> est formée de trois projets, un pour chacune des trois couches de l&#x27;application
+  </li>
+  <li>en [2] : le projet [dao] de la couche [dao]
+  </li>
+  <li>en [3] : le projet [metier] de la couche [metier]
+  </li>
+  <li>en [4] : le projet [ui] de la couche [ui]
+  </li>
 </ul>
+
 <p>La solution <em>ImpotsV5</em> peut être construite de la façon suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>1</b></p><img src="images/100000000000007000000049B2484001.png" style="display:inline-block; margin:4px;width:2.071cm;height:1.349cm;" class="odt-zoomable" data-zoom-src="images/100000000000007000000049B2484001.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>2</b><b>3</b><b>4</b></p><img src="images/10000000000001BF000000CFA8CC9870.png" style="display:inline-block; margin:4px;width:8.28cm;height:3.829cm;" class="odt-zoomable" data-zoom-src="images/10000000000001BF000000CFA8CC9870.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>5</b></p><img src="images/10000000000000D1000000F0CAF13A2C.png" style="display:inline-block; margin:4px;width:3.87cm;height:4.45cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D1000000F0CAF13A2C.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>1</b></div><img src="images/100000000000007000000049B2484001.png" style="display:inline-block; margin:4px;width:2.071cm;height:1.349cm;" class="odt-zoomable" data-zoom-src="images/100000000000007000000049B2484001.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>2</b><b>3</b><b>4</b></div><img src="images/10000000000001BF000000CFA8CC9870.png" style="display:inline-block; margin:4px;width:8.28cm;height:3.829cm;" class="odt-zoomable" data-zoom-src="images/10000000000001BF000000CFA8CC9870.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>5</b></div><img src="images/10000000000000D1000000F0CAF13A2C.png" style="display:inline-block; margin:4px;width:3.87cm;height:4.45cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D1000000F0CAF13A2C.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : créer un nouveau projet</li>
-<li>en [2] : choisir une application console</li>
-<li>en [3] : appeler le projet [dao]</li>
-<li>en [4] : créer le projet</li>
-<li>en [5] : une fois le projet créé, le sauvegarder</li>
+  <li>en [1] : créer un nouveau projet
+  </li>
+  <li>en [2] : choisir une application console
+  </li>
+  <li>en [3] : appeler le projet [dao]
+  </li>
+  <li>en [4] : créer le projet
+  </li>
+  <li>en [5] : une fois le projet créé, le sauvegarder
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075400000166A95016E6.png" style="display:inline-block; margin:4px;width:14.891cm;height:2.84cm;" class="odt-zoomable" data-zoom-src="images/100000000000075400000166A95016E6.png" /></td></tr></table>
 
 <ul>
-<li>en [6] : garder le nom [dao] pour le projet</li>
-<li>en [7] : préciser un dossier pour enregistrer le projet et sa solution</li>
-<li>en [8] : donner un nom à la solution</li>
-<li>en [9] : indiquer que la solution doit avoir son propre dossier</li>
-<li>en [10] : enregistrer le projet et sa solution</li>
-<li>en [11] : le projet [dao] dans sa solution <em>ImpotsV5</em></li>
+  <li>en [6] : garder le nom [dao] pour le projet
+  </li>
+  <li>en [7] : préciser un dossier pour enregistrer le projet et sa solution
+  </li>
+  <li>en [8] : donner un nom à la solution
+  </li>
+  <li>en [9] : indiquer que la solution doit avoir son propre dossier
+  </li>
+  <li>en [10] : enregistrer le projet et sa solution
+  </li>
+  <li>en [11] : le projet [dao] dans sa solution <i>ImpotsV5</i>
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006090000019D120F31A1.png" style="display:inline-block; margin:4px;width:12.261cm;height:3.281cm;" class="odt-zoomable" data-zoom-src="images/10000000000006090000019D120F31A1.png" /></td></tr></table>
 
 <ul>
-<li>en [12] : le dossier de la solution <em>ImpotsV5</em>. Il contient le dossier [dao] du dossier [dao].</li>
-<li>en [13] : le contenu du dossier [dao]</li>
-<li>en [14] : on ajoute un nouveau projet à la solution <em>ImpotsV5</em></li>
+  <li>en [12] : le dossier de la solution <i>ImpotsV5</i>. Il contient le dossier [dao] du dossier [dao].
+  </li>
+  <li>en [13] : le contenu du dossier [dao]
+  </li>
+  <li>en [14] : on ajoute un nouveau projet à la solution <i>ImpotsV5</i>
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000008020000028A89258476.png" style="display:inline-block; margin:4px;width:13.561cm;height:4.3cm;" class="odt-zoomable" data-zoom-src="images/10000000000008020000028A89258476.png" /></td></tr></table>
 
 <ul>
-<li>en [15] : le nouveau projet s&#x27;appelle [metier]</li>
-<li>en [16] : la solution avec ses deux projets</li>
-<li>en [17] : la solution, une fois qu&#x27;on lui a ajouté le 3ième projet [ui]</li>
+  <li>en [15] : le nouveau projet s&#x27;appelle [metier]
+  </li>
+  <li>en [16] : la solution avec ses deux projets
+  </li>
+  <li>en [17] : la solution, une fois qu&#x27;on lui a ajouté le 3ième projet [ui]
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000748000002F00644FDE4.png" style="display:inline-block; margin:4px;width:12.33cm;height:4.971cm;" class="odt-zoomable" data-zoom-src="images/1000000000000748000002F00644FDE4.png" /></td></tr></table>
 
 <ul>
-<li>en [18] : le dossier de la solution et les dossiers des trois projets</li>
-<li>lorsqu&#x27;on exécute une solution par (Ctrl+F5), c&#x27;est le <strong>projet actif</strong> qui est exécuté. Il en est de même lorsqu&#x27;on génère (F6) la solution. Le nom du <strong>project actif</strong> est en gras [19] dans la solution.</li>
-<li>en [20] : pour changer le projet actif de la solution</li>
-<li>en [21] : le projet [metier] est désormais le projet actif de la solution</li>
+  <li>en [18] : le dossier de la solution et les dossiers des trois projets
+  </li>
+  <li>lorsqu&#x27;on exécute une solution par (Ctrl+F5), c&#x27;est le <b>projet actif</b> qui est exécuté. Il en est de même lorsqu&#x27;on génère (F6) la solution. Le nom du <b>project actif</b> est en gras [19] dans la solution.
+  </li>
+  <li>en [20] : pour changer le projet actif de la solution
+  </li>
+  <li>en [21] : le projet [metier] est désormais le projet actif de la solution
+  </li>
 </ul>
+
 <p><a id="refheading10401031168783983"></a>
 <a id="impotsv5-dao"></a></p>
 <h3 id="643-la-couche-dao">6.4.3. La couche [dao]</h3>
@@ -1967,9 +2110,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 8 : les codes d&#x27;erreurs auparavant dans la classe [FileImpotException] ont migré dans la classe [FileImpot]. Ce sont en effet des codes d&#x27;erreur spécifiques à cette implémentation de l&#x27;interface [IImpotDao].</li>
-<li>lignes 26 et 34 : pour encapsuler une erreur, c&#x27;est la classe [ImpotException] qui est utilisée et non plus la classe [FileImpotException].</li>
+  <li>ligne 8 : les codes d&#x27;erreurs auparavant dans la classe [FileImpotException] ont migré dans la classe [FileImpot]. Ce sont en effet des codes d&#x27;erreur spécifiques à cette implémentation de l&#x27;interface [IImpotDao].
+  </li>
+  <li>lignes 26 et 34 : pour encapsuler une erreur, c&#x27;est la classe [ImpotException] qui est utilisée et non plus la classe [FileImpotException].
+  </li>
 </ul>
+
 <p><u><strong>Le test [Test1] (cf [4] dans le projet)</strong></u></p>
 <p>La classe [Test1] se contente d&#x27;afficher les tranches d&#x27;impôt à l&#x27;écran :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -2004,17 +2150,24 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 13 : la couche [dao] est implémentée par la classe [FileImpot]</li>
-<li>ligne 14 : on gère l&#x27;exception de type [ImpotException] qui peut survenir.</li>
+  <li>ligne 13 : la couche [dao] est implémentée par la classe [FileImpot]
+  </li>
+  <li>ligne 14 : on gère l&#x27;exception de type [ImpotException] qui peut survenir.
+  </li>
 </ul>
+
 <p>Le fichier [DataImpot.txt] nécessaire aux tests est recopié automatiquement dans le dossier d&#x27;exécution du projet (cf [5] dans le projet). Le projet [dao] va avoir plusieurs classes contenant une méthode [Main]. Il faut indiquer alors explicitement la classe à exécuter lorsque l&#x27;utilisateur demande l&#x27;exécution du project par Ctrl-F5 :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007F50000034F9073383D.png" style="display:inline-block; margin:4px;width:16.17cm;height:6.72cm;" class="odt-zoomable" data-zoom-src="images/10000000000007F50000034F9073383D.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : accéder aux propriétés du projet</li>
-<li>en [2] : préciser que c&#x27;est une application console</li>
-<li>en [3] : préciser la classe à exécuter</li>
+  <li>en [1] : accéder aux propriétés du projet
+  </li>
+  <li>en [2] : préciser que c&#x27;est une application console
+  </li>
+  <li>en [3] : préciser la classe à exécuter
+  </li>
 </ul>
+
 <p>L&#x27;exécution de la classe [Test1] précédente donne les résultats suivants :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>4962:0:0
 <a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>8382:0,068:291,09
@@ -2073,31 +2226,48 @@
 </code></pre></div>
 
 <ul>
-<li>la classe de test dérive de la classe [AssertionHelper], ce qui permet l&#x27;utilisation de la méthode statique <em>Expect</em> (lignes 27-30).</li>
-<li>ligne 10 : une référence sur la couche [dao]</li>
-<li>lignes 13-16 : le constructeur instancie la couche [dao] avec la classe [FileImpot]</li>
-<li>lignes 19-20 : la méthode de test</li>
-<li>ligne 22 : on récupère le tableau des tranches d&#x27;impôt auprès de la couche [dao]</li>
-<li>lignes 23-25 : on les affiche comme précédemment. Cet affichage n&#x27;aurait pas lieu d&#x27;être dans un test unitaire réel. Ici, cet affichage a un souci pédagogique.</li>
-<li>lignes 27 : on vérifie qu&#x27;il y a bien 7 tranches d&#x27;impôt</li>
-<li>lignes 28-30 : on vérifie les valeurs de la tranche d&#x27;impôt n° 2</li>
+  <li>la classe de test dérive de la classe [AssertionHelper], ce qui permet l&#x27;utilisation de la méthode statique <i>Expect</i> (lignes 27-30).
+  </li>
+  <li>ligne 10 : une référence sur la couche [dao]
+  </li>
+  <li>lignes 13-16 : le constructeur instancie la couche [dao] avec la classe [FileImpot]
+  </li>
+  <li>lignes 19-20 : la méthode de test
+  </li>
+  <li>ligne 22 : on récupère le tableau des tranches d&#x27;impôt auprès de la couche [dao]
+  </li>
+  <li>lignes 23-25 : on les affiche comme précédemment. Cet affichage n&#x27;aurait pas lieu d&#x27;être dans un test unitaire réel. Ici, cet affichage a un souci pédagogique.
+  </li>
+  <li>lignes 27 : on vérifie qu&#x27;il y a bien 7 tranches d&#x27;impôt
+  </li>
+  <li>lignes 28-30 : on vérifie les valeurs de la tranche d&#x27;impôt n° 2
+  </li>
 </ul>
+
 <p>Pour exécuter ce test unitaire, le projet doit être de type [Class Library] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007E0000001A95E5A90E3.png" style="display:inline-block; margin:4px;width:16cm;height:3.371cm;" class="odt-zoomable" data-zoom-src="images/10000000000007E0000001A95E5A90E3.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : la nature du projet a été changée</li>
-<li>en [2] : la DLL générée s&#x27;appellera [<a id="impotsv5-dao-dll"></a>ImpotsV5-dao.dll]</li>
-<li>en [3] : après génération (F6) du projet, le dossier [dao/bin/Release] contient la DLL [ImpotsV5-dao.dll]</li>
+  <li>en [1] : la nature du projet a été changée
+  </li>
+  <li>en [2] : la DLL générée s&#x27;appellera [<a id="impotsv5-dao-dll"></a>ImpotsV5-dao.dll]
+  </li>
+  <li>en [3] : après génération (F6) du projet, le dossier [dao/bin/Release] contient la DLL [ImpotsV5-dao.dll]
+  </li>
 </ul>
+
 <p>La DLL [ImpotsV5-dao.dll] est ensuite chargée dans le framework <em>NUnit</em> et exécutée :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000082C000001C62429FC1A.png" style="display:inline-block; margin:4px;width:16.611cm;height:3.6cm;" class="odt-zoomable" data-zoom-src="images/100000000000082C000001C62429FC1A.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : les tests ont été réussis. Nous considérons désormais la couche [dao] opérationnelle. Sa DLL contient toutes les classes du projet dont les classes de test. Celles-ci sont inutiles. Nous reconstruisons la DLL afin d&#x27;en exclure les classes de tests.</li>
-<li>en [2] : le dossier [tests] est exclu du projet</li>
-<li>en [3] : le nouveau projet. Celui-ci est régénéré par F6 afin de générer une nouvelle DLL.</li>
+  <li>en [1] : les tests ont été réussis. Nous considérons désormais la couche [dao] opérationnelle. Sa DLL contient toutes les classes du projet dont les classes de test. Celles-ci sont inutiles. Nous reconstruisons la DLL afin d&#x27;en exclure les classes de tests.
+  </li>
+  <li>en [2] : le dossier [tests] est exclu du projet
+  </li>
+  <li>en [3] : le nouveau projet. Celui-ci est régénéré par F6 afin de générer une nouvelle DLL.
+  </li>
 </ul>
+
 <p><a id="refheading10401051168783983"></a>
 <a id="impots-v5-metier"></a></p>
 <h3 id="644-la-couche-metier">6.4.4. La couche [metier]</h3>
@@ -2106,23 +2276,35 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006100000022CA914C583.png" style="display:inline-block; margin:4px;width:12.321cm;height:4.41cm;" class="odt-zoomable" data-zoom-src="images/10000000000006100000022CA914C583.png" /></td></tr></table>
 
 <ul>
-<li>en [1], le projet [metier] est devenu le projet actif de la solution</li>
-<li>en [2] : les références du projet</li>
-<li>en [3] : la couche [metier]</li>
-<li>en [4] : les classes de test</li>
-<li>en [5] : le fichier [DataImpot.txt] des tranches d&#x27;impôt configuré [6] pour être recopié automatiquement dans le dossier d&#x27;exécution du projet [7]</li>
+  <li>en [1], le projet [metier] est devenu le projet actif de la solution
+  </li>
+  <li>en [2] : les références du projet
+  </li>
+  <li>en [3] : la couche [metier]
+  </li>
+  <li>en [4] : les classes de test
+  </li>
+  <li>en [5] : le fichier [DataImpot.txt] des tranches d&#x27;impôt configuré [6] pour être recopié automatiquement dans le dossier d&#x27;exécution du projet [7]
+  </li>
 </ul>
+
 <p><u><strong>Les références du projet (cf [2] dans le projet)</strong></u></p>
 <p>Comme pour le projet [dao], on ajoute la référence [nunit.framework] nécessaire aux tests [NUnit]. La couche [metier] a besoin de la couche [dao]. Il lui faut donc une référence sur la DLL de cette couche. On procède ainsi :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077A000001A324F2BD2E.png" style="display:inline-block; margin:4px;width:15.191cm;height:3.32cm;" class="odt-zoomable" data-zoom-src="images/100000000000077A000001A324F2BD2E.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : on ajoute une nouvelle référence aux références du projet [metier]</li>
-<li>en [2] : on sélectionne l&#x27;onglet [Browse]</li>
-<li>en [3] : on sélectionne le dossier [dao/bin/Release]</li>
-<li>en [4] : on sélectionne la DLL [ImpotsV5-dao.dll] générée dans le projet [dao]</li>
-<li>en [5] : la nouvelle référence</li>
+  <li>en [1] : on ajoute une nouvelle référence aux références du projet [metier]
+  </li>
+  <li>en [2] : on sélectionne l&#x27;onglet [Browse]
+  </li>
+  <li>en [3] : on sélectionne le dossier [dao/bin/Release]
+  </li>
+  <li>en [4] : on sélectionne la DLL [ImpotsV5-dao.dll] générée dans le projet [dao]
+  </li>
+  <li>en [5] : la nouvelle référence
+  </li>
 </ul>
+
 <p><u><strong>La couche [metier] (cf [3] dans le projet)</strong></u></p>
 <p>L&#x27;interface [IImpotMetier] est celle de la version précédente. Il en est de même pour la classe [ImpotMetier].</p>
 <p><u><strong>Le test [Test1] (cf [4] dans le projet)</strong></u></p>
@@ -2160,18 +2342,26 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 14 : création des couches [metier] et [dao]. La couche [dao] est implémentée avec la classe [FileImpot]</li>
-<li>lignes 12-21 : gestion d&#x27;une éventuelle exception de type [ImpotException]</li>
-<li>lignes 23-26 : appels répétés de l&#x27;unique méthode <em>CalculerImpot</em> de l&#x27;interface [IImpotMetier].</li>
+  <li>ligne 14 : création des couches [metier] et [dao]. La couche [dao] est implémentée avec la classe [FileImpot]
+  </li>
+  <li>lignes 12-21 : gestion d&#x27;une éventuelle exception de type [ImpotException]
+  </li>
+  <li>lignes 23-26 : appels répétés de l&#x27;unique méthode <i>CalculerImpot</i> de l&#x27;interface [IImpotMetier].
+  </li>
 </ul>
+
 <p>Le projet [metier] est configuré comme suit :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000472000001A1394014DA.png" style="display:inline-block; margin:4px;width:9.029cm;height:3.311cm;" class="odt-zoomable" data-zoom-src="images/1000000000000472000001A1394014DA.png" /></td></tr></table>
 
 <ul>
-<li>[1] : le projet est de type application console</li>
-<li>[2] : la classe exécutée est la classe [Test1]</li>
-<li>[3] : la génération du projet produira l&#x27;exécutable [ImpotsV5-metier.exe]</li>
+  <li>[1] : le projet est de type application console
+  </li>
+  <li>[2] : la classe exécutée est la classe [Test1]
+  </li>
+  <li>[3] : la génération du projet produira l&#x27;exécutable [ImpotsV5-metier.exe]
+  </li>
 </ul>
+
 <p>L&#x27;exécution du projet donne les résultats suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
 <span class="normal"><a href="#__codelineno-20-2">2</a></span>
@@ -2214,16 +2404,22 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 14 : création des couches [metier] et [dao]. La couche [dao] est implémentée avec la classe [FileImpot]</li>
-<li>lignes 21-24 : appels répétés de l&#x27;unique méthode <em>CalculerImpot</em> de l&#x27;interface [IImpotMetier] avec vérification des résultats.</li>
+  <li>ligne 14 : création des couches [metier] et [dao]. La couche [dao] est implémentée avec la classe [FileImpot]
+  </li>
+  <li>lignes 21-24 : appels répétés de l&#x27;unique méthode <i>CalculerImpot</i> de l&#x27;interface [IImpotMetier] avec vérification des résultats.
+  </li>
 </ul>
+
 <p>Le projet [metier] est maintenant configuré comme suit :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000429000001AC7D6D377B.png" style="display:inline-block; margin:4px;width:8.451cm;height:3.401cm;" class="odt-zoomable" data-zoom-src="images/1000000000000429000001AC7D6D377B.png" /></td></tr></table>
 
 <ul>
-<li>[1] : le projet est de type &quot;bibliothèque de classes&quot;</li>
-<li>[2] : la génération du projet produira la DLL [ImpotsV5-metier.dll]</li>
+  <li>[1] : le projet est de type &quot;bibliothèque de classes&quot;
+  </li>
+  <li>[2] : la génération du projet produira la DLL [ImpotsV5-metier.dll]
+  </li>
 </ul>
+
 <p>Le projet est généré (F6). Puis la DLL [<a id="impotsv5-metier-dll"></a>ImpotsV5-metier.dll] générée est chargée dans <em>NUnit</em> et testée :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028C00000085FF4D6587.png" style="display:inline-block; margin:4px;width:12.06cm;height:2.461cm;" class="odt-zoomable" data-zoom-src="images/100000000000028C00000085FF4D6587.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -2231,9 +2427,12 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003CB000001B2CEB0A607.png" style="display:inline-block; margin:4px;width:7.71cm;height:3.44cm;" class="odt-zoomable" data-zoom-src="images/10000000000003CB000001B2CEB0A607.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : le dossier [tests] est exclu du projet</li>
-<li>en [2] : le nouveau projet. Celui-ci est régénéré par F6 afin de générer une nouvelle DLL.</li>
+  <li>en [1] : le dossier [tests] est exclu du projet
+  </li>
+  <li>en [2] : le nouveau projet. Celui-ci est régénéré par F6 afin de générer une nouvelle DLL.
+  </li>
 </ul>
+
 <p><a id="refheading10401071168783983"></a></p>
 <h3 id="645-la-couche-ui">6.4.5. La couche [ui]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000697000001E0E6A9F6BE.png" style="display:inline-block; margin:4px;width:13.39cm;height:3.81cm;" class="odt-zoomable" data-zoom-src="images/1000000000000697000001E0E6A9F6BE.png" /></td></tr></table>
@@ -2241,11 +2440,16 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000606000001B91FDC5F1F.png" style="display:inline-block; margin:4px;width:12.24cm;height:3.5cm;" class="odt-zoomable" data-zoom-src="images/1000000000000606000001B91FDC5F1F.png" /></td></tr></table>
 
 <ul>
-<li>en [1], le projet [ui] est devenu le projet actif de la solution</li>
-<li>en [2] : les références du projet</li>
-<li>en [3] : la couche [ui]</li>
-<li>en [4] : le fichier [DataImpot.txt] des tranches d&#x27;impôt, configuré [5] pour être recopié automatiquement dans le dossier d&#x27;exécution du projet [6]</li>
+  <li>en [1], le projet [ui] est devenu le projet actif de la solution
+  </li>
+  <li>en [2] : les références du projet
+  </li>
+  <li>en [3] : la couche [ui]
+  </li>
+  <li>en [4] : le fichier [DataImpot.txt] des tranches d&#x27;impôt, configuré [5] pour être recopié automatiquement dans le dossier d&#x27;exécution du projet [6]
+  </li>
 </ul>
+
 <p><u><strong>Les références du projet (cf [2] dans le projet)</strong></u></p>
 <p>La couche [ui] a besoin des couches [metier] et [dao] pour mener à bien ses calculs d&#x27;impôt. Il lui faut donc une référence sur les DLL de ces deux couches. On procède comme il a été montré pour la couche [metier]</p>
 <p><u><strong>La classe principale [Dialogue.cs] (cf [3] dans le projet)</strong></u></p>
@@ -2255,10 +2459,14 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000475000001A89F7EBBA3.png" style="display:inline-block; margin:4px;width:9.059cm;height:3.371cm;" class="odt-zoomable" data-zoom-src="images/1000000000000475000001A89F7EBBA3.png" /></td></tr></table>
 
 <ul>
-<li>[1] : le projet est de type &quot;application console&quot;</li>
-<li>[2] : la génération du projet produira l&#x27;exécutable [ImpotsV5-ui.exe]</li>
-<li>[3] : la classe qui sera exécutée</li>
+  <li>[1] : le projet est de type &quot;application console&quot;
+  </li>
+  <li>[2] : la génération du projet produira l&#x27;exécutable [ImpotsV5-ui.exe]
+  </li>
+  <li>[3] : la classe qui sera exécutée
+  </li>
 </ul>
+
 <p>Un exemple d&#x27;exécution (Ctrl+F5) est le suivant :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Paramètres du calcul de l&#39;Impot au format : Marié (o/n) NbEnfants Salaire ou rien pour arrêter :o 2 60000
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>Impot=4282 euros
@@ -2304,46 +2512,67 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 5 : instanciation des couches [dao] et [metier] par Spring</li>
-<li>ligne 7 : on récupère une référence sur la couche [metier]. On notera que la couche [ui] a eu cette référence sans donner le nom de la classe implémentant la couche [metier].</li>
+  <li>ligne 5 : instanciation des couches [dao] et [metier] par Spring
+  </li>
+  <li>ligne 7 : on récupère une référence sur la couche [metier]. On notera que la couche [ui] a eu cette référence sans donner le nom de la classe implémentant la couche [metier].
+  </li>
 </ul>
+
 <p>Le framework Spring existe en deux versions : Java et .NET. La version .NET est disponible à l&#x27;url (mars 2008) [http://www.springframework.net/] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000081700000283F402F7EB.png" style="display:inline-block; margin:4px;width:16.439cm;height:5.099cm;" class="odt-zoomable" data-zoom-src="images/100000000000081700000283F402F7EB.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : le site de [Spring.net]</li>
-<li>en [2] : la page des téléchargements</li>
+  <li>en [1] : le site de [Spring.net]
+  </li>
+  <li>en [2] : la page des téléchargements
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007AB000002D74B02C2D9.png" style="display:inline-block; margin:4px;width:12.98cm;height:4.81cm;" class="odt-zoomable" data-zoom-src="images/10000000000007AB000002D74B02C2D9.png" /></td></tr></table>
 
 <ul>
-<li>en [3] : télécharger Spring 1.1 (mars 2008)</li>
+  <li>en [3] : télécharger Spring 1.1 (mars 2008)
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000082F0000040D67EE309A.png" style="display:inline-block; margin:4px;width:16.63cm;height:8.23cm;" class="odt-zoomable" data-zoom-src="images/100000000000082F0000040D67EE309A.png" /></td></tr></table>
 
 <ul>
-<li>en [4] : télécharger la version .exe puis l&#x27;installer</li>
-<li>en [5] : le dossier généré par l&#x27;installation</li>
-<li>en [6] : le dossier [bin/net/2.0/release] contient les DLL de Spring pour les projets Visual Studio .NET 2.0 ou supérieur. Spring est un framework riche. L&#x27;aspect de Spring que nous allons utiliser ici pour gérer l&#x27;intégration des couches dans une application s&#x27;appelle <strong>IoC</strong> : <em>Inversion of Contro</em>l ou encore <strong>DI</strong> : <em>Dependence Injection</em>. Spring apporte des bibliothèques pour l&#x27;accès aux bases de données avec <em>NHibernate</em>, la génération et l&#x27;exploitation de services web, d&#x27;applications web, ...</li>
-<li>les DLL nécessaires pour gérer l&#x27;intégration des couches dans une application sont les DLL [7] et [8].</li>
+  <li>en [4] : télécharger la version .exe puis l&#x27;installer
+  </li>
+  <li>en [5] : le dossier généré par l&#x27;installation
+  </li>
+  <li>en [6] : le dossier [bin/net/2.0/release] contient les DLL de Spring pour les projets Visual Studio .NET 2.0 ou supérieur. Spring est un framework riche. L&#x27;aspect de Spring que nous allons utiliser ici pour gérer l&#x27;intégration des couches dans une application s&#x27;appelle <b>IoC</b> : <i>Inversion of Contro</i>l ou encore <b>DI</b> : <i>Dependence Injection</i>. Spring apporte des bibliothèques pour l&#x27;accès aux bases de données avec <i>NHibernate</i>, la génération et l&#x27;exploitation de services web, d&#x27;applications web, ...
+  </li>
+  <li>les DLL nécessaires pour gérer l&#x27;intégration des couches dans une application sont les DLL [7] et [8].
+  </li>
 </ul>
+
 <p>Nous stockons ces trois DLL dans un dossier [lib] de notre projet :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007DB0000027D371F3434.png" style="display:inline-block; margin:4px;width:15.96cm;height:5.061cm;" class="odt-zoomable" data-zoom-src="images/10000000000007DB0000027D371F3434.png" /></td></tr></table>
 
 <ul>
-<li>[1] : les trois DLL sont placées dans le dossier [lib] avec l&#x27;explorateur windows</li>
-<li>[2] : dans le projet [ui], on fait afficher tous les fichiers</li>
-<li>[3] : le dossier [ui/lib] est désormais visible. On l&#x27;inclut dans le projet</li>
-<li>[4] : le dossier [ui/lib] fait partie du projet</li>
+  <li>[1] : les trois DLL sont placées dans le dossier [lib] avec l&#x27;explorateur windows
+  </li>
+  <li>[2] : dans le projet [ui], on fait afficher tous les fichiers
+  </li>
+  <li>[3] : le dossier [ui/lib] est désormais visible. On l&#x27;inclut dans le projet
+  </li>
+  <li>[4] : le dossier [ui/lib] fait partie du projet
+  </li>
 </ul>
+
 <p>L&#x27;opération de création du dossier [lib] n&#x27;est nullement indispensable. Les références pouvaient être créées directement sur les trois DLL du dossier [bin/net/2.0/release] de [Spring.net]. La création du dossier [lib] permet cependant de développer l&#x27;application sur un poste ne disposant pas de [Spring.net] la rendant ainsi moins dépendante de l&#x27;environnement de développement disponible.</p>
 <p>Nous ajoutons au projet [ui] des références sur les trois nouvelles DLL :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E8000002E7FF4AD111.png" style="display:inline-block; margin:4px;width:9.97cm;height:5.9cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E8000002E7FF4AD111.png" /></td></tr></table>
 
 <ul>
-<li>[1] : on crée des références sur les trois DLL du dossier [lib] [2]</li>
-<li>[3] : les trois DLL font partie des références du projet</li>
+  <li>[1] : on crée des références sur les trois DLL du dossier [lib] [2]
+  </li>
+  <li>[3] : les trois DLL font partie des références du projet
+  </li>
 </ul>
+
 <p>Revenons à une vue d&#x27;ensemble de l&#x27;architecture de l&#x27;application :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006C70000021EA354603D.png" style="display:inline-block; margin:4px;width:13.771cm;height:4.3cm;" class="odt-zoomable" data-zoom-src="images/10000000000006C70000021EA354603D.png" /></td></tr></table>
 
@@ -2362,19 +2591,27 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 5 : instanciation des couches [dao] et [metier] par Spring</li>
-<li>ligne 7 : on récupère une référence sur la couche [metier].</li>
+  <li>ligne 5 : instanciation des couches [dao] et [metier] par Spring
+  </li>
+  <li>ligne 7 : on récupère une référence sur la couche [metier].
+  </li>
 </ul>
+
 <p>La ligne [5] ci-dessus exploite le fichier de configuration [App.config] du projet Visual Studio. Dans un projet C#, ce fichier sert à configurer l&#x27;application. [App.config] n&#x27;est donc pas une notion Spring mais une notion Visual Studio que Spring exploite. Spring sait exploiter d&#x27;autres fichiers de configuration que [App.config]. La solution présentée ici n&#x27;est donc pas la seule disponible.</p>
 <p>Créons le fichier [App.config] avec l&#x27;assistant Visual Studio :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000081A0000029BD827EDB2.png" style="display:inline-block; margin:4px;width:16.461cm;height:5.29cm;" class="odt-zoomable" data-zoom-src="images/100000000000081A0000029BD827EDB2.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : ajout d&#x27;un nouvel élément au projet</li>
-<li>en [2] : sélectionner &quot;Application Configuration File&quot;</li>
-<li>en [3] : [App.config] est le nom par défaut de ce fichier de configuration</li>
-<li>en [4] : le fichier [App.config] a été ajouté au projet</li>
+  <li>en [1] : ajout d&#x27;un nouvel élément au projet
+  </li>
+  <li>en [2] : sélectionner &quot;Application Configuration File&quot;
+  </li>
+  <li>en [3] : [App.config] est le nom par défaut de ce fichier de configuration
+  </li>
+  <li>en [4] : le fichier [App.config] a été ajouté au projet
+  </li>
 </ul>
+
 <p>Le contenu du fichier [App.config] est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span style="color:#0000ff">&lt;?</span><span style="color:#a31515">xml</span><span style="color:#0000ff"> </span><span style="color:#ff0000">version</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">1.0</span>&quot;<span style="color:#0000ff"> </span><span style="color:#ff0000">encoding</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">utf-8</span>&quot;<span style="color:#0000ff"> ?&gt;</span></span>
@@ -2411,75 +2648,106 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 11-23 : la section délimitée par la balise &lt;spring&gt; est appelée le groupe de sections &lt;spring&gt;. On peut créer autant de groupes de sections que l&#x27;on veut dans [App.config].</li>
-<li>un groupe de sections a des sections : c&#x27;est le cas ici :<ul>
-<li>lignes 12-14 : la section &lt;spring/context&gt;</li>
-<li>lignes 15-22 : la section &lt;spring/objects&gt;</li>
+  <li>lignes 11-23 : la section délimitée par la balise &lt;spring&gt; est appelée le groupe de sections &lt;spring&gt;. On peut créer autant de groupes de sections que l&#x27;on veut dans [App.config].
+  </li>
+  <li>un groupe de sections a des sections : c&#x27;est le cas ici :
+    <ul>
+      <li>lignes 12-14 : la section &lt;spring/context&gt;
+      </li>
+      <li>lignes 15-22 : la section &lt;spring/objects&gt;
+      </li>
+    </ul>
+  </li>
+  <li>lignes 4-9 : la région &lt;configSections&gt; définit la liste des gestionnaires (handlers) des groupes de sections présents dans [App.config].
+  </li>
+  <li>lignes 5-8 : définit la liste des gestionnaires des sections du groupe &lt;spring&gt; (<b>name</b>=&quot;spring&quot;).
+  </li>
+  <li>ligne 6 : le gestionnaire de la section &lt;context&gt; du groupe &lt;spring&gt; :
+    <ul>
+      <li><b>name</b> : nom de la section gérée
+      </li>
+      <li><b>type</b> : nom de la classe gérant la section sous la forme <i>NomClasse, NomDLL</i>.
+      </li>
+      <li>la section &lt;context&gt; du groupe &lt;spring&gt; est gérée par la classe  [Spring.Context.Support.ContextHandler] qui sera trouvée dans la DLL [Spring.Core.dll]
+      </li>
+    </ul>
+  </li>
+  <li>ligne 7 : le gestionnaire de la section &lt;objects&gt; du groupe &lt;spring&gt;
+  </li>
 </ul>
-</li>
-<li>lignes 4-9 : la région &lt;configSections&gt; définit la liste des gestionnaires (handlers) des groupes de sections présents dans [App.config].</li>
-<li>lignes 5-8 : définit la liste des gestionnaires des sections du groupe &lt;spring&gt; (<strong>name</strong>=&quot;spring&quot;).</li>
-<li>ligne 6 : le gestionnaire de la section &lt;context&gt; du groupe &lt;spring&gt; :<ul>
-<li><strong>name</strong> : nom de la section gérée</li>
-<li><strong>type</strong> : nom de la classe gérant la section sous la forme <em>NomClasse, NomDLL</em>.</li>
-<li>la section &lt;context&gt; du groupe &lt;spring&gt; est gérée par la classe  [Spring.Context.Support.ContextHandler] qui sera trouvée dans la DLL [Spring.Core.dll]</li>
-</ul>
-</li>
-<li>ligne 7 : le gestionnaire de la section &lt;objects&gt; du groupe &lt;spring&gt;</li>
-</ul>
+
 <p>Les lignes 4-9 sont standard dans un fichier [App.config] avec Spring. On se contente de les recopier d&#x27;un projet à l&#x27;autre.</p>
 <ul>
-<li>lignes 12-14 : définit la section &lt;spring/context&gt;.</li>
-<li>ligne 13 : la balise &lt;<strong>resource</strong>&gt; a pour but d&#x27;indiquer où se trouve le fichier définissant les classes que Spring doit instancier. Celles-ci peuvent être dans [App.config] comme ici mais elles peuvent être également dans un fichier de configuration autre. La localisation de ces classes est faite dans l&#x27;attribut <strong>uri</strong> de la balise &lt;resource&gt; :<ul>
-<li><strong>&lt;resource uri=&quot;config://spring/objects&gt;</strong> indique que la liste des classes à instancier se trouve dans le fichier [App.config] (<strong>config:</strong>), dans la section <strong>//</strong><strong>spring/objects</strong>, c.a.d. dans la balise &lt;objects&gt; de la balise &lt;spring&gt;. </li>
-<li>&lt;<strong>resource uri=&quot;file://spring-config.xml&quot;</strong>&gt; indiquerait  que la liste des classes à instancier se trouve dans le fichier [spring-config.xml]. Celui-ci devrait être placé dans les dossiers d&#x27;exécution (bin/Release ou bin/Debug) du projet. Le plus simple est de le placer, comme il a été fait pour le fichier [DataImpot.txt], à la racine du projet avec la propriété [Copy to output directory=always].</li>
+  <li>lignes 12-14 : définit la section &lt;spring/context&gt;.
+  </li>
+  <li>ligne 13 : la balise &lt;<b>resource</b>&gt; a pour but d&#x27;indiquer où se trouve le fichier définissant les classes que Spring doit instancier. Celles-ci peuvent être dans [App.config] comme ici mais elles peuvent être également dans un fichier de configuration autre. La localisation de ces classes est faite dans l&#x27;attribut <b>uri</b> de la balise &lt;resource&gt; :
+    <ul>
+      <li><b>&lt;resource uri=&quot;config://spring/objects&gt;</b> indique que la liste des classes à instancier se trouve dans le fichier [App.config] (<b>config:</b>), dans la section <b>//</b><b>spring/objects</b>, c.a.d. dans la balise &lt;objects&gt; de la balise &lt;spring&gt;. 
+      </li>
+      <li>&lt;<b>resource uri=&quot;file://spring-config.xml&quot;</b>&gt; indiquerait  que la liste des classes à instancier se trouve dans le fichier [spring-config.xml]. Celui-ci devrait être placé dans les dossiers d&#x27;exécution (bin/Release ou bin/Debug) du projet. Le plus simple est de le placer, comme il a été fait pour le fichier [DataImpot.txt], à la racine du projet avec la propriété [Copy to output directory=always].
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>Les lignes 12-14 sont standard dans un fichier [App.config] avec Spring. On se contente de les recopier d&#x27;un projet à l&#x27;autre.</p>
 <ul>
-<li>lignes 15-22 : définissent les classes à instancier. C&#x27;est dans cette partie que se fait la configuration spécifique d&#x27;une application. La balise &lt;<strong>objects</strong>&gt; délimite la section de définition des classes à instancier.</li>
-<li>lignes 16-18 : définissent la classe à instancier pour la couche [dao]<ul>
-<li>ligne 16 : chaque objet instancié par Spring fait l&#x27;objet d&#x27;une balise &lt;<strong>object</strong>&gt;. Celle-ci a un attribut <strong>name</strong> qui est le nom de l&#x27;objet instancié. C&#x27;est via celui-ci que l&#x27;application demande à Spring une référence : &quot;donne-moi une référence sur l&#x27;objet qui s&#x27;appelle dao&quot;. L&#x27;attribut <strong>type</strong> définit la classe à instancier sous la forme <em>NomClasse, NomDLL. </em>Ainsi la ligne 16 définit un objet appelé &quot;<strong>dao</strong>&quot;, instance de la classe &quot;<strong>Dao.FileImpot</strong>&quot; qui se trouve dans la DLL &quot;<strong>ImpotsV5-dao.dll</strong>&quot;. On notera qu&#x27;on donne le nom complet de la classe (espace de noms inclus) et que le suffixe .dll n&#x27;est pas précisé dans le nom de la DLL.</li>
+  <li>lignes 15-22 : définissent les classes à instancier. C&#x27;est dans cette partie que se fait la configuration spécifique d&#x27;une application. La balise &lt;<b>objects</b>&gt; délimite la section de définition des classes à instancier.
+  </li>
+  <li>lignes 16-18 : définissent la classe à instancier pour la couche [dao]
+    <ul>
+      <li>ligne 16 : chaque objet instancié par Spring fait l&#x27;objet d&#x27;une balise &lt;<b>object</b>&gt;. Celle-ci a un attribut <b>name</b> qui est le nom de l&#x27;objet instancié. C&#x27;est via celui-ci que l&#x27;application demande à Spring une référence : &quot;donne-moi une référence sur l&#x27;objet qui s&#x27;appelle dao&quot;. L&#x27;attribut <b>type</b> définit la classe à instancier sous la forme <i>NomClasse, NomDLL. </i>Ainsi la ligne 16 définit un objet appelé &quot;<b>dao</b>&quot;, instance de la classe &quot;<b>Dao.FileImpot</b>&quot; qui se trouve dans la DLL &quot;<b>ImpotsV5-dao.dll</b>&quot;. On notera qu&#x27;on donne le nom complet de la classe (espace de noms inclus) et que le suffixe .dll n&#x27;est pas précisé dans le nom de la DLL.
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>Une classe peut être instanciée de deux façons avec Spring :</p>
 <ol>
-<li>via un constructeur particulier auquel on passe des paramètres : c&#x27;est ce qui est fait dans les lignes 16-18.</li>
-<li>
-<p>via le constructeur par défaut sans paramètres. L&#x27;objet est alors initialisé via ses <strong>propriétés publiques</strong> : la balise &lt;object&gt; a alors des sous-balises &lt;<strong>property</strong>&gt; pour initialiser ces différentes propriétés. Nous n&#x27;avons pas d&#x27;exemple de ce cas ici.</p>
-</li>
-<li>
-<p>(suite)</p>
-<ul>
-<li>ligne 16 : la classe instanciée est la classe <em>FileImpot</em>. Celle-ci a le constructeur suivant :</li>
-</ul>
-</li>
+  <li>via un constructeur particulier auquel on passe des paramètres : c&#x27;est ce qui est fait dans les lignes 16-18.
+  </li>
+  <li>via le constructeur par défaut sans paramètres. L&#x27;objet est alors initialisé via ses <b>propriétés publiques</b> : la balise &lt;object&gt; a alors des sous-balises &lt;<b>property</b>&gt; pour initialiser ces différentes propriétés. Nous n&#x27;avons pas d&#x27;exemple de ce cas ici.
+  </li>
 </ol>
+
+<ul>
+  <li>(suite)
+    <ul>
+      <li>ligne 16 : la classe instanciée est la classe <i>FileImpot</i>. Celle-ci a le constructeur suivant :
+      </li>
+    </ul>
+  </li>
+</ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">        <span style="color:#0000ff">public</span> FileImpot(<span style="color:#0000ff">string</span> fileName);</span>
 </code></pre></div>
 
 <p>Les paramètres du constructeur sont définis à l&#x27;aide de balises <strong>&lt;constructor-arg&gt;</strong>.</p>
 <ul>
-<li>ligne 17 : définit le 1er et seul paramètre du constructeur. L&#x27;attribut <strong>index</strong> est le n° du paramètre du constructeur, l&#x27;attribut <strong>value</strong> sa valeur : <strong>&lt;constructor-arg index=&quot;i&quot; value=&quot;valuei&quot;/&gt;</strong></li>
-<li>
-<p>lignes 19-21 : définissent la classe à instancier pour la couche [metier] : la classe [Metier.ImpotMetier] qui se trouve dans la DLL [ImpotsV5-metier.dll].</p>
+  <li>ligne 17 : définit le 1er et seul paramètre du constructeur. L&#x27;attribut <b>index</b> est le n° du paramètre du constructeur, l&#x27;attribut <b>value</b> sa valeur : <b>&lt;constructor-arg index=&quot;i&quot; value=&quot;valuei&quot;/&gt;</b>
+  </li>
+  <li>lignes 19-21 : définissent la classe à instancier pour la couche [metier] : la classe [Metier.ImpotMetier] qui se trouve dans la DLL [ImpotsV5-metier.dll].
+    <ul>
+      <li>ligne 19 : la classe instanciée est la classe <i>ImpotMetier</i>. Celle-ci a le constructeur suivant :
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="highlight"><pre><span></span><code>&lt;div class=&quot;odt-code-rich&quot; data-linenums=&quot;false&quot; style=&quot;counter-reset: odtline 0;&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;
+&lt;span class=&quot;odt-code-line&quot;&gt;        &lt;span style=&quot;color:#0000ff&quot;&gt;public&lt;/span&gt; ImpotMetier(&lt;span style=&quot;color:#2b91af&quot;&gt;IImpotDao&lt;/span&gt; dao);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</code></pre></div>
 <ul>
-<li>ligne 19 : la classe instanciée est la classe <em>ImpotMetier</em>. Celle-ci a le constructeur suivant :</li>
+  <li>(suite)
+    <ul>
+      <li>ligne 20 : définit le 1er et seul paramètre du constructeur. Ci-dessus, le paramètre <i>dao</i> du constructeur est une référence d&#x27;objet. Dans ce cas, dans la balise &lt;constructor-arg&gt; on utilise l&#x27;attribut <b>ref</b> au lieu de l&#x27;attribut <b>value</b> qui a été utilisé pour la couche [dao] : <b>&lt;constructor-arg index=&quot;i&quot; ref=&quot;refi&quot;/&gt;</b>. Dans le constructeur ci-dessus, le paramètre <i>dao</i> représente une instance sur la couche [dao]. Cette instance a été définie par les lignes 16-18 du fichier de configuration. Ainsi dans la ligne 20 :
+      </li>
+    </ul>
+  </li>
 </ul>
-<p><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">        <span style="color:#0000ff">public</span> ImpotMetier(<span style="color:#2b91af">IImpotDao</span> dao);</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>(suite)</p>
-<ul>
-<li>ligne 20 : définit le 1er et seul paramètre du constructeur. Ci-dessus, le paramètre <em>dao</em> du constructeur est une référence d&#x27;objet. Dans ce cas, dans la balise &lt;constructor-arg&gt; on utilise l&#x27;attribut <strong>ref</strong> au lieu de l&#x27;attribut <strong>value</strong> qui a été utilisé pour la couche [dao] : <strong>&lt;constructor-arg index=&quot;i&quot; ref=&quot;refi&quot;/&gt;</strong>. Dans le constructeur ci-dessus, le paramètre <em>dao</em> représente une instance sur la couche [dao]. Cette instance a été définie par les lignes 16-18 du fichier de configuration. Ainsi dans la ligne 20 :</li>
-</ul>
-</li>
-</ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="color:#0000ff">                &lt;</span><span style="color:#a31515">constructor-arg</span><span style="color:#0000ff"> </span><span style="color:#ff0000">index</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">0</span>&quot;<span style="color:#0000ff"> </span><span style="color:#ff0000">ref</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">dao</span>&quot;<span style="color:#0000ff">/&gt;</span></span>
 </code></pre></div>
@@ -2487,23 +2755,33 @@
 <p><strong>ref=&quot;dao&quot;</strong> représente l&#x27;objet Spring &quot;dao&quot; défini par les lignes 16-18.</p>
 <p>Pour résumer, le fichier [App.config] :</p>
 <ul>
-<li>instancie la couche [dao] avec la classe <em>FileImpot</em> qui reçoit pour paramètre <em>DataImpot.txt</em> (ligne 16-18). L&#x27;objet résultant est appelé &quot;dao&quot;</li>
-<li>instancie la couche [metier] avec la classe <em>ImpotMetier</em> qui reçoit pour paramètre l&#x27;objet &quot;dao&quot; précédent (lignes 19-21).</li>
+  <li>instancie la couche [dao] avec la classe <i>FileImpot</i> qui reçoit pour paramètre <i>DataImpot.txt</i> (ligne 16-18). L&#x27;objet résultant est appelé &quot;dao&quot;
+  </li>
+  <li>instancie la couche [metier] avec la classe <i>ImpotMetier</i> qui reçoit pour paramètre l&#x27;objet &quot;dao&quot; précédent (lignes 19-21).
+  </li>
 </ul>
+
 <p>Il ne nous reste plus qu&#x27;à utiliser ce fichier de configuration Spring dans la couche [ui]. Pour cela, nous dupliquons la classe [Dialogue.cs] en [Dialogue2.cs] et nous faisons de cette dernière la classe principale du projet [ui] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007F700000203556582B5.png" style="display:inline-block; margin:4px;width:16.18cm;height:4.09cm;" class="odt-zoomable" data-zoom-src="images/10000000000007F700000203556582B5.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : copie de [Dialogue.cs]</li>
-<li>en [2] : collage</li>
-<li>en [3] : la copie de [Dialogue.cs]</li>
-<li>en [4] : renommée [Dialogue2.cs]</li>
+  <li>en [1] : copie de [Dialogue.cs]
+  </li>
+  <li>en [2] : collage
+  </li>
+  <li>en [3] : la copie de [Dialogue.cs]
+  </li>
+  <li>en [4] : renommée [Dialogue2.cs]
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000047900000190711ACB85.png" style="display:inline-block; margin:4px;width:9.089cm;height:3.18cm;" class="odt-zoomable" data-zoom-src="images/100000000000047900000190711ACB85.png" /></td></tr></table>
 
 <ul>
-<li>en [6] : on fait de [Dialogue2.cs] la classe principale du projet [ui].</li>
+  <li>en [6] : on fait de [Dialogue2.cs] la classe principale du projet [ui].
+  </li>
 </ul>
+
 <p>Le code suivant de [Dialogue.cs] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">            <span style="color:#008000">// on crée les couches [metier et dao]</span></span>
@@ -2550,25 +2828,35 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : <strong>IApplicationContext</strong> donne accès à l&#x27;ensemble des objets instanciés par Spring. On appelle cet objet, le contexte Spring de l&#x27;application ou plus simplement le contexte de l&#x27;application. Pour l&#x27;instant, ce contexte n&#x27;a pas été initialisé. C&#x27;est le try / catch qui suit qui le fait. </li>
-<li>ligne 5 : la configuration de Spring dans [App.config] est lue et exploitée. Après cette opération, s&#x27;il n&#x27;y a pas eu d&#x27;exception, tous les objets de la section &lt;objects&gt; <strong>ont été instanciés</strong> :</li>
-<li>l&#x27;objet Spring &quot;dao&quot; est une instance sur la couche [dao]</li>
-<li>
-<p>l&#x27;objet Spring &quot;metier&quot; est une instance sur la couche [metier]</p>
-</li>
-<li>
-<p>ligne 19 : la classe [Dialogue2.cs] a besoin d&#x27;une référence sur la couche [metier]. Celle-ci est demandée au contexte de l&#x27;application. L&#x27;objet <strong>IApplicationContext</strong> donne accès aux objets Spring via leur nom (attribut <strong>name</strong> de la balise &lt;<strong>object</strong>&gt; de la configuration Spring). La référence rendue est une référence sur le type générique <em>Object</em>. On est amenés à transtyper la référence rendue dans le bon type, ici le type de l&#x27;interface de la couche [metier] : <em>IImpotMetier</em>.</p>
-</li>
+  <li>ligne 2 : <b>IApplicationContext</b> donne accès à l&#x27;ensemble des objets instanciés par Spring. On appelle cet objet, le contexte Spring de l&#x27;application ou plus simplement le contexte de l&#x27;application. Pour l&#x27;instant, ce contexte n&#x27;a pas été initialisé. C&#x27;est le try / catch qui suit qui le fait. 
+  </li>
+  <li>ligne 5 : la configuration de Spring dans [App.config] est lue et exploitée. Après cette opération, s&#x27;il n&#x27;y a pas eu d&#x27;exception, tous les objets de la section &lt;objects&gt; <b>ont été instanciés</b> :
+  </li>
+  <li>l&#x27;objet Spring &quot;dao&quot; est une instance sur la couche [dao]
+  </li>
+  <li>l&#x27;objet Spring &quot;metier&quot; est une instance sur la couche [metier]
+  </li>
 </ul>
+
+<ul>
+  <li>ligne 19 : la classe [Dialogue2.cs] a besoin d&#x27;une référence sur la couche [metier]. Celle-ci est demandée au contexte de l&#x27;application. L&#x27;objet <b>IApplicationContext</b> donne accès aux objets Spring via leur nom (attribut <b>name</b> de la balise &lt;<b>object</b>&gt; de la configuration Spring). La référence rendue est une référence sur le type générique <i>Object</i>. On est amenés à transtyper la référence rendue dans le bon type, ici le type de l&#x27;interface de la couche [metier] : <i>IImpotMetier</i>.
+  </li>
+</ul>
+
 <p>Si tout s&#x27;est bien passé, après la ligne 19, [Dialogue2.cs] a une référence sur la couche [metier]. Le code des lignes 21 et au-delà est celui de la classe [Dialogue.cs] déjà étudiée.</p>
 <ul>
-<li>lignes 6-17 : gestion de l&#x27;exception qui survient lorsque l&#x27;exploitation du fichier de configuration de Spring ne peut être menée à son terme. Il peut y avoir diverses raisons à cela : syntaxe incorrecte du fichier de configuration lui-même ou bien impossibilité à instancier l&#x27;un des objets configurés. Dans notre exemple, ce dernier cas se produirait si le fichier <em>DataImpot.txt</em> de la ligne 17 de [App.config] n&#x27;était pas trouvé dans le dossier d&#x27;exécution du projet.</li>
+  <li>lignes 6-17 : gestion de l&#x27;exception qui survient lorsque l&#x27;exploitation du fichier de configuration de Spring ne peut être menée à son terme. Il peut y avoir diverses raisons à cela : syntaxe incorrecte du fichier de configuration lui-même ou bien impossibilité à instancier l&#x27;un des objets configurés. Dans notre exemple, ce dernier cas se produirait si le fichier <i>DataImpot.txt</i> de la ligne 17 de [App.config] n&#x27;était pas trouvé dans le dossier d&#x27;exécution du projet.
+  </li>
 </ul>
+
 <p>L&#x27;exception qui remonte ligne 6 est une chaîne d&#x27;exceptions où chaque exception a deux propriétés :</p>
 <ul>
-<li><strong>Message</strong> : le message d&#x27;erreur liée à l&#x27;exception</li>
-<li><strong>InnerException</strong> : l&#x27;exception précédente dans la chaîne des exceptions</li>
+  <li><b>Message</b> : le message d&#x27;erreur liée à l&#x27;exception
+  </li>
+  <li><b>InnerException</b> : l&#x27;exception précédente dans la chaîne des exceptions
+  </li>
 </ul>
+
 <p>La boucle des lignes 10-14 fait afficher toutes les exceptions de la chaîne sous la forme : classe de l&#x27;exception et message associé.</p>
 <p>Lorsqu&#x27;on exécute le projet [ui] avec un fichier de configuration valide, on obtient les résultats habituels :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Paramètres du calcul de l&#39;Impot au format : Marié (o/n) NbEnfants Salaire ou rien pour arrêter :o 2 60000
@@ -2617,12 +2905,18 @@
 <a id="__codelineno-23-17" name="__codelineno-23-17"></a><span class="n">System</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">FileNotFoundException</span><span class="p">:</span> <span class="n">Could</span> <span class="ow">not</span> <span class="n">find</span> <span class="n">file</span> <span class="s1">&#39;C:\data</span><span class="se">\200</span><span class="s1">7-2008\c# 2008\poly\Chap4\ImpotsV5\ui</span><span class="se">\b</span><span class="s1">in\Release\DataImpotInexistant.txt&#39;</span><span class="o">.</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 17 : l&#x27;exception originelle de type [FileNotFoundException]</li>
-<li>ligne 15 : la couche [dao] encapsule cette exception dans un type [Entites.ImpotException]</li>
-<li>ligne 9 : l&#x27;exception lancée par Spring parce qu&#x27;il n&#x27;a pas réussi à instancier l&#x27;objet nommé &quot;dao&quot;. Dans le processus de création de cet objet, deux autres exceptions sont intervenues auparavant : celles des lignes 11 et 13.</li>
-<li>parce que l&#x27;objet &quot;dao&quot; n&#x27;a pu être créé, le contexte de l&#x27;application n&#x27;a pu être créé. C&#x27;est le sens de l&#x27;exception ligne 5. Auparavant, une autre exception, celle de la ligne 7 s&#x27;était produite.</li>
-<li>ligne 3 : l&#x27;exception de plus haut niveau, la dernière de la chaîne : une erreur de configuration est signalée.</li>
+  <li>ligne 17 : l&#x27;exception originelle de type [FileNotFoundException]
+  </li>
+  <li>ligne 15 : la couche [dao] encapsule cette exception dans un type [Entites.ImpotException]
+  </li>
+  <li>ligne 9 : l&#x27;exception lancée par Spring parce qu&#x27;il n&#x27;a pas réussi à instancier l&#x27;objet nommé &quot;dao&quot;. Dans le processus de création de cet objet, deux autres exceptions sont intervenues auparavant : celles des lignes 11 et 13.
+  </li>
+  <li>parce que l&#x27;objet &quot;dao&quot; n&#x27;a pu être créé, le contexte de l&#x27;application n&#x27;a pu être créé. C&#x27;est le sens de l&#x27;exception ligne 5. Auparavant, une autre exception, celle de la ligne 7 s&#x27;était produite.
+  </li>
+  <li>ligne 3 : l&#x27;exception de plus haut niveau, la dernière de la chaîne : une erreur de configuration est signalée.
+  </li>
 </ul>
+
 <p>De tout cela, on retiendra que c&#x27;est l&#x27;exception la plus profonde, ici celle de la ligne 17 qui est souvent la plus significative. On notera cependant que Spring a conservé le message d&#x27;erreur de la ligne 17 pour le remonter à l&#x27;exception de plus haut niveau ligne 3 afin d&#x27;avoir la cause originelle de l&#x27;erreur au niveau le plus haut.</p>
 <p>Spring mérite à lui tout seul un livre. Nous n&#x27;avons fait ici qu&#x27;effleurer le sujet. On pourra l&#x27;approfondir avec le document [spring-net-reference.pdf] qu&#x27;on trouve dans le dossier d&#x27;installation de Spring :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000BC0000005316B6DB0D.png" style="display:inline-block; margin:4px;width:3.48cm;height:1.54cm;" class="odt-zoomable" data-zoom-src="images/10000000000000BC0000005316B6DB0D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>

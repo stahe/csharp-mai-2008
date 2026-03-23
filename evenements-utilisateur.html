@@ -799,24 +799,35 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D600000361A5C9640D.png" style="display:inline-block; margin:4px;width:13.891cm;height:6.87cm;" class="odt-zoomable" data-zoom-src="images/10000000000006D600000361A5C9640D.png" /></td></tr></table>
 
 <ul>
-<li>[1] : la classe [Button]</li>
-<li>[2] : ses événements</li>
-<li>[3,4] : l&#x27;événement <em>Click</em></li>
-<li>[5] : la déclaration de l&#x27;événement [Control.Click] [4].<ul>
-<li><em>EventHandler</em> est un prototype (un modèle ) de méthode appelé <strong>delegate</strong>.</li>
-<li><em>event</em> est un mot clé qui restreint les fonctionnalités du <em>delegate</em> <strong>EventHandler</strong><em> </em>: un objet <em>delegate</em> a des fonctionnalités plus riches qu&#x27;un objet <em>event</em>.</li>
+  <li>[1] : la classe [Button]
+  </li>
+  <li>[2] : ses événements
+  </li>
+  <li>[3,4] : l&#x27;événement <i>Click</i>
+  </li>
+  <li>[5] : la déclaration de l&#x27;événement [Control.Click] [4].
+    <ul>
+      <li><i>EventHandler</i> est un prototype (un modèle ) de méthode appelé <b>delegate</b>.
+      </li>
+      <li><i>event</i> est un mot clé qui restreint les fonctionnalités du <i>delegate</i> <b>EventHandler</b><i> </i>: un objet <i>delegate</i> a des fonctionnalités plus riches qu&#x27;un objet <i>event</i>.
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>Le <em>delegate</em> <strong>EventHandler</strong> est défini comme suit :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AE0000013BDE4AB081.png" style="display:inline-block; margin:4px;width:7.96cm;height:5.83cm;" class="odt-zoomable" data-zoom-src="images/10000000000001AE0000013BDE4AB081.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le <em>delegate</em> <strong>EventHandler</strong> désigne un modèle de méthode :</p>
 <ul>
-<li>ayant pour 1er paramètre un type <strong>Object</strong></li>
-<li>ayant pour 2ième paramètre un type <strong>EventArgs</strong></li>
-<li>ne rendant aucun résultat</li>
+  <li>ayant pour 1er paramètre un type <b>Object</b>
+  </li>
+  <li>ayant pour 2ième paramètre un type <b>EventArgs</b>
+  </li>
+  <li>ne rendant aucun résultat
+  </li>
 </ul>
+
 <p>Une méthode correspondant au modèle défini par <em>EventHandler</em> pourrait être la suivante :</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> buttonAfficher_Click(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e);</span>
@@ -842,9 +853,12 @@
 </code></pre></div>
 <p>où :</p>
 <ul>
-<li><em>source</em> est le composant de type <em>object</em> à l&#x27;origine de l&#x27;événement</li>
-<li><em>evt</em> de type <em>EventArgs</em> et ne contient pas d&#x27;information</li>
+  <li><i>source</i> est le composant de type <i>object</i> à l&#x27;origine de l&#x27;événement
+  </li>
+  <li><i>evt</i> de type <i>EventArgs</i> et ne contient pas d&#x27;information
+  </li>
 </ul>
+
 <p>Toutes les méthodes de signature <em>void M(object,EventArgs)</em> qui ont été associées à l&#x27;événement <em>Click</em> par :</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">            <span style="color:#0000ff">this</span>.buttonAfficher.Click += <span style="color:#0000ff">new</span> System.<span style="color:#2b91af">EventHandler</span>(M);</span>
@@ -934,23 +948,40 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : définit une classe <em>Class1</em>.</li>
-<li>ligne 6 : définition du <em>delegate</em> <em>Opération</em> : un prototype de méthodes acceptant deux paramètres de type <em>int</em> et rendant un résultat de type <em>int</em></li>
-<li>lignes 9-12 : la méthode d&#x27;instance <em>Ajouter</em> a la signature du <em>delegate Opération</em>.</li>
-<li>lignes 14-17 : la méthode d&#x27;instance S<em>oustraire</em> a la signature du <em>delegate Opération</em>.</li>
-<li>lignes 20-23 : la méthode <strong>de classe</strong> A<em>ugmenter</em> a la signature du <em>delegate Opération</em>.</li>
-<li>ligne 25 : la méthode <em>Main</em> exécutée</li>
-<li>ligne 20 : la variable <em>op</em> est de type <em>delegate Opération</em>. Elle contiendra une liste de méthodes ayant la signature du type <em>delegate Opération. </em>On lui affecte une première référence de méthode, celle sur la méthode statique <em>Class1.Augmenter</em>.</li>
-<li>ligne 31 : le <em>delegate</em> <em>op</em> est exécuté : ce sont toutes les méthodes référencées par <em>op</em> qui vont être exécutées. Elles le seront avec les paramètres passés au <em>delegate</em> <em>op.</em> Ici, seule la méthode statique <em>Class1.Augmenter</em> va être exécutée.</li>
-<li>ligne 35 : une instance <em>c1</em> de la classe <em>Class1</em> est créée.</li>
-<li>ligne 37 : la méthode d&#x27;instance <em>c1.Ajouter</em> est affectée au <em>delegate op</em>. <em>Augmenter</em> était une méthode statique, <em>Ajouter</em> est une méthode d&#x27;instance. On a voulu montrer que cela n&#x27;avait pas d&#x27;importance.</li>
-<li>ligne 39 : le <em>delegate</em> <em>op</em> est exécuté : la méthode <em>Ajouter</em> va être exécutée avec les paramètres passés au <em>delegate</em> <em>op</em>.</li>
-<li>ligne 42 : on refait de même avec la méthode d&#x27;instance <em>Soustraire</em>.</li>
-<li>lignes 46-47 : on met les méthodes <em>Ajouter</em> et <em>Soustraire</em> dans le <em>delegate</em> <em>op</em>.</li>
-<li>ligne 49 : le <em>delegate</em> <em>op</em> est exécuté : les deux méthodes <em>Ajouter</em> et <em>Soustraire</em> vont être exécutées avec les paramètres passés au <em>delegate</em> <em>op</em>.</li>
-<li>ligne 51 : la méthode <em>Soustraire</em> est enlevée du <em>delegate</em> <em>op</em>.</li>
-<li>ligne 53 : le <em>delegate</em> <em>op</em> est exécuté : la méthode restante <em>Ajouter</em> va être exécutée.</li>
+  <li>ligne 3 : définit une classe <i>Class1</i>.
+  </li>
+  <li>ligne 6 : définition du <i>delegate</i> <i>Opération</i> : un prototype de méthodes acceptant deux paramètres de type <i>int</i> et rendant un résultat de type <i>int</i>
+  </li>
+  <li>lignes 9-12 : la méthode d&#x27;instance <i>Ajouter</i> a la signature du <i>delegate Opération</i>.
+  </li>
+  <li>lignes 14-17 : la méthode d&#x27;instance S<i>oustraire</i> a la signature du <i>delegate Opération</i>.
+  </li>
+  <li>lignes 20-23 : la méthode <b>de classe</b> A<i>ugmenter</i> a la signature du <i>delegate Opération</i>.
+  </li>
+  <li>ligne 25 : la méthode <i>Main</i> exécutée
+  </li>
+  <li>ligne 20 : la variable <i>op</i> est de type <i>delegate Opération</i>. Elle contiendra une liste de méthodes ayant la signature du type <i>delegate Opération. </i>On lui affecte une première référence de méthode, celle sur la méthode statique <i>Class1.Augmenter</i>.
+  </li>
+  <li>ligne 31 : le <i>delegate</i> <i>op</i> est exécuté : ce sont toutes les méthodes référencées par <i>op</i> qui vont être exécutées. Elles le seront avec les paramètres passés au <i>delegate</i> <i>op.</i> Ici, seule la méthode statique <i>Class1.Augmenter</i> va être exécutée.
+  </li>
+  <li>ligne 35 : une instance <i>c1</i> de la classe <i>Class1</i> est créée.
+  </li>
+  <li>ligne 37 : la méthode d&#x27;instance <i>c1.Ajouter</i> est affectée au <i>delegate op</i>. <i>Augmenter</i> était une méthode statique, <i>Ajouter</i> est une méthode d&#x27;instance. On a voulu montrer que cela n&#x27;avait pas d&#x27;importance.
+  </li>
+  <li>ligne 39 : le <i>delegate</i> <i>op</i> est exécuté : la méthode <i>Ajouter</i> va être exécutée avec les paramètres passés au <i>delegate</i> <i>op</i>.
+  </li>
+  <li>ligne 42 : on refait de même avec la méthode d&#x27;instance <i>Soustraire</i>.
+  </li>
+  <li>lignes 46-47 : on met les méthodes <i>Ajouter</i> et <i>Soustraire</i> dans le <i>delegate</i> <i>op</i>.
+  </li>
+  <li>ligne 49 : le <i>delegate</i> <i>op</i> est exécuté : les deux méthodes <i>Ajouter</i> et <i>Soustraire</i> vont être exécutées avec les paramètres passés au <i>delegate</i> <i>op</i>.
+  </li>
+  <li>ligne 51 : la méthode <i>Soustraire</i> est enlevée du <i>delegate</i> <i>op</i>.
+  </li>
+  <li>ligne 53 : le <i>delegate</i> <i>op</i> est exécuté : la méthode restante <i>Ajouter</i> va être exécutée.
+  </li>
 </ul>
+
 <p>Les résultats de l&#x27;exécution sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
@@ -1060,16 +1091,23 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 6-8 : l&#x27;interface [IOperation] définit une méthode <em>operation</em>.</li>
-<li>lignes 11-16 et 19-24 : les classes [Ajouter] et [Soustraire] implémentent l&#x27;interface [IOperation].</li>
-<li>lignes 29-31 : la méthode <em>Execute</em> dont le 1er paramètre est du type de l&#x27;interface <em>IOperation</em>. La méthode <em>Execute</em> va recevoir successivement comme 1er paramètre, une instance de la classe <em>Ajouter</em> puis une instance de la classe <em>Soustraire</em>.</li>
+  <li>lignes 6-8 : l&#x27;interface [IOperation] définit une méthode <i>operation</i>.
+  </li>
+  <li>lignes 11-16 et 19-24 : les classes [Ajouter] et [Soustraire] implémentent l&#x27;interface [IOperation].
+  </li>
+  <li>lignes 29-31 : la méthode <i>Execute</i> dont le 1er paramètre est du type de l&#x27;interface <i>IOperation</i>. La méthode <i>Execute</i> va recevoir successivement comme 1er paramètre, une instance de la classe <i>Ajouter</i> puis une instance de la classe <i>Soustraire</i>.
+  </li>
 </ul>
+
 <p>On retrouve bien l&#x27;aspect polymorphique qu&#x27;avait le paramètre de type <em>delegate</em> de l&#x27;exemple précédent. Les deux exemples montrent en même temps des différences entre ces deux notions.</p>
 <p>Les types <em>delegate</em> et <em>interface</em> sont interchangeables </p>
 <ul>
-<li>si l&#x27;interface n&#x27;a qu&#x27;une méthode. En effet, le type <em>delegate</em> est une enveloppe pour une unique méthode alors que l&#x27;interface peut, elle, définir plusieurs méthodes.</li>
-<li>si l&#x27;aspect multicast du <em>delegate</em> n&#x27;est pas utilisé. Cette notion de multicast n&#x27;existe en effet pas dans l&#x27;interface.</li>
+  <li>si l&#x27;interface n&#x27;a qu&#x27;une méthode. En effet, le type <i>delegate</i> est une enveloppe pour une unique méthode alors que l&#x27;interface peut, elle, définir plusieurs méthodes.
+  </li>
+  <li>si l&#x27;aspect multicast du <i>delegate</i> n&#x27;est pas utilisé. Cette notion de multicast n&#x27;existe en effet pas dans l&#x27;interface.
+  </li>
 </ul>
+
 <p>Si ces deux conditions sont vérifiées, alors on a le choix entre les deux signatures suivantes pour la méthode <em>Execute</em> :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">int</span> Execute(<span style="color:#2b91af">IOperation</span> op, <span style="color:#0000ff">int</span> n1, <span style="color:#0000ff">int</span> n2)</span>
@@ -1081,42 +1119,60 @@
 <h2 id="84-gestion-devenements">8.4. Gestion d&#x27;événements</h2>
 <p>Les objets <em>delegate</em> peuvent servir à définir des événements. Une classe <em>C1</em> peut définir un événement <em>evt</em> de la façon suivante :</p>
 <ul>
-<li>un type <em>delegate</em> est défini dans ou en-dehors de la classe C1 :</li>
+  <li>un type <i>delegate</i> est défini dans ou en-dehors de la classe C1 :
+  </li>
 </ul>
+
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>delegate TResult Evt(T1 param1, T2 param2, ...);
 </code></pre></div>
 <ul>
-<li>la classe <em>C1</em> définit un champ de type <em>delegate</em> <em>Evt</em> :</li>
+  <li>la classe <i>C1</i> définit un champ de type <i>delegate</i> <i>Evt</i> :
+  </li>
 </ul>
+
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>public Evt Evt1;
 </code></pre></div>
 <ul>
-<li>lorsque une instance <em>c1</em> de la classe <em>C1</em> voudra signaler un événement, elle exécutera son <em>delegate Evt1</em> en lui passant les paramètres définis par le <em>delegate Evt</em>. Toutes les méthodes enregistrées dans le <em>delegate</em> <em>Evt1</em> seront alors exécutées avec ces paramètres. On peut dire qu&#x27;elles ont été averties de l&#x27;événement <em>Evt1</em>.</li>
-<li>si un objet c<em>2</em> utilisant un objet c<em>1</em> veut être averti de l&#x27;occurrence de l&#x27;événement <em>Evt1</em> sur l&#x27;objet c<em>1</em>, il enregistrera l&#x27;une de ses méthodes c<em>2.M</em> dans l&#x27;objet délégué c<em>1.Evt1</em> de l&#x27;objet c<em>1.</em> Ainsi sa méthode c<em>2.M</em> sera exécutée à chaque fois que l&#x27;événement E<em>vt1</em> se produira sur l&#x27;objet c<em>1</em>. Il pourra également de désinscrire lorsqu&#x27;il ne voudra plus être averti de l&#x27;événement.</li>
-<li>comme l&#x27;objet délégué c<em>1.Evt1</em> peut enregistrer plusieurs méthodes, différents objets c<em>i</em> pourront s&#x27;enregistrer auprès du délégué c<em>1.Evt1</em> pour être prévenus de l&#x27;événement <em>Evt1</em> sur c<em>1</em>.</li>
+  <li>lorsque une instance <i>c1</i> de la classe <i>C1</i> voudra signaler un événement, elle exécutera son <i>delegate Evt1</i> en lui passant les paramètres définis par le <i>delegate Evt</i>. Toutes les méthodes enregistrées dans le <i>delegate</i> <i>Evt1</i> seront alors exécutées avec ces paramètres. On peut dire qu&#x27;elles ont été averties de l&#x27;événement <i>Evt1</i>.
+  </li>
+  <li>si un objet c<i>2</i> utilisant un objet c<i>1</i> veut être averti de l&#x27;occurrence de l&#x27;événement <i>Evt1</i> sur l&#x27;objet c<i>1</i>, il enregistrera l&#x27;une de ses méthodes c<i>2.M</i> dans l&#x27;objet délégué c<i>1.Evt1</i> de l&#x27;objet c<i>1.</i> Ainsi sa méthode c<i>2.M</i> sera exécutée à chaque fois que l&#x27;événement E<i>vt1</i> se produira sur l&#x27;objet c<i>1</i>. Il pourra également de désinscrire lorsqu&#x27;il ne voudra plus être averti de l&#x27;événement.
+  </li>
+  <li>comme l&#x27;objet délégué c<i>1.Evt1</i> peut enregistrer plusieurs méthodes, différents objets c<i>i</i> pourront s&#x27;enregistrer auprès du délégué c<i>1.Evt1</i> pour être prévenus de l&#x27;événement <i>Evt1</i> sur c<i>1</i>.
+  </li>
 </ul>
+
 <p>Dans ce scénario, on a :</p>
 <ul>
-<li>une classe qui signale un événement</li>
-<li>des classes qui sont averties de cet événement. On dit qu&#x27;elles souscrivent à l&#x27;événement ou s&#x27;abonnent à l&#x27;événement.</li>
-<li>un type <em>delegate</em> qui définit la signature des méthodes qui seront averties de l&#x27;événement</li>
+  <li>une classe qui signale un événement
+  </li>
+  <li>des classes qui sont averties de cet événement. On dit qu&#x27;elles souscrivent à l&#x27;événement ou s&#x27;abonnent à l&#x27;événement.
+  </li>
+  <li>un type <i>delegate</i> qui définit la signature des méthodes qui seront averties de l&#x27;événement
+  </li>
 </ul>
+
 <p>Le framework .NET définit :</p>
 <ul>
-<li>une signature standard du <em>delegate</em> d&#x27;un événement</li>
+  <li>une signature standard du <i>delegate</i> d&#x27;un événement
+  </li>
 </ul>
+
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>public delegate void MyEventHandler(object source, EventArgs evtInfo);
 </code></pre></div>
 <ul>
-<li><em>source</em> : l&#x27;objet qui a signalé l&#x27;événement</li>
-<li><em>evtInfo</em> : un objet de type <em>EventArgs</em> ou dérivé qui apporte des informations sur l&#x27;événement</li>
-<li>
-<p>le nom du <em>delegate</em> doit être terminé par <em>EventHandler</em></p>
-</li>
-<li>
-<p>une façon standard pour déclarer un événement de type <em>MyEventHandler</em> dans une classe :</p>
-</li>
+  <li><i>source</i> : l&#x27;objet qui a signalé l&#x27;événement
+  </li>
+  <li><i>evtInfo</i> : un objet de type <i>EventArgs</i> ou dérivé qui apporte des informations sur l&#x27;événement
+  </li>
+  <li>le nom du <i>delegate</i> doit être terminé par <i>EventHandler</i>
+  </li>
 </ul>
+
+<ul>
+  <li>une façon standard pour déclarer un événement de type <i>MyEventHandler</i> dans une classe :
+  </li>
+</ul>
+
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
 <span class="normal"><a href="#__codelineno-11-2">2</a></span>
 <span class="normal"><a href="#__codelineno-11-3">3</a></span>
@@ -1127,31 +1183,45 @@
 </code></pre></div></td></tr></table></div>
 <p>Le champ E<em>vt1</em> est de type <em>delegate</em>. Le mot clé <em>event</em> est là pour restreindre les opérations qu&#x27;on peut faire sur lui :</p>
 <ul>
-<li>de l&#x27;extérieur de la classe <em>C1</em>, seules les opérations += et -= sont possibles. Cela empêche la suppression (par erreur du développeur par exemple) des méthodes abonnées à l&#x27;événement. On peut simplement s&#x27;abonner (+=) ou se désabonner (-=) de l&#x27;événement.</li>
-<li>seule une instance de type <em>C1</em> peut exécuter l&#x27;appel <em>Evt1(source,evtInfo)</em> qui déclenche l&#x27;exécution des méthodes abonnées à l&#x27;événement <em>Evt1.</em></li>
+  <li>de l&#x27;extérieur de la classe <i>C1</i>, seules les opérations += et -= sont possibles. Cela empêche la suppression (par erreur du développeur par exemple) des méthodes abonnées à l&#x27;événement. On peut simplement s&#x27;abonner (+=) ou se désabonner (-=) de l&#x27;événement.
+  </li>
+  <li>seule une instance de type <i>C1</i> peut exécuter l&#x27;appel <i>Evt1(source,evtInfo)</i> qui déclenche l&#x27;exécution des méthodes abonnées à l&#x27;événement <i>Evt1.</i>
+  </li>
 </ul>
+
 <p>Le framework .NET fournit une méthode générique satisfaisant à la signature du <em>delegate</em> d&#x27;un événement :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>public delegate void EventHandler&lt;TEventArgs&gt;(object source, TEventArgs evtInfo) where TEventArgs : EventArgs
 </code></pre></div>
 <ul>
-<li>le <em>delegate</em> <em>EventHandler</em> utilise le type générique <em>TEventArgs</em> qui est le type de son 2ième paramètre</li>
-<li>le type <em>TEventArgs</em> doit dériver du type <em>EventsArgs</em> (<em>where TEventArgs : EventArgs</em>)</li>
+  <li>le <i>delegate</i> <i>EventHandler</i> utilise le type générique <i>TEventArgs</i> qui est le type de son 2ième paramètre
+  </li>
+  <li>le type <i>TEventArgs</i> doit dériver du type <i>EventsArgs</i> (<i>where TEventArgs : EventArgs</i>)
+  </li>
 </ul>
+
 <p>Avec ce <em>delegate</em> générique, la déclaration d&#x27;un événement <em>X</em> dans la classe C suivra le schéma conseillé suivant :</p>
 <ul>
-<li>définir un type <em>XEventArgs</em> dérivé de <em>EventArgs</em> pour encapsuler les informations sur l&#x27;événement <em>X</em></li>
-<li>définir  dans la classe C un événement de type <em>EventHandler&lt;XEventArgs&gt;</em>.</li>
-<li>définir  dans la classe C une méthode protégée </li>
+  <li>définir un type <i>XEventArgs</i> dérivé de <i>EventArgs</i> pour encapsuler les informations sur l&#x27;événement <i>X</i>
+  </li>
+  <li>définir  dans la classe C un événement de type <i>EventHandler&lt;XEventArgs&gt;</i>.
+  </li>
+  <li>définir  dans la classe C une méthode protégée 
+  </li>
 </ul>
+
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>protected void OnXHandler(XEventArgs e);
 </code></pre></div>
 <p>destinée à &quot;publier&quot; l&#x27;événement X aux abonnés.</p>
 <p>Considérons l&#x27;exemple suivant :</p>
 <ul>
-<li>une classe <em>Emetteur</em> encapsule une température. Cette température est observée. Lorsque cette température dépasse un certain seuil, un événement doit être lancé. Nous appellerons cet événement <em>TemperatureTropHaute</em>. Les informations sur cet événement seront encapsulées dans un type <em>TemperatureTropHauteEventArgs.</em></li>
-<li>une classe <em>Souscripteur</em> s&#x27;abonne à l&#x27;événement précédent. Lorsqu&#x27;elle est avertie de l&#x27;événement, elle affiche un message sur la console.</li>
-<li>un programme console crée un émetteur et deux abonnés. Il saisit les températures au clavier et les enregistre dans une instance <em>Emetteur</em>. Si celle-ci est trop haute, l&#x27;instance  <em>Emetteur</em> publie l&#x27;événement <em>TemperatureTropHaute.</em></li>
+  <li>une classe <i>Emetteur</i> encapsule une température. Cette température est observée. Lorsque cette température dépasse un certain seuil, un événement doit être lancé. Nous appellerons cet événement <i>TemperatureTropHaute</i>. Les informations sur cet événement seront encapsulées dans un type <i>TemperatureTropHauteEventArgs.</i>
+  </li>
+  <li>une classe <i>Souscripteur</i> s&#x27;abonne à l&#x27;événement précédent. Lorsqu&#x27;elle est avertie de l&#x27;événement, elle affiche un message sur la console.
+  </li>
+  <li>un programme console crée un émetteur et deux abonnés. Il saisit les températures au clavier et les enregistre dans une instance <i>Emetteur</i>. Si celle-ci est trop haute, l&#x27;instance  <i>Emetteur</i> publie l&#x27;événement <i>TemperatureTropHaute.</i>
+  </li>
 </ul>
+
 <p>Pour se conformer à la méthode conseillée de gestion des événements, nous définissons tout d&#x27;abord le type <em>TemperatureTropHauteEventArgs</em> pour encapsuler les informations sur l&#x27;événement :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -1171,8 +1241,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 6 : l&#x27;information encapsulée par la classe <em>TemperatureTropHauteEventArgs</em> est la température qui a provoqué l&#x27;événement <em>TemperatureTropHaute</em>.</li>
+  <li>ligne 6 : l&#x27;information encapsulée par la classe <i>TemperatureTropHauteEventArgs</i> est la température qui a provoqué l&#x27;événement <i>TemperatureTropHaute</i>.
+  </li>
 </ul>
+
 <p>La classe <em>Emetteur</em> est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -1212,12 +1284,18 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 5 : le seuil de température au-delà duquel l&#x27;événement <em>TemperatureTropHaute</em> sera publié.</li>
-<li>ligne 10 : l&#x27;émetteur a un nom pour être identifié</li>
-<li>ligne 12 : l&#x27;événement  <em>TemperatureTropHaute</em>.</li>
-<li>lignes 15-26 : la méthode <em>get</em> qui rend la température et la méthode <em>set</em> qui l&#x27;enregistre. C&#x27;est la méthode <em>set</em> qui fait publier l&#x27;événement <em>TemperatureTropHaute</em> si la température à enregistrer dépasse le seuil de la ligne 5. Elle fait publier l&#x27;événement par la méthode <em>OnTemperatureTropHauteHandler</em> de la ligne 29 en lui passant pour paramètre un objet <em>TemperatureTropHauteEventArgs</em> dans lequel on a enregistré la température qui a dépassé le seuil.</li>
-<li>lignes 29-32 : l&#x27;événement <em>TemperatureTropHaute</em> est publié avec pour 1er paramètre l&#x27;émetteur lui-même et pour second paramètre l&#x27;objet <em>TemperatureTropHauteEventArgs</em> reçu en paramètre.</li>
+  <li>ligne 5 : le seuil de température au-delà duquel l&#x27;événement <i>TemperatureTropHaute</i> sera publié.
+  </li>
+  <li>ligne 10 : l&#x27;émetteur a un nom pour être identifié
+  </li>
+  <li>ligne 12 : l&#x27;événement  <i>TemperatureTropHaute</i>.
+  </li>
+  <li>lignes 15-26 : la méthode <i>get</i> qui rend la température et la méthode <i>set</i> qui l&#x27;enregistre. C&#x27;est la méthode <i>set</i> qui fait publier l&#x27;événement <i>TemperatureTropHaute</i> si la température à enregistrer dépasse le seuil de la ligne 5. Elle fait publier l&#x27;événement par la méthode <i>OnTemperatureTropHauteHandler</i> de la ligne 29 en lui passant pour paramètre un objet <i>TemperatureTropHauteEventArgs</i> dans lequel on a enregistré la température qui a dépassé le seuil.
+  </li>
+  <li>lignes 29-32 : l&#x27;événement <i>TemperatureTropHaute</i> est publié avec pour 1er paramètre l&#x27;émetteur lui-même et pour second paramètre l&#x27;objet <i>TemperatureTropHauteEventArgs</i> reçu en paramètre.
+  </li>
 </ul>
+
 <p>La classe <em>Souscripteur</em> qui va s&#x27;abonner à l&#x27;événement <em>TemperatureTropHaute</em> est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -1237,10 +1315,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 6 : chaque souscripteur est identifié par un nom.</li>
-<li>lignes 9-12 : la méthode qui sera associée à l&#x27;événement <em>TemperatureTropHaute</em>. Elle a la signature du type <em>delegate</em> <em>EventHandler&lt;TEventArgs&gt; </em>qu&#x27;un gestionnaire d&#x27;événement doit avoir. La méthode affiche sur la console : le nom du souscripteur qui affiche le message, le nom de l&#x27;émetteur qui a signalé l&#x27;événement, la température qui a déclenché ce dernier.</li>
-<li>l&#x27;abonnement à l&#x27;événement <em>TemperatureTropHaute</em> d&#x27;un objet <em>Emetteur</em> n&#x27;est pas fait dans la classe <em>Souscripteur</em>. Il sera fait par une classe externe.</li>
+  <li>ligne 6 : chaque souscripteur est identifié par un nom.
+  </li>
+  <li>lignes 9-12 : la méthode qui sera associée à l&#x27;événement <i>TemperatureTropHaute</i>. Elle a la signature du type <i>delegate</i> <i>EventHandler&lt;TEventArgs&gt; </i>qu&#x27;un gestionnaire d&#x27;événement doit avoir. La méthode affiche sur la console : le nom du souscripteur qui affiche le message, le nom de l&#x27;émetteur qui a signalé l&#x27;événement, la température qui a déclenché ce dernier.
+  </li>
+  <li>l&#x27;abonnement à l&#x27;événement <i>TemperatureTropHaute</i> d&#x27;un objet <i>Emetteur</i> n&#x27;est pas fait dans la classe <i>Souscripteur</i>. Il sera fait par une classe externe.
+  </li>
 </ul>
+
 <p>Le programme [Program.cs] lie tous ces éléments entre-eux :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System;</span>
@@ -1281,11 +1363,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 6 : création de l&#x27;émetteur</li>
-<li>lignes 8-14 : création de deux souscripteurs qu&#x27;on abonne à l&#x27;événement <em>TemperatureTropHaute</em> de l&#x27;émetteur.</li>
-<li>lignes 20-32 : boucle de saisie des températures au clavier</li>
-<li>ligne 24 : si la température saisie est correcte, elle est transmise à l&#x27;objet <em>Emetteur</em> e1 qui déclenchera l&#x27;événement <em>TemperatureTropHaute</em> si la température est supérieure à 19 ° C.</li>
+  <li>ligne 6 : création de l&#x27;émetteur
+  </li>
+  <li>lignes 8-14 : création de deux souscripteurs qu&#x27;on abonne à l&#x27;événement <i>TemperatureTropHaute</i> de l&#x27;émetteur.
+  </li>
+  <li>lignes 20-32 : boucle de saisie des températures au clavier
+  </li>
+  <li>ligne 24 : si la température saisie est correcte, elle est transmise à l&#x27;objet <i>Emetteur</i> e1 qui déclenchera l&#x27;événement <i>TemperatureTropHaute</i> si la température est supérieure à 19 ° C.
+  </li>
 </ul>
+
 <p>Les résultats de l&#x27;exécution sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
 <span class="normal"><a href="#__codelineno-14-2">2</a></span>
