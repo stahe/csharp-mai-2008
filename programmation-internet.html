@@ -2876,8 +2876,8 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 
 <p><a id="refheading10403371168783983"></a></p>
 <h2 id="116-exemples-de-clients-serveurs-tcp">11.6. Exemples de clients / serveurs TCP</h2>
-<p><a id="refheading10403391168783983"></a>
-<a id="serveur-echo"></a></p>
+<p><a id="serveur-echo"></a>
+<a id="refheading10403391168783983"></a></p>
 <h3 id="1161-un-serveur-decho">11.6.1. Un serveur d&#x27;écho</h3>
 <p>Nous nous proposons d&#x27;écrire un serveur d&#x27;écho qui sera lancé depuis une fenêtre DOS par la commande :</p>
 <p><strong>ServeurEcho port</strong></p>
@@ -3191,8 +3191,8 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <a id="__codelineno-66-2" name="__codelineno-66-2"></a>...
 <a id="__codelineno-66-3" name="__codelineno-66-3"></a>Fin du service au client 0
 </code></pre></div></td></tr></table></div>
-<p><a id="refheading10403431168783983"></a>
-<a id="client-tcp-generique"></a></p>
+<p><a id="client-tcp-generique"></a>
+<a id="refheading10403431168783983"></a></p>
 <h3 id="1163-un-client-tcp-generique">11.6.3. Un client TCP générique</h3>
 <p>Nous allons écrire un client Tcp générique qui sera lancé de la façon suivante : <strong>ClientTcpGenerique serveur port</strong>. Il aura un fonctionnement analogue au client putty mais aura une interface console et ne présentera pas d&#x27;option de configuration.</p>
 <p>Dans l&#x27;application précédente, le protocole du dialogue était connu : le client envoyait une seule ligne et le serveur répondait par une seule ligne. Chaque service a son protocole particulier et on trouve également les situations suivantes :</p>
@@ -3929,8 +3929,8 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
     </ul>
   </li>
 </ul>
-<p><a id="refheading10403491168783983"></a>
-<a id="program-clientwebavecredirection"></a></p>
+<p><a id="program-clientwebavecredirection"></a>
+<a id="refheading10403491168783983"></a></p>
 <h3 id="1166-un-client-web-gerant-les-redirections">11.6.6. Un client Web gérant les redirections</h3>
 <p>Le client Web précédent ne gère pas une éventuelle redirection de l&#x27;URL qu&#x27;il a demandée. Voici un exemple :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-80-1"> 1</a></span>
@@ -5535,8 +5535,8 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
   </li>
 </ul>
 
-<p><a id="refheading10403611168783983"></a>
-<a id="client-tcp-graphique-asynchrone"></a></p>
+<p><a id="client-tcp-graphique-asynchrone"></a>
+<a id="refheading10403611168783983"></a></p>
 <h2 id="118-un-client-tcp-generique-asynchrone">11.8. Un client Tcp générique asynchrone</h2>
 <p><a id="refheading10403631168783983"></a></p>
 <h3 id="1181-presentation">11.8.1. Présentation</h3>
@@ -6093,8 +6093,8 @@ Une application peut donc référencer une machine par son nom. Au bout du compt
 <p>La communication Tcp / Ip asynchrone présente des avantages plus sérieux pour un serveur que ceux affichés par l&#x27;exemple précédent. On sait que le serveur sert ses clients à l&#x27;aide de threads secondaires. Si son pool de threads a N threads, cela signifie qu&#x27;il ne peut servir que N clients simultanément. Si les N threads font tous une opération bloquante (synchrone), il n&#x27;y a plus de threads disponibles pour un nouveau client jusqu&#x27;à ce que l&#x27;une des opérations bloquantes s&#x27;achève et libère un thread. Si sur les threads, on fait des opérations asynchrones plutôt que synchrones, un thread n&#x27;est jamais bloqué et peut être rapidement recyclé pour de nouveaux clients.</p>
 <p><a id="refheading10403771168783983"></a></p>
 <h2 id="119-application-exemple-version-8-serveur-de-calcul-dimpots">11.9. Application exemple, version 8 : Serveur de calcul d&#x27;impôts</h2>
-<p><a id="refheading10403791168783983"></a>
-<a id="impotsv8-architecture"></a></p>
+<p><a id="impotsv8-architecture"></a>
+<a id="refheading10403791168783983"></a></p>
 <h3 id="1191-larchitecture-de-la-nouvelle-version">11.9.1. L&#x27;architecture de la nouvelle version</h3>
 <p>Nous reprenons l&#x27;application de calcul d&#x27;impôt déjà traitée sous diverses formes. Rappelons sa dernière mouture, celle de la version 7 du paragraphe <a href="acces-aux-bases-de-donnees.html#impots-v7">9.8</a>.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000669000001B9CC0FCEF2.png" width="492" height="132" style="display:inline-block; margin:4px;width:13.019cm;height:3.5cm;" class="odt-zoomable" data-zoom-src="images/1000000000000669000001B9CC0FCEF2.png" /></td></tr></table>
